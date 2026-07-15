@@ -1,0 +1,665 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Cool Gym · Gimnasio en Plaza Palmeras, Mérida"
+  description="Entrena a gusto, sin pelear por el equipo. ⭐ 4.3 con 58 reseñas en Google. Gimnasio en Plaza Palmeras, San Ramón Nte, Mérida. Escríbenos por WhatsApp."
+  slug="cool-gym"
+  ogImage="/cool-gym/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Teko:wght@500;600;700&family=Rubik:wght@400;500;600&display=swap"
+  favicon="❄️"
+  themeColor="#06b6d4"
+  whatsapp={"https://wa.me/529999440229"}
+  telefono={"999 944 0229"}
+  mapsUrl={"https://maps.google.com/?cid=4810730669330294463&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="cg">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="frost-ring" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">Gimnasio · Plaza Palmeras, San Ramón Nte</p>
+          <h1 class="poster reveal">
+            <span class="l1">Cool</span>
+            <span class="l2">Gym</span>
+          </h1>
+          <p class="tagline reveal">Ven a entrenar <strong>a gusto</strong>: buena ubicación, buen precio y equipo de sobra para que nunca esperes tu turno.</p>
+
+          <a class="chip reveal" href="https://maps.google.com/?cid=4810730669330294463&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            <span class="star" aria-hidden="true">★</span> 4.3 · 58 reseñas en Google
+          </a>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-solid" href="https://wa.me/529999440229" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3z"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://maps.google.com/?cid=4810730669330294463&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+
+          <dl class="datos reveal">
+            <div><dt>4.3 <span aria-hidden="true">★</span></dt><dd>calificación real en Google</dd></div>
+            <div><dt>58</dt><dd>reseñas de socios</dd></div>
+            <div><dt>Lun–Vie</dt><dd>6:00 a 22:00 · sábado hasta las 15:00</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-photo reveal">
+          <img src="/cool-gym/img/foto_2.jpg" alt="Piso de pesas y máquinas de Cool Gym, con área amplia y equipo Precor" width="825" height="1100" />
+          <span class="hero-photo-tag">Tu piso, sin fila para el equipo</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Firma: línea de escarcha -->
+    <div class="frost-line" aria-hidden="true">
+      <div class="frost-line-track">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div>
+
+    <!-- ============ 01 QUIÉNES SOMOS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap">
+        <p class="sec-kicker reveal">01 / Quiénes somos</p>
+        <h2 class="sec-title reveal">Tu gym de <span class="cyan">todos los días</span></h2>
+        <div class="about-grid">
+          <div class="about reveal">
+            <p>Somos <strong>Cool Gym</strong>, un gimnasio en Plaza Palmeras, sobre la calle 30 de San Ramón Nte. Llevamos años siendo el gym de barrio al que la gente vuelve porque le queda cerca, le sale a buen precio y no batalla para entrenar.</p>
+            <p>En el piso vas a encontrar área de pesas libres y máquinas Precor de sobra — nada de esperar a que se desocupe el aparato que necesitas. Los pasillos son amplios y el ambiente es tranquilo: se entrena a gusto, sin sentirte encimado con nadie.</p>
+            <p>Si andas buscando retomar la rutina o simplemente un gym cerca de casa que no te vacíe la cartera, pásate a conocernos o mándanos un WhatsApp.</p>
+          </div>
+          <figure class="about-photo reveal">
+            <img src="/cool-gym/img/foto_5.jpg" alt="Recepción de Cool Gym con el logo iluminado" width="825" height="1100" loading="lazy" />
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 INSTALACIONES ============ -->
+    <section class="sec sec-panel" id="instalaciones">
+      <div class="wrap">
+        <p class="sec-kicker reveal">02 / Qué ofrecemos</p>
+        <h2 class="sec-title reveal">Todo lo que necesitas para&nbsp;entrenar</h2>
+        <div class="cards reveal">
+          <div class="card">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.5 8v8M4 10v4M17.5 8v8M20 10v4M6.5 12h11"/></svg>
+            </span>
+            <h3>Área de pesas y máquinas</h3>
+            <p>Barra libre, mancuernas y máquinas Precor — suficiente equipo para no esperar tu turno.</p>
+          </div>
+          <div class="card">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+            </span>
+            <h3>Zona de cardio</h3>
+            <p>Caminadoras y bicis para el calentamiento o para tu rutina completa.</p>
+          </div>
+          <div class="card">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12c2-3 4-4.5 8-4.5s6 1.5 8 4.5c-2 3-4 4.5-8 4.5s-6-1.5-8-4.5Z"/><circle cx="12" cy="12" r="2.3"/></svg>
+            </span>
+            <h3>Ambiente cómodo</h3>
+            <p>Pasillos amplios y buen trato: se trabaja a gusto, sin agobios.</p>
+          </div>
+          <div class="card">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
+            </span>
+            <h3>Pago con tarjeta</h3>
+            <p>Aceptamos tarjeta, no necesitas traer efectivo.</p>
+          </div>
+          <div class="card">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+            </span>
+            <h3>Plaza Palmeras</h3>
+            <p>Fácil de ubicar, sobre la calle 30 en San Ramón Nte, Mérida.</p>
+          </div>
+          <div class="card">
+            <span class="ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+            </span>
+            <h3>Abierto casi todos los días</h3>
+            <p>Lunes a viernes 6:00–22:00 y sábado 7:00–15:00.</p>
+          </div>
+        </div>
+        <figure class="ins-photo reveal">
+          <img src="/cool-gym/img/foto_4.jpg" alt="Mancuernas del área de pesas de Cool Gym" width="825" height="1100" loading="lazy" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 03 PRUEBA SOCIAL ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker reveal">03 / Lo que dicen en Google</p>
+        <h2 class="sec-title reveal"><span class="cyan">4.3 de 5</span> en 58 reseñas</h2>
+        <figure class="quote reveal">
+          <p class="quote-stars" aria-label="5 estrellas">★★★★★</p>
+          <blockquote>«Excelente lugar para ejercitarse. No hay escasez de equipo y se puede trabajar muy a gusto.»</blockquote>
+          <figcaption><strong>Pablo Ureña</strong><span>Hace 4 años · Google</span></figcaption>
+        </figure>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=4810730669330294463&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-panel" id="ubicacion">
+      <div class="wrap">
+        <p class="sec-kicker reveal">04 / Dónde estamos</p>
+        <h2 class="sec-title reveal">Plaza Palmeras, <span class="cyan">San Ramón Nte</span></h2>
+        <div class="ubica reveal">
+          <div class="ubica-info">
+            <p class="dir">Calle 30 No. 339 x 43, Local 1<br />Plaza Palmeras, San Ramón Nte<br />97117 Mérida, Yuc.</p>
+            <a class="btn btn-solid btn-sm" href="https://maps.google.com/?cid=4810730669330294463&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+            <h3 class="horario-titulo">Horario</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>6:00–22:00</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>6:00–22:00</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>6:00–22:00</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>6:00–22:00</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>6:00–22:00</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>7:00–15:00</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="ubica-media">
+            <figure class="ext-photo">
+              <img src="/cool-gym/img/foto_3.jpg" alt="Fachada de Cool Gym en Plaza Palmeras" width="825" height="1100" loading="lazy" />
+            </figure>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps?q=Cool%20Gym%2C%20Calle%2030%20No.%20339%20x%2043%2C%20Local%201%2C%20Plaza%20Palmeras%2C%20San%20Ram%C3%B3n%20Nte%2C%2097117%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+                title="Mapa: Cool Gym en Plaza Palmeras, Mérida"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <h2 class="banda-title">¿Ya te tocaba volver al gym?</h2>
+        <p class="banda-sub">Ven a Plaza Palmeras y entrena a gusto, sin pelear por el equipo.</p>
+        <div class="cta-row">
+          <a class="btn btn-light" href="https://wa.me/529999440229" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn-light-ghost" href="tel:+529999440229">Llamar · 999 944 0229</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <p class="pie-logo">Cool Gym</p>
+        <p class="pie-dato">Gimnasio · Calle 30 No. 339 x 43, Local 1, Plaza Palmeras, San Ramón Nte, 97117 Mérida, Yuc.</p>
+        <p class="pie-dato"><a href="tel:+529999440229">999 944 0229</a> · <a href="https://wa.me/529999440229" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://www.facebook.com/coolgymmerida/" target="_blank" rel="noopener">Facebook</a></p>
+        <p class="pie-mini">Lunes a viernes 6:00–22:00 · Sábado 7:00–15:00 · Domingo cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "Cool Gym",
+    "telephone": "+529999440229",
+    "url": "https://demos.ivang.mx/cool-gym",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 30 No. 339 x 43, Local 1, Plaza Palmeras, San Ramón Nte",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97117",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "reviewCount": "58"
+    },
+    "openingHours": ["Mo-Fr 06:00-22:00", "Sa 07:00-15:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --ice: #f2f7f9;
+      --ice-2: #e6f0f3;
+      --carbon: #15202b;
+      --carbon-2: #1e2c3a;
+      --cyan: #06b6d4;
+      --cyan-dark: #0e7490;
+      --gray: #64748b;
+      --line: rgba(21, 32, 43, 0.12);
+      --display: "Teko", "Arial Narrow", sans-serif;
+      --body: "Rubik", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--ice);
+      color: var(--carbon);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .cg ::selection { background: var(--cyan); color: var(--carbon); }
+    .cg a:focus-visible,
+    .cg .btn:focus-visible {
+      outline: 3px solid var(--cyan-dark);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .cyan { color: var(--cyan-dark); }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      padding: 52px 0 48px;
+      overflow: clip;
+      background:
+        radial-gradient(900px 500px at 90% -10%, rgba(6, 182, 212, 0.14), transparent 60%),
+        var(--ice);
+    }
+    .frost-ring {
+      position: absolute;
+      top: -140px;
+      right: -160px;
+      width: 480px;
+      height: 480px;
+      border-radius: 50%;
+      background: repeating-conic-gradient(from 0deg, var(--cyan) 0deg 1.6deg, transparent 1.6deg 18deg);
+      opacity: 0.28;
+      -webkit-mask: radial-gradient(circle, transparent 54%, #000 56%, #000 63%, transparent 65%);
+      mask: radial-gradient(circle, transparent 54%, #000 56%, #000 63%, transparent 65%);
+      animation: frostspin 60s linear infinite;
+      pointer-events: none;
+    }
+    @keyframes frostspin { to { transform: rotate(360deg); } }
+
+    .hero-grid { display: grid; grid-template-columns: 1fr; gap: 34px; align-items: center; }
+
+    .kicker {
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan-dark);
+      margin: 0 0 12px;
+    }
+    .poster {
+      margin: 0;
+      font-family: var(--display);
+      text-transform: uppercase;
+      line-height: 0.84;
+      display: flex;
+      flex-direction: column;
+    }
+    .poster .l1 {
+      font-size: clamp(52px, 17vw, 108px);
+      font-weight: 600;
+      color: var(--carbon);
+      letter-spacing: 0.01em;
+    }
+    .poster .l2 {
+      font-size: clamp(72px, 24vw, 158px);
+      font-weight: 700;
+      color: var(--cyan-dark);
+      letter-spacing: 0.01em;
+      margin-top: -4px;
+    }
+    .tagline {
+      font-size: clamp(18px, 4.4vw, 22px);
+      font-weight: 400;
+      color: var(--carbon);
+      max-width: 36ch;
+      margin: 18px 0 18px;
+    }
+    .tagline strong { color: var(--cyan-dark); font-weight: 600; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--carbon);
+      text-decoration: none;
+      background: #ffffff;
+    }
+    .chip .star { color: var(--cyan-dark); }
+    .chip:hover { border-color: var(--cyan); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 20px;
+      letter-spacing: 0.03em;
+      text-decoration: none;
+      padding: 14px 24px;
+      border-radius: 8px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--cyan); color: var(--carbon); }
+    .btn-solid:hover { background: #22c8e4; }
+    .btn-ghost { border: 2px solid var(--line); color: var(--carbon); background: #fff; }
+    .btn-ghost:hover { border-color: var(--cyan); color: var(--cyan-dark); }
+    .btn-sm { font-size: 17px; padding: 11px 18px; }
+
+    .datos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 34px 0 0;
+      border-top: 1px solid var(--line);
+      padding-top: 18px;
+    }
+    .datos dt {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(22px, 5.6vw, 32px);
+      text-transform: uppercase;
+      color: var(--carbon);
+    }
+    .datos dt span { color: var(--cyan-dark); }
+    .datos dd { margin: 2px 0 0; font-size: 12.5px; color: var(--gray); line-height: 1.4; }
+
+    .hero-photo {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 24px 60px rgba(21, 32, 43, 0.18);
+      border: 1px solid rgba(255,255,255,0.6);
+      outline: 6px solid #fff;
+    }
+    .hero-photo img { width: 100%; height: 100%; aspect-ratio: 3/4; object-fit: cover; }
+    .hero-photo-tag {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: rgba(21, 32, 43, 0.82);
+      color: var(--ice);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 8px 12px;
+      border-radius: 8px;
+      backdrop-filter: blur(2px);
+    }
+
+    /* ---------- FROST LINE (firma) ---------- */
+    .frost-line { overflow: hidden; padding: 10px 0; background: var(--ice-2); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .frost-line-track {
+      display: inline-flex;
+      gap: 46px;
+      padding-left: 20px;
+      animation: frostslide 18s linear infinite;
+    }
+    .frost-line-track span {
+      width: 10px;
+      height: 10px;
+      flex: none;
+      background: var(--cyan);
+      opacity: 0.55;
+      transform: rotate(45deg);
+      clip-path: polygon(50% 0%, 61% 39%, 100% 50%, 61% 61%, 50% 100%, 39% 61%, 0% 50%, 39% 39%);
+    }
+    .frost-line-track span:nth-child(3n) { opacity: 0.9; background: var(--cyan-dark); }
+    @keyframes frostslide { to { transform: translateX(-50%); } }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 68px 0; }
+    .sec-panel { background: var(--ice-2); }
+    .sec-kicker {
+      font-weight: 500;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--cyan-dark);
+      margin: 0 0 10px;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(36px, 8.4vw, 62px);
+      line-height: 0.96;
+      text-transform: uppercase;
+      margin: 0 0 26px;
+      color: var(--carbon);
+    }
+
+    /* ---------- NOSOTROS ---------- */
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: start; }
+    .about p { max-width: 62ch; margin: 0 0 16px; color: #35424f; }
+    .about strong { color: var(--carbon); }
+    .about-photo { margin: 0; border-radius: 14px; overflow: hidden; border: 1px solid var(--line); }
+    .about-photo img { width: 100%; aspect-ratio: 4/5; object-fit: cover; object-position: top; }
+
+    /* ---------- CARDS ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin: 0 0 26px;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 22px 20px;
+    }
+    .ico {
+      display: inline-flex;
+      width: 40px;
+      height: 40px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      background: rgba(6, 182, 212, 0.12);
+      color: var(--cyan-dark);
+      margin-bottom: 14px;
+    }
+    .ico svg { width: 22px; height: 22px; }
+    .card h3 {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 22px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin: 0 0 6px;
+      color: var(--carbon);
+    }
+    .card p { margin: 0; color: var(--gray); font-size: 15px; }
+    .ins-photo { margin: 0; border-radius: 14px; overflow: hidden; max-width: 420px; border: 1px solid var(--line); }
+    .ins-photo img { width: 100%; aspect-ratio: 4/3; object-fit: cover; }
+
+    /* ---------- RESEÑA (cita única) ---------- */
+    .quote {
+      margin: 0 0 26px;
+      max-width: 720px;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-left: 6px solid var(--cyan);
+      border-radius: 12px;
+      padding: 30px 28px;
+      box-shadow: 0 18px 40px rgba(21, 32, 43, 0.08);
+    }
+    .quote-stars { color: var(--cyan-dark); font-size: 17px; letter-spacing: 0.2em; margin: 0 0 12px; }
+    .quote blockquote {
+      margin: 0 0 16px;
+      font-size: clamp(19px, 3.6vw, 25px);
+      line-height: 1.45;
+      font-weight: 500;
+      color: var(--carbon);
+    }
+    .quote figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .quote figcaption strong {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 19px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .quote figcaption span { font-size: 13px; color: var(--gray); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 26px; }
+    .dir { font-size: 18px; font-weight: 500; margin: 0 0 16px; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 21px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin: 28px 0 10px;
+      color: var(--carbon);
+    }
+    .horarios { width: 100%; max-width: 420px; border-collapse: collapse; font-size: 15.5px; }
+    .horarios th, .horarios td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    .horarios th { font-weight: 500; color: var(--carbon); }
+    .horarios td { color: var(--gray); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: var(--carbon); background: rgba(6, 182, 212, 0.16); font-weight: 600; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 12px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--cyan-dark);
+      color: #fff;
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 10px;
+      vertical-align: 1px;
+    }
+    .ubica-media { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .ext-photo { margin: 0; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); }
+    .ext-photo img { width: 100%; aspect-ratio: 16/10; object-fit: cover; object-position: center 30%; }
+    .mapa iframe {
+      width: 100%;
+      height: 280px;
+      border: 0;
+      border-radius: 12px;
+      display: block;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda {
+      background: var(--carbon);
+      color: var(--ice);
+      padding: 58px 0;
+      text-align: center;
+    }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: clamp(34px, 8.4vw, 58px);
+      line-height: 0.96;
+      text-transform: uppercase;
+      margin: 0 0 12px;
+    }
+    .banda-sub { margin: 0 auto 22px; max-width: 40ch; font-weight: 400; color: #b9c6d0; }
+    .banda .cta-row { justify-content: center; }
+    .btn-light { background: var(--cyan); color: var(--carbon); }
+    .btn-light:hover { background: #22c8e4; }
+    .btn-light-ghost { border: 2px solid rgba(242, 247, 249, 0.35); color: var(--ice); }
+    .btn-light-ghost:hover { border-color: var(--cyan); color: var(--cyan); }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      padding: 40px 0 92px;
+      border-top: 1px solid var(--line);
+      text-align: center;
+      background: var(--ice);
+    }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 28px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--carbon);
+      margin: 0 0 10px;
+    }
+    .pie-dato { margin: 4px 0; color: var(--gray); font-size: 14.5px; }
+    .pie-dato a { color: var(--carbon); text-decoration: none; border-bottom: 1px solid var(--cyan); }
+    .pie-dato a:hover { color: var(--cyan-dark); }
+    .pie-mini { margin: 14px 0 0; color: var(--gray); font-size: 12.5px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 100px 0; }
+      .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 48px; }
+      .hero-photo { max-width: 380px; justify-self: end; }
+      .about-grid { grid-template-columns: 1.3fr 0.9fr; }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .ubica { grid-template-columns: 1fr 1.15fr; align-items: start; }
+      .ubica-media { grid-template-columns: 1fr 1fr; }
+      .mapa iframe { height: 100%; min-height: 280px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      var hoy = new Date().getDay();
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

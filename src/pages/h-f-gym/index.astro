@@ -1,0 +1,695 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const direccion = 'C. 15 173, entre Calle 26 Diagonal, Las Brisas, 97144 Mérida, Yuc., México';
+const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent('HF Gym, ' + direccion)}&output=embed`;
+---
+<BaseLayout
+  title="HF Gym · Health & Fitness — Gimnasio en Las Brisas, Mérida"
+  description="Equipo de calidad, espacio limpio y ambiente tranquilo por las mañanas. ⭐ 4.3 con 95 reseñas en Google. Pesas, cardio y zumba en Las Brisas, Mérida. Escríbenos por WhatsApp."
+  slug="h-f-gym"
+  ogImage="/h-f-gym/img/foto_4.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+  favicon="❤️"
+  themeColor="#2563eb"
+  whatsapp={"https://wa.me/529998390104"}
+  telefono={"999 839 0104"}
+  mapsUrl={"https://maps.google.com/?cid=1281767541581085357&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="hf">
+
+    <!-- Símbolo reutilizable: monograma H · pulso · F -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <symbol id="hf-mark" viewBox="0 0 240 120">
+        <text x="4" y="96" class="hf-letter">H</text>
+        <polyline class="hf-pulse-line" points="100,64 114,64 124,26 136,100 148,38 160,64 178,64" />
+        <text x="188" y="96" class="hf-letter">F</text>
+      </symbol>
+    </svg>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">Gimnasio · Las Brisas, Mérida</p>
+          <h1 class="brand reveal">
+            <span class="brand-name">HF Gym</span>
+            <span class="brand-sub">Health &amp; Fitness</span>
+          </h1>
+          <p class="tagline reveal">Entrena con <strong>equipo de calidad</strong> en un espacio limpio y tranquilo — ideal si te gusta la mañana, cuando hay poca afluencia.</p>
+
+          <a class="chip reveal" href="https://maps.google.com/?cid=1281767541581085357&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            <span class="star" aria-hidden="true">★</span> 4.3 · 95 reseñas en Google
+          </a>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-solid" href="https://wa.me/529998390104" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3z"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://maps.google.com/?cid=1281767541581085357&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+
+          <dl class="datos reveal">
+            <div><dt>4.3 <span aria-hidden="true">★</span></dt><dd>calificación real en Google</dd></div>
+            <div><dt>95</dt><dd>reseñas de socios reales</dd></div>
+            <div><dt>7 días</dt><dd>abierto toda la semana</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-photo reveal">
+          <img src="/h-f-gym/img/foto_4.jpg" alt="Área de pesas y máquinas dentro de HF Gym, limpia y bien iluminada" width="825" height="1100" />
+          <div class="hf-badge" aria-hidden="true">
+            <svg viewBox="0 0 240 120" width="86" height="43"><use href="#hf-mark"></use></svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Divisor: línea de pulso (firma) -->
+    <div class="pulse-divider reveal" aria-hidden="true">
+      <svg viewBox="0 0 800 40" preserveAspectRatio="none">
+        <polyline points="0,20 320,20 340,4 360,36 380,20 800,20" />
+      </svg>
+    </div>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="sec" id="quienes-somos">
+      <div class="wrap about-grid">
+        <div>
+          <p class="sec-kicker reveal">Quiénes somos</p>
+          <h2 class="sec-title reveal">Entrena a tu ritmo,<br />sin vueltas</h2>
+          <div class="about reveal">
+            <p>Somos <strong>HF Gym — Health &amp; Fitness</strong>, un gimnasio en Las Brisas, al norte de Mérida. Tenemos área de pesas y máquinas de cable, zona de cardio y clases de zumba, todo en un espacio que cuidamos que se mantenga limpio y en orden — nuestros socios lo notan y lo dicen en sus reseñas.</p>
+            <p>Si te gusta entrenar sin esperar turno, ven por la mañana: es cuando hay menos afluencia y puedes avanzar tu rutina completa. Mantenemos las ventanas abiertas para que el aire circule y el ambiente se sienta fresco, con personal amable que está para apoyarte.</p>
+            <p>Aquí caben quienes apenas empiezan y quienes ya traen su rutina de memoria. Si buscas un lugar cercano, limpio y sin complicaciones para entrenar, este es tu gimnasio.</p>
+          </div>
+        </div>
+        <div class="about-photo reveal">
+          <img src="/h-f-gym/img/foto_2.jpg" alt="Fachada de HF Gym, edificio gris con franja azul y letrero Health & Fitness" loading="lazy" width="1100" height="619" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUÉ OFRECEMOS ============ -->
+    <section class="sec sec-panel" id="ofrecemos">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Qué ofrecemos</p>
+        <h2 class="sec-title reveal">Todo lo que necesitas<br />para entrenar bien</h2>
+
+        <div class="cards reveal">
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 9v6M4 7v10M20 7v10M22 9v6M7 12h10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <h3>Área de pesas y máquinas</h3>
+            <p>Equipo de calidad para tu rutina de fuerza, con estaciones de peso libre y máquinas de cable.</p>
+          </article>
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M2 12h4l2-6 4 12 2-9 2 3h6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Cardio</h3>
+            <p>Zona de cardio para calentar, quemar y complementar tu entrenamiento de fuerza.</p>
+          </article>
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 18V5l10-2v13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="6" cy="18" r="3" stroke="currentColor" stroke-width="1.8"/><circle cx="16" cy="16" r="3" stroke="currentColor" stroke-width="1.8"/></svg>
+            <h3>Clases de zumba</h3>
+            <p>Rutinas con música para quienes buscan variar su entrenamiento y sumar cardio bailando.</p>
+          </article>
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3.5" y="9" width="17" height="6" rx="3" transform="rotate(-35 12 12)" stroke="currentColor" stroke-width="1.8"/><path d="M9.5 9.5l5 5" stroke="currentColor" stroke-width="1.8"/></svg>
+            <h3>Suplementos</h3>
+            <p>Venta y asesoría de suplementos dentro del mismo gimnasio.</p>
+          </article>
+          <article class="card">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M3 8h12a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h9" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <h3>Buena ventilación</h3>
+            <p>Ventanas abiertas y ambiente fresco, todo el día.</p>
+          </article>
+          <article class="card card-accent">
+            <svg class="card-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l4 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <h3>Horario extendido</h3>
+            <p>Abrimos desde las 5:30&nbsp;am entre semana, los 7 días de la semana.</p>
+          </article>
+        </div>
+
+        <div class="gallery reveal">
+          <img src="/h-f-gym/img/foto_1.jpg" alt="Entrada de HF Gym con su letrero sobre fachada blanca y azul" loading="lazy" width="495" height="1100" />
+          <img src="/h-f-gym/img/foto_5.jpg" alt="Detalle de una máquina de peso dentro de HF Gym" loading="lazy" width="825" height="1100" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Divisor: línea de pulso (firma) -->
+    <div class="pulse-divider reveal" aria-hidden="true">
+      <svg viewBox="0 0 800 40" preserveAspectRatio="none">
+        <polyline points="0,20 420,20 440,4 460,36 480,20 800,20" />
+      </svg>
+    </div>
+
+    <!-- ============ PRUEBA SOCIAL ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Lo que dicen nuestros socios</p>
+        <h2 class="sec-title reveal">4.3 de 5 <span class="accent">en 95 reseñas</span></h2>
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="4 estrellas">★★★★☆</p>
+            <blockquote>«…por las mañanas con poca afluencia, las personas son amables, mantienen las ventanas abiertas lo cual lo veo bien para la ventilación del lugar…»</blockquote>
+            <figcaption><strong>Shir Eko</strong><span>Hace 4 años · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="4 estrellas">★★★★☆</p>
+            <blockquote>«Es un gimnasio bastante bueno, equipo de calidad, establecimiento limpio…»</blockquote>
+            <figcaption><strong>Rafael Osorio</strong><span>Hace 9 años · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="4 estrellas">★★★★☆</p>
+            <blockquote>«…Buen ambiente y música perfecta»</blockquote>
+            <figcaption><strong>Lilly Y.</strong><span>Hace 5 años · Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=1281767541581085357&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-panel" id="ubicacion">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Dónde estamos</p>
+        <h2 class="sec-title reveal">Las Brisas, Mérida</h2>
+        <div class="ubica reveal">
+          <div class="ubica-info">
+            <p class="dir">C. 15 173, entre Calle 26 Diagonal<br />Las Brisas, 97144 Mérida, Yuc.</p>
+            <a class="btn btn-solid-blue btn-sm" href="https://maps.google.com/?cid=1281767541581085357&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+            <h3 class="horario-titulo">Horario</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>5:30–23:00</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>5:30–23:00</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>5:30–23:00</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>5:30–23:00</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>5:30–23:00</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>7:00–18:00</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>8:00–16:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mapa">
+            <iframe
+              src={mapEmbedUrl}
+              title="Mapa: HF Gym en Las Brisas, Mérida"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <svg class="banda-mark" viewBox="0 0 240 120" width="120" height="60" aria-hidden="true"><use href="#hf-mark"></use></svg>
+        <h2 class="banda-title">¿Listo para tu<br />primera sesión?</h2>
+        <p class="banda-sub">Escríbenos por WhatsApp y te decimos cómo empezar.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href="https://wa.me/529998390104" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn-dark-ghost" href="tel:+529998390104">Llamar · 999 839 0104</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <svg class="pie-mark" viewBox="0 0 240 120" width="96" height="48" aria-hidden="true"><use href="#hf-mark"></use></svg>
+        <p class="pie-logo">HF Gym · Health &amp; Fitness</p>
+        <p class="pie-dato">C. 15 173, entre Calle 26 Diagonal, Las Brisas, 97144 Mérida, Yuc.</p>
+        <p class="pie-dato"><a href="tel:+529998390104">999 839 0104</a> · <a href="https://wa.me/529998390104" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://www.facebook.com/GymHealthAndFitness" target="_blank" rel="noopener">Facebook</a></p>
+        <p class="pie-mini">Lun–Vie 5:30–23:00 · Sáb 7:00–18:00 · Dom 8:00–16:00</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "HF Gym",
+    "telephone": "+529998390104",
+    "url": "https://demos.ivang.mx/h-f-gym",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 15 173, entre Calle 26 Diagonal, Las Brisas",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97144",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.3",
+      "reviewCount": "95"
+    },
+    "openingHours": ["Mo-Fr 05:30-23:00", "Sa 07:00-18:00", "Su 08:00-16:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --paper: #f5f9ff;
+      --panel: #eaf2ff;
+      --white: #ffffff;
+      --blue: #2563eb;
+      --blue-deep: #1d4ed8;
+      --blue-pale: #dbe7fe;
+      --green: #22c55e;
+      --green-deep: #16a34a;
+      --green-pale: #dcfce9;
+      --ink: #16233a;
+      --muted: #566179;
+      --line: rgba(22, 35, 58, 0.12);
+      --display: "Saira Condensed", "Arial Narrow", sans-serif;
+      --body: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .hf ::selection { background: var(--green-pale); color: var(--ink); }
+    .hf a:focus-visible,
+    .hf .btn:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    .hf-letter {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 96px;
+    }
+    .hf-badge .hf-letter,
+    .banda-mark .hf-letter { fill: var(--ink); }
+    .pie-mark .hf-letter { fill: var(--paper); }
+    .hf-pulse-line {
+      fill: none;
+      stroke: var(--green);
+      stroke-width: 9;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 48px 0 40px;
+      position: relative;
+      background:
+        radial-gradient(900px 480px at 90% -10%, rgba(37, 99, 235, 0.14), transparent 60%),
+        radial-gradient(700px 420px at -10% 30%, rgba(34, 197, 94, 0.10), transparent 55%),
+        var(--paper);
+    }
+    .hero-grid { display: grid; gap: 34px; }
+    .kicker {
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue-deep);
+      margin: 0 0 14px;
+    }
+    .brand { margin: 0 0 16px; display: flex; flex-direction: column; }
+    .brand-name {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(52px, 15vw, 96px);
+      line-height: 0.94;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+    }
+    .brand-sub {
+      font-weight: 600;
+      font-size: clamp(14px, 3.6vw, 18px);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-top: 6px;
+    }
+    .tagline {
+      font-size: clamp(18px, 4.4vw, 23px);
+      font-weight: 400;
+      color: var(--ink);
+      max-width: 36ch;
+      margin: 6px 0 18px;
+    }
+    .tagline strong { color: var(--blue-deep); font-weight: 600; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--blue-pale);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--ink);
+      text-decoration: none;
+      background: var(--white);
+      box-shadow: 0 6px 18px rgba(37, 99, 235, 0.08);
+    }
+    .chip .star { color: var(--blue); }
+    .chip:hover { border-color: var(--blue); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--body);
+      font-weight: 600;
+      font-size: 16.5px;
+      text-decoration: none;
+      padding: 15px 24px;
+      border-radius: 12px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--green); color: #06210f; box-shadow: 0 10px 24px rgba(34, 197, 94, 0.28); }
+    .btn-solid:hover { background: var(--green-deep); }
+    .btn-ghost { border: 2px solid var(--blue-pale); color: var(--blue-deep); background: var(--white); }
+    .btn-ghost:hover { border-color: var(--blue); background: var(--blue-pale); }
+    .btn-solid-blue { background: var(--blue); color: var(--white); }
+    .btn-solid-blue:hover { background: var(--blue-deep); }
+    .btn-sm { font-size: 15px; padding: 12px 18px; }
+
+    .datos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 36px 0 0;
+      border-top: 1px solid var(--line);
+      padding-top: 20px;
+    }
+    .datos dt {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(22px, 5.4vw, 32px);
+      color: var(--ink);
+    }
+    .datos dt span { color: var(--blue); }
+    .datos dd { margin: 4px 0 0; font-size: 12.5px; color: var(--muted); line-height: 1.4; }
+
+    .hero-photo { position: relative; }
+    .hero-photo img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: 0 24px 50px rgba(22, 35, 58, 0.16);
+    }
+    .hf-badge {
+      position: absolute;
+      left: -10px;
+      bottom: -18px;
+      background: var(--white);
+      border: 1px solid var(--blue-pale);
+      border-radius: 999px;
+      padding: 14px 20px;
+      box-shadow: 0 14px 30px rgba(22, 35, 58, 0.18);
+      transform: rotate(-5deg);
+    }
+
+    /* ---------- DIVISOR PULSO (firma) ---------- */
+    .pulse-divider { padding: 6px 0; }
+    .pulse-divider svg {
+      width: 100%;
+      height: 30px;
+      display: block;
+    }
+    .pulse-divider polyline {
+      fill: none;
+      stroke: var(--green);
+      stroke-width: 2.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 64px 0; }
+    .sec-panel { background: var(--panel); }
+    .sec-kicker {
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--blue-deep);
+      margin: 0 0 10px;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(34px, 8vw, 54px);
+      line-height: 0.98;
+      margin: 0 0 26px;
+      color: var(--ink);
+    }
+    .sec-title .accent { color: var(--blue); }
+
+    /* ---------- QUIÉNES SOMOS ---------- */
+    .about-grid { display: grid; gap: 30px; }
+    .about p { max-width: 62ch; margin: 0 0 18px; color: #354158; }
+    .about strong { color: var(--ink); }
+    .about-photo img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(22, 35, 58, 0.14);
+    }
+
+    /* ---------- QUÉ OFRECEMOS ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 30px;
+    }
+    .card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 20px;
+      box-shadow: 0 10px 24px rgba(22, 35, 58, 0.06);
+    }
+    .card-accent { background: var(--green-pale); border-color: transparent; }
+    .card-icon { width: 30px; height: 30px; color: var(--blue); margin-bottom: 12px; }
+    .card-accent .card-icon { color: var(--green-deep); }
+    .card h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 21px;
+      margin: 0 0 6px;
+      color: var(--ink);
+    }
+    .card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 12px 26px rgba(22, 35, 58, 0.1);
+    }
+
+    /* ---------- RESEÑAS ---------- */
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin: 0 0 30px;
+    }
+    .rev {
+      margin: 0;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 22px 20px;
+      box-shadow: 0 12px 28px rgba(22, 35, 58, 0.08);
+    }
+    .rev-stars {
+      color: var(--blue);
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      margin: 0 0 10px;
+    }
+    .rev blockquote {
+      margin: 0 0 14px;
+      font-size: 16.5px;
+      line-height: 1.55;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .rev figcaption {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .rev figcaption strong {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--ink);
+    }
+    .rev figcaption span { font-size: 13px; color: var(--muted); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 28px; }
+    .dir { font-size: 18px; font-weight: 500; margin: 0 0 16px; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 20px;
+      margin: 28px 0 10px;
+      color: var(--ink);
+    }
+    .horarios { width: 100%; max-width: 420px; border-collapse: collapse; font-size: 15.5px; }
+    .horarios th, .horarios td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    .horarios th { font-weight: 500; color: var(--ink); }
+    .horarios td { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: var(--white); background: var(--blue); font-weight: 600; }
+    .horarios tr.hoy th {
+      position: relative;
+      border-radius: 8px 0 0 8px;
+    }
+    .horarios tr.hoy td { border-radius: 0 8px 8px 0; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--green);
+      color: #06210f;
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 10px;
+      vertical-align: 1px;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 16px;
+      display: block;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda {
+      background: var(--blue);
+      color: var(--white);
+      padding: 58px 0;
+      text-align: center;
+    }
+    .banda-mark { margin-bottom: 18px; }
+    .banda-mark .hf-pulse-line { stroke: var(--green-pale); }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(32px, 8vw, 54px);
+      line-height: 1;
+      margin: 0 0 14px;
+    }
+    .banda-sub { margin: 0 auto 24px; max-width: 40ch; font-weight: 500; color: var(--blue-pale); }
+    .banda .cta-row { justify-content: center; }
+    .btn-dark { background: var(--white); color: var(--blue-deep); }
+    .btn-dark:hover { background: var(--blue-pale); }
+    .btn-dark-ghost { border: 2px solid rgba(255, 255, 255, 0.55); color: var(--white); }
+    .btn-dark-ghost:hover { border-color: var(--white); }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      background: var(--ink);
+      padding: 44px 0 96px;
+      text-align: center;
+    }
+    .pie-mark { margin-bottom: 14px; }
+    .pie-mark .hf-pulse-line { stroke: var(--green); }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 24px;
+      color: var(--paper);
+      margin: 0 0 10px;
+    }
+    .pie-dato { margin: 4px 0; color: #9fadc6; font-size: 14.5px; }
+    .pie-dato a { color: var(--paper); text-decoration: none; border-bottom: 1px solid var(--green); }
+    .pie-dato a:hover { color: var(--green-pale); }
+    .pie-mini { margin: 14px 0 0; color: #6d7a94; font-size: 12.5px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .hero { padding: 74px 0 60px; }
+      .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: center; gap: 48px; }
+      .sec { padding: 100px 0; }
+      .about-grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .ubica { grid-template-columns: 1fr 1.2fr; align-items: start; }
+      .mapa iframe { height: 420px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      // Resaltar el día de hoy en la tabla de horarios
+      var hoy = new Date().getDay(); // 0 = domingo
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      // Scroll-reveal (mejora progresiva)
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

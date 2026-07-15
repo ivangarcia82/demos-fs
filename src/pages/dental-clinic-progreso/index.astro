@@ -1,0 +1,614 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Dental Clinic Progreso · Dentista en el Centro de Progreso, Yucatán"
+  description="Dr. Alexis y Dra. Paulina — odontología familiar dentro de Clínica PROMEDICA, Centro de Progreso. ⭐ 4.9 con 29 reseñas en Google. Extracciones sin dolor, atención a niños. Agenda por WhatsApp."
+  slug="dental-clinic-progreso"
+  ogImage="/dental-clinic-progreso/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
+  favicon="🦷"
+  themeColor="#16324a"
+  whatsapp={"https://wa.me/529991366406"}
+  telefono={"999 136 6406"}
+  mapsUrl={"https://maps.google.com/?cid=15882056684017972992&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <img
+      class="hero-bg"
+      src="/dental-clinic-progreso/img/foto_1.jpg"
+      alt="Consultorio de Dental Clinic Progreso, sillón dental junto a la ventana"
+      fetchpriority="high"
+    />
+    <div class="hero-scrim" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Dental Clinic Progreso · Centro de Progreso, Yuc.</p>
+      <h1 class="hero-title">Tu sonrisa, con la calma del <span class="accent">puerto</span></h1>
+      <p class="hero-sub">El Dr. Alexis y la Dra. Paulina te explican cada paso con paciencia — desde una limpieza hasta una extracción sin dolor. Aquí hasta los niños salen tranquilos.</p>
+      <a class="hero-rating" href="https://maps.google.com/?cid=15882056684017972992&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">
+        <span class="stars" aria-hidden="true">★★★★★</span> <strong>4.9</strong> · 29 reseñas en Google
+      </a>
+      <div class="hero-ctas">
+        <a class="btn btn-coral" href="https://wa.me/529991366406">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.1-.3 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.6 1.1 2.8c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.7-.3Z"/></svg>
+          Agenda por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=15882056684017972992&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Cómo llegar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ DIVISOR: horizonte (navy → arena) ============ -->
+  <div class="horizon horizon-down" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+      <path class="horizon-line" d="M0,30 C240,10 480,50 720,28 C960,6 1200,46 1440,26"></path>
+      <circle class="horizon-sun" cx="1080" cy="21" r="9"></circle>
+    </svg>
+  </div>
+
+  <main>
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="section" id="nosotros">
+      <div class="wrap split" data-reveal>
+        <figure class="split-media">
+          <img src="/dental-clinic-progreso/img/foto_2.jpg" alt="Fachada de Clínica PROMEDICA en el Centro de Progreso, sede de Dental Clinic Progreso" loading="lazy" width="720" height="555" />
+        </figure>
+        <div class="split-text">
+          <p class="eyebrow">Quiénes somos</p>
+          <h2>Un consultorio tranquilo, en el corazón de Progreso</h2>
+          <p>Dental Clinic Progreso está dentro de Clínica PROMEDICA, en pleno Centro de Progreso — el puerto que seguramente ya conoces calle por calle. Aquí el Dr. Alexis y la Dra. Paulina atienden cada consulta con calma: te explican a detalle cada procedimiento antes de empezar, sin prisas.</p>
+          <p>Sus pacientes lo notan y lo cuentan: describen el consultorio como tranquilo e impecable, y agradecen la paciencia del Dr. Alexis incluso con los niños más inquietos. Si alguna vez te sentiste apurado en otro consultorio, aquí es distinto.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="section section-tint" id="servicios">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Tratamientos</p>
+          <h2>Todo lo que tu sonrisa necesita, sin prisas</h2>
+        </div>
+        <ol class="tx-list" data-reveal>
+          <li><span class="tx-num">01</span><div><h3>Odontología general</h3><p>Revisión, diagnóstico y limpieza para cuidar tu boca en cada visita.</p></div></li>
+          <li><span class="tx-num">02</span><div><h3>Odontopediatría</h3><p>El Dr. Alexis atiende con paciencia a los niños del hogar.</p></div></li>
+          <li><span class="tx-num">03</span><div><h3>Extracciones sin dolor</h3><p>Como cuentan sus pacientes, casi ni lo notas cuando termina.</p></div></li>
+          <li><span class="tx-num">04</span><div><h3>Ortodoncia</h3><p>Alineamos tu sonrisa acompañándote en cada cita.</p></div></li>
+          <li><span class="tx-num">05</span><div><h3>Diseño de sonrisa</h3><p>Tratamientos estéticos pensados para tu caso.</p></div></li>
+          <li><span class="tx-num">06</span><div><h3>Endodoncia</h3><p>Tratamos la pieza dañada para aliviar el dolor de raíz.</p></div></li>
+          <li><span class="tx-num">07</span><div><h3>Prótesis dentales</h3><p>Recupera la función y la estética de tu boca.</p></div></li>
+        </ol>
+        <ul class="chips" data-reveal>
+          <li>💳 Aceptamos tarjetas</li>
+          <li>🅿️ Estacionamiento disponible</li>
+        </ul>
+
+        <div class="split split-rev feature" data-reveal>
+          <figure class="split-media">
+            <img src="/dental-clinic-progreso/img/foto_4.jpg" alt="Resultado antes y después de un tratamiento dental en Dental Clinic Progreso" loading="lazy" width="954" height="1100" />
+          </figure>
+          <div class="split-text">
+            <p class="eyebrow">Resultados reales</p>
+            <h2>Se nota el cuidado en cada detalle</h2>
+            <p>Sus pacientes hablan de un trabajo de 10/10 y de una atención que los hizo sentir seguros en cada paso — de eso se trata cuidar tu sonrisa con calma, sin prisas y sin dolor.</p>
+            <a class="btn btn-navy-line" href="https://wa.me/529991366406">Pregunta por tu tratamiento</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BANDA: consultorio ============ -->
+    <figure class="room-band" data-reveal>
+      <img src="/dental-clinic-progreso/img/foto_5.jpg" alt="Sillón y equipo del consultorio de Dental Clinic Progreso" loading="lazy" width="618" height="1100" />
+      <figcaption>Un consultorio tranquilo y limpio, como lo describen quienes ya nos visitaron.</figcaption>
+    </figure>
+
+    <!-- ============ DIVISOR: horizonte (arena → navy) ============ -->
+    <div class="horizon horizon-up" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path class="horizon-line" d="M0,26 C240,46 480,6 720,28 C960,50 1200,10 1440,30"></path>
+        <circle class="horizon-sun" cx="360" cy="20" r="9"></circle>
+      </svg>
+    </div>
+
+    <!-- ============ RESEÑAS ============ -->
+    <section class="section section-navy" id="resenas">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow eyebrow-arena">Lo que dicen nuestros pacientes</p>
+          <p class="big-rating"><strong>4.9</strong><span class="stars" aria-hidden="true">★★★★★</span></p>
+          <p class="rating-note">29 reseñas en Google</p>
+        </div>
+        <div class="reviews" data-reveal>
+          <blockquote class="review">
+            <p>“El Dr. Alexis y la Dra. Paulina son excelentes profesionales que se nota aman su trabajo, y tienen la paciencia para explicar a detalle los procedimientos o análisis que uno requiere…”</p>
+            <footer><cite>Graciela Montalvo</cite> · Hace 3 meses <span class="stars sm" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>“Gracias al doctor alexis avila. por tratar sus muelas de mi hijo es un excelente doctor, profesional, amable y paciente con los niños  su consultorio esta impecable.…”</p>
+            <footer><cite>Noemitha cime</cite> · Hace 6 meses <span class="stars sm" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>“Fui ayer por extracción de una muela, y la atención de Dr fue excelente, cuando vi la muela ya me la había quitado y eso me hizo sentir segura. Su trabajo 10/10. Ya no cambio a este dentista.”</p>
+            <footer><cite>Paola Hernandez</cite> · Hace 7 meses <span class="stars sm" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+        </div>
+        <div class="center" data-reveal>
+          <a class="btn btn-coral" href="https://maps.google.com/?cid=15882056684017972992&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DIVISOR: horizonte (navy → arena) ============ -->
+    <div class="horizon horizon-down" aria-hidden="true">
+      <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
+        <path class="horizon-line" d="M0,30 C240,10 480,50 720,28 C960,6 1200,46 1440,26"></path>
+        <circle class="horizon-sun" cx="1080" cy="21" r="9"></circle>
+      </svg>
+    </div>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="section" id="ubicacion">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow">Ubicación y horarios</p>
+          <h2>Estamos en el Centro de Progreso</h2>
+          <p class="addr">Clínica PROMEDICA, C. 79 consultorio 204, entre 76 y 78, Colonia Centro, 97320 Progreso, Yuc., México</p>
+        </div>
+        <div class="loc-grid" data-reveal>
+          <div class="map-box">
+            <iframe
+              title="Mapa: Dental Clinic Progreso, Clínica PROMEDICA, Centro de Progreso"
+              src="https://www.google.com/maps?q=Dental%20Clinic%20Progreso%2C%20Cl%C3%ADnica%20PROMEDICA%2C%20C.%2079%20consultorio%20204%2C%20Colonia%20Centro%2C%2097320%20Progreso%2C%20Yucat%C3%A1n&output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <div class="hours-box">
+            <h3>Horarios</h3>
+            <table class="hours">
+              <tbody>
+                <tr data-day="1"><th scope="row">Lunes</th><td>8:00–14:00 y 16:00–20:00</td></tr>
+                <tr data-day="2"><th scope="row">Martes</th><td>8:00–14:00 y 16:00–20:00</td></tr>
+                <tr data-day="3"><th scope="row">Miércoles</th><td>8:00–14:00 y 16:00–20:00</td></tr>
+                <tr data-day="4"><th scope="row">Jueves</th><td>8:00–14:00 y 16:00–20:00</td></tr>
+                <tr data-day="5"><th scope="row">Viernes</th><td>8:00–14:00 y 16:00–20:00</td></tr>
+                <tr data-day="6"><th scope="row">Sábado</th><td>8:00–16:00</td></tr>
+                <tr data-day="0" class="closed"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+            <a class="btn btn-navy-line" href="https://maps.google.com/?cid=15882056684017972992&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="horizon horizon-footer" aria-hidden="true">
+      <svg viewBox="0 0 1440 40" preserveAspectRatio="none">
+        <path class="horizon-line" d="M0,20 C240,4 480,36 720,18 C960,0 1200,32 1440,16"></path>
+      </svg>
+    </div>
+    <div class="wrap">
+      <p class="f-brand">Dental Clinic Progreso</p>
+      <p class="f-tag">Dr. Alexis &amp; Dra. Paulina · Centro de Progreso, Yuc.</p>
+      <p class="f-line">Clínica PROMEDICA, C. 79 consultorio 204, entre 76 y 78, Colonia Centro, 97320 Progreso, Yuc.</p>
+      <p class="f-line">
+        <a href="tel:+529991366406">999 136 6406</a> ·
+        <a href="https://wa.me/529991366406">WhatsApp</a> ·
+        <a href="https://www.facebook.com/profile.php?id=61554212467217">Facebook</a>
+      </p>
+      <p class="f-note">⭐ 4.9 · 29 reseñas en Google</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "Dental Clinic Progreso",
+    "url": "https://demos.ivang.mx/dental-clinic-progreso",
+    "telephone": "+52 999 136 6406",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Clínica PROMEDICA, C. 79 consultorio 204, entre 76 y 78, Colonia Centro",
+      "addressLocality": "Progreso",
+      "addressRegion": "Yucatán",
+      "postalCode": "97320",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "29"
+    },
+    "openingHours": ["Mo-Fr 08:00-14:00", "Mo-Fr 16:00-20:00", "Sa 08:00-16:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --arena: #f7f3ea;
+      --arena-tint: #f1e5cc;
+      --arena-calida: #e6d4b0;
+      --marino: #16324a;
+      --marino-deep: #0e2233;
+      --coral: #ef7d57;
+      --coral-ink: #b6461f;
+      --tinta: #1c2530;
+      --white: #ffffff;
+      --radius: 14px;
+      --font-display: 'Jost', system-ui, sans-serif;
+      --font-body: 'Work Sans', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--arena);
+      color: var(--tinta);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.12; margin: 0 0 0.5em; font-weight: 600; }
+    p { margin: 0 0 1em; }
+    a { color: var(--marino); }
+    a:focus-visible, .btn:focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    .center { text-align: center; }
+
+    /* ---- Botones ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.02rem;
+      text-decoration: none;
+      padding: 14px 26px;
+      border-radius: 10px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .btn-coral {
+      background: var(--coral);
+      color: var(--marino-deep);
+      box-shadow: 0 8px 20px rgba(239, 125, 87, 0.35);
+    }
+    .btn-coral:hover { box-shadow: 0 12px 26px rgba(239, 125, 87, 0.42); }
+    .btn-ghost {
+      color: var(--white);
+      border: 2px solid rgba(247, 243, 234, 0.7);
+    }
+    .btn-ghost:hover { background: rgba(247, 243, 234, 0.12); }
+    .btn-navy-line {
+      background: transparent;
+      color: var(--marino);
+      border: 2px solid var(--marino);
+    }
+    .btn-navy-line:hover { background: var(--marino); color: var(--arena); }
+
+    /* ---- Firma: horizonte con sol ---- */
+    .horizon { display: block; width: 100%; line-height: 0; }
+    .horizon svg { display: block; width: 100%; height: 44px; }
+    .horizon-down { background: var(--marino); }
+    .horizon-down svg { background: var(--arena); }
+    .horizon-up { background: var(--arena); }
+    .horizon-up svg { background: var(--marino); }
+    .horizon-footer svg { background: var(--marino-deep); height: 28px; }
+    .horizon-line { fill: none; stroke-width: 2.5; }
+    .horizon-down .horizon-line, .horizon-footer .horizon-line { stroke: var(--coral); }
+    .horizon-up .horizon-line { stroke: var(--arena-calida); }
+    .horizon-sun { fill: var(--coral); filter: drop-shadow(0 0 5px rgba(239, 125, 87, 0.55)); }
+    .horizon-up .horizon-sun { fill: var(--arena-calida); filter: drop-shadow(0 0 5px rgba(230, 212, 176, 0.5)); }
+
+    /* ---- Hero ---- */
+    .hero {
+      position: relative;
+      min-height: calc(100svh - 38px);
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--marino-deep);
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 55% 30%;
+    }
+    .hero-scrim {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(14, 34, 51, 0.35) 0%, rgba(14, 34, 51, 0.48) 40%, rgba(14, 34, 51, 0.92) 100%);
+    }
+    .hero-inner {
+      position: relative;
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 120px 20px 64px;
+      color: var(--white);
+    }
+    .hero-eyebrow {
+      font-weight: 600;
+      font-size: 0.82rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--arena-calida);
+      margin-bottom: 14px;
+    }
+    .hero-title {
+      font-size: clamp(2.4rem, 9.5vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.05;
+      max-width: 14ch;
+      margin-bottom: 0.4em;
+      text-wrap: balance;
+    }
+    .hero-title .accent { color: var(--coral); }
+    .hero-sub {
+      font-size: clamp(1rem, 3.6vw, 1.15rem);
+      max-width: 46ch;
+      color: rgba(247, 243, 234, 0.92);
+    }
+    .hero-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      color: var(--white);
+      text-decoration: none;
+      border-bottom: 1px dashed rgba(247, 243, 234, 0.55);
+      padding-bottom: 3px;
+      margin-bottom: 1.6em;
+    }
+    .hero-rating:hover { border-bottom-color: var(--coral); }
+    .stars { color: var(--coral); letter-spacing: 2px; }
+    .stars.sm { font-size: 0.85em; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    /* ---- Secciones ---- */
+    .section { padding: 60px 0; }
+    .section-tint { background: var(--arena-tint); }
+    .eyebrow {
+      font-weight: 700;
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--coral-ink);
+      margin-bottom: 8px;
+    }
+    .eyebrow-arena { color: var(--arena-calida); }
+    .sec-head { margin-bottom: 30px; }
+    .sec-head h2, .split-text h2 {
+      font-size: clamp(1.6rem, 5.8vw, 2.3rem);
+      font-weight: 600;
+      color: var(--marino);
+      text-wrap: balance;
+    }
+
+    /* ---- Split (nosotros / feature) ---- */
+    .split { display: grid; gap: 26px; align-items: center; }
+    .split-media { margin: 0; }
+    .split-media img {
+      width: 100%;
+      border-radius: var(--radius);
+      box-shadow: 0 14px 34px rgba(22, 50, 74, 0.18);
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+    .feature { margin-top: 52px; }
+    .feature .split-media img { aspect-ratio: 4 / 5; }
+    .split-text p { color: #3c5270; }
+
+    /* ---- Servicios: lista tipográfica ---- */
+    .tx-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+    .tx-list li {
+      display: flex;
+      gap: 18px;
+      align-items: baseline;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(22, 50, 74, 0.14);
+    }
+    .tx-list li:first-child { padding-top: 0; }
+    .tx-num {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--coral-ink);
+      min-width: 2.2ch;
+    }
+    .tx-list h3 { font-size: 1.1rem; font-weight: 600; color: var(--marino); margin-bottom: 2px; }
+    .tx-list p { margin: 0; font-size: 0.95rem; color: #3c5270; }
+
+    .chips {
+      list-style: none;
+      margin: 24px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chips li {
+      background: var(--white);
+      border: 2px solid var(--arena-calida);
+      color: var(--marino);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+
+    /* ---- Banda de consultorio ---- */
+    .room-band { margin: 0; position: relative; }
+    .room-band img { width: 100%; max-height: 480px; object-fit: cover; object-position: center 30%; }
+    .room-band figcaption {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 26px 20px 22px;
+      background: linear-gradient(0deg, rgba(14, 34, 51, 0.82) 0%, rgba(14, 34, 51, 0) 100%);
+      color: var(--arena);
+      font-family: var(--font-display);
+      font-size: 1.02rem;
+      font-weight: 500;
+      text-wrap: balance;
+    }
+
+    /* ---- Reseñas ---- */
+    .section-navy {
+      position: relative;
+      background: var(--marino);
+      color: var(--white);
+      padding-top: 60px;
+      padding-bottom: 64px;
+    }
+    .section-navy .sec-head { text-align: center; }
+    .big-rating {
+      font-family: var(--font-display);
+      margin: 0;
+      line-height: 1;
+    }
+    .big-rating strong { font-size: clamp(3.2rem, 11vw, 4.6rem); font-weight: 600; display: block; }
+    .big-rating .stars { font-size: 1.3rem; }
+    .rating-note { color: rgba(247, 243, 234, 0.78); margin-top: 6px; }
+    .reviews { display: grid; gap: 16px; margin: 34px 0 30px; }
+    .review {
+      margin: 0;
+      background: rgba(247, 243, 234, 0.06);
+      border: 1px solid rgba(247, 243, 234, 0.16);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+    }
+    .review p { font-size: 0.98rem; margin-bottom: 14px; }
+    .review footer { font-size: 0.87rem; color: rgba(247, 243, 234, 0.72); }
+    .review cite { font-style: normal; font-weight: 700; color: var(--white); }
+
+    /* ---- Ubicación ---- */
+    .addr { max-width: 52ch; color: #3c5270; }
+    .loc-grid { display: grid; gap: 22px; }
+    .map-box {
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: 0 12px 30px rgba(22, 50, 74, 0.16);
+    }
+    .map-box iframe { display: block; width: 100%; height: 300px; border: 0; }
+    .hours-box h3 { font-size: 1.25rem; color: var(--marino); }
+    .hours { width: 100%; border-collapse: collapse; margin-bottom: 22px; }
+    .hours th, .hours td { text-align: left; padding: 9px 10px; font-size: 0.96rem; }
+    .hours th { font-weight: 600; color: var(--marino); }
+    .hours tr { border-bottom: 1px solid rgba(22, 50, 74, 0.12); }
+    .hours tr.closed td { color: #8a8375; }
+    .hours tr.today {
+      background: var(--arena-tint);
+      border-radius: 8px;
+      box-shadow: inset 3px 0 0 var(--coral);
+    }
+    .hours tr.today th::after {
+      content: " · hoy";
+      color: var(--coral-ink);
+      font-weight: 700;
+      font-size: 0.8em;
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      position: relative;
+      background: var(--marino-deep);
+      color: rgba(247, 243, 234, 0.85);
+      padding: 20px 0 64px;
+      text-align: center;
+    }
+    .f-brand {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.7rem;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 4px;
+      letter-spacing: 0.01em;
+    }
+    .f-tag {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--arena-calida);
+      margin-bottom: 22px;
+    }
+    .f-line { font-size: 0.95rem; margin-bottom: 8px; }
+    .footer a { color: var(--white); text-decoration-color: var(--coral); }
+    .f-note { margin-top: 18px; font-size: 0.9rem; color: rgba(247, 243, 234, 0.6); }
+
+    /* ---- Reveal (solo si hay JS) ---- */
+    html.js [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js [data-reveal].in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ---- Desktop ---- */
+    @media (min-width: 720px) {
+      .section { padding: 84px 0; }
+      .horizon svg { height: 60px; }
+      .horizon-footer svg { height: 36px; }
+      .split { grid-template-columns: 5fr 6fr; gap: 46px; }
+      .split-rev .split-media { order: 2; }
+      .tx-list { grid-template-columns: repeat(2, 1fr); column-gap: 40px; }
+      .tx-list li:nth-child(2) { padding-top: 0; }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .loc-grid { grid-template-columns: 3fr 2fr; align-items: start; }
+      .map-box iframe { height: 360px; }
+      .hero-inner { padding-bottom: 88px; }
+      .room-band img { max-height: 560px; }
+    }
+    @media (min-width: 1000px) {
+      .hero-title { max-width: 16ch; }
+    }
+  </style>
+
+  <script is:inline>
+    // Mejora progresiva: sin JS todo el contenido queda visible.
+    document.documentElement.classList.add('js');
+
+    // Scroll-reveal sutil
+    var revealables = document.querySelectorAll('[data-reveal]');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealables.forEach(function (el) { io.observe(el); });
+    } else {
+      revealables.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    // Resaltar el día actual en la tabla de horarios
+    var today = new Date().getDay();
+    var row = document.querySelector('.hours tr[data-day="' + today + '"]');
+    if (row) {
+      row.classList.add('today');
+      row.setAttribute('aria-current', 'date');
+    }
+  </script>
+</BaseLayout>

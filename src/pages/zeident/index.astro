@@ -1,0 +1,605 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="ZEIDENT · Consultorio dental en el Centro de Progreso, Yucatán"
+  description="⭐ 4.9 con 35 reseñas en Google. Atención paciente, consultorio higiénico y respuesta a urgencias dentales. Agenda por WhatsApp en Progreso, Yucatán."
+  slug="zeident"
+  ogImage="/zeident/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+  favicon="🦷"
+  themeColor="#16181d"
+  whatsapp={"https://wa.me/529997949624"}
+  telefono={"999 794 9624"}
+  mapsUrl={"https://maps.google.com/?cid=124579838829131515&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <svg class="tooth-mark" viewBox="0 0 100 118" aria-hidden="true">
+      <path d="M50,8 C32,8 18,22 18,40 C18,58 27,67 27,82 C27,93 32,101 39,101 C45,101 46,88 50,88 C54,88 55,101 61,101 C68,101 73,93 73,82 C73,67 82,58 82,40 C82,22 68,8 50,8 Z"/>
+    </svg>
+    <div class="hero-inner">
+      <p class="eyebrow">ZEIDENT · Consultorio dental · Centro, Progreso</p>
+      <h1 class="wordmark">ZEIDENT</h1>
+      <p class="hero-sub">La doctora y su cirujano te atienden con calma, te explican cada paso y resuelven tus urgencias sin hacerte esperar.</p>
+      <a class="rating-chip" href="https://maps.google.com/?cid=124579838829131515&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>4.9</strong> · 35 reseñas en Google
+      </a>
+      <div class="hero-ctas">
+        <a class="btn btn-mint" href="https://wa.me/529997949624">
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+          Agenda por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=124579838829131515&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Cómo llegar</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ INSIGNIAS (elemento firma) ============ -->
+    <section class="section seals-section" aria-label="Lo que más valoran nuestros pacientes">
+      <div class="wrap">
+        <p class="seals-eyebrow" data-reveal>Lo que más valoran nuestros pacientes</p>
+        <div class="seals" data-reveal>
+          <div class="seal">
+            <svg class="seal-ring" viewBox="0 0 140 140" aria-hidden="true">
+              <circle cx="70" cy="70" r="54" class="seal-circle" />
+              <path id="sealPathHigiene" d="M20,78 A50,50 0 1,1 120,78" fill="none" />
+              <text class="seal-text">
+                <textPath href="#sealPathHigiene" startOffset="50%" text-anchor="middle">HIGIENE VERIFICADA</textPath>
+              </text>
+              <path class="seal-icon" d="M70,52 C79,65 86,74 86,83 A16,16 0 1 1 54,83 C54,74 61,65 70,52 Z" />
+            </svg>
+            <p class="seal-caption">Instalaciones limpias, revisadas en cada cita.</p>
+          </div>
+          <div class="seal">
+            <svg class="seal-ring" viewBox="0 0 140 140" aria-hidden="true">
+              <circle cx="70" cy="70" r="54" class="seal-circle" />
+              <path id="sealPathUrgencias" d="M20,78 A50,50 0 1,1 120,78" fill="none" />
+              <text class="seal-text">
+                <textPath href="#sealPathUrgencias" startOffset="50%" text-anchor="middle">ATENCIÓN A URGENCIAS</textPath>
+              </text>
+              <circle cx="70" cy="82" r="17" class="seal-icon-circle" />
+              <path class="seal-icon" d="M70,72 V92 M60,82 H80" />
+            </svg>
+            <p class="seal-caption">Respondemos tus dudas y urgencias sin hacerte esperar.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="section" id="nosotros">
+      <div class="wrap narrow" data-reveal>
+        <p class="eyebrow eyebrow-mint">Quiénes somos</p>
+        <h2>Una doctora, un cirujano y mucha paciencia</h2>
+        <p>En ZEIDENT te atiende una doctora dental acompañada de un cirujano — un equipo pequeño que se toma el tiempo de explicarte tu tratamiento con claridad antes de empezar, sin dejarte con dudas.</p>
+        <p>Nuestros pacientes lo notan y lo cuentan: la calma con la que trabajamos, la paciencia para resolver cada pregunta y precios justos, sin sorpresas a mitad del tratamiento.</p>
+        <p>Cuidamos también el consultorio: instalaciones limpias que revisamos cita tras cita, porque tu salud dental empieza por un espacio en el que puedas confiar.</p>
+      </div>
+    </section>
+
+    <!-- ============ TRATAMIENTOS ============ -->
+    <section class="section section-panel" id="tratamientos">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow eyebrow-mint">Tratamientos</p>
+          <h2>Cuidado dental para toda la familia</h2>
+        </div>
+        <ul class="svc-grid" data-reveal>
+          <li class="svc">
+            <h3>Ortodoncia</h3>
+            <p>Seguimiento cercano en cada cita — nuestros pacientes empiezan a ver resultados desde el primer mes.</p>
+          </li>
+          <li class="svc">
+            <h3>Atención a urgencias</h3>
+            <p>Resolvemos tu dolor y respondemos todas tus dudas, sin hacerte esperar días.</p>
+          </li>
+          <li class="svc">
+            <h3>Limpieza dental</h3>
+            <p>Profilaxis para encías sanas y aliento fresco.</p>
+          </li>
+          <li class="svc">
+            <h3>Extracciones</h3>
+            <p>Incluye muelas del juicio, con indicaciones claras para tu recuperación.</p>
+          </li>
+          <li class="svc">
+            <h3>Resinas y restauraciones</h3>
+            <p>Recupera la pieza dañada con un resultado natural.</p>
+          </li>
+          <li class="svc">
+            <h3>Consulta y diagnóstico</h3>
+            <p>Revisión completa antes de proponerte un tratamiento.</p>
+          </li>
+        </ul>
+        <ul class="chips" data-reveal>
+          <li>💳 Aceptamos tarjetas</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ RESEÑAS ============ -->
+    <section class="section" id="resenas">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow eyebrow-mint">Lo que dicen en Google</p>
+          <p class="big-rating"><strong>4.9</strong><span class="stars" aria-hidden="true">★★★★★</span></p>
+          <p class="rating-note">35 reseñas en Google</p>
+        </div>
+        <div class="reviews" data-reveal>
+          <blockquote class="review">
+            <p>“Tuve una excelente experiencia en este consultorio dental, desde que empecé mi tratamiento recibí una atención amable y profesional. La dentista me explicó el tratamiento con claridad y me hizo sentir cómoda durante la consulta. Las instalaciones están limpias y el ambiente es agradable…”</p>
+            <footer><cite>Cassandra Verano Conde</cite> · Hace 2 semanas <span class="stars sm" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>“Recomendable, la Dra es considera, amable, tiene precios justo, responde ante urgencias y responde todas tus dudas. Yo llevo mi tratamiento de ortodoncia con ella y al primer mes ví resultados”</p>
+            <footer><cite>okairi yetzabell</cite> · Hace 2 semanas <span class="stars sm" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+          <blockquote class="review">
+            <p>“La doctora es muy amable y paciente, el cirujano también es muy bueno y el servicio que ofrecen es de calidad”</p>
+            <footer><cite>Mónica Sagundo</cite> · Hace 2 semanas <span class="stars sm" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+        </div>
+        <div class="center" data-reveal>
+          <a class="btn btn-mint" href="https://maps.google.com/?cid=124579838829131515&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="section section-panel" id="ubicacion">
+      <div class="wrap">
+        <div class="sec-head" data-reveal>
+          <p class="eyebrow eyebrow-mint">Ubicación y horarios</p>
+          <h2>Centro de Progreso, Yucatán</h2>
+          <p class="addr">C. 33 129-x 72 y 74, Centro, 97320 Progreso, Yuc., México</p>
+        </div>
+        <div class="loc-grid" data-reveal>
+          <div class="loc-media">
+            <div class="map-box">
+              <iframe
+                title="Mapa: ZEIDENT en el Centro de Progreso, Yucatán"
+                src="https://www.google.com/maps?q=ZEIDENT%2C%20C.%2033%20129-x%2072%20y%2074%2C%20Centro%2C%2097320%20Progreso%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <figure class="found-photo">
+              <img src="/zeident/img/foto_1.jpg" alt="Fachada de ZEIDENT en el Centro de Progreso, con el letrero sobre la pared color menta" loading="lazy" width="825" height="1100" />
+              <figcaption>Así vas a reconocer la entrada</figcaption>
+            </figure>
+          </div>
+          <div class="hours-box">
+            <h3>Horarios</h3>
+            <table class="hours">
+              <tbody>
+                <tr data-day="1"><th scope="row">Lunes</th><td>9:00–21:00</td></tr>
+                <tr data-day="2"><th scope="row">Martes</th><td>9:00–21:00</td></tr>
+                <tr data-day="3"><th scope="row">Miércoles</th><td>9:00–21:00</td></tr>
+                <tr data-day="4"><th scope="row">Jueves</th><td>9:00–21:00</td></tr>
+                <tr data-day="5"><th scope="row">Viernes</th><td>9:00–21:00</td></tr>
+                <tr data-day="6"><th scope="row">Sábado</th><td>10:00–14:00</td></tr>
+                <tr data-day="0" class="closed"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+            <a class="btn btn-mint-outline" href="https://maps.google.com/?cid=124579838829131515&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap">
+      <p class="f-brand">ZEIDENT</p>
+      <p class="f-tag">Consultorio dental · Centro, Progreso, Yucatán</p>
+      <p class="f-line">C. 33 129-x 72 y 74, Centro, 97320 Progreso, Yuc.</p>
+      <p class="f-line">
+        <a href="tel:+529997949624">999 794 9624</a> ·
+        <a href="https://wa.me/529997949624">WhatsApp</a> ·
+        <a href="https://www.facebook.com/share/1EPQPht6sS/">Facebook</a>
+      </p>
+      <p class="f-note">⭐ 4.9 · 35 reseñas en Google</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "ZEIDENT",
+    "url": "https://demos.ivang.mx/zeident",
+    "telephone": "+52 999 794 9624",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 33 129-x 72 y 74, Centro",
+      "addressLocality": "Progreso",
+      "addressRegion": "Yucatán",
+      "postalCode": "97320",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "35"
+    },
+    "openingHours": ["Mo-Fr 09:00-21:00", "Sa 10:00-14:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --ink: #16181d;
+      --panel: #23262d;
+      --panel-2: #292d36;
+      --bone: #f2efe9;
+      --bone-dim: rgba(242, 239, 233, 0.72);
+      --bone-faint: rgba(242, 239, 233, 0.5);
+      --mint: #4fd1b5;
+      --mint-deep: #2f9880;
+      --mint-line: rgba(79, 209, 181, 0.28);
+      --radius: 20px;
+      --font-display: 'Syne', system-ui, sans-serif;
+      --font-body: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--ink);
+      color: var(--bone);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-family: var(--font-display); line-height: 1.08; margin: 0 0 0.5em; color: var(--bone); }
+    p { margin: 0 0 1em; }
+    a { color: var(--mint); }
+    a:focus-visible, .btn:focus-visible, .rating-chip:focus-visible {
+      outline: 3px solid var(--mint);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+    .wrap.narrow { max-width: 700px; }
+    .center { text-align: center; }
+
+    /* ---- Botones ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 1.02rem;
+      text-decoration: none;
+      padding: 14px 26px;
+      border-radius: 999px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+    .btn-mint {
+      background: var(--mint);
+      color: var(--ink);
+      box-shadow: 0 8px 22px rgba(79, 209, 181, 0.28);
+    }
+    .btn-mint:hover { background: #63dac0; }
+    .btn-ghost {
+      color: var(--bone);
+      border: 2px solid rgba(242, 239, 233, 0.35);
+    }
+    .btn-ghost:hover { background: rgba(242, 239, 233, 0.08); border-color: rgba(242, 239, 233, 0.6); }
+    .btn-mint-outline {
+      color: var(--mint);
+      border: 2px solid var(--mint-line);
+      background: transparent;
+    }
+    .btn-mint-outline:hover { background: rgba(79, 209, 181, 0.1); border-color: var(--mint); }
+
+    /* ---- Hero ---- */
+    .hero {
+      position: relative;
+      min-height: calc(100svh - 38px);
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--ink);
+    }
+    .tooth-mark {
+      position: absolute;
+      right: -8%;
+      bottom: -12%;
+      width: 62vw;
+      max-width: 480px;
+      opacity: 0.05;
+      fill: var(--mint);
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      width: 100%;
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 128px 20px 72px;
+    }
+    .eyebrow {
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--bone-dim);
+      margin-bottom: 14px;
+    }
+    .eyebrow-mint { color: var(--mint); }
+    .wordmark {
+      font-size: clamp(3rem, 15vw, 6.4rem);
+      font-weight: 800;
+      letter-spacing: 0.01em;
+      margin-bottom: 0.28em;
+      color: var(--bone);
+      text-shadow: 5px 5px 0 rgba(79, 209, 181, 0.28);
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 3.6vw, 1.2rem);
+      max-width: 42ch;
+      color: var(--bone-dim);
+      margin-bottom: 1.5em;
+    }
+    .rating-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--bone);
+      text-decoration: none;
+      background: rgba(242, 239, 233, 0.06);
+      border: 1px solid rgba(242, 239, 233, 0.16);
+      padding: 8px 16px;
+      border-radius: 999px;
+      margin-bottom: 2em;
+    }
+    .rating-chip:hover { border-color: var(--mint); }
+    .rating-chip strong { color: var(--bone); }
+    .stars { color: var(--mint); letter-spacing: 2px; }
+    .stars.sm { font-size: 0.85em; }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    /* ---- Secciones ---- */
+    .section { padding: 60px 0; }
+    .section-panel { background: var(--panel); }
+    .sec-head { margin-bottom: 32px; }
+    .sec-head h2, .wrap.narrow h2 {
+      font-size: clamp(1.6rem, 6vw, 2.3rem);
+      text-wrap: balance;
+    }
+
+    /* ---- Insignias (elemento firma) ---- */
+    .seals-section { padding-top: 40px; padding-bottom: 40px; }
+    .seals-eyebrow {
+      text-align: center;
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--bone-faint);
+      margin-bottom: 24px;
+    }
+    .seals {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .seal {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      max-width: 190px;
+    }
+    .seal-ring { width: 128px; height: 128px; }
+    .seal-circle { fill: none; stroke: var(--mint-line); stroke-width: 1.4; }
+    .seal-text {
+      font-family: var(--font-display);
+      font-size: 8.4px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      fill: var(--mint);
+    }
+    .seal-icon { fill: none; stroke: var(--mint); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    .seal-icon-circle { fill: none; stroke: var(--mint-line); stroke-width: 1.4; }
+    .seal-caption { font-size: 0.88rem; color: var(--bone-dim); margin-top: 10px; margin-bottom: 0; }
+
+    /* ---- Quiénes somos ---- */
+    .wrap.narrow p { color: var(--bone-dim); font-size: 1.05rem; }
+
+    /* ---- Servicios ---- */
+    .svc-grid {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .svc {
+      background: var(--panel-2);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+      border-left: 3px solid var(--mint);
+    }
+    .svc h3 { font-size: 1.1rem; font-weight: 700; color: var(--bone); margin-bottom: 6px; }
+    .svc p { margin: 0; font-size: 0.94rem; color: var(--bone-dim); }
+    .chips {
+      list-style: none;
+      margin: 26px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chips li {
+      background: transparent;
+      border: 1px solid var(--mint-line);
+      color: var(--bone);
+      font-weight: 600;
+      font-size: 0.9rem;
+      padding: 8px 16px;
+      border-radius: 999px;
+    }
+
+    /* ---- Reseñas ---- */
+    .big-rating { font-family: var(--font-display); margin: 0; line-height: 1; }
+    .big-rating strong { font-size: clamp(3.2rem, 12vw, 4.6rem); font-weight: 800; display: block; color: var(--bone); }
+    .big-rating .stars { font-size: 1.3rem; }
+    .rating-note { color: var(--bone-dim); margin-top: 6px; }
+    .sec-head.center, #resenas .sec-head { text-align: center; }
+    .reviews { display: grid; gap: 16px; margin: 36px 0 32px; }
+    .review {
+      margin: 0;
+      background: var(--panel);
+      border: 1px solid rgba(242, 239, 233, 0.08);
+      border-radius: var(--radius);
+      padding: 22px 24px;
+    }
+    .review p { font-size: 0.98rem; margin-bottom: 14px; color: var(--bone); }
+    .review footer { font-size: 0.86rem; color: var(--bone-dim); }
+    .review cite { font-style: normal; font-weight: 700; color: var(--bone); }
+
+    /* ---- Ubicación ---- */
+    .addr { max-width: 52ch; color: var(--bone-dim); }
+    .loc-grid { display: grid; gap: 24px; }
+    .loc-media { display: flex; flex-direction: column; gap: 18px; }
+    .map-box {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid rgba(242, 239, 233, 0.1);
+    }
+    .map-box iframe { display: block; width: 100%; height: 300px; border: 0; filter: grayscale(0.15) invert(0.92) contrast(0.9); }
+    .found-photo {
+      margin: 0 auto;
+      max-width: 220px;
+      transform: rotate(-2deg);
+      background: var(--bone);
+      padding: 10px 10px 34px;
+      border-radius: 6px;
+      box-shadow: 0 16px 30px rgba(0, 0, 0, 0.45);
+    }
+    .found-photo img {
+      width: 100%;
+      border-radius: 2px;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      object-position: 50% 22%;
+    }
+    .found-photo figcaption {
+      color: var(--ink);
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-align: center;
+      margin-top: 10px;
+    }
+    .hours-box h3 { font-size: 1.25rem; }
+    .hours { width: 100%; border-collapse: collapse; margin-bottom: 22px; }
+    .hours th, .hours td { text-align: left; padding: 9px 10px; font-size: 0.96rem; }
+    .hours th { font-weight: 600; color: var(--bone); }
+    .hours td { color: var(--bone-dim); }
+    .hours tr { border-bottom: 1px solid rgba(242, 239, 233, 0.1); }
+    .hours tr.closed td { color: var(--bone-faint); }
+    .hours tr.today {
+      background: rgba(79, 209, 181, 0.08);
+      box-shadow: inset 3px 0 0 var(--mint);
+    }
+    .hours tr.today th::after {
+      content: " · hoy";
+      color: var(--mint);
+      font-weight: 700;
+      font-size: 0.8em;
+    }
+
+    /* ---- Footer ---- */
+    .footer {
+      background: #0f1013;
+      color: var(--bone-dim);
+      padding: 64px 0 100px;
+      text-align: center;
+      border-top: 1px solid rgba(242, 239, 233, 0.08);
+    }
+    .f-brand {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.9rem;
+      color: var(--bone);
+      letter-spacing: 0.02em;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .f-tag {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mint);
+      margin-bottom: 20px;
+    }
+    .f-line { font-size: 0.94rem; margin-bottom: 8px; }
+    .footer a { color: var(--bone); text-decoration-color: var(--mint); }
+    .f-note { margin-top: 18px; font-size: 0.88rem; color: var(--bone-faint); }
+
+    /* ---- Reveal (solo si hay JS) ---- */
+    html.js [data-reveal] {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js [data-reveal].in { opacity: 1; transform: none; }
+
+    /* ---- Desktop ---- */
+    @media (min-width: 720px) {
+      .section { padding: 88px 0; }
+      #resenas .sec-head { text-align: center; }
+      .svc-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .loc-grid { grid-template-columns: 3fr 2fr; align-items: start; }
+      .loc-media { flex-direction: row; align-items: flex-start; }
+      .map-box { flex: 1; }
+      .map-box iframe { height: 360px; }
+      .found-photo { flex-shrink: 0; }
+      .hero-inner { padding-bottom: 96px; }
+    }
+    @media (min-width: 1000px) {
+      .svc-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+
+  <script is:inline>
+    document.documentElement.classList.add('js');
+
+    var revealables = document.querySelectorAll('[data-reveal]');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      revealables.forEach(function (el) { io.observe(el); });
+    } else {
+      revealables.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    var today = new Date().getDay();
+    var row = document.querySelector('.hours tr[data-day="' + today + '"]');
+    if (row) {
+      row.classList.add('today');
+      row.setAttribute('aria-current', 'date');
+    }
+  </script>
+</BaseLayout>

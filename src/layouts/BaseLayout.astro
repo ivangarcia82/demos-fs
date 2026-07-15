@@ -1,0 +1,80 @@
+---
+// Layout base de todas las demos.
+// Centraliza: meta/OG para la preview de WhatsApp, Google Fonts, favicon emoji,
+// banner de demo y botón flotante de contacto.
+import DemoBanner from '../components/DemoBanner.astro';
+import FloatingCTA from '../components/FloatingCTA.astro';
+
+const {
+  title,
+  description,
+  slug,
+  ogImage = null,      // ruta absoluta local, ej. "/mi-negocio/img/foto_2.jpg"
+  fonts = null,        // URL de Google Fonts css2 (máx 2 familias)
+  favicon = '✨',      // emoji para la pestaña
+  themeColor = '#111111',
+  whatsapp = null,     // wa.me del negocio (null si no tiene)
+  telefono = null,     // "999 123 4567" (para tel: y fallback del flotante)
+  mapsUrl = null,      // ficha de Google Maps
+} = Astro.props;
+
+const SITE = 'https://demos.ivang.mx';
+const url = `${SITE}/${slug}`;
+const ogImageAbs = ogImage ? `${SITE}${ogImage}` : null;
+const faviconSvg =
+  '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">' +
+  favicon +
+  '</text></svg>';
+const faviconHref = 'data:image/svg+xml,' + encodeURIComponent(faviconSvg);
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+    <link rel="icon" href={faviconHref} />
+    <meta name="theme-color" content={themeColor} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:locale" content="es_MX" />
+    {ogImageAbs && <meta property="og:image" content={ogImageAbs} />}
+    <meta name="twitter:card" content={ogImageAbs ? 'summary_large_image' : 'summary'} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    {ogImageAbs && <meta name="twitter:image" content={ogImageAbs} />}
+
+    {fonts && (
+      <>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="stylesheet" href={fonts} />
+      </>
+    )}
+  </head>
+  <body>
+    <DemoBanner />
+    <slot />
+    <FloatingCTA whatsapp={whatsapp} telefono={telefono} mapsUrl={mapsUrl} />
+  </body>
+</html>
+
+<style is:global>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  body { margin: 0; }
+  img { max-width: 100%; height: auto; display: block; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>

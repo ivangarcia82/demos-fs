@@ -1,0 +1,620 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="5M GYM & Cross Trainning — Sin prisa, pero sin pausa"
+  description="Gimnasio y cross training en Salvador Alvarado Sur, Mérida. ⭐ 4.8 con 127 reseñas en Google. Pesas, clases y coaches que te acompañan desde el primer día. Abrimos desde las 5:00 am."
+  slug="5m-gym"
+  ogImage="/5m-gym/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Big+Shoulders+Display:wght@600;800;900&display=swap"
+  favicon="🏋️"
+  themeColor="#17130E"
+  whatsapp={"https://wa.me/529992692794"}
+  telefono={"999 269 2794"}
+  mapsUrl={"https://maps.google.com/?cid=14090700860661859840&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <img
+      class="hero-img"
+      src="/5m-gym/img/foto_2.jpg"
+      alt="Atleta entrenando con mancuernas frente al mural pintado de 5M GYM"
+      fetchpriority="high"
+    />
+    <div class="hero-in">
+      <p class="hero-eyebrow">5M GYM &amp; Cross Trainning · Mérida, Yuc.</p>
+      <h1 class="hero-title">
+        <span class="sr-only">5M GYM: </span>
+        <span class="line-1">Sin prisa,</span>
+        <span class="line-2">pero sin pausa.</span>
+      </h1>
+      <p class="hero-sub">
+        El gym de barrio de Salvador Alvarado Sur: pesas, cross training y coaches
+        que te enseñan desde el primer día. Abrimos a las 5:00 de la mañana.
+      </p>
+      <p class="hero-rating">⭐ 4.8 · 127 reseñas en Google</p>
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="https://wa.me/529992692794?text=Hola%2C%20quiero%20informes%20de%205M%20GYM%20%F0%9F%92%AA" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=14090700860661859840&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== DATOS RÁPIDOS ===== -->
+  <section class="facts" aria-label="Datos rápidos">
+    <div class="wrap facts-grid">
+      <div class="fact"><span class="fact-big">4.8</span><span class="fact-small">rating en Google</span></div>
+      <div class="fact"><span class="fact-big">127</span><span class="fact-small">reseñas reales</span></div>
+      <div class="fact"><span class="fact-big">5:00</span><span class="fact-small">abrimos entre semana</span></div>
+      <div class="fact"><span class="fact-big">L–S</span><span class="fact-small">lunes a sábado</span></div>
+    </div>
+  </section>
+
+  <!-- ===== SOBRE NOSOTROS ===== -->
+  <section class="sec" id="nosotros">
+    <div class="wrap about-grid">
+      <div class="about-txt rv">
+        <p class="kicker">El gym</p>
+        <h2>Aquí nadie entrena solo</h2>
+        <p>
+          Somos el gym del barrio en Salvador Alvarado Sur. Nada de franquicia
+          fría: aquí se viene a entrenar en serio, con música, fierros y gente
+          que te saluda por tu nombre. Nuestro lema está pintado en las lonas
+          del patio y lo vivimos todos los días: sin prisa, pero sin pausa.
+        </p>
+        <p>
+          Si es tu primer día, no te soltamos. Nuestros coaches van contigo, te
+          explican cada ejercicio y el uso de cada máquina hasta que lo dominas.
+          Aquí siempre hay alguien que te tiende la mano — empezando por los
+          coaches: en las reseñas, nuestros miembros hablan de la calidez humana
+          de Eduardo Cabrera y de todo el equipo.
+        </p>
+        <p>
+          Entrenamos pesas y cross training, y cuando llega el Reto 5M — el
+          desafío de la casa que nuestros miembros describen como toda una
+          experiencia — el gym entero se vuelca. Abrimos desde las 5:00 de la
+          mañana entre semana, para que el pretexto del horario no exista.
+        </p>
+      </div>
+      <figure class="about-fig rv">
+        <img src="/5m-gym/img/foto_5.jpg" alt="Clase grupal al atardecer en el patio de 5M GYM" loading="lazy" />
+        <figcaption>Clase en el patio · Salvador Alvarado Sur, Mérida</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== SERVICIOS ===== -->
+  <section class="sec sec-alt" id="entrena">
+    <div class="wrap">
+      <p class="kicker rv">Entrena con nosotros</p>
+      <h2 class="rv">Lo que encuentras adentro</h2>
+      <ol class="svc-list">
+        <li class="rv"><span class="svc-num">01</span><div><h3>Pesas y máquinas</h3><p>Peso libre, mancuernas y máquinas para armar tu rutina completa.</p></div></li>
+        <li class="rv"><span class="svc-num">02</span><div><h3>Cross training</h3><p>La disciplina que le da nombre a la casa: fuerza, cardio y técnica.</p></div></li>
+        <li class="rv"><span class="svc-num">03</span><div><h3>Clases grupales</h3><p>Energía en grupo en el patio, para los días en que solo cuesta más.</p></div></li>
+        <li class="rv"><span class="svc-num">04</span><div><h3>Coaches que acompañan</h3><p>Te explican cada ejercicio y cada máquina desde el día uno.</p></div></li>
+        <li class="rv"><span class="svc-num">05</span><div><h3>Reto 5M</h3><p>El desafío de la casa. Pregúntanos cuándo arranca la siguiente edición.</p></div></li>
+        <li class="rv"><span class="svc-num">06</span><div><h3>Acceso para silla de ruedas</h3><p>Instalaciones con acceso para todos.</p></div></li>
+      </ol>
+      <figure class="svc-fig rv">
+        <img src="/5m-gym/img/foto_3.jpg" alt="Grupo entrenando frente al letrero iluminado de 5M GYM" loading="lazy" />
+        <figcaption>El letrero encendido y la clase de la tarde</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== RESEÑAS ===== -->
+  <section class="sec" id="resenas">
+    <div class="wrap">
+      <div class="rev-head rv">
+        <span class="rev-score">4.8</span>
+        <div class="rev-meta">
+          <span class="rev-stars" aria-hidden="true">★★★★★</span>
+          <p>127 reseñas en Google</p>
+        </div>
+      </div>
+      <div class="rev-grid">
+        <blockquote class="rev-card rv">
+          <p>«Llevo aquí aprox 2años y medio, es la primera vez que me siento tan cómoda con todos los couch, cuando eres nuevo van y te explican cada ejercicio y uso de las máquinas y el reto 5m es toda una experiencia ✨»</p>
+          <footer><cite>Sharon Torres</cite> · hace 9 meses</footer>
+        </blockquote>
+        <blockquote class="rev-card rv">
+          <p>«5m gym cambió mi vida, sin duda alguna extiendo mi agradecimiento a Eduardo Cabrera y recomiendo ampliamente, no solo por su labor como coach, sino también por su calidez humana. Gracias a él y todo su equipo.»</p>
+          <footer><cite>Diana Martin</cite> · hace 9 meses</footer>
+        </blockquote>
+        <blockquote class="rev-card rv">
+          <p>«entrenadores capacitados y muy profesionales, las instalaciones son adecuadas y cuentan con disciplinas muy completas, como el Cross…»</p>
+          <footer><cite>Frankids Paquito</cite> · hace 9 meses</footer>
+        </blockquote>
+        <figure class="cat-card rv" aria-label="El gato del gym">
+          <img src="/5m-gym/img/foto_4.jpg" alt="El gato del gym parado entre las mancuernas, frente al espejo" loading="lazy" />
+          <figcaption>
+            <span class="cat-tag">El rockstar de la casa</span>
+            <span class="cat-quote">«…Pd. El gato es un rockstar.»</span>
+            <span class="cat-by">Omar Filidor · hace 2 meses</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="rev-more rv">
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=14090700860661859840&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UBICACIÓN Y HORARIOS ===== -->
+  <section class="sec sec-alt" id="ubicacion">
+    <div class="wrap loc-grid">
+      <div class="loc-info rv">
+        <p class="kicker">Ubicación y horarios</p>
+        <h2>Te esperamos en el circuito</h2>
+        <p class="loc-addr">Cto. Colonias 308, Salvador Alvarado Sur,<br />97196 Mérida, Yuc.</p>
+        <p class="loc-status" id="estado-chip" aria-live="polite"></p>
+        <div class="hrs-scroll">
+          <table class="hrs" aria-label="Horarios de 5M GYM">
+            <tbody>
+              <tr data-day="1"><th scope="row">Lunes</th><td>5:00 – 23:00</td></tr>
+              <tr data-day="2"><th scope="row">Martes</th><td>5:00 – 23:00</td></tr>
+              <tr data-day="3"><th scope="row">Miércoles</th><td>5:00 – 23:00</td></tr>
+              <tr data-day="4"><th scope="row">Jueves</th><td>5:00 – 23:00</td></tr>
+              <tr data-day="5"><th scope="row">Viernes</th><td>5:00 – 23:00</td></tr>
+              <tr data-day="6"><th scope="row">Sábado</th><td>7:00 – 14:00</td></tr>
+              <tr data-day="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <a class="btn btn-solid loc-btn" href="https://maps.google.com/?cid=14090700860661859840&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <div class="loc-map rv">
+        <iframe
+          src="https://www.google.com/maps?q=Cto.%20Colonias%20308%2C%20Salvador%20Alvarado%20Sur%2C%2097196%20M%C3%A9rida%2C%20Yucat%C3%A1n%2C%20M%C3%A9xico&output=embed"
+          title="Mapa: 5M GYM en Cto. Colonias 308, Mérida"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot-brand">5M GYM <span>&amp; Cross Trainning</span></p>
+      <p class="foot-line">Cto. Colonias 308, Salvador Alvarado Sur, 97196 Mérida, Yuc.</p>
+      <p class="foot-line">Tel. <a href="tel:+529992692794">999 269 2794</a> · <a href="https://wa.me/529992692794" target="_blank" rel="noopener">WhatsApp</a></p>
+      <p class="foot-slogan">Sin prisa, pero sin pausa.</p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --negro: #17130E;
+      --carbon: #221C14;
+      --borde: #3A3226;
+      --hueso: #EDE4CC;
+      --hueso-suave: #CFC5AB;
+      --arena: #A2967D;
+      --ambar: #E98A2B;
+      --verde: #7FB89F;
+      --fd: 'Big Shoulders Display', 'Arial Narrow', Impact, sans-serif;
+      --fb: 'Archivo', system-ui, -apple-system, sans-serif;
+    }
+    body {
+      background: var(--negro);
+      color: var(--hueso);
+      font-family: var(--fb);
+      font-size: 1rem;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 1080px; margin: 0 auto; padding-left: 20px; padding-right: 20px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; padding: 0;
+    }
+    a { color: inherit; }
+    a:focus-visible, .btn:focus-visible {
+      outline: 3px solid var(--ambar);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ---------- Botones ---------- */
+    .btn {
+      display: inline-block;
+      font-family: var(--fd);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.85em 1.6em;
+      border: 2px solid var(--ambar);
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-solid { background: var(--ambar); color: var(--negro); }
+    .btn-solid:hover { background: #F49C43; }
+    .btn-ghost { background: transparent; color: var(--hueso); border-color: var(--hueso-suave); }
+    .btn-ghost:hover { border-color: var(--ambar); color: var(--ambar); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 68% 30%;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(23,19,14,0.6) 0%, rgba(23,19,14,0.12) 38%, rgba(23,19,14,0.55) 66%, rgba(23,19,14,0.96) 100%),
+        radial-gradient(120% 60% at 50% 100%, rgba(233,138,43,0.14) 0%, rgba(233,138,43,0) 60%);
+    }
+    .hero-in {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    .hero-eyebrow {
+      font-family: var(--fd);
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--hueso-suave);
+      margin: 0 0 0.6em;
+    }
+    .hero-title {
+      font-family: var(--fd);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 0.88;
+      margin: 0 0 0.35em;
+      font-size: clamp(3rem, 14.5vw, 8.5rem);
+    }
+    .hero-title span { display: block; }
+    .hero-title .line-1 { color: var(--hueso); }
+    .hero-title .line-2 { color: var(--ambar); }
+    .hero-sub {
+      max-width: 34em;
+      color: var(--hueso-suave);
+      font-size: 1.05rem;
+      margin: 0 0 1em;
+    }
+    .hero-rating {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--hueso);
+      background: rgba(23,19,14,0.55);
+      border: 1px solid var(--borde);
+      border-radius: 999px;
+      padding: 0.4em 1em;
+      margin: 0 0 1.4em;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* ---------- Datos rápidos ---------- */
+    .facts { border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); background: var(--carbon); }
+    .facts-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
+    .fact {
+      padding: 22px 8px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .fact:nth-child(odd) { border-right: 1px solid var(--borde); }
+    .fact:nth-child(-n+2) { border-bottom: 1px solid var(--borde); }
+    .fact-big {
+      font-family: var(--fd);
+      font-weight: 900;
+      font-size: 2.6rem;
+      line-height: 1;
+      color: var(--ambar);
+    }
+    .fact-small {
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--arena);
+    }
+
+    /* ---------- Secciones ---------- */
+    .sec { padding: 78px 0; }
+    .sec-alt { background: var(--carbon); border-top: 1px solid var(--borde); border-bottom: 1px solid var(--borde); }
+    .kicker {
+      font-family: var(--fd);
+      font-weight: 800;
+      font-size: 1rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--ambar);
+      margin: 0 0 0.5em;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .kicker::before { content: ''; width: 28px; height: 2px; background: var(--ambar); }
+    h2 {
+      font-family: var(--fd);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: clamp(2.4rem, 9vw, 4rem);
+      line-height: 0.95;
+      margin: 0 0 0.6em;
+      color: var(--hueso);
+    }
+
+    /* ---------- Sobre nosotros ---------- */
+    .about-grid { display: grid; gap: 36px; }
+    .about-txt p:not(.kicker) { color: var(--hueso-suave); margin: 0 0 1.1em; }
+    .about-fig { margin: 0; position: relative; }
+    .about-fig img { border: 1px solid var(--borde); }
+    .about-fig::after {
+      content: '';
+      position: absolute;
+      inset: 14px -14px -14px 14px;
+      border: 2px solid var(--ambar);
+      z-index: -1;
+    }
+    .about-fig figcaption, .svc-fig figcaption {
+      font-size: 0.8rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--arena);
+      padding-top: 12px;
+    }
+
+    /* ---------- Servicios ---------- */
+    .svc-list { list-style: none; margin: 2em 0 2.5em; padding: 0; }
+    .svc-list li {
+      display: flex;
+      gap: 18px;
+      align-items: baseline;
+      padding: 20px 0;
+      border-top: 1px solid var(--borde);
+    }
+    .svc-list li:last-child { border-bottom: 1px solid var(--borde); }
+    .svc-num {
+      font-family: var(--fd);
+      font-weight: 900;
+      font-size: 1.7rem;
+      color: var(--ambar);
+      min-width: 2ch;
+    }
+    .svc-list h3 {
+      font-family: var(--fd);
+      font-weight: 800;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin: 0 0 0.15em;
+      color: var(--hueso);
+    }
+    .svc-list p { margin: 0; color: var(--arena); font-size: 0.95rem; }
+    .svc-fig { margin: 0; }
+    .svc-fig img { border: 1px solid var(--borde); }
+
+    /* ---------- Reseñas ---------- */
+    .rev-head { display: flex; align-items: center; gap: 20px; margin-bottom: 40px; }
+    .rev-score {
+      font-family: var(--fd);
+      font-weight: 900;
+      font-size: clamp(4.5rem, 18vw, 7rem);
+      line-height: 0.85;
+      color: var(--hueso);
+    }
+    .rev-stars { color: var(--ambar); font-size: 1.3rem; letter-spacing: 0.15em; display: block; }
+    .rev-meta p { margin: 0.2em 0 0; color: var(--arena); text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.85rem; }
+    .rev-grid { display: grid; gap: 20px; }
+    .rev-card {
+      margin: 0;
+      background: var(--carbon);
+      border: 1px solid var(--borde);
+      border-left: 3px solid var(--ambar);
+      padding: 24px 22px;
+    }
+    .rev-card p { margin: 0 0 1em; color: var(--hueso-suave); font-size: 0.98rem; }
+    .rev-card footer { font-size: 0.85rem; color: var(--arena); text-transform: uppercase; letter-spacing: 0.08em; }
+    .rev-card cite { font-style: normal; font-weight: 700; color: var(--ambar); }
+    .rev-more { margin-top: 36px; text-align: center; }
+
+    /* ---------- El gato (elemento firma) ---------- */
+    .cat-card {
+      margin: 10px auto 0;
+      max-width: 300px;
+      background: var(--hueso);
+      color: var(--negro);
+      padding: 12px 12px 18px;
+      transform: rotate(-2.2deg);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.45);
+      position: relative;
+    }
+    .cat-card::before {
+      content: '';
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%) rotate(3deg);
+      width: 92px;
+      height: 26px;
+      background: rgba(233,138,43,0.75);
+    }
+    .cat-card img { height: 280px; object-fit: cover; object-position: 50% 30%; width: 100%; }
+    .cat-card figcaption { padding-top: 14px; text-align: center; }
+    .cat-tag {
+      display: block;
+      font-family: var(--fd);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 1.05rem;
+      color: #8a5313;
+    }
+    .cat-quote { display: block; font-style: italic; font-weight: 600; margin-top: 4px; }
+    .cat-by { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.08em; color: #6b6252; margin-top: 6px; }
+
+    /* ---------- Ubicación ---------- */
+    .loc-grid { display: grid; gap: 36px; }
+    .loc-addr { color: var(--hueso-suave); font-size: 1.05rem; margin: 0 0 0.8em; }
+    .loc-status {
+      display: inline-block;
+      margin: 0 0 1.2em;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border-radius: 999px;
+      padding: 0.35em 1em;
+      border: 1px solid var(--borde);
+    }
+    .loc-status:empty { display: none; }
+    .loc-status.abierto { color: var(--verde); border-color: var(--verde); }
+    .loc-status.cerrado { color: var(--arena); }
+    .hrs-scroll { overflow-x: auto; margin-bottom: 1.6em; }
+    .hrs { width: 100%; border-collapse: collapse; min-width: 260px; }
+    .hrs th, .hrs td {
+      text-align: left;
+      padding: 10px 8px;
+      border-bottom: 1px dashed var(--borde);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--hueso-suave);
+    }
+    .hrs td { text-align: right; white-space: nowrap; }
+    .hrs tr.hoy th, .hrs tr.hoy td { color: var(--ambar); font-weight: 700; }
+    .hrs tr.hoy th::after {
+      content: 'HOY';
+      font-family: var(--fd);
+      font-weight: 800;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      background: var(--ambar);
+      color: var(--negro);
+      padding: 2px 7px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    .loc-btn { margin-top: 4px; }
+    .loc-map iframe {
+      width: 100%;
+      height: 340px;
+      border: 1px solid var(--borde);
+      display: block;
+      filter: grayscale(0.25) contrast(1.05);
+    }
+
+    /* ---------- Footer ---------- */
+    .foot {
+      background: #100D09;
+      border-top: 1px solid var(--borde);
+      padding: 52px 0 90px;
+      text-align: center;
+    }
+    .foot-brand {
+      font-family: var(--fd);
+      font-weight: 900;
+      font-size: 2.2rem;
+      text-transform: uppercase;
+      margin: 0 0 0.4em;
+      color: var(--hueso);
+      line-height: 1;
+    }
+    .foot-brand span { color: var(--ambar); font-size: 0.6em; display: block; letter-spacing: 0.14em; }
+    .foot-line { margin: 0.3em 0; color: var(--arena); font-size: 0.92rem; }
+    .foot-line a { color: var(--hueso-suave); text-decoration-color: var(--ambar); text-underline-offset: 3px; }
+    .foot-slogan {
+      margin-top: 1.6em;
+      font-family: var(--fd);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 0.95rem;
+      color: var(--ambar);
+    }
+
+    /* ---------- Reveal (solo con JS) ---------- */
+    html.js .rv { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    html.js .rv.rv-on { opacity: 1; transform: none; }
+
+    /* ---------- Desktop ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 110px 0; }
+      .facts-grid { grid-template-columns: repeat(4, 1fr); }
+      .fact { padding: 30px 8px; }
+      .fact:nth-child(-n+2) { border-bottom: none; }
+      .fact:not(:last-child) { border-right: 1px solid var(--borde); }
+      .about-grid { grid-template-columns: 1.1fr 0.9fr; gap: 56px; align-items: center; }
+      .rev-grid { grid-template-columns: repeat(2, 1fr); align-items: start; }
+      .cat-card { margin-top: 0; justify-self: center; }
+      .loc-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+      .loc-map iframe { height: 460px; }
+      .hero-sub { font-size: 1.15rem; }
+    }
+    @media (min-width: 1000px) {
+      .rev-grid { grid-template-columns: repeat(3, 1fr); }
+      .cat-card { grid-column: 2; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      document.documentElement.classList.add('js');
+
+      // Día actual en la tabla de horarios + chip abierto/cerrado
+      var now = new Date();
+      var day = now.getDay(); // 0 = domingo
+      var row = document.querySelector('.hrs tr[data-day="' + day + '"]');
+      if (row) row.classList.add('hoy');
+
+      // Horarios reales: L-V 5:00-23:00, Sáb 7:00-14:00, Dom cerrado
+      var sched = { 0: null, 1: [5, 23], 2: [5, 23], 3: [5, 23], 4: [5, 23], 5: [5, 23], 6: [7, 14] };
+      var chip = document.getElementById('estado-chip');
+      if (chip) {
+        var span = sched[day];
+        var h = now.getHours() + now.getMinutes() / 60;
+        if (span && h >= span[0] && h < span[1]) {
+          chip.textContent = 'Abierto ahora · hasta las ' + span[1] + ':00';
+          chip.classList.add('abierto');
+        } else {
+          chip.textContent = 'Cerrado ahora';
+          chip.classList.add('cerrado');
+        }
+      }
+
+      // Scroll reveal (mejora progresiva)
+      var els = document.querySelectorAll('.rv');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('rv-on');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('rv-on'); });
+      }
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,647 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Barbería Casa Blanca Alemán · Barbería neotradicional en Mérida"
+  description="★ 4.9 con 557 reseñas en Google. Buena música, gran ambiente y barberos que cuidan cada detalle, en la colonia Felipe Carrillo Puerto, Mérida. Agenda por WhatsApp."
+  slug="barberia-casa-blanca-aleman"
+  ogImage="/barberia-casa-blanca-aleman/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Yellowtail&display=swap"
+  favicon="💈"
+  themeColor="#101A3E"
+  whatsapp={"https://wa.me/529991436113"}
+  telefono={"999 143 6113"}
+  mapsUrl={"https://maps.google.com/?cid=5613511932102607702&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="inicio">
+    <img
+      class="hero-img"
+      src="/barberia-casa-blanca-aleman/img/foto_2.jpg"
+      alt="Fachada de Barbería Casa Blanca Alemán: casa blanca con letrero azul cobalto y su mascota del barbero guiñando"
+      fetchpriority="high"
+    />
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Barbería neotradicional · Mérida, Yucatán</p>
+      <h1 class="hero-title">
+        <span class="hero-script">Casa Blanca</span>
+        <span class="hero-caps">Alemán</span>
+      </h1>
+      <p class="hero-sub">
+        Buena música, gran ambiente y barberos que cuidan cada detalle.
+        Por algo, el que viene una vez, vuelve.
+      </p>
+      <p class="hero-rating"><span class="star" aria-hidden="true">★</span> 4.9 · 557 reseñas en Google</p>
+      <div class="hero-cta">
+        <a class="btn btn-wa" href="https://wa.me/529991436113?text=Hola%20Casa%20Blanca%2C%20quiero%20agendar%20un%20corte">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.3.2-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.8 4.3 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+          Agenda por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=5613511932102607702&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="stripe" aria-hidden="true"></div>
+
+  <!-- ===================== SOBRE NOSOTROS ===================== -->
+  <section class="sec about" id="la-casa">
+    <div class="wrap grid-2">
+      <div class="about-txt reveal">
+        <p class="eyebrow-script">la casa</p>
+        <h2>El oficio de siempre, con el estilo de hoy</h2>
+        <p>
+          Estamos en una casa blanca de la calle 13, en la colonia Felipe Carrillo
+          Puerto, en Mérida. Adentro: sillones clásicos de piel capitoneada y cromo,
+          espejos de arco, mosaicos de pasta y buena música. A eso le llamamos
+          barbería neotradicional.
+        </p>
+        <p>
+          Si lees nuestras reseñas vas a encontrar los mismos nombres una y otra
+          vez: Armando «Capu», Diane, Vero. Cada quien cuida su silla y a su
+          cliente — desde el corte hasta el consejo para mantenerlo en casa.
+        </p>
+        <p>
+          Aquí no hay prisa ni fórmulas: hay atención desde que llegas hasta que
+          te vas. Y gente que vuelve, aunque solo esté de paso por Mérida.
+        </p>
+      </div>
+      <figure class="about-photo reveal">
+        <img
+          src="/barberia-casa-blanca-aleman/img/foto_4.jpg"
+          alt="Sillones de barbero clásicos de piel capitoneada y cromo sobre piso de mosaicos de pasta"
+          loading="lazy"
+        />
+        <figcaption>Sillones clásicos, cromo y mosaicos de pasta.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="sec services" id="el-oficio">
+    <div class="wrap">
+      <p class="eyebrow-script reveal">el oficio</p>
+      <h2 class="reveal">Lo que hacemos en la silla</h2>
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <span class="svc-n">01</span>
+          <h3>Corte de cabello</h3>
+          <p>Clásico o de tendencia, trabajado a detalle y a tu medida.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc-n">02</span>
+          <h3>Barba y perfilado</h3>
+          <p>Línea limpia y barba con forma, para cerrar el look completo.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc-n">03</span>
+          <h3>Asesoría de cuidado</h3>
+          <p>Consejos para mantener tu corte y tu cabello entre visita y visita.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc-n">04</span>
+          <h3>Un local para todos</h3>
+          <p>Acceso para silla de ruedas y un ambiente donde te sientes en casa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe" aria-hidden="true"></div>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="sec gallery" id="galeria">
+    <div class="wrap">
+      <p class="eyebrow-script reveal">la casa por dentro</p>
+      <h2 class="reveal">Pásale, esta también es tu casa</h2>
+      <div class="gal-grid">
+        <figure class="gal-a reveal">
+          <img
+            src="/barberia-casa-blanca-aleman/img/foto_1.jpg"
+            alt="El equipo de Casa Blanca sentado en los sillones de barbero, con el letrero neón turquesa al fondo"
+            loading="lazy"
+          />
+          <figcaption>El equipo, listo para atenderte</figcaption>
+        </figure>
+        <figure class="gal-b reveal">
+          <img
+            src="/barberia-casa-blanca-aleman/img/foto_5.jpg"
+            alt="Barberos trabajando en cortes de cabello dentro de la barbería"
+            loading="lazy"
+          />
+          <figcaption>Manos a la obra</figcaption>
+        </figure>
+        <figure class="gal-c reveal">
+          <img
+            src="/barberia-casa-blanca-aleman/img/foto_3.jpg"
+            alt="Interior de la barbería con espejos de madera, candil y retratos clásicos en la pared"
+            loading="lazy"
+          />
+          <figcaption>Nuestro rincón neotradicional</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRUEBA SOCIAL ===================== -->
+  <section class="sec social" id="la-gente">
+    <div class="wrap">
+      <p class="eyebrow-script light reveal">la gente</p>
+      <h2 class="light reveal">557 reseñas no se equivocan</h2>
+      <p class="social-score reveal">
+        <span class="score-num">4.9</span>
+        <span class="score-stars" aria-hidden="true">★★★★★</span>
+        <span class="score-txt">de 5 · 557 reseñas en Google</span>
+      </p>
+      <div class="rev-grid">
+        <figure class="rev reveal">
+          <blockquote>
+            “La mejor barbería de Mérida. Buena música, gran ambiente y excelentes
+            personas. Mención honorífica a Armando por ser un increíble barbero y
+            un gran ser humano.”
+          </blockquote>
+          <figcaption>Brando Novelo · ★★★★★ · Hace 11 meses</figcaption>
+        </figure>
+        <figure class="rev reveal">
+          <blockquote>
+            “Tres visitas durante mi estancia en Mérida y siempre fue un servicio
+            excepcional…”
+          </blockquote>
+          <figcaption>Alain Ménard · ★★★★★ · Hace 3 meses</figcaption>
+        </figure>
+        <figure class="rev reveal">
+          <blockquote>
+            “…gracias a mi barbero armando (Capu) que da muy buen resultado y muy
+            buenos consejos sobre el cuidado del cabello👌🏻”
+          </blockquote>
+          <figcaption>ADRIAN GONZÁLEZ · ★★★★★ · Hace 5 meses</figcaption>
+        </figure>
+      </div>
+      <div class="social-cta reveal">
+        <a class="btn btn-paper" href="https://maps.google.com/?cid=5613511932102607702&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">
+          Leer más reseñas en Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe" aria-hidden="true"></div>
+
+  <!-- ===================== UBICACIÓN Y HORARIOS ===================== -->
+  <section class="sec place" id="la-esquina">
+    <div class="wrap">
+      <p class="eyebrow-script reveal">la esquina</p>
+      <h2 class="reveal">Aquí nos encuentras</h2>
+      <div class="place-grid">
+        <div class="place-map reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Barber%C3%ADa%20Casa%20Blanca%20Alem%C3%A1n%2C%20C.%2013%2072%2C%20Felipe%20Carrillo%20Puerto%2C%2097208%20M%C3%A9rida%2C%20Yuc.&output=embed"
+            title="Mapa de Barbería Casa Blanca Alemán"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="place-info reveal">
+          <p class="place-addr">
+            <strong>C. 13 #72, Felipe Carrillo Puerto</strong><br />
+            97208 Mérida, Yucatán
+          </p>
+          <div class="hrs-card">
+            <h3>Horarios</h3>
+            <table class="hrs">
+              <tbody>
+                <tr data-d="1"><th scope="row">Lunes</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="2"><th scope="row">Martes</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="3"><th scope="row">Miércoles</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="4"><th scope="row">Jueves</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="5"><th scope="row">Viernes</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="6"><th scope="row">Sábado</th><td>9:00 – 18:00</td></tr>
+                <tr data-d="0" class="closed"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <a class="btn btn-cobalt" href="https://maps.google.com/?cid=5613511932102607702&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot-script">Casa Blanca</p>
+      <p class="foot-caps">Barbería Neotradicional · Alemán</p>
+      <p class="foot-line">C. 13 #72, Felipe Carrillo Puerto, 97208 Mérida, Yuc.</p>
+      <p class="foot-line">
+        <a href="tel:+529991436113">999 143 6113</a>
+        <span aria-hidden="true"> · </span>
+        <a href="https://wa.me/529991436113">WhatsApp</a>
+        <span aria-hidden="true"> · </span>
+        <a href="https://maps.google.com/?cid=5613511932102607702&amp;g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Google Maps</a>
+      </p>
+      <p class="foot-tiny"><span class="star" aria-hidden="true">★</span> 4.9 · 557 reseñas en Google · Acceso para silla de ruedas</p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --paper: #F6F1E6;
+      --paper-2: #EFE7D5;
+      --ink: #101A3E;
+      --ink-soft: #3A425F;
+      --cobalt: #1F3FC4;
+      --cobalt-deep: #16309B;
+      --neon: #3ED4C9;
+      --wood: #A97B42;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Archivo', system-ui, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    .wrap { width: min(100% - 2.5rem, 68rem); margin-inline: auto; }
+    .sec { padding: 4rem 0; }
+
+    h2 {
+      font-family: 'Archivo', system-ui, sans-serif;
+      font-stretch: 72%;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .01em;
+      line-height: 1.05;
+      font-size: clamp(1.9rem, 6.5vw, 3rem);
+      margin: .25rem 0 1.25rem;
+    }
+    h2.light { color: var(--paper); }
+
+    .eyebrow-script {
+      font-family: 'Yellowtail', cursive;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      color: var(--cobalt);
+      margin: 0;
+      line-height: 1;
+      transform: rotate(-2deg);
+      display: inline-block;
+    }
+    .eyebrow-script.light { color: var(--neon); }
+
+    /* ---------- Botones ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .55rem;
+      padding: .9rem 1.4rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:focus-visible { outline: 3px solid var(--neon); outline-offset: 3px; }
+    .btn-wa {
+      background: var(--cobalt);
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(16, 26, 62, .45);
+    }
+    .btn-wa:hover { background: var(--cobalt-deep); }
+    .btn-ghost {
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, .75);
+      background: rgba(16, 26, 62, .25);
+      backdrop-filter: blur(3px);
+    }
+    .btn-paper { background: var(--paper); color: var(--ink); }
+    .btn-cobalt { background: var(--cobalt); color: #fff; }
+    .btn-cobalt:hover { background: var(--cobalt-deep); }
+
+    .star { color: var(--neon); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: calc(100svh - 38px);
+      display: flex;
+      align-items: flex-end;
+      isolation: isolate;
+    }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 32%;
+      z-index: -2;
+    }
+    .hero-shade {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+        180deg,
+        rgba(16, 26, 62, .30) 0%,
+        rgba(16, 26, 62, .10) 34%,
+        rgba(16, 26, 62, .55) 62%,
+        rgba(13, 20, 48, .92) 100%
+      );
+    }
+    .hero-inner {
+      width: min(100% - 2.5rem, 68rem);
+      margin-inline: auto;
+      padding: 6rem 0 4.5rem;
+      color: #fff;
+    }
+    .hero-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: .22em;
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--neon);
+      margin: 0 0 .5rem;
+    }
+    .hero-title { margin: 0 0 .75rem; line-height: .9; }
+    .hero-script {
+      display: block;
+      font-family: 'Yellowtail', cursive;
+      font-weight: 400;
+      font-size: clamp(3.4rem, 15vw, 7.5rem);
+      transform: rotate(-2deg);
+      text-shadow: 0 4px 30px rgba(0, 0, 0, .35);
+    }
+    .hero-caps {
+      display: block;
+      font-stretch: 66%;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .3em;
+      font-size: clamp(1.15rem, 4.5vw, 2rem);
+      color: var(--neon);
+      margin-top: .6rem;
+      padding-left: .3em;
+    }
+    .hero-sub {
+      max-width: 34ch;
+      font-size: clamp(1.05rem, 3.8vw, 1.25rem);
+      margin: 0 0 .8rem;
+      text-wrap: balance;
+    }
+    .hero-rating { font-weight: 700; margin: 0 0 1.4rem; font-size: .95rem; }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: .8rem; }
+
+    /* ---------- Firma: franja de barbero en colores del letrero ---------- */
+    .stripe {
+      height: 16px;
+      background: repeating-linear-gradient(
+        -45deg,
+        var(--cobalt) 0 18px,
+        var(--paper) 18px 30px,
+        var(--neon) 30px 34px,
+        var(--paper) 34px 46px
+      );
+      animation: stripe-run 3.2s linear infinite;
+      border-block: 3px solid var(--ink);
+    }
+    @keyframes stripe-run {
+      from { background-position: 0 0; }
+      to { background-position: 65.05px 0; }
+    }
+
+    /* ---------- Sobre nosotros ---------- */
+    .about-txt p { color: var(--ink-soft); margin: 0 0 1rem; }
+    .about-txt p:first-of-type { color: var(--ink); }
+    .about-photo { margin: 2rem 0 0; }
+    .about-photo img {
+      border-radius: 14px;
+      border: 3px solid var(--ink);
+      box-shadow: 8px 8px 0 var(--cobalt);
+    }
+    .about-photo figcaption,
+    .gal-grid figcaption {
+      font-size: .82rem;
+      color: var(--ink-soft);
+      margin-top: .7rem;
+      font-weight: 500;
+    }
+
+    /* ---------- Servicios ---------- */
+    .services { background: var(--paper-2); }
+    .svc-grid { display: grid; gap: 1rem; margin-top: 1.5rem; }
+    .svc {
+      background: var(--paper);
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      padding: 1.3rem 1.3rem 1.4rem;
+      position: relative;
+    }
+    .svc-n {
+      font-stretch: 66%;
+      font-weight: 900;
+      font-size: 1rem;
+      color: var(--cobalt);
+      letter-spacing: .1em;
+    }
+    .svc h3 {
+      font-stretch: 75%;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 1.15rem;
+      margin: .35rem 0 .4rem;
+      letter-spacing: .02em;
+    }
+    .svc p { margin: 0; color: var(--ink-soft); font-size: .95rem; }
+
+    /* ---------- Galería ---------- */
+    .gal-grid { display: grid; gap: 1.1rem; grid-template-columns: 1fr 1fr; margin-top: 1.5rem; }
+    .gal-grid figure { margin: 0; display: flex; flex-direction: column; }
+    .gal-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+      border: 2px solid var(--ink);
+    }
+    .gal-a { grid-column: 1 / -1; }
+    .gal-a img { aspect-ratio: 16 / 10; }
+    .gal-b img, .gal-c img { aspect-ratio: 3 / 4; }
+
+    /* ---------- Prueba social ---------- */
+    .social {
+      background:
+        radial-gradient(70rem 30rem at 85% -10%, rgba(31, 63, 196, .55), transparent 60%),
+        var(--ink);
+      color: var(--paper);
+    }
+    .social-score {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: .6rem;
+      margin: 0 0 1.8rem;
+    }
+    .score-num {
+      font-stretch: 66%;
+      font-weight: 900;
+      font-size: clamp(3.5rem, 14vw, 5.5rem);
+      line-height: 1;
+      color: #fff;
+    }
+    .score-stars { color: var(--neon); font-size: 1.3rem; letter-spacing: .12em; }
+    .score-txt { color: rgba(246, 241, 230, .75); font-size: .95rem; width: 100%; }
+    .rev-grid { display: grid; gap: 1rem; }
+    .rev {
+      margin: 0;
+      background: rgba(246, 241, 230, .06);
+      border: 1px solid rgba(246, 241, 230, .22);
+      border-left: 4px solid var(--neon);
+      border-radius: 12px;
+      padding: 1.2rem 1.2rem 1.1rem;
+    }
+    .rev blockquote {
+      margin: 0 0 .8rem;
+      font-size: 1.02rem;
+      line-height: 1.55;
+      color: #fff;
+    }
+    .rev figcaption { font-size: .82rem; color: var(--neon); font-weight: 700; }
+    .social-cta { margin-top: 1.8rem; }
+
+    /* ---------- Ubicación ---------- */
+    .place-grid { display: grid; gap: 1.5rem; margin-top: 1.5rem; }
+    .place-map iframe {
+      width: 100%;
+      height: 300px;
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      display: block;
+    }
+    .place-addr { margin: 0 0 1.2rem; font-size: 1.05rem; }
+    .hrs-card {
+      background: var(--paper-2);
+      border: 2px solid var(--ink);
+      border-radius: 14px;
+      padding: 1.1rem 1.2rem;
+      margin-bottom: 1.4rem;
+    }
+    .hrs-card h3 {
+      font-stretch: 75%;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 1rem;
+      margin: 0 0 .5rem;
+      letter-spacing: .05em;
+    }
+    .hrs { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .hrs th, .hrs td { text-align: left; padding: .42rem .2rem; }
+    .hrs th { font-weight: 600; }
+    .hrs td { text-align: right; font-variant-numeric: tabular-nums; }
+    .hrs tr + tr { border-top: 1px dashed rgba(16, 26, 62, .25); }
+    .hrs tr.closed th, .hrs tr.closed td { color: var(--ink-soft); }
+    .hrs tr.today th, .hrs tr.today td { color: var(--cobalt); font-weight: 800; }
+    .hrs tr.today th::after {
+      content: 'hoy';
+      font-family: 'Yellowtail', cursive;
+      font-weight: 400;
+      font-size: 1rem;
+      margin-left: .45rem;
+      color: var(--wood);
+    }
+
+    /* ---------- Footer ---------- */
+    .foot {
+      background: var(--ink);
+      color: var(--paper);
+      text-align: center;
+      padding: 3rem 0 5.5rem;
+    }
+    .foot-script {
+      font-family: 'Yellowtail', cursive;
+      font-size: 2.4rem;
+      margin: 0;
+      color: #fff;
+      transform: rotate(-2deg);
+    }
+    .foot-caps {
+      text-transform: uppercase;
+      letter-spacing: .28em;
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--neon);
+      margin: .4rem 0 1.4rem;
+    }
+    .foot-line { margin: .3rem 0; font-size: .95rem; color: rgba(246, 241, 230, .85); }
+    .foot-line a { color: #fff; font-weight: 700; text-decoration-color: var(--neon); }
+    .foot-line a:focus-visible { outline: 3px solid var(--neon); outline-offset: 3px; }
+    .foot-tiny { margin-top: 1.4rem; font-size: .8rem; color: rgba(246, 241, 230, .6); }
+
+    /* ---------- Reveal (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- Desktop ---------- */
+    @media (min-width: 780px) {
+      .sec { padding: 5.5rem 0; }
+      .grid-2 {
+        display: grid;
+        grid-template-columns: 1.1fr .9fr;
+        gap: 3.5rem;
+        align-items: center;
+      }
+      .about-photo { margin: 0; }
+      .svc-grid { grid-template-columns: repeat(4, 1fr); }
+      .gal-grid { grid-template-columns: 1.4fr 1fr 1fr; }
+      .gal-a { grid-column: auto; }
+      .gal-a img { aspect-ratio: auto; flex: 1; min-height: 0; }
+      .rev-grid { grid-template-columns: repeat(3, 1fr); }
+      .place-grid { grid-template-columns: 1.2fr 1fr; align-items: start; }
+      .place-map iframe { height: 420px; }
+      .hero-inner { padding-bottom: 5.5rem; }
+      .score-txt { width: auto; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      document.documentElement.classList.add('js');
+
+      // Resaltar el día de hoy en la tabla de horarios
+      var d = new Date().getDay();
+      var row = document.querySelector('.hrs tr[data-d="' + d + '"]');
+      if (row) row.classList.add('today');
+
+      // Scroll-reveal como mejora progresiva
+      var items = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add('in');
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -8% 0px' }
+        );
+        items.forEach(function (el) { io.observe(el); });
+      } else {
+        items.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

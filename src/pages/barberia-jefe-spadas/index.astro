@@ -1,0 +1,772 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const whatsapp = 'https://wa.me/529995130699';
+const maps = 'https://maps.google.com/?cid=4291752857608301136&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const tel = '999 513 0699';
+const dir = 'C. 11 361L, Díaz Ordaz, 97130 Mérida, Yuc.';
+const mapEmbed = 'https://www.google.com/maps?q=' + encodeURIComponent('C. 11 361L, Díaz Ordaz, 97130 Mérida, Yuc., México') + '&output=embed';
+---
+<BaseLayout
+  title="Barbería Jefe Spadas · Mérida — Aquí no eres uno más en la silla"
+  description="Un solo barbero, un solo estilo. ⭐ 5.0 con 283 reseñas en Google. Cortes a navaja, tijera y máquina en la Díaz Ordaz, Mérida. Escríbenos por WhatsApp."
+  slug="barberia-jefe-spadas"
+  ogImage="/barberia-jefe-spadas/img/foto_3.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Barlow:wght@300;400;500;600;700&display=swap"
+  favicon="♠️"
+  themeColor="#0E0C0B"
+  whatsapp={whatsapp}
+  telefono={tel}
+  mapsUrl={maps}
+>
+  <!-- ==================== HERO ==================== -->
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="eyebrow eyebrow--light">Barbería en Díaz Ordaz · Mérida, Yuc.</p>
+
+      <div class="crest" aria-hidden="true">
+        <svg class="crest-svg" viewBox="0 0 240 300" role="img" aria-label="Escudo de Barbería Jefe Spadas">
+          <path d="M84 66 L78 34 L104 52 L120 28 L136 52 L162 34 L156 66 Z" fill="rgba(199,162,76,.16)" stroke="#C7A24C" stroke-width="3.5" stroke-linejoin="round"/>
+          <circle cx="78" cy="31" r="4" fill="#C7A24C"/>
+          <circle cx="120" cy="25" r="4.6" fill="#C7A24C"/>
+          <circle cx="162" cy="31" r="4" fill="#C7A24C"/>
+          <path d="M50 78 L190 78 L190 156 C190 210 156 240 120 256 C84 240 50 210 50 156 Z" fill="#141110" stroke="#C7A24C" stroke-width="4" stroke-linejoin="round"/>
+          <path d="M61 89 L179 89 L179 154 C179 202 150 228 120 243 C90 228 61 202 61 154 Z" fill="none" stroke="rgba(199,162,76,.45)" stroke-width="1.5" stroke-linejoin="round"/>
+          <path d="M120 104 C120 132 84 146 84 172 C84 190 104 195 116 183 C113 197 108 203 100 208 L140 208 C132 203 127 197 124 183 C136 195 156 190 156 172 C156 146 120 132 120 104 Z" fill="#C7A24C"/>
+          <g stroke="#C7A24C" stroke-width="3.4" stroke-linecap="round">
+            <line x1="102" y1="234" x2="140" y2="212"/>
+            <line x1="138" y1="234" x2="100" y2="212"/>
+          </g>
+          <circle cx="101" cy="235" r="3.4" fill="#C7A24C"/>
+          <circle cx="139" cy="235" r="3.4" fill="#C7A24C"/>
+        </svg>
+      </div>
+
+      <h1 class="wordmark">Jefe Spadas</h1>
+      <p class="wordmark-sub">Cortes a navaja · tijera · máquina</p>
+
+      <div class="rule-spade" aria-hidden="true"><span>♠</span></div>
+
+      <p class="thesis">Aquí no eres <span>&ldquo;uno más en la silla&rdquo;</span>.</p>
+
+      <p class="rating-hero"><span class="star" aria-hidden="true">★</span> <strong>5.0</strong> · 283 reseñas en Google</p>
+
+      <div class="cta-row">
+        <a class="btn btn-oro" href={whatsapp} target="_blank" rel="noopener">
+          <svg class="wa" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M.06 24l1.68-6.15A11.87 11.87 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 0 1 8.41 3.49 11.82 11.82 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.69-1.45L.06 24zM6.6 20.15c1.68 1 3.28 1.6 5.4 1.6 5.45 0 9.9-4.43 9.9-9.88a9.83 9.83 0 0 0-2.9-7A9.78 9.78 0 0 0 12.07 2c-5.46 0-9.9 4.43-9.9 9.88 0 2.22.65 3.88 1.75 5.62l-.99 3.62 3.66-.97zM17.9 14.7c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href={maps} target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== TICKER (rótulo real de la casa) ==================== -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span>Corte a navaja</span><i>♠</i><span>Corte a tijera</span><i>♠</i><span>Corte a máquina</span><i>♠</i><span>Niños · jóvenes · adultos</span><i>♠</i><span>Barbería generacional</span><i>♠</i>
+      <span>Corte a navaja</span><i>♠</i><span>Corte a tijera</span><i>♠</i><span>Corte a máquina</span><i>♠</i><span>Niños · jóvenes · adultos</span><i>♠</i><span>Barbería generacional</span><i>♠</i>
+    </div>
+  </div>
+
+  <main>
+    <!-- ==================== QUIÉNES SOMOS ==================== -->
+    <section class="section section--carbon" id="nosotros">
+      <div class="wrap two-col">
+        <div class="two-col__text reveal">
+          <p class="eyebrow">La casa</p>
+          <h2 class="h2">Un barbero.<br>Una silla.<br>Tu estilo.</h2>
+          <p class="lead">En Jefe Spadas te atiende siempre la misma persona: el Jefe &mdash; Jorge, o como lo conocen aquí, el <em>Sr. Espadas</em>. Sin rotación de personal, sin pasar de mano en mano. Un solo barbero significa que tu corte sale consistente en cada visita y que hay tiempo para hacerlo con calma.</p>
+          <p class="body">Trabajamos navaja, tijera y máquina según lo que pida tu corte, y sabemos emparejar el cabello rizado que en otros lados dejan disparejo. El ambiente es tranquilo y privado, con la plática al ritmo justo: nunca a las prisas. Como dice el rótulo de la entrada, somos una <strong>barbería generacional</strong> &mdash; oficio que se nota en cada línea.</p>
+        </div>
+        <figure class="portrait reveal">
+          <img src="/barberia-jefe-spadas/img/foto_5.jpg" alt="El Sr. Espadas cortando el cabello a un cliente en la silla roja de la barbería" loading="lazy" width="553" height="1200" />
+          <figcaption>El Jefe en la silla de siempre.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==================== DIFERENCIADORES ==================== -->
+    <section class="section section--grafito" id="porque">
+      <div class="wrap">
+        <p class="eyebrow reveal">Por qué con el Jefe</p>
+        <h2 class="h2 reveal">Lo que sus clientes repiten</h2>
+        <div class="feat-grid">
+          <article class="feat reveal">
+            <span class="feat__mark" aria-hidden="true">♠</span>
+            <h3>Atención uno a uno</h3>
+            <p>Un único barbero de principio a fin. Sin rotación, sin sentirte &ldquo;uno más&rdquo; en la fila.</p>
+          </article>
+          <article class="feat reveal">
+            <span class="feat__mark" aria-hidden="true">♠</span>
+            <h3>Con o sin cita</h3>
+            <p>&ldquo;Fui sin cita y me atendió rápido.&rdquo; Si la silla está libre, pasas; si prefieres, aparta por WhatsApp.</p>
+          </article>
+          <article class="feat reveal">
+            <span class="feat__mark" aria-hidden="true">♠</span>
+            <h3>Especialista en rizado</h3>
+            <p>El rizo se trabaja, no se pelea. Emparejamos el cabello que otros dejaron mal.</p>
+          </article>
+          <article class="feat reveal">
+            <span class="feat__mark" aria-hidden="true">♠</span>
+            <h3>Sin prisas, buena plática</h3>
+            <p>Espacio tranquilo y platicado. El corte lleva su tiempo y queda muy pero muy bien.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SERVICIOS ==================== -->
+    <section class="section section--carbon" id="servicios">
+      <div class="wrap two-col two-col--rev">
+        <div class="two-col__text reveal">
+          <p class="eyebrow">En la silla</p>
+          <h2 class="h2">Lo que hacemos</h2>
+          <ul class="svc-list">
+            <li><span class="svc__ico" aria-hidden="true">♠</span><div><strong>Corte a navaja</strong><p>Líneas marcadas y acabado fino, a la vieja escuela.</p></div></li>
+            <li><span class="svc__ico" aria-hidden="true">♠</span><div><strong>Corte a tijera</strong><p>Textura y forma que la máquina sola no logra.</p></div></li>
+            <li><span class="svc__ico" aria-hidden="true">♠</span><div><strong>Corte a máquina</strong><p>Degradados parejos, del cero al punto exacto.</p></div></li>
+            <li><span class="svc__ico" aria-hidden="true">♠</span><div><strong>Niños, jóvenes y adultos</strong><p>Del primer corte del peque al retoque de siempre.</p></div></li>
+            <li><span class="svc__ico" aria-hidden="true">♠</span><div><strong>Cabello rizado</strong><p>Emparejado y definido por quien sí sabe trabajarlo.</p></div></li>
+            <li><span class="svc__ico" aria-hidden="true">♠</span><div><strong>Barba y productos de la casa</strong><p>Perfilado, más pomadas y bálsamo para barba a la venta.</p></div></li>
+          </ul>
+          <p class="tag-note"><span aria-hidden="true">✂</span> El método del Jefe: primero corta en seco, luego define en húmedo.</p>
+        </div>
+        <figure class="portrait portrait--prod reveal">
+          <img src="/barberia-jefe-spadas/img/foto_2.jpg" alt="Pomadas y bálsamo para barba a la venta en Barbería Jefe Spadas" loading="lazy" width="900" height="1200" />
+          <figcaption>Pomadas y bálsamos, ahí mismo.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ==================== PRUEBA SOCIAL ==================== -->
+    <section class="section section--grafito" id="resenas">
+      <div class="wrap">
+        <div class="score reveal">
+          <span class="score__num">5.0</span>
+          <span class="score__stars" aria-hidden="true">★★★★★</span>
+          <span class="score__label">283 reseñas en Google · ni una estrella menos</span>
+        </div>
+
+        <div class="reviews">
+          <blockquote class="review reveal">
+            <p class="review__stars" aria-hidden="true">★★★★★</p>
+            <p class="review__text">Si buscas un servicio personalizado donde no eres &ldquo;uno más en la silla&rdquo;, Jefe Spadas es el lugar indicado. Al ser atendido por un único barbero, la experiencia sube a otro nivel de detalle y compromiso.</p>
+            <footer><strong>Antolin Martin</strong><span>Hace 4 meses</span></footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p class="review__stars" aria-hidden="true">★★★★★</p>
+            <p class="review__text">Jorge es muy amable, excelente trabajo, muy profesional, limpio y cuidadoso. Increíble servicio al cliente, muy atento y amable.</p>
+            <footer><strong>Carolina Rivero</strong><span>Hace 4 meses</span></footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p class="review__stars" aria-hidden="true">★★★★★</p>
+            <p class="review__text">&hellip;fue el único barbero que supo cómo cortarme el cabello rizado, además de que me emparejó el cabello&hellip; lo recomiendo bastante, es muy amable, sabe lo que hace.</p>
+            <footer><strong>Usotsuki</strong><span>Hace 3 meses</span></footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p class="review__stars" aria-hidden="true">★★★★★</p>
+            <p class="review__text">Muy buena onda el Sr. Espadas. Platicado y corta el cabello en tiempo y lo deja muy pero muy bien. Super recomendado!!</p>
+            <footer><strong>Ángel Ernesto Cámara</strong><span>Hace 1 mes</span></footer>
+          </blockquote>
+        </div>
+
+        <p class="center reveal"><a class="btn btn-ghost" href={maps} target="_blank" rel="noopener">Leer más reseñas en Google</a></p>
+      </div>
+    </section>
+
+    <!-- ==================== GALERÍA ==================== -->
+    <section class="section section--carbon" id="galeria">
+      <div class="wrap">
+        <p class="eyebrow reveal">El trabajo habla</p>
+        <h2 class="h2 reveal">Cortes recientes</h2>
+        <div class="gallery">
+          <figure class="shot shot--tall reveal"><img src="/barberia-jefe-spadas/img/foto_3.jpg" alt="Corte degradado con barba perfilada hecho en Jefe Spadas" loading="lazy" width="553" height="1200" /></figure>
+          <figure class="shot reveal"><img src="/barberia-jefe-spadas/img/foto_4.jpg" alt="Niño con corte fresco y raya marcada frente al mural de la barbería" loading="lazy" width="900" height="1200" /></figure>
+          <figure class="shot reveal"><img src="/barberia-jefe-spadas/img/foto_1.jpg" alt="Fachada de Barbería Jefe Spadas en la colonia Díaz Ordaz, Mérida" loading="lazy" width="900" height="1200" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA INTERMEDIO + BOLIS ==================== -->
+    <section class="section band" id="cta">
+      <div class="wrap band__inner reveal">
+        <p class="band__kicker">El pilón de la casa</p>
+        <h2 class="band__title">Y de remate, un boli</h2>
+        <p class="band__text">No lo decimos nosotros: varias reseñas en Google cuentan que el corte a veces termina con un boli de regalo. Ese es el trato en Jefe Spadas.</p>
+        <a class="btn btn-oro btn-oro--onblood" href={whatsapp} target="_blank" rel="noopener">
+          <svg class="wa" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M.06 24l1.68-6.15A11.87 11.87 0 0 1 .16 11.9C.16 5.34 5.5 0 12.06 0a11.82 11.82 0 0 1 8.41 3.49 11.82 11.82 0 0 1 3.48 8.42c0 6.56-5.34 11.9-11.9 11.9a11.9 11.9 0 0 1-5.69-1.45L.06 24zM6.6 20.15c1.68 1 3.28 1.6 5.4 1.6 5.45 0 9.9-4.43 9.9-9.88a9.83 9.83 0 0 0-2.9-7A9.78 9.78 0 0 0 12.07 2c-5.46 0-9.9 4.43-9.9 9.88 0 2.22.65 3.88 1.75 5.62l-.99 3.62 3.66-.97zM17.9 14.7c-.07-.12-.27-.2-.57-.35-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.76-1.64-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.44-.53.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.49 1.7.63.71.22 1.36.19 1.87.12.57-.09 1.76-.72 2-1.42.25-.7.25-1.29.18-1.42z"/></svg>
+          Aparta tu lugar
+        </a>
+      </div>
+    </section>
+
+    <!-- ==================== UBICACIÓN Y HORARIOS ==================== -->
+    <section class="section section--carbon" id="ubicacion">
+      <div class="wrap">
+        <p class="eyebrow reveal">Dónde y cuándo</p>
+        <h2 class="h2 reveal">Te esperamos en la Díaz Ordaz</h2>
+        <p class="lead reveal">{dir} &mdash; busca el rótulo de la barbería sobre la fachada blanca.</p>
+
+        <div class="loc-grid">
+          <div class="map reveal">
+            <iframe src={mapEmbed} title="Ubicación de Barbería Jefe Spadas en Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+          </div>
+          <div class="hours reveal">
+            <h3 class="hours__title">Horarios</h3>
+            <table class="hours__table">
+              <tbody>
+                <tr data-day="1"><th scope="row">Lunes</th><td>10:00 &ndash; 21:00</td></tr>
+                <tr data-day="2"><th scope="row">Martes</th><td>10:00 &ndash; 21:00</td></tr>
+                <tr data-day="3"><th scope="row">Miércoles</th><td>10:00 &ndash; 21:00</td></tr>
+                <tr data-day="4"><th scope="row">Jueves</th><td>10:00 &ndash; 21:00</td></tr>
+                <tr data-day="5"><th scope="row">Viernes</th><td>10:00 &ndash; 21:00</td></tr>
+                <tr data-day="6"><th scope="row">Sábado</th><td>10:00 &ndash; 17:00</td></tr>
+                <tr data-day="0" class="is-closed"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FAQ ==================== -->
+    <section class="section section--grafito" id="faq">
+      <div class="wrap wrap--narrow">
+        <p class="eyebrow reveal">Antes de venir</p>
+        <h2 class="h2 reveal">Preguntas frecuentes</h2>
+        <div class="faq reveal">
+          <details>
+            <summary>¿Necesito cita?</summary>
+            <p>No es obligatoria. Hay quien llega sin cita y pasa en cuanto la silla se desocupa. Si prefieres asegurar tu lugar, escríbenos por WhatsApp.</p>
+          </details>
+          <details>
+            <summary>¿Cortan a niños?</summary>
+            <p>Sí. Atendemos niños, jóvenes y adultos &mdash; del primer corte del peque al retoque de siempre.</p>
+          </details>
+          <details>
+            <summary>¿Trabajan cabello rizado?</summary>
+            <p>Es una de nuestras especialidades. Emparejamos y definimos el rizo que en otros lados dejan disparejo.</p>
+          </details>
+          <details>
+            <summary>¿Venden productos?</summary>
+            <p>Sí, ahí mismo: pomadas y bálsamo para barba. Pregunta por ellos cuando vengas.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="foot">
+    <div class="wrap">
+      <div class="foot__crest" aria-hidden="true">♠</div>
+      <p class="foot__name">Barbería Jefe Spadas</p>
+      <p class="foot__tag">Navaja · Tijera · Máquina &mdash; Colonia Díaz Ordaz, Mérida, Yucatán</p>
+      <p class="foot__dir">{dir}</p>
+      <p class="foot__tel"><a href="tel:+529995130699">999 513 0699</a></p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Barbería Jefe Spadas",
+    "url": "https://demos.ivang.mx/barberia-jefe-spadas",
+    "image": "https://demos.ivang.mx/barberia-jefe-spadas/img/foto_3.jpg",
+    "telephone": "+52 999 513 0699",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 11 361L, Díaz Ordaz",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97130",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "283"
+    },
+    "openingHours": ["Mo-Fr 10:00-21:00", "Sa 10:00-17:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --carbon: #0E0C0B;
+      --grafito: #17130F;
+      --panel: #211B15;
+      --oro: #C7A24C;
+      --oro-hi: #E4C878;
+      --oro-lo: #8A6B30;
+      --oxblood: #5C1E19;
+      --oxblood-hi: #7A2A22;
+      --hueso: #ECE1CB;
+      --hueso-dim: #A99A7E;
+      --linea: rgba(199, 162, 76, .22);
+      --display: 'Cinzel', Georgia, serif;
+      --body: 'Barlow', system-ui, -apple-system, sans-serif;
+    }
+
+    html, body { overflow-x: clip; }
+    body {
+      background: var(--carbon);
+      color: var(--hueso);
+      font-family: var(--body);
+      font-size: 1.02rem;
+      line-height: 1.65;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { width: 100%; max-width: 1080px; margin: 0 auto; }
+    .wrap--narrow { max-width: 720px; }
+    .center { text-align: center; }
+
+    /* ---------- Tipografía compartida ---------- */
+    .eyebrow {
+      margin: 0 0 1rem;
+      font: 600 .72rem/1 var(--body);
+      letter-spacing: .32em;
+      text-transform: uppercase;
+      color: var(--oro);
+    }
+    .eyebrow--light { color: var(--oro-hi); }
+    .h2 {
+      margin: 0 0 1.5rem;
+      font: 600 clamp(1.75rem, 6vw, 2.7rem)/1.08 var(--display);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      color: var(--hueso);
+    }
+    .lead { margin: 0 0 1.15rem; max-width: 46ch; color: var(--hueso); font-size: 1.06rem; }
+    .body { margin: 0; max-width: 48ch; color: var(--hueso-dim); }
+    .body strong, .lead strong, .lead em, .body em { color: var(--hueso); font-style: normal; }
+
+    /* ---------- Botones ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .6rem;
+      padding: .95rem 1.6rem;
+      border-radius: 4px;
+      font: 600 .82rem/1 var(--body);
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, border-color .18s ease;
+    }
+    .btn:focus-visible { outline: 3px solid var(--oro-hi); outline-offset: 3px; }
+    .btn .wa { width: 1.15em; height: 1.15em; flex: none; }
+    .btn-oro {
+      color: #17130F;
+      background: linear-gradient(180deg, var(--oro-hi), var(--oro));
+      border: 1px solid var(--oro-hi);
+      box-shadow: 0 10px 26px rgba(0, 0, 0, .45);
+    }
+    .btn-oro:hover { transform: translateY(-2px); box-shadow: 0 14px 30px rgba(0, 0, 0, .55); }
+    .btn-oro--onblood { box-shadow: 0 10px 26px rgba(0, 0, 0, .35); }
+    .btn-ghost {
+      color: var(--hueso);
+      background: transparent;
+      border: 1px solid var(--linea);
+    }
+    .btn-ghost:hover { border-color: var(--oro); background: rgba(199, 162, 76, .08); transform: translateY(-2px); }
+
+    /* ==================== HERO ==================== */
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      padding: 3rem 1.25rem 3.5rem;
+      background:
+        linear-gradient(180deg, rgba(14,12,11,.74) 0%, rgba(14,12,11,.80) 46%, rgba(14,12,11,.97) 100%),
+        radial-gradient(115% 75% at 50% 26%, rgba(92,30,25,.42), transparent 62%),
+        url("/barberia-jefe-spadas/img/foto_3.jpg") 50% 22% / cover no-repeat,
+        var(--carbon);
+    }
+    .hero-inner { max-width: 620px; }
+
+    .crest { margin: 0 auto .6rem; }
+    .crest-svg {
+      width: clamp(112px, 30vw, 152px);
+      height: auto;
+      filter: drop-shadow(0 6px 16px rgba(0, 0, 0, .55));
+    }
+
+    .wordmark {
+      margin: 0;
+      font: 700 clamp(2.7rem, 13vw, 5.4rem)/.92 var(--display);
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      color: var(--hueso);
+      text-shadow: 0 2px 24px rgba(0, 0, 0, .6);
+    }
+    .wordmark-sub {
+      margin: .85rem 0 0;
+      font: 500 .8rem/1.4 var(--body);
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--oro-hi);
+    }
+
+    .rule-spade {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .9rem;
+      margin: 1.5rem auto 1.3rem;
+      max-width: 260px;
+      color: var(--oro);
+    }
+    .rule-spade::before, .rule-spade::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, var(--oro-lo));
+    }
+    .rule-spade::after { background: linear-gradient(90deg, var(--oro-lo), transparent); }
+    .rule-spade span { font-size: .85rem; }
+
+    .thesis {
+      margin: 0 auto;
+      max-width: 22ch;
+      font: 500 clamp(1.35rem, 5.4vw, 1.9rem)/1.25 var(--display);
+      color: var(--hueso);
+    }
+    .thesis span { color: var(--oro-hi); }
+
+    .rating-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin: 1.5rem 0 0;
+      padding: .55rem 1.1rem;
+      border: 1px solid var(--linea);
+      border-radius: 999px;
+      background: rgba(199, 162, 76, .06);
+      font-size: .95rem;
+      color: var(--hueso);
+    }
+    .rating-hero strong { color: var(--oro-hi); font-weight: 700; }
+    .rating-hero .star { color: var(--oro); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: .8rem; justify-content: center; margin-top: 1.7rem; }
+
+    /* ==================== TICKER ==================== */
+    .ticker {
+      overflow: hidden;
+      border-top: 1px solid var(--linea);
+      border-bottom: 1px solid var(--linea);
+      background: var(--panel);
+      padding: .85rem 0;
+    }
+    .ticker-track {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      will-change: transform;
+      animation: ticker 34s linear infinite;
+    }
+    .ticker-track span {
+      font: 600 .78rem/1 var(--body);
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--hueso-dim);
+      padding: 0 1rem;
+    }
+    .ticker-track i { color: var(--oro); font-style: normal; }
+    @keyframes ticker { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ==================== SECCIONES ==================== */
+    .section { padding: clamp(3.25rem, 8vw, 5.75rem) 1.25rem; }
+    .section--carbon { background: var(--carbon); }
+    .section--grafito { background: var(--grafito); }
+
+    .two-col { display: grid; gap: 2.4rem; align-items: center; }
+    .two-col__text { min-width: 0; }
+
+    .portrait { margin: 0; position: relative; }
+    .portrait img {
+      width: 100%;
+      max-width: 420px;
+      margin: 0 auto;
+      border-radius: 6px;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border: 1px solid var(--linea);
+      box-shadow: 0 18px 44px rgba(0, 0, 0, .5);
+    }
+    .portrait figcaption {
+      margin: .8rem auto 0;
+      max-width: 420px;
+      font-size: .82rem;
+      letter-spacing: .04em;
+      color: var(--hueso-dim);
+      text-align: center;
+    }
+    .portrait--prod img { object-position: 50% 40%; }
+
+    /* ---------- Diferenciadores ---------- */
+    .feat-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .feat {
+      padding: 1.5rem 1.4rem;
+      background: var(--carbon);
+      border: 1px solid var(--linea);
+      border-radius: 8px;
+    }
+    .feat__mark {
+      display: inline-block;
+      margin-bottom: .7rem;
+      color: var(--oro);
+      font-size: 1.15rem;
+    }
+    .feat h3 {
+      margin: 0 0 .4rem;
+      font: 600 1.14rem/1.2 var(--display);
+      letter-spacing: .02em;
+      color: var(--hueso);
+    }
+    .feat p { margin: 0; font-size: .95rem; color: var(--hueso-dim); }
+
+    /* ---------- Servicios ---------- */
+    .svc-list { list-style: none; margin: 0 0 1.4rem; padding: 0; }
+    .svc-list li {
+      display: flex;
+      gap: .95rem;
+      align-items: baseline;
+      padding: .9rem 0;
+      border-bottom: 1px solid var(--linea);
+    }
+    .svc-list li:first-child { border-top: 1px solid var(--linea); }
+    .svc__ico { color: var(--oro); font-size: .8rem; transform: translateY(-1px); }
+    .svc-list strong {
+      display: block;
+      font: 600 1.02rem/1.3 var(--body);
+      letter-spacing: .02em;
+      color: var(--hueso);
+    }
+    .svc-list p { margin: .1rem 0 0; font-size: .9rem; color: var(--hueso-dim); }
+    .tag-note {
+      margin: 0;
+      padding: .95rem 1.15rem;
+      border-left: 3px solid var(--oro);
+      background: rgba(199, 162, 76, .07);
+      border-radius: 0 6px 6px 0;
+      font-size: .92rem;
+      color: var(--hueso);
+    }
+    .tag-note span { color: var(--oro); margin-right: .3rem; }
+
+    /* ---------- Prueba social ---------- */
+    .score { text-align: center; margin-bottom: 2.6rem; }
+    .score__num {
+      display: block;
+      font: 700 clamp(3.4rem, 15vw, 5.5rem)/1 var(--display);
+      color: var(--oro-hi);
+      text-shadow: 0 4px 24px rgba(199, 162, 76, .18);
+    }
+    .score__stars { display: block; margin: .35rem 0 .5rem; color: var(--oro); letter-spacing: .3em; font-size: 1.05rem; }
+    .score__label { display: block; font-size: .9rem; letter-spacing: .05em; color: var(--hueso-dim); text-transform: uppercase; }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      margin-bottom: 2.2rem;
+    }
+    .review {
+      margin: 0;
+      padding: 1.5rem 1.5rem 1.3rem;
+      background: var(--carbon);
+      border: 1px solid var(--linea);
+      border-radius: 8px;
+      position: relative;
+    }
+    .review__stars { margin: 0 0 .7rem; color: var(--oro); letter-spacing: .18em; font-size: .92rem; }
+    .review__text { margin: 0 0 1rem; font-size: 1rem; line-height: 1.6; color: var(--hueso); }
+    .review footer { display: flex; flex-wrap: wrap; gap: .2rem .6rem; align-items: baseline; }
+    .review footer strong { font: 600 .9rem/1.2 var(--body); letter-spacing: .04em; color: var(--oro-hi); }
+    .review footer span { font-size: .8rem; color: var(--hueso-dim); }
+
+    /* ---------- Galería ---------- */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 1fr;
+      gap: .85rem;
+    }
+    .shot { margin: 0; border-radius: 6px; overflow: hidden; border: 1px solid var(--linea); }
+    .shot img { width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; }
+    .shot--tall { grid-row: span 2; }
+    .shot--tall img { aspect-ratio: 3 / 5; }
+
+    /* ---------- Banda CTA (oxblood) ---------- */
+    .band {
+      background:
+        radial-gradient(120% 100% at 50% 0%, rgba(199,162,76,.12), transparent 55%),
+        linear-gradient(180deg, var(--oxblood-hi), var(--oxblood));
+      text-align: center;
+    }
+    .band__inner { max-width: 620px; }
+    .band__kicker {
+      margin: 0 0 .7rem;
+      font: 600 .72rem/1 var(--body);
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--oro-hi);
+    }
+    .band__title {
+      margin: 0 0 .8rem;
+      font: 600 clamp(1.7rem, 6vw, 2.5rem)/1.1 var(--display);
+      letter-spacing: .03em;
+      text-transform: uppercase;
+      color: #FBEFD6;
+    }
+    .band__text { margin: 0 auto 1.7rem; max-width: 42ch; color: rgba(251, 239, 214, .85); }
+
+    /* ---------- Ubicación ---------- */
+    .loc-grid { display: grid; gap: 1.6rem; margin-top: 1.6rem; }
+    .map {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--linea);
+      box-shadow: 0 14px 34px rgba(0, 0, 0, .45);
+    }
+    .map iframe { display: block; width: 100%; height: 300px; border: 0; filter: grayscale(.2) contrast(1.05); }
+
+    .hours { align-self: start; }
+    .hours__title {
+      margin: 0 0 .7rem;
+      font: 600 1.1rem/1 var(--display);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--oro-hi);
+    }
+    .hours__table { width: 100%; border-collapse: collapse; font-size: .98rem; }
+    .hours__table th, .hours__table td { padding: .6rem .2rem; border-bottom: 1px solid var(--linea); }
+    .hours__table th { text-align: left; font-weight: 500; color: var(--hueso); }
+    .hours__table td { text-align: right; color: var(--hueso-dim); font-variant-numeric: tabular-nums; }
+    .hours__table tr.is-closed th, .hours__table tr.is-closed td { color: #6f6455; }
+    .hours__table tr.is-today th, .hours__table tr.is-today td { color: var(--oro-hi); font-weight: 700; }
+    .hours__table tr.is-today th::after {
+      content: "hoy";
+      margin-left: .5rem;
+      padding: .12rem .5rem;
+      border-radius: 999px;
+      background: var(--oxblood-hi);
+      color: #FBEFD6;
+      font: 600 .6rem/1.5 var(--body);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+
+    /* ---------- FAQ ---------- */
+    .faq { display: grid; gap: .7rem; }
+    .faq details {
+      border: 1px solid var(--linea);
+      border-radius: 8px;
+      background: var(--carbon);
+      overflow: hidden;
+    }
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.1rem 1.3rem;
+      font: 600 1.02rem/1.3 var(--body);
+      color: var(--hueso);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: "♠";
+      color: var(--oro);
+      font-size: .85rem;
+      transition: transform .2s ease;
+    }
+    .faq details[open] summary::after { transform: rotate(180deg); }
+    .faq summary:focus-visible { outline: 3px solid var(--oro-hi); outline-offset: -3px; }
+    .faq details p { margin: 0; padding: 0 1.3rem 1.2rem; color: var(--hueso-dim); font-size: .96rem; }
+
+    /* ---------- Footer ---------- */
+    .foot {
+      padding: 3.25rem 1.25rem 7.5rem;
+      background: var(--grafito);
+      border-top: 1px solid var(--linea);
+      text-align: center;
+    }
+    .foot__crest { color: var(--oro); font-size: 1.5rem; margin-bottom: .8rem; }
+    .foot__name { margin: 0; font: 600 1.35rem/1.1 var(--display); letter-spacing: .06em; text-transform: uppercase; color: var(--hueso); }
+    .foot__tag { margin: .5rem 0 0; font-size: .82rem; letter-spacing: .05em; color: var(--hueso-dim); }
+    .foot__dir { margin: .9rem 0 0; font-size: .9rem; color: var(--hueso-dim); }
+    .foot__tel { margin: .6rem 0 0; }
+    .foot__tel a {
+      font: 700 1.2rem/1 var(--body);
+      color: var(--oro-hi);
+      text-decoration: none;
+      border-bottom: 1px solid var(--linea);
+      padding-bottom: 3px;
+    }
+    .foot__tel a:hover { border-bottom-color: var(--oro); }
+    .foot__tel a:focus-visible { outline: 3px solid var(--oro-hi); outline-offset: 3px; }
+
+    /* ---------- Scroll reveal (mejora progresiva) ---------- */
+    html.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ==================== DESKTOP ==================== */
+    @media (min-width: 780px) {
+      .two-col { grid-template-columns: 1.05fr .95fr; gap: 3.5rem; }
+      .two-col--rev .two-col__text { order: 2; }
+      .feat-grid { grid-template-columns: repeat(2, 1fr); gap: 1.15rem; }
+      .reviews { grid-template-columns: repeat(2, 1fr); }
+      .gallery { grid-template-columns: repeat(3, 1fr); }
+      .shot--tall { grid-row: span 2; grid-column: 1; }
+      .loc-grid { grid-template-columns: 1.35fr .65fr; align-items: start; }
+      .map iframe { height: 360px; }
+    }
+    @media (min-width: 780px) and (prefers-reduced-motion: no-preference) {
+      .portrait--prod img { object-position: 50% 42%; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+
+      // Resalta el día de hoy en la tabla de horarios
+      var hoy = new Date().getDay();
+      var fila = document.querySelector('.hours__table tr[data-day="' + hoy + '"]');
+      if (fila) fila.classList.add('is-today');
+
+      // Scroll-reveal como mejora progresiva
+      var reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) { entry.target.classList.add('in'); io.unobserve(entry.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

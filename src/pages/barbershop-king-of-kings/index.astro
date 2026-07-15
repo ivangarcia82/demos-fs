@@ -1,0 +1,651 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Barbershop King of Kings — Barbería en Mérida · Cortes que siempre quedan bien"
+  description="Barbería en Mérida con ⭐ 4.9 y 30 reseñas en Google. Cortes y fades que siempre quedan bien, trato amable y local limpio con clima. Agenda tu corte por WhatsApp."
+  slug="barbershop-king-of-kings"
+  ogImage="/barbershop-king-of-kings/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Manrope:wght@400;600;700&display=swap"
+  favicon="👑"
+  themeColor="#161b24"
+  whatsapp={"https://wa.me/529992193477"}
+  telefono={"999 219 3477"}
+  mapsUrl={"https://maps.google.com/?cid=16713394434601286564&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="kok">
+
+    <!-- ═══════════ HERO SPLIT ═══════════ -->
+    <header class="hero">
+      <div class="hero-media">
+        <img
+          src="/barbershop-king-of-kings/img/foto_2.jpg"
+          alt="Barberos de King of Kings atendiendo a tres clientes frente a los espejos con luz LED"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="hero-band" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <svg class="crown" viewBox="0 0 56 34" aria-hidden="true">
+          <path d="M6 26 L3 7 L17 16 L28 3 L39 16 L53 7 L50 26 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+          <line x1="7" y1="31" x2="49" y2="31" stroke="currentColor" stroke-width="2.4"/>
+        </svg>
+        <p class="eyebrow">Barbería · Mérida, Yuc. · Est. 2025</p>
+        <h1><span class="h1-small">Barbershop</span> King of Kings</h1>
+        <p class="hook">
+          Cortes que «siempre quedan bien», trato de primera y un local limpio,
+          con clima y buen ambiente. Aquí te cortas como rey.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-wa" href="https://wa.me/529992193477" target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+            Agenda por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=16713394434601286564&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            Cómo llegar
+          </a>
+        </div>
+        <p class="rating-chip"><span class="stars" aria-hidden="true">★★★★★</span> 4.9 · 30 reseñas en Google</p>
+      </div>
+    </header>
+
+    <!-- ═══════════ SOBRE NOSOTROS ═══════════ -->
+    <section class="sec sec-sand" id="nosotros">
+      <div class="wrap grid-2">
+        <div class="reveal">
+          <div class="ribbon" aria-hidden="true"></div>
+          <h2>La casa del rey</h2>
+          <p>
+            En King of Kings tratamos cada corte como se debe: con calma, con oficio
+            y con la línea bien marcada. Nos encuentras sobre la calle 42, x 29 y 27,
+            en un local que cuidamos tanto como el fade: limpio, ordenado y con clima
+            agradable para que la espera también se disfrute.
+          </p>
+          <p>
+            Nuestros clientes lo cuentan mejor que nosotros: que los cortes «siempre
+            quedan bien», que barberos como Neto se toman el tiempo de escucharte y
+            recomendarte lo que va contigo, y que aquí siempre hay una dinámica o una
+            promoción corriendo. Ven una vez y entenderás por qué vuelven.
+          </p>
+        </div>
+        <figure class="reveal photo-frame">
+          <img
+            src="/barbershop-king-of-kings/img/foto_5.jpg"
+            alt="Interior de la barbería: sillones listos, espejos con luz LED y el escudo de King of Kings en la pared"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVICIOS ═══════════ -->
+    <section class="sec sec-ink" id="servicios">
+      <div class="wrap">
+        <div class="ribbon" aria-hidden="true"></div>
+        <h2>El servicio</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <h3>Corte y fade</h3>
+            <p>Taper, mid o high fade: línea marcada, degradado parejo y acabado limpio en cada silla.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Barba y delineado</h3>
+            <p>Perfilamos la barba y limpiamos el contorno para cerrar el look completo.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Asesoría de estilo</h3>
+            <p>¿No sabes qué corte va contigo? Pide una recomendación: nuestros clientes dicen que el resultado «es buenísimo».</p>
+          </article>
+          <article class="card reveal">
+            <h3>Dinámicas y promos</h3>
+            <p>Siempre tenemos alguna dinámica o promoción corriendo. Pregunta por la del momento antes de agendar.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Pago con tarjeta</h3>
+            <p>Aceptamos tarjetas: paga tu corte como te acomode.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Espera cómoda</h3>
+            <p>Local limpio, ordenado y con clima. La espera también cuenta.</p>
+          </article>
+        </div>
+
+        <div class="result-strip">
+          <figure class="reveal">
+            <img
+              src="/barbershop-king-of-kings/img/foto_3.jpg"
+              alt="Cliente recién cortado con taper limpio frente al escudo de King of Kings"
+              loading="lazy"
+            />
+            <figcaption>Taper fresco, transición limpia</figcaption>
+          </figure>
+          <figure class="reveal">
+            <img
+              src="/barbershop-king-of-kings/img/foto_4.jpg"
+              alt="Corte con fleco texturizado y fade bajo hecho en King of Kings"
+              loading="lazy"
+            />
+            <figcaption>Fade bajo, textura arriba</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ PRUEBA SOCIAL ═══════════ -->
+    <section class="sec sec-sand" id="resenas">
+      <div class="wrap">
+        <div class="ribbon" aria-hidden="true"></div>
+        <h2>Palabra de cliente</h2>
+        <p class="rating-line">
+          <strong class="big-rating">4.9</strong>
+          <span class="stars stars-dark" aria-hidden="true">★★★★★</span>
+          <span>de 5 · 30 reseñas en Google</span>
+        </p>
+        <div class="reviews">
+          <blockquote class="review reveal">
+            <p>«Excelente trato! Vengo a esta barbería desde hace varios meses y Neto siempre ha sido muy atento conmigo, los cortes ni se diga, siempre quedan bien y siempre que me da alguna recomendación el resultado es buenísimo! Me gustan las dinámicas que hacen y las promociones que siempre tienen. Recomendado 100%»</p>
+            <footer><cite>carlos valentin</cite> · Hace 1 mes · <span class="stars stars-dark" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«…Si buscas un buen servicio y además tener un buen ambiente este es el lugar correcto»</p>
+            <footer><cite>Joan Hernández</cite> · Hace 3 semanas · <span class="stars stars-dark" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+          <blockquote class="review reveal">
+            <p>«Excelente servicio orden y limpio clima agradable buen trato»</p>
+            <footer><cite>David Pech</cite> · Hace 5 meses · <span class="stars stars-dark" aria-hidden="true">★★★★★</span></footer>
+          </blockquote>
+        </div>
+        <div class="center">
+          <a class="btn btn-dark" href="https://maps.google.com/?cid=16713394434601286564&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            Leer más reseñas en Google
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ UBICACIÓN Y HORARIOS ═══════════ -->
+    <section class="sec sec-ink" id="ubicacion">
+      <div class="wrap grid-2 grid-loc">
+        <div class="reveal">
+          <div class="ribbon" aria-hidden="true"></div>
+          <h2>Aquí nos encuentras</h2>
+          <p class="direccion">Calle 42, x 29 y 27<br />C.P. 97370, Mérida, Yuc.</p>
+          <div class="table-wrap">
+            <table class="horarios">
+              <caption class="sr-only">Horarios de atención</caption>
+              <tbody>
+                <tr data-day="1"><th scope="row">Lunes</th><td>11:00 – 21:30</td></tr>
+                <tr data-day="2"><th scope="row">Martes</th><td>11:00 – 21:30</td></tr>
+                <tr data-day="3"><th scope="row">Miércoles</th><td>11:00 – 21:30</td></tr>
+                <tr data-day="4"><th scope="row">Jueves</th><td>11:00 – 21:30</td></tr>
+                <tr data-day="5"><th scope="row">Viernes</th><td>11:00 – 21:30</td></tr>
+                <tr data-day="6"><th scope="row">Sábado</th><td>10:00 – 19:30</td></tr>
+                <tr data-day="0"><th scope="row">Domingo</th><td>10:00 – 16:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="nota">Abrimos los 7 días de la semana.</p>
+        </div>
+        <div class="map-frame reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Barbershop%20King%20of%20kings%2C%20Calle%2042%20x%2029%20y%2027%2C%2097370%20M%C3%A9rida%2C%20Yucat%C3%A1n&output=embed"
+            title="Mapa de ubicación de Barbershop King of Kings"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+      <svg class="crown crown-footer" viewBox="0 0 56 34" aria-hidden="true">
+        <path d="M6 26 L3 7 L17 16 L28 3 L39 16 L53 7 L50 26 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+        <line x1="7" y1="31" x2="49" y2="31" stroke="currentColor" stroke-width="2.4"/>
+      </svg>
+      <p class="footer-name">Barbershop King of Kings</p>
+      <p class="footer-est">Est. 2025 · Mérida, Yucatán</p>
+      <p class="footer-links">
+        <a href="tel:+529992193477">999 219 3477</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://wa.me/529992193477" target="_blank" rel="noopener">WhatsApp</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.facebook.com/share/1B7LWNaxnj/" target="_blank" rel="noopener">Facebook</a>
+      </p>
+      <p class="footer-dir">Calle 42, x 29 y 27, C.P. 97370, Mérida, Yuc.</p>
+      <div class="ribbon ribbon-footer" aria-hidden="true"></div>
+    </footer>
+
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Barbershop King of kings",
+    "telephone": "+52 999 219 3477",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 42, x 29 y 27",
+      "postalCode": "97370",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "30"
+    },
+    "openingHours": ["Mo-Fr 11:00-21:30", "Sa 10:00-19:30", "Su 10:00-16:00"],
+    "url": "https://demos.ivang.mx/barbershop-king-of-kings"
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --ink: #161b24;
+      --ink-2: #1e2531;
+      --ink-3: #262e3d;
+      --sand: #e8dcc2;
+      --sand-2: #dfd0ae;
+      --gold: #c8a24f;
+      --gold-soft: #d9b76a;
+      --red: #b23a30;
+      --blue: #35549c;
+      --paper: #f3eddd;
+      --muted: #a9b0bd;
+      --ink-text: #1d2330;
+      --ribbon-h: linear-gradient(180deg, var(--red) 0 33.4%, var(--gold) 33.4% 66.7%, var(--blue) 66.7% 100%);
+      --ribbon-v: linear-gradient(90deg, var(--red) 0 33.4%, var(--gold) 33.4% 66.7%, var(--blue) 66.7% 100%);
+    }
+
+    body {
+      background: var(--ink);
+      color: var(--paper);
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .kok { overflow-x: clip; }
+    .kok h1, .kok h2, .kok h3, .footer-name {
+      font-family: 'Cinzel', 'Times New Roman', serif;
+      line-height: 1.12;
+      margin: 0;
+    }
+    .kok p { margin: 0 0 1em; }
+    .kok a { color: inherit; }
+    .kok a:focus-visible,
+    .kok .btn:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      margin: -1px; padding: 0; overflow: hidden;
+      clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    /* ── Firma: la cinta real ── */
+    .ribbon {
+      width: 54px; height: 6px;
+      background: var(--ribbon-v);
+      border-radius: 2px;
+      margin-bottom: 14px;
+    }
+
+    /* ── Hero split ── */
+    .hero {
+      display: grid;
+      grid-template-areas: "media" "band" "copy";
+      background: var(--ink);
+    }
+    .hero-media { grid-area: media; }
+    .hero-media img {
+      width: 100%; height: 100%;
+      aspect-ratio: 4 / 3.2;
+      object-fit: cover;
+      object-position: 50% 38%;
+    }
+    .hero-band {
+      grid-area: band;
+      height: 12px;
+      background: var(--ribbon-h);
+    }
+    .hero-copy {
+      grid-area: copy;
+      padding: 34px 22px 42px;
+    }
+    .crown { width: 46px; height: auto; color: var(--gold); margin-bottom: 12px; }
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-soft);
+      margin-bottom: 10px;
+    }
+    .hero h1 {
+      font-size: clamp(2.1rem, 8.6vw, 3.4rem);
+      font-weight: 800;
+      color: var(--paper);
+      letter-spacing: 0.02em;
+      margin-bottom: 16px;
+    }
+    .h1-small {
+      display: block;
+      font-size: 0.36em;
+      font-weight: 700;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .hook {
+      max-width: 32ch;
+      font-size: 1.06rem;
+      color: #d5d9e2;
+      margin-bottom: 24px;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-wa {
+      background: var(--gold);
+      color: #14100a;
+      box-shadow: 0 6px 18px rgba(200, 162, 79, 0.28);
+    }
+    .btn-ghost {
+      border: 1.5px solid rgba(243, 237, 221, 0.4);
+      color: var(--paper);
+    }
+    .btn-ghost:hover { border-color: var(--gold-soft); }
+    .btn-dark {
+      background: var(--ink);
+      color: var(--paper);
+      box-shadow: 0 6px 18px rgba(22, 27, 36, 0.3);
+    }
+    .rating-chip {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin: 0;
+    }
+    .stars { color: var(--gold); letter-spacing: 0.12em; }
+    .stars-dark { color: #a8792c; }
+
+    /* ── Secciones ── */
+    .sec { padding: 60px 0; }
+    .sec-ink { background: var(--ink); color: var(--paper); }
+    .sec-sand { background: var(--sand); color: var(--ink-text); }
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 0 22px; }
+    .sec h2 {
+      font-size: clamp(1.5rem, 5.4vw, 2.2rem);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .sec-sand h2 { color: var(--ink); }
+
+    .grid-2 { display: grid; gap: 30px; align-items: center; }
+    .photo-frame {
+      margin: 0;
+      border: 1px solid rgba(29, 35, 48, 0.18);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 14px 34px rgba(29, 35, 48, 0.18);
+    }
+    .photo-frame img { width: 100%; }
+
+    /* ── Servicios ── */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+      margin-top: 8px;
+    }
+    .card {
+      background: var(--ink-2);
+      border: 1px solid var(--ink-3);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 18px 18px 8px;
+    }
+    .card h3 {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: var(--gold-soft);
+      margin-bottom: 8px;
+    }
+    .card p { font-size: 0.93rem; color: #cad0db; }
+
+    .result-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 34px;
+    }
+    .result-strip figure { margin: 0; }
+    .result-strip img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 1px solid var(--ink-3);
+    }
+    .result-strip figcaption {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--muted);
+      margin-top: 8px;
+    }
+
+    /* ── Reseñas ── */
+    .rating-line {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-weight: 600;
+      color: #4c4433;
+      margin-bottom: 26px;
+    }
+    .big-rating {
+      font-family: 'Cinzel', serif;
+      font-size: 2.6rem;
+      font-weight: 800;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .reviews { display: grid; gap: 16px; }
+    .review {
+      position: relative;
+      overflow: hidden;
+      margin: 0;
+      background: var(--paper);
+      border-radius: 10px;
+      box-shadow: 0 8px 22px rgba(29, 35, 48, 0.1);
+      padding: 24px 20px 14px;
+    }
+    .review::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: var(--ribbon-v);
+    }
+    .review p {
+      font-size: 0.97rem;
+      color: #2b3140;
+      margin-bottom: 12px;
+    }
+    .review footer {
+      font-size: 0.85rem;
+      color: #5c5442;
+    }
+    .review cite { font-style: normal; font-weight: 700; color: var(--ink); }
+    .center { text-align: center; margin-top: 28px; }
+
+    /* ── Ubicación ── */
+    .grid-loc { align-items: start; }
+    .direccion {
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--paper);
+      margin-bottom: 20px;
+    }
+    .table-wrap { overflow-x: auto; }
+    .horarios {
+      width: 100%;
+      max-width: 420px;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+    }
+    .horarios th, .horarios td {
+      text-align: left;
+      padding: 9px 12px;
+      border-bottom: 1px solid var(--ink-3);
+    }
+    .horarios th { font-weight: 600; color: #d5d9e2; }
+    .horarios td { color: var(--muted); font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td {
+      color: var(--gold-soft);
+      font-weight: 700;
+      background: rgba(200, 162, 79, 0.08);
+    }
+    .hoy-tag {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 1px 8px;
+      border-radius: 99px;
+      background: var(--gold);
+      color: #14100a;
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      vertical-align: 1px;
+    }
+    .nota { font-size: 0.88rem; color: var(--muted); margin-top: 14px; }
+    .map-frame {
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid var(--ink-3);
+    }
+    .map-frame iframe {
+      display: block;
+      width: 100%;
+      height: 320px;
+      border: 0;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: #10141b;
+      text-align: center;
+      padding: 46px 22px 90px;
+    }
+    .crown-footer { width: 38px; margin: 0 auto 10px; }
+    .footer-name {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--paper);
+      letter-spacing: 0.04em;
+      margin: 0 0 4px;
+    }
+    .footer-est {
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+    .footer-links { font-size: 0.95rem; color: var(--muted); margin: 0 0 8px; }
+    .footer-links a { color: var(--gold-soft); text-decoration: none; font-weight: 600; }
+    .footer-links a:hover { text-decoration: underline; }
+    .footer-links span { margin: 0 6px; }
+    .footer-dir { font-size: 0.85rem; color: #7c828e; margin: 0 0 22px; }
+    .ribbon-footer { margin: 0 auto; }
+
+    /* ── Reveal (solo con JS) ── */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    /* ── Desktop ── */
+    @media (min-width: 880px) {
+      .hero {
+        grid-template-areas: "copy band media";
+        grid-template-columns: 1.02fr 12px 1fr;
+        min-height: min(88vh, 760px);
+      }
+      .hero-band { height: auto; background: var(--ribbon-v); }
+      .hero-media img { aspect-ratio: auto; height: 100%; }
+      .hero-copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 70px min(6vw, 72px);
+      }
+      .sec { padding: 84px 0; }
+      .grid-2 { grid-template-columns: 1.1fr 1fr; gap: 48px; }
+      .grid-loc { grid-template-columns: 1fr 1.15fr; }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .result-strip { max-width: 640px; }
+      .map-frame iframe { height: 420px; }
+    }
+  </style>
+
+  <script is:inline>
+    document.documentElement.classList.add('js');
+
+    // Resaltar el día actual en la tabla de horarios
+    (function () {
+      var hoy = new Date().getDay();
+      var fila = document.querySelector('.horarios tr[data-day="' + hoy + '"]');
+      if (fila) {
+        fila.classList.add('hoy');
+        var th = fila.querySelector('th');
+        if (th) {
+          var tag = document.createElement('span');
+          tag.className = 'hoy-tag';
+          tag.textContent = 'Hoy';
+          th.appendChild(tag);
+        }
+      }
+    })();
+
+    // Scroll-reveal como mejora progresiva
+    (function () {
+      var items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

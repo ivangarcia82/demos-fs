@@ -1,0 +1,635 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Barbería El Filo 💈 — Precisión en cada corte | Mérida"
+  description="Barbería en Mérida con calificación perfecta: ★ 5.0 y 1,414 reseñas en Google. Cortes con precisión y cuidado en cada detalle, con o sin cita. Agenda por WhatsApp."
+  slug="barberia-el-filo"
+  ogImage="/barberia-el-filo/img/foto_4.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Stardos+Stencil:wght@700&display=swap"
+  favicon="💈"
+  themeColor="#17191c"
+  whatsapp={"https://wa.me/529992494402"}
+  telefono={"999 249 4402"}
+  mapsUrl={"https://maps.google.com/?cid=10687603611172080954&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <img
+      class="hero-bg"
+      src="/barberia-el-filo/img/foto_4.jpg"
+      alt="Interior de Barbería El Filo en Mérida: letrero de madera tallada, sofás de piel y estaciones de corte"
+      fetchpriority="high"
+    />
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">💈 Barbería · Fracc. del Parque, Mérida</p>
+      <h1 class="hero-title">
+        <span class="t-sm">Barbería</span>
+        <span class="t-big">El Filo</span>
+      </h1>
+      <p class="hero-sub">
+        Precisión en el corte y cuidado en cada detalle.
+        Y si llegas sin cita, te hacemos un espacio.
+      </p>
+      <p class="rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>5.0</strong>
+        <span class="rating-n">· 1,414 reseñas en Google</span>
+      </p>
+      <p class="open-chip" id="open-chip" hidden></p>
+      <div class="cta-row">
+        <a class="btn btn-wa" href="https://wa.me/529992494402">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.1-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.6-1.4-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.9 2.9 4.6 4 .6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3Z"/></svg>
+          Agendar por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=10687603611172080954&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <div class="filo f-dl" aria-hidden="true"></div>
+
+  <!-- ============ SOBRE NOSOTROS ============ -->
+  <section class="sec sec-light" id="nosotros">
+    <div class="wrap">
+      <div class="two-col">
+        <div class="reveal">
+          <p class="kicker kicker-l">Sobre nosotros</p>
+          <h2 class="h2 h2-l">Oficio, calma y un buen sillón de piel</h2>
+          <p class="body-l">
+            En El Filo un buen corte empieza antes de encender la máquina:
+            en la bienvenida de recepción, en el sofá de piel donde esperas
+            con un vaso de agua, en un local que siempre está limpio y huele
+            agradable.
+          </p>
+          <p class="body-l">
+            Nuestros barberos trabajan con precisión: cada línea, cada
+            degradado y cada detalle se cuida antes de que te levantes del
+            sillón. Vienen familias completas — y los niños también salen
+            presumiendo corte.
+          </p>
+          <p class="body-l">
+            ¿Llegaste sin cita? Buscamos la manera de atenderte. Y tu
+            constancia vale: nuestros clientes lo cuentan — después de varias
+            visitas, un servicio de la lista va por la casa.
+          </p>
+        </div>
+        <div class="collage reveal">
+          <figure class="fig">
+            <img src="/barberia-el-filo/img/foto_2.jpg" alt="Sala de espera de El Filo con sofá de piel y pared verde olivo" loading="lazy" />
+          </figure>
+          <figure class="fig">
+            <img src="/barberia-el-filo/img/foto_3.jpg" alt="Estaciones de corte con sillones clásicos de barbería" loading="lazy" />
+          </figure>
+          <figure class="fig fig-wide">
+            <img src="/barberia-el-filo/img/foto_5.jpg" alt="Barberos de El Filo trabajando mientras las familias esperan en los sofás" loading="lazy" />
+            <figcaption>Un sábado cualquiera en El Filo</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="filo f-ld" aria-hidden="true"></div>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="sec sec-dark" id="servicios">
+    <div class="wrap">
+      <p class="kicker">Servicios</p>
+      <h2 class="h2">Al filo, como debe ser</h2>
+      <div class="serv-wrap">
+        <ul class="serv-grid reveal">
+          <li class="serv">
+            <h3>Corte con precisión</h3>
+            <p>Fade, tijera o navaja: la línea sale limpia y el degradado, parejo.</p>
+          </li>
+          <li class="serv">
+            <h3>Barba y delineado</h3>
+            <p>Perfilamos el contorno para que el corte cierre completo.</p>
+          </li>
+          <li class="serv">
+            <h3>Cortes para niños</h3>
+            <p>Paciencia y buen trato: los pequeños salen contentos y regresan.</p>
+          </li>
+          <li class="serv">
+            <h3>Con o sin cita</h3>
+            <p>Agenda por WhatsApp o llega directo: te hacemos un espacio.</p>
+          </li>
+          <li class="serv">
+            <h3>Tu lealtad se premia</h3>
+            <p>Después de varias visitas, un servicio gratis de nuestra lista de opciones.</p>
+          </li>
+          <li class="serv">
+            <h3>Te escuchamos, te aconsejamos</h3>
+            <p>¿No sabes qué corte va contigo? Te asesoramos antes de empezar.</p>
+          </li>
+        </ul>
+        <figure class="fig serv-photo reveal">
+          <img src="/barberia-el-filo/img/foto_1.jpg" alt="Degradado hecho en El Filo: precisión en el detalle" loading="lazy" />
+          <figcaption>El resultado habla solo</figcaption>
+        </figure>
+      </div>
+      <ul class="chips reveal">
+        <li>💳 Aceptamos tarjetas</li>
+        <li>🅿️ Estacionamiento disponible</li>
+        <li>♿ Acceso para silla de ruedas</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="filo f-dl rev" aria-hidden="true"></div>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section class="sec sec-light" id="resenas">
+    <div class="wrap">
+      <p class="kicker kicker-l">Lo que dicen de nosotros</p>
+      <h2 class="h2 h2-l">Calificación perfecta</h2>
+      <p class="score-line">
+        <span class="score-big">5.0</span>
+        <span class="stars stars-l" aria-hidden="true">★★★★★</span>
+        <span class="score-total">1,414 reseñas en Google</span>
+      </p>
+      <div class="rev-grid">
+        <blockquote class="rev-card reveal">
+          <p>“Excelente servicio. Todos los chicos cortan muy bien el cabello.
+          Pedimos cita y fue rápido. Todos son pacientes, y amables. Nos
+          ofrecieron agua. El lugar siempre está limpio, con olor agradable,
+          fácil de estacionar…”</p>
+          <footer><cite>Sheila Orozco</cite> · Hace 2 semanas · <span class="stars-sm" aria-hidden="true">★★★★★</span></footer>
+        </blockquote>
+        <blockquote class="rev-card reveal">
+          <p>“He visitado varias barberías, pero esta sin duda se ha convertido
+          en mi favorita. El servicio es excelente desde que entras, el
+          ambiente es relajado y moderno. Los barberos son profesionales,
+          atentos y realmente saben lo que hacen siempre salgo satisfecho con
+          el corte, se nota la precisión y el cuidado en cada detalle…”</p>
+          <footer><cite>ᴥDANIEL v</cite> · Hace un año · <span class="stars-sm" aria-hidden="true">★★★★★</span></footer>
+        </blockquote>
+        <blockquote class="rev-card reveal">
+          <p>“Una barberia con mucho estilo, atención muy buena,la chica de
+          recepción muy amable en todo momento siempre atenta,los chicos que
+          hacen los cortes muy buenos y profesionales… Y como un plus despues
+          de varias visitas tienes un servicio grátis de toda su lista de
+          opciones…”</p>
+          <footer><cite>joelo moreno</cite> · Hace 3 meses · <span class="stars-sm" aria-hidden="true">★★★★★</span></footer>
+        </blockquote>
+      </div>
+      <div class="center">
+        <a class="btn btn-dark" href="https://maps.google.com/?cid=10687603611172080954&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">
+          Leer más reseñas en Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="filo f-ld rev" aria-hidden="true"></div>
+
+  <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+  <section class="sec sec-dark" id="ubicacion">
+    <div class="wrap">
+      <p class="kicker">Ubicación y horarios</p>
+      <h2 class="h2">Aquí nos encuentras</h2>
+      <p class="addr">Calle 14 644, Fraccionamiento del Parque, 97160 Mérida, Yuc.</p>
+      <div class="two-col loc-grid">
+        <div class="map-frame reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Barber%C3%ADa%20El%20Filo%2C%20Calle%2014%20644%2C%20Fraccionamiento%20del%20Parque%2C%2097160%20M%C3%A9rida%2C%20Yucat%C3%A1n&output=embed"
+            width="600"
+            height="320"
+            style="border:0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa: Barbería El Filo, Calle 14 644, Fraccionamiento del Parque, Mérida">
+          </iframe>
+        </div>
+        <div class="hours reveal">
+          <h3 class="hours-title">Horarios</h3>
+          <div class="hours-wrap">
+            <table class="hours-table">
+              <tbody>
+                <tr data-d="1"><th scope="row">Lunes</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="2"><th scope="row">Martes</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="3"><th scope="row">Miércoles</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="4"><th scope="row">Jueves</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="5"><th scope="row">Viernes</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="6"><th scope="row">Sábado</th><td>10:00 – 20:00</td></tr>
+                <tr data-d="0"><th scope="row">Domingo</th><td>10:00 – 16:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="hours-note">Con estacionamiento disponible y acceso para silla de ruedas.</p>
+          <a class="btn btn-ghost btn-block" href="https://maps.google.com/?cid=10687603611172080954&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">
+            Abrir en Google Maps
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot-name">Barbería El Filo 💈</p>
+      <p class="foot-line">Calle 14 644, Fracc. del Parque, 97160 Mérida, Yuc.</p>
+      <p class="foot-line">
+        <a class="foot-link" href="tel:+529992494402">999 249 4402</a>
+        <span aria-hidden="true"> · </span>
+        <a class="foot-link" href="https://www.tiktok.com/@barberiaelfilo?_r=1&_t=ZS-93R0YDPkVZH" rel="noopener">Síguenos en TikTok</a>
+      </p>
+      <p class="foot-line foot-hours">Lun a sáb 10:00–20:00 · Dom 10:00–16:00</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Barbería El Filo",
+    "image": "https://demos.ivang.mx/barberia-el-filo/img/foto_4.jpg",
+    "url": "https://demos.ivang.mx/barberia-el-filo",
+    "telephone": "+52 999 249 4402",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 14 644, Fraccionamiento del Parque",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97160",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "1414"
+    },
+    "openingHours": ["Mo-Sa 10:00-20:00", "Su 10:00-16:00"],
+    "sameAs": ["https://www.tiktok.com/@barberiaelfilo"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --bg-d: #17191c;
+      --bg-d2: #1e2126;
+      --bg-l: #ece5d8;
+      --card-l: #f5f0e6;
+      --ink-d: #e9e2d4;
+      --ink-d-soft: #b9b2a2;
+      --ink-l: #262019;
+      --ink-l-soft: #574c3d;
+      --ambar: #d99b3c;
+      --ambar-soft: #e5b568;
+      --cuero: #7a4d27;
+      --stencil: 'Stardos Stencil', 'Arial Black', sans-serif;
+      --sans: 'Archivo', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--bg-d);
+      color: var(--ink-d);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 1.25rem; }
+
+    /* ---------- El corte al filo (elemento firma) ---------- */
+    .filo { height: 52px; }
+    .f-dl { background: linear-gradient(to right bottom, var(--bg-d) 49.4%, var(--ambar) 49.7% 50.3%, var(--bg-l) 50.6%); }
+    .f-dl.rev { background: linear-gradient(to left bottom, var(--bg-d) 49.4%, var(--ambar) 49.7% 50.3%, var(--bg-l) 50.6%); }
+    .f-ld { background: linear-gradient(to right bottom, var(--bg-l) 49.4%, var(--ambar) 49.7% 50.3%, var(--bg-d) 50.6%); }
+    .f-ld.rev { background: linear-gradient(to left bottom, var(--bg-l) 49.4%, var(--ambar) 49.7% 50.3%, var(--bg-d) 50.6%); }
+
+    /* ---------- Botones (esquina cortada = eco del filo) ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      padding: .95rem 1.5rem;
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      letter-spacing: .02em;
+      clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+      transition: transform .18s ease, background .18s ease, color .18s ease;
+    }
+    .btn:active { transform: scale(.97); }
+    .btn:focus-visible { outline: 3px solid var(--ambar); outline-offset: 3px; }
+    .btn-wa { background: var(--ambar); color: #1c1508; }
+    .btn-wa:hover { background: var(--ambar-soft); }
+    .btn-ghost {
+      background: rgba(23, 25, 28, .35);
+      color: var(--ink-d);
+      box-shadow: inset 0 0 0 2px rgba(233, 226, 212, .55);
+    }
+    .btn-ghost:hover { box-shadow: inset 0 0 0 2px var(--ambar); color: var(--ambar-soft); }
+    .btn-dark { background: var(--ink-l); color: var(--bg-l); }
+    .btn-dark:hover { background: var(--cuero); }
+    .btn-block { width: 100%; margin-top: 1rem; }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: min(94vh, 860px);
+      min-height: min(94svh, 860px);
+      display: flex;
+      align-items: flex-end;
+      isolation: isolate;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 62% 50%;
+      z-index: -2;
+    }
+    .hero-veil {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(to bottom, rgba(23,25,28,.55) 0%, rgba(23,25,28,.35) 40%, rgba(23,25,28,.94) 88%, var(--bg-d) 100%);
+    }
+    .hero-inner { width: 100%; max-width: 1080px; margin: 0 auto; padding: 5.5rem 1.25rem 2.75rem; }
+    .eyebrow {
+      font-size: .8rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--ambar-soft);
+      margin: 0 0 .75rem;
+    }
+    .hero-title { margin: 0 0 .9rem; line-height: .92; }
+    .hero-title .t-sm {
+      display: block;
+      font-family: var(--stencil);
+      font-weight: 700;
+      font-size: clamp(1.3rem, 5.5vw, 2.2rem);
+      letter-spacing: .3em;
+      text-transform: uppercase;
+      color: var(--ink-d);
+    }
+    .hero-title .t-big {
+      display: block;
+      font-family: var(--stencil);
+      font-weight: 700;
+      font-size: clamp(3.9rem, 17.5vw, 8rem);
+      text-transform: uppercase;
+      color: var(--ambar);
+      text-shadow: 0 4px 24px rgba(0, 0, 0, .5);
+    }
+    .hero-sub {
+      max-width: 34ch;
+      font-size: clamp(1.05rem, 4vw, 1.25rem);
+      font-weight: 500;
+      color: var(--ink-d);
+      margin: 0 0 1rem;
+    }
+    .rating { margin: 0 0 .5rem; font-size: 1.05rem; color: var(--ink-d); }
+    .rating strong { font-size: 1.2rem; }
+    .rating-n { color: var(--ink-d-soft); }
+    .stars { color: var(--ambar); letter-spacing: .12em; }
+    .open-chip {
+      display: inline-block;
+      margin: 0 0 1.1rem;
+      padding: .3rem .8rem;
+      font-size: .85rem;
+      font-weight: 700;
+      color: var(--ambar-soft);
+      border: 1px solid rgba(217, 155, 60, .5);
+      border-radius: 999px;
+      background: rgba(23, 25, 28, .55);
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: .8rem; }
+
+    /* ---------- Secciones ---------- */
+    .sec { padding: 3.5rem 0 4rem; }
+    .sec-dark {
+      background:
+        repeating-linear-gradient(-45deg, rgba(233,226,212,.02) 0 1px, transparent 1px 12px),
+        var(--bg-d);
+      color: var(--ink-d);
+    }
+    .sec-light { background: var(--bg-l); color: var(--ink-l); }
+
+    .kicker {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+      color: var(--ambar);
+      margin: 0 0 .5rem;
+    }
+    .kicker-l { color: var(--cuero); }
+    .h2 {
+      font-family: var(--stencil);
+      font-weight: 700;
+      font-size: clamp(1.9rem, 7vw, 3rem);
+      line-height: 1.05;
+      text-transform: uppercase;
+      color: var(--ink-d);
+      margin: 0 0 1.4rem;
+    }
+    .h2-l { color: var(--ink-l); }
+    .body-l { color: var(--ink-l-soft); font-size: 1.03rem; margin: 0 0 1rem; }
+
+    .two-col { display: grid; gap: 2rem; }
+
+    /* ---------- Collage ---------- */
+    .collage { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; align-content: start; }
+    .fig { margin: 0; }
+    .fig img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 6px;
+      clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 0 100%);
+    }
+    .collage .fig img { aspect-ratio: 4 / 3; }
+    .fig-wide { grid-column: 1 / -1; }
+    .collage .fig-wide img { aspect-ratio: 16 / 9; }
+    .fig figcaption { font-size: .8rem; color: var(--ink-l-soft); padding-top: .4rem; }
+
+    /* ---------- Servicios ---------- */
+    .serv-wrap { display: grid; gap: 1.5rem; }
+    .serv-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: .75rem; }
+    .serv {
+      background: var(--bg-d2);
+      border-left: 3px solid var(--ambar);
+      padding: 1rem 1.1rem;
+      border-radius: 0 6px 6px 0;
+    }
+    .serv h3 {
+      margin: 0 0 .25rem;
+      font-family: var(--sans);
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: var(--ambar-soft);
+    }
+    .serv p { margin: 0; font-size: .95rem; color: var(--ink-d-soft); }
+    .serv-photo { max-width: 420px; }
+    .serv-photo img { aspect-ratio: 3 / 4; }
+    .serv-photo figcaption { color: var(--ink-d-soft); font-size: .8rem; padding-top: .4rem; }
+    .chips { list-style: none; display: flex; flex-wrap: wrap; gap: .6rem; margin: 1.75rem 0 0; padding: 0; }
+    .chips li {
+      font-size: .87rem;
+      font-weight: 500;
+      color: var(--ink-d);
+      background: rgba(233, 226, 212, .07);
+      border: 1px solid rgba(233, 226, 212, .18);
+      border-radius: 999px;
+      padding: .4rem .9rem;
+    }
+
+    /* ---------- Reseñas ---------- */
+    .score-line { display: flex; align-items: baseline; flex-wrap: wrap; gap: .6rem; margin: 0 0 1.75rem; }
+    .score-big {
+      font-family: var(--stencil);
+      font-weight: 700;
+      font-size: clamp(3rem, 12vw, 4.5rem);
+      line-height: 1;
+      color: var(--cuero);
+    }
+    .stars-l { font-size: 1.4rem; color: var(--ambar); letter-spacing: .1em; }
+    .score-total { color: var(--ink-l-soft); font-weight: 500; }
+    .rev-grid { display: grid; gap: 1rem; margin-bottom: 1.75rem; }
+    .rev-card {
+      margin: 0;
+      background: var(--card-l);
+      border: 1px solid rgba(38, 32, 25, .12);
+      border-top: 3px solid var(--ambar);
+      border-radius: 0 0 8px 8px;
+      padding: 1.2rem 1.2rem 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: .8rem;
+    }
+    .rev-card p { margin: 0; font-size: .96rem; color: var(--ink-l); }
+    .rev-card footer { font-size: .84rem; color: var(--ink-l-soft); }
+    .rev-card cite { font-style: normal; font-weight: 700; color: var(--ink-l); }
+    .stars-sm { color: var(--ambar); }
+    .center { text-align: center; }
+
+    /* ---------- Ubicación ---------- */
+    .addr { margin: 0 0 1.5rem; color: var(--ink-d-soft); font-size: 1.02rem; }
+    .map-frame {
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid rgba(217, 155, 60, .35);
+      line-height: 0;
+    }
+    .map-frame iframe { width: 100%; height: 320px; display: block; }
+    .hours-title {
+      font-family: var(--stencil);
+      font-weight: 700;
+      font-size: 1.3rem;
+      text-transform: uppercase;
+      color: var(--ambar);
+      margin: 0 0 .75rem;
+    }
+    .hours-wrap { overflow-x: auto; }
+    .hours-table { width: 100%; border-collapse: collapse; font-size: .97rem; }
+    .hours-table th, .hours-table td {
+      text-align: left;
+      padding: .5rem .6rem;
+      border-bottom: 1px solid rgba(233, 226, 212, .12);
+      font-weight: 400;
+      color: var(--ink-d-soft);
+      white-space: nowrap;
+    }
+    .hours-table td { text-align: right; }
+    .hours-table tr.today th, .hours-table tr.today td {
+      color: var(--ambar-soft);
+      font-weight: 700;
+      border-bottom-color: var(--ambar);
+    }
+    .hours-table tr.today th::after { content: " · hoy"; font-size: .8em; letter-spacing: .08em; text-transform: uppercase; }
+    .hours-note { font-size: .85rem; color: var(--ink-d-soft); margin: .9rem 0 0; }
+
+    /* ---------- Footer ---------- */
+    .foot {
+      background: #121417;
+      border-top: 2px solid var(--ambar);
+      padding: 2.5rem 0 7rem;
+      text-align: center;
+    }
+    .foot-name {
+      font-family: var(--stencil);
+      font-weight: 700;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      color: var(--ambar);
+      margin: 0 0 .5rem;
+    }
+    .foot-line { margin: .25rem 0; font-size: .92rem; color: var(--ink-d-soft); }
+    .foot-link { color: var(--ink-d); font-weight: 700; text-decoration: none; border-bottom: 1px solid var(--ambar); }
+    .foot-link:hover { color: var(--ambar-soft); }
+    .foot-link:focus-visible { outline: 3px solid var(--ambar); outline-offset: 3px; }
+    .foot-hours { font-size: .84rem; }
+
+    /* ---------- Reveal (solo con JS activo) ---------- */
+    .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- Desktop ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 5rem 0 5.5rem; }
+      .two-col { grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+      .serv-wrap { grid-template-columns: 1.15fr .85fr; gap: 2.5rem; align-items: start; }
+      .serv-grid { grid-template-columns: 1fr 1fr; gap: .9rem; }
+      .serv-photo { max-width: none; justify-self: end; width: min(100%, 400px); }
+      .rev-grid { grid-template-columns: repeat(3, 1fr); }
+      .filo { height: 72px; }
+      .hero-inner { padding-bottom: 4rem; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+
+      // Scroll-reveal como mejora progresiva
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+      } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      }
+
+      // Resaltar el día de hoy en la tabla de horarios
+      var now = new Date();
+      var day = now.getDay(); // 0 = domingo
+      var row = document.querySelector('.hours-table tr[data-d="' + day + '"]');
+      if (row) row.classList.add('today');
+
+      // Chip de estado en el hero (horario real: L-S 10-20, D 10-16)
+      var chip = document.getElementById('open-chip');
+      if (chip) {
+        var closeH = day === 0 ? 16 : 20;
+        var h = now.getHours() + now.getMinutes() / 60;
+        if (h >= 10 && h < closeH) {
+          chip.textContent = 'Abierto ahora · hasta las ' + closeH + ':00';
+        } else {
+          chip.textContent = 'Cerrado ahora · abrimos a las 10:00';
+        }
+        chip.hidden = false;
+      }
+    })();
+  </script>
+</BaseLayout>

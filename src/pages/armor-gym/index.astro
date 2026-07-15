@@ -1,0 +1,579 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Armor Gym — Gimnasio en Mérida Norte · Abierto de 5:00 a 23:00"
+  description="Peso libre, racks y circuito completo de máquinas en el norte de Mérida. ★ 4.3 con 203 reseñas en Google. Abrimos a las 5:00 de la mañana."
+  slug="armor-gym"
+  ogImage="/armor-gym/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=League+Spartan:wght@600;700;800&display=swap"
+  favicon="🛡️"
+  themeColor="#17181c"
+  whatsapp={null}
+  telefono={null}
+  mapsUrl={"https://maps.google.com/?cid=4573764286651651762&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ============ HERO SPLIT ============ -->
+  <header class="hero">
+    <div class="hero-foto">
+      <img
+        src="/armor-gym/img/foto_2.jpg"
+        alt="Fachada de Armor Gym: edificio grafito con letras de acero en el norte de Mérida"
+        fetchpriority="high"
+      />
+    </div>
+    <div class="hero-band" aria-hidden="true"></div>
+    <div class="hero-texto">
+      <p class="eyebrow">Gimnasio · Mérida Norte</p>
+      <h1><span>Armor</span> <span class="acero">Gym</span></h1>
+      <p class="gancho">
+        Disciplina de 5:00 a 23:00. Peso libre, racks y un circuito completo
+        de máquinas para que tu única excusa se quede dormida.
+      </p>
+      <div class="cta-row">
+        <a
+          class="btn btn-brick"
+          href="https://maps.google.com/?cid=4573764286651651762&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+          target="_blank"
+          rel="noopener"
+        >Cómo llegar</a>
+        <a class="btn btn-ghost" href="#horarios">Ver horarios</a>
+      </div>
+      <p class="hero-rating">
+        <span class="estrella" aria-hidden="true">★</span>
+        4.3 en Google · 203 reseñas
+      </p>
+    </div>
+  </header>
+
+  <!-- ============ FRANJA DE DATOS ============ -->
+  <div class="strip" role="list">
+    <span role="listitem">Abrimos 5:00 am</span>
+    <span role="listitem">Cerramos 11:00 pm</span>
+    <span role="listitem">Aceptamos tarjetas</span>
+    <span role="listitem">★ 4.3 · 203 reseñas</span>
+  </div>
+
+  <main>
+    <!-- ============ SOBRE NOSOTROS ============ -->
+    <section class="seccion" id="sobre">
+      <div class="contenido sobre-grid">
+        <div class="sobre-texto reveal">
+          <span class="brick-chip" aria-hidden="true"></span>
+          <h2>El gym de la armadura</h2>
+          <p>
+            Somos el gimnasio de fierros del norte de Mérida. Nos reconoces
+            desde la calle: el edificio grafito con las letras de acero y el
+            muro de tabique rojo donde vive nuestro espartano. Aquí no hay
+            poses ni pantallas de más — hay barras, discos y gente que viene
+            a trabajar.
+          </p>
+          <p>
+            Creemos que la constancia le gana al talento, por eso abrimos
+            desde las 5:00 de la mañana y cerramos hasta las 11:00 de la
+            noche entre semana. Madrugues o salgas tarde del trabajo, tu
+            entrenamiento cabe en tu día.
+          </p>
+          <p>
+            Entrena a tu ritmo, arma tu rutina y hazte parte de la comunidad
+            que ya calificó este gym con 4.3 estrellas en Google.
+          </p>
+        </div>
+        <figure class="sobre-foto reveal">
+          <img
+            src="/armor-gym/img/foto_5.jpg"
+            alt="Logo espartano de Armor Gym en acero sobre el muro de tabique rojo de la entrada"
+            loading="lazy"
+          />
+          <figcaption>Nuestro espartano, en la entrada de siempre.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ INSTALACIONES / SERVICIOS ============ -->
+    <section class="seccion seccion-panel" id="instalaciones">
+      <div class="contenido">
+        <span class="brick-chip" aria-hidden="true"></span>
+        <h2>Lo que encuentras adentro</h2>
+        <div class="cards">
+          <article class="card reveal">
+            <h3>Peso libre y racks</h3>
+            <p>Barras, discos y mancuernas para trabajar fuerza de verdad, con racks listos para tu sentadilla.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Circuito de máquinas</h3>
+            <p>Equipos para cada grupo muscular, para armar tu rutina completa sin brincarte ejercicios.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Horario de guerrero</h3>
+            <p>De 5:00 a 23:00 entre semana y sábados desde las 6:00. Tu hora de entrenar sí existe.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Aceptamos tarjetas</h3>
+            <p>Paga tu membresía con tarjeta, sin vueltas al cajero.</p>
+          </article>
+          <article class="card reveal">
+            <h3>Espacio amplio y con luz</h3>
+            <p>Salas abiertas y ventanales grandes: entrena con aire y sin sentirte encerrado.</p>
+          </article>
+        </div>
+        <div class="galeria">
+          <img
+            class="reveal"
+            src="/armor-gym/img/foto_1.jpg"
+            alt="Sala de máquinas de Armor Gym con circuito completo de aparatos"
+            loading="lazy"
+          />
+          <img
+            class="reveal"
+            src="/armor-gym/img/foto_4.jpg"
+            alt="Rack de sentadilla con barra y discos en Armor Gym"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRUEBA SOCIAL ============ -->
+    <section class="seccion" id="resenas">
+      <div class="contenido resenas-box reveal">
+        <span class="brick-chip centrado" aria-hidden="true"></span>
+        <h2 class="centrado-txt">Lo dicen en Google</h2>
+        <p class="rating-num" aria-label="Calificación 4.3 de 5">4.3</p>
+        <div class="stars" role="img" aria-label="4.3 de 5 estrellas">
+          <span class="stars-base" aria-hidden="true">★★★★★</span>
+          <span class="stars-fill" aria-hidden="true">★★★★★</span>
+        </div>
+        <p class="rating-total">203 personas ya calificaron este gym en su ficha de Google.</p>
+        <a
+          class="btn btn-brick"
+          href="https://maps.google.com/?cid=4573764286651651762&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+          target="_blank"
+          rel="noopener"
+        >Leer más reseñas en Google</a>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="seccion seccion-panel" id="horarios">
+      <div class="contenido">
+        <span class="brick-chip" aria-hidden="true"></span>
+        <h2>Ubicación y horarios</h2>
+        <p class="direccion">Nte, México Nte., 97129 Mérida, Yuc., México</p>
+        <div class="ubicacion-grid">
+          <div class="mapa reveal">
+            <iframe
+              src="https://www.google.com/maps?q=Armor%20Gym%2C%20M%C3%A9xico%20Nte.%2C%2097129%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+              width="600"
+              height="340"
+              style="border:0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Mapa de Armor Gym en Mérida Norte"
+            ></iframe>
+          </div>
+          <div class="horarios-wrap reveal">
+            <table class="horarios">
+              <caption class="sr-only">Horarios de Armor Gym</caption>
+              <tbody>
+                <tr data-day="1"><th scope="row">Lunes</th><td>5:00 – 23:00</td></tr>
+                <tr data-day="2"><th scope="row">Martes</th><td>5:00 – 23:00</td></tr>
+                <tr data-day="3"><th scope="row">Miércoles</th><td>5:00 – 23:00</td></tr>
+                <tr data-day="4"><th scope="row">Jueves</th><td>5:00 – 23:00</td></tr>
+                <tr data-day="5"><th scope="row">Viernes</th><td>5:00 – 23:00</td></tr>
+                <tr data-day="6"><th scope="row">Sábado</th><td>6:00 – 19:00</td></tr>
+                <tr data-day="0"><th scope="row">Domingo</th><td class="cerrado">Cerrado</td></tr>
+              </tbody>
+            </table>
+            <a
+              class="btn btn-ghost btn-full"
+              href="https://maps.google.com/?cid=4573764286651651762&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+              target="_blank"
+              rel="noopener"
+            >Cómo llegar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="pie">
+    <div class="contenido">
+      <p class="pie-logo">Armor <span class="acero">Gym</span></p>
+      <p class="pie-dato">Gimnasio en el norte de Mérida, Yucatán</p>
+      <p class="pie-dato">Nte, México Nte., 97129 Mérida, Yuc., México</p>
+      <p class="pie-links">
+        <a
+          href="https://maps.google.com/?cid=4573764286651651762&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+          target="_blank"
+          rel="noopener"
+        >Google Maps</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://www.facebook.com/GimnasioArmor/" target="_blank" rel="noopener">Facebook</a>
+      </p>
+      <p class="pie-horario">Lun – Vie 5:00 a 23:00 · Sáb 6:00 a 19:00 · Dom cerrado</p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --grafito: #17181c;
+      --panel: #1f2126;
+      --linea: #2c2f36;
+      --acero: #c8cdd5;
+      --hueso: #eef0f3;
+      --brick: #a63c2c;
+      --brick-hondo: #7e2b1f;
+      --mortero: #4a2018;
+      --display: 'League Spartan', system-ui, sans-serif;
+      --cuerpo: 'Barlow', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--grafito);
+      color: var(--acero);
+      font-family: var(--cuerpo);
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--display);
+      color: var(--hueso);
+      line-height: 1.05;
+      margin: 0 0 0.6em;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+    }
+
+    main a, footer a { color: var(--hueso); }
+    :focus-visible {
+      outline: 3px solid var(--brick);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px;
+      padding: 0; margin: -1px; overflow: hidden;
+      clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    /* ---------- firma: patrón de tabique ---------- */
+    .hero-band, .brick-chip {
+      background-color: var(--brick);
+      background-image:
+        linear-gradient(335deg, var(--brick-hondo) 18px, transparent 18px),
+        linear-gradient(155deg, var(--brick-hondo) 18px, transparent 18px),
+        linear-gradient(335deg, var(--brick-hondo) 18px, transparent 18px),
+        linear-gradient(155deg, var(--brick-hondo) 18px, transparent 18px),
+        linear-gradient(var(--mortero), var(--mortero));
+      background-size: 46px 46px, 46px 46px, 46px 46px, 46px 46px, auto;
+      background-position: 0 2px, 3px 28px, 23px 25px, 27px 5px, 0 0;
+    }
+    .brick-chip {
+      display: block;
+      width: 64px;
+      height: 12px;
+      margin-bottom: 14px;
+      border-radius: 2px;
+    }
+    .brick-chip.centrado { margin-left: auto; margin-right: auto; }
+
+    /* ---------- hero split ---------- */
+    .hero {
+      display: grid;
+      grid-template-rows: auto 16px auto;
+    }
+    .hero-foto { position: relative; }
+    .hero-foto img {
+      width: 100%;
+      height: min(58vh, 480px);
+      object-fit: cover;
+      object-position: 50% 22%;
+    }
+    .hero-texto {
+      padding: 34px 22px 42px;
+      background:
+        linear-gradient(160deg, rgba(200, 205, 213, 0.05), transparent 45%),
+        var(--grafito);
+    }
+    .eyebrow {
+      font-family: var(--display);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.22em;
+      font-size: 0.8rem;
+      /* tono tabique aclarado: contraste AA sobre grafito en texto pequeño */
+      color: #d97b64;
+      margin: 0 0 10px;
+    }
+    .hero h1 {
+      font-size: clamp(3.2rem, 14vw, 5.6rem);
+      font-weight: 800;
+      margin: 0 0 14px;
+      letter-spacing: 0.005em;
+    }
+    .acero {
+      background: linear-gradient(175deg, #e9ecf1 20%, #9aa2ad 60%, #cfd4db);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .gancho {
+      max-width: 46ch;
+      margin: 0 0 26px;
+      font-size: 1.1rem;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-block;
+      font-family: var(--display);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 0.95rem;
+      text-decoration: none;
+      padding: 15px 26px 13px;
+      border-radius: 4px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn-brick {
+      background: var(--brick);
+      color: #fff;
+      box-shadow: 0 3px 0 var(--brick-hondo);
+    }
+    .btn-brick:hover { background: #b8452f; }
+    .btn-ghost {
+      border: 2px solid var(--linea);
+      color: var(--hueso);
+    }
+    .btn-ghost:hover { border-color: var(--acero); }
+    .btn-full { display: block; text-align: center; margin-top: 16px; }
+    .hero-rating {
+      margin: 22px 0 0;
+      font-weight: 500;
+      color: var(--hueso);
+    }
+    .estrella { color: #e8b23a; }
+
+    /* ---------- franja de datos ---------- */
+    .strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 26px;
+      padding: 14px 18px;
+      background: var(--panel);
+      border-top: 1px solid var(--linea);
+      border-bottom: 1px solid var(--linea);
+      font-family: var(--display);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.78rem;
+      color: var(--acero);
+      text-align: center;
+    }
+
+    /* ---------- secciones ---------- */
+    .seccion { padding: 64px 0; }
+    .seccion-panel { background: var(--panel); border-block: 1px solid var(--linea); }
+    .contenido {
+      max-width: 1060px;
+      margin: 0 auto;
+      padding: 0 22px;
+    }
+    h2 { font-size: clamp(1.9rem, 6vw, 2.6rem); }
+
+    /* sobre nosotros */
+    .sobre-grid { display: grid; gap: 34px; }
+    .sobre-texto p { margin: 0 0 1em; }
+    .sobre-foto { margin: 0; }
+    .sobre-foto img {
+      border-radius: 6px;
+      border: 1px solid var(--linea);
+    }
+    .sobre-foto figcaption {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #8d939d;
+    }
+
+    /* cards */
+    .cards {
+      display: grid;
+      gap: 14px;
+      margin: 30px 0 34px;
+    }
+    .card {
+      background: var(--grafito);
+      border: 1px solid var(--linea);
+      border-left: 4px solid var(--brick);
+      border-radius: 6px;
+      padding: 20px 20px 16px;
+    }
+    .card h3 { font-size: 1.15rem; margin-bottom: 0.4em; }
+    .card p { margin: 0; font-size: 0.98rem; color: var(--acero); }
+
+    .galeria {
+      display: grid;
+      gap: 14px;
+    }
+    .galeria img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 6px;
+      border: 1px solid var(--linea);
+    }
+
+    /* reseñas */
+    .resenas-box { text-align: center; }
+    .centrado-txt { text-align: center; }
+    .rating-num {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(4rem, 18vw, 6.5rem);
+      line-height: 1;
+      color: var(--hueso);
+      margin: 10px 0 0;
+    }
+    .stars {
+      position: relative;
+      display: inline-block;
+      font-size: 1.9rem;
+      line-height: 1;
+      letter-spacing: 4px;
+      margin: 6px 0 14px;
+    }
+    .stars-base { color: #3a3e46; }
+    .stars-fill {
+      position: absolute;
+      inset: 0;
+      width: 86%;
+      overflow: hidden;
+      color: #e8b23a;
+      white-space: nowrap;
+    }
+    .rating-total {
+      max-width: 42ch;
+      margin: 0 auto 26px;
+    }
+
+    /* ubicación */
+    .direccion { margin: 0 0 22px; color: var(--hueso); font-weight: 500; }
+    .ubicacion-grid { display: grid; gap: 26px; }
+    .mapa iframe {
+      width: 100%;
+      height: 340px;
+      border-radius: 6px;
+      display: block;
+    }
+    .horarios-wrap { min-width: 0; }
+    .horarios {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 1rem;
+    }
+    .horarios th, .horarios td {
+      text-align: left;
+      padding: 10px 12px;
+      border-bottom: 1px solid var(--linea);
+    }
+    .horarios th { font-weight: 500; color: var(--hueso); }
+    .horarios td { text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios .cerrado { color: #d97b64; }
+    .horarios tr.hoy th, .horarios tr.hoy td {
+      background: rgba(166, 60, 44, 0.16);
+      color: var(--hueso);
+      font-weight: 600;
+    }
+    .horarios tr.hoy th { border-left: 4px solid var(--brick); }
+
+    /* footer */
+    .pie {
+      padding: 46px 0 90px; /* espacio extra para el botón flotante */
+      border-top: 1px solid var(--linea);
+      text-align: center;
+    }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      color: var(--hueso);
+      margin: 0 0 8px;
+    }
+    .pie-dato { margin: 0 0 4px; font-size: 0.95rem; }
+    .pie-links { margin: 14px 0 6px; }
+    .pie-links a { color: #d97b64; text-decoration-color: rgba(217, 123, 100, 0.5); }
+    .pie-links span { margin: 0 8px; color: #8d939d; }
+    .pie-horario { margin: 0; font-size: 0.85rem; color: #8d939d; }
+
+    /* ---------- reveal (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    html.js .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ---------- desktop ---------- */
+    @media (min-width: 900px) {
+      .hero {
+        grid-template-rows: none;
+        grid-template-columns: 1.08fr 22px 1fr;
+        min-height: min(88vh, 760px);
+      }
+      .hero-foto img { height: 100%; }
+      .hero-texto {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 60px 56px;
+      }
+      .sobre-grid {
+        grid-template-columns: 1.15fr 1fr;
+        align-items: start;
+        gap: 48px;
+      }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .galeria { grid-template-columns: 1.4fr 1fr; }
+      .galeria img { height: 360px; }
+      .ubicacion-grid { grid-template-columns: 1.2fr 1fr; align-items: start; }
+      .seccion { padding: 84px 0; }
+    }
+  </style>
+
+  <script is:inline>
+    document.documentElement.classList.add('js');
+
+    // Resaltar el día de hoy en la tabla de horarios
+    var hoy = new Date().getDay();
+    var fila = document.querySelector('.horarios tr[data-day="' + hoy + '"]');
+    if (fila) fila.classList.add('hoy');
+
+    // Scroll-reveal como mejora progresiva
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('in'); });
+    }
+  </script>
+</BaseLayout>

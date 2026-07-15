@@ -1,0 +1,522 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="BFitness Sur — Gimnasio en el sur de Mérida | De 5 AM a medianoche entre semana"
+  description="Gimnasio de barrio en Mercedes Barrera, al sur de Mérida. Peso libre, máquinas y cardio. Abierto de 5:00 a 24:00 entre semana. ⭐ 4.6 · 289 reseñas en Google."
+  slug="bfitness-sur"
+  ogImage="/bfitness-sur/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;700&family=Big+Shoulders+Display:wght@800;900&display=swap"
+  favicon="🏋️"
+  themeColor="#0B0C0E"
+  whatsapp="https://wa.me/529999072908"
+  telefono="999 907 2908"
+  mapsUrl="https://maps.google.com/?cid=5330932568712154315&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+>
+
+<!-- Símbolo hexágono (lámparas LED del techo) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <polygon id="hx" points="26,0 13,22.5 -13,22.5 -26,0 -13,-22.5 13,-22.5"
+      fill="none" stroke-width="3.5" stroke-linejoin="round"/>
+  </defs>
+</svg>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <img class="hero-img" src="/bfitness-sur/img/foto_1.jpg" fetchpriority="high"
+    alt="Área de peso libre y máquinas de BFitness Sur, con lámparas LED hexagonales en el techo">
+  <svg class="hex-cluster" viewBox="0 0 220 160" aria-hidden="true" stroke="#F4F1E9">
+    <use href="#hx" x="60" y="40"/>
+    <use href="#hx" x="99" y="62.5"/>
+    <use href="#hx" x="138" y="40"/>
+    <use href="#hx" x="99" y="107.5"/>
+    <use href="#hx" x="177" y="62.5"/>
+  </svg>
+  <div class="hero-inner">
+    <span class="overline">
+      <svg width="14" height="14" viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg>
+      Gimnasio · Sur de Mérida
+    </span>
+    <h1>BFitness <span class="sur">Sur</span></h1>
+    <p class="gancho">Entre semana abrimos a las 5 de la mañana y cerramos a medianoche. Aquí se viene a lo que se viene: a entrenar.</p>
+    <p class="sub">Peso libre, máquinas y cardio en Mercedes Barrera. Sin poses ni filas: tu barrio, tu fierro.</p>
+    <div class="rating-chip"><span class="star">★</span> 4.6 · 289 reseñas en Google</div>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/529999072908" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.9-1.4A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-2.9.8.8-2.8-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.4 0-.5l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1.1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.7.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.6-.4z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+      <a class="btn btn-mapa" href="https://maps.google.com/?cid=5330932568712154315&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Cómo llegar</a>
+    </div>
+  </div>
+</header>
+
+<!-- Cinta amarilla -->
+<div class="tape" aria-hidden="true">
+  <span>Lun–Vie 5:00 – 24:00 ·</span> <span>Sáb 7:00 – 19:00 ·</span> <span>Dom 8:00 – 16:00</span>
+</div>
+
+<!-- ===== SOBRE NOSOTROS ===== -->
+<section class="sec" id="nosotros">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="overline">
+        <svg width="14" height="14" viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg>
+        Sobre nosotros
+      </span>
+      <h2>El gym del barrio,<br>en serio</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-txt rv">
+        <p>Somos <strong>BFitness Sur</strong>, un gimnasio de barrio en <strong>Mercedes Barrera</strong>, al sur de Mérida. Aquí no hay lujos de franquicia: hay fierro, máquinas que aguantan y una comunidad que llega a entrenar en serio, desde el que madruga a las 5 antes del trabajo hasta el que sale de su turno a las 10 de la noche.</p>
+        <p>Nuestros clientes lo dicen mejor que nosotros: es <strong>un lugar cómodo para entrenar</strong>, y si prefieres el gym tranquilo, en la mañana y al mediodía lo tienes casi para ti solo. Y para los que van pesado en pierna, la <strong>prensa y la máquina hack</strong> aguantan todo el peso que les pongas.</p>
+        <p>Abrimos los 7 días de la semana. No importa tu horario ni tu nivel: aquí se viene a lo que se viene, <strong>a entrenar músculos</strong>.</p>
+        <div class="stats">
+          <div class="stat"><b>4.6</b><span>en Google</span></div>
+          <div class="stat"><b>289</b><span>reseñas</span></div>
+          <div class="stat"><b>19 h</b><span>abiertos L–V</span></div>
+        </div>
+      </div>
+      <figure class="about-foto rv">
+        <img src="/bfitness-sur/img/foto_2.jpg" loading="lazy"
+          alt="Área de mancuernas y máquinas de BFitness Sur, con zona de espejos">
+        <figcaption>
+          <svg width="12" height="12" viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg>
+          Mancuernas, máquinas y zona de espejos
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICIOS ===== -->
+<section class="sec" id="servicios" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="overline">
+        <svg width="14" height="14" viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg>
+        Lo que encuentras
+      </span>
+      <h2>Todo para tu rutina</h2>
+    </div>
+    <div class="serv-grid">
+      <div class="serv rv">
+        <span class="hexnum"><svg viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg><b>01</b></span>
+        <div><h3>Peso libre</h3><p>Rack de mancuernas, barras y discos para armar tu rutina completa.</p></div>
+      </div>
+      <div class="serv rv">
+        <span class="hexnum"><svg viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg><b>02</b></span>
+        <div><h3>Máquinas de fuerza</h3><p>Prensa, máquina hack, poleas y estaciones para cada grupo muscular.</p></div>
+      </div>
+      <div class="serv rv">
+        <span class="hexnum"><svg viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg><b>03</b></span>
+        <div><h3>Zona de cardio</h3><p>Caminadoras, elípticas y escaladoras para calentar o quemar.</p></div>
+      </div>
+      <div class="serv rv">
+        <span class="hexnum"><svg viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg><b>04</b></span>
+        <div><h3>Horario extendido</h3><p>De 5:00 a 24:00 entre semana. Madruga o entrena de noche, tú decides.</p></div>
+      </div>
+      <div class="serv rv">
+        <span class="hexnum"><svg viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg><b>05</b></span>
+        <div><h3>Lockers</h3><p>Guarda tus cosas mientras entrenas. Tip de la casa: trae tu candado.</p></div>
+      </div>
+      <div class="serv rv">
+        <span class="hexnum"><svg viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg><b>06</b></span>
+        <div><h3>Aceptamos tarjetas</h3><p>Paga tu mensualidad con tarjeta, sin complicarte con el efectivo.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Foto zona cardio -->
+<div class="banda-foto rv">
+  <figure class="wrap">
+    <img src="/bfitness-sur/img/foto_3.jpg" loading="lazy"
+      alt="Zona de cardio de BFitness Sur con caminadoras y elípticas en uso">
+    <figcaption>Zona de cardio</figcaption>
+  </figure>
+</div>
+
+<!-- ===== PRUEBA SOCIAL ===== -->
+<section class="sec" id="resenas">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="overline">
+        <svg width="14" height="14" viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg>
+        Lo que dicen en Google
+      </span>
+      <h2>La banda opina</h2>
+    </div>
+    <div class="rate-big rv">
+      <span class="num">4.6</span>
+      <div>
+        <span class="stars-wrap" aria-label="4.6 de 5 estrellas">
+          <span class="stars-bg" aria-hidden="true">★★★★★</span>
+          <span class="stars-fill" aria-hidden="true">★★★★★</span>
+        </span>
+        <span class="cap">289 reseñas en Google</span>
+      </div>
+    </div>
+    <div class="rev-grid">
+      <article class="rev rv">
+        <div class="rstars" aria-label="4 de 5 estrellas">★★★★<span class="off">★</span></div>
+        <blockquote>“Es un lugar cómodo para entrenar, tiene horarios en la mañana y medio día donde está casi vacío…”</blockquote>
+        <footer><b>Rey Javi Vic</b> · Hace 2 meses</footer>
+      </article>
+      <article class="rev rv">
+        <div class="rstars" aria-label="5 de 5 estrellas">★★★★★</div>
+        <blockquote>“…yo simplemente voy a lo que voy, a entrenar músculos”</blockquote>
+        <footer><b>Daniel</b> · Hace 3 semanas</footer>
+      </article>
+    </div>
+    <div class="rev-cta rv">
+      <a class="btn-ghost" href="https://maps.google.com/?cid=5330932568712154315&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== UBICACIÓN Y HORARIOS ===== -->
+<section class="sec" id="ubicacion" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="overline">
+        <svg width="14" height="14" viewBox="-30 -30 60 60" stroke="#2FC6B2" aria-hidden="true"><use href="#hx"/></svg>
+        Ubicación y horarios
+      </span>
+      <h2>Aquí nos encuentras</h2>
+    </div>
+    <div class="loc-grid">
+      <div class="rv">
+        <p class="dir"><strong>C. 60 786, Mercedes Barrera</strong><br>97277 Mérida, Yuc., México</p>
+        <iframe class="mapa" loading="lazy" title="Mapa de BFitness Sur en Mercedes Barrera, Mérida"
+          src="https://www.google.com/maps?q=C.%2060%20786%2C%20Mercedes%20Barrera%2C%2097277%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+          referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+      <div class="horarios rv">
+        <h3>
+          <svg width="16" height="16" viewBox="-30 -30 60 60" stroke="#E8C33F" aria-hidden="true"><use href="#hx"/></svg>
+          Horarios
+        </h3>
+        <table class="htabla">
+          <tbody>
+            <tr data-day="1"><td>Lunes</td><td>5:00 – 24:00</td></tr>
+            <tr data-day="2"><td>Martes</td><td>5:00 – 24:00</td></tr>
+            <tr data-day="3"><td>Miércoles</td><td>5:00 – 24:00</td></tr>
+            <tr data-day="4"><td>Jueves</td><td>5:00 – 24:00</td></tr>
+            <tr data-day="5"><td>Viernes</td><td>5:00 – 24:00</td></tr>
+            <tr data-day="6"><td>Sábado</td><td>7:00 – 19:00</td></tr>
+            <tr data-day="0"><td>Domingo</td><td>8:00 – 16:00</td></tr>
+          </tbody>
+        </table>
+        <p class="tip-valle"><b>Tip de la banda:</b> en la mañana y al mediodía el gym está casi vacío — perfecto si te gusta entrenar sin esperar aparato.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="pie">
+  <p class="logo">BFitness <span>Sur</span></p>
+  <p>C. 60 786, Mercedes Barrera · 97277 Mérida, Yuc.</p>
+  <a class="tel" href="tel:+529999072908">999 907 2908</a>
+  <p class="credito">✨ Demo creada por <a href="https://wa.me/529991284580" target="_blank" rel="noopener">ivang.mx</a> — ¿Te gusta? Escríbenos</p>
+</footer>
+
+<noscript><style is:inline>.rv{opacity:1;transform:none}</style></noscript>
+
+<style is:global>
+:root{
+  --negro:#0B0C0E;      /* piso de hule */
+  --grafito:#16181D;    /* superficies */
+  --linea:#242830;
+  --turquesa:#2FC6B2;   /* mancuernas LIV PRO */
+  --turq-osc:#1E9C8C;
+  --led:#F4F1E9;        /* blanco cálido de las lámparas */
+  --acero:#9BA3AD;      /* texto secundario */
+  --cinta:#E8C33F;      /* cinta amarilla del piso */
+  --display:"Big Shoulders Display",sans-serif;
+  --body:"Archivo",sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--body);
+  background:var(--negro);
+  color:var(--led);
+  line-height:1.6;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:var(--turquesa)}
+:focus-visible{outline:3px solid var(--cinta);outline-offset:3px;border-radius:4px}
+
+/* ===== Hero ===== */
+.hero{
+  position:relative;
+  min-height:calc(100svh - 36px);
+  display:flex;flex-direction:column;justify-content:flex-end;
+  isolation:isolate;overflow:hidden;
+}
+.hero-img{
+  position:absolute;inset:0;z-index:-2;
+  width:100%;height:100%;object-fit:cover;object-position:center 40%;
+}
+.hero::after{
+  content:"";position:absolute;inset:0;z-index:-1;
+  background:linear-gradient(180deg,rgba(11,12,14,.55) 0%,rgba(11,12,14,.25) 35%,rgba(11,12,14,.82) 72%,var(--negro) 100%);
+}
+.hex-cluster{
+  position:absolute;top:48px;right:-30px;width:210px;opacity:.95;
+  filter:drop-shadow(0 0 10px rgba(244,241,233,.45));
+  animation:ledglow 5s ease-in-out infinite;
+  pointer-events:none;
+}
+@keyframes ledglow{
+  0%,100%{filter:drop-shadow(0 0 8px rgba(244,241,233,.35))}
+  50%{filter:drop-shadow(0 0 16px rgba(244,241,233,.6))}
+}
+.hero-inner{padding:0 20px 42px;max-width:1080px;margin:0 auto;width:100%}
+.overline{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:.8rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--turquesa);margin-bottom:12px;
+}
+.overline svg{flex:none}
+.hero h1{
+  font-family:var(--display);font-weight:900;
+  font-size:clamp(3.4rem,16vw,7.5rem);
+  line-height:.9;text-transform:uppercase;letter-spacing:.01em;
+  color:var(--led);
+}
+.hero h1 .sur{color:var(--turquesa)}
+.hero .gancho{
+  margin:16px 0 8px;max-width:34ch;
+  font-size:clamp(1.05rem,4vw,1.3rem);font-weight:500;color:var(--led);
+}
+.hero .sub{color:var(--acero);font-size:.95rem;max-width:44ch}
+.rating-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  margin-top:18px;padding:7px 14px;border:1px solid var(--linea);border-radius:999px;
+  background:rgba(22,24,29,.75);backdrop-filter:blur(4px);
+  font-size:.88rem;font-weight:500;
+}
+.rating-chip .star{color:var(--cinta)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:var(--body);font-weight:700;font-size:1rem;
+  padding:15px 26px;border-radius:10px;text-decoration:none;
+  transition:transform .15s ease,background .15s ease,border-color .15s ease;
+  min-height:52px;
+}
+.btn:active{transform:scale(.97)}
+.btn-wa{background:var(--turquesa);color:#06231F}
+.btn-wa:hover{background:#3ADCC7}
+.btn-mapa{border:2px solid var(--led);color:var(--led);background:rgba(11,12,14,.35)}
+.btn-mapa:hover{border-color:var(--turquesa);color:var(--turquesa)}
+
+/* ===== Cinta amarilla (como la del piso) ===== */
+.tape{
+  background:var(--cinta);color:#151204;
+  transform:rotate(-1.2deg);margin:34px -12px 0;
+  padding:10px 0;overflow:hidden;text-align:center;
+  font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:1.05rem;letter-spacing:.08em;line-height:1.35;
+}
+.tape span{display:inline-block;padding:0 18px}
+
+/* ===== Secciones ===== */
+.sec{padding:74px 20px}
+.wrap{max-width:1080px;margin:0 auto}
+.sec-head{margin-bottom:34px}
+.sec-head .overline{color:var(--turquesa)}
+.sec-head h2{
+  font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:clamp(2.2rem,9vw,3.6rem);line-height:.95;color:var(--led);
+}
+
+/* Sobre nosotros */
+.about-grid{display:grid;gap:34px}
+.about-txt p{color:var(--acero);margin-bottom:16px}
+.about-txt p strong{color:var(--led);font-weight:600}
+.about-foto{position:relative}
+.about-foto img{border-radius:14px;border:1px solid var(--linea)}
+.about-foto figcaption{
+  margin-top:10px;font-size:.8rem;color:var(--acero);
+  display:flex;align-items:center;gap:8px;
+}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.stat{
+  background:var(--grafito);border:1px solid var(--linea);border-radius:12px;
+  padding:16px 10px;text-align:center;
+}
+.stat b{
+  display:block;font-family:var(--display);font-weight:900;
+  font-size:2rem;line-height:1;color:var(--turquesa);
+}
+.stat span{font-size:.74rem;color:var(--acero);text-transform:uppercase;letter-spacing:.08em}
+
+/* Servicios */
+.serv-grid{display:grid;gap:14px}
+.serv{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--grafito);border:1px solid var(--linea);border-radius:14px;
+  padding:20px;transition:border-color .2s ease,transform .2s ease;
+}
+.serv:hover{border-color:var(--turquesa);transform:translateY(-2px)}
+.hexnum{
+  flex:none;width:52px;height:52px;position:relative;
+  display:grid;place-items:center;
+}
+.hexnum svg{position:absolute;inset:0;width:100%;height:100%}
+.hexnum b{
+  position:relative;font-family:var(--display);font-weight:800;
+  font-size:1.15rem;color:var(--turquesa);letter-spacing:.03em;
+}
+.serv h3{font-family:var(--display);font-weight:800;text-transform:uppercase;font-size:1.3rem;letter-spacing:.03em;color:var(--led)}
+.serv p{font-size:.92rem;color:var(--acero);margin-top:4px}
+
+/* Foto cardio */
+.banda-foto{padding:0 20px}
+.banda-foto .wrap{position:relative;max-width:640px} /* foto_3 mide 496px de ancho: no estirarla a más de ~1.3x */
+.banda-foto img{width:100%;height:min(58vw,420px);object-fit:cover;object-position:center 38%;border-radius:16px;border:1px solid var(--linea)}
+.banda-foto figcaption{
+  position:absolute;left:14px;bottom:14px;
+  background:rgba(11,12,14,.8);backdrop-filter:blur(4px);
+  border:1px solid var(--linea);border-radius:999px;
+  padding:6px 14px;font-size:.8rem;color:var(--led);
+}
+
+/* Reseñas */
+.rate-big{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:28px}
+.rate-big .num{
+  font-family:var(--display);font-weight:900;font-size:clamp(4.5rem,18vw,7rem);
+  line-height:.85;color:var(--led);
+}
+.stars-wrap{position:relative;display:inline-block;font-size:1.5rem;line-height:1;letter-spacing:2px}
+.stars-bg{color:#3A3F48}
+.stars-fill{position:absolute;top:0;left:0;overflow:hidden;color:var(--cinta);white-space:nowrap;width:92%}
+.rate-big .cap{color:var(--acero);font-size:.95rem;display:block;margin-top:8px}
+.rev-grid{display:grid;gap:16px}
+.rev{
+  background:var(--grafito);border:1px solid var(--linea);border-radius:16px;
+  padding:24px;position:relative;
+}
+.rev::before{
+  content:"“";position:absolute;top:6px;right:18px;
+  font-family:var(--display);font-weight:900;font-size:4.4rem;line-height:1;
+  color:var(--turquesa);opacity:.28;
+}
+.rev .rstars{color:var(--cinta);font-size:.95rem;letter-spacing:2px;margin-bottom:10px}
+.rev .rstars .off{color:#3A3F48}
+.rev blockquote{font-size:1.02rem;color:var(--led);font-weight:400}
+.rev footer{margin-top:14px;font-size:.85rem;color:var(--acero)}
+.rev footer b{color:var(--led);font-weight:600}
+.rev-cta{margin-top:26px}
+.btn-ghost{
+  display:inline-flex;align-items:center;gap:8px;
+  border:2px solid var(--linea);color:var(--led);text-decoration:none;
+  padding:13px 22px;border-radius:10px;font-weight:700;font-size:.95rem;
+  transition:border-color .15s ease,color .15s ease;
+}
+.btn-ghost:hover{border-color:var(--turquesa);color:var(--turquesa)}
+
+/* Ubicación y horarios */
+.loc-grid{display:grid;gap:30px}
+.dir{color:var(--acero);margin-bottom:16px}
+.dir strong{color:var(--led)}
+.mapa{
+  width:100%;height:280px;border:1px solid var(--linea);border-radius:14px;
+  filter:grayscale(.35) contrast(1.05);
+}
+.horarios h3{
+  font-family:var(--display);font-weight:800;text-transform:uppercase;
+  font-size:1.5rem;letter-spacing:.04em;margin-bottom:14px;color:var(--led);
+  display:flex;align-items:center;gap:10px;
+}
+.htabla{width:100%;border-collapse:collapse;font-size:.95rem}
+.htabla td{padding:11px 6px;border-bottom:1px solid var(--linea);color:var(--acero)}
+.htabla td:last-child{text-align:right;font-variant-numeric:tabular-nums;color:var(--led);font-weight:500}
+.htabla tr.today td{color:var(--negro);background:var(--cinta);font-weight:700}
+.htabla tr.today td:first-child{border-radius:8px 0 0 8px;padding-left:12px}
+.htabla tr.today td:last-child{border-radius:0 8px 8px 0;color:var(--negro);padding-right:12px}
+.tip-valle{
+  margin-top:16px;padding:14px 16px;border-left:3px solid var(--turquesa);
+  background:var(--grafito);border-radius:0 10px 10px 0;
+  font-size:.88rem;color:var(--acero);
+}
+.tip-valle b{color:var(--turquesa)}
+
+/* Footer */
+footer.pie{
+  border-top:1px solid var(--linea);padding:44px 20px 120px;text-align:center;
+}
+.pie .logo{
+  font-family:var(--display);font-weight:900;text-transform:uppercase;
+  font-size:1.7rem;letter-spacing:.04em;color:var(--led);
+}
+.pie .logo span{color:var(--turquesa)}
+.pie p{color:var(--acero);font-size:.9rem;margin-top:8px}
+.pie a.tel{
+  display:inline-block;margin-top:14px;font-family:var(--display);font-weight:800;
+  font-size:1.6rem;color:var(--turquesa);text-decoration:none;letter-spacing:.05em;
+}
+.pie a.tel:hover{color:#3ADCC7}
+.pie .credito{margin-top:26px;font-size:.78rem}
+.pie .credito a{color:var(--cinta);text-decoration:none}
+
+/* Scroll reveal */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+
+/* ===== Desktop ===== */
+@media (min-width:760px){
+  .hero-inner{padding-bottom:64px}
+  .hex-cluster{width:300px;right:40px;top:70px}
+  .tape{font-size:1.3rem}
+  .about-grid{grid-template-columns:1.15fr .85fr;align-items:start}
+  .serv-grid{grid-template-columns:repeat(2,1fr)}
+  .rev-grid{grid-template-columns:repeat(2,1fr)}
+  .loc-grid{grid-template-columns:1.05fr .95fr;align-items:start}
+  .mapa{height:360px}
+  footer.pie{padding-bottom:60px}
+}
+@media (min-width:1024px){
+  .serv-grid{grid-template-columns:repeat(3,1fr)}
+}
+</style>
+
+<script is:inline>
+// Resaltar el día de hoy en la tabla de horarios
+(function(){
+  var d = new Date().getDay();
+  var row = document.querySelector('.htabla tr[data-day="' + d + '"]');
+  if (row) row.classList.add('today');
+})();
+
+// Scroll reveal sutil
+(function(){
+  var els = document.querySelectorAll('.rv');
+  if (!('IntersectionObserver' in window) || window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    els.forEach(function(e){ e.classList.add('in'); });
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
+    });
+  }, { threshold: .12, rootMargin: '0px 0px -8% 0px' });
+  els.forEach(function(e){ io.observe(e); });
+})();
+</script>
+
+</BaseLayout>

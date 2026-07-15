@@ -1,0 +1,1172 @@
+{
+  "total": 138,
+  "grupos": [
+    {
+      "key": "comida",
+      "label": "Comida y restaurantes",
+      "emoji": "🍽️",
+      "items": [
+        {
+          "slug": "agnes-bistro-bar",
+          "nombre": "Agnes Bistro Bar",
+          "categoria": "Restaurante francés",
+          "rating": 4.8,
+          "total": 251,
+          "giro": "comida"
+        },
+        {
+          "slug": "agua-de-menta-cafeteria",
+          "nombre": "Agua de Menta 🌿 Cafetería",
+          "categoria": "Cafetería",
+          "rating": 4.7,
+          "total": 599,
+          "giro": "comida"
+        },
+        {
+          "slug": "altavela-seafood",
+          "nombre": "Altavela Seafood",
+          "categoria": "Marisquería",
+          "rating": 4.6,
+          "total": 951,
+          "giro": "comida"
+        },
+        {
+          "slug": "ancestro",
+          "nombre": "ANCESTRO",
+          "categoria": "Restaurante",
+          "rating": 4.8,
+          "total": 235,
+          "giro": "comida"
+        },
+        {
+          "slug": "bistro-progreso-de-mar",
+          "nombre": "Bistro progreso de mar",
+          "categoria": "Restaurante italiano",
+          "rating": 4.5,
+          "total": 73,
+          "giro": "comida"
+        },
+        {
+          "slug": "chiaro-di-luna",
+          "nombre": "Chiaro di Luna",
+          "categoria": "Restaurante",
+          "rating": 4.5,
+          "total": 379,
+          "giro": "comida"
+        },
+        {
+          "slug": "cucu-bistro-norte",
+          "nombre": "Cucu Bistro Norte",
+          "categoria": "Restaurante",
+          "rating": 4.8,
+          "total": 1277,
+          "giro": "comida"
+        },
+        {
+          "slug": "joas-coffee-progreso-la-casa-de-los-antojos-y-las-mejores-fresas-con-crema",
+          "nombre": "Joa's Coffee Progreso - La Casa de los Antojos y Las Mejores Fresas con Crema 🧇☕️🥙🍓✨",
+          "categoria": "Cafetería",
+          "rating": 4.9,
+          "total": 513,
+          "giro": "comida"
+        },
+        {
+          "slug": "la-patrona-huevos-motulenos",
+          "nombre": "La Patrona - Huevos Motuleños.",
+          "categoria": "Restaurante",
+          "rating": 4.7,
+          "total": 421,
+          "giro": "comida"
+        },
+        {
+          "slug": "mas-que-rico",
+          "nombre": "Mas Que Rico",
+          "categoria": "Restaurante",
+          "rating": 5,
+          "total": 571,
+          "giro": "comida"
+        },
+        {
+          "slug": "pistache-merida-un-toque-de-francia-en-merida",
+          "nombre": "Pistache Mérida, un toque de Francia en Merida",
+          "categoria": "Restaurante de brunch",
+          "rating": 4.5,
+          "total": 671,
+          "giro": "comida"
+        },
+        {
+          "slug": "restaurante-capella",
+          "nombre": "Restaurante Capella",
+          "categoria": "Restaurante",
+          "rating": 4.6,
+          "total": 718,
+          "giro": "comida"
+        },
+        {
+          "slug": "restaurante-puruxon-cauich",
+          "nombre": "Restaurante Puruxon Cauich",
+          "categoria": "Restaurante mexicano",
+          "rating": 4.6,
+          "total": 2476,
+          "giro": "comida"
+        },
+        {
+          "slug": "romelia",
+          "nombre": "Romelia",
+          "categoria": "Restaurante",
+          "rating": 4.6,
+          "total": 1444,
+          "giro": "comida"
+        }
+      ]
+    },
+    {
+      "key": "belleza",
+      "label": "Barbería, belleza y spa",
+      "emoji": "💈",
+      "items": [
+        {
+          "slug": "ak-barbershop",
+          "nombre": "A&K Barbershop",
+          "categoria": "Barbería",
+          "rating": 5,
+          "total": 73,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barber-club-merida",
+          "nombre": "Barber Club Mérida",
+          "categoria": "Barbería",
+          "rating": 4.8,
+          "total": 179,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barber-shop-urbans",
+          "nombre": "Barber Shop Urban’s",
+          "categoria": "Barbería",
+          "rating": 5,
+          "total": 7,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-jefe-spadas",
+          "nombre": "BARBERÍA \" JEFE SPADAS\"",
+          "categoria": "Barbería",
+          "rating": 5,
+          "total": 283,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-casa-blanca-aleman",
+          "nombre": "Barbería Casa Blanca Alemán",
+          "categoria": "Barbería",
+          "rating": 4.9,
+          "total": 557,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-dh",
+          "nombre": "Barbería D.H.",
+          "categoria": "Barbería",
+          "rating": 4.6,
+          "total": 27,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-el-cejas",
+          "nombre": "Barberia El Cejas",
+          "categoria": "Barbería",
+          "rating": 4.3,
+          "total": 68,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-el-filo",
+          "nombre": "BARBERÍA EL FILO 💈",
+          "categoria": "Barbería",
+          "rating": 5,
+          "total": 1414,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-gabriel-barbershop-merida-gabriel-corte-de-barba-y-degradados-gabriel",
+          "nombre": "Barbería Gabriel | Barbershop Mérida Gabriel | Corte de Barba y Degradados Gabriel",
+          "categoria": "Barbería",
+          "rating": 4.9,
+          "total": 182,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-hectors",
+          "nombre": "Barbería Hector's",
+          "categoria": "Barbería",
+          "rating": 4.6,
+          "total": 29,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-llanes",
+          "nombre": "Barbería Llanes",
+          "categoria": "Barbería",
+          "rating": 4.8,
+          "total": 300,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barberia-y-peluqueria-carlos-luis",
+          "nombre": "Barbería y Peluquería Carlos Luis",
+          "categoria": "Barbería",
+          "rating": 4.9,
+          "total": 175,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barbershop-king-of-kings",
+          "nombre": "Barbershop King of kings",
+          "categoria": "Barbería",
+          "rating": 4.9,
+          "total": 30,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barrientos-barber-studio",
+          "nombre": "Barrientos Barber Studio",
+          "categoria": "Barbería",
+          "rating": 4.5,
+          "total": 24,
+          "giro": "belleza"
+        },
+        {
+          "slug": "barrio-macho",
+          "nombre": "Barrio Macho",
+          "categoria": "Barbería",
+          "rating": 4.6,
+          "total": 178,
+          "giro": "belleza"
+        },
+        {
+          "slug": "bikers-garage-barbershop",
+          "nombre": "Bikers Garage Barbershop",
+          "categoria": "Barbería",
+          "rating": 4.7,
+          "total": 51,
+          "giro": "belleza"
+        },
+        {
+          "slug": "bleu-spa-wellness",
+          "nombre": "Bleu Spa & Wellness",
+          "categoria": "Spa",
+          "rating": 4.6,
+          "total": 261,
+          "giro": "belleza"
+        },
+        {
+          "slug": "captain-robert-barber-shop",
+          "nombre": "CAPTAIN ROBERT BARBER SHOP",
+          "categoria": "Barbería",
+          "rating": 4.8,
+          "total": 108,
+          "giro": "belleza"
+        },
+        {
+          "slug": "cesar-giron-estetica",
+          "nombre": "César Girón Estética",
+          "categoria": "Centro de estética",
+          "rating": 4.6,
+          "total": 76,
+          "giro": "belleza"
+        },
+        {
+          "slug": "estetica-unisex-hola",
+          "nombre": "ESTÉTICA UNISEX HoLa",
+          "categoria": "Peluquería",
+          "rating": 4.9,
+          "total": 142,
+          "giro": "belleza"
+        },
+        {
+          "slug": "gemakeup-and-beauty",
+          "nombre": "Gemakeup and Beauty",
+          "categoria": "Centro de estética",
+          "rating": 5,
+          "total": 97,
+          "giro": "belleza"
+        },
+        {
+          "slug": "inkorpus-tattoo-and-barber-shop",
+          "nombre": "Inkorpus Tattoo and Barber Shop",
+          "categoria": "Barbería",
+          "rating": 4.9,
+          "total": 212,
+          "giro": "belleza"
+        },
+        {
+          "slug": "la-catedral",
+          "nombre": "La Catedral",
+          "categoria": "Peluquería",
+          "rating": 4.7,
+          "total": 377,
+          "giro": "belleza"
+        },
+        {
+          "slug": "marien-skincare-spa-en-merida-de-tratamientos-faciales-y-corporales",
+          "nombre": "Marien SkinCare - SPA en Mérida de tratamientos faciales y Corporales",
+          "categoria": "Centro de estética",
+          "rating": 4.9,
+          "total": 128,
+          "giro": "belleza"
+        },
+        {
+          "slug": "masajes-merida",
+          "nombre": "Masajes Merida",
+          "categoria": "Spa de masajes",
+          "rating": 4.6,
+          "total": 301,
+          "giro": "belleza"
+        },
+        {
+          "slug": "montalvo",
+          "nombre": "Montalvo",
+          "categoria": "Peluquería",
+          "rating": 4.7,
+          "total": 662,
+          "giro": "belleza"
+        },
+        {
+          "slug": "real-barber-shop",
+          "nombre": "Real Barber Shop",
+          "categoria": "Barbería",
+          "rating": 4.8,
+          "total": 422,
+          "giro": "belleza"
+        },
+        {
+          "slug": "studio-54",
+          "nombre": "Studio 54",
+          "categoria": "Centro de estética",
+          "rating": 4.8,
+          "total": 156,
+          "giro": "belleza"
+        }
+      ]
+    },
+    {
+      "key": "gimnasios",
+      "label": "Gimnasios",
+      "emoji": "🏋️",
+      "items": [
+        {
+          "slug": "5m-gym",
+          "nombre": "5M GYM",
+          "categoria": "Gimnasio",
+          "rating": 4.8,
+          "total": 127,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "alpha-fitness-merida",
+          "nombre": "Alpha Fitness Mérida",
+          "categoria": "Gimnasio",
+          "rating": 4.9,
+          "total": 103,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "armor-gym",
+          "nombre": "Armor Gym",
+          "categoria": "Gimnasio",
+          "rating": 4.3,
+          "total": 203,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "b-fitness-gym-kanasin",
+          "nombre": "B-Fitness gym Kanasín",
+          "categoria": "Gimnasio",
+          "rating": 4.3,
+          "total": 63,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "bfitness-sur",
+          "nombre": "BFitness Sur",
+          "categoria": "Gimnasio",
+          "rating": 4.6,
+          "total": 289,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "bond-collective",
+          "nombre": "BOND Collective",
+          "categoria": "Gimnasio",
+          "rating": 4.8,
+          "total": 59,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "bull-gym",
+          "nombre": "BULL GYM",
+          "categoria": "Gimnasio",
+          "rating": 4.5,
+          "total": 24,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "centro-deportivo-bancario-de-yucatan",
+          "nombre": "Centro Deportivo Bancario De Yucatán",
+          "categoria": "Club deportivo",
+          "rating": 4.5,
+          "total": 632,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "cool-gym",
+          "nombre": "Cool Gym",
+          "categoria": "Gimnasio",
+          "rating": 4.3,
+          "total": 58,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "elite-fitness-gym",
+          "nombre": "Élite fitness gym",
+          "categoria": "Gimnasio",
+          "rating": 4,
+          "total": 24,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "fit-77-training-center",
+          "nombre": "Fit 77 Training Center",
+          "categoria": "Gimnasio",
+          "rating": 4.6,
+          "total": 23,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "fit-factory-mid",
+          "nombre": "Fit factory mid",
+          "categoria": "Gimnasio",
+          "rating": 4.8,
+          "total": 52,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "fitnexcenter",
+          "nombre": "Fitnexcenter",
+          "categoria": "Gimnasio",
+          "rating": 4.5,
+          "total": 203,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "get-fit",
+          "nombre": "Get Fit",
+          "categoria": "Gimnasio",
+          "rating": 4.5,
+          "total": 68,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "gimnasio-bosco",
+          "nombre": "Gimnasio BOSCO",
+          "categoria": "Gimnasio",
+          "rating": 4.6,
+          "total": 231,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "go-gym-fitness-center",
+          "nombre": "Go GYM Fitness Center",
+          "categoria": "Gimnasio",
+          "rating": 4.8,
+          "total": 75,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "golden-fitness-gym-mulchechen",
+          "nombre": "GOLDEN FITNESS GYM MULCHECHEN",
+          "categoria": "Gimnasio",
+          "rating": 4.5,
+          "total": 84,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "gym-mg",
+          "nombre": "gym MG",
+          "categoria": "Gimnasio",
+          "rating": 4.8,
+          "total": 58,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "h-f-gym",
+          "nombre": "H F Gym",
+          "categoria": "Gimnasio",
+          "rating": 4.3,
+          "total": 95,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "legendarios-gym-merida",
+          "nombre": "Legendarios GYM Mérida",
+          "categoria": "Gimnasio",
+          "rating": 4.7,
+          "total": 86,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "mas-gym",
+          "nombre": "MAS GYM",
+          "categoria": "Gimnasio",
+          "rating": 4.8,
+          "total": 25,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "nitro-sport-gym",
+          "nombre": "NITRO SPORT GYM",
+          "categoria": "Gimnasio",
+          "rating": 4.4,
+          "total": 151,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "performance-gym",
+          "nombre": "Performance Gym",
+          "categoria": "Gimnasio",
+          "rating": 4.8,
+          "total": 33,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "power-gym",
+          "nombre": "POWER GYM",
+          "categoria": "Gimnasio",
+          "rating": 4.3,
+          "total": 48,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "sport-hnd-gym",
+          "nombre": "SPORT HND GYM",
+          "categoria": "Gimnasio",
+          "rating": 4.2,
+          "total": 25,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "sportiva-gym",
+          "nombre": "Sportiva Gym",
+          "categoria": "Gimnasio",
+          "rating": 4.4,
+          "total": 38,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "thunder-gym",
+          "nombre": "THUNDER GYM",
+          "categoria": "Gimnasio",
+          "rating": 4.5,
+          "total": 155,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "total-fitness-merida",
+          "nombre": "Total Fitness Mérida",
+          "categoria": "Gimnasio",
+          "rating": 4.4,
+          "total": 25,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "world-fitness-merida",
+          "nombre": "World Fitness Mérida",
+          "categoria": "Gimnasio",
+          "rating": 4.4,
+          "total": 90,
+          "giro": "gimnasios"
+        },
+        {
+          "slug": "zeus-gym",
+          "nombre": "ZEUS GYM",
+          "categoria": "Gimnasio",
+          "rating": 4.7,
+          "total": 117,
+          "giro": "gimnasios"
+        }
+      ]
+    },
+    {
+      "key": "vet",
+      "label": "Veterinarias y mascotas",
+      "emoji": "🐾",
+      "items": [
+        {
+          "slug": "acuario-y-tienda-de-mascotas-soberanis",
+          "nombre": "Acuario y tienda de mascotas soberanis",
+          "categoria": "Acuario",
+          "rating": 4.7,
+          "total": 44,
+          "giro": "vet"
+        },
+        {
+          "slug": "animal-center",
+          "nombre": "Animal Center",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.6,
+          "total": 84,
+          "giro": "vet"
+        },
+        {
+          "slug": "ccvet",
+          "nombre": "CCVet.",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.6,
+          "total": 295,
+          "giro": "vet"
+        },
+        {
+          "slug": "centro-medico-veterinario",
+          "nombre": "Centro Médico Veterinario",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.7,
+          "total": 573,
+          "giro": "vet"
+        },
+        {
+          "slug": "centro-medico-veterinario-el-oriente",
+          "nombre": "CENTRO MÉDICO VETERINARIO EL ORIENTE",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.8,
+          "total": 52,
+          "giro": "vet"
+        },
+        {
+          "slug": "centro-veterinario-hv-margod",
+          "nombre": "CENTRO VETERINARIO HV MARGOD",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.8,
+          "total": 470,
+          "giro": "vet"
+        },
+        {
+          "slug": "cevet-clinica-especializada-veterinaria",
+          "nombre": "CEVET- Clínica Especializada Veterinaria",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.7,
+          "total": 50,
+          "giro": "vet"
+        },
+        {
+          "slug": "clinica-veterinaria-amica",
+          "nombre": "Clínica Veterinaria Amica",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.5,
+          "total": 201,
+          "giro": "vet"
+        },
+        {
+          "slug": "clinica-veterinaria-bazan",
+          "nombre": "CLÍNICA VETERINARIA BAZAN",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.5,
+          "total": 419,
+          "giro": "vet"
+        },
+        {
+          "slug": "clinica-veterinaria-greenpeek",
+          "nombre": "Clínica Veterinaria GreenPeek",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.7,
+          "total": 188,
+          "giro": "vet"
+        },
+        {
+          "slug": "dra-vet-centro-de-cuidado-animal",
+          "nombre": "DRA VET CENTRO DE CUIDADO ANIMAL",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.8,
+          "total": 212,
+          "giro": "vet"
+        },
+        {
+          "slug": "estetica-canina-dog-lovers",
+          "nombre": "Estética Canina Dog Lovers",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.5,
+          "total": 382,
+          "giro": "vet"
+        },
+        {
+          "slug": "iberica-consultorio-veterinario-unidad-ambulatoria",
+          "nombre": "Ibérica Consultorio Veterinario (Unidad Ambulatoria)",
+          "categoria": "Cuidados veterinarios",
+          "rating": 5,
+          "total": 95,
+          "giro": "vet"
+        },
+        {
+          "slug": "maa-ke-mascota",
+          "nombre": "Maa Ke Mascota",
+          "categoria": "Cuidado de mascotas",
+          "rating": 5,
+          "total": 205,
+          "giro": "vet"
+        },
+        {
+          "slug": "medivet",
+          "nombre": "MediVet",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.5,
+          "total": 61,
+          "giro": "vet"
+        },
+        {
+          "slug": "meripet",
+          "nombre": "MeriPet",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.6,
+          "total": 325,
+          "giro": "vet"
+        },
+        {
+          "slug": "ohana-servicios-veterinarios",
+          "nombre": "Ohana Servicios Veterinarios",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.4,
+          "total": 125,
+          "giro": "vet"
+        },
+        {
+          "slug": "peek-pets-veterinaria-y-estetica-canina",
+          "nombre": "Peek´ & Pets Veterinaria y Estética Canina",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.8,
+          "total": 58,
+          "giro": "vet"
+        },
+        {
+          "slug": "planned-pethood",
+          "nombre": "Planned Pethood",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.6,
+          "total": 1147,
+          "giro": "vet"
+        },
+        {
+          "slug": "proyecto-aaktun-pek",
+          "nombre": "Proyecto AakTun Pek",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.9,
+          "total": 306,
+          "giro": "vet"
+        },
+        {
+          "slug": "universo-animal",
+          "nombre": "UNIVERSO ANIMAL",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.5,
+          "total": 77,
+          "giro": "vet"
+        },
+        {
+          "slug": "vet-any-clinica-veterinaria",
+          "nombre": "VET-ANY Clínica Veterinaria",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.9,
+          "total": 35,
+          "giro": "vet"
+        },
+        {
+          "slug": "veterinaria-baalche",
+          "nombre": "Veterinaria BA’ALCHE",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.2,
+          "total": 20,
+          "giro": "vet"
+        },
+        {
+          "slug": "veterinaria-del-oriente",
+          "nombre": "VETERINARIA DEL ORIENTE",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.8,
+          "total": 191,
+          "giro": "vet"
+        },
+        {
+          "slug": "veterinaria-family-carovet",
+          "nombre": "Veterinaria family & Carovet",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.8,
+          "total": 55,
+          "giro": "vet"
+        },
+        {
+          "slug": "veterinaria-medican",
+          "nombre": "Veterinaria Medican",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4,
+          "total": 28,
+          "giro": "vet"
+        },
+        {
+          "slug": "veterinaria-sak-peek",
+          "nombre": "Veterinaria Sak Peek",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.5,
+          "total": 184,
+          "giro": "vet"
+        },
+        {
+          "slug": "veterinaria-vet-colitas-felices",
+          "nombre": "Veterinaria Vet Colitas Felices",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.2,
+          "total": 244,
+          "giro": "vet"
+        },
+        {
+          "slug": "veterinaria-yucafarma",
+          "nombre": "Veterinaria YUCAFARMA",
+          "categoria": "Cuidados veterinarios",
+          "rating": 4.6,
+          "total": 270,
+          "giro": "vet"
+        }
+      ]
+    },
+    {
+      "key": "dental",
+      "label": "Dentistas",
+      "emoji": "🦷",
+      "items": [
+        {
+          "slug": "arlodent-servicios-dentales-merida-norte",
+          "nombre": "Arlodent, Servicios Dentales, Mérida Norte",
+          "categoria": "Dentista",
+          "rating": 4.8,
+          "total": 155,
+          "giro": "dental"
+        },
+        {
+          "slug": "clinica-dental-campestre",
+          "nombre": "Clínica Dental Campestre",
+          "categoria": "Dentista",
+          "rating": 5,
+          "total": 39,
+          "giro": "dental"
+        },
+        {
+          "slug": "consultorio-dental-cd-sinai-estrella",
+          "nombre": "Consultorio dental - C.D. Sinaí Estrella.",
+          "categoria": "Dentista",
+          "rating": 5,
+          "total": 36,
+          "giro": "dental"
+        },
+        {
+          "slug": "consultorio-dental-bluelips",
+          "nombre": "Consultorio dental Bluelips",
+          "categoria": "Dentista",
+          "rating": 5,
+          "total": 49,
+          "giro": "dental"
+        },
+        {
+          "slug": "consultorio-dental-dr-david-castillo",
+          "nombre": "Consultorio Dental Dr David Castillo",
+          "categoria": "Dentista",
+          "rating": 5,
+          "total": 40,
+          "giro": "dental"
+        },
+        {
+          "slug": "consultorio-dental-santa-maria-de-guadalupe",
+          "nombre": "CONSULTORIO DENTAL Santa María de Guadalupe",
+          "categoria": "Dentista",
+          "rating": 4.8,
+          "total": 50,
+          "giro": "dental"
+        },
+        {
+          "slug": "dental-clinic-progreso",
+          "nombre": "Dental Clinic Progreso",
+          "categoria": "Dentista",
+          "rating": 4.9,
+          "total": 29,
+          "giro": "dental"
+        },
+        {
+          "slug": "dental-montejo",
+          "nombre": "Dental Montejo",
+          "categoria": "Dentista",
+          "rating": 4.8,
+          "total": 86,
+          "giro": "dental"
+        },
+        {
+          "slug": "denthig-merida-cd-ricardo-hernandez",
+          "nombre": "Denthig Merida C.D. Ricardo Hernandez",
+          "categoria": "Dentista",
+          "rating": 5,
+          "total": 39,
+          "giro": "dental"
+        },
+        {
+          "slug": "dentista-efrain-a-burgos",
+          "nombre": "Dentista Efrain A. Burgos",
+          "categoria": "Dentista",
+          "rating": 5,
+          "total": 82,
+          "giro": "dental"
+        },
+        {
+          "slug": "gdental-consultorio-merida",
+          "nombre": "Gdental Consultorio Mérida",
+          "categoria": "Dentista",
+          "rating": 4.8,
+          "total": 64,
+          "giro": "dental"
+        },
+        {
+          "slug": "meraki-centro-odontologico",
+          "nombre": "Meraki Centro Odontológico",
+          "categoria": "Dentista",
+          "rating": 4.3,
+          "total": 38,
+          "giro": "dental"
+        },
+        {
+          "slug": "oh-my-tooth",
+          "nombre": "OH MY TOOTH!",
+          "categoria": "Clínica dental",
+          "rating": 5,
+          "total": 157,
+          "giro": "dental"
+        },
+        {
+          "slug": "union-de-cirujanos-dentistas",
+          "nombre": "Unión de Cirujanos Dentistas",
+          "categoria": "Dentista",
+          "rating": 5,
+          "total": 292,
+          "giro": "dental"
+        },
+        {
+          "slug": "zeident",
+          "nombre": "ZEIDENT",
+          "categoria": "Dentista",
+          "rating": 4.9,
+          "total": 35,
+          "giro": "dental"
+        }
+      ]
+    },
+    {
+      "key": "taller",
+      "label": "Talleres y automotriz",
+      "emoji": "🔧",
+      "items": [
+        {
+          "slug": "autoclimas-kushoco",
+          "nombre": "Autoclimas Kushoco",
+          "categoria": "Taller de automóviles",
+          "rating": 4.4,
+          "total": 27,
+          "giro": "taller"
+        },
+        {
+          "slug": "automotriz-beltran",
+          "nombre": "Automotriz Beltrán",
+          "categoria": "Taller de automóviles",
+          "rating": 4.7,
+          "total": 54,
+          "giro": "taller"
+        },
+        {
+          "slug": "dunamis-mecanico-y-electrico-automotriz",
+          "nombre": "DUNAMIS Mecánico Y Eléctrico Automotriz",
+          "categoria": "Taller de automóviles",
+          "rating": 4.5,
+          "total": 22,
+          "giro": "taller"
+        },
+        {
+          "slug": "grupo-absa-serv-automotriz",
+          "nombre": "Grupo ABSA Serv. Automotriz",
+          "categoria": "Taller de automóviles",
+          "rating": 4.9,
+          "total": 31,
+          "giro": "taller"
+        },
+        {
+          "slug": "jbriservice",
+          "nombre": "JBRISERVICE",
+          "categoria": "Taller de automóviles",
+          "rating": 4.8,
+          "total": 27,
+          "giro": "taller"
+        },
+        {
+          "slug": "mecanik-express",
+          "nombre": "Mecanik Express",
+          "categoria": "Taller de automóviles",
+          "rating": 5,
+          "total": 41,
+          "giro": "taller"
+        },
+        {
+          "slug": "overhaul-taller-automotriz",
+          "nombre": "Overhaul Taller Automotriz",
+          "categoria": "Taller de automóviles",
+          "rating": 4.8,
+          "total": 226,
+          "giro": "taller"
+        },
+        {
+          "slug": "speed-pro-taller-mecanico-automotriz",
+          "nombre": "Speed Pro Taller Mecánico Automotriz",
+          "categoria": "Taller de automóviles",
+          "rating": 5,
+          "total": 95,
+          "giro": "taller"
+        },
+        {
+          "slug": "taller-automotriz-san-martin",
+          "nombre": "TALLER AUTOMOTRIZ SAN MARTÍN",
+          "categoria": "Taller de automóviles",
+          "rating": 4.6,
+          "total": 51,
+          "giro": "taller"
+        },
+        {
+          "slug": "taller-farfan",
+          "nombre": "TALLER FARFAN",
+          "categoria": "Taller de automóviles",
+          "rating": 4.6,
+          "total": 68,
+          "giro": "taller"
+        },
+        {
+          "slug": "taller-mecanico-autoclima-andrade",
+          "nombre": "TALLER MECÁNICO & AUTOCLIMA ANDRADE",
+          "categoria": "Taller de automóviles",
+          "rating": 4.5,
+          "total": 28,
+          "giro": "taller"
+        },
+        {
+          "slug": "taller-mecanico-automotriz-panchito",
+          "nombre": "Taller Mecánico Automotriz Panchito",
+          "categoria": "Taller de automóviles",
+          "rating": 4.5,
+          "total": 20,
+          "giro": "taller"
+        },
+        {
+          "slug": "taller-mecanico-san-pedro",
+          "nombre": "TALLER MECÁNICO SAN PEDRO",
+          "categoria": "Taller de automóviles",
+          "rating": 4.6,
+          "total": 72,
+          "giro": "taller"
+        },
+        {
+          "slug": "taller-mecanico-uicab",
+          "nombre": "Taller Mecánico UICAB",
+          "categoria": "Taller de automóviles",
+          "rating": 5,
+          "total": 58,
+          "giro": "taller"
+        }
+      ]
+    },
+    {
+      "key": "turismo",
+      "label": "Turismo y experiencias",
+      "emoji": "🧭",
+      "items": [
+        {
+          "slug": "free-walking-tour-valladolid-original",
+          "nombre": "Free Walking Tour Valladolid Original",
+          "categoria": "Atracción turística",
+          "rating": 4.8,
+          "total": 128,
+          "giro": "turismo"
+        }
+      ]
+    },
+    {
+      "key": "contable",
+      "label": "Contable y fiscal",
+      "emoji": "📊",
+      "items": [
+        {
+          "slug": "asesoria-y-contabilidad-fiscal-en-merida-jb-soluciones-tributarias-scp-gestion-de-impuestos-despacho-contable",
+          "nombre": "Asesoría y Contabilidad Fiscal en Mérida | JB Soluciones Tributarias SCP | Gestión de Impuestos | Despacho Contable",
+          "categoria": "Asesor",
+          "rating": 4.9,
+          "total": 41,
+          "giro": "contable"
+        }
+      ]
+    },
+    {
+      "key": "otros",
+      "label": "Otros",
+      "emoji": "✨",
+      "items": [
+        {
+          "slug": "biokinesic-merida",
+          "nombre": "Biokinesic Mérida",
+          "categoria": "Clínica ambulatoria",
+          "rating": 5,
+          "total": 293,
+          "giro": "otros"
+        },
+        {
+          "slug": "casa-sana",
+          "nombre": "Casa Saná",
+          "categoria": "Centro de salud y bienestar",
+          "rating": 5,
+          "total": 27,
+          "giro": "otros"
+        },
+        {
+          "slug": "cimefi",
+          "nombre": "CIMEFI",
+          "categoria": "Clínica ambulatoria",
+          "rating": 5,
+          "total": 102,
+          "giro": "otros"
+        },
+        {
+          "slug": "pan-montejo-matriz",
+          "nombre": "Pan Montejo Matriz",
+          "categoria": "Panadería",
+          "rating": 4.5,
+          "total": 2015,
+          "giro": "otros"
+        },
+        {
+          "slug": "pasteleria-dona-anita-colonia-mexico",
+          "nombre": "Pastelería Doña Anita - Colonia México",
+          "categoria": "Pastelería",
+          "rating": 4.5,
+          "total": 254,
+          "giro": "otros"
+        },
+        {
+          "slug": "relucere-face-body",
+          "nombre": "Relucere - face & body",
+          "categoria": "Clínica dermatológica",
+          "rating": 5,
+          "total": 98,
+          "giro": "otros"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,709 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const gearTeeth = Array.from({ length: 8 }, (_, i) => i * 45);
+---
+<BaseLayout
+  title="Fit Factory Mid · Gimnasio funcional en Cholul, Yucatán"
+  description="Coaches que corrigen tu técnica, un ambiente que engancha y una comunidad que se siente como familia. ⭐ 4.8 con 52 reseñas en Google. Gimnasio en Plaza Gran Saudela, Cholul. Escríbenos por WhatsApp."
+  slug="fit-factory-mid"
+  ogImage="/fit-factory-mid/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600&display=swap"
+  favicon="🔥"
+  themeColor="#f97316"
+  whatsapp={"https://wa.me/529997804883"}
+  telefono={"999 780 4883"}
+  mapsUrl={"https://maps.google.com/?cid=12256978519141874296&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="ffm">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">Gimnasio · Plaza Gran Saudela, Cholul</p>
+          <h1 class="poster reveal">
+            FIT <mark>FACTORY</mark>
+            <span class="tag-mid" aria-label="Mérida, Yucatán">MID</span>
+          </h1>
+          <p class="tagline reveal">Aquí no te dejan solo con las pesas: coaches encima de tu técnica en cada repetición, un ambiente que engancha y una comunidad que se vuelve tu segunda familia.</p>
+
+          <a class="chip reveal" href="https://maps.google.com/?cid=12256978519141874296&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            <span class="star" aria-hidden="true">★</span> 4.8 · 52 reseñas en Google
+          </a>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-solid" href="https://wa.me/529997804883" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3z"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://maps.google.com/?cid=12256978519141874296&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+
+          <dl class="datos reveal">
+            <div><dt>4.8 <span aria-hidden="true">★</span></dt><dd>calificación real en Google</dd></div>
+            <div><dt>52</dt><dd>reseñas de la comunidad</dd></div>
+            <div><dt>AM / PM</dt><dd>turno de mañana y tarde, entre semana</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-photo reveal">
+          <img src="/fit-factory-mid/img/foto_1.jpg" alt="Área de entrenamiento funcional de Fit Factory Mid, con anillas, cuerdas y espacio abierto bajo techo industrial" width="900" height="1500" />
+          <div class="stamp" aria-hidden="true">
+            <svg viewBox="0 0 200 200" class="stamp-svg">
+              <defs>
+                <path id="stampPath" d="M 100,100 m -74,0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0" />
+              </defs>
+              <circle cx="100" cy="100" r="94" class="stamp-ring-outer" />
+              <circle cx="100" cy="100" r="56" class="stamp-ring-inner" />
+              <text class="stamp-text">
+                <textPath href="#stampPath" startOffset="0%">BIENVENID@ A LA COMUNIDAD • FIT FACTORY MID • </textPath>
+              </text>
+              <g class="stamp-gear" transform="translate(100,100)">
+                <circle r="26" class="gear-body" />
+                <circle r="9" class="gear-hole" />
+                {gearTeeth.map((angle) => (
+                  <rect x="-4" y="-42" width="8" height="15" rx="2" transform={`rotate(${angle})`} class="gear-tooth" />
+                ))}
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ 01 QUIÉNES SOMOS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap about-grid">
+        <div class="about-photo reveal">
+          <img src="/fit-factory-mid/img/foto_3.jpg" alt="Comunidad de Fit Factory Mid celebrando juntos en el gimnasio" loading="lazy" width="825" height="1023" />
+        </div>
+        <div class="about-copy">
+          <p class="tagchip reveal">Sobre nosotros</p>
+          <h2 class="sec-title reveal">Se entrena en&nbsp;serio,<br />se disfruta&nbsp;más</h2>
+          <div class="about reveal">
+            <p>Somos <strong>Fit Factory Mid</strong>, un gimnasio de entrenamiento funcional en Plaza Gran Saudela, en Cholul. Aquí el objetivo no es que "cumplas tu hora" y te vayas: es que aprendas a moverte bien. Los coaches están encima de cada repetición — corrigen la postura, ajustan el peso, te explican por qué se hace así — porque un ejercicio mal hecho no suma, resta.</p>
+            <p>Eso es lo que más repite quien entrena aquí: que se siente parte de algo, no un número más en la lista de asistencia. Hay quien llegó de otra ciudad — hasta de otro país — sin conocer a nadie, y a los pocos días ya se sentía en casa, con coaches como Neto siempre al pendiente de que nadie se quede sin ayuda.</p>
+            <p>Si vienes por primera vez, sales sudando. Pero también sales con ganas de volver.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 INSTALACIONES ============ -->
+    <section class="sec sec-panel" id="instalaciones">
+      <div class="wrap inst-grid">
+        <div class="inst-photo reveal">
+          <img src="/fit-factory-mid/img/foto_4.jpg" alt="Área de peso libre de Fit Factory Mid, discos apilados junto a la salida" loading="lazy" width="825" height="1023" />
+        </div>
+        <div class="inst-copy">
+          <p class="tagchip reveal">Qué te vas a encontrar</p>
+          <h2 class="sec-title reveal">La fábrica<br />por dentro</h2>
+          <ul class="servicios reveal">
+            <li>
+              <svg class="icn" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="10.5" width="4" height="3" rx="0.6"/><rect x="18" y="10.5" width="4" height="3" rx="0.6"/><rect x="6" y="9" width="2.4" height="6" rx="0.6"/><rect x="15.6" y="9" width="2.4" height="6" rx="0.6"/><line x1="8.4" y1="12" x2="15.6" y2="12"/></svg>
+              <div><h3>Peso libre y máquinas</h3><p>Racks, mancuernas y equipo suficiente para entrenar sin hacer fila.</p></div>
+            </li>
+            <li>
+              <svg class="icn" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="16" r="4"/><circle cx="16" cy="16" r="4"/><path d="M8 12 V5 M16 12 V5" /></svg>
+              <div><h3>Anillas, cuerdas y kettlebells</h3><p>Entrenamiento funcional de verdad, no solo caminadora y espejo.</p></div>
+            </li>
+            <li>
+              <svg class="icn" viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17 12 8 18 17 M12 8 10 5 8 5" /></svg>
+              <div><h3>Cardio y bicicletas</h3><p>Para calentar, sumar resistencia o cerrar la sesión a tu ritmo.</p></div>
+            </li>
+            <li>
+              <svg class="icn" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1.6"/><path d="M9 10.5 11 12.5 15.5 8" /></svg>
+              <div><h3>Coaching enfocado en técnica</h3><p>El coach está presente en cada sesión corrigiendo tu movimiento, no solo contando el tiempo.</p></div>
+            </li>
+            <li>
+              <svg class="icn" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.2" fill="currentColor" stroke="none"/></svg>
+              <div><h3>Clases y preparación para competencias</h3><p>De la primera carrera de 5K a tu primera competencia de crossfit.</p></div>
+            </li>
+            <li>
+              <svg class="icn" viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="6" width="19" height="13" rx="2"/><line x1="2.5" y1="10" x2="21.5" y2="10"/></svg>
+              <div><h3>Estacionamiento propio y pago con tarjeta</h3><p>Llegas, dejas el coche y entras a entrenar. Sin vueltas.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 RESEÑAS ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="tagchip reveal center-chip">Lo que dice la comunidad</p>
+        <h2 class="sec-title center reveal"><span class="accent">4.8 de 5</span> en 52 reseñas de Google</h2>
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Excelente lugar para entrenar! Los coaches realmente se preocupan por que mejores la técnica y hagas bien los ejercicios. Desde que entré, he mejorado mucho y está muy padre la comunidad que formas :) lo recomiendo ampliamente»</blockquote>
+            <figcaption><strong>Mariana Colunga</strong><span>Hace 9 meses · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«¡Me encanta el lugar! Soy de Colombia y llegué buscando un lugar en donde entrenar y sentirme cómoda, Neto es súper amable y siempre está dispuesto a ayudar. He podido continuar con mi progreso, las instalaciones son muy cómodas y la ubicación es excelente.»</blockquote>
+            <figcaption><strong>Valeria Vergara</strong><span>Hace 9 meses · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Llevo un poco más de un año yendo a clases ahí y me he sentido súper cómoda; los coaches son súper atentos, el equipo está en muy buen estado y el ambiente es increíble. Voy a entrenar con muchas ganas y siempre salgo súper contenta»</blockquote>
+            <figcaption><strong>Regina Solchaga</strong><span>Hace un año · Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=12256978519141874296&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-panel" id="ubicacion">
+      <div class="wrap">
+        <p class="tagchip reveal">Dónde estamos</p>
+        <h2 class="sec-title reveal">Plaza Gran Saudela,<br />Cholul</h2>
+        <div class="ubica reveal">
+          <div class="ubica-info">
+            <img class="fachada" src="/fit-factory-mid/img/foto_5.jpg" alt="Fachada de Fit Factory Mid en Plaza Gran Saudela" loading="lazy" width="1100" height="750" />
+            <p class="dir">Plaza Gran Saudela — Motul-Mérida 403, Local 21<br />Gran San Pedro, 97305 Cholul, Yucatán</p>
+            <a class="btn btn-solid btn-sm" href="https://maps.google.com/?cid=12256978519141874296&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+            <h3 class="horario-titulo">Horario</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>6:00–11:00 y 17:30–21:30</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>6:00–11:00 y 17:30–21:30</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>6:00–11:00 y 17:30–21:30</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>6:00–11:00 y 17:30–21:30</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>6:00–10:00 y 17:30–19:30</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>9:00–11:30</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps?q=Fit%20Factory%20Mid%2C%20PLAZA%20GRAN%20SAUDELA%2C%20Motul%20-%20Merida%20403-Loc%2021%2C%20Gran%20San%20Pedro%20Cholul%2C%2097305%20Cholul%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+              title="Mapa: Fit Factory Mid en Cholul, Yucatán"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <img class="banda-bg" src="/fit-factory-mid/img/foto_2.jpg" alt="" aria-hidden="true" loading="lazy" width="825" height="1099" />
+      <div class="banda-overlay" aria-hidden="true"></div>
+      <div class="wrap banda-content">
+        <h2 class="banda-title">¿Listo para entrar a&nbsp;la fábrica?</h2>
+        <p class="banda-sub">Escríbenos, cuéntanos tu objetivo y te decimos cómo empezar. Sin compromiso.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="https://wa.me/529997804883" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn-light-ghost" href="tel:+529997804883">Llamar · 999 780 4883</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <div class="pie-stamp" aria-hidden="true">
+          <svg viewBox="0 0 200 200" class="stamp-svg stamp-svg-sm">
+            <defs>
+              <path id="stampPathFooter" d="M 100,100 m -74,0 a 74,74 0 1,1 148,0 a 74,74 0 1,1 -148,0" />
+            </defs>
+            <circle cx="100" cy="100" r="94" class="stamp-ring-outer" />
+            <circle cx="100" cy="100" r="56" class="stamp-ring-inner" />
+            <text class="stamp-text">
+              <textPath href="#stampPathFooter" startOffset="0%">BIENVENID@ A LA COMUNIDAD • FIT FACTORY MID • </textPath>
+            </text>
+            <g class="stamp-gear" transform="translate(100,100)">
+              <circle r="26" class="gear-body" />
+              <circle r="9" class="gear-hole" />
+              {gearTeeth.map((angle) => (
+                <rect x="-4" y="-42" width="8" height="15" rx="2" transform={`rotate(${angle})`} class="gear-tooth" />
+              ))}
+            </g>
+          </svg>
+        </div>
+        <p class="pie-logo">Fit Factory Mid</p>
+        <p class="pie-dato">Gimnasio funcional · Plaza Gran Saudela, Cholul, Yucatán</p>
+        <p class="pie-dato"><a href="tel:+529997804883">999 780 4883</a> · <a href="https://wa.me/529997804883" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://www.instagram.com/fitfactory_mid/" target="_blank" rel="noopener">Instagram</a></p>
+        <p class="pie-mini">Lun–Jue 6:00–11:00 y 17:30–21:30 · Vie 6:00–10:00 y 17:30–19:30 · Sáb 9:00–11:30 · Dom cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "Fit Factory Mid",
+    "telephone": "+529997804883",
+    "url": "https://demos.ivang.mx/fit-factory-mid",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza Gran Saudela, Motul-Mérida 403, Local 21, Gran San Pedro",
+      "addressLocality": "Cholul",
+      "addressRegion": "Yucatán",
+      "postalCode": "97305",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "52"
+    },
+    "openingHours": ["Mo-Th 06:00-11:00", "Mo-Th 17:30-21:30", "Fr 06:00-10:00", "Fr 17:30-19:30", "Sa 09:00-11:30"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --concreto: #ece7df;
+      --concreto2: #e1d9c9;
+      --naranja: #f97316;
+      --naranja-deep: #ea580c;
+      --carbon: #1c1917;
+      --acero: #78716c;
+      --linea: rgba(28, 25, 23, 0.14);
+      --display: "Bebas Neue", "Arial Narrow", sans-serif;
+      --body: "Work Sans", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--concreto);
+      color: var(--carbon);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .ffm ::selection { background: var(--naranja); color: var(--carbon); }
+    .ffm a:focus-visible,
+    .ffm .btn:focus-visible {
+      outline: 3px solid var(--naranja-deep);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 44px 0 56px;
+      position: relative;
+      background-image:
+        repeating-linear-gradient(90deg, rgba(28, 25, 23, 0.035) 0 1px, transparent 1px 64px),
+        repeating-linear-gradient(0deg, rgba(28, 25, 23, 0.03) 0 1px, transparent 1px 64px);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 34px;
+      align-items: center;
+    }
+    .kicker {
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--naranja-deep);
+      margin: 0 0 12px;
+    }
+    .poster {
+      margin: 0 0 18px;
+      font-family: var(--display);
+      text-transform: uppercase;
+      font-weight: 400;
+      line-height: 0.9;
+      font-size: clamp(52px, 15vw, 108px);
+      color: var(--carbon);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0 16px;
+    }
+    .poster mark {
+      background: var(--naranja);
+      color: var(--carbon);
+      padding: 0 10px;
+      border-radius: 4px;
+      box-decoration-break: clone;
+      -webkit-box-decoration-break: clone;
+    }
+    .tag-mid {
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.1em;
+      background: var(--carbon);
+      color: var(--concreto);
+      padding: 5px 11px;
+      border-radius: 5px;
+      transform: rotate(-4deg);
+      display: inline-block;
+      vertical-align: middle;
+      border: 1.5px dashed var(--naranja);
+    }
+    .tagline {
+      font-size: clamp(17px, 4.4vw, 21px);
+      font-weight: 400;
+      color: var(--carbon);
+      max-width: 42ch;
+      margin: 0 0 18px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid var(--carbon);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--carbon);
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.4);
+    }
+    .chip .star { color: var(--naranja-deep); }
+    .chip:hover { background: var(--carbon); color: var(--concreto); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--body);
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 15px 24px;
+      border-radius: 8px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--naranja); color: var(--carbon); }
+    .btn-solid:hover { background: var(--naranja-deep); }
+    .btn-ghost { border: 2px solid var(--carbon); color: var(--carbon); }
+    .btn-ghost:hover { background: var(--carbon); color: var(--concreto); }
+    .btn-sm { font-size: 15px; padding: 11px 18px; }
+    .btn-light-ghost { border: 2px solid rgba(236, 231, 223, 0.7); color: var(--concreto); }
+    .btn-light-ghost:hover { background: var(--concreto); color: var(--carbon); }
+
+    .datos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 34px 0 0;
+      border-top: 1px solid var(--linea);
+      padding-top: 18px;
+    }
+    .datos dt {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(20px, 5.4vw, 30px);
+      text-transform: uppercase;
+      color: var(--carbon);
+      line-height: 1;
+    }
+    .datos dt span { color: var(--naranja-deep); }
+    .datos dd { margin: 5px 0 0; font-size: 12.5px; color: var(--acero); line-height: 1.4; }
+
+    /* ---------- HERO PHOTO + STAMP ---------- */
+    .hero-photo { position: relative; }
+    .hero-photo img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 3/5;
+      object-fit: cover;
+      border-radius: 14px;
+      box-shadow: 0 20px 50px rgba(28, 25, 23, 0.22);
+    }
+    .stamp {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      width: clamp(108px, 26vw, 150px);
+      filter: drop-shadow(0 8px 16px rgba(28, 25, 23, 0.3));
+    }
+    .stamp-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      animation: girar 22s linear infinite;
+      transform-origin: 100px 100px;
+    }
+    @keyframes girar { to { transform: rotate(360deg); } }
+    .stamp-ring-outer {
+      fill: var(--concreto);
+      stroke: var(--carbon);
+      stroke-width: 2;
+      stroke-dasharray: 3 5;
+    }
+    .stamp-ring-inner { fill: none; stroke: var(--carbon); stroke-width: 1; opacity: 0.5; }
+    .stamp-text {
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: 11.5px;
+      letter-spacing: 0.05em;
+      fill: var(--naranja-deep);
+    }
+    .gear-body { fill: none; stroke: var(--carbon); stroke-width: 2; }
+    .gear-hole { fill: var(--concreto); stroke: var(--carbon); stroke-width: 1.4; }
+    .gear-tooth { fill: var(--carbon); }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 68px 0; }
+    .sec-panel { background: var(--concreto2); }
+    .tagchip {
+      display: inline-block;
+      font-weight: 700;
+      font-size: 12.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--carbon);
+      background: transparent;
+      border: 1.5px dashed var(--naranja-deep);
+      border-radius: 999px;
+      padding: 5px 14px;
+      margin: 0 0 16px;
+    }
+    .center-chip { display: block; width: fit-content; margin-left: auto; margin-right: auto; }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(34px, 8vw, 58px);
+      line-height: 0.96;
+      text-transform: uppercase;
+      margin: 0 0 26px;
+      color: var(--carbon);
+    }
+    .sec-title.center { text-align: center; }
+    .sec-title .accent { color: var(--naranja-deep); }
+
+    .about-grid, .inst-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      align-items: center;
+    }
+    .about-photo img, .inst-photo img {
+      width: 100%;
+      height: auto;
+      border-radius: 14px;
+      box-shadow: 0 16px 36px rgba(28, 25, 23, 0.18);
+    }
+    .about p { max-width: 60ch; margin: 0 0 16px; color: #423d38; }
+    .about strong { color: var(--carbon); }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+    .servicios li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 18px 0;
+      border-top: 1px solid var(--linea);
+    }
+    .servicios li:last-child { border-bottom: 1px solid var(--linea); }
+    .icn {
+      width: 30px;
+      height: 30px;
+      min-width: 30px;
+      fill: none;
+      stroke: var(--naranja-deep);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      margin-top: 2px;
+    }
+    .servicios h3 {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 21px;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      margin: 0 0 4px;
+      color: var(--carbon);
+    }
+    .servicios p { margin: 0; color: var(--acero); font-size: 15px; }
+
+    /* ---------- RESEÑAS ---------- */
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin: 0 0 30px;
+    }
+    .rev {
+      margin: 0;
+      background: #fbf9f5;
+      color: var(--carbon);
+      border-radius: 12px;
+      border: 1px solid var(--linea);
+      padding: 22px 20px;
+      box-shadow: 0 10px 26px rgba(28, 25, 23, 0.08);
+    }
+    .rev-stars { color: var(--naranja-deep); font-size: 16px; letter-spacing: 0.2em; margin: 0 0 10px; }
+    .rev blockquote { margin: 0 0 16px; font-size: 15.5px; line-height: 1.55; font-weight: 500; }
+    .rev figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .rev figcaption strong {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 18px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .rev figcaption span { font-size: 12.5px; color: var(--acero); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 26px; }
+    .fachada { width: 100%; height: auto; border-radius: 10px; margin-bottom: 16px; }
+    .dir { font-size: 17px; font-weight: 500; margin: 0 0 14px; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 20px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin: 26px 0 8px;
+      color: var(--carbon);
+    }
+    .horarios { width: 100%; max-width: 440px; border-collapse: collapse; font-size: 14.5px; }
+    .horarios th, .horarios td { padding: 9px 8px; border-bottom: 1px solid var(--linea); text-align: left; }
+    .horarios th { font-weight: 600; color: var(--carbon); }
+    .horarios td { color: var(--acero); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: var(--carbon); background: var(--naranja); font-weight: 700; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--carbon);
+      color: var(--concreto);
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin-left: 8px;
+      vertical-align: 1px;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 12px;
+      display: block;
+      filter: grayscale(0.15) contrast(1.02);
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda { position: relative; padding: 80px 0; text-align: center; overflow: hidden; color: var(--concreto); }
+    .banda-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; }
+    .banda-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(28, 25, 23, 0.78), rgba(28, 25, 23, 0.9));
+      z-index: 1;
+    }
+    .banda-content { position: relative; z-index: 2; }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(34px, 8.5vw, 60px);
+      line-height: 0.96;
+      text-transform: uppercase;
+      margin: 0 0 12px;
+      color: var(--concreto);
+    }
+    .banda-sub { margin: 0 auto 26px; max-width: 42ch; font-weight: 400; color: #d8d2c7; }
+    .banda .cta-row { justify-content: center; }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      padding: 44px 0 96px;
+      border-top: 6px solid var(--naranja);
+      text-align: center;
+      background: var(--carbon);
+      color: var(--concreto);
+    }
+    .pie-stamp { display: flex; justify-content: center; margin: 0 0 18px; }
+    .stamp-svg-sm { width: 84px; height: auto; }
+    .pie-stamp .stamp-ring-outer { fill: var(--carbon); stroke: var(--concreto); }
+    .pie-stamp .stamp-ring-inner { stroke: var(--concreto); }
+    .pie-stamp .gear-body { stroke: var(--concreto); }
+    .pie-stamp .gear-hole { fill: var(--carbon); stroke: var(--concreto); }
+    .pie-stamp .gear-tooth { fill: var(--concreto); }
+    .pie-stamp .stamp-text { fill: var(--naranja); }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 28px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--concreto);
+      margin: 0 0 8px;
+    }
+    .pie-dato { margin: 4px 0; color: #beb6a8; font-size: 14px; }
+    .pie-dato a { color: var(--concreto); text-decoration: none; border-bottom: 1px solid var(--naranja); }
+    .pie-dato a:hover { color: var(--naranja); }
+    .pie-mini { margin: 14px 0 0; color: #857c6d; font-size: 12px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 100px 0; }
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; gap: 50px; }
+      .about-grid { grid-template-columns: 0.85fr 1.15fr; }
+      .inst-grid { grid-template-columns: 0.85fr 1.15fr; }
+      .servicios { grid-template-columns: 1fr 1fr; column-gap: 40px; }
+      .servicios li:nth-child(2) { border-top: 1px solid var(--linea); }
+      .servicios li:nth-last-child(2) { border-bottom: 1px solid var(--linea); }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .ubica { grid-template-columns: 1fr 1.15fr; align-items: start; }
+      .mapa iframe { height: 420px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      var hoy = new Date().getDay();
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

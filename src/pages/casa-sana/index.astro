@@ -1,0 +1,583 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Casa Saná — Quiropráctica y masaje en Progreso"
+  description="Tratamientos alternativos en Progreso, Yucatán: quiropráctica, masaje de descarga y fisioterapia. ★ 5.0 con 27 reseñas en Google. Agenda tu sesión por WhatsApp."
+  slug="casa-sana"
+  ogImage="/casa-sana/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Karla:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+  favicon="🧘"
+  themeColor="#2E3468"
+  whatsapp={"https://wa.me/529991650162"}
+  telefono={"999 165 0162"}
+  mapsUrl={"https://maps.google.com/?cid=14441736266152038068&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+
+  <!-- HERO: tarjeta sobre fondo índigo con patrón de hojitas (como sus sábanas) -->
+  <header class="hero">
+    <div class="hero-card">
+      <div class="hero-media">
+        <img
+          src="/casa-sana/img/foto_2.jpg"
+          alt="Camilla de masaje de Casa Saná, lista con sábanas índigo y toallas"
+          width="960" height="720"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="hero-body">
+        <p class="eyebrow">Tratamientos alternativos · Progreso, Yucatán</p>
+        <h1>Casa Saná</h1>
+        <p class="hook">
+          Llegas con el dolor de toda la semana; sales con el cuerpo al cien.
+          Quiropráctica, masaje y fisioterapia con Luis.
+        </p>
+        <p class="rating-pill">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <strong>5.0</strong>&nbsp;· 27 reseñas en Google
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-wa" href="https://wa.me/529991650162?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20sesi%C3%B3n%20en%20Casa%20San%C3%A1">
+            Agendar por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=14441736266152038068&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SOBRE NOSOTROS -->
+  <section class="sect" id="sobre">
+    <div class="wrap grid-2 rev">
+      <div class="sobre-text">
+        <p class="eyebrow eyebrow-dark">Sobre nosotros</p>
+        <h2>Una casa para que tu cuerpo se recupere</h2>
+        <p>
+          Casa Saná es una casa de tratamientos alternativos en Progreso. Aquí atiende
+          Luis, quiropráctico y terapeuta que — en palabras de quienes ya lo conocen —
+          «entiende muy bien como funciona el cuerpo y que necesitas para estar al 100».
+          Cada sesión se enfoca en los puntos que tu cuerpo realmente necesita trabajar,
+          no en una rutina genérica.
+        </p>
+        <p>
+          Nuestro espacio está climatizado y pensado para que te relajes desde que
+          entras: plantas, una fuente, cuencos y hasta un acuario que te hace compañía.
+          Nos visitan desde vecinos de Progreso con dolor de espalda o migrañas hasta
+          deportistas y kitesurfistas que salen del agua con los músculos cargados.
+        </p>
+      </div>
+      <div class="sobre-pics">
+        <figure>
+          <img src="/casa-sana/img/foto_4.jpg" alt="Rincón de la sala de terapia con plantas, fuente y cuencos" width="960" height="960" loading="lazy" />
+          <figcaption>Plantas, fuente y cuencos en la sala de terapia</figcaption>
+        </figure>
+        <figure>
+          <img src="/casa-sana/img/foto_5.jpg" alt="Acuario plantado con peces en Casa Saná" width="1100" height="619" loading="lazy" />
+          <figcaption>El acuario de la casa</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="sect sect-alt" id="servicios">
+    <div class="wrap">
+      <p class="eyebrow eyebrow-dark rev">Servicios</p>
+      <h2 class="rev">Lo que trabajamos en Casa Saná</h2>
+      <div class="svc-grid">
+        <article class="svc rev">
+          <span class="svc-ico" aria-hidden="true">🦴</span>
+          <h3>Quiropráctica</h3>
+          <p>Ajustes enfocados en lo que tu cuerpo necesita para volver a estar al cien.</p>
+        </article>
+        <article class="svc rev">
+          <span class="svc-ico" aria-hidden="true">🏄</span>
+          <h3>Masaje de descarga deportiva</h3>
+          <p>Para músculos cargados después de entrenar, correr o muchas horas de kitesurf.</p>
+        </article>
+        <article class="svc rev">
+          <span class="svc-ico" aria-hidden="true">🤲</span>
+          <h3>Masaje descontracturante y relajante</h3>
+          <p>Sesiones enfocadas en los puntos que necesitan trabajo, en un ambiente climatizado.</p>
+        </article>
+        <article class="svc rev">
+          <span class="svc-ico" aria-hidden="true">💪</span>
+          <h3>Fisioterapia</h3>
+          <p>Trabajo muscular y recuperación para dolores de cervicales, espalda y migrañas.</p>
+        </article>
+      </div>
+      <ul class="chips rev">
+        <li>Espacio climatizado</li>
+        <li>Aceptamos tarjetas</li>
+        <li>Agenda por WhatsApp</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PRUEBA SOCIAL: sobre el atardecer real de Progreso -->
+  <section class="reviews" id="resenas">
+    <img class="reviews-bg" src="/casa-sana/img/foto_1.jpg" alt="" width="1100" height="825" loading="lazy" aria-hidden="true" />
+    <div class="wrap reviews-inner">
+      <p class="eyebrow rev">Lo que dicen nuestros pacientes</p>
+      <p class="big-rating rev">
+        <span class="big-num">5.0</span>
+        <span class="stars-lg" aria-hidden="true">★★★★★</span>
+        <span class="big-sub">27 reseñas en Google</span>
+      </p>
+      <div class="quote-grid">
+        <blockquote class="quote rev">
+          <p>«Recomiendo mucho a Luis !! Tuve una semana con dolor en las cervicales y
+          migrañas. Con una sola sesión con él y una hora de masaje logró bajarme al
+          cien el dolor ! Es un tratamiento súper efectivo y muy bien enfocado en los
+          puntos que se necesitan trabajar.»</p>
+          <footer><strong>victoria soupel</strong> · hace 3 meses</footer>
+        </blockquote>
+        <blockquote class="quote rev">
+          <p>«Mi experiencia en casa Saná es la mejor, Luis es un gran quiropráctico y
+          entiende muy bien como funciona el cuerpo y que necesitas para estar al 100.
+          Como Deportista lo recomiendo muchísimo.»</p>
+          <footer><strong>Ricardo Dahuss</strong> · hace un año</footer>
+        </blockquote>
+        <blockquote class="quote rev">
+          <p>«Encontré Luis porque estaba buscando hacer masaje de descarga después se
+          muchas horas de kitesurf. Es un experto en todo lo relacionado con los
+          músculos y la fisioterapia! Muy recomendable!»</p>
+          <footer><strong>Darina Zhadovich</strong> · hace un año</footer>
+        </blockquote>
+      </div>
+      <p class="reviews-cta rev">
+        <a class="btn btn-wa" href="https://maps.google.com/?cid=14441736266152038068&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+          Leer más reseñas en Google
+        </a>
+      </p>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN Y HORARIOS -->
+  <section class="sect" id="ubicacion">
+    <div class="wrap">
+      <p class="eyebrow eyebrow-dark rev">Ubicación y horarios</p>
+      <h2 class="rev">Estamos en el corazón de Progreso</h2>
+      <p class="addr rev">C. 29 No. 262F, Juan Montalvo, 97320 Progreso, Yuc., México</p>
+      <div class="grid-2 loc-grid">
+        <div class="map-box rev">
+          <iframe
+            src="https://www.google.com/maps?q=C.%2029%20No.%20262F%2C%20Juan%20Montalvo%2C%2097320%20Progreso%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+            title="Mapa de Casa Saná en Progreso, Yucatán"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="hours-card rev">
+          <h3>Horarios</h3>
+          <div class="tbl-wrap">
+            <table>
+              <tbody>
+                <tr data-day="1"><th scope="row">Lunes</th><td>9:00–12:00 · 16:00–19:00</td></tr>
+                <tr data-day="2"><th scope="row">Martes</th><td>9:00–12:00 · 16:00–17:00 · 19:00–20:00</td></tr>
+                <tr data-day="3"><th scope="row">Miércoles</th><td>9:00–12:00</td></tr>
+                <tr data-day="4"><th scope="row">Jueves</th><td>9:00–12:00 · 16:00–19:00</td></tr>
+                <tr data-day="5"><th scope="row">Viernes</th><td>9:00–12:00 · 19:00–20:00</td></tr>
+                <tr data-day="6"><th scope="row">Sábado</th><td>10:00–12:00</td></tr>
+                <tr data-day="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="hours-note">Agenda tu cita por WhatsApp para asegurar tu lugar.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot-name">Casa Saná</p>
+      <p class="foot-tag">Tratamientos alternativos · Progreso, Yucatán</p>
+      <p class="foot-line">C. 29 No. 262F, Juan Montalvo, 97320 Progreso, Yuc.</p>
+      <p class="foot-line">
+        <a href="tel:+529991650162">999 165 0162</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.facebook.com/casasanaprogreso/" target="_blank" rel="noopener">Facebook</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    "name": "Casa Saná",
+    "description": "Centro de salud y bienestar en Progreso, Yucatán: quiropráctica, masaje de descarga y fisioterapia.",
+    "url": "https://demos.ivang.mx/casa-sana",
+    "image": "https://demos.ivang.mx/casa-sana/img/foto_2.jpg",
+    "telephone": "+52 999 165 0162",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 29 No. 262F, Juan Montalvo",
+      "addressLocality": "Progreso",
+      "addressRegion": "Yucatán",
+      "postalCode": "97320",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "27"
+    }
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --indigo: #2E3468;
+      --indigo-deep: #242A55;
+      --ink: #20243C;
+      --peach: #F2A369;
+      --peach-deep: #B95F1E;
+      --peach-soft: #FCEBDC;
+      --mist: #F4F3FB;
+      --card: #ffffff;
+      --line: #E3E2F0;
+      --leaves: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='96' height='96' viewBox='0 0 96 96'%3E%3Cg fill='%23ffffff' fill-opacity='.09'%3E%3Cellipse cx='14' cy='18' rx='5' ry='2.1' transform='rotate(38 14 18)'/%3E%3Cellipse cx='52' cy='8' rx='5' ry='2.1' transform='rotate(-24 52 8)'/%3E%3Cellipse cx='84' cy='30' rx='5' ry='2.1' transform='rotate(64 84 30)'/%3E%3Cellipse cx='30' cy='52' rx='5' ry='2.1' transform='rotate(-52 30 52)'/%3E%3Cellipse cx='70' cy='62' rx='5' ry='2.1' transform='rotate(18 70 62)'/%3E%3Cellipse cx='12' cy='82' rx='5' ry='2.1' transform='rotate(80 12 82)'/%3E%3Cellipse cx='50' cy='88' rx='5' ry='2.1' transform='rotate(-36 50 88)'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    body {
+      font-family: 'Karla', system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--mist);
+      line-height: 1.6;
+      font-size: 1.0625rem;
+    }
+
+    h1, h2, h3 { font-family: 'Comfortaa', system-ui, sans-serif; line-height: 1.2; }
+
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+    .sect { padding: 64px 0; }
+    .sect-alt { background: #fff; }
+
+    a:focus-visible, .btn:focus-visible {
+      outline: 3px solid var(--peach);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* ---------- HERO: tarjeta sobre patrón de hojitas ---------- */
+    .hero {
+      background-color: var(--indigo);
+      background-image: var(--leaves);
+      padding: 40px 16px 56px;
+      display: flex;
+      justify-content: center;
+    }
+    .hero-card {
+      background: var(--card);
+      border-radius: 22px;
+      overflow: hidden;
+      max-width: 980px;
+      width: 100%;
+      box-shadow: 0 24px 60px rgba(16, 19, 46, .45);
+      border-top: 5px solid var(--peach);
+    }
+    .hero-media { min-width: 0; }
+    .hero-media img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+    }
+    .hero-body { padding: 28px 24px 32px; }
+    .eyebrow {
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--peach);
+      margin: 0 0 10px;
+    }
+    .eyebrow-dark { color: var(--peach-deep); }
+    .hero h1 {
+      font-size: clamp(2.3rem, 9vw, 3.4rem);
+      font-weight: 700;
+      color: var(--indigo);
+      margin: 0 0 12px;
+    }
+    .hook { font-size: 1.1rem; margin: 0 0 16px; max-width: 42ch; }
+    .rating-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--peach-soft);
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 7px 14px;
+      font-size: .95rem;
+      margin: 0 0 22px;
+    }
+    .stars { color: var(--peach-deep); letter-spacing: .1em; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-block;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 999px;
+      padding: 14px 24px;
+      font-size: 1rem;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .btn:active { transform: scale(.97); }
+    .btn-wa {
+      background: var(--peach);
+      color: var(--ink);
+      box-shadow: 0 6px 18px rgba(242, 163, 105, .45);
+    }
+    .btn-wa:hover { background: #f6b183; }
+    .btn-ghost {
+      border: 2px solid var(--indigo);
+      color: var(--indigo);
+    }
+    .btn-ghost:hover { background: var(--indigo); color: #fff; }
+
+    /* ---------- SOBRE ---------- */
+    .grid-2 { display: grid; gap: 28px; }
+    h2 {
+      font-size: clamp(1.5rem, 5.5vw, 2.1rem);
+      color: var(--indigo);
+      margin: 0 0 18px;
+    }
+    .sobre-text p { margin: 0 0 16px; }
+    .sobre-pics { display: grid; gap: 18px; align-content: start; }
+    .sobre-pics figure { margin: 0; }
+    .sobre-pics img {
+      width: 100%;
+      border-radius: 16px;
+      object-fit: cover;
+      aspect-ratio: 4 / 3;
+      box-shadow: 0 10px 28px rgba(32, 36, 60, .16);
+    }
+    .sobre-pics figcaption {
+      font-size: .85rem;
+      color: #5a5e7d;
+      margin-top: 8px;
+    }
+
+    /* ---------- SERVICIOS ---------- */
+    .svc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 26px;
+    }
+    .svc {
+      background: var(--mist);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 22px 20px;
+    }
+    .svc-ico { font-size: 1.7rem; display: block; margin-bottom: 10px; }
+    .svc h3 { font-size: 1.05rem; color: var(--indigo); margin: 0 0 8px; }
+    .svc p { margin: 0; font-size: .97rem; }
+    .chips {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      margin: 26px 0 0;
+    }
+    .chips li {
+      background: var(--peach-soft);
+      color: var(--peach-deep);
+      font-weight: 700;
+      font-size: .88rem;
+      border-radius: 999px;
+      padding: 8px 16px;
+    }
+
+    /* ---------- RESEÑAS ---------- */
+    .reviews {
+      position: relative;
+      overflow: hidden;
+      padding: 72px 0;
+      background: var(--indigo-deep);
+      color: #fff;
+    }
+    .reviews-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: .5;
+    }
+    .reviews::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(36, 42, 85, .82), rgba(28, 32, 66, .92));
+    }
+    .reviews-inner { position: relative; z-index: 1; }
+    .big-rating {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 0 0 28px;
+    }
+    .big-num {
+      font-family: 'Comfortaa', sans-serif;
+      font-weight: 700;
+      font-size: 3.2rem;
+      color: var(--peach);
+      line-height: 1;
+    }
+    .stars-lg { color: var(--peach); font-size: 1.4rem; letter-spacing: .12em; }
+    .big-sub { font-size: 1rem; opacity: .9; }
+    .quote-grid { display: grid; gap: 16px; }
+    .quote {
+      margin: 0;
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: 16px;
+      padding: 22px 20px;
+      backdrop-filter: blur(3px);
+    }
+    .quote p {
+      margin: 0 0 14px;
+      font-style: italic;
+      font-size: .98rem;
+      line-height: 1.65;
+    }
+    .quote footer { font-size: .9rem; color: var(--peach); }
+    .quote footer strong { color: #fff; }
+    .reviews-cta { margin: 30px 0 0; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .addr { font-size: 1.05rem; font-weight: 500; margin: 0 0 24px; }
+    .map-box iframe {
+      width: 100%;
+      height: 340px;
+      border: 0;
+      border-radius: 16px;
+      box-shadow: 0 10px 28px rgba(32, 36, 60, .16);
+      display: block;
+    }
+    .hours-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 24px 22px;
+    }
+    .hours-card h3 { color: var(--indigo); margin: 0 0 14px; font-size: 1.15rem; }
+    .tbl-wrap { overflow-x: auto; }
+    .hours-card table { width: 100%; border-collapse: collapse; font-size: .95rem; }
+    .hours-card th, .hours-card td {
+      text-align: left;
+      padding: 9px 8px;
+      border-bottom: 1px solid var(--line);
+      white-space: nowrap;
+    }
+    .hours-card th { font-weight: 700; color: var(--indigo); }
+    .hours-card tr:last-child th, .hours-card tr:last-child td { border-bottom: 0; }
+    .hours-card tr.today { background: var(--peach-soft); }
+    .hours-card tr.today th { color: var(--peach-deep); }
+    .hoy-tag {
+      display: inline-block;
+      background: var(--peach);
+      color: var(--ink);
+      font-size: .68rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+    .hours-note { font-size: .9rem; color: #5a5e7d; margin: 14px 0 0; }
+
+    /* ---------- FOOTER ---------- */
+    .foot {
+      background-color: var(--indigo-deep);
+      background-image: var(--leaves);
+      color: #fff;
+      text-align: center;
+      padding: 48px 0 90px; /* espacio extra para el botón flotante */
+    }
+    .foot-name {
+      font-family: 'Comfortaa', sans-serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      margin: 0 0 6px;
+    }
+    .foot-tag { color: var(--peach); font-size: .9rem; margin: 0 0 16px; }
+    .foot-line { margin: 4px 0; font-size: .95rem; opacity: .92; }
+    .foot a { color: #fff; font-weight: 700; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    .js .rev {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+    .js .rev.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .hero { padding: 72px 24px 88px; }
+      .hero-card {
+        display: grid;
+        grid-template-columns: 1fr 1.1fr;
+        border-top: 0;
+        border-left: 5px solid var(--peach);
+      }
+      .hero-media img { height: 100%; min-height: 420px; }
+      .hero-body { padding: 44px 40px; align-self: center; }
+      .grid-2 { grid-template-columns: 1.1fr .9fr; align-items: start; }
+      .sobre-pics { grid-template-columns: 1fr; }
+      .quote-grid { grid-template-columns: repeat(3, 1fr); }
+      .loc-grid { grid-template-columns: 1.05fr .95fr; }
+      .sect { padding: 84px 0; }
+    }
+  </style>
+
+  <script is:inline>
+    // Mejora progresiva: sin JS todo el contenido queda visible.
+    document.documentElement.classList.add('js');
+
+    // Resaltar el día de hoy en la tabla de horarios.
+    (function () {
+      var today = new Date().getDay(); // 0 = domingo
+      var row = document.querySelector('tr[data-day="' + today + '"]');
+      if (row) {
+        row.classList.add('today');
+        var th = row.querySelector('th');
+        if (th) {
+          var tag = document.createElement('span');
+          tag.className = 'hoy-tag';
+          tag.textContent = 'HOY';
+          th.appendChild(tag);
+        }
+      }
+    })();
+
+    // Scroll reveal sutil.
+    (function () {
+      var els = document.querySelectorAll('.rev');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('in');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

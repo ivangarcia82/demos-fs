@@ -1,0 +1,784 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Barrio Macho Barbershop — Barbería en Mérida, Est. 2017"
+  description="Barbería en Plaza Paseo Canek, Mérida. ⭐ 4.6 con 178 reseñas en Google. Cortes con propuesta, barba y paciencia hasta con los más pequeños. Agenda por WhatsApp."
+  slug="barrio-macho"
+  ogImage="/barrio-macho/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Ultra&display=swap"
+  favicon="💈"
+  themeColor="#171310"
+  whatsapp={"https://wa.me/529994817265"}
+  telefono={"999 481 7265"}
+  mapsUrl={"https://maps.google.com/?cid=11865074024731579692&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero" id="inicio">
+    <img
+      class="hero__foto"
+      src="/barrio-macho/img/foto_2.jpg"
+      alt="Interior de Barrio Macho: sillones de barbero negros frente a espejos con marcos dorados y celosía geométrica de latón"
+      fetchpriority="high"
+    />
+    <div class="hero__velo" aria-hidden="true"></div>
+    <div class="hero__contenido contenedor">
+      <p class="eyebrow eyebrow--oro">Barbería · Plaza Paseo Canek · Mérida</p>
+      <h1 class="hero__titulo">Barrio Macho</h1>
+      <p class="hero__lockup">
+        <span>Barbershop</span>
+        <span class="hero__barra" aria-hidden="true"></span>
+        <span>Est. 2017</span>
+      </p>
+      <p class="hero__gancho">
+        Llega sin saber qué corte quieres y sal con uno que sí va contigo:
+        aquí te lo proponen. Y con los niños, toda la paciencia del mundo.
+      </p>
+      <a
+        class="hero__rating"
+        href="https://maps.google.com/?cid=11865074024731579692&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="hero__estrella" aria-hidden="true">★</span>
+        4.6 · 178 reseñas en Google
+      </a>
+      <div class="hero__botones">
+        <a class="btn btn--oro" href="https://wa.me/529994817265" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-3-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.7.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.1-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6a9.1 9.1 0 0 0 3.5 3.1c.5.2.9.4 1.2.5.5.2 1 .1 1.3.1.4-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3Z"/></svg>
+          Agenda por WhatsApp
+        </a>
+        <a
+          class="btn btn--linea"
+          href="https://maps.google.com/?cid=11865074024731579692&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+          target="_blank"
+          rel="noopener"
+        >Cómo llegar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== SOBRE NOSOTROS ===================== -->
+  <section class="seccion seccion--luz" id="nosotros">
+    <div class="divisor divisor--luz" aria-hidden="true"></div>
+    <div class="contenedor grid-2">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--oxido">La casa</p>
+        <h2>Oficio de barrio con casa propia</h2>
+        <p>
+          Estamos en Plaza Paseo Canek desde 2017, y entrar aquí ya dice a qué
+          venimos: celosía dorada en los vidrios, espejos con marco de latón,
+          sillones negros y el escudo de la casa montado sobre mármol. Una
+          barbería donde el corte se trabaja, no se despacha.
+        </p>
+        <p>
+          Nuestra forma de atender es simple: te escuchamos, vemos tu estilo y
+          te proponemos el corte. Es de lo que más hablan quienes nos visitan —
+          llegan con una idea a medias y salen con un corte que sí les queda.
+        </p>
+        <p>
+          Si vienes con tus hijos, también es su lugar: los atendemos con calma
+          y paciencia. Y mientras esperas tu turno, hay un rincón cómodo para
+          sentarte. Por algo hay clientes que llevan años regresando.
+        </p>
+      </div>
+      <figure class="marco reveal">
+        <img
+          src="/barrio-macho/img/foto_4.jpg"
+          alt="Muro de mármol blanco con el escudo de Barrio Macho en letras rojo óxido y la leyenda Est. 2017"
+          loading="lazy"
+        />
+        <figcaption>El escudo de la casa, sobre mármol, desde 2017.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="seccion seccion--noche patron" id="servicios">
+    <div class="divisor" aria-hidden="true"></div>
+    <div class="contenedor">
+      <p class="eyebrow eyebrow--oro">Al sillón</p>
+      <h2>Lo que hacemos bien</h2>
+      <div class="cartas">
+        <article class="carta reveal">
+          <h3>Corte con propuesta</h3>
+          <p>
+            No necesitas llegar con la foto. Te asesoramos y te proponemos el
+            corte según tu cara, tu cabello y tu estilo.
+          </p>
+        </article>
+        <article class="carta reveal">
+          <h3>Barba y afeitado</h3>
+          <p>
+            Perfilado y arreglo de barba al detalle, como manda el oficio de
+            barbería.
+          </p>
+        </article>
+        <article class="carta reveal">
+          <h3>Corte para niños</h3>
+          <p>
+            Recibimos a los más pequeños con paciencia, para que su visita a la
+            barbería sea buena desde la primera.
+          </p>
+        </article>
+      </div>
+      <ul class="fichas" aria-label="Comodidades del local">
+        <li>Acepta tarjetas</li>
+        <li>Acceso para silla de ruedas</li>
+        <li>Área cómoda de espera</li>
+        <li>Abierto de lunes a sábado</li>
+      </ul>
+      <figure class="marco marco--ancho reveal">
+        <img
+          src="/barrio-macho/img/foto_1.jpg"
+          alt="Vista del local de Barrio Macho de día, con la celosía dorada en los ventanales y un sillón de barbero al fondo"
+          loading="lazy"
+        />
+        <figcaption>La celosía dorada de los ventanales, sello del local.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== RESEÑAS ===================== -->
+  <section class="seccion seccion--luz" id="resenas">
+    <div class="divisor divisor--luz" aria-hidden="true"></div>
+    <div class="contenedor">
+      <p class="eyebrow eyebrow--oxido">Palabra de cliente</p>
+      <h2>4.6 estrellas no se regalan</h2>
+      <div class="rating-bloque reveal">
+        <span class="rating-num">4.6</span>
+        <div class="rating-detalle">
+          <span class="estrellas" aria-hidden="true">★★★★★</span>
+          <span class="rating-total">de 178 reseñas en Google</span>
+        </div>
+      </div>
+      <div class="resenas">
+        <blockquote class="resena reveal">
+          <p>
+            &ldquo;Me gustó mucho la atención por parte de la estilista que me
+            atendió. Me gustó la propuesta de corte. El lugar está muy
+            bien&hellip;&rdquo;
+          </p>
+          <footer><cite>Félix Eduardo Silva Chacón</cite> · Hace 4 años</footer>
+        </blockquote>
+        <blockquote class="resena reveal">
+          <p>
+            &ldquo;&hellip;acudí con mis dos hijos, y la Atención igual es
+            excelente sobre todo la paciencia del personal muchas gracias por
+            su servicio 🙌🏽&rdquo;
+          </p>
+          <footer><cite>Mike</cite> · Hace un año</footer>
+        </blockquote>
+        <blockquote class="resena reveal">
+          <p>
+            &ldquo;Excelente atención y calidad de servicio, cliente desde hace
+            años, muy recomendado!&rdquo;
+          </p>
+          <footer><cite>Daniel Garnica</cite> · Hace 3 años</footer>
+        </blockquote>
+      </div>
+      <div class="centrado">
+        <a
+          class="btn btn--oxido"
+          href="https://maps.google.com/?cid=11865074024731579692&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"
+          target="_blank"
+          rel="noopener"
+        >Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== UBICACIÓN Y HORARIOS ===================== -->
+  <section class="seccion seccion--noche" id="ubicacion">
+    <div class="divisor" aria-hidden="true"></div>
+    <div class="contenedor">
+      <p class="eyebrow eyebrow--oro">Visítanos</p>
+      <h2>En Plaza Paseo Canek</h2>
+      <div class="grid-2 grid-2--arriba">
+        <div class="reveal">
+          <address class="direccion">
+            Calle 124 C #253, Local 20-A<br />
+            Plaza Paseo Canek, Jacinto Canek<br />
+            97227 Mérida, Yuc.
+          </address>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps?q=Barrio%20Macho%2C%20Calle%20124%20C%20%23253%2C%20Plaza%20Paseo%20Canek%2C%20Jacinto%20Canek%2C%2097227%20M%C3%A9rida%2C%20Yucat%C3%A1n&output=embed"
+              title="Mapa de ubicación de Barrio Macho Barbershop"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+        <div class="reveal">
+          <h3 class="horarios-titulo">Horarios <span id="estado" class="estado"></span></h3>
+          <div class="tabla-scroll">
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>11:00 – 20:30</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>11:00 – 20:30</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>11:00 – 20:30</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>11:00 – 20:30</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>11:00 – 20:30</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>11:00 – 19:00</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <figure class="marco reveal">
+            <img
+              src="/barrio-macho/img/foto_3.jpg"
+              alt="Fachada nocturna de Barrio Macho con letrero iluminado, poste de barbero y celosía dorada en el ventanal"
+              loading="lazy"
+            />
+            <figcaption>De noche, búscanos por el letrero iluminado.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="pie">
+    <div class="contenedor">
+      <p class="pie__logo">Barrio Macho</p>
+      <p class="pie__lockup">Barbershop · Est. 2017 · Mérida, Yucatán</p>
+      <p class="pie__dato">
+        Calle 124 C #253, Local 20-A, Plaza Paseo Canek, Jacinto Canek, 97227 Mérida, Yuc.
+      </p>
+      <p class="pie__dato">
+        Teléfono: <a class="pie__tel" href="tel:+529994817265">999 481 7265</a>
+      </p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "HairSalon",
+    "name": "Barrio Macho",
+    "description": "Barbería en Plaza Paseo Canek, Mérida, Yucatán.",
+    "telephone": "+52 999 481 7265",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 124 C #253 Local 20-A Plaza Paseo Canek, Jacinto Canek",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97227",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "178"
+    },
+    "openingHours": ["Mo-Fr 11:00-20:30", "Sa 11:00-19:00"],
+    "url": "https://demos.ivang.mx/barrio-macho",
+    "image": "https://demos.ivang.mx/barrio-macho/img/foto_2.jpg"
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --tinta: #171310;
+      --carbon: #221c16;
+      --oro: #c29b4a;
+      --oro-claro: #dcb96b;
+      --marmol: #f3efe8;
+      --marmol-veta: #e5ded1;
+      --oxido: #a3503a;
+      --humo: #5f5749;
+      --niebla: #cfc6b6;
+      --cubo: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='40' viewBox='0 0 64 40'%3E%3Cg fill='none' stroke='%23c29b4a' stroke-width='1.3'%3E%3Cpath d='M32 6 44 13v14L32 34 20 27V13z'/%3E%3Cpath d='M20 13l12 7 12-7M32 20v14'/%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    body {
+      background: var(--tinta);
+      color: var(--niebla);
+      font-family: 'Archivo', system-ui, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    .contenedor {
+      width: min(100% - 2.5rem, 62rem);
+      margin-inline: auto;
+    }
+
+    h2 {
+      font-family: 'Ultra', serif;
+      font-weight: 400;
+      font-size: clamp(1.65rem, 5.6vw, 2.5rem);
+      line-height: 1.15;
+      letter-spacing: 0.01em;
+      margin: 0.35rem 0 1.4rem;
+    }
+    .seccion--luz h2 { color: var(--tinta); }
+    .seccion--noche h2 { color: var(--marmol); }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      margin: 0;
+    }
+    .eyebrow--oro { color: var(--oro); }
+    .eyebrow--oxido { color: var(--oxido); }
+
+    a:focus-visible,
+    .btn:focus-visible {
+      outline: 3px solid var(--oro-claro);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ---------- botones ---------- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.95rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn--oro {
+      background: var(--oro);
+      color: #1d1610;
+      box-shadow: 0 6px 22px rgba(194, 155, 74, 0.35);
+    }
+    .btn--oro:hover { background: var(--oro-claro); }
+    .btn--linea {
+      border: 2px solid rgba(243, 239, 232, 0.55);
+      color: var(--marmol);
+    }
+    .btn--linea:hover { border-color: var(--oro); color: var(--oro-claro); }
+    .btn--oxido {
+      background: var(--oxido);
+      color: var(--marmol);
+      box-shadow: 0 6px 20px rgba(163, 80, 58, 0.3);
+    }
+    .btn--oxido:hover { background: #8f4330; }
+
+    /* ---------- hero ---------- */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 38px);
+      min-height: calc(100svh - 38px);
+      display: flex;
+      align-items: flex-end;
+      isolation: isolate;
+    }
+    .hero__foto {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 40%;
+      z-index: -2;
+    }
+    .hero__velo {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(23, 19, 16, 0.55) 0%, rgba(23, 19, 16, 0.25) 35%, rgba(23, 19, 16, 0.82) 72%, var(--tinta) 100%);
+    }
+    .hero__contenido {
+      padding: 5.5rem 0 3.25rem;
+    }
+    .hero__titulo {
+      font-family: 'Ultra', serif;
+      font-weight: 400;
+      font-size: clamp(2.6rem, 12vw, 5rem);
+      line-height: 1.02;
+      color: var(--marmol);
+      text-transform: uppercase;
+      margin: 0.5rem 0 0.65rem;
+      text-shadow: 0 3px 24px rgba(0, 0, 0, 0.45);
+    }
+    .hero__lockup {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      margin: 0 0 1.1rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--oro-claro);
+    }
+    .hero__barra {
+      width: 1.5px;
+      height: 1.2em;
+      background: var(--oro-claro);
+      opacity: 0.8;
+    }
+    .hero__gancho {
+      max-width: 34rem;
+      font-size: 1.15rem;
+      color: #efe9dd;
+      margin: 0 0 1.2rem;
+    }
+    .hero__rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--marmol);
+      text-decoration: none;
+      background: rgba(23, 19, 16, 0.55);
+      border: 1px solid rgba(194, 155, 74, 0.5);
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      margin-bottom: 1.5rem;
+      backdrop-filter: blur(3px);
+    }
+    .hero__rating:hover { border-color: var(--oro-claro); }
+    .hero__estrella { color: var(--oro-claro); font-size: 1.1em; }
+    .hero__botones {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    /* ---------- secciones rítmicas ---------- */
+    .seccion { padding: 2.75rem 0 4rem; }
+    .seccion--luz { background: var(--marmol); color: var(--humo); }
+    .seccion--noche { background: var(--tinta); color: var(--niebla); }
+
+    .divisor {
+      height: 40px;
+      margin: 0 auto 2.75rem;
+      max-width: 40rem;
+      background-image: var(--cubo);
+      background-repeat: repeat-x;
+      background-position: center;
+      opacity: 0.75;
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+      mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);
+    }
+    .divisor--luz { opacity: 0.9; }
+
+    .patron { position: relative; }
+    .patron::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: var(--cubo);
+      opacity: 0.05;
+      pointer-events: none;
+    }
+    .patron > * { position: relative; }
+
+    /* ---------- grids ---------- */
+    .grid-2 {
+      display: grid;
+      gap: 2.25rem;
+      align-items: center;
+    }
+    .grid-2--arriba { align-items: start; }
+    @media (min-width: 760px) {
+      .grid-2 { grid-template-columns: 1fr 1fr; gap: 3rem; }
+    }
+
+    .seccion--luz p { color: var(--humo); }
+    .seccion--luz .eyebrow--oxido { color: var(--oxido); }
+
+    /* ---------- marcos de fotos (eco de los espejos dorados) ---------- */
+    .marco {
+      margin: 0;
+      border: 3px solid var(--oro);
+      padding: 0.45rem;
+      background: transparent;
+      box-shadow: 10px 10px 0 rgba(194, 155, 74, 0.18);
+    }
+    .marco img { width: 100%; object-fit: cover; }
+    .marco figcaption {
+      font-size: 0.8rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.6rem 0.2rem 0.15rem;
+    }
+    .seccion--luz .marco figcaption { color: var(--humo); }
+    .seccion--noche .marco figcaption { color: var(--niebla); }
+    .marco--ancho { margin-top: 2.5rem; }
+    .marco--ancho img { max-height: 420px; }
+    #ubicacion .marco { margin-top: 1.75rem; }
+    #ubicacion .marco img { max-height: 430px; object-position: center 30%; }
+
+    /* ---------- servicios ---------- */
+    .cartas {
+      display: grid;
+      gap: 1rem;
+      margin-top: 0.5rem;
+    }
+    @media (min-width: 760px) {
+      .cartas { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    }
+    .carta {
+      background: var(--carbon);
+      border: 1px solid rgba(194, 155, 74, 0.28);
+      border-top: 3px solid var(--oro);
+      padding: 1.4rem 1.3rem 1.2rem;
+    }
+    .carta h3 {
+      font-family: 'Ultra', serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--marmol);
+      margin: 0 0 0.55rem;
+    }
+    .carta p { margin: 0; font-size: 0.98rem; }
+
+    .fichas {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      padding: 0;
+      margin: 1.75rem 0 0;
+    }
+    .fichas li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border: 1px solid rgba(194, 155, 74, 0.4);
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--niebla);
+    }
+    .fichas li::before {
+      content: '◆';
+      color: var(--oro);
+      font-size: 0.6em;
+    }
+
+    /* ---------- reseñas ---------- */
+    .rating-bloque {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+    .rating-num {
+      font-family: 'Ultra', serif;
+      font-size: clamp(3rem, 10vw, 4.2rem);
+      line-height: 1;
+      color: var(--oxido);
+    }
+    .rating-detalle { display: flex; flex-direction: column; gap: 0.15rem; }
+    .estrellas {
+      font-size: 1.35rem;
+      letter-spacing: 0.12em;
+      background: linear-gradient(90deg, var(--oxido) 92%, var(--marmol-veta) 92%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .rating-total { font-size: 0.92rem; font-weight: 600; color: var(--humo); }
+
+    .resenas {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 760px) {
+      .resenas { grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
+    }
+    .resena {
+      margin: 0;
+      background: #fbf9f4;
+      border: 1px solid var(--marmol-veta);
+      border-left: 4px solid var(--oro);
+      padding: 1.3rem 1.25rem 1.1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.9rem;
+    }
+    .resena p {
+      margin: 0;
+      color: #3d372d;
+      font-size: 0.98rem;
+    }
+    .resena footer {
+      font-size: 0.85rem;
+      color: var(--humo);
+    }
+    .resena cite {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--oxido);
+    }
+    .centrado { text-align: center; margin-top: 2rem; }
+
+    /* ---------- ubicación ---------- */
+    .direccion {
+      font-style: normal;
+      font-size: 1.02rem;
+      line-height: 1.7;
+      color: var(--marmol);
+      margin-bottom: 1.25rem;
+    }
+    .mapa {
+      border: 3px solid var(--oro);
+      padding: 0.45rem;
+      box-shadow: 10px 10px 0 rgba(194, 155, 74, 0.18);
+    }
+    .mapa iframe {
+      display: block;
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+    .horarios-titulo {
+      font-family: 'Ultra', serif;
+      font-weight: 400;
+      font-size: 1.25rem;
+      color: var(--marmol);
+      margin: 0 0 0.9rem;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+    }
+    .estado {
+      font-family: 'Archivo', system-ui, sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      padding: 0.3rem 0.75rem;
+    }
+    .estado--abierto { background: rgba(194, 155, 74, 0.18); color: var(--oro-claro); border: 1px solid rgba(194, 155, 74, 0.5); }
+    .estado--cerrado { background: rgba(163, 80, 58, 0.16); color: #d9927e; border: 1px solid rgba(163, 80, 58, 0.5); }
+
+    .tabla-scroll { overflow-x: auto; }
+    .horarios {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.98rem;
+    }
+    .horarios th,
+    .horarios td {
+      text-align: left;
+      padding: 0.55rem 0.75rem;
+      border-bottom: 1px solid rgba(207, 198, 182, 0.15);
+    }
+    .horarios th { font-weight: 600; color: var(--marmol); }
+    .horarios td { color: var(--niebla); }
+    .horarios tr.hoy th,
+    .horarios tr.hoy td {
+      color: var(--oro-claro);
+      background: rgba(194, 155, 74, 0.09);
+    }
+    .horarios tr.hoy th { border-left: 3px solid var(--oro); }
+
+    /* ---------- footer ---------- */
+    .pie {
+      background: #100d0a;
+      padding: 3rem 0 4.5rem;
+      text-align: center;
+    }
+    .pie__logo {
+      font-family: 'Ultra', serif;
+      font-size: 1.6rem;
+      text-transform: uppercase;
+      color: var(--marmol);
+      margin: 0 0 0.3rem;
+    }
+    .pie__lockup {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--oro);
+      margin: 0 0 1.4rem;
+    }
+    .pie__dato {
+      font-size: 0.92rem;
+      color: var(--niebla);
+      margin: 0.3rem 0;
+    }
+    .pie__tel {
+      color: var(--oro-claro);
+      font-weight: 700;
+      text-decoration: none;
+    }
+    .pie__tel:hover { text-decoration: underline; }
+
+    /* ---------- reveal progresivo (solo con JS) ---------- */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .js .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+
+      // Reveal progresivo
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(
+          function (entries) {
+            entries.forEach(function (e) {
+              if (e.isIntersecting) {
+                e.target.classList.add('in');
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.12 }
+        );
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+      } else {
+        document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+      }
+
+      // Día actual + estado abierto/cerrado (horario real del negocio)
+      var ahora = new Date();
+      var dia = ahora.getDay(); // 0 = domingo
+      var fila = document.querySelector('.horarios tr[data-dia="' + dia + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      // [apertura, cierre] en horas decimales; null = cerrado
+      var agenda = {
+        0: null,
+        1: [11, 20.5], 2: [11, 20.5], 3: [11, 20.5], 4: [11, 20.5], 5: [11, 20.5],
+        6: [11, 19]
+      };
+      var chip = document.getElementById('estado');
+      if (chip) {
+        var h = ahora.getHours() + ahora.getMinutes() / 60;
+        var hoy = agenda[dia];
+        if (hoy && h >= hoy[0] && h < hoy[1]) {
+          var cierre = hoy[1] === 20.5 ? '20:30' : '19:00';
+          chip.textContent = 'Abierto ahora · cierra ' + cierre;
+          chip.classList.add('estado--abierto');
+        } else {
+          chip.textContent = 'Cerrado en este momento';
+          chip.classList.add('estado--cerrado');
+        }
+      }
+    })();
+  </script>
+</BaseLayout>

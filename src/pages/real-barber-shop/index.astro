@@ -1,0 +1,910 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const negocio = {
+  nombre: 'Real Barber Shop',
+  telefono: '999 272 9228',
+  whatsapp: 'https://wa.me/529992729228',
+  direccion: 'C. 46 423, Francisco de Montejo, 97203 Mérida, Yuc., México',
+  mapsUrl:
+    'https://maps.google.com/?cid=16863832879984311399&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA',
+  rating: '4.8',
+  totalResenas: '422',
+};
+
+const mapEmbed =
+  'https://www.google.com/maps?q=' +
+  encodeURIComponent(negocio.direccion) +
+  '&output=embed';
+
+// Reseñas reales del dossier (solo 5★, fragmentos contiguos, verbatim).
+const resenas = [
+  {
+    autor: 'Javier Morales',
+    cuando: 'Hace 8 meses',
+    texto:
+      '…una excelente atención y un café qué solo es superado por la atención y el buen corte de pelo qué me hacen. Felicidades.',
+  },
+  {
+    autor: 'Nina Contreras',
+    cuando: 'Hace 1 mes',
+    texto:
+      'Excelente barberos y Barberas, el lugar muy bonito, desde que llegas te reciben muy bien con agüita…',
+  },
+  {
+    autor: 'Jesús C.',
+    cuando: 'Hace un año',
+    texto:
+      '…el personal es atento y profesional. Me gustó mucho cómo dejaron mi corte, justo como lo pedí…',
+  },
+  {
+    autor: 'the plug by cassless',
+    cuando: 'Hace 4 meses',
+    texto: 'Excelente ambiente, atención y sobre todo calidad en su trabajo.',
+  },
+];
+---
+
+<BaseLayout
+  title="Real Barber Shop — Barbería en Mérida"
+  description="Barbería y peluquería en Francisco de Montejo desde 1995. ⭐ 4.8 · 422 reseñas en Google. Agenda tu corte por WhatsApp."
+  slug="real-barber-shop"
+  ogImage="/real-barber-shop/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Staatliches&family=Archivo:wght@400;500;600;700;800&display=swap"
+  favicon="💈"
+  themeColor="#142A3D"
+  whatsapp={negocio.whatsapp}
+  telefono={negocio.telefono}
+  mapsUrl={negocio.mapsUrl}
+>
+  <!-- ================= HERO ================= -->
+  <header class="rb-hero">
+    <img
+      class="rb-hero__img"
+      src="/real-barber-shop/img/foto_1.jpg"
+      alt="Fachada iluminada de Real Barber Shop de noche, con su nombre en letras grandes."
+      width="1219"
+      height="677"
+      fetchpriority="high"
+      decoding="async"
+    />
+    <div class="rb-hero__scrim"></div>
+
+    <div class="rb-hero__inner rb-wrap">
+      <p class="rb-kicker rb-kicker--light">
+        <span class="rb-mark" aria-hidden="true"></span>
+        Barbería &amp; peluquería · Desde 1995
+      </p>
+
+      <h1 class="rb-hero__title">
+        Buen corte,<br />buen café,<br /><em>buen trato.</em>
+      </h1>
+
+      <p class="rb-hero__sub">
+        Barbería y peluquería en Francisco de Montejo, Mérida. Barberos y
+        barberas que te reciben como en casa.
+      </p>
+
+      <div class="rb-hero__rating" role="text">
+        <span class="rb-stars" aria-hidden="true">★★★★★</span>
+        <strong>4.8</strong>
+        <span class="rb-hero__rating-sep">·</span>
+        422 reseñas en Google
+      </div>
+
+      <div class="rb-hero__cta">
+        <a class="rb-btn rb-btn--red" href={negocio.whatsapp} target="_blank" rel="noopener">
+          <span aria-hidden="true">💈</span> Agenda por WhatsApp
+        </a>
+        <a class="rb-btn rb-btn--ghost" href={negocio.mapsUrl} target="_blank" rel="noopener">
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- barber-pole divider -->
+  <div class="rb-pole" role="presentation"></div>
+
+  <!-- ================= QUIÉNES SOMOS ================= -->
+  <section class="rb-about" aria-labelledby="about-h">
+    <div class="rb-wrap rb-about__grid">
+      <div>
+        <p class="rb-kicker"><span class="rb-mark" aria-hidden="true"></span> El oficio</p>
+        <h2 id="about-h" class="rb-h2">Una barbería de barrio con oficio de verdad</h2>
+        <p class="rb-lead">
+          Estamos en Francisco de Montejo desde 1995, y en todo este tiempo
+          aprendimos algo simple: un buen corte empieza por un buen recibimiento.
+        </p>
+        <p class="rb-body">
+          Por eso, desde que cruzas la puerta te ofrecemos un café o un agüita
+          bien fría mientras esperas tu turno. Somos un equipo de barberos y
+          barberas al que le gusta escuchar: nos dices cómo lo quieres y el
+          corte queda justo como lo pediste. Nada de prisas ni de cortes en
+          serie.
+        </p>
+        <p class="rb-body">
+          Lo notas en el ambiente del lugar y en el cuidado de cada detalle.
+          Aquí venir a cortarte también es un rato para uno mismo.
+        </p>
+      </div>
+
+      <aside class="rb-quote">
+        <span class="rb-quote__stripe" aria-hidden="true"></span>
+        <p class="rb-quote__text">
+          &ldquo;…un café qué solo es superado por la atención y el buen corte
+          de pelo qué me hacen.&rdquo;
+        </p>
+        <p class="rb-quote__by">Javier Morales · reseña en Google</p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ================= SERVICIOS ================= -->
+  <section class="rb-serv" aria-labelledby="serv-h">
+    <div class="rb-wrap">
+      <p class="rb-kicker"><span class="rb-mark" aria-hidden="true"></span> Lo que hacemos</p>
+      <h2 id="serv-h" class="rb-h2">Barbería y peluquería completa</h2>
+      <ul class="rb-serv__list">
+        <li class="rb-serv__item rb-reveal">
+          <span class="rb-serv__no">Corte de cabello</span>
+          <p>Clásico o moderno, a máquina y tijera, terminado a tu gusto.</p>
+        </li>
+        <li class="rb-serv__item rb-reveal">
+          <span class="rb-serv__no">Peluquería</span>
+          <p>Lavado, estilo y acabado para que salgas listo del sillón.</p>
+        </li>
+        <li class="rb-serv__item rb-reveal">
+          <span class="rb-serv__no">Barba</span>
+          <p>Perfilado y arreglo de barba para redondear tu look.</p>
+        </li>
+        <li class="rb-serv__item rb-reveal">
+          <span class="rb-serv__no">Estilos y diseños</span>
+          <p>Degradados y detalles inspirados en las referencias del local.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= GALERÍA ================= -->
+  <section class="rb-gallery-sec" aria-labelledby="gal-h">
+    <div class="rb-wrap">
+      <p class="rb-kicker"><span class="rb-mark" aria-hidden="true"></span> El local</p>
+      <h2 id="gal-h" class="rb-h2">Pásate a conocernos</h2>
+    </div>
+    <div class="rb-wrap">
+      <div class="rb-gallery">
+        <figure class="rb-gallery__fig rb-gallery__fig--wide">
+          <img src="/real-barber-shop/img/foto_2.jpg" alt="Barbero atendiendo a un cliente en el sillón, con la clásica barra de barbero al fondo." loading="lazy" decoding="async" />
+        </figure>
+        <figure class="rb-gallery__fig">
+          <img src="/real-barber-shop/img/foto_4.jpg" alt="Interior con sillones de barbero cromados, espejos redondos y muro de madera." loading="lazy" decoding="async" />
+        </figure>
+        <figure class="rb-gallery__fig">
+          <img src="/real-barber-shop/img/foto_3.jpg" alt="Fachada de Real Barber Shop de día, con cielo azul y jardín al frente." loading="lazy" decoding="async" />
+        </figure>
+        <figure class="rb-gallery__fig rb-gallery__fig--wide">
+          <img src="/real-barber-shop/img/foto_5.jpg" alt="Esquina del local con el poste de barbero rojo, blanco y azul en la banqueta." loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= POR QUÉ ================= -->
+  <section class="rb-why" aria-labelledby="why-h">
+    <div class="rb-wrap">
+      <p class="rb-kicker rb-kicker--light"><span class="rb-mark" aria-hidden="true"></span> Por qué volver</p>
+      <h2 id="why-h" class="rb-h2 rb-h2--light">Lo que dicen quienes ya se sientan aquí</h2>
+      <div class="rb-why__grid">
+        <article class="rb-why__card rb-reveal">
+          <h3>Café de bienvenida</h3>
+          <p>Te recibimos con un café o un agüita fría. Esperar el turno también se disfruta.</p>
+        </article>
+        <article class="rb-why__card rb-reveal">
+          <h3>Barberos y barberas</h3>
+          <p>Un equipo completo, listo para atenderte con la técnica que pide tu corte.</p>
+        </article>
+        <article class="rb-why__card rb-reveal">
+          <h3>Como tú lo pides</h3>
+          <p>Escuchamos primero. El corte queda tal como lo tenías en mente.</p>
+        </article>
+        <article class="rb-why__card rb-reveal">
+          <h3>Buen ambiente</h3>
+          <p>Un lugar bonito y bien cuidado donde da gusto pasar el rato.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- barber-pole divider -->
+  <div class="rb-pole" role="presentation"></div>
+
+  <!-- ================= PRUEBA SOCIAL / RESEÑAS ================= -->
+  <section class="rb-reviews" aria-labelledby="rev-h">
+    <div class="rb-wrap">
+      <div class="rb-reviews__head">
+        <div class="rb-score">
+          <span class="rb-score__num">4.8</span>
+          <span class="rb-score__stars" aria-hidden="true">★★★★★</span>
+          <span class="rb-score__label">422 reseñas en Google</span>
+        </div>
+        <div>
+          <p class="rb-kicker"><span class="rb-mark" aria-hidden="true"></span> En sus palabras</p>
+          <h2 id="rev-h" class="rb-h2">Nos lo dicen sus clientes</h2>
+        </div>
+      </div>
+
+      <div class="rb-reviews__grid">
+        {resenas.map((r) => (
+          <figure class="rb-review rb-reveal">
+            <span class="rb-review__stripe" aria-hidden="true"></span>
+            <blockquote class="rb-review__text">{r.texto}</blockquote>
+            <figcaption class="rb-review__by">
+              <strong>{r.autor}</strong>
+              <span>{r.cuando}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <a class="rb-textlink" href={negocio.mapsUrl} target="_blank" rel="noopener">
+        Leer más reseñas en Google →
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= ATRIBUTOS ================= -->
+  <section class="rb-attrs" aria-label="Servicios y facilidades del local">
+    <div class="rb-wrap rb-attrs__row">
+      <span class="rb-attr">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="2"/><path d="M2.5 9.5h19"/></svg>
+        Acepta tarjetas
+      </span>
+      <span class="rb-attr">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3.5" width="16" height="17" rx="2"/><path d="M8.5 16v-8.5h4a2.75 2.75 0 0 1 0 5.5h-4"/></svg>
+        Estacionamiento
+      </span>
+      <span class="rb-attr">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="4.5" r="1.8"/><path d="M9.5 8v5h4l3 5"/><path d="M13.5 15.5a4.5 4.5 0 1 1-4.5-4.5"/></svg>
+        Acceso silla de ruedas
+      </span>
+    </div>
+  </section>
+
+  <!-- ================= UBICACIÓN Y HORARIOS ================= -->
+  <section class="rb-loc" aria-labelledby="loc-h">
+    <div class="rb-wrap rb-loc__grid">
+      <div class="rb-loc__info">
+        <p class="rb-kicker"><span class="rb-mark" aria-hidden="true"></span> Dónde estamos</p>
+        <h2 id="loc-h" class="rb-h2">Francisco de Montejo, Mérida</h2>
+        <p class="rb-loc__addr">C. 46 423, Francisco de Montejo, 97203 Mérida, Yuc.</p>
+
+        <table class="rb-hours">
+          <caption class="rb-visually-hidden">Horarios de atención</caption>
+          <tbody>
+            <tr>
+              <th scope="row">Lunes a sábado</th>
+              <td>10:00 – 20:00</td>
+            </tr>
+            <tr>
+              <th scope="row">Domingo</th>
+              <td class="rb-hours__closed">Cerrado</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="rb-loc__btns">
+          <a class="rb-btn rb-btn--navy" href={negocio.mapsUrl} target="_blank" rel="noopener">Ver en Google Maps</a>
+          <a class="rb-btn rb-btn--ghost rb-btn--ghost-dark" href={`tel:+52${negocio.telefono.replace(/\s/g, '')}`}>Llamar</a>
+        </div>
+      </div>
+
+      <div class="rb-loc__map">
+        <iframe
+          title="Mapa de Real Barber Shop en Francisco de Montejo, Mérida"
+          src={mapEmbed}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="rb-final">
+    <div class="rb-pole rb-pole--top" role="presentation"></div>
+    <div class="rb-wrap rb-final__inner">
+      <h2 class="rb-final__title">¿Listo para tu próximo corte?</h2>
+      <p class="rb-final__sub">Mándanos un mensaje y aparta tu lugar. El café ya lo tenemos listo.</p>
+      <a class="rb-btn rb-btn--red rb-btn--lg" href={negocio.whatsapp} target="_blank" rel="noopener">
+        <span aria-hidden="true">💈</span> Escríbenos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="rb-footer">
+    <div class="rb-wrap rb-footer__inner">
+      <p class="rb-footer__name">Real Barber Shop</p>
+      <p class="rb-footer__meta">
+        <a href={`tel:+52${negocio.telefono.replace(/\s/g, '')}`}>{negocio.telefono}</a>
+        <span aria-hidden="true">·</span>
+        C. 46 423, Francisco de Montejo, Mérida
+      </p>
+      <p class="rb-footer__note">Barbería &amp; peluquería · Desde 1995 · Lun a sáb 10:00–20:00</p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --marino: #142a3d;
+      --marino-2: #0f2130;
+      --acero: #3c4b5a;
+      --hueso: #f4ecdb;
+      --hueso-2: #fbf6ec;
+      --rojo: #c0272d;
+      --rojo-2: #a71f25;
+      --cromo: #aeb6bc;
+      --tinta: #16202b;
+      --blanco: #fbfbf7;
+      --pole: repeating-linear-gradient(
+        45deg,
+        var(--rojo) 0 15px,
+        var(--blanco) 15px 30px,
+        var(--marino) 30px 45px,
+        var(--blanco) 45px 60px
+      );
+    }
+
+    body {
+      font-family: 'Archivo', system-ui, sans-serif;
+      color: var(--tinta);
+      background: var(--hueso);
+      line-height: 1.6;
+      font-size: 17px;
+      overflow-x: hidden;
+    }
+
+    .rb-wrap {
+      width: 100%;
+      max-width: 1120px;
+      margin-inline: auto;
+      padding-inline: clamp(1.15rem, 5vw, 3rem);
+    }
+
+    /* ---------- shared type ---------- */
+    .rb-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-family: 'Staatliches', sans-serif;
+      font-size: 0.98rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--rojo);
+      margin: 0 0 0.9rem;
+    }
+    .rb-kicker--light { color: #e7b7b9; }
+    .rb-mark {
+      width: 30px;
+      height: 12px;
+      border-radius: 2px;
+      background-image: var(--pole);
+      display: inline-block;
+      flex: none;
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+    }
+
+    .rb-h2 {
+      font-family: 'Staatliches', sans-serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 6.5vw, 3.4rem);
+      line-height: 0.98;
+      letter-spacing: 0.01em;
+      text-transform: uppercase;
+      margin: 0 0 1.1rem;
+      color: var(--marino);
+    }
+    .rb-h2--light { color: var(--hueso); }
+
+    .rb-lead {
+      font-size: clamp(1.12rem, 2.6vw, 1.35rem);
+      font-weight: 500;
+      margin: 0 0 1rem;
+      color: var(--marino);
+    }
+    .rb-body { margin: 0 0 1rem; color: #33404c; }
+
+    /* ---------- barber-pole divider ---------- */
+    .rb-pole {
+      height: 16px;
+      width: 100%;
+      background-image: var(--pole);
+      animation: rb-pole-move 2.6s linear infinite;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+    }
+    @keyframes rb-pole-move {
+      from { background-position: 0 0; }
+      to { background-position: 84.85px 0; }
+    }
+
+    /* ---------- buttons ---------- */
+    .rb-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Staatliches', sans-serif;
+      font-size: 1.12rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.85rem 1.5rem;
+      border-radius: 3px;
+      transition: transform 0.15s ease, background-color 0.15s ease,
+        color 0.15s ease, box-shadow 0.15s ease;
+      border: 2px solid transparent;
+    }
+    .rb-btn:hover { transform: translateY(-2px); }
+    .rb-btn--red {
+      background: var(--rojo);
+      color: var(--blanco);
+      box-shadow: 0 8px 20px -8px rgba(192, 39, 45, 0.8);
+    }
+    .rb-btn--red:hover { background: var(--rojo-2); }
+    .rb-btn--navy { background: var(--marino); color: var(--hueso); }
+    .rb-btn--navy:hover { background: var(--marino-2); }
+    .rb-btn--ghost {
+      color: var(--hueso);
+      border-color: rgba(244, 236, 219, 0.55);
+      background: rgba(255, 255, 255, 0.04);
+    }
+    .rb-btn--ghost:hover { border-color: var(--hueso); background: rgba(255, 255, 255, 0.1); }
+    .rb-btn--ghost-dark {
+      color: var(--marino);
+      border-color: rgba(20, 42, 61, 0.4);
+      background: transparent;
+    }
+    .rb-btn--ghost-dark:hover { border-color: var(--marino); background: rgba(20, 42, 61, 0.06); }
+    .rb-btn--lg { font-size: 1.28rem; padding: 1rem 2rem; }
+
+    /* ---------- HERO ---------- */
+    .rb-hero {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .rb-hero__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 60% center;
+      z-index: -2;
+    }
+    .rb-hero__scrim {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(
+          180deg,
+          rgba(15, 33, 48, 0.55) 0%,
+          rgba(15, 33, 48, 0.35) 38%,
+          rgba(13, 27, 40, 0.88) 82%,
+          rgba(11, 23, 34, 0.97) 100%
+        );
+    }
+    .rb-hero__inner {
+      padding-top: 6rem;
+      padding-bottom: clamp(2.5rem, 6vw, 4rem);
+      color: var(--hueso);
+    }
+    .rb-hero__title {
+      font-family: 'Staatliches', sans-serif;
+      font-weight: 400;
+      font-size: clamp(3.4rem, 15vw, 7.5rem);
+      line-height: 0.86;
+      letter-spacing: 0.005em;
+      text-transform: uppercase;
+      margin: 0 0 1.1rem;
+      text-shadow: 0 3px 24px rgba(0, 0, 0, 0.45);
+    }
+    .rb-hero__title em {
+      font-style: normal;
+      color: #ef6a6f;
+    }
+    .rb-hero__sub {
+      font-size: clamp(1.05rem, 3vw, 1.3rem);
+      max-width: 33ch;
+      margin: 0 0 1.4rem;
+      color: #e7ddca;
+    }
+    .rb-hero__rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.98rem;
+      font-weight: 600;
+      background: rgba(11, 23, 34, 0.5);
+      border: 1px solid rgba(244, 236, 219, 0.25);
+      padding: 0.5rem 0.9rem;
+      border-radius: 40px;
+      margin-bottom: 1.6rem;
+      backdrop-filter: blur(4px);
+    }
+    .rb-hero__rating strong { font-size: 1.1rem; }
+    .rb-hero__rating-sep { opacity: 0.5; }
+    .rb-stars { color: #f2b705; letter-spacing: 0.08em; }
+    .rb-hero__cta { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+    /* ---------- ABOUT ---------- */
+    .rb-about { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--hueso); }
+    .rb-about__grid { display: grid; gap: 2.5rem; }
+    .rb-quote {
+      position: relative;
+      background: var(--blanco);
+      border: 1px solid #e6dcc6;
+      border-radius: 4px;
+      padding: 1.8rem 1.6rem 1.6rem 2.2rem;
+      box-shadow: 0 20px 40px -30px rgba(20, 42, 61, 0.55);
+      align-self: start;
+    }
+    .rb-quote__stripe {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 10px;
+      border-radius: 4px 0 0 4px;
+      background-image: var(--pole);
+    }
+    .rb-quote__text {
+      font-family: 'Staatliches', sans-serif;
+      font-size: 1.55rem;
+      line-height: 1.15;
+      color: var(--marino);
+      margin: 0 0 0.9rem;
+      letter-spacing: 0.01em;
+    }
+    .rb-quote__by { margin: 0; font-size: 0.9rem; color: var(--rojo); font-weight: 600; }
+
+    /* ---------- SERVICIOS ---------- */
+    .rb-serv { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--hueso-2); border-top: 1px solid #ece2cf; }
+    .rb-serv__list {
+      list-style: none;
+      margin: 1.8rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+    }
+    .rb-serv__item {
+      background: var(--blanco);
+      border: 1px solid #e6dcc6;
+      border-left: 6px solid var(--marino);
+      border-radius: 3px;
+      padding: 1.15rem 1.3rem;
+    }
+    .rb-serv__no {
+      display: block;
+      font-family: 'Staatliches', sans-serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--marino);
+      margin-bottom: 0.15rem;
+    }
+    .rb-serv__item p { margin: 0; color: #45525e; font-size: 0.98rem; }
+
+    /* ---------- GALERÍA ---------- */
+    .rb-gallery-sec { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--marino); }
+    .rb-gallery-sec .rb-h2 { color: var(--hueso); }
+    .rb-gallery-sec .rb-kicker { color: #e7b7b9; }
+    .rb-gallery {
+      margin-top: 1.6rem;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+    .rb-gallery__fig {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 4px;
+      border: 3px solid rgba(244, 236, 219, 0.9);
+      background: var(--marino-2);
+    }
+    .rb-gallery__fig--wide { grid-column: 1 / -1; }
+    .rb-gallery__fig img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 1 / 1;
+      transition: transform 0.5s ease;
+    }
+    .rb-gallery__fig--wide img { aspect-ratio: 16 / 10; }
+    .rb-gallery__fig:hover img { transform: scale(1.04); }
+
+    /* ---------- POR QUÉ ---------- */
+    .rb-why { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--acero); }
+    .rb-why__grid {
+      margin-top: 1.8rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .rb-why__card {
+      background: rgba(15, 33, 48, 0.42);
+      border: 1px solid rgba(244, 236, 219, 0.18);
+      border-top: 4px solid var(--rojo);
+      border-radius: 3px;
+      padding: 1.4rem 1.4rem 1.5rem;
+    }
+    .rb-why__card h3 {
+      font-family: 'Staatliches', sans-serif;
+      font-weight: 400;
+      font-size: 1.45rem;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--hueso);
+      margin: 0 0 0.4rem;
+    }
+    .rb-why__card p { margin: 0; color: #d7dee4; font-size: 0.98rem; }
+
+    /* ---------- RESEÑAS ---------- */
+    .rb-reviews { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--hueso); }
+    .rb-reviews__head {
+      display: grid;
+      gap: 1.6rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .rb-score {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background: var(--marino);
+      color: var(--hueso);
+      padding: 1.1rem 1.4rem;
+      border-radius: 4px;
+      align-self: start;
+      box-shadow: 0 18px 36px -26px rgba(20, 42, 61, 0.8);
+    }
+    .rb-score__num {
+      font-family: 'Staatliches', sans-serif;
+      font-size: 3.6rem;
+      line-height: 0.9;
+    }
+    .rb-score__stars { color: #f2b705; letter-spacing: 0.1em; font-size: 1.1rem; }
+    .rb-score__label { font-size: 0.86rem; color: #cbd4dc; margin-top: 0.3rem; }
+
+    .rb-reviews__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .rb-review {
+      position: relative;
+      background: var(--blanco);
+      border: 1px solid #e6dcc6;
+      border-radius: 4px;
+      padding: 1.5rem 1.5rem 1.4rem 2rem;
+      margin: 0;
+      box-shadow: 0 16px 32px -28px rgba(20, 42, 61, 0.5);
+    }
+    .rb-review__stripe {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 8px;
+      border-radius: 4px 0 0 4px;
+      background-image: var(--pole);
+    }
+    .rb-review__text {
+      margin: 0 0 1rem;
+      font-size: 1.05rem;
+      color: #2a3742;
+      quotes: '\201C''\201D';
+    }
+    .rb-review__by {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.3;
+    }
+    .rb-review__by strong { color: var(--marino); font-size: 1rem; }
+    .rb-review__by span { color: #8a7f6b; font-size: 0.85rem; }
+
+    .rb-textlink {
+      display: inline-block;
+      margin-top: 1.8rem;
+      font-family: 'Staatliches', sans-serif;
+      font-size: 1.15rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--rojo);
+      text-decoration: none;
+      border-bottom: 2px solid transparent;
+    }
+    .rb-textlink:hover { border-bottom-color: var(--rojo); }
+
+    /* ---------- ATRIBUTOS ---------- */
+    .rb-attrs { background: var(--marino-2); padding: 1.3rem 0; }
+    .rb-attrs__row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem 1.6rem;
+      justify-content: center;
+    }
+    .rb-attr {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      color: var(--hueso);
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .rb-attr svg {
+      width: 22px;
+      height: 22px;
+      fill: none;
+      stroke: var(--rojo);
+      stroke-width: 1.7;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex: none;
+    }
+
+    /* ---------- UBICACIÓN ---------- */
+    .rb-loc { padding: clamp(3.5rem, 8vw, 6rem) 0; background: var(--hueso); }
+    .rb-loc__grid { display: grid; gap: 2rem; align-items: start; }
+    .rb-loc__addr { font-weight: 600; color: var(--marino); margin: 0 0 1.4rem; }
+    .rb-hours {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--blanco);
+      border: 1px solid #e6dcc6;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .rb-hours th, .rb-hours td {
+      text-align: left;
+      padding: 0.85rem 1.1rem;
+      border-bottom: 1px solid #ece2cf;
+    }
+    .rb-hours tr:last-child th, .rb-hours tr:last-child td { border-bottom: 0; }
+    .rb-hours th {
+      font-family: 'Staatliches', sans-serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--marino);
+    }
+    .rb-hours td { text-align: right; font-weight: 600; color: #33404c; }
+    .rb-hours__closed { color: var(--rojo); }
+    .rb-loc__btns { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .rb-loc__map {
+      border: 3px solid var(--marino);
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 24px 44px -34px rgba(20, 42, 61, 0.7);
+    }
+    .rb-loc__map iframe {
+      display: block;
+      width: 100%;
+      height: 340px;
+      border: 0;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .rb-final { position: relative; background: var(--marino); color: var(--hueso); }
+    .rb-pole--top { position: static; }
+    .rb-final__inner {
+      padding: clamp(3.5rem, 8vw, 5.5rem) clamp(1.15rem, 5vw, 3rem);
+      text-align: center;
+    }
+    .rb-final__title {
+      font-family: 'Staatliches', sans-serif;
+      font-weight: 400;
+      font-size: clamp(2.2rem, 7vw, 3.6rem);
+      line-height: 0.95;
+      text-transform: uppercase;
+      margin: 0 0 0.7rem;
+    }
+    .rb-final__sub {
+      max-width: 44ch;
+      margin: 0 auto 1.8rem;
+      color: #d7dee4;
+      font-size: 1.08rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    .rb-footer {
+      background: var(--marino-2);
+      color: var(--hueso);
+      padding: 2.4rem 0 90px;
+      text-align: center;
+    }
+    .rb-footer__name {
+      font-family: 'Staatliches', sans-serif;
+      font-size: 1.7rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin: 0 0 0.4rem;
+    }
+    .rb-footer__meta { margin: 0 0 0.4rem; color: #cbd4dc; font-size: 0.95rem; }
+    .rb-footer__meta a { color: var(--hueso); font-weight: 600; text-decoration: none; }
+    .rb-footer__meta a:hover { text-decoration: underline; }
+    .rb-footer__note { margin: 0; color: #8fa0ad; font-size: 0.82rem; letter-spacing: 0.02em; }
+
+    .rb-visually-hidden {
+      position: absolute;
+      width: 1px; height: 1px;
+      padding: 0; margin: -1px;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    /* ---------- reveal (progressive) ---------- */
+    .rb-js .rb-reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .rb-js .rb-reveal.is-in { opacity: 1; transform: none; }
+
+    /* ---------- focus ---------- */
+    a:focus-visible, iframe:focus-visible {
+      outline: 3px solid var(--rojo);
+      outline-offset: 3px;
+      border-radius: 2px;
+    }
+    .rb-hero a:focus-visible, .rb-final a:focus-visible { outline-color: #f2b705; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rb-gallery__fig:hover img { transform: none; }
+      .rb-btn:hover { transform: none; }
+    }
+
+    /* ---------- responsive ---------- */
+    @media (min-width: 720px) {
+      .rb-about__grid { grid-template-columns: 1.35fr 0.9fr; gap: 3rem; }
+      .rb-serv__list { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
+      .rb-why__grid { grid-template-columns: repeat(2, 1fr); gap: 1.1rem; }
+      .rb-reviews__head { grid-template-columns: auto 1fr; gap: 2rem; }
+      .rb-reviews__grid { grid-template-columns: repeat(2, 1fr); }
+      .rb-gallery { grid-template-columns: repeat(3, 1fr); }
+      .rb-gallery__fig--wide { grid-column: span 2; }
+      .rb-gallery__fig--wide img { aspect-ratio: 4 / 3; }
+      .rb-loc__grid { grid-template-columns: 0.95fr 1.05fr; gap: 2.5rem; }
+      .rb-loc__map iframe { height: 100%; min-height: 420px; }
+    }
+    @media (min-width: 1000px) {
+      .rb-why__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('rb-js');
+      var els = document.querySelectorAll('.rb-reveal');
+      if (!('IntersectionObserver' in window) || els.length === 0) {
+        els.forEach(function (el) { el.classList.add('is-in'); });
+        return;
+      }
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('is-in');
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.14, rootMargin: '0px 0px -8% 0px' }
+      );
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

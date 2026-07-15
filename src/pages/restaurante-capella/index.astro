@@ -1,0 +1,926 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const nombre = 'Restaurante Capella';
+const telefono = '999 930 6999';
+const whatsapp = 'https://wa.me/529999306999';
+const mapsUrl = 'https://maps.google.com/?cid=17974622470568509726&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const direccion = 'C. 26 216, Col. Altabrisa, 97133 Mérida, Yuc., México';
+const mapSrc =
+  'https://www.google.com/maps?q=C.%2026%20216%2C%20Col.%20Altabrisa%2C%2097133%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed';
+
+const waReserva = whatsapp + '?text=' + encodeURIComponent('Hola, vi su página y quiero reservar una mesa en Capella.');
+const waSaludo = whatsapp + '?text=' + encodeURIComponent('Hola, vi su página de Capella y me gustaría más información.');
+
+const horarios = [
+  ['Lunes', '7:00 – 23:45'],
+  ['Martes', '7:00 – 23:45'],
+  ['Miércoles', '7:00 – 23:45'],
+  ['Jueves', '7:00 – 23:45'],
+  ['Viernes', '7:00 – 23:45'],
+  ['Sábado', '7:00 – 23:45'],
+  ['Domingo', '7:00 – 23:45'],
+];
+
+const atributos = [
+  'Reservaciones',
+  'Terraza al aire libre',
+  'Servicio en el local',
+  'Servicio a domicilio',
+  'Para llevar',
+  'Café',
+  'Pago con tarjeta',
+  'Estacionamiento',
+  'Acceso silla de ruedas',
+];
+
+const momentos = [
+  {
+    hora: '07:00',
+    titulo: 'Desayunos',
+    texto: 'Buffet de la mañana: platillos regionales, hot cakes, frutas de la temporada y café recién hecho.',
+  },
+  {
+    hora: '14:00',
+    titulo: 'Comidas',
+    texto: 'La comida de casa, con la variedad de guisos y las salsas que hacen volver fin de semana tras fin de semana.',
+  },
+  {
+    hora: '20:00',
+    titulo: 'Cenas',
+    texto: 'Cenas tranquilas bajo luz cálida, con servicio en el comedor o afuera, en la terraza entre jardines.',
+  },
+  {
+    hora: '23:45',
+    titulo: 'Café y dulce',
+    texto: 'Repostería de la casa para cerrar la noche: pays, buñuelos y algo dulce siempre a la mano.',
+  },
+];
+
+const galeria = [
+  ['foto_1.jpg', 'Nuestra terraza entre jardines'],
+  ['foto_5.jpg', 'El comedor, con luz cálida'],
+  ['foto_4.jpg', 'Buffet de desayuno regional'],
+  ['foto_2.jpg', 'Pan dulce y café de la mañana'],
+  ['foto_3.jpg', 'Postres de la casa'],
+];
+
+const resenas = [
+  {
+    autor: 'Alejandro Oxte Pool',
+    cuando: 'Hace 1 mes',
+    texto: 'La iluminación y la música crean una atmósfera cálida y relajante que hace una experiencia muy agradable.',
+  },
+  {
+    autor: 'LIZ ALAMILLA',
+    cuando: 'Hace 1 mes',
+    texto: '…la comida basada en platillos regionales, como de costumbre es exquisita, los ingredientes, las frutas, las salsas y jugos naturales, propios para repetir y disfrutar.',
+  },
+  {
+    autor: 'Milch Tarot',
+    cuando: 'Hace 3 semanas',
+    texto: '…resultó excelente para desayuno familiar. Celebramos cumpleaños y el buffet riquísimo, mas la atención a la cumpleañera…',
+  },
+  {
+    autor: 'Alejandra Cen',
+    cuando: 'Hace 1 mes',
+    texto: 'Excelente servicio y variedad de comida. El ambiente es muy tranquilo y relajante.',
+  },
+];
+---
+<BaseLayout
+  title="Restaurante Capella · Cocina yucateca en Mérida"
+  description="Buffet de cocina yucateca, terraza entre jardines y una atmósfera cálida en Altabrisa. ⭐ 4.6 · 718 reseñas en Google. Reserva por WhatsApp."
+  slug="restaurante-capella"
+  ogImage="/restaurante-capella/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Manrope:wght@400;500;600;700&display=swap"
+  favicon="🌟"
+  themeColor="#0B1A2F"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <main class="cap">
+
+    <!-- HERO -->
+    <header class="cap-hero">
+      <svg class="cap-constellation" viewBox="0 0 440 320" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+        <g class="cap-lines">
+          <path d="M120 90 L250 70 L340 148 L296 252 L168 244 L74 162 Z" />
+          <path d="M120 90 L168 244" />
+        </g>
+        <g class="cap-stars">
+          <circle class="cap-tw cap-capella" cx="120" cy="90" r="3.6" />
+          <circle class="cap-tw" cx="250" cy="70" r="2.2" />
+          <circle class="cap-tw" cx="340" cy="148" r="2" />
+          <circle class="cap-tw" cx="296" cy="252" r="2.2" />
+          <circle class="cap-tw" cx="168" cy="244" r="2" />
+          <circle class="cap-tw" cx="74" cy="162" r="1.8" />
+          <circle class="cap-dust" cx="200" cy="150" r="1" />
+          <circle class="cap-dust" cx="380" cy="90" r="1" />
+          <circle class="cap-dust" cx="60" cy="60" r="1" />
+          <circle class="cap-dust" cx="240" cy="300" r="1" />
+          <circle class="cap-dust" cx="410" cy="230" r="1" />
+        </g>
+      </svg>
+
+      <div class="cap-hero__inner">
+        <p class="cap-eyebrow">Mérida · Altabrisa</p>
+        <p class="cap-hero__over">Restaurante</p>
+        <h1 class="cap-hero__mark">Capella</h1>
+        <p class="cap-hero__hook">
+          Cocina yucateca y una atmósfera cálida, del desayuno a la cena.
+        </p>
+        <p class="cap-rating cap-rating--hero">
+          <span class="cap-stars-glyph" aria-hidden="true">★★★★★</span>
+          <span><strong>4.6</strong> · 718 reseñas en Google</span>
+        </p>
+        <div class="cap-actions">
+          <a class="cap-btn cap-btn--gold" href={waReserva} target="_blank" rel="noopener">Reservar por WhatsApp</a>
+          <a class="cap-btn cap-btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="cap-hero__scroll" aria-hidden="true">
+        <span>De sol a sol</span>
+      </div>
+    </header>
+
+    <!-- QUIÉNES SOMOS -->
+    <section class="cap-intro" aria-labelledby="cap-intro-t">
+      <div class="cap-wrap cap-reveal">
+        <p class="cap-eyebrow cap-eyebrow--gold">Bienvenidos</p>
+        <h2 id="cap-intro-t" class="cap-h2">Una mesa lista a cualquier hora del día</h2>
+        <div class="cap-intro__body">
+          <p>
+            Somos el restaurante en el corazón de Altabrisa: un comedor amplio y una
+            terraza entre jardines donde el día empieza con café y termina con una cena
+            sin reloj. Nuestra cocina es yucateca y de casa —platillos regionales servidos
+            en buffet, frutas de la temporada, salsas y jugos naturales— pensada para
+            repetir sin prisa.
+          </p>
+          <p>
+            Lo que más nos dicen quienes nos visitan es que aquí se está a gusto: la
+            iluminación, la música y el trato de nuestro equipo hacen una atmósfera cálida
+            y relajante, lista para un desayuno en familia, una comida de diario o una cena
+            tranquila. Abrimos todos los días, de las 7 de la mañana a casi la medianoche.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MOMENTOS DEL DÍA -->
+    <section class="cap-momentos" aria-labelledby="cap-mom-t">
+      <div class="cap-wrap">
+        <div class="cap-section-head cap-reveal">
+          <span class="cap-divider" aria-hidden="true">
+            <svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 0 L9.6 6.4 L16 8 L9.6 9.6 L8 16 L6.4 9.6 L0 8 L6.4 6.4 Z"/></svg>
+          </span>
+          <h2 id="cap-mom-t" class="cap-h2">Del amanecer a la medianoche</h2>
+          <p class="cap-lead">Un solo lugar para cada momento del día, todos los días de la semana.</p>
+        </div>
+        <ol class="cap-mom-grid">
+          {momentos.map((m) => (
+            <li class="cap-mom cap-reveal">
+              <span class="cap-mom__hora">{m.hora}</span>
+              <h3 class="cap-mom__title">{m.titulo}</h3>
+              <p class="cap-mom__text">{m.texto}</p>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+
+    <!-- ATRIBUTOS -->
+    <section class="cap-attrs" aria-labelledby="cap-attr-t">
+      <div class="cap-wrap cap-reveal">
+        <h2 id="cap-attr-t" class="cap-h3-eyebrow">Todo lo que ofrecemos</h2>
+        <ul class="cap-attr-list">
+          {atributos.map((a) => (
+            <li class="cap-chip">
+              <svg viewBox="0 0 16 16" width="12" height="12" aria-hidden="true"><path d="M8 0 L9.6 6.4 L16 8 L9.6 9.6 L8 16 L6.4 9.6 L0 8 L6.4 6.4 Z"/></svg>
+              {a}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section class="cap-galeria" aria-labelledby="cap-gal-t">
+      <div class="cap-wrap">
+        <div class="cap-section-head cap-reveal">
+          <h2 id="cap-gal-t" class="cap-h2">La casa, plato por plato</h2>
+        </div>
+        <div class="cap-mosaic">
+          {galeria.map(([src, alt], i) => (
+            <figure class={`cap-shot cap-shot--${i} cap-reveal`}>
+              <img src={`/restaurante-capella/img/${src}`} alt={alt} loading="lazy" decoding="async" width="1200" height="800" />
+              <figcaption>{alt}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA INTERMEDIO -->
+    <section class="cap-cta-band" aria-label="Reservar">
+      <div class="cap-wrap cap-cta-band__inner cap-reveal">
+        <p class="cap-cta-band__text">¿Quieres apartar tu mesa? Escríbenos y te confirmamos.</p>
+        <a class="cap-btn cap-btn--gold" href={waReserva} target="_blank" rel="noopener">Reservar por WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- RESEÑAS -->
+    <section class="cap-resenas" aria-labelledby="cap-res-t">
+      <div class="cap-wrap">
+        <div class="cap-section-head cap-reveal">
+          <p class="cap-eyebrow cap-eyebrow--gold">Lo que dicen en Google</p>
+          <h2 id="cap-res-t" class="cap-h2">
+            <span class="cap-big-rating">4.6</span>
+            <span class="cap-big-rating__side">
+              <span class="cap-stars-glyph" aria-hidden="true">★★★★★</span>
+              <span class="cap-big-rating__count">718 reseñas</span>
+            </span>
+          </h2>
+        </div>
+        <div class="cap-res-grid">
+          {resenas.map((r) => (
+            <figure class="cap-quote cap-reveal">
+              <span class="cap-quote__stars" aria-hidden="true">★★★★★</span>
+              <blockquote>{r.texto}</blockquote>
+              <figcaption>
+                <strong>{r.autor}</strong>
+                <span>{r.cuando}</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+        <div class="cap-res-more cap-reveal">
+          <a class="cap-btn cap-btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- VINO DE LA CASA (inversión clara) -->
+    <section class="cap-vino" aria-labelledby="cap-vino-t">
+      <div class="cap-wrap cap-vino__inner cap-reveal">
+        <span class="cap-divider cap-divider--dark" aria-hidden="true">
+          <svg viewBox="0 0 16 16" width="14" height="14"><path d="M8 0 L9.6 6.4 L16 8 L9.6 9.6 L8 16 L6.4 9.6 L0 8 L6.4 6.4 Z"/></svg>
+        </span>
+        <p class="cap-eyebrow cap-eyebrow--ink" id="cap-vino-t">El vino de la casa</p>
+        <blockquote class="cap-vino__quote">
+          «Cuentan con un vino del lugar que ha sido premiado en Europa.»
+        </blockquote>
+        <p class="cap-vino__by">— Emmanuelle Gutiérrez y Restrepo, reseña en Google</p>
+        <p class="cap-vino__note">Pregúntanos por él la próxima vez que nos visites.</p>
+      </div>
+    </section>
+
+    <!-- UBICACIÓN Y HORARIOS -->
+    <section class="cap-ubi" aria-labelledby="cap-ubi-t">
+      <div class="cap-wrap">
+        <div class="cap-section-head cap-reveal">
+          <h2 id="cap-ubi-t" class="cap-h2">Dónde y cuándo</h2>
+        </div>
+        <div class="cap-ubi__grid">
+          <div class="cap-ubi__info cap-reveal">
+            <div class="cap-ubi__block">
+              <p class="cap-ubi__label">Dirección</p>
+              <p class="cap-ubi__addr">C. 26 216, Col. Altabrisa<br />97133 Mérida, Yucatán</p>
+              <a class="cap-textlink" href={mapsUrl} target="_blank" rel="noopener">Abrir en Google Maps →</a>
+            </div>
+            <div class="cap-ubi__block">
+              <p class="cap-ubi__label">Horario</p>
+              <p class="cap-ubi__hoursline">Todos los días · 7:00 a 23:45</p>
+              <table class="cap-hours">
+                <tbody>
+                  {horarios.map(([dia, h]) => (
+                    <tr>
+                      <th scope="row">{dia}</th>
+                      <td>{h}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="cap-ubi__map cap-reveal">
+            <iframe
+              title="Ubicación de Restaurante Capella en el mapa"
+              src={mapSrc}
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cap-final" aria-labelledby="cap-final-t">
+      <svg class="cap-constellation cap-constellation--final" viewBox="0 0 440 320" aria-hidden="true" preserveAspectRatio="xMidYMid meet">
+        <g class="cap-lines">
+          <path d="M120 90 L250 70 L340 148 L296 252 L168 244 L74 162 Z" />
+        </g>
+        <g class="cap-stars">
+          <circle class="cap-capella" cx="120" cy="90" r="3.4" />
+          <circle cx="250" cy="70" r="2" />
+          <circle cx="340" cy="148" r="1.8" />
+          <circle cx="296" cy="252" r="2" />
+          <circle cx="168" cy="244" r="1.8" />
+          <circle cx="74" cy="162" r="1.6" />
+        </g>
+      </svg>
+      <div class="cap-wrap cap-final__inner cap-reveal">
+        <p class="cap-eyebrow">Te esperamos</p>
+        <h2 id="cap-final-t" class="cap-final__title">Reserva tu mesa en Capella</h2>
+        <p class="cap-final__sub">Desayuno, comida o cena en Altabrisa. Escríbenos y con gusto te apartamos lugar.</p>
+        <div class="cap-actions cap-actions--center">
+          <a class="cap-btn cap-btn--gold" href={waReserva} target="_blank" rel="noopener">Reservar por WhatsApp</a>
+          <a class="cap-btn cap-btn--ghost" href={`tel:+52${telefono.replace(/\s/g, '')}`}>Llamar {telefono}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="cap-foot">
+      <div class="cap-wrap cap-foot__inner">
+        <div>
+          <p class="cap-foot__name">Restaurante Capella</p>
+          <p class="cap-foot__line">{direccion}</p>
+          <p class="cap-foot__line">Todos los días · 7:00 – 23:45</p>
+        </div>
+        <div class="cap-foot__contact">
+          <a href={`tel:+52${telefono.replace(/\s/g, '')}`}>{telefono}</a>
+          <a href={waSaludo} target="_blank" rel="noopener">WhatsApp</a>
+          <a href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <style is:global>
+    .cap {
+      --midnight: #0B1A2F;
+      --midnight-800: #12263F;
+      --midnight-700: #1B3454;
+      --gold: #C9A24E;
+      --gold-bright: #E6C983;
+      --ivory: #F4EEE0;
+      --ivory-dim: #C9C3B4;
+      --line: rgba(201, 162, 78, 0.22);
+
+      background: var(--midnight);
+      color: var(--ivory);
+      font-family: 'Manrope', system-ui, -apple-system, sans-serif;
+      font-size: 17px;
+      line-height: 1.65;
+      overflow-x: clip;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .cap * { box-sizing: border-box; }
+
+    .cap-wrap {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding-inline: 22px;
+    }
+
+    /* Reveal (mejora progresiva: visible sin JS) */
+    .cap-reveal { opacity: 1; transform: none; }
+    html.js .cap-reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }
+    html.js .cap-reveal.is-visible { opacity: 1; transform: none; }
+
+    /* Tipografía compartida */
+    .cap-h2 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(2rem, 7vw, 3.3rem);
+      line-height: 1.05;
+      letter-spacing: 0.01em;
+      margin: 0;
+      color: var(--ivory);
+    }
+    .cap-lead {
+      color: var(--ivory-dim);
+      max-width: 46ch;
+      margin: 0.7rem auto 0;
+      font-size: 1.02rem;
+    }
+    .cap-eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.32em;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--ivory-dim);
+      margin: 0 0 0.9rem;
+    }
+    .cap-eyebrow--gold { color: var(--gold); }
+    .cap-eyebrow--ink { color: #6A5321; }
+
+    /* ---------- HERO ---------- */
+    .cap-hero {
+      position: relative;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 64px 22px 88px;
+      overflow: hidden;
+      background:
+        radial-gradient(120% 90% at 50% -10%, #17324F 0%, rgba(23,50,79,0) 55%),
+        linear-gradient(180deg, #0C1D33 0%, #0B1A2F 60%, #081524 100%);
+    }
+    .cap-constellation {
+      position: absolute;
+      top: 6%;
+      right: -4%;
+      width: min(72vw, 460px);
+      height: auto;
+      opacity: 0.9;
+      pointer-events: none;
+    }
+    .cap-lines path {
+      fill: none;
+      stroke: var(--gold);
+      stroke-width: 0.8;
+      opacity: 0.45;
+    }
+    .cap-stars circle { fill: var(--gold-bright); }
+    .cap-stars .cap-dust { fill: var(--ivory); opacity: 0.5; }
+    .cap-capella {
+      fill: #FBEFCB;
+      filter: drop-shadow(0 0 6px rgba(230, 201, 131, 0.95)) drop-shadow(0 0 14px rgba(201, 162, 78, 0.6));
+    }
+    @keyframes cap-twinkle { 0%, 100% { opacity: 0.4; } 50% { opacity: 1; } }
+    .cap-tw { animation: cap-twinkle 4.5s ease-in-out infinite; }
+    .cap-tw:nth-child(1) { animation-delay: 0s; }
+    .cap-tw:nth-child(2) { animation-delay: 1.2s; }
+    .cap-tw:nth-child(3) { animation-delay: 2.1s; }
+    .cap-tw:nth-child(4) { animation-delay: 0.6s; }
+    .cap-tw:nth-child(5) { animation-delay: 3s; }
+    .cap-tw:nth-child(6) { animation-delay: 1.8s; }
+
+    .cap-hero__inner { position: relative; z-index: 2; max-width: 640px; }
+    .cap-hero__over {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.1rem, 4vw, 1.5rem);
+      color: var(--gold-bright);
+      margin: 0 0 -0.15em;
+      letter-spacing: 0.02em;
+    }
+    .cap-hero__mark {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(4.5rem, 24vw, 10rem);
+      line-height: 0.92;
+      letter-spacing: 0.005em;
+      margin: 0;
+      color: var(--ivory);
+      text-shadow: 0 2px 40px rgba(11, 26, 47, 0.6);
+    }
+    .cap-hero__hook {
+      font-size: clamp(1rem, 3.6vw, 1.28rem);
+      color: var(--ivory-dim);
+      max-width: 30ch;
+      margin: 1.1rem auto 0;
+      line-height: 1.5;
+    }
+    .cap-rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      font-size: 0.95rem;
+      color: var(--ivory);
+    }
+    .cap-rating strong { font-weight: 700; }
+    .cap-rating--hero {
+      margin: 1.4rem auto 0;
+      padding: 0.4rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(18, 38, 63, 0.5);
+    }
+    .cap-stars-glyph { color: var(--gold); letter-spacing: 0.12em; font-size: 0.9em; }
+
+    .cap-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      justify-content: center;
+      margin-top: 1.8rem;
+    }
+    .cap-actions--center { margin-top: 2rem; }
+
+    .cap-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.5rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.98rem;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      transition: transform .15s ease, background-color .2s ease, color .2s ease, border-color .2s ease;
+    }
+    .cap-btn--gold {
+      background: linear-gradient(180deg, var(--gold-bright), var(--gold));
+      color: #2A1E05;
+      box-shadow: 0 8px 24px rgba(201, 162, 78, 0.28);
+    }
+    .cap-btn--gold:hover { transform: translateY(-2px); }
+    .cap-btn--ghost {
+      background: transparent;
+      color: var(--gold-bright);
+      border: 1px solid var(--line);
+    }
+    .cap-btn--ghost:hover { border-color: var(--gold); color: var(--ivory); }
+    .cap-btn:focus-visible { outline: 3px solid var(--gold-bright); outline-offset: 3px; }
+
+    .cap-hero__scroll {
+      position: absolute;
+      bottom: 26px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      font-size: 0.62rem;
+      color: var(--ivory-dim);
+    }
+    .cap-hero__scroll::after {
+      content: "";
+      display: block;
+      width: 1px;
+      height: 30px;
+      margin: 8px auto 0;
+      background: linear-gradient(var(--gold), transparent);
+    }
+
+    /* ---------- INTRO ---------- */
+    .cap-intro { padding: clamp(64px, 12vw, 120px) 0; }
+    .cap-intro .cap-wrap { max-width: 760px; text-align: center; }
+    .cap-intro__body {
+      margin-top: 1.6rem;
+      display: grid;
+      gap: 1.2rem;
+      text-align: left;
+    }
+    .cap-intro__body p { margin: 0; color: var(--ivory-dim); font-size: 1.05rem; }
+
+    /* ---------- MOMENTOS ---------- */
+    .cap-momentos {
+      padding: clamp(56px, 10vw, 104px) 0;
+      background: var(--midnight-800);
+      border-top: 1px solid rgba(201,162,78,0.12);
+      border-bottom: 1px solid rgba(201,162,78,0.12);
+    }
+    .cap-section-head { text-align: center; margin-bottom: 2.6rem; }
+    .cap-divider {
+      display: inline-flex;
+      color: var(--gold);
+      margin-bottom: 0.9rem;
+    }
+    .cap-divider svg { fill: currentColor; }
+    .cap-divider--dark { color: var(--gold); }
+
+    .cap-mom-grid {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: 1fr;
+      counter-reset: none;
+    }
+    .cap-mom {
+      position: relative;
+      padding: 1.6rem 1.5rem 1.7rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(27,52,84,0.5), rgba(18,38,63,0.3));
+    }
+    .cap-mom__hora {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.04em;
+    }
+    .cap-mom__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.7rem;
+      margin: 0.15rem 0 0.5rem;
+      color: var(--ivory);
+    }
+    .cap-mom__text { margin: 0; color: var(--ivory-dim); font-size: 0.98rem; }
+
+    /* ---------- ATRIBUTOS ---------- */
+    .cap-attrs { padding: clamp(48px, 9vw, 88px) 0; text-align: center; }
+    .cap-h3-eyebrow {
+      font-family: 'Manrope', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 0.26em;
+      font-size: 0.74rem;
+      font-weight: 600;
+      color: var(--ivory-dim);
+      margin: 0 0 1.6rem;
+    }
+    .cap-attr-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+    }
+    .cap-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.6rem 1rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: 0.9rem;
+      color: var(--ivory);
+      background: rgba(18, 38, 63, 0.4);
+    }
+    .cap-chip svg { fill: var(--gold); flex: none; }
+
+    /* ---------- GALERÍA ---------- */
+    .cap-galeria { padding: clamp(56px, 10vw, 104px) 0; }
+    .cap-mosaic {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .cap-shot {
+      position: relative;
+      margin: 0;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(201,162,78,0.14);
+    }
+    .cap-shot img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      aspect-ratio: 3 / 2;
+      transition: transform .6s ease;
+    }
+    .cap-shot:hover img { transform: scale(1.04); }
+    .cap-shot figcaption {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      padding: 1.4rem 1rem 0.9rem;
+      font-size: 0.86rem;
+      color: var(--ivory);
+      background: linear-gradient(transparent, rgba(8, 21, 36, 0.9));
+    }
+
+    /* ---------- CTA BAND ---------- */
+    .cap-cta-band {
+      padding: clamp(40px, 7vw, 64px) 0;
+      background:
+        radial-gradient(90% 140% at 50% 0%, rgba(201,162,78,0.12), transparent 60%),
+        var(--midnight-800);
+      border-top: 1px solid rgba(201,162,78,0.12);
+      border-bottom: 1px solid rgba(201,162,78,0.12);
+    }
+    .cap-cta-band__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.1rem;
+      text-align: center;
+    }
+    .cap-cta-band__text {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(1.5rem, 5.5vw, 2.2rem);
+      color: var(--ivory);
+      margin: 0;
+      max-width: 22ch;
+      line-height: 1.15;
+    }
+
+    /* ---------- RESEÑAS ---------- */
+    .cap-resenas { padding: clamp(56px, 10vw, 108px) 0; }
+    .cap-resenas .cap-h2 {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.9rem;
+    }
+    .cap-big-rating {
+      font-size: clamp(3.4rem, 14vw, 5.2rem);
+      line-height: 0.9;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .cap-big-rating__side { display: inline-flex; flex-direction: column; align-items: flex-start; gap: 0.15rem; }
+    .cap-big-rating__count { font-family: 'Manrope', sans-serif; font-size: 0.9rem; color: var(--ivory-dim); }
+    .cap-resenas .cap-stars-glyph { font-size: 1.05rem; }
+
+    .cap-res-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+    .cap-quote {
+      margin: 0;
+      padding: 1.6rem 1.5rem;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      background: var(--midnight-800);
+    }
+    .cap-quote__stars { color: var(--gold); letter-spacing: 0.14em; font-size: 0.85rem; }
+    .cap-quote blockquote {
+      margin: 0.7rem 0 1.1rem;
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.4rem;
+      line-height: 1.35;
+      color: var(--ivory);
+    }
+    .cap-quote figcaption { display: flex; flex-direction: column; }
+    .cap-quote figcaption strong { color: var(--gold-bright); font-weight: 600; font-size: 0.95rem; }
+    .cap-quote figcaption span { color: var(--ivory-dim); font-size: 0.82rem; }
+    .cap-res-more { text-align: center; margin-top: 2rem; }
+
+    /* ---------- VINO (inversión) ---------- */
+    .cap-vino {
+      padding: clamp(64px, 11vw, 120px) 0;
+      background: linear-gradient(180deg, #F4EEE0 0%, #EFE7D3 100%);
+      color: #2A2415;
+    }
+    .cap-vino__inner { max-width: 680px; text-align: center; }
+    .cap-vino__quote {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.7rem, 6vw, 2.8rem);
+      line-height: 1.25;
+      color: #1E2A3D;
+      margin: 0.6rem 0 1.2rem;
+    }
+    .cap-vino__by { color: #6A5321; font-weight: 600; font-size: 0.9rem; margin: 0 0 0.4rem; }
+    .cap-vino__note { color: #58503C; margin: 0; font-size: 1rem; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .cap-ubi { padding: clamp(56px, 10vw, 108px) 0; }
+    .cap-ubi__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.6rem;
+    }
+    .cap-ubi__info { display: grid; gap: 2rem; }
+    .cap-ubi__label {
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin: 0 0 0.5rem;
+    }
+    .cap-ubi__addr { margin: 0 0 0.7rem; font-size: 1.15rem; color: var(--ivory); line-height: 1.4; }
+    .cap-textlink { color: var(--gold-bright); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    .cap-textlink:hover { text-decoration: underline; text-underline-offset: 3px; }
+    .cap-ubi__hoursline {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--ivory);
+      margin: 0 0 0.9rem;
+    }
+    .cap-hours { width: 100%; border-collapse: collapse; max-width: 340px; }
+    .cap-hours th, .cap-hours td {
+      text-align: left;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(201,162,78,0.14);
+      font-size: 0.92rem;
+    }
+    .cap-hours th { font-weight: 500; color: var(--ivory-dim); }
+    .cap-hours td { text-align: right; color: var(--ivory); font-variant-numeric: tabular-nums; }
+    .cap-ubi__map {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      min-height: 300px;
+    }
+    .cap-ubi__map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; filter: saturate(0.9); }
+
+    /* ---------- FINAL ---------- */
+    .cap-final {
+      position: relative;
+      padding: clamp(72px, 13vw, 140px) 0;
+      text-align: center;
+      overflow: hidden;
+      background:
+        radial-gradient(100% 90% at 50% 0%, #16304C 0%, rgba(22,48,76,0) 60%),
+        linear-gradient(180deg, #0B1A2F, #081524);
+    }
+    .cap-constellation--final {
+      top: auto;
+      bottom: -8%;
+      left: 50%;
+      right: auto;
+      transform: translateX(-50%);
+      width: min(90vw, 520px);
+      opacity: 0.35;
+    }
+    .cap-final__inner { position: relative; z-index: 2; max-width: 620px; }
+    .cap-final__title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(2.4rem, 9vw, 4rem);
+      line-height: 1.02;
+      margin: 0 0 0.7rem;
+      color: var(--ivory);
+    }
+    .cap-final__sub { color: var(--ivory-dim); max-width: 40ch; margin: 0 auto; }
+
+    /* ---------- FOOTER ---------- */
+    .cap-foot {
+      background: #081524;
+      padding: 44px 0 96px;
+      border-top: 1px solid rgba(201,162,78,0.12);
+    }
+    .cap-foot__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+      justify-content: space-between;
+    }
+    .cap-foot__name {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 1.5rem;
+      color: var(--ivory);
+      margin: 0 0 0.4rem;
+    }
+    .cap-foot__line { margin: 0.1rem 0; color: var(--ivory-dim); font-size: 0.9rem; }
+    .cap-foot__contact { display: flex; flex-wrap: wrap; gap: 1.2rem; }
+    .cap-foot__contact a { color: var(--gold-bright); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    .cap-foot__contact a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+    a:focus-visible, .cap-textlink:focus-visible {
+      outline: 3px solid var(--gold-bright);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media (min-width: 620px) {
+      .cap-mom-grid { grid-template-columns: repeat(2, 1fr); }
+      .cap-res-grid { grid-template-columns: repeat(2, 1fr); }
+      .cap-mosaic {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: 220px;
+      }
+      .cap-shot img { aspect-ratio: auto; }
+      .cap-shot--0 { grid-column: span 2; grid-row: span 2; }
+      .cap-cta-band__inner { flex-direction: row; justify-content: space-between; text-align: left; }
+    }
+    @media (min-width: 900px) {
+      .cap-ubi__grid { grid-template-columns: 1fr 1.1fr; align-items: stretch; }
+      .cap-mosaic { grid-template-columns: repeat(3, 1fr); }
+      .cap-shot--0 { grid-column: span 2; grid-row: span 2; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cap-tw { animation: none; opacity: 0.85; }
+      .cap-shot:hover img { transform: none; }
+      .cap-btn--gold:hover { transform: none; }
+    }
+  </style>
+
+  <script is:inline>
+    document.documentElement.classList.add('js');
+    (function () {
+      var els = document.querySelectorAll('.cap-reveal');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

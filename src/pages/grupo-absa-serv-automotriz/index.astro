@@ -1,0 +1,602 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const whatsapp = 'https://wa.me/529996427499';
+const telefono = '999 642 7499';
+const mapsUrl = 'https://maps.google.com/?cid=9793522996047228888&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const direccion = '97138, Sta Maria Chuburná, 97138 Mérida, Yuc., México';
+const mapQuery = encodeURIComponent(`Grupo ABSA Serv. Automotriz, ${direccion}`);
+---
+<BaseLayout
+  title="Grupo ABSA Serv. Automotriz · Taller mecánico en Mérida"
+  description="⭐ 4.9 con 31 reseñas en Google. Diagnósticos acertados, piezas y mano de obra explicadas con claridad, el mismo mecánico de confianza para tu auto. Taller en Sta María Chuburná, Mérida. Escríbenos por WhatsApp."
+  slug="grupo-absa-serv-automotriz"
+  ogImage="/grupo-absa-serv-automotriz/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Sora:wght@600;800&family=Work+Sans:wght@400;500;600&display=swap"
+  favicon="🛠️"
+  themeColor="#2b3138"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <main class="absa">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">Taller de servicio automotriz · Sta María Chuburná, Mérida</p>
+          <h1 class="titulo reveal">Grupo <span>ABSA</span><br />Serv. Automotriz</h1>
+          <p class="tagline reveal">El mismo mecánico de confianza para tu auto, año tras año: diagnósticos acertados y las cuentas claras, piezas y mano de obra explicadas antes de tocar el coche.</p>
+
+          <a class="chip reveal" href={mapsUrl} target="_blank" rel="noopener">
+            <span class="chip-star" aria-hidden="true">★</span> 4.9 · 31 reseñas en Google
+          </a>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-solid" href={whatsapp} target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3z"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href={mapsUrl} target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="numero-panel">
+            <span class="numero">4.9</span>
+            <span class="numero-estrellas" aria-hidden="true">★★★★★</span>
+            <span class="numero-caption">31 reseñas en Google</span>
+          </div>
+          <figure class="hero-foto">
+            <img src="/grupo-absa-serv-automotriz/img/foto_4.jpg" alt="Interior del taller Grupo ABSA con autos en servicio" width="825" height="1100" />
+            <figcaption>Nuestro taller</figcaption>
+          </figure>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ SOBRE NOSOTROS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap about-grid">
+        <div class="about-copy">
+          <p class="sec-kicker reveal">Quiénes somos</p>
+          <h2 class="sec-title reveal">Un taller que conoce tu&nbsp;auto</h2>
+          <div class="about reveal">
+            <p>Somos <strong>Grupo ABSA</strong>, un taller de servicio automotriz en Sta María Chuburná, Mérida. Aquí revisamos tu auto a fondo, te explicamos con claridad qué necesita —piezas y mano de obra por separado, sin letras chiquitas— y te lo entregamos funcionando como debe.</p>
+            <p>Muchos de nuestros clientes lo dicen mejor que nosotros: hay quien lleva su camioneta con el <strong>Sr. Abraham</strong> desde hace más de cuatro años, y quien nos confía sus dos autos en la familia. Eso pasa porque diagnosticamos bien a la primera y porque tratamos cada auto —el tuyo, el de tu pareja o el de la flotilla del negocio— con la misma atención honesta.</p>
+            <p>Si tu coche necesita desde un cambio de aceite hasta una reparación mayor, aquí lo revisamos, te decimos la verdad de lo que tiene y lo dejamos listo.</p>
+          </div>
+        </div>
+        <figure class="about-foto reveal">
+          <img src="/grupo-absa-serv-automotriz/img/foto_5.jpg" alt="Auto protegido con forros durante el servicio en Grupo ABSA" loading="lazy" width="1100" height="825" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS / HOJA DE INSPECCIÓN ============ -->
+    <section class="sec sec-panel" id="servicios">
+      <div class="wrap servicios-grid">
+        <div>
+          <p class="sec-kicker reveal">Qué hacemos</p>
+          <h2 class="sec-title reveal">Hoja de inspección</h2>
+
+          <div class="hoja reveal">
+            <div class="hoja-header">
+              <span class="hoja-nombre">Grupo ABSA · Serv. Automotriz</span>
+              <span class="hoja-sub">Revisión general del vehículo</span>
+            </div>
+            <ul class="checklist">
+              <li><span class="check" aria-hidden="true">✓</span>Diagnóstico por escáner</li>
+              <li><span class="check" aria-hidden="true">✓</span>Afinación</li>
+              <li><span class="check" aria-hidden="true">✓</span>Frenos</li>
+              <li><span class="check" aria-hidden="true">✓</span>Suspensión</li>
+              <li><span class="check" aria-hidden="true">✓</span>Clutch</li>
+              <li><span class="check" aria-hidden="true">✓</span>Ajustes de motor</li>
+              <li><span class="check" aria-hidden="true">✓</span>Sistema eléctrico automotriz</li>
+              <li><span class="check" aria-hidden="true">✓</span>Cambio de aceite</li>
+              <li><span class="check" aria-hidden="true">✓</span>Reparación de llantas</li>
+            </ul>
+            <div class="sello" aria-hidden="true"><span>Aprobado</span></div>
+          </div>
+        </div>
+
+        <figure class="servicios-foto reveal">
+          <img src="/grupo-absa-serv-automotriz/img/foto_3.jpg" alt="Motor abierto durante un diagnóstico en Grupo ABSA" loading="lazy" width="1100" height="825" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ PRUEBA SOCIAL ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Reseñas de Google</p>
+        <h2 class="sec-title reveal"><span class="acento">4.9 de 5</span> en 31 reseñas</h2>
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Excelente mecánico. Desde hace 4 años llevo mi camioneta y siempre con diagnósticos acertados. 100% recomiendo al Sr Abraham»</blockquote>
+            <figcaption><strong>UAG Montserrat de Yanira Moreno Huesca</strong><span>Reseña en Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Lleve mis dos autos en diferentes ocasiones y me brindaron un servicio de excelente calidad, se les agradece mucho el servicio de cambio de aceite y reparación de llanta.»</blockquote>
+            <figcaption><strong>Luisa Lopez</strong><span>Reseña en Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Excelente atención y servicio departe de todo el personal. Muy claros al explicarme lo que tenia mi auto y en el costo total de piezas y mano de obra. Muchas gracias. Ahora siento como nuevo mi auto.»</blockquote>
+            <figcaption><strong>Omar Hernández</strong><span>Reseña en Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-panel" id="ubicacion">
+      <div class="wrap ubica-grid">
+        <div class="ubica-info">
+          <p class="sec-kicker reveal">Dónde estamos</p>
+          <h2 class="sec-title reveal">Sta María&nbsp;Chuburná</h2>
+          <p class="dir reveal">Sta. María Chuburná<br />97138 Mérida, Yucatán</p>
+          <a class="btn btn-solid btn-sm reveal" href={mapsUrl} target="_blank" rel="noopener">Abrir en Google Maps</a>
+
+          <h3 class="horario-titulo reveal">Horario del taller</h3>
+          <table class="horarios reveal">
+            <tbody>
+              <tr data-dia="1"><th scope="row">Lunes</th><td>9:30–20:00</td></tr>
+              <tr data-dia="2"><th scope="row">Martes</th><td>9:30–20:00</td></tr>
+              <tr data-dia="3"><th scope="row">Miércoles</th><td>9:30–20:00</td></tr>
+              <tr data-dia="4"><th scope="row">Jueves</th><td>9:30–20:00</td></tr>
+              <tr data-dia="5"><th scope="row">Viernes</th><td>9:30–20:00</td></tr>
+              <tr data-dia="6"><th scope="row">Sábado</th><td>9:30–16:00</td></tr>
+              <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="ubica-media reveal">
+          <figure class="ubica-foto">
+            <img src="/grupo-absa-serv-automotriz/img/foto_2.jpg" alt="Fachada de Grupo ABSA Serv. Automotriz en Sta María Chuburná, Mérida" loading="lazy" width="1100" height="825" />
+          </figure>
+          <div class="mapa">
+            <iframe
+              src={`https://www.google.com/maps?q=${mapQuery}&output=embed`}
+              title="Mapa: Grupo ABSA Serv. Automotriz en Mérida"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="banda-bg" aria-hidden="true">
+        <img src="/grupo-absa-serv-automotriz/img/foto_1.jpg" alt="" loading="lazy" width="1100" height="423" />
+      </div>
+      <div class="wrap banda-content">
+        <h2 class="banda-title">¿Tu auto ya te está avisando?</h2>
+        <p class="banda-sub">Tráelo antes de que te deje a pie. Te decimos qué tiene, con precios claros, antes de tocarlo.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href={whatsapp} target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn-ghost-dark" href={`tel:+529996427499`}>Llamar · {telefono}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <p class="pie-logo">Grupo ABSA <span>Serv. Automotriz</span></p>
+        <p class="pie-dato">Sta. María Chuburná, 97138 Mérida, Yucatán</p>
+        <p class="pie-dato"><a href="tel:+529996427499">999 642 7499</a> · <a href={whatsapp} target="_blank" rel="noopener">WhatsApp</a> · <a href={mapsUrl} target="_blank" rel="noopener">Ver en Maps</a></p>
+        <p class="pie-mini">Lunes a viernes 9:30–20:00 · Sábado 9:30–16:00 · Domingo cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Grupo ABSA Serv. Automotriz",
+    "telephone": "+529996427499",
+    "url": "https://demos.ivang.mx/grupo-absa-serv-automotriz",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Sta María Chuburná",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97138",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "reviewCount": "31"
+    },
+    "openingHours": ["Mo-Fr 09:30-20:00", "Sa 09:30-16:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --paper: #f6f4ef;
+      --panel: #eeebe2;
+      --graphite: #2b3138;
+      --graphite-2: #1f2429;
+      --safety: #f2c200;
+      --gray: #6b7280;
+      --line: rgba(43, 49, 56, 0.14);
+      --display: "Sora", system-ui, sans-serif;
+      --body: "Work Sans", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--graphite);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .absa ::selection { background: var(--safety); color: var(--graphite); }
+    .absa a:focus-visible,
+    .absa .btn:focus-visible,
+    .absa iframe:focus-visible {
+      outline: 3px solid var(--graphite);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 48px 0 56px;
+      background-image: radial-gradient(680px 420px at 82% 0%, rgba(242, 194, 0, 0.18), transparent 65%);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .kicker {
+      font-weight: 600;
+      font-size: 12.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin: 0 0 16px;
+    }
+    .titulo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(38px, 10.5vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      margin: 0 0 18px;
+      color: var(--graphite);
+    }
+    .titulo span { color: var(--safety); -webkit-text-stroke: 1.5px var(--graphite); }
+    .tagline {
+      font-size: clamp(17px, 4.4vw, 20px);
+      font-weight: 400;
+      color: #454e57;
+      max-width: 46ch;
+      margin: 0 0 22px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid var(--graphite);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 14.5px;
+      color: var(--graphite);
+      text-decoration: none;
+      background: #fff;
+    }
+    .chip-star { color: var(--safety); -webkit-text-stroke: 0.6px var(--graphite); }
+    .chip:hover { background: var(--safety); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 10px;
+      border: 2px solid transparent;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--graphite); color: var(--paper); border-color: var(--graphite); }
+    .btn-solid:hover { background: var(--safety); color: var(--graphite); border-color: var(--safety); }
+    .btn-ghost { border-color: var(--graphite); color: var(--graphite); }
+    .btn-ghost:hover { background: var(--graphite); color: var(--paper); }
+    .btn-ghost-dark { border-color: rgba(246, 244, 239, 0.55); color: var(--paper); }
+    .btn-ghost-dark:hover { border-color: var(--safety); color: var(--safety); }
+    .btn-sm { font-size: 14.5px; padding: 11px 18px; margin-top: 4px; }
+
+    /* ---------- HERO VISUAL: NÚMERO + FOTO ---------- */
+    .hero-visual { display: flex; flex-direction: column; gap: 18px; align-items: center; }
+    .numero-panel {
+      width: 100%;
+      max-width: 320px;
+      background: var(--graphite);
+      background-image: radial-gradient(circle, rgba(242, 194, 0, 0.14) 1px, transparent 1.4px);
+      background-size: 14px 14px;
+      border-radius: 18px;
+      padding: 28px 20px 22px;
+      text-align: center;
+      box-shadow: 0 18px 40px rgba(43, 49, 56, 0.22);
+    }
+    .numero {
+      display: block;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(88px, 24vw, 130px);
+      line-height: 0.9;
+      color: var(--safety);
+      font-variant-numeric: tabular-nums;
+    }
+    .numero-estrellas { display: block; color: var(--safety); letter-spacing: 0.18em; font-size: 16px; margin-top: 8px; }
+    .numero-caption { display: block; color: #cfd3d8; font-size: 12.5px; letter-spacing: 0.06em; text-transform: uppercase; margin-top: 8px; font-weight: 600; }
+
+    .hero-foto { margin: 0; width: 100%; max-width: 320px; position: relative; }
+    .hero-foto img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+    .hero-foto figcaption {
+      position: absolute;
+      left: 12px;
+      bottom: 12px;
+      background: var(--paper);
+      color: var(--graphite);
+      font-size: 12px;
+      font-weight: 600;
+      padding: 5px 10px;
+      border-radius: 999px;
+    }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 64px 0; }
+    .sec-panel { background: var(--panel); }
+    .sec-kicker {
+      font-weight: 600;
+      font-size: 12.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gray);
+      margin: 0 0 10px;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(30px, 7.5vw, 46px);
+      line-height: 1.06;
+      margin: 0 0 26px;
+      color: var(--graphite);
+    }
+    .sec-title .acento { color: var(--safety); -webkit-text-stroke: 1px var(--graphite); }
+
+    .about-grid, .servicios-grid, .ubica-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: center; }
+    .about p { max-width: 60ch; margin: 0 0 16px; color: #454e57; }
+    .about strong { color: var(--graphite); }
+    .about-foto img, .servicios-foto img, .ubica-foto img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+    }
+    .about-foto, .servicios-foto, .ubica-foto { margin: 0; }
+
+    /* ---------- HOJA DE INSPECCIÓN (firma) ---------- */
+    .hoja {
+      position: relative;
+      background: #fff;
+      border: 1.5px solid var(--graphite);
+      border-radius: 14px;
+      padding: 22px 22px 26px;
+      max-width: 480px;
+      box-shadow: 6px 6px 0 rgba(43, 49, 56, 0.08);
+    }
+    .hoja-header { display: flex; flex-direction: column; gap: 2px; border-bottom: 1.5px dashed var(--line); padding-bottom: 14px; margin-bottom: 14px; }
+    .hoja-nombre { font-family: var(--display); font-weight: 800; font-size: 16px; color: var(--graphite); }
+    .hoja-sub { font-size: 13px; color: var(--gray); }
+    .checklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    .checklist li { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 500; color: #313941; }
+    .check {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      flex: none;
+      background: var(--safety);
+      color: var(--graphite);
+      border-radius: 5px;
+      font-size: 13px;
+      font-weight: 800;
+      border: 1px solid var(--graphite);
+    }
+    .sello {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      border: 3px dashed var(--graphite);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transform: rotate(-11deg);
+      background: rgba(242, 194, 0, 0.16);
+    }
+    .sello span {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 12.5px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--graphite);
+      text-align: center;
+      line-height: 1.15;
+    }
+
+    /* ---------- RESEÑAS ---------- */
+    .reviews { display: grid; grid-template-columns: 1fr; gap: 16px; margin: 0 0 28px; }
+    .rev {
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--safety);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 10px 24px rgba(43, 49, 56, 0.06);
+    }
+    .rev-stars { color: var(--safety); font-size: 15px; letter-spacing: 0.15em; margin: 0 0 10px; }
+    .rev blockquote { margin: 0 0 14px; font-size: 16px; line-height: 1.55; font-weight: 500; color: #2c333a; }
+    .rev figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .rev figcaption strong { font-family: var(--display); font-weight: 600; font-size: 14.5px; color: var(--graphite); }
+    .rev figcaption span { font-size: 12.5px; color: var(--gray); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .dir { font-size: 17px; font-weight: 500; margin: 0 0 16px; color: #313941; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 18px;
+      margin: 30px 0 10px;
+      color: var(--graphite);
+    }
+    .horarios { width: 100%; max-width: 400px; border-collapse: collapse; font-size: 15px; }
+    .horarios th, .horarios td { padding: 9px 4px; border-bottom: 1px solid var(--line); text-align: left; }
+    .horarios th { font-weight: 500; color: var(--graphite); }
+    .horarios td { color: var(--gray); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: var(--graphite); font-weight: 700; }
+    .horarios tr.hoy { background: rgba(242, 194, 0, 0.28); }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--graphite);
+      color: var(--safety);
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin-left: 8px;
+      vertical-align: 1px;
+    }
+    .ubica-media { display: flex; flex-direction: column; gap: 16px; }
+    .mapa iframe { width: 100%; height: 280px; border: 0; border-radius: 12px; display: block; }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda { position: relative; padding: 60px 0; overflow: hidden; background: var(--graphite-2); }
+    .banda-bg { position: absolute; inset: 0; }
+    .banda-bg img { width: 100%; height: 100%; object-fit: cover; opacity: 0.32; }
+    .banda-bg::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(31, 36, 41, 0.85), rgba(31, 36, 41, 0.94));
+    }
+    .banda-content { position: relative; text-align: center; }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(28px, 7vw, 42px);
+      line-height: 1.08;
+      color: var(--paper);
+      margin: 0 0 12px;
+    }
+    .banda-sub { margin: 0 auto 22px; max-width: 42ch; color: #cfd3d8; font-weight: 400; }
+    .banda .cta-row { justify-content: center; }
+
+    /* ---------- FOOTER ---------- */
+    .pie { padding: 40px 0 92px; text-align: center; border-top: 1px solid var(--line); }
+    .pie-logo { font-family: var(--display); font-weight: 800; font-size: 22px; color: var(--graphite); margin: 0 0 10px; }
+    .pie-logo span { color: var(--gray); font-weight: 600; font-size: 16px; }
+    .pie-dato { margin: 4px 0; color: var(--gray); font-size: 14px; }
+    .pie-dato a { color: var(--graphite); text-decoration: none; border-bottom: 1.5px solid var(--safety); }
+    .pie-dato a:hover { color: var(--safety); }
+    .pie-mini { margin: 14px 0 0; color: #8a939c; font-size: 12.5px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .hero-grid { grid-template-columns: 1.15fr 0.85fr; gap: 48px; }
+      .hero-visual { flex-direction: row; align-items: flex-start; }
+      .numero-panel, .hero-foto { max-width: none; flex: 1; }
+      .hero-foto img { height: 100%; min-height: 260px; }
+      .sec { padding: 96px 0; }
+      .about-grid { grid-template-columns: 1.1fr 0.9fr; }
+      .servicios-grid { grid-template-columns: 1fr 0.85fr; align-items: start; }
+      .about-foto img, .servicios-foto img { height: 100%; min-height: 320px; }
+      .reviews { grid-template-columns: repeat(3, 1fr); }
+      .ubica-grid { grid-template-columns: 1fr 1.1fr; align-items: start; }
+      .ubica-foto img { height: 200px; }
+      .mapa iframe { height: 260px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      var hoy = new Date().getDay();
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,761 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="ANCESTRO — Restaurante & Bar en el centro de Mérida"
+  description="Tacos de rib eye, coctelería de autor y cocina al fuego a unos pasos del Paseo Montejo. ⭐ 4.8 con 235 reseñas en Google. Barra hasta las 3:00 a.m. de jueves a sábado. Reserva por WhatsApp."
+  slug="ancestro"
+  ogImage="/ancestro/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Jost:ital,wght@0,400;0,500;0,600;1,400&display=swap"
+  favicon="🥃"
+  themeColor="#16100d"
+  whatsapp={"https://wa.me/529902318903"}
+  telefono={"990 231 8903"}
+  mapsUrl={"https://maps.google.com/?cid=8272034003901971716&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ============ HERO: el letrero encendido ============ -->
+  <header class="hero">
+    <img
+      class="hero-bg"
+      src="/ancestro/img/foto_1.jpg"
+      alt="Fachada nocturna de Ancestro con su letrero retroiluminado entre dos faroles"
+      fetchpriority="high"
+    />
+    <div class="hero-veil" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <p class="eyebrow">Restaurante · Bar · Centro de Mérida</p>
+      <div class="sign">
+        <h1 class="sign-word">ANCESTRO</h1>
+      </div>
+      <p class="hero-tag">
+        Cocina al fuego y coctelería de autor entre muros de piedra,
+        a unos pasos del Paseo Montejo.
+      </p>
+      <p class="rating-chip">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>4.8</strong> · 235 reseñas en Google
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="https://wa.me/529902318903">Reservar por WhatsApp</a>
+        <a class="btn btn-ghost" href="https://maps.google.com/?cid=8272034003901971716&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Cómo llegar</a>
+      </div>
+    </div>
+    <div class="tile-strip" aria-hidden="true"></div>
+  </header>
+
+  <main>
+    <!-- ============ SOBRE NOSOTROS ============ -->
+    <section class="wrap casa" id="casa">
+      <div class="casa-text">
+        <p class="overline rv">La casa</p>
+        <h2 class="rv">La casa del letrero encendido</h2>
+        <p class="rv">
+          Cuando el letrero se prende sobre la Calle 47, empieza la noche en
+          Ancestro. Somos un restaurante-bar en el centro de Mérida, en la zona
+          del Paseo Montejo, donde la cocina de inspiración sureña — hamburguesas,
+          mac &amp; cheese, pollo Cajun — se sirve entre piedra, madera y luz baja.
+        </p>
+        <p class="rv">
+          La barra es el corazón de la casa: un arco de botellas iluminadas bajo
+          el candelabro y una coctelería que nuestros clientes llaman
+          «excelente» una y otra vez en sus reseñas. El espacio es íntimo, y
+          justo por eso se siente más acogedor.
+        </p>
+        <p class="rv">
+          Te recibimos con servicio atento y sin prisas — hay quien lo resume en
+          su reseña: «Ana nos atendió muy bien». Abrimos de martes a domingo, y
+          de jueves a sábado la barra sigue hasta las 3:00 de la madrugada.
+        </p>
+      </div>
+      <figure class="casa-photo rv">
+        <img src="/ancestro/img/foto_3.jpg" alt="La barra de Ancestro: arco de botellas iluminadas, candelabro y piso de mosaico" loading="lazy" width="828" height="1104" />
+        <figcaption>La barra, bajo el candelabro</figcaption>
+      </figure>
+    </section>
+
+    <!-- ============ LA CARTA (tablero) ============ -->
+    <section class="wrap carta" id="carta">
+      <p class="overline rv">De la carta</p>
+      <h2 class="rv">Lo que más piden</h2>
+      <p class="section-sub rv">Los favoritos según las reseñas de Google, tal como los nombran.</p>
+      <div class="board rv" role="list">
+        <div class="dish" role="listitem"><span class="dish-name">Tacos de rib eye</span><span class="dish-note">«se nota la calidad en cada bocado»</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Hamburguesa de la casa</span><span class="dish-note">aparece en tres reseñas distintas</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Papas trufadas</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Carpaccio di manzo</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Tartar de atún</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Dip de espinacas</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Coliflor rostizada</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Esquites</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Mac &amp; Cheese</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Pollo Cajun estilo Luisiana</span></div>
+        <div class="dish" role="listitem"><span class="dish-name">Coctelería de autor</span><span class="dish-note">«cocteles muy bien preparados»</span></div>
+      </div>
+      <div class="carta-photos">
+        <figure class="rv">
+          <img src="/ancestro/img/foto_4.jpg" alt="Sartén de arroz con camarones y esquites servidos a la mesa frente al muro de piedra" loading="lazy" width="733" height="1100" />
+          <figcaption>Del fuego a la mesa</figcaption>
+        </figure>
+        <figure class="rv">
+          <img src="/ancestro/img/foto_2.jpg" alt="Rebanada de pastel con fresas, helado y espresso sobre mármol negro" loading="lazy" width="733" height="1100" />
+          <figcaption>Café y postre para cerrar</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="wrap servicios" id="servicios">
+      <p class="overline rv">Para tu visita</p>
+      <h2 class="rv">Lo que debes saber</h2>
+      <ul class="chips">
+        <li class="rv"><strong>Aceptamos reservaciones</strong><span>aparta tu mesa por WhatsApp</span></li>
+        <li class="rv"><strong>Cenas</strong><span>y barra hasta las 3:00 a.m. de jueves a sábado</span></li>
+        <li class="rv"><strong>Café y postres</strong><span>para quedarse un rato más</span></li>
+        <li class="rv"><strong>Opciones vegetarianas</strong><span>pregunta por ellas en la carta</span></li>
+        <li class="rv"><strong>Aceptamos tarjetas</strong><span>crédito y débito</span></li>
+        <li class="rv"><strong>Estacionamiento disponible</strong><span>llega sin vueltas</span></li>
+      </ul>
+    </section>
+
+    <!-- ============ RESEÑAS ============ -->
+    <section class="resenas" id="resenas">
+      <div class="wrap">
+        <p class="overline rv">Palabra de quienes ya vinieron</p>
+        <div class="score rv">
+          <span class="score-num">4.8</span>
+          <span class="score-detail"><span class="stars" aria-hidden="true">★★★★★</span><br />235 reseñas en Google</span>
+        </div>
+        <div class="quotes">
+          <blockquote class="rv">
+            <p>«¡Me encantó Ancestro! La comida es espectacular; los tacos de
+            rib eye y la hamburguesa están increíbles y se nota la calidad en
+            cada bocado. La mixología es excelente, con cocteles muy bien
+            preparados…»</p>
+            <footer><cite>Maria Jose Barraza</cite> · hace 5 meses</footer>
+          </blockquote>
+          <blockquote class="rv">
+            <p>«Comida, ambiente y servicio excelente. Papas trufadas,
+            carpaccio di manzo, dip de espinacas, tartar de atún... todo
+            delicioso…»</p>
+            <footer><cite>Rosamaria Conde</cite> · hace 1 mes</footer>
+          </blockquote>
+          <blockquote class="rv">
+            <p>«Una experiencia impecable de principio a fin. La comida es
+            simplemente espectacular: sabores perfectamente equilibrados,
+            ingredientes frescos y una presentación cuidada al detalle. El
+            servicio fue atento, amable y siempre pendiente sin ser invasivo…»</p>
+            <footer><cite>Hary López</cite> · hace 4 meses</footer>
+          </blockquote>
+        </div>
+        <p class="center rv">
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=8272034003901971716&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA">Leer más reseñas en Google</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- ============ INTERLUDIO ============ -->
+    <figure class="interludio">
+      <img src="/ancestro/img/foto_5.jpg" alt="Mesa servida en Ancestro: vino tinto sirviéndose, coctel, papas fritas y pulpo bajo una lámpara" loading="lazy" width="733" height="1100" />
+      <figcaption>La mesa puesta: vino, coctelería y luz baja.</figcaption>
+    </figure>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="wrap ubicacion" id="ubicacion">
+      <p class="overline rv">Ubicación y horarios</p>
+      <h2 class="rv">A unos pasos del Paseo Montejo</h2>
+      <p class="direccion rv">Calle 47 #471, Zona Paseo Montejo, Centro, 97000, Mérida, Yucatán</p>
+      <div class="ubi-grid">
+        <div class="horarios rv">
+          <h3>Horarios</h3>
+          <table id="tabla-horarios">
+            <tbody>
+              <tr data-d="1"><th scope="row">Lunes</th><td>Cerrado</td></tr>
+              <tr data-d="2"><th scope="row">Martes</th><td>17:00 – 23:00</td></tr>
+              <tr data-d="3"><th scope="row">Miércoles</th><td>17:00 – 23:00</td></tr>
+              <tr data-d="4"><th scope="row">Jueves</th><td>17:00 – 3:00</td></tr>
+              <tr data-d="5"><th scope="row">Viernes</th><td>13:30 – 3:00</td></tr>
+              <tr data-d="6"><th scope="row">Sábado</th><td>13:30 – 3:00</td></tr>
+              <tr data-d="0"><th scope="row">Domingo</th><td>13:30 – 23:00</td></tr>
+            </tbody>
+          </table>
+          <p class="nota-horario">De jueves a sábado, la barra cierra a las 3:00 de la madrugada.</p>
+        </div>
+        <div class="mapa rv">
+          <iframe
+            src="https://www.google.com/maps?q=ANCESTRO%2C%20Calle%2047%20471%2C%20Zona%20Paseo%20Montejo%2C%20Centro%2C%2097000%20M%C3%A9rida%2C%20Yucat%C3%A1n&output=embed"
+            title="Mapa: cómo llegar a Ancestro, Calle 47 471, Centro, Mérida"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="pie">
+    <div class="tile-strip" aria-hidden="true"></div>
+    <div class="wrap pie-inner">
+      <p class="pie-logo">ANCESTRO</p>
+      <p class="pie-sub">Restaurante · Bar — Centro, Mérida, Yucatán</p>
+      <p class="pie-dato">Calle 47 #471, Zona Paseo Montejo, Centro, 97000, Mérida, Yuc.</p>
+      <p class="pie-dato"><a href="tel:+529902318903">990 231 8903</a> · <a href="https://wa.me/529902318903">WhatsApp</a></p>
+      <p class="pie-dato pie-fin">Martes a domingo · El letrero te espera encendido.</p>
+    </div>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "ANCESTRO",
+    "servesCuisine": "Cocina de inspiración sureña y coctelería",
+    "telephone": "+529902318903",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 47 471, Zona Paseo Montejo, Centro",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97000",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "235"
+    },
+    "url": "https://demos.ivang.mx/ancestro"
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --noche: #16100d;
+      --carbon: #241a14;
+      --carbon-2: #1d1510;
+      --ambar: #eda249;
+      --brasa: #c96f2a;
+      --crema: #f3e8d4;
+      --humo: #a89583;
+      --linea: rgba(237, 162, 73, 0.22);
+    }
+
+    body {
+      background: var(--noche);
+      color: var(--crema);
+      font-family: 'Jost', system-ui, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      max-width: 62rem;
+      margin: 0 auto;
+      padding: 4rem 1.25rem;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      color: var(--crema);
+    }
+    h2 { font-size: clamp(1.7rem, 5.5vw, 2.4rem); }
+    h3 { font-size: 1.15rem; letter-spacing: 0.06em; }
+    p { margin: 0 0 1rem; }
+
+    .overline {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--ambar);
+      margin-bottom: 0.75rem;
+    }
+    .overline::before { content: '— '; color: var(--brasa); }
+
+    .section-sub { color: var(--humo); margin-top: -0.5rem; }
+    .center { text-align: center; }
+
+    /* ---------- Botones ---------- */
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.6rem;
+      border-radius: 4px;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn:focus-visible { outline: 2px solid var(--ambar); outline-offset: 3px; }
+    .btn-solid {
+      background: linear-gradient(160deg, var(--ambar), var(--brasa));
+      color: #1c1006;
+      box-shadow: 0 6px 24px rgba(237, 162, 73, 0.35);
+    }
+    .btn-solid:hover { box-shadow: 0 8px 30px rgba(237, 162, 73, 0.5); transform: translateY(-2px); }
+    .btn-ghost {
+      border: 1px solid var(--linea);
+      color: var(--crema);
+      background: rgba(22, 16, 13, 0.55);
+    }
+    .btn-ghost:hover { border-color: var(--ambar); background: rgba(237, 162, 73, 0.08); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative;
+      min-height: calc(100svh - 38px);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      isolation: isolate;
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 22%;
+      z-index: -2;
+    }
+    .hero-veil {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(to bottom,
+          rgba(22, 16, 13, 0.25) 0%,
+          rgba(22, 16, 13, 0.05) 26%,
+          rgba(22, 16, 13, 0.55) 60%,
+          rgba(22, 16, 13, 0.96) 100%);
+    }
+    .hero-inner {
+      width: 100%;
+      max-width: 62rem;
+      margin: 0 auto;
+      padding: 34svh 1.25rem 3.5rem;
+      text-align: center;
+    }
+    .eyebrow {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--humo);
+      margin-bottom: 1.25rem;
+    }
+
+    /* — Firma: el letrero — */
+    .sign {
+      position: relative;
+      display: inline-block;
+      padding: 1rem 1.7rem 0.9rem;
+      background: linear-gradient(180deg, #221711, #191009);
+      border: 1px solid var(--linea);
+      border-radius: 3px;
+      box-shadow:
+        inset 0 0 0 1px rgba(237, 162, 73, 0.1),
+        inset 0 3px 14px rgba(0, 0, 0, 0.75),
+        0 14px 44px rgba(0, 0, 0, 0.55),
+        0 0 70px rgba(237, 162, 73, 0.13);
+      max-width: 100%;
+    }
+    .sign::before,
+    .sign::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #ffd9a0, var(--ambar) 55%, var(--brasa));
+      box-shadow: 0 0 14px 3px rgba(237, 162, 73, 0.7);
+      transform: translateY(-50%);
+      animation: lampara 3.4s ease-in-out infinite;
+    }
+    .sign::before { left: 0.8rem; }
+    .sign::after { right: 0.8rem; animation-delay: 1.7s; }
+    @keyframes lampara {
+      0%, 100% { box-shadow: 0 0 14px 3px rgba(237, 162, 73, 0.7); }
+      50% { box-shadow: 0 0 8px 2px rgba(237, 162, 73, 0.4); }
+    }
+    .sign-word {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 9vw, 4.4rem);
+      letter-spacing: 0.13em;
+      margin: 0;
+      padding-left: 0.13em; /* compensa el letter-spacing final */
+      background: linear-gradient(180deg, #ffe3b3 0%, var(--ambar) 55%, var(--brasa) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 32px rgba(237, 162, 73, 0.45);
+      animation: prende 1.7s linear 1;
+      white-space: nowrap;
+    }
+    @keyframes prende {
+      0%, 14%, 24%, 38% { opacity: 0.12; text-shadow: none; }
+      18%, 30%, 46%, 100% { opacity: 1; text-shadow: 0 0 32px rgba(237, 162, 73, 0.45); }
+    }
+
+    .hero-tag {
+      max-width: 34rem;
+      margin: 1.5rem auto 1.25rem;
+      font-size: 1.15rem;
+      font-weight: 400;
+      color: var(--crema);
+      text-wrap: balance;
+    }
+    .rating-chip {
+      display: inline-block;
+      padding: 0.45rem 1.1rem;
+      border: 1px solid var(--linea);
+      border-radius: 99px;
+      background: rgba(22, 16, 13, 0.6);
+      font-size: 0.95rem;
+      color: var(--crema);
+      margin-bottom: 1.75rem;
+    }
+    .stars { color: var(--ambar); letter-spacing: 0.12em; }
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.85rem;
+      justify-content: center;
+    }
+
+    /* — Cinta de mosaico (del piso de la barra) — */
+    .tile-strip {
+      height: 12px;
+      background:
+        repeating-linear-gradient(45deg,
+          rgba(243, 232, 212, 0.16) 0 7px,
+          transparent 7px 14px),
+        repeating-linear-gradient(-45deg,
+          rgba(243, 232, 212, 0.1) 0 7px,
+          transparent 7px 14px),
+        #100b08;
+      border-top: 1px solid var(--linea);
+      border-bottom: 1px solid rgba(237, 162, 73, 0.12);
+    }
+
+    /* ---------- La casa ---------- */
+    .casa {
+      display: grid;
+      gap: 2.5rem;
+      align-items: center;
+    }
+    .casa-text p { color: #ddcfb8; }
+    .casa-photo {
+      margin: 0;
+    }
+    .casa-photo img,
+    .carta-photos img,
+    .interludio img {
+      border-radius: 4px;
+      border: 1px solid rgba(237, 162, 73, 0.16);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5);
+    }
+    figcaption {
+      font-size: 0.85rem;
+      font-style: italic;
+      color: var(--humo);
+      margin-top: 0.6rem;
+      text-align: center;
+    }
+
+    /* ---------- Carta / tablero ---------- */
+    .carta { text-align: center; }
+    .board {
+      text-align: left;
+      margin: 2rem auto 2.5rem;
+      max-width: 44rem;
+      padding: 1.75rem 1.5rem;
+      background: linear-gradient(180deg, var(--carbon), var(--carbon-2));
+      border: 1px solid var(--linea);
+      border-radius: 4px;
+      box-shadow:
+        inset 0 0 0 1px rgba(237, 162, 73, 0.08),
+        inset 0 3px 16px rgba(0, 0, 0, 0.6),
+        0 16px 44px rgba(0, 0, 0, 0.45);
+      background-image:
+        repeating-linear-gradient(180deg, transparent 0 32px, rgba(0, 0, 0, 0.28) 32px 33px),
+        linear-gradient(180deg, var(--carbon), var(--carbon-2));
+    }
+    .dish {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: baseline;
+      gap: 0.25rem 0.75rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px dashed rgba(237, 162, 73, 0.18);
+    }
+    .dish:last-child { border-bottom: none; }
+    .dish-name {
+      font-family: 'Cinzel', serif;
+      font-weight: 600;
+      font-size: 1.02rem;
+      letter-spacing: 0.05em;
+      color: var(--crema);
+    }
+    .dish-note {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--ambar);
+    }
+    .carta-photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      max-width: 44rem;
+      margin: 0 auto;
+    }
+    .carta-photos figure { margin: 0; }
+
+    /* ---------- Servicios ---------- */
+    .chips {
+      list-style: none;
+      margin: 1.5rem 0 0;
+      padding: 0;
+      display: grid;
+      gap: 0.85rem;
+    }
+    .chips li {
+      padding: 1rem 1.15rem 1rem 2.1rem;
+      background: var(--carbon-2);
+      border: 1px solid rgba(237, 162, 73, 0.14);
+      border-radius: 4px;
+      position: relative;
+    }
+    .chips li::before {
+      content: '';
+      position: absolute;
+      left: 0.9rem;
+      top: 1.45rem;
+      width: 7px;
+      height: 7px;
+      background: var(--ambar);
+      transform: rotate(45deg);
+      box-shadow: 0 0 8px rgba(237, 162, 73, 0.6);
+    }
+    .chips strong {
+      display: block;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+    }
+    .chips span { font-size: 0.92rem; color: var(--humo); }
+
+    /* ---------- Reseñas ---------- */
+    .resenas {
+      background:
+        radial-gradient(60rem 30rem at 50% 0%, rgba(237, 162, 73, 0.07), transparent 70%),
+        var(--carbon-2);
+      border-top: 1px solid rgba(237, 162, 73, 0.12);
+      border-bottom: 1px solid rgba(237, 162, 73, 0.12);
+      text-align: center;
+    }
+    .score {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2.25rem;
+    }
+    .score-num {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 3.4rem;
+      line-height: 1;
+      background: linear-gradient(180deg, #ffe3b3, var(--ambar), var(--brasa));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 28px rgba(237, 162, 73, 0.3);
+    }
+    .score-detail {
+      text-align: left;
+      font-size: 0.95rem;
+      color: var(--humo);
+      line-height: 1.5;
+    }
+    .quotes {
+      display: grid;
+      gap: 1rem;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .quotes blockquote {
+      margin: 0;
+      padding: 1.4rem 1.3rem;
+      background: var(--noche);
+      border: 1px solid rgba(237, 162, 73, 0.14);
+      border-left: 3px solid var(--ambar);
+      border-radius: 4px;
+    }
+    .quotes p {
+      font-size: 0.98rem;
+      color: #ddcfb8;
+      margin-bottom: 0.85rem;
+    }
+    .quotes footer { font-size: 0.85rem; color: var(--humo); }
+    .quotes cite {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--ambar);
+    }
+
+    /* ---------- Interludio ---------- */
+    .interludio {
+      margin: 0 auto;
+      padding: 4rem 1.25rem 0;
+      max-width: 34rem;
+    }
+
+    /* ---------- Ubicación ---------- */
+    .direccion { color: var(--humo); max-width: 30rem; }
+    .ubi-grid {
+      display: grid;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .horarios table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.98rem;
+    }
+    .horarios th,
+    .horarios td {
+      text-align: left;
+      padding: 0.55rem 0.5rem;
+      border-bottom: 1px solid rgba(237, 162, 73, 0.12);
+      font-weight: 400;
+    }
+    .horarios td { text-align: right; color: #ddcfb8; }
+    .horarios tr.hoy th,
+    .horarios tr.hoy td {
+      color: var(--ambar);
+      font-weight: 600;
+      background: rgba(237, 162, 73, 0.06);
+    }
+    .horarios tr.hoy th::after {
+      content: ' · hoy';
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .nota-horario {
+      font-size: 0.88rem;
+      font-style: italic;
+      color: var(--humo);
+      margin-top: 0.9rem;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 320px;
+      border: 1px solid rgba(237, 162, 73, 0.16);
+      border-radius: 4px;
+      filter: grayscale(0.3) contrast(1.05);
+      display: block;
+    }
+
+    /* ---------- Footer ---------- */
+    .pie { background: #100b08; }
+    .pie .tile-strip { border-bottom: none; }
+    .pie-inner {
+      text-align: center;
+      padding-top: 3rem;
+      padding-bottom: 7rem; /* espacio para el CTA flotante */
+    }
+    .pie-logo {
+      font-family: 'Cinzel', serif;
+      font-weight: 800;
+      font-size: 1.5rem;
+      letter-spacing: 0.18em;
+      padding-left: 0.18em;
+      margin-bottom: 0.25rem;
+      background: linear-gradient(180deg, #ffe3b3, var(--ambar), var(--brasa));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      text-shadow: 0 0 22px rgba(237, 162, 73, 0.3);
+    }
+    .pie-sub {
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--humo);
+      margin-bottom: 1.5rem;
+    }
+    .pie-dato { font-size: 0.95rem; color: var(--humo); margin-bottom: 0.4rem; }
+    .pie-dato a { color: var(--crema); text-decoration: none; border-bottom: 1px solid var(--linea); }
+    .pie-dato a:hover { color: var(--ambar); }
+    .pie-dato a:focus-visible { outline: 2px solid var(--ambar); outline-offset: 3px; }
+    .pie-fin { margin-top: 1.25rem; font-style: italic; }
+
+    /* ---------- Scroll reveal (solo con JS) ---------- */
+    html.js .rv {
+      opacity: 0;
+      transform: translateY(18px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    html.js .rv.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ---------- Desktop ---------- */
+    @media (min-width: 720px) {
+      .casa {
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 3.5rem;
+      }
+      .board {
+        column-count: 2;
+        column-gap: 3rem;
+        padding: 2.25rem 2.5rem;
+      }
+      .dish { break-inside: avoid; }
+      .chips { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); }
+      .ubi-grid { grid-template-columns: 0.9fr 1.1fr; align-items: start; }
+      .mapa iframe { height: 380px; }
+      .hero-inner { padding-bottom: 5rem; }
+      .sign { padding: 1.2rem 2.6rem 1.1rem; }
+      .sign::before { left: 1rem; }
+      .sign::after { right: 1rem; }
+    }
+  </style>
+
+  <script is:inline>
+    // Mejora progresiva: sin JS todo el contenido queda visible.
+    document.documentElement.classList.add('js');
+
+    // Scroll reveal
+    var revs = document.querySelectorAll('.rv');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      revs.forEach(function (el) { io.observe(el); });
+    } else {
+      revs.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    // Resaltar el día de hoy en la tabla de horarios
+    var hoy = new Date().getDay(); // 0 = domingo
+    var fila = document.querySelector('#tabla-horarios tr[data-d="' + hoy + '"]');
+    if (fila) fila.classList.add('hoy');
+  </script>
+</BaseLayout>

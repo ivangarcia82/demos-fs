@@ -1,0 +1,545 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Barbería D.H. — Cortes con oficio en Kanasín"
+  description="Barbería en Santa Rosa, Kanasín. ⭐ 4.6 con 27 reseñas en Google. Fades, trenzas, platinados y barba, con clientes que llevan 15 años regresando."
+  slug="barberia-dh"
+  ogImage="/barberia-dh/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Pirata+One&display=swap"
+  favicon="💈"
+  themeColor="#16110d"
+  whatsapp={null}
+  telefono={null}
+  mapsUrl={"https://maps.google.com/?cid=13942591444109690720&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ============ HERO SPLIT ============ -->
+  <header class="hero" id="inicio">
+    <div class="garland" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="kicker">Barbería · Santa Rosa, Kanasín</p>
+        <h1>Barbería <span class="dh">D.H.</span></h1>
+        <p class="lead">
+          Aquí un buen corte se vuelve costumbre: tenemos clientes que llevan
+          <strong>15 años</strong> sentándose en la misma silla.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-solid" href="https://maps.google.com/?cid=13942591444109690720&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">📍 Cómo llegar</a>
+          <a class="btn btn-line" href="#resenas">Leer reseñas</a>
+        </div>
+        <p class="hero-rating">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <strong>4.6</strong> · 27 reseñas en Google
+        </p>
+      </div>
+
+      <div class="hero-media">
+        <img
+          src="/barberia-dh/img/foto_3.jpg"
+          alt="Corte platinado con fade y línea marcada, hecho en Barbería D.H."
+          width="825" height="1100"
+          fetchpriority="high"
+        />
+        <p class="media-tag">Platinado + fade, recién salido de la silla</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ SOBRE NOSOTROS ============ -->
+  <section class="wrap about" id="nosotros">
+    <p class="eyebrow rv">Sobre nosotros</p>
+    <h2 class="rv">La barbería de los foquitos</h2>
+    <div class="about-grid">
+      <div class="about-text rv">
+        <p>
+          Estamos en el corazón de Santa Rosa, en Kanasín. Nos encuentras fácil:
+          somos la casa de la Calle 11 con el letrero pintado a mano y los
+          foquitos encendidos cuando cae la noche.
+        </p>
+        <p>
+          Aquí no se despacha, se atiende. Nuestros clientes lo repiten en cada
+          reseña: buena atención, buen servicio y cortes por los que vale la pena
+          regresar — algunos llevan quince años haciéndolo.
+        </p>
+        <p>
+          Del fade con la línea bien marcada a las trenzas pegadas y los
+          platinados completos: cada cabeza sale con su propio estilo, no con el
+          corte de moda que le tocó al de enfrente.
+        </p>
+      </div>
+      <figure class="about-photo rv">
+        <img
+          src="/barberia-dh/img/foto_2.jpg"
+          alt="Cliente con trenzas pegadas recién hechas en Barbería D.H."
+          width="825" height="1100"
+          loading="lazy"
+        />
+        <figcaption>Trenzas pegadas, trabajo de la casa</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="services" id="servicios">
+    <div class="wrap">
+      <p class="eyebrow rv">Servicios</p>
+      <h2 class="rv">Lo que hacemos en la silla</h2>
+      <ul class="svc-grid">
+        <li class="rv"><span class="svc-num">01</span><h3>Corte y fade</h3><p>Clásico, degradado o a tijera, con la línea bien marcada.</p></li>
+        <li class="rv"><span class="svc-num">02</span><h3>Trenzas y diseño</h3><p>Trenzas pegadas y estilos que aguantan la semana.</p></li>
+        <li class="rv"><span class="svc-num">03</span><h3>Color y platinado</h3><p>Decoloración y tonos completos, cuidando el cabello.</p></li>
+        <li class="rv"><span class="svc-num">04</span><h3>Barba y afeitado</h3><p>Perfilado y rasurado con acabado limpio.</p></li>
+        <li class="rv"><span class="svc-num">05</span><h3>Delineado</h3><p>Contornos precisos en frente, patillas y nuca.</p></li>
+        <li class="rv"><span class="svc-num">06</span><h3>Corte de niño</h3><p>Paciencia y buen trato para los más pequeños.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section class="social" id="resenas">
+    <div class="garland garland-sm" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <div class="wrap">
+      <p class="eyebrow rv">Lo que dicen los clientes</p>
+      <div class="score rv">
+        <span class="score-num">4.6</span>
+        <div class="score-side">
+          <span class="stars big" aria-hidden="true">★★★★★</span>
+          <span class="score-label">27 reseñas en Google</span>
+        </div>
+      </div>
+
+      <div class="quotes">
+        <blockquote class="rv">
+          <p>«El mejor lugar para cortes de cabello, tengo 15 años como cliente.»</p>
+          <footer><cite>ricardo ceja</cite> · Hace 2 años</footer>
+        </blockquote>
+        <blockquote class="rv">
+          <p>«Excelente lugar para cortarse el cabello»</p>
+          <footer><cite>Cesar “Croxito” Ek</cite> · Hace 8 meses</footer>
+        </blockquote>
+        <blockquote class="rv">
+          <p>«Muy buena atención»</p>
+          <footer><cite>Mine Sanchez</cite> · Hace un año</footer>
+        </blockquote>
+      </div>
+
+      <p class="center rv">
+        <a class="btn btn-line" href="https://maps.google.com/?cid=13942591444109690720&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN ============ -->
+  <section class="wrap location" id="ubicacion">
+    <p class="eyebrow rv">Ubicación</p>
+    <h2 class="rv">Búscanos por los foquitos</h2>
+    <p class="addr rv">Calle 11 #197, Sta Rosa, 97370 Kanasín, Yucatán</p>
+
+    <div class="loc-grid">
+      <figure class="loc-photo rv">
+        <img
+          src="/barberia-dh/img/foto_1.jpg"
+          alt="Fachada de Barbería D.H. de noche, con serie de foquitos encendidos y letrero pintado a mano"
+          width="825" height="1100"
+          loading="lazy"
+        />
+        <figcaption>De noche, los foquitos nos delatan</figcaption>
+      </figure>
+      <div class="loc-map rv">
+        <iframe
+          src="https://www.google.com/maps?q=Barber%C3%ADa%20D.H.%20Calle%2011%20197%2C%20Sta%20Rosa%2C%2097370%20Kanas%C3%ADn%2C%20Yucat%C3%A1n&output=embed"
+          title="Mapa: Barbería D.H. en Kanasín"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+        <a class="btn btn-solid map-btn" href="https://maps.google.com/?cid=13942591444109690720&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <p class="foot-name">Barbería D.H.</p>
+    <p class="foot-addr">Calle 11 #197, Sta Rosa · Kanasín, Yucatán</p>
+    <p class="foot-note">⭐ 4.6 en Google · 27 reseñas</p>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "Barbería D.H.",
+    "url": "https://demos.ivang.mx/barberia-dh",
+    "image": "https://demos.ivang.mx/barberia-dh/img/foto_1.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 11 197, Sta Rosa",
+      "addressLocality": "Kanasín",
+      "addressRegion": "Yucatán",
+      "postalCode": "97370",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "27"
+    }
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --ink: #16110d;
+      --panel: #211a13;
+      --panel-2: #1b1510;
+      --amber: #f0b45c;
+      --glow: #ffd98f;
+      --terra: #b3542f;
+      --chalk: #f4e8d3;
+      --muted: #b6a288;
+      --display: 'Pirata One', cursive;
+      --body: 'Archivo', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--ink);
+      color: var(--chalk);
+      font-family: var(--body);
+      font-size: 1rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+    }
+
+    h1, h2, .score-num, .svc-num, .dh {
+      font-family: var(--display);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: 0.01em;
+    }
+
+    .wrap { max-width: 62rem; margin: 0 auto; padding-inline: 1.25rem; }
+
+    a:focus-visible, .btn:focus-visible {
+      outline: 2px solid var(--amber);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ---------- Guirnalda de foquitos (elemento firma) ---------- */
+    .garland {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 6%;
+      height: 34px;
+    }
+    .garland::before {
+      content: "";
+      position: absolute;
+      inset: 8px 0 auto 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, rgba(244,232,211,0.22) 12%, rgba(244,232,211,0.22) 88%, transparent);
+    }
+    .garland i {
+      position: relative;
+      top: 10px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #fff3d6, var(--glow) 40%, var(--amber) 75%, #c77b2e);
+      box-shadow: 0 0 10px 3px rgba(255, 205, 120, 0.5), 0 0 26px 8px rgba(255, 190, 100, 0.16);
+      animation: twinkle 3.6s ease-in-out infinite;
+    }
+    .garland i::after {
+      content: "";
+      position: absolute;
+      top: -5px;
+      left: 3px;
+      width: 3px;
+      height: 5px;
+      background: rgba(244,232,211,0.35);
+      border-radius: 1px;
+    }
+    .garland i:nth-child(odd) { top: 16px; }
+    .garland i:nth-child(2n)  { animation-delay: 0.9s; }
+    .garland i:nth-child(3n)  { animation-delay: 1.7s; }
+    .garland i:nth-child(5n)  { animation-delay: 2.6s; }
+    @keyframes twinkle {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.55; }
+    }
+    .garland-sm { padding: 0 14%; }
+
+    /* ---------- Hero split ---------- */
+    .hero {
+      background:
+        radial-gradient(90% 60% at 50% 0%, #241a2b 0%, transparent 60%),
+        linear-gradient(175deg, #1d1622 0%, var(--ink) 48%);
+      padding-top: 0.75rem;
+    }
+    .hero-grid {
+      max-width: 68rem;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .hero-copy {
+      padding: 2rem 1.4rem 2.4rem;
+    }
+    .kicker {
+      margin: 0 0 1rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--amber);
+    }
+    .hero h1 {
+      margin: 0 0 1rem;
+      font-size: clamp(3.4rem, 15vw, 6.2rem);
+      color: var(--chalk);
+      text-shadow: 0 0 34px rgba(255, 200, 110, 0.18);
+    }
+    .hero h1 .dh { color: var(--amber); }
+    .lead {
+      margin: 0 0 1.6rem;
+      max-width: 30rem;
+      font-size: 1.13rem;
+      color: var(--muted);
+    }
+    .lead strong { color: var(--chalk); }
+
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.4rem; }
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.5rem;
+      border-radius: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+    }
+    .btn-solid {
+      background: var(--amber);
+      color: #241505;
+      box-shadow: 0 6px 22px rgba(240, 180, 92, 0.28);
+    }
+    .btn-solid:hover { transform: translateY(-2px); box-shadow: 0 10px 26px rgba(240, 180, 92, 0.4); }
+    .btn-line {
+      border: 1.5px solid rgba(244, 232, 211, 0.4);
+      color: var(--chalk);
+    }
+    .btn-line:hover { border-color: var(--amber); color: var(--amber); }
+
+    .hero-rating { margin: 0; font-size: 0.95rem; color: var(--muted); }
+    .hero-rating strong { color: var(--chalk); font-size: 1.05rem; }
+    .stars { color: var(--amber); letter-spacing: 0.12em; margin-right: 0.35rem; }
+    .stars.big { font-size: 1.25rem; }
+
+    .hero-media {
+      position: relative;
+      border-top: 12px solid;
+      border-image: linear-gradient(90deg, var(--amber), var(--terra)) 1;
+    }
+    .hero-media img {
+      width: 100%;
+      height: min(70vw, 32rem);
+      object-fit: cover;
+      object-position: 50% 28%;
+    }
+    .media-tag {
+      position: absolute;
+      left: 1rem;
+      bottom: 1rem;
+      margin: 0;
+      padding: 0.45rem 0.8rem;
+      background: rgba(22, 17, 13, 0.82);
+      border-left: 3px solid var(--amber);
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--chalk);
+      border-radius: 0 8px 8px 0;
+      max-width: 85%;
+    }
+
+    @media (min-width: 820px) {
+      .hero-grid { grid-template-columns: 1.05fr 0.95fr; align-items: stretch; }
+      .hero-copy { padding: 4.5rem 2.5rem 4.5rem 1.5rem; align-self: center; }
+      .hero-media {
+        border-top: none;
+        border-left: 12px solid;
+        border-image: linear-gradient(180deg, var(--amber), var(--terra)) 1;
+      }
+      .hero-media img { height: 100%; min-height: 34rem; }
+    }
+
+    /* ---------- Secciones ---------- */
+    section { padding-block: 3.5rem; }
+    .eyebrow {
+      margin: 0 0 0.5rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--terra);
+    }
+    section h2 {
+      margin: 0 0 1.5rem;
+      font-size: clamp(2.2rem, 8vw, 3.2rem);
+      color: var(--chalk);
+    }
+
+    /* Sobre nosotros */
+    .about-grid { display: grid; gap: 1.8rem; }
+    .about-text p { margin: 0 0 1.05rem; color: var(--muted); }
+    .about-text p:last-child { margin-bottom: 0; }
+    .about-text strong { color: var(--chalk); }
+    .about-photo, .loc-photo { margin: 0; }
+    .about-photo img, .loc-photo img {
+      border-radius: 14px;
+      border: 1px solid rgba(244, 232, 211, 0.12);
+      box-shadow: 10px 10px 0 0 rgba(179, 84, 47, 0.35);
+    }
+    .about-photo figcaption, .loc-photo figcaption {
+      margin-top: 0.9rem;
+      font-size: 0.82rem;
+      color: var(--muted);
+      letter-spacing: 0.04em;
+    }
+    @media (min-width: 720px) {
+      .about-grid { grid-template-columns: 1.1fr 0.9fr; gap: 2.6rem; align-items: center; }
+    }
+
+    /* Servicios */
+    .services { background: var(--panel-2); border-top: 1px solid rgba(244,232,211,0.07); border-bottom: 1px solid rgba(244,232,211,0.07); }
+    .svc-grid {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.9rem;
+      grid-template-columns: 1fr;
+    }
+    .svc-grid li {
+      background: var(--panel);
+      border: 1px solid rgba(244, 232, 211, 0.1);
+      border-radius: 14px;
+      padding: 1.15rem 1.25rem;
+    }
+    .svc-num {
+      display: block;
+      font-size: 1.6rem;
+      color: var(--terra);
+      margin-bottom: 0.2rem;
+    }
+    .svc-grid h3 {
+      margin: 0 0 0.3rem;
+      font-size: 1.08rem;
+      font-weight: 700;
+      color: var(--chalk);
+    }
+    .svc-grid p { margin: 0; font-size: 0.92rem; color: var(--muted); }
+    @media (min-width: 640px) { .svc-grid { grid-template-columns: 1fr 1fr; } }
+    @media (min-width: 960px) { .svc-grid { grid-template-columns: repeat(3, 1fr); } }
+
+    /* Reseñas */
+    .social { padding-top: 2.2rem; }
+    .social .garland-sm { margin-bottom: 2rem; }
+    .score { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.8rem; }
+    .score-num {
+      font-size: 4.2rem;
+      color: var(--amber);
+      text-shadow: 0 0 28px rgba(255, 200, 110, 0.25);
+    }
+    .score-side { display: grid; gap: 0.15rem; }
+    .score-label { color: var(--muted); font-size: 0.95rem; }
+
+    .quotes { display: grid; gap: 0.9rem; margin-bottom: 1.8rem; }
+    .quotes blockquote {
+      margin: 0;
+      padding: 1.3rem 1.4rem;
+      background: var(--panel);
+      border-left: 4px solid var(--amber);
+      border-radius: 0 14px 14px 0;
+    }
+    .quotes blockquote p {
+      margin: 0 0 0.7rem;
+      font-size: 1.06rem;
+      font-weight: 500;
+      color: var(--chalk);
+    }
+    .quotes footer { font-size: 0.85rem; color: var(--muted); }
+    .quotes cite { font-style: normal; font-weight: 700; color: var(--amber); }
+    @media (min-width: 820px) {
+      .quotes { grid-template-columns: 1.2fr 1fr 1fr; align-items: start; }
+    }
+    .center { text-align: center; margin: 0; }
+
+    /* Ubicación */
+    .addr { margin: -0.6rem 0 1.6rem; color: var(--muted); font-size: 1.02rem; }
+    .loc-grid { display: grid; gap: 1.8rem; }
+    .loc-map { display: grid; gap: 1rem; align-content: start; }
+    .loc-map iframe {
+      width: 100%;
+      height: 300px;
+      border: 1px solid rgba(244, 232, 211, 0.14);
+      border-radius: 14px;
+      filter: grayscale(0.2) contrast(1.02);
+    }
+    .map-btn { justify-self: start; }
+    @media (min-width: 720px) {
+      .loc-grid { grid-template-columns: 0.9fr 1.1fr; align-items: start; }
+      .loc-map iframe { height: 360px; }
+    }
+
+    /* Footer */
+    .site-footer {
+      border-top: 1px solid rgba(244, 232, 211, 0.1);
+      padding: 2.2rem 1.25rem 5.5rem; /* espacio extra por el CTA flotante */
+      text-align: center;
+      background: var(--panel-2);
+    }
+    .foot-name {
+      margin: 0 0 0.3rem;
+      font-family: var(--display);
+      font-size: 1.9rem;
+      color: var(--chalk);
+    }
+    .foot-addr, .foot-note { margin: 0.15rem 0; font-size: 0.9rem; color: var(--muted); }
+
+    /* ---------- Scroll reveal (solo con JS activo) ---------- */
+    html.js .rv {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    html.js .rv.in { opacity: 1; transform: none; }
+  </style>
+
+  <script is:inline>
+    document.documentElement.classList.add('js');
+    (function () {
+      var els = document.querySelectorAll('.rv');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

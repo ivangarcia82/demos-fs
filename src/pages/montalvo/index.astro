@@ -1,0 +1,728 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const wa = 'https://wa.me/529991276558';
+const tel = '999 127 6558';
+const maps =
+  'https://maps.google.com/?cid=17954065575221588819&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const dir = 'C. 51 345-Por 56 y 54, Francisco de Montejo II, 97203 Mérida, Yuc., México';
+const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(dir)}&output=embed`;
+
+const horarios = [
+  { d: 'Lunes', h: '10:00 – 20:00', dow: 1 },
+  { d: 'Martes', h: '10:00 – 20:00', dow: 2 },
+  { d: 'Miércoles', h: '10:00 – 20:00', dow: 3 },
+  { d: 'Jueves', h: '10:00 – 20:00', dow: 4 },
+  { d: 'Viernes', h: '10:00 – 20:00', dow: 5 },
+  { d: 'Sábado', h: '10:00 – 20:00', dow: 6 },
+  { d: 'Domingo', h: 'Cerrado', dow: 0, cerrado: true },
+];
+---
+<BaseLayout
+  title="Montalvo — Peluquería y estética unisex en Francisco de Montejo, Mérida"
+  description="Peluquería y estética Montalvo, Francisco de Montejo II, Mérida. ★ 4.7 con 662 reseñas en Google. Corte de caballero, corte infantil, barba y keratina. Escríbenos por WhatsApp."
+  slug="montalvo"
+  ogImage="/montalvo/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+  favicon="✂️"
+  themeColor="#181410"
+  whatsapp={wa}
+  telefono={tel}
+  mapsUrl={maps}
+>
+  <!-- ============================ HERO ============================ -->
+  <header class="hero">
+    <div class="reticle" aria-hidden="true"></div>
+    <svg class="mono-ghost" viewBox="0 0 120 120" aria-hidden="true">
+      <path d="M20 100 V22 L60 68 L100 22 V100" />
+    </svg>
+
+    <div class="wrap hero-wrap">
+      <p class="eyebrow onload d1">
+        <svg class="mono" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 V22 L60 68 L100 22 V100" /></svg>
+        Peluquería y estética · Unisex · Mérida
+      </p>
+
+      <h1 class="wordmark onload d2">Montalvo</h1>
+
+      <p class="lede onload d3">
+        El salón de siempre en Francisco de Montejo. Corte, barba y alaciado
+        para toda la familia, con la constancia que trajo a cientos de vecinos
+        a la misma silla.
+      </p>
+
+      <div class="hero-row">
+        <div class="hero-actions onload d4">
+          <a class="rating-chip" href={maps} target="_blank" rel="noopener">
+            <span class="stars" aria-hidden="true">★</span>
+            <strong>4.7</strong>
+            <span class="sep" aria-hidden="true">·</span>
+            662 reseñas en Google
+          </a>
+
+          <div class="cta-row">
+            <a class="btn btn-primary" href={wa} target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+            <a class="btn btn-ghost" href={maps} target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+
+          <ul class="facts">
+            <li><span>Horario</span>Lun a Sáb · 10 a 20 h</li>
+            <li><span>Dónde</span>Francisco de Montejo II</li>
+          </ul>
+        </div>
+
+        <figure class="hero-shot onload d4">
+          <img src="/montalvo/img/foto_1.jpg" width="1600" height="1200"
+            alt="Interior de la peluquería Montalvo con piso de madera, espejos y barberos atendiendo a sus clientes" />
+          <figcaption>Un día cualquiera adentro: sillas llenas y tijeras trabajando.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </header>
+
+  <!-- ====================== LA CIFRA (banda oscura) ====================== -->
+  <section class="band" aria-labelledby="cifra-t">
+    <div class="wrap band-wrap">
+      <div class="band-head">
+        <p class="eyebrow eyebrow-dark reveal">
+          <svg class="mono" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 V22 L60 68 L100 22 V100" /></svg>
+          La constancia, en números
+        </p>
+        <h2 id="cifra-t" class="band-figures reveal">
+          <span class="big">4.7</span>
+          <span class="over">de 5 · <b>662</b> reseñas en Google</span>
+        </h2>
+      </div>
+
+      <figure class="quote reveal">
+        <blockquote>“Confiable, calidad, buen precio y sobre todo un excelente servicio de todos los que laboran en este establecimiento”</blockquote>
+        <figcaption>
+          <span class="q-name">Herberth Colli</span>
+          <span class="q-meta">★★★★★ · Hace 8 meses</span>
+        </figcaption>
+      </figure>
+
+      <a class="link-under reveal" href={maps} target="_blank" rel="noopener">Leer las reseñas en Google →</a>
+    </div>
+  </section>
+
+  <!-- ========================= QUIÉNES SOMOS ========================= -->
+  <section class="sec about" aria-labelledby="about-t">
+    <div class="wrap about-grid">
+      <div class="about-text">
+        <p class="eyebrow reveal">
+          <svg class="mono" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 V22 L60 68 L100 22 V100" /></svg>
+          Quiénes somos
+        </p>
+        <h2 id="about-t" class="h2 reveal">La peluquería del rumbo,<br />para toda la familia</h2>
+        <p class="reveal">Somos una peluquería y estética de barrio en Francisco de Montejo. Aquí lo mismo se sienta el que viene por su corte de siempre que la mamá que trae al niño o quien quiere alaciarse el cabello: atendemos a toda la familia, sin cita de por medio, con la puerta abierta de lunes a sábado.</p>
+        <p class="reveal">Lo que nos define es la constancia. Los mismos rostros detrás de las tijeras, el mismo trato y un servicio parejo que nuestros clientes resumen en pocas palabras: confianza, calidad y buen precio.</p>
+        <p class="reveal">No lo decimos nosotros: son cientos de vecinos los que nos han calificado con casi cinco estrellas en Google. Ese respaldo es, para nosotros, el mejor corte de todos.</p>
+      </div>
+      <figure class="about-shot reveal">
+        <img src="/montalvo/img/foto_4.jpg" width="900" height="1200"
+          alt="Barbero de Montalvo con el polo bordado del salón atendiendo a un cliente frente al espejo" loading="lazy" />
+        <figcaption>El equipo Montalvo, en su estación de siempre.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============================ EN LA SILLA ============================ -->
+  <section class="sec services" aria-labelledby="serv-t">
+    <div class="wrap">
+      <p class="eyebrow reveal">
+        <svg class="mono" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 V22 L60 68 L100 22 V100" /></svg>
+        En la silla
+      </p>
+      <h2 id="serv-t" class="h2 reveal">Lo que hacemos</h2>
+      <div class="serv-grid">
+        <article class="serv-card reveal">
+          <h3>Corte de caballero</h3>
+          <p>Clásicos y degradados, como los pides. El corte de cabecera de toda una colonia.</p>
+        </article>
+        <article class="serv-card reveal">
+          <h3>Corte infantil</h3>
+          <p>Los niños son bienvenidos: paciencia, buena mano y un lugar donde ya conocen a la familia.</p>
+        </article>
+        <article class="serv-card reveal">
+          <h3>Barba y perfilado</h3>
+          <p>Arreglo y contorno de barba para dejar el rostro pulido, sin prisa.</p>
+        </article>
+        <article class="serv-card reveal">
+          <h3>Alaciado y keratina</h3>
+          <p>Tratamientos de keratina y alaciado —keratina brasileña, botox capilar— para un cabello suave y manejable.</p>
+        </article>
+        <article class="serv-card reveal">
+          <h3>Estética unisex</h3>
+          <p>Peinado y cuidado para ellas y ellos. Peluquería y estética en un mismo lugar.</p>
+        </article>
+        <article class="serv-card serv-cta reveal">
+          <h3>¿Dudas de algún servicio?</h3>
+          <p>Cuéntanos qué buscas y te decimos cómo lo hacemos.</p>
+          <a class="link-under link-ink" href={wa} target="_blank" rel="noopener">Preguntar por WhatsApp →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= GALERÍA ============================= -->
+  <section class="sec gallery" aria-labelledby="gal-t">
+    <div class="wrap">
+      <p class="eyebrow reveal">
+        <svg class="mono" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 V22 L60 68 L100 22 V100" /></svg>
+        El local
+      </p>
+      <h2 id="gal-t" class="h2 reveal">Así se ve Montalvo</h2>
+      <div class="gal-grid">
+        <figure class="gal g-wide reveal">
+          <img src="/montalvo/img/foto_2.jpg" width="2000" height="1123" loading="lazy"
+            alt="Fachada de la peluquería Montalvo con su toldo azul y blanco y los postes de barbero a la entrada" />
+        </figure>
+        <figure class="gal reveal">
+          <img src="/montalvo/img/foto_5.jpg" width="900" height="1200" loading="lazy"
+            alt="Sala de espera de Montalvo con banca de madera y clientes esperando su turno" />
+        </figure>
+        <figure class="gal reveal">
+          <img src="/montalvo/img/foto_3.jpg" width="1600" height="1200" loading="lazy"
+            alt="Detalle de la fachada de Montalvo con el rótulo del salón y su cartel de tratamientos de keratina" />
+        </figure>
+        <figure class="gal g-wide reveal">
+          <img src="/montalvo/img/foto_1.jpg" width="1600" height="1200" loading="lazy"
+            alt="Vista amplia del interior de Montalvo con varias sillas ocupadas y el piso de madera" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== BUENOS PARA SABER + HORARIOS ===================== -->
+  <section class="sec info" aria-labelledby="info-t">
+    <div class="wrap info-grid">
+      <div class="info-col">
+        <p class="eyebrow reveal">
+          <svg class="mono" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 V22 L60 68 L100 22 V100" /></svg>
+          Bueno saberlo
+        </p>
+        <h2 id="info-t" class="h2 reveal">Antes de venir</h2>
+        <ul class="amen reveal">
+          <li>
+            <span class="amen-i" aria-hidden="true">♿</span>
+            <span><b>Acceso para silla de ruedas</b><br />La entrada es a nivel de calle.</span>
+          </li>
+          <li>
+            <span class="amen-i" aria-hidden="true">📶</span>
+            <span><b>WiFi para clientes</b><br />Conéctate mientras esperas tu turno.</span>
+          </li>
+          <li>
+            <span class="amen-i" aria-hidden="true">👨‍👩‍👧</span>
+            <span><b>Sin cita, para toda la familia</b><br />Caballeros, niños y estética unisex.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="info-col">
+        <h3 class="h3 reveal">Horario</h3>
+        <table class="hours reveal">
+          <tbody>
+            {horarios.map((r) => (
+              <tr data-dow={r.dow} class={r.cerrado ? 'is-off' : ''}>
+                <th scope="row">{r.d}</th>
+                <td>{r.h}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= UBICACIÓN ============================= -->
+  <section class="sec place" aria-labelledby="place-t">
+    <div class="wrap">
+      <p class="eyebrow reveal">
+        <svg class="mono" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 V22 L60 68 L100 22 V100" /></svg>
+        Dónde estamos
+      </p>
+      <h2 id="place-t" class="h2 reveal">Francisco de Montejo II</h2>
+      <p class="addr reveal">C. 51 345 · Por 56 y 54, Francisco de Montejo II, 97203 Mérida, Yuc.</p>
+      <div class="cta-row cta-row-place reveal">
+        <a class="btn btn-primary" href={wa} target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+        <a class="btn btn-ghost" href={maps} target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+      <div class="map reveal">
+        <iframe src={mapSrc} title="Mapa de la ubicación de Montalvo en Francisco de Montejo, Mérida"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ CTA FINAL ============================ -->
+  <section class="closer">
+    <div class="wrap closer-wrap">
+      <svg class="mono mono-lg reveal" viewBox="0 0 120 120" aria-hidden="true"><path d="M20 100 V22 L60 68 L100 22 V100" /></svg>
+      <h2 class="closer-t reveal">Tu próxima visita<br />empieza con un mensaje</h2>
+      <p class="reveal">Dinos qué corte o tratamiento buscas y con gusto te atendemos.</p>
+      <a class="btn btn-primary btn-lg reveal" href={wa} target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div class="wrap foot-wrap">
+      <p class="foot-brand">Montalvo · Peluquería y estética</p>
+      <p class="foot-lines">
+        <a href={`tel:+52${tel.replace(/\s/g, '')}`}>Tel. {tel}</a>
+        <span aria-hidden="true">·</span>
+        <span>Francisco de Montejo II, Mérida, Yuc.</span>
+      </p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --ink: #181410;
+      --ink-soft: #4a4038;
+      --canvas: #f5f1ea;
+      --paper: #fbf8f3;
+      --line: #ddd0be;
+      --line-soft: #e6dbcb;
+      --wood: #9a7e5f;
+      --taupe: #6e5942;
+      --peach: #e8be9c;
+      --peach-tint: #f4e4d6;
+      --peach-deep: #dba37b;
+      --wrap: 1120px;
+      --pad: clamp(1.15rem, 5vw, 2.25rem);
+    }
+
+    body {
+      background: var(--canvas);
+      color: var(--ink);
+      font-family: 'Inter', system-ui, sans-serif;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: var(--pad); }
+
+    .sec { padding-block: clamp(3.5rem, 9vw, 6rem); }
+
+    /* ---- shared type ---- */
+    .h2 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: clamp(1.7rem, 5.2vw, 2.7rem);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0.35rem 0 1.2rem;
+      color: var(--ink);
+    }
+    .h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 1.15rem;
+      letter-spacing: -0.01em;
+      margin: 0 0 1rem;
+    }
+    p { margin: 0 0 1rem; color: var(--ink-soft); max-width: 60ch; }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.19em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      margin: 0 0 0.4rem;
+    }
+    .mono { width: 15px; height: 15px; flex: none; }
+    .mono path { fill: none; stroke: var(--peach-deep); stroke-width: 9; stroke-linejoin: miter; stroke-linecap: butt; }
+    .eyebrow-dark { color: var(--peach); }
+
+    /* ---- buttons ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.005em;
+      padding: 0.85rem 1.35rem;
+      border-radius: 2px;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: transform 0.18s ease, background-color 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+    }
+    .btn-primary { background: var(--peach); color: var(--ink); }
+    .btn-primary:hover { background: var(--peach-deep); transform: translateY(-2px); }
+    .btn-ghost { background: transparent; color: var(--ink); border-color: var(--ink); }
+    .btn-ghost:hover { background: var(--ink); color: var(--canvas); transform: translateY(-2px); }
+    .btn-lg { padding: 1rem 1.9rem; font-size: 1.02rem; }
+    .btn:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+    a:focus-visible { outline: 3px solid var(--peach-deep); outline-offset: 3px; border-radius: 2px; }
+
+    .link-under {
+      display: inline-block;
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: var(--peach);
+      text-decoration: none;
+      border-bottom: 1.5px solid currentColor;
+      padding-bottom: 2px;
+    }
+    .link-under:hover { color: #fff; }
+    .link-ink { color: var(--taupe); }
+    .link-ink:hover { color: var(--ink); }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding-block: clamp(2.5rem, 8vw, 5rem) clamp(3rem, 8vw, 5.5rem);
+      border-bottom: 1px solid var(--line);
+    }
+    .reticle {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.55;
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0,
+        transparent calc(16.666% - 1px),
+        var(--line-soft) calc(16.666% - 1px),
+        var(--line-soft) 16.666%
+      );
+    }
+    .mono-ghost {
+      position: absolute;
+      top: -6%;
+      right: -8%;
+      width: min(46vw, 460px);
+      height: auto;
+      pointer-events: none;
+    }
+    .mono-ghost path { fill: none; stroke: var(--peach); stroke-width: 6; opacity: 0.5; stroke-linejoin: miter; }
+    .hero-wrap { position: relative; }
+
+    .wordmark {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: clamp(3.3rem, 15vw, 7.5rem);
+      line-height: 0.9;
+      letter-spacing: -0.04em;
+      margin: 0.2rem 0 0;
+      color: var(--ink);
+    }
+    .lede {
+      font-size: clamp(1.02rem, 2.6vw, 1.28rem);
+      line-height: 1.5;
+      color: var(--ink);
+      max-width: 30ch;
+      margin: 1.15rem 0 0;
+      font-weight: 450;
+    }
+    .hero-row {
+      display: grid;
+      gap: clamp(1.5rem, 4vw, 2.5rem);
+      margin-top: clamp(1.6rem, 4vw, 2.2rem);
+    }
+    .rating-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.95rem;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 100px;
+      padding: 0.5rem 0.95rem;
+      width: fit-content;
+    }
+    .rating-chip .stars { color: var(--peach-deep); }
+    .rating-chip strong { font-family: 'Space Grotesk', sans-serif; font-weight: 600; }
+    .rating-chip .sep { color: var(--line); }
+    .rating-chip:hover { border-color: var(--wood); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.1rem; }
+    .facts {
+      list-style: none;
+      margin: 1.5rem 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.6rem;
+    }
+    .facts li {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.35;
+    }
+    .facts span {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--taupe);
+      font-weight: 600;
+      margin-bottom: 0.15rem;
+    }
+    .hero-shot { margin: 0; }
+    .hero-shot img {
+      width: 100%;
+      aspect-ratio: 16 / 11;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 1px solid var(--line);
+    }
+    .hero-shot figcaption,
+    .about-shot figcaption {
+      font-size: 0.8rem;
+      color: var(--taupe);
+      margin-top: 0.6rem;
+      letter-spacing: 0.01em;
+    }
+
+    /* ============ BANDA OSCURA (LA CIFRA) ============ */
+    .band {
+      background: var(--ink);
+      color: var(--canvas);
+      padding-block: clamp(3.5rem, 9vw, 6rem);
+    }
+    .band-wrap { display: grid; gap: clamp(2rem, 5vw, 3rem); }
+    .band-figures {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.4rem 1rem;
+      margin: 0.4rem 0 0;
+      font-weight: 400;
+    }
+    .band-figures .big {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: clamp(4.5rem, 22vw, 10rem);
+      line-height: 0.8;
+      letter-spacing: -0.04em;
+      color: var(--peach);
+    }
+    .band-figures .over {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(1rem, 3.2vw, 1.4rem);
+      color: var(--canvas);
+      letter-spacing: 0.005em;
+    }
+    .band-figures .over b { font-weight: 700; }
+
+    .quote { margin: 0; max-width: 40ch; }
+    .quote blockquote {
+      margin: 0;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 400;
+      font-size: clamp(1.25rem, 3.6vw, 1.8rem);
+      line-height: 1.35;
+      letter-spacing: -0.01em;
+      color: #fff;
+    }
+    .quote figcaption { margin-top: 1rem; display: flex; flex-direction: column; gap: 0.15rem; }
+    .q-name { font-weight: 600; color: var(--canvas); }
+    .q-meta { font-size: 0.85rem; color: var(--peach); letter-spacing: 0.02em; }
+
+    /* ============ QUIÉNES SOMOS ============ */
+    .about-grid { display: grid; gap: clamp(2rem, 6vw, 3.5rem); align-items: start; }
+    .about-shot { margin: 0; }
+    .about-shot img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 3px;
+      border: 1px solid var(--line);
+    }
+
+    /* ============ SERVICIOS ============ */
+    .serv-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-top: 1.5rem;
+    }
+    .serv-card { background: var(--paper); padding: clamp(1.4rem, 4vw, 2rem); }
+    .serv-card h3 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: 1.18rem;
+      letter-spacing: -0.01em;
+      margin: 0 0 0.5rem;
+      color: var(--ink);
+    }
+    .serv-card p { margin: 0; font-size: 0.95rem; }
+    .serv-cta { background: var(--peach-tint); }
+    .serv-cta .link-under { margin-top: 0.8rem; }
+
+    /* ============ GALERÍA ============ */
+    .gal-grid { display: grid; grid-template-columns: 1fr; gap: 0.9rem; margin-top: 1.5rem; }
+    .gal { margin: 0; overflow: hidden; border-radius: 3px; border: 1px solid var(--line); }
+    .gal img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; transition: transform 0.5s ease; }
+    .gal:hover img { transform: scale(1.03); }
+    .gal.g-wide img { aspect-ratio: 16 / 10; }
+
+    /* ============ INFO + HORARIOS ============ */
+    .info-grid { display: grid; gap: clamp(2rem, 6vw, 3.5rem); align-items: start; }
+    .amen { list-style: none; margin: 1.3rem 0 0; padding: 0; display: grid; gap: 1.1rem; }
+    .amen li { display: flex; gap: 0.85rem; align-items: flex-start; font-size: 0.95rem; color: var(--ink-soft); }
+    .amen b { color: var(--ink); font-weight: 600; }
+    .amen-i {
+      flex: none;
+      width: 40px;
+      height: 40px;
+      display: grid;
+      place-items: center;
+      background: var(--peach-tint);
+      border-radius: 50%;
+      font-size: 1.05rem;
+    }
+    .hours { width: 100%; border-collapse: collapse; margin-top: 0.2rem; }
+    .hours tr { border-bottom: 1px solid var(--line-soft); }
+    .hours tr:last-child { border-bottom: 0; }
+    .hours th, .hours td { text-align: left; padding: 0.72rem 0; font-size: 0.97rem; }
+    .hours th { font-weight: 500; color: var(--ink); }
+    .hours td { text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .hours .is-off td { color: var(--wood); }
+    .hours tr.today {
+      background: var(--peach-tint);
+    }
+    .hours tr.today th, .hours tr.today td { color: var(--ink); font-weight: 600; }
+    .hours tr.today th { position: relative; padding-left: 0.7rem; }
+    .hours tr.today th::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 50%;
+      transform: translateY(-50%);
+      width: 4px; height: 60%;
+      background: var(--peach-deep);
+      border-radius: 2px;
+    }
+
+    /* ============ UBICACIÓN ============ */
+    .addr { font-size: 1.05rem; color: var(--ink); max-width: 46ch; }
+    .cta-row-place { margin: 1.3rem 0 1.7rem; }
+    .map {
+      border-radius: 4px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--paper);
+    }
+    .map iframe { display: block; width: 100%; height: clamp(280px, 46vw, 420px); border: 0; }
+
+    /* ============ CTA FINAL ============ */
+    .closer {
+      background: var(--peach-tint);
+      border-top: 1px solid var(--line);
+      padding-block: clamp(3.5rem, 10vw, 6.5rem);
+      text-align: center;
+    }
+    .closer-wrap { display: flex; flex-direction: column; align-items: center; }
+    .mono-lg { width: 46px; height: 46px; margin-bottom: 1.2rem; }
+    .mono-lg path { stroke: var(--ink); stroke-width: 7; }
+    .closer-t {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 500;
+      font-size: clamp(1.9rem, 6vw, 3.2rem);
+      line-height: 1.04;
+      letter-spacing: -0.025em;
+      margin: 0 0 0.9rem;
+      color: var(--ink);
+    }
+    .closer p { color: var(--ink-soft); margin: 0 auto 1.8rem; max-width: 42ch; }
+
+    /* ============ FOOTER ============ */
+    .foot {
+      background: var(--ink);
+      color: var(--canvas);
+      padding-block: 2.4rem 6rem;
+    }
+    .foot-wrap { display: flex; flex-direction: column; gap: 0.5rem; }
+    .foot-brand { font-family: 'Space Grotesk', sans-serif; font-weight: 500; color: #fff; margin: 0; letter-spacing: -0.01em; }
+    .foot-lines { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; font-size: 0.92rem; color: var(--peach); margin: 0; max-width: none; }
+    .foot-lines a { color: var(--peach); text-decoration: none; border-bottom: 1px solid transparent; }
+    .foot-lines a:hover { border-bottom-color: currentColor; }
+    .foot-lines span { color: rgba(245, 241, 234, 0.65); }
+
+    /* ============ REVEAL / MOTION ============ */
+    .onload { opacity: 0; transform: translateY(16px); animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+    .onload.d1 { animation-delay: 0.05s; }
+    .onload.d2 { animation-delay: 0.14s; }
+    .onload.d3 { animation-delay: 0.26s; }
+    .onload.d4 { animation-delay: 0.38s; }
+    @keyframes rise { to { opacity: 1; transform: none; } }
+
+    .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .onload { opacity: 1; transform: none; animation: none; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ============ RESPONSIVE ============ */
+    @media (min-width: 720px) {
+      .hero-row { grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); align-items: end; }
+      .band-wrap {
+        grid-template-columns: 1.1fr 1fr;
+        align-items: center;
+        column-gap: clamp(2rem, 5vw, 4rem);
+      }
+      .band-head { grid-column: 1; }
+      .quote { grid-column: 2; grid-row: 1 / span 2; }
+      .link-under.reveal { grid-column: 1; }
+      .about-grid { grid-template-columns: 1.35fr 1fr; }
+      .serv-grid { grid-template-columns: repeat(3, 1fr); }
+      .info-grid { grid-template-columns: 1.2fr 0.8fr; }
+      .gal-grid { grid-template-columns: 1fr 1fr; }
+      .gal.g-wide { grid-column: span 2; }
+      .foot-wrap { flex-direction: row; align-items: baseline; justify-content: space-between; }
+    }
+    @media (min-width: 980px) {
+      .wordmark { font-size: clamp(6rem, 9vw, 8.5rem); }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+
+      // Resalta el día de hoy en la tabla de horarios.
+      try {
+        var today = new Date().getDay();
+        var row = document.querySelector('.hours tr[data-dow="' + today + '"]');
+        if (row) row.classList.add('today');
+      } catch (e) {}
+
+      var reveals = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        reveals.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('in');
+              io.unobserve(entry.target);
+            }
+          });
+        },
+        { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+      );
+      reveals.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

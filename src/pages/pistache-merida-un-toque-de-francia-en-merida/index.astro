@@ -1,0 +1,800 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slug = 'pistache-merida-un-toque-de-francia-en-merida';
+const wa = 'https://wa.me/529902769696';
+const waReserva = wa + '?text=' + encodeURIComponent('¡Hola Pistache! Me gustaría reservar una mesa para desayunar.');
+const telefono = '990 276 9696';
+const mapsUrl = 'https://maps.google.com/?cid=16981597347960998669&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const direccion = 'Calle 5 100-Loc 2, Residencial Montecristo, 97133 Mérida, Yuc.';
+const mapEmbed = 'https://www.google.com/maps?q=Calle%205%20100-Loc%202%2C%20Residencial%20Montecristo%2C%2097133%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed';
+const img = (n) => `/${slug}/img/foto_${n}.jpg`;
+---
+<BaseLayout
+  title="Pistache Mérida — Bistró & Brunch francés"
+  description="Un toque de Francia en Mérida: croissants, pan francés, macarrones y café tranquilo. ⭐ 4.5 · 671 reseñas en Google. Reserva por WhatsApp."
+  slug={slug}
+  ogImage={img(4)}
+  fonts="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,500;1,9..144,600&family=Mulish:wght@400;500;600;700;800&display=swap"
+  favicon="🥐"
+  themeColor="#3C7A57"
+  whatsapp={wa}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="sprig" viewBox="0 0 64 72">
+      <g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+        <path d="M32 70 C 31 52 31 34 32 22" />
+        <path d="M32 48 C 22 46 15 40 12 30" />
+        <path d="M32 40 C 42 38 49 32 52 22" />
+      </g>
+      <ellipse cx="12" cy="28" rx="9.5" ry="5" transform="rotate(-38 12 28)" fill="currentColor" />
+      <ellipse cx="52" cy="20" rx="9.5" ry="5" transform="rotate(34 52 20)" fill="currentColor" />
+      <ellipse cx="32" cy="14" rx="7.6" ry="9.6" fill="#F0E7CF" />
+      <path d="M32 6 C 27 9 26 19 32 23 C 38 19 37 9 32 6 Z" fill="#7FA23F" />
+    </symbol>
+  </svg>
+
+  <main class="px">
+    <!-- ===== HERO ===== -->
+    <header class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow"><svg class="mark" aria-hidden="true"><use href="#sprig" /></svg> Bistró &amp; Brunch · Mérida</p>
+        <h1 class="hero__title">Pistache</h1>
+        <p class="hero__tag">un toque de Francia en Mérida</p>
+        <p class="hero__lead">Croissants recién horneados, pan francés, macarrones y un café sin prisa. Abrimos el desayuno de martes a domingo, en Residencial Montecristo.</p>
+        <p class="rating rating--hero" aria-label="Calificación 4.5 de 5 en Google con 671 reseñas">
+          <span class="rating__stars" aria-hidden="true">★★★★<span class="rating__half">★</span></span>
+          <strong>4.5</strong> · 671 reseñas en Google
+        </p>
+        <div class="cta-row">
+          <a class="btn btn--wa" href={waReserva} target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+            Reserva por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="hero__media">
+        <figure class="frame">
+          <img src={img(4)} alt="Croque madame con huevo estrellado y queso gratinado, servido en Pistache" width="900" height="1200" fetchpriority="high" />
+        </figure>
+        <span class="hero__ticket" aria-hidden="true">Croque madame</span>
+      </div>
+    </header>
+
+    <!-- ===== FRANJA DE ATRIBUTOS ===== -->
+    <section class="strip" aria-label="Lo que ofrecemos">
+      <ul class="chips">
+        <li>Desayunos</li>
+        <li>Café</li>
+        <li>Servicio a domicilio</li>
+        <li>Para llevar</li>
+        <li>Acepta reservaciones</li>
+        <li>Área al aire libre</li>
+        <li>Acepta tarjetas</li>
+        <li>Estacionamiento</li>
+        <li>Acceso silla de ruedas</li>
+      </ul>
+    </section>
+
+    <!-- ===== QUIÉNES SOMOS ===== -->
+    <section class="about" aria-labelledby="about-h">
+      <div class="about__media">
+        <figure class="frame frame--wide">
+          <img src={img(5)} alt="Vaso de café Pistache frente al Monumento a la Patria en Mérida" width="1200" height="800" loading="lazy" />
+        </figure>
+      </div>
+      <div class="about__copy reveal">
+        <p class="eyebrow"><svg class="mark" aria-hidden="true"><use href="#sprig" /></svg> Bonjour, Mérida</p>
+        <h2 id="about-h" class="h2">Una panadería francesa <em>con alma yucateca</em></h2>
+        <p>En Pistache creemos que un buen día empieza con pan recién horneado y un café sin prisa. Somos una cafetería-bistró en Residencial Montecristo donde traemos un pedacito de Francia a Mérida: croissants de almendra, pan francés crujiente, macarrones y postres que cambian según el día.</p>
+        <p>Nos gusta que se sienta como en casa. Es un lugar tranquilo y acogedor para desayunar con calma, trabajar un rato o quedar con quien quieras. Nuestro equipo atiende siempre con una sonrisa, y si algo se te antoja, te ayudamos a encontrar tu próximo favorito.</p>
+        <p>Cada visita tiene algo nuevo que probar. Ven por la mañana, pide tu frappe o smoothie y déjate llevar por el aroma a mantequilla y café.</p>
+      </div>
+    </section>
+
+    <div class="divider" aria-hidden="true"><span></span><svg class="mark mark--lg"><use href="#sprig" /></svg><span></span></div>
+
+    <!-- ===== LO MÁS PEDIDO ===== -->
+    <section class="menu" aria-labelledby="menu-h">
+      <div class="menu__head reveal">
+        <p class="eyebrow"><svg class="mark" aria-hidden="true"><use href="#sprig" /></svg> La carta</p>
+        <h2 id="menu-h" class="h2">Lo más pedido</h2>
+        <p class="menu__intro">Lo que nuestros clientes vuelven a pedir, según sus propias reseñas.</p>
+      </div>
+      <div class="menu__grid">
+        <ul class="carte reveal">
+          <li class="carte__row">
+            <span class="carte__name">Croissant de almendra</span>
+            <span class="carte__lead" aria-hidden="true"></span>
+            <span class="carte__note">«el mejor que yo he probado»</span>
+          </li>
+          <li class="carte__row">
+            <span class="carte__name">Croissant de manzana</span>
+            <span class="carte__lead" aria-hidden="true"></span>
+            <span class="carte__note">hojaldre dorado, imperdible</span>
+          </li>
+          <li class="carte__row">
+            <span class="carte__name">Pan francés</span>
+            <span class="carte__lead" aria-hidden="true"></span>
+            <span class="carte__note">corteza crujiente, miga suave</span>
+          </li>
+          <li class="carte__row">
+            <span class="carte__name">Macarrones</span>
+            <span class="carte__lead" aria-hidden="true"></span>
+            <span class="carte__note">«están deliciosos»</span>
+          </li>
+          <li class="carte__row">
+            <span class="carte__name">Croque madame</span>
+            <span class="carte__lead" aria-hidden="true"></span>
+            <span class="carte__note">jamón, queso gratinado y huevo</span>
+          </li>
+          <li class="carte__row">
+            <span class="carte__name">Pastel de tres chocolates</span>
+            <span class="carte__lead" aria-hidden="true"></span>
+            <span class="carte__note">«ufff!»</span>
+          </li>
+          <li class="carte__row">
+            <span class="carte__name">Frappes y smoothies</span>
+            <span class="carte__lead" aria-hidden="true"></span>
+            <span class="carte__note">gran variedad; pide el de horchata</span>
+          </li>
+          <li class="carte__row">
+            <span class="carte__name">Éclairs y postres del día</span>
+            <span class="carte__lead" aria-hidden="true"></span>
+            <span class="carte__note">chocolate, vainilla y pistache</span>
+          </li>
+        </ul>
+        <div class="menu__pics reveal">
+          <figure class="frame"><img src={img(2)} alt="Éclairs de pistache, vainilla y chocolate en Pistache" width="1131" height="636" loading="lazy" /></figure>
+          <figure class="frame"><img src={img(3)} alt="Rebanadas de pan francés recién horneado" width="1000" height="833" loading="lazy" /></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GALERÍA ===== -->
+    <section class="gallery-wrap" aria-labelledby="gal-h">
+      <div class="gallery-wrap__head reveal">
+        <p class="eyebrow"><svg class="mark" aria-hidden="true"><use href="#sprig" /></svg> El lugar</p>
+        <h2 id="gal-h" class="h2">Un rincón luminoso para desayunar</h2>
+      </div>
+      <div class="gallery reveal">
+        <img src={img(1)} alt="Interior luminoso del bistró Pistache con sillas de madera, plantas y lámparas de mimbre" width="1600" height="1200" loading="lazy" />
+        <img src={img(2)} alt="Éclairs de pistache, vainilla y chocolate" width="1131" height="636" loading="lazy" />
+        <img src={img(4)} alt="Croque madame con huevo estrellado y ensalada" width="900" height="1200" loading="lazy" />
+        <img src={img(3)} alt="Pan francés recién horneado sostenido en la mano" width="1000" height="833" loading="lazy" />
+        <img src={img(5)} alt="Café Pistache para llevar frente al Monumento a la Patria" width="1200" height="800" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- ===== PRUEBA SOCIAL ===== -->
+    <section class="reviews" aria-labelledby="rev-h">
+      <div class="reviews__head reveal">
+        <p class="eyebrow"><svg class="mark" aria-hidden="true"><use href="#sprig" /></svg> Lo que dicen</p>
+        <div class="score">
+          <span class="score__num">4.5</span>
+          <span class="score__stars" aria-hidden="true">★★★★<span class="rating__half">★</span></span>
+          <span class="score__meta" id="rev-h">671 reseñas en Google</span>
+        </div>
+      </div>
+      <div class="reviews__grid">
+        <blockquote class="rev reveal">
+          <p>«su Croissant de Almendras es el mejor que yo he probado y me imagino que te gustará mucho probarlo.»</p>
+          <footer><span class="rev__who">Natalia Rodríguez</span><span class="rev__when">Hace un año</span></footer>
+        </blockquote>
+        <blockquote class="rev reveal">
+          <p>«Muy buena opción !! El pastel de tres chocolates ufff! Al igual que el Croissant de almendra y el de manzana imperdibles…»</p>
+          <footer><span class="rev__who">Karl Cotbrum</span><span class="rev__when">Hace 10 meses</span></footer>
+        </blockquote>
+        <blockquote class="rev reveal">
+          <p>«su comida es muy rica y las bebidas también, los macarrones están deliciosos, recomendado totalmente»</p>
+          <footer><span class="rev__who">Naye MM</span><span class="rev__when">Hace 7 meses</span></footer>
+        </blockquote>
+        <blockquote class="rev reveal">
+          <p>«Tiene bastante espacio para sentarse y el servicio fue bueno. Lo recomiendo.»</p>
+          <footer><span class="rev__who">Jose Guerrero</span><span class="rev__when">Hace 6 meses</span></footer>
+        </blockquote>
+      </div>
+      <div class="reviews__more">
+        <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </section>
+
+    <!-- ===== CTA INTERMEDIO ===== -->
+    <section class="band">
+      <div class="band__inner reveal">
+        <p class="eyebrow eyebrow--light"><svg class="mark" aria-hidden="true"><use href="#sprig" /></svg> ¿Se te antojó?</p>
+        <h2 class="h2 h2--light">Aparta tu mesa y desayuna sin prisa</h2>
+        <p class="band__sub">Aceptamos reservaciones. Escríbenos y te apartamos un lugar.</p>
+        <a class="btn btn--cream" href={waReserva} target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+          Reservar por WhatsApp
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== UBICACIÓN Y HORARIOS ===== -->
+    <section class="visit" aria-labelledby="visit-h">
+      <div class="visit__info reveal">
+        <p class="eyebrow"><svg class="mark" aria-hidden="true"><use href="#sprig" /></svg> Visítanos</p>
+        <h2 id="visit-h" class="h2">Dónde y cuándo</h2>
+        <p class="visit__addr">{direccion}<br />Mérida, Yucatán</p>
+        <table class="hours">
+          <caption>Horarios</caption>
+          <tbody>
+            <tr><th scope="row">Lunes</th><td class="closed">Cerrado</td></tr>
+            <tr><th scope="row">Martes a sábado</th><td>8:00 – 20:00</td></tr>
+            <tr><th scope="row">Domingo</th><td>8:00 – 14:00</td></tr>
+          </tbody>
+        </table>
+        <div class="visit__cta">
+          <a class="btn btn--wa" href={waReserva} target="_blank" rel="noopener">Escríbenos</a>
+          <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+      <div class="visit__map reveal">
+        <iframe
+          src={mapEmbed}
+          title="Mapa de Pistache Mérida en Residencial Montecristo"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="faq" aria-labelledby="faq-h">
+      <div class="faq__head reveal">
+        <p class="eyebrow"><svg class="mark" aria-hidden="true"><use href="#sprig" /></svg> Antes de venir</p>
+        <h2 id="faq-h" class="h2">Preguntas frecuentes</h2>
+      </div>
+      <div class="faq__list reveal">
+        <details>
+          <summary>¿Puedo reservar mesa?</summary>
+          <p>Sí, aceptamos reservaciones. Escríbenos por WhatsApp y te apartamos un lugar.</p>
+        </details>
+        <details>
+          <summary>¿Aceptan tarjeta?</summary>
+          <p>Sí, puedes pagar con tarjeta o en efectivo.</p>
+        </details>
+        <details>
+          <summary>¿Tienen estacionamiento?</summary>
+          <p>Sí, hay estacionamiento disponible cerca del local.</p>
+        </details>
+        <details>
+          <summary>¿Hacen entrega a domicilio?</summary>
+          <p>Sí. Contamos con servicio a domicilio, para llevar y recolección en la puerta.</p>
+        </details>
+        <details>
+          <summary>¿El lugar es accesible?</summary>
+          <p>Sí, tenemos acceso para silla de ruedas y también un área al aire libre.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER / CTA FINAL ===== -->
+    <footer class="foot">
+      <p class="foot__brand">Pistache</p>
+      <p class="foot__tag">un toque de Francia en Mérida</p>
+      <div class="cta-row cta-row--center">
+        <a class="btn btn--wa" href={waReserva} target="_blank" rel="noopener">Reserva por WhatsApp</a>
+        <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <p class="foot__contact">
+        <a href="tel:+529902769696">{telefono}</a>
+        <span aria-hidden="true">·</span>
+        <span>{direccion}</span>
+      </p>
+    </footer>
+  </main>
+
+  <style is:global>
+    :root {
+      --crema: #F8F2E3;
+      --crema-2: #FCF8EF;
+      --crema-honda: #F0E7CF;
+      --pistache: #3C7A57;
+      --pistache-text: #37734F;
+      --pistache-deep: #2F6446;
+      --pistache-fresco: #7FA23F;
+      --pistache-pale: #E5EBCF;
+      --carbon: #2B2E29;
+      --carbon-soft: #565A50;
+      --rose: #D98F84;
+      --dorado: #BE8A4E;
+      --line: rgba(43, 46, 41, 0.14);
+      --shadow: 0 18px 40px -24px rgba(47, 100, 70, 0.45);
+    }
+
+    body { background: var(--crema); }
+
+    .px {
+      color: var(--carbon);
+      font-family: 'Mulish', system-ui, sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      overflow-x: clip;
+    }
+    .px img { border-radius: inherit; }
+
+    /* ---- shared type ---- */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      margin: 0 0 0.9rem;
+      font-weight: 700;
+      font-size: 0.76rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--pistache-text);
+    }
+    .eyebrow--light { color: var(--crema); }
+    .mark { width: 1.35em; height: 1.5em; color: var(--pistache-fresco); flex: none; }
+    .eyebrow--light .mark { color: var(--crema); }
+    .mark--lg { width: 34px; height: 38px; }
+
+    .h2 {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: clamp(1.8rem, 5.2vw, 2.9rem);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin: 0 0 1.1rem;
+      color: var(--carbon);
+    }
+    .h2 em { font-style: italic; color: var(--pistache); }
+    .h2--light { color: var(--crema); }
+
+    /* ---- buttons ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      padding: 0.85em 1.4em;
+      border-radius: 999px;
+      font-family: 'Mulish', sans-serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      line-height: 1;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: transform 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:focus-visible { outline: 3px solid var(--pistache); outline-offset: 3px; }
+    .btn--wa { background: var(--pistache); color: #fff; }
+    .btn--wa:hover { background: var(--pistache-deep); }
+    .btn--ghost { background: transparent; color: var(--pistache-deep); border-color: rgba(60, 122, 87, 0.4); }
+    .btn--ghost:hover { background: var(--pistache-pale); }
+    .btn--cream { background: var(--crema); color: var(--pistache-deep); }
+    .btn--cream:hover { background: #fff; }
+
+    /* ---- rating ---- */
+    .rating { margin: 0; font-weight: 600; color: var(--carbon-soft); }
+    .rating strong { color: var(--carbon); }
+    .rating__stars, .score__stars { color: var(--dorado); letter-spacing: 0.06em; }
+    .rating__half { position: relative; display: inline-block; color: rgba(190, 138, 78, 0.32); }
+    .rating__half::before {
+      content: '★'; position: absolute; left: 0; top: 0;
+      width: 50%; overflow: hidden; color: var(--dorado);
+    }
+
+    /* ---- frame (bistró double rule) ---- */
+    .frame {
+      position: relative;
+      margin: 0;
+      padding: 8px;
+      border: 1.5px solid rgba(60, 122, 87, 0.5);
+      border-radius: 8px;
+      background: var(--crema-2);
+      box-shadow: var(--shadow);
+    }
+    .frame::after {
+      content: '';
+      position: absolute;
+      inset: 8px;
+      border: 1px solid rgba(60, 122, 87, 0.28);
+      border-radius: 3px;
+      pointer-events: none;
+      z-index: 1;
+    }
+    .frame img { border-radius: 4px; width: 100%; object-fit: cover; }
+
+    /* ---- layout container ---- */
+    .hero, .strip, .about, .menu, .gallery-wrap, .reviews, .visit, .faq {
+      max-width: 1120px;
+      margin-inline: auto;
+      padding-inline: clamp(1.1rem, 5vw, 2.2rem);
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      display: grid;
+      gap: clamp(1.8rem, 5vw, 3.5rem);
+      align-items: center;
+      padding-top: clamp(2rem, 6vw, 4rem);
+      padding-bottom: clamp(2.5rem, 7vw, 4.5rem);
+    }
+    .hero__title {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-optical-sizing: auto;
+      font-size: clamp(3.4rem, 16vw, 6.6rem);
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      margin: 0.2rem 0 0.3rem;
+      color: var(--pistache-deep);
+    }
+    .hero__tag {
+      font-family: 'Fraunces', Georgia, serif;
+      font-style: italic;
+      font-weight: 500;
+      font-size: clamp(1.25rem, 4.6vw, 1.9rem);
+      color: var(--pistache-text);
+      margin: 0 0 1.2rem;
+    }
+    .hero__tag::after {
+      content: '';
+      display: block;
+      width: 56px;
+      height: 3px;
+      margin-top: 0.7rem;
+      border-radius: 3px;
+      background: var(--rose);
+    }
+    .hero__lead {
+      max-width: 46ch;
+      margin: 0 0 1.3rem;
+      color: var(--carbon-soft);
+      font-size: 1.06rem;
+    }
+    .rating--hero { margin-bottom: 1.5rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .cta-row--center { justify-content: center; }
+    .hero__media { position: relative; }
+    .hero__media .frame img { aspect-ratio: 4 / 5; }
+    .hero__ticket {
+      position: absolute;
+      left: 50%;
+      bottom: -14px;
+      transform: translateX(-50%) rotate(-2deg);
+      background: var(--crema-2);
+      color: var(--pistache-deep);
+      border: 1.5px solid var(--rose);
+      border-radius: 4px;
+      padding: 0.35em 1em;
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      box-shadow: 0 8px 18px -12px rgba(47, 100, 70, 0.6);
+      z-index: 2;
+    }
+
+    /* ===== STRIP ===== */
+    .strip { padding-top: 0.5rem; padding-bottom: 1.4rem; }
+    .chips {
+      list-style: none;
+      margin: 0;
+      padding: 1rem 1.1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.55rem 0.6rem;
+      justify-content: center;
+      background: var(--pistache-pale);
+      border-radius: 16px;
+    }
+    .chips li {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45em;
+      font-size: 0.86rem;
+      font-weight: 600;
+      color: var(--pistache-deep);
+      background: rgba(255, 255, 255, 0.55);
+      padding: 0.4em 0.9em;
+      border-radius: 999px;
+    }
+    .chips li::before {
+      content: '';
+      width: 6px; height: 6px; border-radius: 50%;
+      background: var(--pistache-fresco);
+      flex: none;
+    }
+
+    /* ===== ABOUT ===== */
+    .about {
+      display: grid;
+      gap: clamp(1.6rem, 5vw, 3rem);
+      align-items: center;
+      padding-top: clamp(2.5rem, 7vw, 4.5rem);
+      padding-bottom: clamp(2.5rem, 7vw, 4.5rem);
+    }
+    .about__copy p { margin: 0 0 1rem; color: var(--carbon-soft); }
+    .about__copy p:first-of-type { color: var(--carbon); }
+    .about__media .frame img { aspect-ratio: 3 / 2; }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      max-width: 620px;
+      margin: 0.5rem auto;
+      padding-inline: clamp(1.1rem, 5vw, 2.2rem);
+      color: var(--pistache-fresco);
+    }
+    .divider span { flex: 1; height: 1px; background: var(--line); }
+
+    /* ===== MENU ===== */
+    .menu { padding-top: clamp(2rem, 6vw, 3.5rem); padding-bottom: clamp(2.5rem, 7vw, 4.5rem); }
+    .menu__head { text-align: center; margin-bottom: 2rem; }
+    .menu__intro { color: var(--carbon-soft); margin: 0.2rem 0 0; }
+    .menu__grid { display: grid; gap: clamp(1.4rem, 4vw, 2.4rem); }
+    .carte {
+      list-style: none;
+      margin: 0;
+      padding: clamp(1.3rem, 4vw, 2rem);
+      background: var(--crema-2);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--rose);
+      border-radius: 14px;
+    }
+    .carte__row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.6rem;
+      padding: 0.72rem 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .carte__row:last-child { border-bottom: 0; }
+    .carte__name {
+      font-family: 'Fraunces', Georgia, serif;
+      font-weight: 600;
+      font-size: 1.12rem;
+      color: var(--carbon);
+      flex: none;
+      max-width: 62%;
+    }
+    .carte__lead {
+      flex: 1;
+      align-self: center;
+      border-bottom: 2px dotted rgba(60, 122, 87, 0.35);
+      min-width: 1.2rem;
+    }
+    .carte__note {
+      flex: none;
+      text-align: right;
+      color: var(--pistache-deep);
+      font-size: 0.86rem;
+      font-style: italic;
+      max-width: 46%;
+    }
+    .menu__pics { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .menu__pics .frame img { aspect-ratio: 4 / 3; }
+
+    /* ===== GALLERY ===== */
+    .gallery-wrap { padding-top: clamp(2rem, 6vw, 3.5rem); padding-bottom: clamp(2.5rem, 7vw, 4.5rem); }
+    .gallery-wrap__head { text-align: center; margin-bottom: 1.8rem; }
+    .gallery {
+      columns: 2 150px;
+      column-gap: 12px;
+    }
+    .gallery img {
+      width: 100%;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      break-inside: avoid;
+      border: 1px solid rgba(60, 122, 87, 0.22);
+    }
+
+    /* ===== REVIEWS ===== */
+    .reviews {
+      padding-top: clamp(2.5rem, 7vw, 4.5rem);
+      padding-bottom: clamp(2.5rem, 7vw, 4.5rem);
+    }
+    .reviews__head { text-align: center; margin-bottom: 2rem; }
+    .score { display: inline-flex; flex-direction: column; align-items: center; gap: 0.2rem; }
+    .score__num {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(3rem, 12vw, 4.6rem);
+      line-height: 1;
+      color: var(--pistache-deep);
+    }
+    .score__stars { font-size: 1.4rem; }
+    .score__meta { color: var(--carbon-soft); font-weight: 600; }
+    .reviews__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+    .rev {
+      margin: 0;
+      background: var(--crema-2);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--pistache-fresco);
+      border-radius: 12px;
+      padding: 1.4rem 1.5rem;
+    }
+    .rev p {
+      font-family: 'Fraunces', Georgia, serif;
+      font-size: 1.05rem;
+      line-height: 1.5;
+      margin: 0 0 1rem;
+      color: var(--carbon);
+    }
+    .rev footer { display: flex; flex-direction: column; }
+    .rev__who { font-weight: 700; color: var(--pistache-deep); }
+    .rev__when { font-size: 0.82rem; color: var(--carbon-soft); }
+    .reviews__more { text-align: center; margin-top: 2rem; }
+
+    /* ===== BAND ===== */
+    .band {
+      background:
+        radial-gradient(120% 140% at 15% 0%, rgba(127, 162, 63, 0.35), transparent 55%),
+        var(--pistache-deep);
+      color: var(--crema);
+      margin-top: clamp(1rem, 3vw, 2rem);
+    }
+    .band__inner {
+      max-width: 760px;
+      margin-inline: auto;
+      padding: clamp(3rem, 9vw, 5rem) clamp(1.2rem, 5vw, 2.2rem);
+      text-align: center;
+    }
+    .band__sub { margin: 0.3rem 0 1.7rem; color: rgba(248, 242, 227, 0.82); }
+
+    /* ===== VISIT ===== */
+    .visit {
+      display: grid;
+      gap: clamp(1.6rem, 5vw, 3rem);
+      align-items: start;
+      padding-top: clamp(2.8rem, 7vw, 4.5rem);
+      padding-bottom: clamp(2.5rem, 7vw, 4.5rem);
+    }
+    .visit__addr { color: var(--carbon-soft); margin: 0 0 1.4rem; font-weight: 600; }
+    .hours { width: 100%; border-collapse: collapse; margin-bottom: 1.6rem; }
+    .hours caption {
+      text-align: left;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--pistache-deep);
+      padding-bottom: 0.5rem;
+    }
+    .hours th, .hours td { padding: 0.7rem 0; border-bottom: 1px solid var(--line); text-align: left; }
+    .hours th { font-weight: 600; color: var(--carbon); }
+    .hours td { text-align: right; color: var(--carbon-soft); font-variant-numeric: tabular-nums; }
+    .hours td.closed { color: var(--carbon); font-weight: 700; }
+    .visit__cta { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .visit__map {
+      border: 1.5px solid rgba(60, 122, 87, 0.5);
+      border-radius: 12px;
+      overflow: hidden;
+      background: var(--crema-2);
+      min-height: 300px;
+    }
+    .visit__map iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+    /* ===== FAQ ===== */
+    .faq { padding-top: clamp(2rem, 6vw, 3.5rem); padding-bottom: clamp(2.5rem, 7vw, 4rem); }
+    .faq__head { text-align: center; margin-bottom: 1.8rem; }
+    .faq__list { max-width: 720px; margin-inline: auto; }
+    .faq details {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--crema-2);
+      margin-bottom: 0.7rem;
+      overflow: hidden;
+    }
+    .faq summary {
+      cursor: pointer;
+      list-style: none;
+      padding: 1.05rem 1.3rem;
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--carbon);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: '+';
+      font-family: 'Mulish', sans-serif;
+      font-weight: 700;
+      color: var(--pistache);
+      font-size: 1.4rem;
+      transition: transform 0.2s ease;
+    }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { margin: 0; padding: 0 1.3rem 1.15rem; color: var(--carbon-soft); }
+    .faq summary:focus-visible { outline: 3px solid var(--pistache); outline-offset: -3px; border-radius: 12px; }
+
+    /* ===== FOOTER ===== */
+    .foot {
+      text-align: center;
+      background: var(--crema-honda);
+      border-top: 1px solid var(--line);
+      padding: clamp(3rem, 8vw, 4.5rem) clamp(1.1rem, 5vw, 2.2rem) 96px;
+    }
+    .foot__brand {
+      font-family: 'Fraunces', serif;
+      font-weight: 600;
+      font-size: clamp(2.2rem, 9vw, 3.2rem);
+      color: var(--pistache-deep);
+      margin: 0;
+      line-height: 1;
+    }
+    .foot__tag {
+      font-family: 'Fraunces', serif;
+      font-style: italic;
+      color: var(--pistache-text);
+      margin: 0.3rem 0 1.7rem;
+    }
+    .foot__contact {
+      margin: 1.7rem 0 0;
+      color: var(--carbon-soft);
+      font-size: 0.92rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+      align-items: center;
+    }
+    .foot__contact a { color: var(--pistache-deep); font-weight: 700; text-decoration: none; }
+    .foot__contact a:hover { text-decoration: underline; }
+    .foot__contact a:focus-visible { outline: 3px solid var(--pistache); outline-offset: 2px; border-radius: 4px; }
+
+    /* ===== REVEAL (progressive enhancement) ===== */
+    .has-js .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .has-js .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      .has-js .reveal { opacity: 1; transform: none; transition: none; }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 760px) {
+      .hero { grid-template-columns: 1.05fr 0.95fr; }
+      .about { grid-template-columns: 0.95fr 1.05fr; }
+      .about__media { order: -1; }
+      .menu__grid { grid-template-columns: 1.15fr 0.85fr; align-items: start; }
+      .menu__pics { grid-template-columns: 1fr; }
+      .menu__pics .frame img { aspect-ratio: 3 / 2; }
+      .gallery { columns: 3 200px; }
+      .visit { grid-template-columns: 0.85fr 1.15fr; }
+    }
+    @media (max-width: 420px) {
+      .carte__name { max-width: 100%; }
+      .carte__note { max-width: 100%; }
+      .carte__row { flex-wrap: wrap; }
+      .carte__lead { display: none; }
+      .carte__note { text-align: left; width: 100%; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('has-js');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var items = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

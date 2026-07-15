@@ -1,0 +1,682 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const whatsapp = "https://wa.me/529992359585";
+const telefono = "999 235 9585";
+const telHref = "tel:+529992359585";
+const mapsUrl = "https://maps.google.com/?cid=3598414744611674096&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA";
+---
+<BaseLayout
+  title="Family & Carovet · Veterinaria y estética canina en Mérida"
+  description="⭐ 4.8 con 55 reseñas en Google. Consultas, vacunas, cirugías, esterilización y el baño y corte que deja a tu mascota bella y olorosa. Escríbenos por WhatsApp."
+  slug="veterinaria-family-carovet"
+  ogImage="/veterinaria-family-carovet/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Gluten:wght@500;700;800&family=Nunito+Sans:wght@400;600;700&display=swap"
+  favicon="🛁"
+  themeColor="#f4b400"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <main class="vfc">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="hero-blob" aria-hidden="true"></div>
+      <div class="bubbles bubbles-hero" aria-hidden="true">
+        <span class="bubble b1"></span>
+        <span class="bubble b2"></span>
+        <span class="bubble b3"></span>
+        <span class="bubble b4"></span>
+        <span class="bubble b5"></span>
+        <span class="bubble b6"></span>
+      </div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">Veterinaria y estética canina · Leandro Valle, Mérida</p>
+          <h1 class="brand reveal">Family <span class="amp">&amp;</span> Carovet</h1>
+          <p class="tagline reveal">Del baño y corte a la cirugía: cuidamos a tu mascota como si fuera <strong>de la familia</strong>.</p>
+
+          <a class="chip reveal" href={mapsUrl} target="_blank" rel="noopener">
+            <span class="star" aria-hidden="true">★</span> 4.8 · 55 reseñas en Google
+          </a>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-solid" href={whatsapp} target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3z"/></svg>
+              Agenda por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href={mapsUrl} target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal">
+          <img src="/veterinaria-family-carovet/img/foto_1.jpg" alt="Perrito feliz y recién bañado sobre la mesa de estética de Family & Carovet" loading="eager" fetchpriority="high" />
+          <span class="bubble-badge">🫧 Bello y oloroso</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ FIRMA: RESEÑA-BURBUJA ============ -->
+    <section class="quote-band">
+      <div class="bubbles bubbles-band" aria-hidden="true">
+        <span class="bubble bb1"></span>
+        <span class="bubble bb2"></span>
+        <span class="bubble bb3"></span>
+        <span class="bubble bb4"></span>
+      </div>
+      <div class="wrap">
+        <blockquote class="big-quote reveal">
+          <p>&ldquo;Quedaron bellos y olorosos&hellip;&rdquo;</p>
+          <cite>— Sheila Carrillo Trujeque, sobre el baño y corte de Hudson y Nala</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap about-grid">
+        <div>
+          <p class="sec-kicker reveal">Quiénes somos</p>
+          <h2 class="sec-title reveal">Tu mascota, <span class="turq">de la familia</span></h2>
+          <div class="about reveal">
+            <p>Aquí en <strong>Family &amp; Carovet</strong> no solo damos consulta, vacunamos y operamos: también bañamos, cepillamos y consentimos a cada peludo que llega, para que salga bello, oloroso y listo para más travesuras. El nombre no es casualidad — tratamos a tu mascota como si fuera de la familia.</p>
+            <p>Nuestros clientes nos apodan cariñosamente &ldquo;los dogtores&rdquo;, y así nos sentimos: parte del equipo que cuida a tu perro o gato. La Dra. Caro y el resto del equipo platican contigo antes de cualquier procedimiento —de una esterilización a un diagnóstico difícil— y te explican cada paso con calma, para que te vayas con confianza y no con dudas.</p>
+            <p>Estamos en la esquina de la 49 con la calle 20, en Leandro Valle, con acceso para silla de ruedas y atención de lunes a sábado. Ven a conocernos, o mándanos un WhatsApp.</p>
+          </div>
+        </div>
+        <div class="about-photo reveal">
+          <img src="/veterinaria-family-carovet/img/foto_3.jpg" alt="Cachorro relajado y contento durante su visita a Family & Carovet" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="sec sec-dark" id="servicios">
+      <div class="wrap">
+        <p class="sec-kicker sec-kicker-dark reveal">Qué ofrecemos</p>
+        <h2 class="sec-title sec-title-dark reveal">Servicios con <span class="miel-text-dark">mucho cariño</span></h2>
+
+        <div class="servicios-grid reveal">
+          <article class="servicio servicio-featured">
+            <img src="/veterinaria-family-carovet/img/foto_5.jpg" alt="Perro grande recién bañado y cepillado, feliz en la mesa de estética" loading="lazy" />
+            <div class="servicio-body">
+              <span class="servicio-tag">🫧 Lo que nos distingue</span>
+              <h3>Baño y corte</h3>
+              <p>Cepillado, corte higiénico y mucho mimo para que tu peludo salga bello, oloroso y listo para más travesuras.</p>
+            </div>
+          </article>
+
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">🩺</span><h3>Consulta general</h3></article>
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">💉</span><h3>Vacunación</h3></article>
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">⚕️</span><h3>Esterilización</h3></article>
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">🩹</span><h3>Cirugía de tejidos blandos</h3></article>
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">🎗️</span><h3>Oncología y geriatría</h3></article>
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">🐈</span><h3>Manejo de gatos</h3></article>
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">🏥</span><h3>Hospitalización</h3></article>
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">🏨</span><h3>Hotel canino</h3></article>
+          <article class="servicio"><span class="servicio-icon" aria-hidden="true">💊</span><h3>Alimentos y medicamentos</h3></article>
+        </div>
+        <p class="nota-acceso reveal">♿ Instalaciones con acceso para silla de ruedas.</p>
+      </div>
+    </section>
+
+    <!-- ============ PRUEBA SOCIAL ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Lo que dicen en Google</p>
+        <h2 class="sec-title reveal"><span class="miel-text">4.8 de 5</span> en 55 reseñas</h2>
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>&hellip;Quedaron bellos y olorosos, la doctora me recordó que es importante el corte higiénico para Nala (Pomerania). Salieron felices y listos para hacer más travesuras&hellip;</blockquote>
+            <figcaption><strong>Sheila Carrillo Trujeque</strong><span>Hace 3 meses · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>&hellip;sentí todo lo que mi perrito y yo necesitábamos: calidez humana, profesionalismo, preparación, y precios justos. GRACIAS a los doctores de aquí, Dra.Caro me ayudó con un Dx. Certero y todo hasta el final.</blockquote>
+            <figcaption><strong>Jeovanna Sabido</strong><span>Hace 2 años · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>&hellip;después de platicar con los dogtores, me dieron una calma y paz, te explican todo el procedimiento y te dan mucha confianza, Alaska regreso como si no le hubieran hecho nada, a 8 días de su proceso, está brincando y corriendo como si nada&hellip;</blockquote>
+            <figcaption><strong>Mercedes Castro Acosta.</strong><span>Hace 2 años · Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-panel" id="ubicacion">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Dónde estamos</p>
+        <h2 class="sec-title reveal">Esquina 49, <span class="turq">Leandro Valle</span></h2>
+        <div class="ubica reveal">
+          <div class="ubica-info">
+            <img class="ubica-photo" src="/veterinaria-family-carovet/img/foto_4.jpg" alt="Sala de espera de Family & Carovet, amplia y limpia" loading="lazy" />
+            <p class="dir">Esquina 49, C. 20 2, Leandro Valle<br />97143 Mérida, Yuc.</p>
+            <a class="btn btn-solid btn-sm" href={mapsUrl} target="_blank" rel="noopener">Abrir en Google Maps</a>
+            <h3 class="horario-titulo">Horario</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>9:00–19:00</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>9:00–19:00</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>9:00–19:00</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>9:00–19:00</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>9:00–19:00</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>9:00–17:00</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps?q=Veterinaria%20Family%20%26%20Carovet%2C%20Esquina%2049%2C%20C.%2020%202%2C%20Leandro%20Valle%2C%2097143%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+              title="Mapa: Family & Carovet en Leandro Valle, Mérida"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <h2 class="banda-title">¿Tu peludo ya necesita su baño?</h2>
+        <p class="banda-sub">Agenda su consulta, su vacuna o su baño y corte — sale bello, oloroso y feliz.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href={whatsapp} target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn-dark-ghost" href={telHref}>Llamar · {telefono}</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <p class="pie-logo">Family &amp; Carovet</p>
+        <p class="pie-dato">Veterinaria y estética canina · Esquina 49, C. 20 2, Leandro Valle, 97143 Mérida, Yuc.</p>
+        <p class="pie-dato"><a href={telHref}>999 235 9585</a> · <a href={whatsapp} target="_blank" rel="noopener">WhatsApp</a></p>
+        <p class="pie-mini">Lunes a viernes 9:00–19:00 · Sábado 9:00–17:00 · Domingo cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Veterinaria Family & Carovet",
+    "telephone": "+529992359585",
+    "url": "https://demos.ivang.mx/veterinaria-family-carovet",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Esquina 49, C. 20 2, Leandro Valle",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97143",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "55"
+    },
+    "openingHours": ["Mo-Fr 09:00-19:00", "Sa 09:00-17:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --crema: #fff6e6;
+      --paper: #fffdf6;
+      --miel: #f4b400;
+      --miel-ink: #7a4e00;
+      --turquesa: #35c2c2;
+      --turquesa-ink: #106a6a;
+      --tinta: #2c2618;
+      --tinta-soft: #5b4f3a;
+      --line: rgba(44, 38, 24, 0.14);
+      --display: "Gluten", system-ui, sans-serif;
+      --body-font: "Nunito Sans", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--crema);
+      color: var(--tinta);
+      font-family: var(--body-font);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .vfc ::selection { background: var(--turquesa); color: var(--tinta); }
+    .vfc a:focus-visible,
+    .vfc .btn:focus-visible {
+      outline: 3px solid var(--turquesa-ink);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- BURBUJAS DECORATIVAS ---------- */
+    .bubbles { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+    .bubble {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.95), rgba(53,194,194,0.45) 55%, rgba(53,194,194,0.06) 100%);
+      box-shadow: inset 0 0 8px rgba(255,255,255,0.6);
+      animation: rise 9s ease-in-out infinite;
+    }
+    @keyframes rise {
+      0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+      12% { opacity: 0.9; }
+      100% { transform: translateY(-140px) translateX(12px) scale(1.08); opacity: 0; }
+    }
+    .b1 { width: 26px; height: 26px; left: 6%; bottom: 8%; animation-duration: 8s; animation-delay: 0s; }
+    .b2 { width: 44px; height: 44px; left: 18%; bottom: 4%; animation-duration: 11s; animation-delay: 1.4s; }
+    .b3 { width: 18px; height: 18px; left: 32%; bottom: 10%; animation-duration: 7s; animation-delay: 2.6s; }
+    .b4 { width: 34px; height: 34px; right: 22%; bottom: 6%; animation-duration: 10s; animation-delay: 0.8s; }
+    .b5 { width: 20px; height: 20px; right: 10%; bottom: 12%; animation-duration: 9s; animation-delay: 3.2s; }
+    .b6 { width: 52px; height: 52px; right: 4%; bottom: 2%; animation-duration: 12s; animation-delay: 1.8s; }
+    .bb1 { width: 30px; height: 30px; left: 8%; bottom: 6%; animation-duration: 8s; animation-delay: 0.2s; }
+    .bb2 { width: 20px; height: 20px; left: 42%; bottom: 12%; animation-duration: 9.5s; animation-delay: 2s; }
+    .bb3 { width: 46px; height: 46px; right: 14%; bottom: 4%; animation-duration: 11s; animation-delay: 1s; }
+    .bb4 { width: 16px; height: 16px; right: 34%; bottom: 16%; animation-duration: 7.5s; animation-delay: 3s; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      padding: 48px 0 56px;
+      overflow: hidden;
+    }
+    .hero-blob {
+      position: absolute;
+      top: -18%;
+      right: -18%;
+      width: 62vw;
+      height: 62vw;
+      max-width: 620px;
+      max-height: 620px;
+      background: radial-gradient(circle, rgba(53,194,194,0.22), rgba(244,180,0,0.14) 55%, transparent 75%);
+      border-radius: 42% 58% 65% 35% / 45% 40% 60% 55%;
+      z-index: 0;
+    }
+    .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr; gap: 36px; }
+    .kicker {
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--turquesa-ink);
+      margin: 0 0 12px;
+    }
+    .brand {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(44px, 12vw, 84px);
+      line-height: 0.98;
+      margin: 0 0 16px;
+      color: var(--tinta);
+    }
+    .brand .amp { color: var(--miel-ink); }
+    .tagline {
+      font-size: clamp(18px, 4.6vw, 23px);
+      font-weight: 400;
+      color: var(--tinta-soft);
+      max-width: 36ch;
+      margin: 0 0 20px;
+    }
+    .tagline strong { color: var(--turquesa-ink); font-weight: 700; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 9px 18px;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--tinta);
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(44, 38, 24, 0.08);
+    }
+    .chip .star { color: var(--miel-ink); }
+    .chip:hover { border-color: var(--turquesa); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--body-font);
+      font-weight: 700;
+      font-size: 16.5px;
+      text-decoration: none;
+      padding: 15px 26px;
+      border-radius: 999px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--miel); color: var(--tinta); }
+    .btn-solid:hover { background: #ffc72e; }
+    .btn-ghost { border: 2px solid var(--tinta); color: var(--tinta); }
+    .btn-ghost:hover { border-color: var(--turquesa-ink); color: var(--turquesa-ink); }
+    .btn-sm { font-size: 15px; padding: 12px 20px; }
+
+    .hero-photo { position: relative; }
+    .hero-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 32px;
+      box-shadow: 0 24px 48px rgba(44, 38, 24, 0.18);
+    }
+    .bubble-badge {
+      position: absolute;
+      bottom: -14px;
+      left: -10px;
+      background: var(--paper);
+      border: 2px solid var(--turquesa);
+      color: var(--tinta);
+      font-weight: 700;
+      font-size: 14.5px;
+      padding: 10px 16px;
+      border-radius: 999px;
+      box-shadow: 0 10px 24px rgba(44, 38, 24, 0.16);
+      transform: rotate(-4deg);
+    }
+
+    /* ---------- FIRMA: BANDA DE RESEÑA ---------- */
+    .quote-band {
+      position: relative;
+      background: linear-gradient(160deg, var(--turquesa), #58d3d3);
+      padding: 64px 0;
+      overflow: hidden;
+    }
+    .big-quote { margin: 0 auto; max-width: 46ch; text-align: center; position: relative; z-index: 1; }
+    .big-quote p {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(30px, 7vw, 52px);
+      line-height: 1.08;
+      margin: 0 0 16px;
+      color: var(--tinta);
+    }
+    .big-quote cite {
+      display: block;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 15px;
+      color: var(--tinta);
+    }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 72px 0; }
+    .sec-panel { background: var(--paper); }
+    .sec-dark { background: var(--tinta); }
+    .sec-kicker {
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--turquesa-ink);
+      margin: 0 0 10px;
+    }
+    .sec-kicker-dark { color: var(--turquesa); }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(32px, 8vw, 54px);
+      line-height: 1.02;
+      margin: 0 0 28px;
+      color: var(--tinta);
+    }
+    .sec-title-dark { color: var(--crema); }
+    .sec-title .turq { color: var(--turquesa-ink); }
+    .sec-title .miel-text { color: var(--miel-ink); }
+    .miel-text-dark { color: var(--miel); }
+
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start; }
+    .about p { max-width: 62ch; margin: 0 0 16px; color: var(--tinta-soft); }
+    .about strong { color: var(--tinta); }
+    .about-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 28px;
+      box-shadow: 0 18px 36px rgba(44, 38, 24, 0.14);
+    }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .servicio {
+      background: var(--paper);
+      border-radius: 22px;
+      padding: 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+    }
+    .servicio h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 17.5px;
+      margin: 0;
+      color: var(--tinta);
+    }
+    .servicio-icon { font-size: 26px; line-height: 1; }
+    .servicio-featured {
+      grid-column: 1 / -1;
+      flex-direction: column;
+      align-items: stretch;
+      padding: 0;
+      overflow: hidden;
+      border: 2px solid var(--turquesa);
+    }
+    .servicio-featured img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .servicio-body { padding: 22px; }
+    .servicio-tag {
+      display: inline-block;
+      background: var(--miel);
+      color: var(--tinta);
+      font-weight: 700;
+      font-size: 12.5px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .servicio-body h3 { font-size: 24px; margin: 0 0 6px; }
+    .servicio-body p { margin: 0; color: var(--tinta-soft); font-size: 15px; max-width: 46ch; }
+    .nota-acceso { margin: 24px 0 0; color: #b8ac93; font-size: 14.5px; }
+
+    /* ---------- RESEÑAS ---------- */
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin: 0 0 30px;
+    }
+    .rev {
+      margin: 0;
+      background: var(--paper);
+      color: var(--tinta);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 10px 24px rgba(44, 38, 24, 0.08);
+    }
+    .rev-stars { color: var(--miel-ink); font-size: 16px; letter-spacing: 0.16em; margin: 0 0 10px; }
+    .rev blockquote {
+      margin: 0 0 14px;
+      font-size: 16px;
+      line-height: 1.55;
+      color: var(--tinta-soft);
+    }
+    .rev figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .rev figcaption strong {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 16.5px;
+      color: var(--tinta);
+    }
+    .rev figcaption span { font-size: 13px; color: var(--turquesa-ink); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 28px; }
+    .ubica-photo {
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border-radius: 22px;
+      margin-bottom: 18px;
+      box-shadow: 0 14px 30px rgba(44, 38, 24, 0.12);
+    }
+    .dir { font-size: 17px; font-weight: 600; margin: 0 0 14px; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 19px;
+      margin: 26px 0 10px;
+      color: var(--tinta);
+    }
+    .horarios { width: 100%; max-width: 420px; border-collapse: collapse; font-size: 15px; }
+    .horarios th, .horarios td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    .horarios th { font-weight: 600; color: var(--tinta); }
+    .horarios td { color: var(--tinta-soft); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: var(--tinta); background: var(--miel); font-weight: 700; border-radius: 8px; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--tinta);
+      color: var(--crema);
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 10px;
+      vertical-align: 1px;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 22px;
+      display: block;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda {
+      background: var(--miel);
+      color: var(--tinta);
+      padding: 60px 0;
+      text-align: center;
+    }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(30px, 7vw, 48px);
+      line-height: 1.05;
+      margin: 0 0 12px;
+    }
+    .banda-sub { margin: 0 auto 22px; max-width: 42ch; font-weight: 600; }
+    .banda .cta-row { justify-content: center; }
+    .btn-dark { background: var(--tinta); color: var(--crema); }
+    .btn-dark:hover { background: #423a27; }
+    .btn-dark-ghost { border: 2px solid var(--tinta); color: var(--tinta); }
+    .btn-dark-ghost:hover { background: rgba(44, 38, 24, 0.08); }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      background: var(--tinta);
+      color: var(--crema);
+      padding: 44px 0 96px;
+      text-align: center;
+    }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 26px;
+      color: var(--crema);
+      margin: 0 0 10px;
+    }
+    .pie-dato { margin: 4px 0; color: #cfc4ab; font-size: 14.5px; }
+    .pie-dato a { color: var(--turquesa); text-decoration: none; border-bottom: 1px solid var(--turquesa); }
+    .pie-dato a:hover { color: var(--miel); border-color: var(--miel); }
+    .pie-mini { margin: 14px 0 0; color: #a89a7f; font-size: 12.5px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 100px 0; }
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 48px; }
+      .about-grid { grid-template-columns: 1.2fr 1fr; }
+      .servicios-grid { grid-template-columns: repeat(3, 1fr); }
+      .servicio-featured { grid-template-columns: 1fr 1fr; display: grid; }
+      .servicio-featured img { aspect-ratio: auto; height: 100%; }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .ubica { grid-template-columns: 1fr 1.2fr; align-items: start; }
+      .mapa iframe { height: 420px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      // Resaltar el día de hoy en la tabla de horarios
+      var hoy = new Date().getDay(); // 0 = domingo
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      // Scroll-reveal (mejora progresiva)
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,566 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Centro Médico Veterinario El Oriente · Veterinaria y estética canina en Mérida"
+  description="Consulta veterinaria, vacunación y estética canina en Emiliano Zapata Oriente, Mérida. ⭐ 4.8 con 52 reseñas en Google. Agenda por WhatsApp."
+  slug="centro-medico-veterinario-el-oriente"
+  ogImage="/centro-medico-veterinario-el-oriente/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700&display=swap"
+  favicon="🐾"
+  themeColor="#f6f8f1"
+  whatsapp={"https://wa.me/529992899863"}
+  telefono={"999 289 9863"}
+  mapsUrl={"https://maps.google.com/?cid=5338653679826026730&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ============ HERO: el rótulo ============ -->
+  <header class="hero">
+    <h1 class="sr-only">Centro Médico Veterinario El Oriente — Veterinaria en Emiliano Zapata Oriente, Mérida</h1>
+
+    <svg class="rotulo" viewBox="0 0 520 462" aria-hidden="true">
+      <defs>
+        <path id="arco" d="M 62,258 A 198,198 0 0 1 458,258" fill="none" />
+      </defs>
+      <text class="arco-txt">
+        <textPath href="#arco" startOffset="50%" text-anchor="middle">Centro Médico Veterinario</textPath>
+      </text>
+      <g class="logo">
+        <circle cx="260" cy="268" r="95" class="logo-circulo" />
+        <circle cx="260" cy="268" r="78" class="logo-anillo" />
+        <g class="logo-pata">
+          <ellipse cx="260" cy="296" rx="28" ry="22" />
+          <ellipse cx="221" cy="258" rx="11" ry="16" transform="rotate(-24 221 258)" />
+          <ellipse cx="246" cy="243" rx="11" ry="17" transform="rotate(-8 246 243)" />
+          <ellipse cx="274" cy="243" rx="11" ry="17" transform="rotate(8 274 243)" />
+          <ellipse cx="299" cy="258" rx="11" ry="16" transform="rotate(24 299 258)" />
+        </g>
+      </g>
+      <text x="260" y="428" text-anchor="middle" class="nombre-txt">El Oriente</text>
+    </svg>
+
+    <p class="gancho">«Amabilidad y trato especial» para tu mascota — así nos describen los vecinos en Google.</p>
+
+    <p class="chip-rating">⭐ 4.8 · 52 reseñas en Google</p>
+
+    <div class="hero-cta">
+      <a class="btn btn-wa" href="https://wa.me/529992899863">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+        Agenda por WhatsApp
+      </a>
+      <a class="btn btn-mapa" href="https://maps.google.com/?cid=5338653679826026730&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">📍 Cómo llegar</a>
+    </div>
+
+    <figure class="fachada">
+      <img src="/centro-medico-veterinario-el-oriente/img/foto_1.jpg" alt="Fachada del Centro Médico Veterinario El Oriente con su rótulo pintado a mano en verde y azul" width="1100" height="825" />
+      <figcaption>Así nos ves desde la Calle 37 · Emiliano Zapata Oriente</figcaption>
+    </figure>
+  </header>
+
+  <div class="franja" aria-hidden="true"></div>
+
+  <!-- ============ SOBRE NOSOTROS ============ -->
+  <section class="sec sobre" id="sobre">
+    <div class="wrap sobre-grid">
+      <div class="sobre-txt rvl">
+        <p class="kicker">Sobre nosotros</p>
+        <h2>La veterinaria del rumbo, con trato de familia</h2>
+        <p>Somos el consultorio veterinario de la Calle 37, en Emiliano Zapata Oriente. Nos encuentras fácil: busca el rótulo verde y azul pintado en la fachada. Adentro te espera lo que nuestros clientes repiten en sus reseñas — amabilidad y un trato especial para cada mascota.</p>
+        <p>Atendemos consulta médica y contamos con estética canina, de la que los dueños hablan con especial cariño. Y para que resuelvas todo en una sola vuelta, también encuentras alimento, medicamentos y accesorios para tu peludo.</p>
+        <p>Trabajamos de lunes a sábado en horario partido — al mediodía cerramos de 2:00 a 4:00, tal como dice el letrero de la puerta. ¿Dudas sobre tu mascota? Mándanos un WhatsApp y con gusto te orientamos.</p>
+      </div>
+      <div class="sobre-fotos rvl">
+        <figure class="polaroid p-a">
+          <img src="/centro-medico-veterinario-el-oriente/img/foto_3.jpg" alt="French poodle blanco recién arreglado, descansando en unas escaleras" loading="lazy" width="1100" height="619" />
+          <figcaption>Consentido de la casa 🐾</figcaption>
+        </figure>
+        <figure class="polaroid p-b">
+          <img src="/centro-medico-veterinario-el-oriente/img/foto_5.jpg" alt="Poodle blanco mirando por la ventana hacia la calle" loading="lazy" width="618" height="1100" />
+          <figcaption>Esperando su cita</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="sec servicios" id="servicios">
+    <div class="wrap">
+      <div class="sec-h rvl">
+        <p class="kicker">Servicios</p>
+        <h2>Todo para tu peludo, en un solo lugar</h2>
+      </div>
+      <ul class="serv-grid rvl">
+        <li class="serv-card">
+          <span class="serv-ico" aria-hidden="true">🩺</span>
+          <h3>Consulta médica</h3>
+          <p>Revisión y seguimiento para perros y gatos.</p>
+        </li>
+        <li class="serv-card">
+          <span class="serv-ico" aria-hidden="true">💉</span>
+          <h3>Vacunación y desparasitación</h3>
+          <p>Esquemas al día para cachorros y adultos.</p>
+        </li>
+        <li class="serv-card">
+          <span class="serv-ico" aria-hidden="true">✂️</span>
+          <h3>Estética canina</h3>
+          <p>Baño y arreglo con el trato que celebran las reseñas.</p>
+        </li>
+        <li class="serv-card">
+          <span class="serv-ico" aria-hidden="true">💊</span>
+          <h3>Medicamentos</h3>
+          <p>Surtimos el tratamiento que tu mascota necesita.</p>
+        </li>
+        <li class="serv-card">
+          <span class="serv-ico" aria-hidden="true">🍖</span>
+          <h3>Alimento y accesorios</h3>
+          <p>Lo esencial para consentirlos, sin dar más vueltas.</p>
+        </li>
+        <li class="serv-card">
+          <span class="serv-ico" aria-hidden="true">💬</span>
+          <h3>Atención por WhatsApp</h3>
+          <p>Resuelve dudas y agenda tu visita por mensaje.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="franja" aria-hidden="true"></div>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section class="sec resenas" id="resenas">
+    <div class="wrap">
+      <div class="sec-h rvl">
+        <p class="kicker">Lo que cuentan los dueños</p>
+        <h2>⭐ 4.8 · 52 reseñas en Google</h2>
+      </div>
+      <div class="res-grid">
+        <blockquote class="res-card rvl">
+          <p class="estrellas" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>«…amabilidad y trato especial a mi mascota»</p>
+          <footer><strong>ligia guadalupe cura pacheco</strong> · Hace 7 meses</footer>
+        </blockquote>
+        <blockquote class="res-card rvl">
+          <p class="estrellas" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>«Excelente trato. La estética canina tiene precios justos y tratan muy bien a mi perrita»</p>
+          <footer><strong>Patricia Sansores</strong> · Hace un año</footer>
+        </blockquote>
+        <blockquote class="res-card rvl">
+          <p class="estrellas" aria-label="5 de 5 estrellas">★★★★★</p>
+          <p>«Muy buena y amable atención. Servicio eficiente y honesto. Precio accesible.»</p>
+          <footer><strong>Roberto Federico Maldonado Espinosa</strong> · Hace 3 años</footer>
+        </blockquote>
+        <figure class="res-foto rvl">
+          <img src="/centro-medico-veterinario-el-oriente/img/foto_4.jpg" alt="Poodle blanco descansando en un sillón con su premio" loading="lazy" width="825" height="1100" />
+          <figcaption>Uno de nuestros consentidos</figcaption>
+        </figure>
+      </div>
+      <p class="res-cta rvl">
+        <a class="btn btn-mapa" href="https://maps.google.com/?cid=5338653679826026730&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+  <section class="sec ubicacion" id="ubicacion">
+    <div class="wrap ubi-grid">
+      <div class="ubi-info rvl">
+        <p class="kicker">Visítanos</p>
+        <h2>Ubicación y horarios</h2>
+        <p class="direccion">Calle 37 por Calle 16 y Calle 18 #308,<br />Emiliano Zapata Oriente, 97144 Mérida, Yuc.</p>
+        <div class="tabla-wrap">
+          <table class="horarios">
+            <tbody>
+              <tr data-dia="1"><th scope="row">Lunes</th><td>9:00–14:00 y 16:00–19:00</td></tr>
+              <tr data-dia="2"><th scope="row">Martes</th><td>9:00–14:00 y 16:00–19:00</td></tr>
+              <tr data-dia="3"><th scope="row">Miércoles</th><td>9:00–14:00 y 16:00–19:00</td></tr>
+              <tr data-dia="4"><th scope="row">Jueves</th><td>9:00–14:00 y 16:00–19:00</td></tr>
+              <tr data-dia="5"><th scope="row">Viernes</th><td>9:00–14:00 y 16:00–19:00</td></tr>
+              <tr data-dia="6"><th scope="row">Sábado</th><td>9:00–14:00</td></tr>
+              <tr data-dia="0"><th scope="row">Domingo</th><td class="cerrado">Cerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <a class="btn btn-mapa" href="https://maps.google.com/?cid=5338653679826026730&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">📍 Cómo llegar</a>
+      </div>
+      <div class="mapa rvl">
+        <iframe
+          src="https://www.google.com/maps?q=Centro+M%C3%A9dico+Veterinario+El+Oriente%2C+Calle+37+308%2C+Emiliano+Zapata+Oriente%2C+97144+M%C3%A9rida%2C+Yucat%C3%A1n&output=embed"
+          title="Mapa: Centro Médico Veterinario El Oriente en Mérida"
+          loading="lazy"
+          allowfullscreen
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <div class="franja" aria-hidden="true"></div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="pie">
+    <div class="wrap">
+      <p class="pie-nombre">Centro Médico Veterinario <span>El Oriente</span></p>
+      <p class="pie-dato">📞 <a href="tel:+529992899863">999 289 9863</a></p>
+      <p class="pie-dato">Calle 37 por Calle 16 y Calle 18 #308, Emiliano Zapata Oriente, 97144 Mérida, Yuc.</p>
+      <p class="pie-dato pie-horario">Lun–Vie 9:00–14:00 y 16:00–19:00 · Sáb 9:00–14:00</p>
+      <p class="pie-pata" aria-hidden="true">🐾</p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --verde: #3d9a3f;
+      --verde-osc: #2c7a30;
+      --azul: #2b7fc2;
+      --azul-osc: #1d5e94;
+      --muro: #f6f8f1;
+      --tinta: #26313a;
+      --gris: #5b6a75;
+      --negro: #22262b;
+      --estrella: #f2a71b;
+    }
+
+    body {
+      font-family: 'Nunito', system-ui, sans-serif;
+      color: var(--tinta);
+      background: var(--muro);
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    h1, h2, h3, .kicker { font-family: 'Baloo 2', 'Nunito', sans-serif; line-height: 1.15; }
+    h2 { font-size: clamp(1.55rem, 5.4vw, 2.2rem); font-weight: 800; color: var(--verde-osc); margin: 0.2em 0 0.6em; }
+    h3 { font-size: 1.02rem; font-weight: 700; margin: 0.35em 0 0.2em; color: var(--tinta); }
+
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+    .sec { padding: 56px 0; }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    .kicker {
+      color: var(--azul);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 0.82rem;
+      margin: 0;
+    }
+
+    .sec-h h2::after {
+      content: '';
+      display: block;
+      width: 66px;
+      height: 11px;
+      margin-top: 12px;
+      border-radius: 2px;
+      background: linear-gradient(180deg, var(--verde) 0 42%, transparent 42% 58%, var(--azul) 58% 100%);
+    }
+
+    /* ---------- franja: las rayas del muro ---------- */
+    .franja {
+      height: 30px;
+      background: linear-gradient(180deg, var(--verde) 0 40%, var(--muro) 40% 56%, var(--azul) 56% 100%);
+    }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      text-align: center;
+      padding: 40px 20px 64px;
+      background:
+        radial-gradient(900px 420px at 50% -80px, #ffffff 0%, rgba(255,255,255,0) 65%),
+        radial-gradient(rgba(61, 154, 63, 0.055) 1px, rgba(0,0,0,0) 1.4px),
+        var(--muro);
+      background-size: auto, 26px 26px, auto;
+    }
+
+    .rotulo {
+      width: min(90vw, 440px);
+      height: auto;
+      margin: 0 auto;
+      display: block;
+    }
+    .arco-txt {
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 700;
+      font-size: 36px;
+      letter-spacing: 1.5px;
+      fill: var(--verde);
+      stroke: #fff;
+      stroke-width: 6;
+      paint-order: stroke;
+      filter: drop-shadow(0 2px 0 rgba(38, 49, 58, 0.16));
+    }
+    .nombre-txt {
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 800;
+      font-size: 64px;
+      fill: var(--verde);
+      stroke: #fff;
+      stroke-width: 8;
+      paint-order: stroke;
+      filter: drop-shadow(0 3px 0 rgba(38, 49, 58, 0.18));
+    }
+    .logo { filter: drop-shadow(0 4px 6px rgba(29, 94, 148, 0.28)); }
+    .logo-circulo { fill: var(--azul); stroke: #fff; stroke-width: 7; }
+    .logo-anillo { fill: none; stroke: rgba(255, 255, 255, 0.92); stroke-width: 5; }
+    .logo-pata ellipse { fill: #fff; }
+
+    .gancho {
+      max-width: 34rem;
+      margin: 22px auto 0;
+      font-size: 1.08rem;
+      font-weight: 600;
+      color: var(--tinta);
+    }
+
+    .chip-rating {
+      display: inline-block;
+      margin: 16px auto 0;
+      padding: 8px 16px;
+      background: #fff;
+      border: 2px solid var(--azul);
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--azul-osc);
+      rotate: -1deg;
+      box-shadow: 0 3px 0 rgba(29, 94, 148, 0.22);
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 14px 24px;
+      border-radius: 999px;
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 700;
+      font-size: 1.02rem;
+      text-decoration: none;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:focus-visible { outline: 3px solid var(--azul-osc); outline-offset: 3px; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn:active { transform: translateY(0); }
+
+    .btn-wa {
+      background: var(--verde);
+      color: #fff;
+      box-shadow: 0 4px 0 var(--verde-osc);
+    }
+    .btn-wa:hover { box-shadow: 0 6px 0 var(--verde-osc); }
+    .btn-mapa {
+      background: #fff;
+      color: var(--azul-osc);
+      border: 2px solid var(--azul);
+      box-shadow: 0 4px 0 rgba(29, 94, 148, 0.25);
+    }
+    .btn-mapa:hover { box-shadow: 0 6px 0 rgba(29, 94, 148, 0.25); }
+
+    .fachada {
+      max-width: 350px;
+      margin: 36px auto 0;
+      padding: 10px 10px 12px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 10px 24px rgba(38, 49, 58, 0.18);
+      rotate: -1.5deg;
+    }
+    .fachada img { border-radius: 4px; }
+    .fachada figcaption {
+      font-size: 0.82rem;
+      color: var(--gris);
+      padding-top: 9px;
+      font-weight: 600;
+    }
+
+    /* ---------- SOBRE ---------- */
+    .sobre { background: #fff; }
+    .sobre-grid { display: grid; gap: 36px; }
+    .sobre-txt p { margin: 0 0 1em; }
+    .sobre-txt p:last-child { margin-bottom: 0; }
+
+    .sobre-fotos {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .polaroid {
+      margin: 0;
+      padding: 8px 8px 10px;
+      background: var(--muro);
+      border: 1px solid rgba(38, 49, 58, 0.08);
+      border-radius: 8px;
+      box-shadow: 0 8px 18px rgba(38, 49, 58, 0.14);
+    }
+    .polaroid img { border-radius: 4px; object-fit: cover; width: 100%; }
+    .polaroid figcaption { font-size: 0.8rem; color: var(--gris); padding-top: 8px; font-weight: 600; text-align: center; }
+    .p-a { rotate: -1.6deg; }
+    .p-a img { aspect-ratio: 4 / 3; }
+    .p-b { rotate: 1.8deg; margin-top: 22px; }
+    .p-b img { aspect-ratio: 3 / 4; }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios { background: #eef5e9; }
+    .serv-grid {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .serv-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px 16px;
+      border: 1px solid rgba(61, 154, 63, 0.16);
+      box-shadow: 0 3px 0 rgba(44, 122, 48, 0.12);
+    }
+    .serv-card p { margin: 0; font-size: 0.88rem; color: var(--gris); }
+    .serv-ico {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--azul);
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px var(--azul);
+      font-size: 1.3rem;
+    }
+
+    /* ---------- RESEÑAS ---------- */
+    .resenas { background: #eaf3fa; }
+    .res-grid { display: grid; gap: 16px; }
+    .res-card {
+      margin: 0;
+      background: #fff;
+      border-radius: 14px;
+      padding: 20px 20px 16px;
+      border-left: 6px solid var(--verde);
+      box-shadow: 0 4px 14px rgba(29, 94, 148, 0.1);
+    }
+    .res-card p { margin: 0 0 0.6em; font-size: 1rem; }
+    .res-card .estrellas { color: var(--estrella); letter-spacing: 2px; font-size: 1.05rem; margin-bottom: 0.4em; }
+    .res-card footer { font-size: 0.85rem; color: var(--gris); }
+    .res-foto {
+      margin: 0;
+      padding: 8px 8px 10px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 8px 18px rgba(38, 49, 58, 0.14);
+      rotate: 1.4deg;
+      max-width: 300px;
+      justify-self: center;
+    }
+    .res-foto img { border-radius: 4px; aspect-ratio: 4 / 5; object-fit: cover; width: 100%; }
+    .res-foto figcaption { font-size: 0.8rem; color: var(--gris); padding-top: 8px; font-weight: 600; text-align: center; }
+    .res-cta { text-align: center; margin: 28px 0 0; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubicacion { background: #fff; }
+    .ubi-grid { display: grid; gap: 32px; }
+    .direccion { font-weight: 600; margin: 0.4em 0 1.2em; }
+
+    .tabla-wrap { overflow-x: auto; margin-bottom: 22px; }
+    .horarios {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.95rem;
+      background: var(--muro);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .horarios th, .horarios td { padding: 9px 14px; text-align: left; }
+    .horarios th { font-weight: 700; color: var(--verde-osc); white-space: nowrap; }
+    .horarios tr:nth-child(even) { background: rgba(61, 154, 63, 0.06); }
+    .horarios .cerrado { color: var(--gris); }
+    .horarios tr.hoy { background: var(--verde); }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: #fff; }
+    .horarios tr.hoy th::after { content: ' · hoy'; font-size: 0.8em; opacity: 0.9; }
+
+    .mapa iframe {
+      width: 100%;
+      height: 320px;
+      border: 0;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(38, 49, 58, 0.15);
+    }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      background: var(--negro);
+      color: #dfe6ec;
+      text-align: center;
+      padding: 44px 0 104px;
+    }
+    .pie-nombre {
+      font-family: 'Baloo 2', sans-serif;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #fff;
+      margin: 0 0 10px;
+    }
+    .pie-nombre span { color: #7cc97e; }
+    .pie-dato { margin: 4px 0; font-size: 0.92rem; }
+    .pie-dato a { color: #8ec9f2; font-weight: 700; text-decoration: none; }
+    .pie-dato a:hover, .pie-dato a:focus-visible { text-decoration: underline; }
+    .pie-horario { color: #9aa7b1; }
+    .pie-pata { margin: 16px 0 0; font-size: 1.3rem; }
+
+    /* ---------- reveal (solo con JS) ---------- */
+    .js .rvl { opacity: 0; transform: translateY(16px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .js .rvl-in { opacity: 1; transform: none; }
+
+    /* ---------- desktop ---------- */
+    @media (min-width: 700px) {
+      .sec { padding: 72px 0; }
+      .serv-grid { grid-template-columns: repeat(3, 1fr); gap: 18px; }
+      .res-grid { grid-template-columns: 1fr 1fr; align-items: start; }
+    }
+    @media (min-width: 880px) {
+      .sobre-grid { grid-template-columns: 1.15fr 1fr; align-items: center; gap: 56px; }
+      .ubi-grid { grid-template-columns: 1fr 1.05fr; align-items: start; }
+      .mapa iframe { height: 420px; }
+      .hero { padding-top: 56px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      document.documentElement.className += ' js';
+
+      // Resaltar el día de hoy en la tabla de horarios
+      var hoy = document.querySelector('[data-dia="' + new Date().getDay() + '"]');
+      if (hoy) hoy.classList.add('hoy');
+
+      // Scroll-reveal como mejora progresiva
+      var els = document.querySelectorAll('.rvl');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('rvl-in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('rvl-in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

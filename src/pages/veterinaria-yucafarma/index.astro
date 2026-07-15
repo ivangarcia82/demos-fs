@@ -1,0 +1,637 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const direccionQuery = 'Veterinaria YUCAFARMA, C. 31ᴬ 321, Polígono 108, 97143 Mérida, Yuc., México';
+const mapEmbedSrc = `https://www.google.com/maps?q=${encodeURIComponent(direccionQuery)}&output=embed`;
+const telHref = 'tel:+529992895647';
+---
+<BaseLayout
+  title="Veterinaria Yucafarma · Clínica y farmacia veterinaria en Mérida"
+  description="⭐ 4.6 con 270 reseñas en Google. Consulta, diagnóstico y el medicamento de tu mascota en la misma visita — Polígono 108, Mérida. Escríbenos por WhatsApp."
+  slug="veterinaria-yucafarma"
+  ogImage="/veterinaria-yucafarma/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
+  favicon="💊"
+  themeColor="#1fa06a"
+  whatsapp={"https://wa.me/529992895647"}
+  telefono={"999 289 5647"}
+  mapsUrl={"https://maps.google.com/?cid=1444344218189604110&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="yf">
+
+    <!-- Sprite de iconos: cruz de farmacia + huella (elemento firma) -->
+    <svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden">
+      <symbol id="i-cruz" viewBox="0 0 48 48">
+        <rect x="18" y="2" width="12" height="44" rx="6"></rect>
+        <rect x="2" y="18" width="44" height="12" rx="6"></rect>
+      </symbol>
+      <symbol id="i-huella" viewBox="0 0 48 44">
+        <ellipse cx="24" cy="30" rx="14" ry="10"></ellipse>
+        <circle cx="9" cy="10" r="5.5"></circle>
+        <circle cx="20" cy="5" r="5.5"></circle>
+        <circle cx="31" cy="5" r="5.5"></circle>
+        <circle cx="42" cy="10" r="5.5"></circle>
+      </symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24">
+        <path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"></path>
+      </symbol>
+      <symbol id="i-wa" viewBox="0 0 24 24">
+        <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3z"></path>
+      </symbol>
+    </svg>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="badge reveal">
+            <svg class="icon" width="16" height="16"><use href="#i-cruz"></use></svg>
+            Clínica + farmacia veterinaria
+          </p>
+          <h1 class="brand reveal">
+            <span class="brand-sub">Veterinaria</span>
+            <span class="brand-main">Yucafarma</span>
+          </h1>
+          <p class="tagline reveal">Consulta, diagnóstico y el medicamento de tu mascota — <strong>en la misma visita</strong>. Sin ir a un lado y luego a otro.</p>
+
+          <a class="chip reveal" href="https://maps.google.com/?cid=1444344218189604110&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            <span class="star" aria-hidden="true">★</span> 4.6 · 270 reseñas en Google
+          </a>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-solid" href="https://wa.me/529992895647" target="_blank" rel="noopener">
+              <svg class="icon" width="20" height="20"><use href="#i-wa"></use></svg>
+              Agenda por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://maps.google.com/?cid=1444344218189604110&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+              <svg class="icon" width="18" height="18"><use href="#i-pin"></use></svg>
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <div class="photo-card">
+            <img src="/veterinaria-yucafarma/img/foto_2.jpg" alt="Fachada de Veterinaria Yucafarma en el Polígono 108, Mérida" width="1100" height="1100" />
+            <div class="sticker" aria-hidden="true">
+              <svg class="icon" width="26" height="26"><use href="#i-cruz"></use></svg>
+              <svg class="icon icon-paw" width="20" height="18"><use href="#i-huella"></use></svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Firma: guarda geométrica yucateca -->
+    <div class="guarda" aria-hidden="true"></div>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap about-grid">
+        <div>
+          <p class="sec-kicker reveal">Quiénes somos</p>
+          <h2 class="sec-title reveal">Tu mascota, <span class="ac">bien cuidada</span> cerca de casa</h2>
+          <div class="about reveal">
+            <p>En Yucafarma no tienes que ir a un lado por la consulta y a otro por el medicamento: aquí se resuelve todo en la misma visita. Somos clínica veterinaria y farmacia de mascotas al mismo tiempo, en el Polígono&nbsp;108 de Mérida.</p>
+            <p>Quienes ya nos conocen coinciden en algo: el doctor explica cada diagnóstico y tratamiento con calma, sin tecnicismos, hasta que quede claro qué tiene tu mascota y qué sigue. Personal capacitado, atención empática con los animalitos y con la gente — así lo cuentan en Google.</p>
+            <p>Y cuando sales de la consulta, sales con el medicamento en la mano: manejamos alimento y medicamento veterinario, así que no tienes que salir a buscarlo a otro lado.</p>
+          </div>
+        </div>
+        <div class="about-photo reveal">
+          <img src="/veterinaria-yucafarma/img/foto_3.jpg" alt="Consultorio de Veterinaria Yucafarma, listo para revisar a tu mascota" loading="lazy" width="1100" height="1100" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="sec sec-panel" id="servicios">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Qué ofrecemos</p>
+        <h2 class="sec-title reveal">En un solo lugar</h2>
+        <div class="servicios-grid">
+          <div class="serv-col reveal">
+            <h3><svg class="icon" width="20" height="18"><use href="#i-huella"></use></svg> En la clínica</h3>
+            <ul>
+              <li>Consulta y diagnóstico veterinario</li>
+              <li>Equipo para revisar bien a tu mascota</li>
+              <li>Tratamiento explicado a detalle, sin prisas</li>
+              <li>Atención cercana y empática con tu animalito</li>
+            </ul>
+          </div>
+          <div class="serv-col reveal">
+            <h3><svg class="icon" width="20" height="20"><use href="#i-cruz"></use></svg> En la farmacia</h3>
+            <ul>
+              <li>Medicamento veterinario en el mismo lugar</li>
+              <li>Alimento para tu mascota</li>
+              <li>Precios accesibles, sin tener que buscar en otro lado</li>
+            </ul>
+          </div>
+        </div>
+        <p class="tag-extra reveal">🅿️ Estacionamiento disponible</p>
+      </div>
+    </section>
+
+    <!-- ============ RESEÑAS ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Prueba social</p>
+        <h2 class="sec-title reveal rating-title"><span class="ac">4.6</span> de 5 · 270 reseñas en Google</h2>
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«El doctor es súper amable y empático tanto con los animalitos como con la gente. Y las chavas que atienden son super atentas y muy buenas en su chamba»</blockquote>
+            <figcaption><strong>Grisel Ugarte</strong><span>Hace 1 mes · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Excelente servicio. Personal capacitado, explican muy bien el diagnostico y tratamiento de tus mascotas. El costo se me hace mas accesible que en otros lugares.»</blockquote>
+            <figcaption><strong>Lupita Nonoal</strong><span>Hace 1 mes · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="4 estrellas">★★★★</p>
+            <blockquote>«Atentos, con el medicamento que necesitaba, me ayudaron mucho! Tienen lugar de estacionamiento ya que la calle no siempre está libre»</blockquote>
+            <figcaption><strong>Monica Lara</strong><span>Hace 2 meses · Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=1444344218189604110&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-dark" id="ubicacion">
+      <div class="wrap ubica">
+        <div class="ubica-info">
+          <p class="sec-kicker reveal">Dónde estamos</p>
+          <h2 class="sec-title reveal">Polígono 108, Mérida</h2>
+          <p class="dir reveal">C. 31ᴬ 321, Polígono 108<br />97143 Mérida, Yuc., México</p>
+          <a class="btn btn-solid btn-sm reveal" href="https://maps.google.com/?cid=1444344218189604110&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+
+          <h3 class="horario-titulo reveal">Horario</h3>
+          <table class="horarios reveal">
+            <tbody>
+              <tr data-dia="1"><th scope="row">Lunes</th><td>9:00–18:00</td></tr>
+              <tr data-dia="2"><th scope="row">Martes</th><td>9:00–18:00</td></tr>
+              <tr data-dia="3"><th scope="row">Miércoles</th><td>9:00–18:00</td></tr>
+              <tr data-dia="4"><th scope="row">Jueves</th><td>9:00–18:00</td></tr>
+              <tr data-dia="5"><th scope="row">Viernes</th><td>9:00–18:00</td></tr>
+              <tr data-dia="6"><th scope="row">Sábado</th><td>9:00–15:00</td></tr>
+              <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="mapa reveal">
+          <iframe
+            src={mapEmbedSrc}
+            title="Mapa: Veterinaria Yucafarma en el Polígono 108, Mérida"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <h2 class="banda-title">Consulta y medicamento, en la misma visita</h2>
+        <p class="banda-sub">Escríbenos por WhatsApp y te decimos cómo podemos ayudar a tu mascota.</p>
+        <div class="cta-row">
+          <a class="btn btn-solid" href="https://wa.me/529992895647" target="_blank" rel="noopener">
+            <svg class="icon" width="20" height="20"><use href="#i-wa"></use></svg>
+            WhatsApp directo
+          </a>
+          <a class="btn btn-ghost" href={telHref}>Llamar · 999 289 5647</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <p class="pie-logo">
+          <svg class="icon" width="20" height="20"><use href="#i-cruz"></use></svg>
+          Yucafarma Veterinaria
+        </p>
+        <p class="pie-dato">Clínica y farmacia veterinaria · C. 31ᴬ 321, Polígono 108, 97143 Mérida, Yuc.</p>
+        <p class="pie-dato"><a href={telHref}>999 289 5647</a> · <a href="https://wa.me/529992895647" target="_blank" rel="noopener">WhatsApp</a></p>
+        <p class="pie-mini">Lunes a viernes 9:00–18:00 · Sábado 9:00–15:00 · Domingo cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Veterinaria Yucafarma",
+    "telephone": "+529992895647",
+    "url": "https://demos.ivang.mx/veterinaria-yucafarma",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 31A 321, Polígono 108",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97143",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "reviewCount": "270"
+    },
+    "openingHours": ["Mo-Fr 09:00-18:00", "Sa 09:00-15:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --bg: #f5faf6;
+      --paper: #ffffff;
+      --esmeralda: #1fa06a;
+      --esmeralda-deep: #147a52;
+      --esmeralda-pale: #eaf7f0;
+      --coral: #ff8360;
+      --coral-deep: #c1502c;
+      --ink: #1f2d26;
+      --line: rgba(31, 45, 38, 0.12);
+      --muted: #5c6b62;
+      --display: "Comfortaa", system-ui, sans-serif;
+      --body: "Inter", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16.5px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .yf ::selection { background: var(--coral); color: var(--ink); }
+    .yf a:focus-visible,
+    .yf .btn:focus-visible,
+    .yf .chip:focus-visible {
+      outline: 3px solid var(--coral-deep);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    .icon { fill: currentColor; flex-shrink: 0; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      padding: 44px 0 40px;
+      position: relative;
+      background:
+        radial-gradient(760px 420px at 88% -10%, rgba(31, 160, 106, 0.14), transparent 65%),
+        radial-gradient(600px 360px at -10% 30%, rgba(255, 131, 96, 0.10), transparent 60%),
+        var(--bg);
+    }
+    .hero-grid { display: grid; gap: 34px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--esmeralda-pale);
+      color: var(--esmeralda-deep);
+      border-radius: 999px;
+      padding: 7px 14px 7px 10px;
+      font-weight: 600;
+      font-size: 13.5px;
+      margin: 0 0 18px;
+    }
+    .badge .icon { color: var(--esmeralda); }
+
+    .brand { margin: 0 0 16px; font-family: var(--display); line-height: 1; }
+    .brand-sub {
+      display: block;
+      font-weight: 600;
+      font-size: clamp(16px, 4vw, 20px);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .brand-main {
+      display: block;
+      font-weight: 700;
+      font-size: clamp(46px, 13vw, 84px);
+      color: var(--esmeralda);
+      letter-spacing: -0.01em;
+    }
+
+    .tagline {
+      font-size: clamp(17px, 4.4vw, 21px);
+      max-width: 46ch;
+      margin: 0 0 20px;
+      color: var(--ink);
+    }
+    .tagline strong { color: var(--coral-deep); }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1.5px solid var(--line);
+      background: var(--paper);
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-weight: 600;
+      font-size: 14.5px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+    .chip .star { color: var(--coral-deep); }
+    .chip:hover { border-color: var(--esmeralda); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      font-family: var(--body);
+      font-weight: 600;
+      font-size: 16px;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 12px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--esmeralda-deep); color: #fff; }
+    .btn-solid:hover { background: #106043; }
+    .btn-ghost { border: 1.5px solid var(--line); color: var(--ink); background: transparent; }
+    .btn-ghost:hover { border-color: var(--esmeralda); color: var(--esmeralda-deep); }
+    .btn-sm { padding: 11px 18px; font-size: 14.5px; }
+
+    /* ---------- HERO VISUAL ---------- */
+    .hero-visual { display: flex; justify-content: center; }
+    .photo-card {
+      position: relative;
+      width: min(420px, 100%);
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 20px 44px rgba(31, 45, 38, 0.16);
+      aspect-ratio: 1 / 1;
+    }
+    .photo-card img { width: 100%; height: 100%; object-fit: cover; }
+    .sticker {
+      position: absolute;
+      left: -14px;
+      bottom: -14px;
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: var(--coral);
+      color: var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      box-shadow: 0 10px 22px rgba(31, 45, 38, 0.28);
+      border: 4px solid var(--bg);
+      animation: float 4.5s ease-in-out infinite;
+    }
+    .icon-paw { color: var(--ink); }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-7px); }
+    }
+
+    /* ---------- GUARDA (firma yucateca) ---------- */
+    .guarda {
+      height: 14px;
+      background:
+        repeating-linear-gradient(135deg, var(--esmeralda) 0 7px, transparent 7px 14px) 0 0 / 28px 14px,
+        repeating-linear-gradient(45deg, var(--coral) 0 7px, transparent 7px 14px) 0 0 / 28px 14px;
+      background-color: var(--esmeralda-pale);
+    }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 64px 0; }
+    .sec-panel { background: var(--esmeralda-pale); }
+    .sec-kicker {
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--coral-deep);
+      margin: 0 0 10px;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(30px, 7.5vw, 48px);
+      line-height: 1.08;
+      margin: 0 0 26px;
+      color: var(--ink);
+    }
+    .sec-title .ac { color: var(--esmeralda-deep); }
+
+    /* ---------- QUIÉNES SOMOS ---------- */
+    .about-grid { display: grid; gap: 30px; }
+    .about p { max-width: 60ch; margin: 0 0 16px; color: #3a473f; }
+    .about-photo img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 14px 30px rgba(31, 45, 38, 0.14);
+    }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios-grid { display: grid; gap: 22px; }
+    .serv-col {
+      background: var(--paper);
+      border-radius: 16px;
+      padding: 24px 22px;
+      box-shadow: 0 10px 26px rgba(31, 45, 38, 0.08);
+    }
+    .serv-col h3 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 19px;
+      margin: 0 0 14px;
+      color: var(--esmeralda-deep);
+    }
+    .serv-col:nth-child(2) h3 { color: var(--coral-deep); }
+    .serv-col:nth-child(2) h3 .icon { color: var(--coral); }
+    .serv-col:nth-child(1) h3 .icon { color: var(--esmeralda); }
+    .serv-col ul { list-style: none; margin: 0; padding: 0; }
+    .serv-col li {
+      padding: 10px 0;
+      border-top: 1px solid var(--line);
+      font-size: 15.5px;
+      color: #3a473f;
+    }
+    .serv-col li:first-child { border-top: 0; }
+    .tag-extra {
+      display: inline-block;
+      margin: 24px 0 0;
+      background: var(--paper);
+      border-radius: 999px;
+      padding: 9px 16px;
+      font-weight: 600;
+      font-size: 14.5px;
+      box-shadow: 0 6px 16px rgba(31, 45, 38, 0.08);
+    }
+
+    /* ---------- RESEÑAS ---------- */
+    .rating-title { max-width: 16ch; }
+    .reviews { display: grid; grid-template-columns: 1fr; gap: 18px; margin: 0 0 30px; }
+    .rev {
+      margin: 0;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-top: 4px solid var(--esmeralda);
+      border-radius: 14px;
+      padding: 20px 22px 18px;
+      box-shadow: 0 10px 26px rgba(31, 45, 38, 0.07);
+    }
+    .rev:nth-child(2) { border-top-color: var(--coral); }
+    .rev:nth-child(3) { border-top-color: var(--esmeralda-deep); }
+    .rev-stars { color: var(--coral-deep); font-size: 15px; letter-spacing: 0.15em; margin: 0 0 10px; }
+    .rev blockquote { margin: 0 0 14px; font-size: 15.5px; line-height: 1.55; color: var(--ink); }
+    .rev figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .rev figcaption strong { font-family: var(--display); font-weight: 700; font-size: 15.5px; }
+    .rev figcaption span { font-size: 13px; color: var(--muted); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN (banda oscura) ---------- */
+    .sec-dark { background: var(--ink); color: #eef4f0; }
+    .sec-dark .sec-kicker { color: var(--coral); }
+    .sec-dark .sec-title { color: #fff; }
+    .sec-dark .dir { font-size: 17px; font-weight: 500; margin: 0 0 18px; color: #eef4f0; }
+    .sec-dark .btn-ghost { border-color: rgba(238, 244, 240, 0.3); color: #eef4f0; }
+    .sec-dark .btn-ghost:hover { border-color: var(--coral); color: var(--coral); }
+
+    .ubica { display: grid; gap: 30px; align-items: start; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 18px;
+      margin: 34px 0 10px;
+      color: #fff;
+    }
+    .horarios { width: 100%; max-width: 420px; border-collapse: collapse; font-size: 15px; }
+    .horarios th, .horarios td { padding: 9px 4px; border-bottom: 1px solid rgba(238, 244, 240, 0.14); text-align: left; }
+    .horarios th { font-weight: 500; color: #eef4f0; }
+    .horarios td { color: #9fb0a6; text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: var(--ink); background: var(--coral); font-weight: 600; }
+    .horarios tr.hoy th, .horarios tr.hoy td { padding-left: 8px; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--ink);
+      color: #fff;
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 8px;
+      vertical-align: 1px;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 14px;
+      display: block;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda {
+      background: var(--esmeralda);
+      color: var(--ink);
+      padding: 56px 0;
+      text-align: center;
+    }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: clamp(26px, 6.5vw, 42px);
+      line-height: 1.12;
+      margin: 0 0 12px;
+      color: #ffffff;
+    }
+    .banda-sub { margin: 0 auto 24px; max-width: 40ch; font-weight: 500; color: rgba(31,45,38,0.85); }
+    .banda .cta-row { justify-content: center; }
+    .banda .btn-solid { background: var(--ink); color: #fff; }
+    .banda .btn-solid:hover { background: #0f1712; }
+    .banda .btn-ghost { border-color: rgba(31, 45, 38, 0.35); color: var(--ink); }
+    .banda .btn-ghost:hover { border-color: var(--ink); }
+
+    /* ---------- FOOTER ---------- */
+    .pie { padding: 40px 0 96px; text-align: center; background: var(--bg); }
+    .pie-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 20px;
+      color: var(--esmeralda-deep);
+      margin: 0 0 10px;
+    }
+    .pie-dato { margin: 4px 0; color: var(--muted); font-size: 14px; }
+    .pie-dato a { color: var(--esmeralda-deep); text-decoration: none; border-bottom: 1px solid var(--coral); }
+    .pie-dato a:hover { color: var(--coral-deep); }
+    .pie-mini { margin: 14px 0 0; color: #8a9a90; font-size: 12.5px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 96px 0; }
+      .hero { padding: 64px 0 56px; }
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+      .about-grid { grid-template-columns: 1.15fr 0.85fr; align-items: center; }
+      .servicios-grid { grid-template-columns: 1fr 1fr; }
+      .reviews { grid-template-columns: repeat(3, 1fr); }
+      .ubica { grid-template-columns: 1fr 1.15fr; }
+      .mapa iframe { height: 420px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      var hoy = new Date().getDay();
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

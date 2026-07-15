@@ -1,0 +1,734 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const mapsUrl = "https://maps.google.com/?cid=7831611995280392113&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA";
+const facebookUrl = "https://www.facebook.com/Zeus-Gym-446082485787675/";
+---
+<BaseLayout
+  title="Zeus Gym · Gimnasio en Francisco I. Madero, Mérida"
+  description="⭐ 4.7 con 117 reseñas en Google. Pesas libres, máquinas de sobra, dos niveles y el coaching de don Adolfo, en Francisco I. Madero, Mérida. Entrena como un titán."
+  slug="zeus-gym"
+  ogImage="/zeus-gym/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@600;700;800&family=Hanken+Grotesk:wght@400;500;700&display=swap"
+  favicon="⚡"
+  themeColor="#1e40af"
+  whatsapp={null}
+  telefono={null}
+  mapsUrl={mapsUrl}
+>
+  <main class="zg">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <img
+        class="hero-photo"
+        src="/zeus-gym/img/foto_1.jpg"
+        width="825" height="1100"
+        alt="Área de pesas y máquinas dentro de Zeus Gym, Mérida"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="hero-veil" aria-hidden="true"></div>
+
+      <div class="hero-column left" aria-hidden="true">
+        <span class="capital"></span><span class="shaft"></span><span class="base"></span>
+      </div>
+      <div class="hero-column right" aria-hidden="true">
+        <span class="capital"></span><span class="shaft"></span><span class="base"></span>
+      </div>
+
+      <div class="wrap hero-inner">
+        <p class="kicker reveal">Gimnasio · Francisco I. Madero, Mérida</p>
+        <h1 class="poster reveal">
+          <span class="l1">ZEUS</span>
+          <span class="l2">GYM</span>
+        </h1>
+        <p class="tagline reveal">Un templo de hierro donde se entrena en serio: máquinas de sobra, buena música y el coaching de <strong>don Adolfo</strong> para que salgas hecho un titán.</p>
+
+        <a class="chip reveal" href={mapsUrl} target="_blank" rel="noopener">
+          <span class="star" aria-hidden="true">★</span> 4.7 · 117 reseñas en Google
+        </a>
+
+        <div class="cta-row reveal">
+          <a class="btn btn-solid" href={mapsUrl} target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            Cómo llegar
+          </a>
+        </div>
+
+        <dl class="datos reveal">
+          <div><dt>4.7 <span aria-hidden="true">★</span></dt><dd>calificación real en Google</dd></div>
+          <div><dt>117</dt><dd>reseñas de clientes</dd></div>
+          <div><dt>7</dt><dd>días de la semana abiertos</dd></div>
+        </dl>
+      </div>
+    </header>
+
+    <!-- Firma: greca griega -->
+    <div class="meander" aria-hidden="true"></div>
+
+    <!-- ============ Α · QUIÉNES SOMOS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Α · Quiénes somos</p>
+        <h2 class="sec-title reveal">Un gimnasio con nombre de&nbsp;dios</h2>
+        <div class="about reveal">
+          <p>Nos llamamos <strong>Zeus Gym</strong> porque aquí se entrena en serio: pesas libres, máquinas de sobra y un ambiente que engancha — quienes ya entrenan con nosotros terminan quedándose por la música, el trato y las rutinas bien armadas.</p>
+          <p>Detrás del mostrador está <strong>don Adolfo</strong>, quien corrige tu forma y no te suelta hasta que el ejercicio te sale bien; sus alumnos lo conocen simplemente como un excelente entrenador. Así se entrena aquí: con atención real, no de saludo y ya.</p>
+          <p>Estamos en Francisco I. Madero, abiertos los siete días de la semana, con el ambiente y la atención que nuestros clientes describen como de lo mejor de la zona.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Β · INSTALACIONES ============ -->
+    <section class="sec sec-panel" id="instalaciones">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Β · Instalaciones</p>
+        <h2 class="sec-title reveal">Equipo a la altura del&nbsp;Olimpo</h2>
+        <ol class="servicios reveal">
+          <li>
+            <span class="bolt" aria-hidden="true">⚡</span>
+            <div><h3>Pesas libres y máquinas de peso integrado</h3><p>Equipo Precor e Icarian para armar tu rutina completa, de piernas a espalda.</p></div>
+          </li>
+          <li>
+            <span class="bolt" aria-hidden="true">⚡</span>
+            <div><h3>Zona de cardio</h3><p>Caminadoras y elípticas para calentar o cerrar tu sesión, con buena ventilación.</p></div>
+          </li>
+          <li>
+            <span class="bolt" aria-hidden="true">⚡</span>
+            <div><h3>Dos niveles de piso</h3><p>Planta baja y un nivel superior con más máquinas, para entrenar sin esperar turno.</p></div>
+          </li>
+          <li>
+            <span class="bolt" aria-hidden="true">⚡</span>
+            <div><h3>Coaching de don Adolfo</h3><p>Rutinas corregidas de cerca, no clases genéricas: aquí alguien está viendo tu ejecución.</p></div>
+          </li>
+          <li>
+            <span class="bolt" aria-hidden="true">⚡</span>
+            <div><h3>Buen ambiente y música</h3><p>El tipo de atmósfera que hace que la gente decida quedarse a entrenar aquí.</p></div>
+          </li>
+          <li>
+            <span class="bolt" aria-hidden="true">⚡</span>
+            <div><h3>Ventiladores industriales</h3><p>Para entrenar fresco incluso en pleno calor de Mérida.</p></div>
+          </li>
+        </ol>
+
+        <div class="piezas reveal">
+          <figure class="pieza">
+            <img src="/zeus-gym/img/foto_2.jpg" width="825" height="1100" loading="lazy" decoding="async" alt="Máquinas Precor e Icarian en Zeus Gym" />
+            <figcaption><span class="num-rom">I</span> Equipo Precor e Icarian</figcaption>
+          </figure>
+          <figure class="pieza">
+            <img src="/zeus-gym/img/foto_3.jpg" width="825" height="1100" loading="lazy" decoding="async" alt="Pasillo y nivel superior de Zeus Gym" />
+            <figcaption><span class="num-rom">II</span> Nivel superior</figcaption>
+          </figure>
+          <figure class="pieza">
+            <img src="/zeus-gym/img/foto_4.jpg" width="825" height="1100" loading="lazy" decoding="async" alt="Zona de máquinas y bancos en Zeus Gym" />
+            <figcaption><span class="num-rom">III</span> Zona de máquinas</figcaption>
+          </figure>
+          <figure class="pieza">
+            <img src="/zeus-gym/img/foto_5.jpg" width="825" height="1100" loading="lazy" decoding="async" alt="Caminadoras y elípticas junto a las ventanas de Zeus Gym" />
+            <figcaption><span class="num-rom">IV</span> Cardio con luz natural</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Γ · PRUEBA SOCIAL ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Γ · Lo que dicen los mortales</p>
+        <h2 class="sec-title reveal">Reseñas reales de&nbsp;Google</h2>
+
+        <div class="rating-hero reveal">
+          <svg class="wreath" viewBox="0 0 128 90" aria-hidden="true">
+            <ellipse cx="57.1" cy="64.7" rx="10" ry="4" transform="rotate(-50 57.1 64.7)" fill="#c8a24a"/>
+            <ellipse cx="50.2" cy="55.4" rx="9" ry="4" transform="rotate(-50 50.2 55.4)" fill="#c8a24a"/>
+            <ellipse cx="43.3" cy="46.1" rx="8" ry="3.6" transform="rotate(-50 43.3 46.1)" fill="#c8a24a"/>
+            <ellipse cx="36.4" cy="36.8" rx="7" ry="3.3" transform="rotate(-50 36.4 36.8)" fill="#c8a24a"/>
+            <ellipse cx="29.5" cy="27.5" rx="6" ry="3" transform="rotate(-50 29.5 27.5)" fill="#c8a24a"/>
+            <ellipse cx="22.6" cy="18.2" rx="5" ry="2.6" transform="rotate(-50 22.6 18.2)" fill="#c8a24a"/>
+            <ellipse cx="70.9" cy="64.7" rx="10" ry="4" transform="rotate(50 70.9 64.7)" fill="#c8a24a"/>
+            <ellipse cx="77.8" cy="55.4" rx="9" ry="4" transform="rotate(50 77.8 55.4)" fill="#c8a24a"/>
+            <ellipse cx="84.7" cy="46.1" rx="8" ry="3.6" transform="rotate(50 84.7 46.1)" fill="#c8a24a"/>
+            <ellipse cx="91.6" cy="36.8" rx="7" ry="3.3" transform="rotate(50 91.6 36.8)" fill="#c8a24a"/>
+            <ellipse cx="98.5" cy="27.5" rx="6" ry="3" transform="rotate(50 98.5 27.5)" fill="#c8a24a"/>
+            <ellipse cx="105.4" cy="18.2" rx="5" ry="2.6" transform="rotate(50 105.4 18.2)" fill="#c8a24a"/>
+          </svg>
+          <p class="rating-num">4.7</p>
+          <p class="rating-sub">117 reseñas en Google</p>
+        </div>
+
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Excelente lugar para entrenar, la atencion y ambiente super excelente totalmente recomendable»</blockquote>
+            <figcaption><strong>David Israel Herrera Basto</strong><span>Hace 8 años · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Excelente gym muy buenas máquinas y don Adolfo excelente entrenador»</blockquote>
+            <figcaption><strong>Vanesa Moguel</strong><span>Hace un año · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Me encanta el ambiente la música el instructor si se enfoca en tus rutinas definitivamente aquí me voy a quedar.»</blockquote>
+            <figcaption><strong>Erika Ortiz</strong><span>Hace 5 años · Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Δ · UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-panel" id="ubicacion">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Δ · El camino al templo</p>
+        <h2 class="sec-title reveal">Francisco I.&nbsp;Madero, Mérida</h2>
+        <div class="ubica reveal">
+          <div class="ubica-info">
+            <p class="dir">C. 29 234, Francisco I. Madero<br />97240 Mérida, Yucatán</p>
+            <a class="btn btn-solid btn-sm" href={mapsUrl} target="_blank" rel="noopener">Abrir en Google Maps</a>
+            <h3 class="horario-titulo">Horario de entrenamiento</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>6:00–23:00</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>6:00–23:00</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>6:00–23:00</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>6:00–23:00</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>6:00–23:00</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>6:00–14:00</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>10:00–14:00</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps?q=Zeus%20Gym%2C%20C.%2029%20234%2C%20Francisco%20I.%20Madero%2C%2097240%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+              title="Mapa: Zeus Gym en Francisco I. Madero, Mérida"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <h2 class="banda-title">¿Listo para entrenar como un&nbsp;titán?</h2>
+        <p class="banda-sub">Ven a Zeus Gym, en Francisco I. Madero. Trae tus tenis — nosotros ponemos el ambiente.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <p class="pie-logo">ZEUS GYM <span aria-hidden="true">Ω</span></p>
+        <p class="pie-dato">Gimnasio · C. 29 234, Francisco I. Madero, 97240 Mérida, Yuc.</p>
+        <p class="pie-dato"><a href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a> · <a href={facebookUrl} target="_blank" rel="noopener">Facebook</a></p>
+        <p class="pie-mini">Lunes a viernes 6:00–23:00 · Sábado 6:00–14:00 · Domingo 10:00–14:00</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "Zeus Gym",
+    "url": "https://demos.ivang.mx/zeus-gym",
+    "image": "https://demos.ivang.mx/zeus-gym/img/foto_1.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 29 234",
+      "addressLocality": "Francisco I. Madero, Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97240",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "117"
+    },
+    "openingHours": ["Mo-Fr 06:00-23:00", "Sa 06:00-14:00", "Su 10:00-14:00"],
+    "sameAs": ["https://www.facebook.com/Zeus-Gym-446082485787675/"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --marmol: #f4f1ea;
+      --aegeo: #1e40af;
+      --aegeo-deep: #16316e;
+      --oro: #c8a24a;
+      --carbon: #1c2434;
+      --muted-m: #46536b;
+      --muted-a: #c7cfe0;
+      --line-m: rgba(28, 36, 52, 0.14);
+      --line-a: rgba(244, 241, 234, 0.22);
+      --display: "Bodoni Moda", Georgia, "Times New Roman", serif;
+      --body: "Hanken Grotesk", system-ui, sans-serif;
+    }
+
+    body {
+      background:
+        radial-gradient(900px 500px at 12% -10%, rgba(30, 64, 175, 0.07), transparent 60%),
+        radial-gradient(700px 500px at 100% 30%, rgba(200, 162, 74, 0.08), transparent 55%),
+        var(--marmol);
+      color: var(--carbon);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .zg ::selection { background: var(--oro); color: var(--carbon); }
+    .zg a:focus-visible,
+    .zg .btn:focus-visible {
+      outline: 3px solid var(--oro);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 38px);
+      min-height: calc(100svh - 38px);
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero-veil {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(28,36,52,0.42) 0%, rgba(30,64,175,0.5) 55%, rgba(28,36,52,0.93) 100%);
+      mix-blend-mode: normal;
+    }
+
+    .hero-column { position: absolute; top: 56px; bottom: 56px; width: 48px; display: none; }
+    .hero-column.left { left: 20px; }
+    .hero-column.right { right: 20px; }
+    .hero-column .shaft {
+      position: absolute; inset: 20px 10px;
+      background: repeating-linear-gradient(90deg, rgba(244,241,234,0.5) 0 2px, rgba(244,241,234,0.1) 2px 9px);
+      border-radius: 2px;
+    }
+    .hero-column .capital, .hero-column .base {
+      position: absolute; left: -6px; right: -6px; height: 16px;
+      background: rgba(244,241,234,0.5); border-radius: 3px;
+    }
+    .hero-column .capital { top: 0; }
+    .hero-column .base { bottom: 0; }
+
+    .hero-inner { position: relative; padding: 56px 20px 44px; width: 100%; }
+    .kicker {
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--oro);
+      margin: 0 0 14px;
+    }
+    .poster {
+      margin: 0;
+      font-family: var(--display);
+      text-transform: uppercase;
+      line-height: 0.88;
+      display: flex;
+      flex-direction: column;
+    }
+    .poster .l1 {
+      font-size: clamp(48px, 15vw, 130px);
+      font-weight: 700;
+      color: transparent;
+      -webkit-text-stroke: 2px var(--marmol);
+      letter-spacing: 0.03em;
+    }
+    @supports not (-webkit-text-stroke: 2px black) {
+      .poster .l1 { color: var(--marmol); }
+    }
+    .poster .l2 {
+      font-size: clamp(64px, 20vw, 168px);
+      font-weight: 800;
+      color: var(--oro);
+      letter-spacing: 0.02em;
+      margin-top: 2px;
+    }
+    .tagline {
+      font-size: clamp(17px, 4.2vw, 22px);
+      font-weight: 400;
+      color: var(--marmol);
+      max-width: 36ch;
+      margin: 22px 0 18px;
+    }
+    .tagline strong { color: var(--oro); font-weight: 600; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line-a);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 500;
+      font-size: 15px;
+      color: var(--marmol);
+      text-decoration: none;
+      background: rgba(244, 241, 234, 0.06);
+    }
+    .chip .star { color: var(--oro); }
+    .chip:hover { border-color: var(--oro); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: 0.02em;
+      text-decoration: none;
+      padding: 15px 26px;
+      border-radius: 999px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--oro); color: var(--carbon); }
+    .btn-solid:hover { background: #d9b364; }
+    .btn-ghost { border: 2px solid var(--line-m); color: var(--carbon); }
+    .btn-ghost:hover { border-color: var(--oro); color: var(--aegeo); }
+    .btn-sm { font-size: 15px; padding: 12px 20px; margin-top: 18px; }
+
+    .datos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin: 38px 0 0;
+      border-top: 1px solid var(--line-a);
+      padding-top: 20px;
+    }
+    .datos dt {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(22px, 5.6vw, 36px);
+      color: var(--oro);
+    }
+    .datos dt span { color: var(--oro); }
+    .datos dd { margin: 4px 0 0; font-size: 12.5px; color: var(--muted-a); line-height: 1.4; }
+
+    /* ---------- GRECA (firma) ---------- */
+    .meander {
+      height: 26px;
+      background: var(--aegeo);
+      overflow: hidden;
+      position: relative;
+    }
+    .meander::before {
+      content: "";
+      position: absolute;
+      inset: -2px 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 28 28'%3E%3Cpath d='M0 14H7V0H21V14H14V28H28V14' fill='none' stroke='%23c8a24a' stroke-width='3'/%3E%3C/svg%3E");
+      background-repeat: repeat-x;
+      background-size: 28px 28px;
+      animation: meander-scroll 16s linear infinite;
+    }
+    @keyframes meander-scroll { from { background-position-x: 0; } to { background-position-x: -280px; } }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 70px 0; }
+    .sec-panel { background: var(--aegeo); color: var(--marmol); }
+    .sec-kicker {
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--aegeo);
+      margin: 0 0 10px;
+    }
+    .sec-panel .sec-kicker { color: var(--muted-a); }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(34px, 8vw, 62px);
+      line-height: 0.98;
+      margin: 0 0 30px;
+      color: var(--carbon);
+    }
+    .sec-panel .sec-title { color: var(--oro); }
+
+    .about p { max-width: 62ch; margin: 0 0 18px; color: var(--muted-m); font-size: 16.5px; }
+    .about strong { color: var(--carbon); }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios {
+      list-style: none;
+      margin: 0 0 44px;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .servicios li {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-top: 1px solid var(--line-a);
+    }
+    .servicios li:last-child { border-bottom: 1px solid var(--line-a); }
+    .servicios .bolt {
+      font-size: 22px;
+      line-height: 1.3;
+      color: var(--oro);
+      min-width: 30px;
+    }
+    .servicios h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 21px;
+      margin: 0 0 4px;
+      color: var(--oro);
+    }
+    .servicios p { margin: 0; color: var(--marmol); font-size: 15.5px; }
+
+    /* ---------- PIEZAS (galería) ---------- */
+    .piezas {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .pieza {
+      margin: 0;
+      border: 1px solid var(--line-a);
+      border-radius: 4px;
+      padding: 8px;
+      background: rgba(244, 241, 234, 0.05);
+    }
+    .pieza img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+    .pieza figcaption {
+      margin-top: 8px;
+      font-size: 12.5px;
+      color: var(--muted-a);
+      letter-spacing: 0.02em;
+    }
+    .num-rom {
+      font-family: var(--display);
+      font-weight: 800;
+      color: var(--oro);
+      margin-right: 4px;
+    }
+
+    /* ---------- PRUEBA SOCIAL ---------- */
+    .rating-hero { text-align: center; margin: 0 auto 44px; }
+    .wreath { width: 168px; height: auto; display: block; margin: 0 auto -16px; }
+    .rating-num {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(46px, 12vw, 84px);
+      color: var(--aegeo);
+      margin: 0;
+      line-height: 1;
+    }
+    .rating-sub {
+      margin: 6px 0 0;
+      color: var(--muted-m);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 13px;
+    }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 0 0 30px;
+    }
+    .rev {
+      margin: 0;
+      background: #fff;
+      color: var(--carbon);
+      border: 1px solid var(--line-m);
+      border-top: 3px solid var(--oro);
+      border-radius: 4px;
+      padding: 22px 22px 18px;
+      box-shadow: 0 10px 26px rgba(28, 36, 52, 0.07);
+    }
+    .rev-stars {
+      color: var(--oro);
+      font-size: 15px;
+      letter-spacing: 0.2em;
+      margin: 0 0 10px;
+    }
+    .rev blockquote {
+      margin: 0 0 16px;
+      font-size: 16px;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+    .rev figcaption {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .rev figcaption strong {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 16px;
+    }
+    .rev figcaption span { font-size: 12.5px; color: var(--muted-m); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 30px; }
+    .dir { font-size: 18px; font-weight: 500; margin: 0 0 16px; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 20px;
+      margin: 30px 0 10px;
+      color: var(--oro);
+    }
+    .horarios { width: 100%; max-width: 420px; border-collapse: collapse; font-size: 15.5px; }
+    .horarios th, .horarios td { padding: 9px 10px; border-bottom: 1px solid var(--line-a); text-align: left; }
+    .horarios th { font-weight: 500; color: var(--marmol); }
+    .horarios td { color: var(--muted-a); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: var(--carbon); background: var(--oro); font-weight: 600; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--carbon);
+      color: var(--marmol);
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 10px;
+      vertical-align: 1px;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 6px;
+      display: block;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda {
+      background: var(--oro);
+      color: var(--carbon);
+      padding: 60px 0;
+      text-align: center;
+    }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(32px, 7.5vw, 56px);
+      line-height: 1;
+      margin: 0 0 14px;
+    }
+    .banda-sub { margin: 0 auto 24px; max-width: 42ch; font-weight: 500; }
+    .banda .cta-row { justify-content: center; }
+    .btn-dark { background: var(--carbon); color: var(--marmol); }
+    .btn-dark:hover { background: var(--aegeo-deep); }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      padding: 46px 0 100px;
+      background: var(--carbon);
+      color: var(--marmol);
+      text-align: center;
+    }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 26px;
+      letter-spacing: 0.03em;
+      margin: 0 0 10px;
+    }
+    .pie-logo span { color: var(--oro); }
+    .pie-dato { margin: 4px 0; color: var(--muted-a); font-size: 14.5px; }
+    .pie-dato a { color: var(--marmol); text-decoration: none; border-bottom: 1px solid var(--oro); }
+    .pie-dato a:hover { color: var(--oro); }
+    .pie-mini { margin: 14px 0 0; color: #7d89a8; font-size: 12.5px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 100px 0; }
+      .servicios { grid-template-columns: 1fr 1fr; column-gap: 48px; }
+      .servicios li:nth-child(2) { border-top: 1px solid var(--line-a); }
+      .servicios li:nth-last-child(2) { border-bottom: 1px solid var(--line-a); }
+      .piezas { grid-template-columns: repeat(4, 1fr); }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .ubica { grid-template-columns: 1fr 1.2fr; align-items: start; }
+      .mapa iframe { height: 420px; }
+    }
+    @media (min-width: 980px) {
+      .hero-column { display: block; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      var hoy = new Date().getDay();
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

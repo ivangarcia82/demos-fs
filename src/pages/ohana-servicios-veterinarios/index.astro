@@ -1,0 +1,606 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const hibiscusSvg = `<svg viewBox="0 0 40 40" width="22" height="22" aria-hidden="true"><g fill="currentColor"><ellipse cx="20" cy="8" rx="6" ry="11" transform="rotate(0 20 20)"/><ellipse cx="20" cy="8" rx="6" ry="11" transform="rotate(72 20 20)"/><ellipse cx="20" cy="8" rx="6" ry="11" transform="rotate(144 20 20)"/><ellipse cx="20" cy="8" rx="6" ry="11" transform="rotate(216 20 20)"/><ellipse cx="20" cy="8" rx="6" ry="11" transform="rotate(288 20 20)"/></g><circle cx="20" cy="20" r="4.2" fill="#f6b93b"/></svg>`;
+
+const leafSvg = `<svg viewBox="0 0 24 30" width="16" height="20" aria-hidden="true"><path d="M12 1C5.5 4 2 10 2 16c0 7 4.5 12 10 13 5.5-1 10-6 10-13 0-6-3.5-12-10-15z" fill="currentColor"/><path d="M12 4v22" stroke="#fdf7ec" stroke-width="1.1" fill="none"/></svg>`;
+---
+<BaseLayout
+  title="Ohana Servicios Veterinarios · Clínica veterinaria en Mérida"
+  description="Consulta, hospitalización y estética canina con el Dr. Giovani. ⭐ 4.4 con 125 reseñas en Google. Precios accesibles y trato de familia en Fracc. del Parque, Mérida. Escríbenos por WhatsApp."
+  slug="ohana-servicios-veterinarios"
+  ogImage="/ohana-servicios-veterinarios/img/foto_5.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700;800&family=Nunito+Sans:wght@400;600;700&display=swap"
+  favicon="🌺"
+  themeColor="#159e8a"
+  whatsapp={"https://wa.me/529991928118"}
+  telefono={"999 192 8118"}
+  mapsUrl={"https://maps.google.com/?cid=8424617327927699278&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="oh">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="hero-blob blob-a" aria-hidden="true"></div>
+      <div class="hero-blob blob-b" aria-hidden="true"></div>
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">Cuidados veterinarios · Fracc. del Parque, Mérida</p>
+          <h1 class="reveal">Ohana<span>Servicios Veterinarios</span></h1>
+          <p class="tagline reveal">En hawaiano, <strong>Ohana significa familia</strong>. Aquí tu mascota se atiende como tal: con el Dr.&nbsp;Giovani, diagnóstico certero y precios que sí te alcanzan.</p>
+
+          <a class="chip reveal" href="https://maps.google.com/?cid=8424617327927699278&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            <span class="star" aria-hidden="true">★</span> 4.4 · 125 reseñas en Google
+          </a>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-solid" href="https://wa.me/529991928118" target="_blank" rel="noopener">
+              <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href="https://maps.google.com/?cid=8424617327927699278&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal">
+          <img
+            class="hero-img"
+            src="/ohana-servicios-veterinarios/img/foto_5.jpg"
+            alt="Perrito dando la patita de confianza en Ohana Servicios Veterinarios"
+            loading="eager"
+            fetchpriority="high"
+          />
+          <svg class="stamp" viewBox="0 0 200 200" width="118" height="118" aria-hidden="true">
+            <defs>
+              <path id="stampCircle" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" />
+            </defs>
+            <circle cx="100" cy="100" r="94" fill="#fdf7ec" stroke="#159e8a" stroke-width="3"></circle>
+            <text font-size="12.5" font-weight="700" letter-spacing="2.6" fill="#159e8a">
+              <textPath href="#stampCircle" startOffset="1%">OHANA SIGNIFICA FAMILIA · OHANA SIGNIFICA FAMILIA ·</textPath>
+            </text>
+            <g transform="translate(100,100)">
+              <g fill="#ff6f61">
+                <ellipse cx="0" cy="-20" rx="11" ry="19"></ellipse>
+                <ellipse cx="0" cy="-20" rx="11" ry="19" transform="rotate(72)"></ellipse>
+                <ellipse cx="0" cy="-20" rx="11" ry="19" transform="rotate(144)"></ellipse>
+                <ellipse cx="0" cy="-20" rx="11" ry="19" transform="rotate(216)"></ellipse>
+                <ellipse cx="0" cy="-20" rx="11" ry="19" transform="rotate(288)"></ellipse>
+              </g>
+              <circle r="7.5" fill="#f6b93b"></circle>
+            </g>
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <!-- Firma: garland de hojas tropicales -->
+    <div class="leaf-divider" aria-hidden="true">
+      {Array.from({ length: 18 }).map((_, i) => (
+        <span class="leaf" style={`--i:${i}`} set:html={leafSvg}></span>
+      ))}
+    </div>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap about-grid">
+        <div>
+          <p class="sec-kicker reveal">Quiénes somos</p>
+          <h2 class="sec-title reveal">Una clínica que sí se siente familia</h2>
+          <div class="about reveal">
+            <p>Somos <strong>Ohana Servicios Veterinarios</strong>, una clínica de barrio en el Fraccionamiento del Parque. El nombre no es casualidad: en hawaiano, <strong>Ohana significa familia</strong>, y así tratamos a cada perro, gato y dueño que cruza la puerta.</p>
+            <p>Al frente está el <strong>Dr. Giovani</strong>, a quien varios de nuestros clientes mencionan por su nombre en Google: por cómo explica cada diagnóstico, por la paciencia con mascotas asustadas y por precios que no obligan a elegir entre cuidar a tu mascota o pagar de más. Aquí un cachorro sobrevivió al parvovirus, se han atendido abscesos y se ha orientado a dueños en momentos difíciles — siempre con trato profesional.</p>
+            <p>Ofrecemos clínica, spa y estética canina, farmacia y accesorios, todo bajo el mismo techo, con acceso para silla de ruedas para que nadie se quede afuera.</p>
+          </div>
+        </div>
+        <figure class="about-fig reveal">
+          <img src="/ohana-servicios-veterinarios/img/foto_2.jpg" alt="Dos perritos esperando su turno de baño en la estética de Ohana" loading="lazy" />
+          <figcaption>Hora de baño en la estética · siempre con calma</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="sec sec-panel" id="servicios">
+      <div class="wrap svc-grid">
+        <div>
+          <p class="sec-kicker reveal">Qué ofrecemos</p>
+          <h2 class="sec-title reveal">Servicios para toda la familia peluda</h2>
+          <ul class="servicios reveal">
+            <li><span class="ico" set:html={hibiscusSvg}></span><div><h3>Consulta y diagnóstico</h3><p>Para perros y gatos, con el Dr. Giovani.</p></div></li>
+            <li><span class="ico" set:html={hibiscusSvg}></span><div><h3>Hospitalización y urgencias</h3><p>Seguimiento cercano cuando más se necesita.</p></div></li>
+            <li><span class="ico" set:html={hibiscusSvg}></span><div><h3>Estética canina y spa</h3><p>Baño, corte y cuidado con paciencia.</p></div></li>
+            <li><span class="ico" set:html={hibiscusSvg}></span><div><h3>Farmacia veterinaria</h3><p>Medicamentos a la mano, sin vueltas.</p></div></li>
+            <li><span class="ico" set:html={hibiscusSvg}></span><div><h3>Accesorios y alimento</h3><p>Todo lo que tu mascota necesita, en un solo lugar.</p></div></li>
+            <li><span class="ico" set:html={hibiscusSvg}></span><div><h3>Acceso para silla de ruedas</h3><p>Instalaciones pensadas para todos.</p></div></li>
+          </ul>
+        </div>
+        <figure class="svc-fig reveal">
+          <img src="/ohana-servicios-veterinarios/img/foto_4.jpg" alt="Interior de Ohana: spa, clínica, farmacia y accesorios para mascotas" loading="lazy" />
+          <figcaption>Clínica, spa, farmacia y accesorios bajo un mismo techo</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ PRUEBA SOCIAL ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Lo que dicen en Google</p>
+        <h2 class="sec-title reveal"><span class="jade">4.4 de 5</span> en 125 reseñas</h2>
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Llevé a mi perro con el Doctor Giovani y nos atendió de maravilla. Con precios super accesibles para que no haya pretextos de cuidar y brindar atención a nuestras mascotas. Gracias al doctor y a los chicos que trabajan con él mi perro sobrevivió al parvovirus. Sin duda una excelente veterinaria! …»</blockquote>
+            <figcaption><strong>Karen M</strong><span>Hace 3 años · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Muchas gracias por su servicio y su profesionalismo. Lugar donde puedes obtener varios servicios a buen precio y diagnóstico con tratamiento adecuado sin que te quieran bajar dinero de más. Me sorprendió su disponibilidad y buen trato. Muchas gracias 🫂»</blockquote>
+            <figcaption><strong>Roxx</strong><span>Hace 4 meses · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Nos brindaron ayuda cuando nuestra gatita pasó por un absceso 🥹💞, y más recientemente nos orientaron para aliviar el sufrimiento de un gatito víctima de un ataque de perro. Todo con un trato profesional y precios accesibles.»</blockquote>
+            <figcaption><strong>Sam Acereto</strong><span>Hace un año · Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost-jade" href="https://maps.google.com/?cid=8424617327927699278&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-panel" id="ubicacion">
+      <div class="wrap ubica">
+        <div class="ubica-info">
+          <p class="sec-kicker reveal">Dónde estamos</p>
+          <h2 class="sec-title reveal">Fracc. del Parque, Mérida</h2>
+          <p class="dir reveal">C. 57 698, Fraccionamiento del Parque<br />97160 Del Parque, Yuc.</p>
+          <a class="btn btn-solid btn-sm reveal" href="https://maps.google.com/?cid=8424617327927699278&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+
+          <h3 class="horario-titulo reveal">Horario</h3>
+          <table class="horarios reveal">
+            <tbody>
+              <tr data-dia="1"><th scope="row">Lunes</th><td>9:00–19:00</td></tr>
+              <tr data-dia="2"><th scope="row">Martes</th><td>9:00–19:00</td></tr>
+              <tr data-dia="3"><th scope="row">Miércoles</th><td>9:00–19:00</td></tr>
+              <tr data-dia="4"><th scope="row">Jueves</th><td>9:00–19:00</td></tr>
+              <tr data-dia="5"><th scope="row">Viernes</th><td>9:00–19:00</td></tr>
+              <tr data-dia="6"><th scope="row">Sábado</th><td>9:00–16:00</td></tr>
+              <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+          <p class="nota-acceso reveal">♿ Instalaciones con acceso para silla de ruedas.</p>
+
+          <figure class="loc-fig reveal">
+            <img src="/ohana-servicios-veterinarios/img/foto_1.jpg" alt="Fachada de Ohana Servicios Veterinarios en el Fraccionamiento del Parque" loading="lazy" />
+          </figure>
+        </div>
+        <div class="mapa reveal">
+          <iframe
+            src="https://www.google.com/maps?q=Ohana%20Servicios%20Veterinarios%2C%20C.%2057%20698%2C%20Fraccionamiento%20del%20Parque%2C%2097160%20Del%20Parque%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+            title="Mapa: Ohana Servicios Veterinarios en Mérida"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <span class="ico ico-lg" set:html={hibiscusSvg}></span>
+        <h2 class="banda-title">¿Tu mascota necesita cuidado hoy?</h2>
+        <p class="banda-sub">Escríbenos por WhatsApp — te respondemos como familia.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href="https://wa.me/529991928118" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn-dark-ghost" href="tel:+529991928118">Llamar · 999 192 8118</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <p class="pie-logo"><span class="ico" set:html={hibiscusSvg}></span> Ohana Servicios Veterinarios</p>
+        <p class="pie-dato">Clínica veterinaria · C. 57 698, Fraccionamiento del Parque, 97160 Del Parque, Yuc.</p>
+        <p class="pie-dato"><a href="tel:+529991928118">999 192 8118</a> · <a href="https://wa.me/529991928118" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://facebook.com/Ohanaveterinaria" target="_blank" rel="noopener">Facebook</a></p>
+        <p class="pie-mini">Lunes a viernes 9:00–19:00 · Sábado 9:00–16:00 · Domingo cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Ohana Servicios Veterinarios",
+    "telephone": "+529991928118",
+    "url": "https://demos.ivang.mx/ohana-servicios-veterinarios",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 57 698, Fraccionamiento del Parque",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97160",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.4",
+      "reviewCount": "125"
+    },
+    "openingHours": ["Mo-Fr 09:00-19:00", "Sa 09:00-16:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --crema: #fdf7ec;
+      --jade: #159e8a;
+      --jade-deep: #0e6f61;
+      --coral: #ff6f61;
+      --coral-deep: #c73f31;
+      --sol: #f6b93b;
+      --tinta: #24332e;
+      --line: rgba(36, 51, 46, 0.14);
+      --display: "Grandstander", system-ui, sans-serif;
+      --body: "Nunito Sans", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--crema);
+      color: var(--tinta);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .oh ::selection { background: var(--coral); color: var(--crema); }
+    .oh a:focus-visible,
+    .oh .btn:focus-visible {
+      outline: 3px solid var(--jade-deep);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 48px 0 56px;
+    }
+    .hero-blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(2px);
+      z-index: 0;
+    }
+    .blob-a {
+      width: 340px; height: 340px;
+      top: -140px; right: -120px;
+      background: rgba(21, 158, 138, 0.16);
+    }
+    .blob-b {
+      width: 260px; height: 260px;
+      bottom: -120px; left: -100px;
+      background: rgba(246, 185, 59, 0.22);
+    }
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+    .hero-copy { order: 2; }
+    .hero-photo { order: 1; }
+
+    .kicker {
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--coral-deep);
+      margin: 0 0 12px;
+    }
+    h1 {
+      font-family: var(--display);
+      font-weight: 800;
+      margin: 0 0 16px;
+      line-height: 0.98;
+      color: var(--jade-deep);
+      display: flex;
+      flex-direction: column;
+    }
+    h1 { font-size: clamp(40px, 11vw, 60px); }
+    h1 span {
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: clamp(16px, 4.2vw, 22px);
+      color: var(--tinta);
+      letter-spacing: 0.01em;
+      margin-top: 6px;
+    }
+    .tagline {
+      font-size: clamp(17px, 4.2vw, 20px);
+      max-width: 46ch;
+      margin: 0 0 20px;
+      color: var(--tinta);
+    }
+    .tagline strong { color: var(--coral-deep); }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 2px solid var(--jade);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 700;
+      font-size: 15px;
+      color: var(--jade-deep);
+      text-decoration: none;
+      background: rgba(21, 158, 138, 0.08);
+    }
+    .chip .star { color: var(--sol); }
+    .chip:hover { background: rgba(21, 158, 138, 0.16); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: 16.5px;
+      text-decoration: none;
+      padding: 15px 24px;
+      border-radius: 999px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--coral); color: var(--tinta); }
+    .btn-solid:hover { background: #ff8578; }
+    .btn-ghost { border: 2px solid var(--jade); color: var(--jade-deep); background: transparent; }
+    .btn-ghost:hover { background: rgba(21, 158, 138, 0.1); }
+    .btn-ghost-jade { border: 2px solid var(--jade); color: var(--jade-deep); background: transparent; }
+    .btn-ghost-jade:hover { background: rgba(21, 158, 138, 0.1); }
+    .btn-sm { font-size: 15px; padding: 12px 20px; margin: 4px 0 0; }
+
+    .hero-photo { position: relative; max-width: 420px; margin: 0 auto; }
+    .hero-img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 32px;
+      box-shadow: 0 18px 40px rgba(36, 51, 46, 0.22);
+      border: 6px solid var(--crema);
+      outline: 3px solid rgba(21, 158, 138, 0.35);
+      outline-offset: -3px;
+    }
+    .stamp {
+      position: absolute;
+      bottom: -16px;
+      left: -14px;
+      filter: drop-shadow(0 6px 14px rgba(36, 51, 46, 0.28));
+    }
+
+    /* ---------- LEAF DIVIDER (firma) ---------- */
+    .leaf-divider {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 4px;
+      padding: 10px 12px 18px;
+      overflow: hidden;
+      color: var(--jade);
+    }
+    .leaf-divider .leaf {
+      display: inline-flex;
+      transform: rotate(calc((var(--i, 0) % 2) * 18deg - 9deg));
+      opacity: 0.85;
+    }
+    .leaf-divider .leaf:nth-child(3n) { color: var(--coral); }
+    .leaf-divider .leaf:nth-child(5n) { color: var(--sol); }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 60px 0; }
+    .sec-panel { background: #f7ecd8; }
+    .sec-kicker {
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--coral-deep);
+      margin: 0 0 10px;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(30px, 7vw, 46px);
+      line-height: 1.04;
+      margin: 0 0 26px;
+      color: var(--jade-deep);
+    }
+    .sec-title .jade { color: var(--coral-deep); }
+
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+    .about p { max-width: 62ch; margin: 0 0 16px; color: var(--tinta); }
+    .about strong { color: var(--jade-deep); }
+    .about-fig { margin: 0; }
+    .about-fig img { width: 100%; border-radius: 24px; box-shadow: 0 14px 30px rgba(36, 51, 46, 0.16); }
+    .about-fig figcaption { margin-top: 10px; font-size: 14px; color: var(--jade-deep); font-weight: 600; }
+
+    /* ---------- SERVICIOS ---------- */
+    .svc-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+    .servicios { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+    .servicios li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-top: 1px solid var(--line);
+    }
+    .servicios li:last-child { border-bottom: 1px solid var(--line); }
+    .servicios .ico { color: var(--jade); flex-shrink: 0; margin-top: 2px; }
+    .servicios h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 18.5px;
+      margin: 0 0 3px;
+      color: var(--tinta);
+    }
+    .servicios p { margin: 0; color: #55655f; font-size: 15px; }
+    .svc-fig { margin: 0; }
+    .svc-fig img { width: 100%; border-radius: 24px; box-shadow: 0 14px 30px rgba(36, 51, 46, 0.16); }
+    .svc-fig figcaption { margin-top: 10px; font-size: 14px; color: var(--jade-deep); font-weight: 600; }
+
+    /* ---------- RESEÑAS ---------- */
+    .reviews { display: grid; grid-template-columns: 1fr; gap: 18px; margin: 0 0 28px; }
+    .rev {
+      margin: 0;
+      background: #fff;
+      color: var(--tinta);
+      border-radius: 20px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      box-shadow: 0 10px 24px rgba(36, 51, 46, 0.08);
+    }
+    .rev-stars { color: var(--sol); font-size: 16px; letter-spacing: 0.15em; margin: 0 0 10px; }
+    .rev blockquote { margin: 0 0 14px; font-size: 16px; line-height: 1.55; font-weight: 600; }
+    .rev figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .rev figcaption strong { font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--jade-deep); }
+    .rev figcaption span { font-size: 13px; color: #7a8a83; }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 28px; }
+    .dir { font-size: 17px; font-weight: 600; margin: 0 0 14px; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 19px;
+      margin: 28px 0 10px;
+      color: var(--jade-deep);
+    }
+    .horarios { width: 100%; max-width: 400px; border-collapse: collapse; font-size: 15px; }
+    .horarios th, .horarios td { padding: 8px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    .horarios th { font-weight: 600; color: var(--tinta); }
+    .horarios td { color: #55655f; text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: #fff; background: var(--jade-deep); font-weight: 700; }
+    .horarios tr.hoy th { border-radius: 8px 0 0 8px; }
+    .horarios tr.hoy td { border-radius: 0 8px 8px 0; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--sol);
+      color: var(--tinta);
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 8px;
+      vertical-align: 1px;
+    }
+    .nota-acceso { margin: 18px 0 0; color: #55655f; font-size: 14px; }
+    .loc-fig { margin: 22px 0 0; max-width: 340px; }
+    .loc-fig img { width: 100%; border-radius: 18px; box-shadow: 0 10px 22px rgba(36, 51, 46, 0.16); }
+    .mapa iframe { width: 100%; height: 300px; border: 0; border-radius: 20px; display: block; }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda { background: var(--jade-deep); color: var(--crema); padding: 56px 0; text-align: center; }
+    .banda .ico { color: var(--sol); margin-bottom: 10px; display: inline-flex; }
+    .banda .ico-lg svg { width: 34px; height: 34px; }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(28px, 7vw, 44px);
+      line-height: 1.05;
+      margin: 0 0 12px;
+    }
+    .banda-sub { margin: 0 auto 24px; max-width: 40ch; font-weight: 600; opacity: 0.92; }
+    .banda .cta-row { justify-content: center; }
+    .btn-dark { background: var(--coral); color: var(--tinta); }
+    .btn-dark:hover { background: #ff8578; }
+    .btn-dark-ghost { border: 2px solid rgba(253, 247, 236, 0.55); color: var(--crema); }
+    .btn-dark-ghost:hover { border-color: var(--crema); }
+
+    /* ---------- FOOTER ---------- */
+    .pie { padding: 40px 0 96px; text-align: center; background: var(--crema); }
+    .pie-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 22px;
+      color: var(--jade-deep);
+      margin: 0 0 10px;
+    }
+    .pie-logo .ico { color: var(--coral); display: inline-flex; align-items: center; }
+    .pie-dato { margin: 4px 0; color: #55655f; font-size: 14px; }
+    .pie-dato a { color: var(--jade-deep); text-decoration: none; border-bottom: 1px solid var(--coral); }
+    .pie-dato a:hover { color: var(--coral-deep); }
+    .pie-mini { margin: 14px 0 0; color: #8a978f; font-size: 12.5px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 92px 0; }
+      .hero { padding: 64px 0 72px; }
+      .hero-grid { grid-template-columns: 1.05fr 0.95fr; gap: 48px; }
+      .hero-copy { order: 1; }
+      .hero-photo { order: 2; max-width: none; }
+      .about-grid { grid-template-columns: 1.1fr 0.9fr; align-items: start; }
+      .svc-grid { grid-template-columns: 1.1fr 0.9fr; align-items: start; }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .ubica { grid-template-columns: 1fr 1.15fr; align-items: start; }
+      .mapa iframe { height: 440px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      var hoy = new Date().getDay();
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

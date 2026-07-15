@@ -1,0 +1,580 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="BULL GYM — Entrena con casta en Los Héroes, Mérida"
+  description="⭐ 4.5 con 24 reseñas en Google. Equipo nuevo y climatizado, entrenadores que te asesoran y retos mensuales. Abierto de 6:00 a 23:00 en Los Héroes, Mérida."
+  slug="bull-gym"
+  ogImage="/bull-gym/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap"
+  favicon="🐂"
+  themeColor="#141013"
+  whatsapp={null}
+  telefono={null}
+  mapsUrl={"https://maps.google.com/?cid=313443978996572188&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- ============ HERO ============ -->
+  <header class="hero" id="inicio">
+    <img
+      class="hero-img"
+      src="/bull-gym/img/foto_1.jpg"
+      alt="Interior de BULL GYM: máquinas rojas nuevas sobre piso negro"
+      fetchpriority="high"
+    />
+    <div class="hero-shade" aria-hidden="true"></div>
+    <div class="hero-content">
+      <div class="hero-brand">
+        <svg class="bull-mark bull-mark--hero" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <path d="M4 8 L20 14 L24 24 L14 20 Z" />
+          <path d="M60 8 L44 14 L40 24 L50 20 Z" />
+          <path d="M22 20 L42 20 L46 34 L38 52 L32 58 L26 52 L18 34 Z" />
+          <path d="M27 34 L31 38 L27 42 Z" fill="#E7333D" />
+          <path d="M37 34 L33 38 L37 42 Z" fill="#E7333D" />
+        </svg>
+        <p class="hero-eyebrow">Los Héroes · Mérida, Yucatán</p>
+      </div>
+      <h1 class="hero-title">
+        <span>Bull</span>
+        <span class="hero-title-red">Gym</span>
+      </h1>
+      <p class="hero-hook">
+        Fierro nuevo, clima y entrenadores que sí te asesoran.
+        El gym de barrio donde entrenas a gusto, de 6 de la mañana a 11 de la noche.
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-red" href="https://maps.google.com/?cid=313443978996572188&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          Cómo llegar
+        </a>
+        <a class="btn btn-ghost" href="#horarios">Ver horarios</a>
+      </div>
+      <p class="hero-rating">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>4.5</strong> · 24 reseñas en Google
+      </p>
+    </div>
+  </header>
+
+  <!-- ============ STRIP DIAGONAL ============ -->
+  <div class="strip" aria-hidden="true">
+    <p class="strip-inner">
+      <span>Equipo nuevo</span><i>▲</i>
+      <span>Climatizado</span><i>▲</i>
+      <span>Retos mensuales</span><i>▲</i>
+      <span>Lun–Vie 6:00–23:00</span><i>▲</i>
+      <span>Acepta tarjetas</span>
+    </p>
+  </div>
+
+  <!-- ============ SOBRE NOSOTROS ============ -->
+  <section class="sobre" id="sobre">
+    <div class="wrap sobre-grid">
+      <div class="sobre-text" data-reveal>
+        <p class="kicker kicker-dark">
+          <svg class="bull-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M4 8 L20 14 L24 24 L14 20 Z"/><path d="M60 8 L44 14 L40 24 L50 20 Z"/><path d="M22 20 L42 20 L46 34 L38 52 L32 58 L26 52 L18 34 Z"/></svg>
+          Sobre nosotros
+        </p>
+        <h2>Un gym de barrio<br /><em>con casta de toro</em></h2>
+        <p>
+          Somos BULL GYM, el gimnasio rojo de la calle 140-A en Los Héroes.
+          Aquí no vienes a pasearte entre máquinas ocupadas: vienes a entrenar
+          con equipo nuevo, climatizado y con mantenimiento continuo, en un
+          espacio que ampliamos para que entrenes más cómodo.
+        </p>
+        <p>
+          Nuestros entrenadores están en el piso contigo: te asesoran, te
+          corrigen y te apoyan en todo momento, seas nuevo o lleves años en
+          esto. Y el ambiente lo hacemos entre todos — hay retos mensuales,
+          puedes pedir la música que quieres escuchar y hasta te prestamos
+          el tripié para tus fotos de progreso.
+        </p>
+        <p>
+          Aquí entrena la gente del barrio, y quienes nos visitan nos dicen
+          que se sienten cómodas entrenando con nosotros. Esa confianza es
+          lo que más nos importa.
+        </p>
+      </div>
+      <figure class="sobre-photo" data-reveal>
+        <img src="/bull-gym/img/foto_2.jpg" alt="Fachada roja de BULL GYM en la calle 140-A, Los Héroes" loading="lazy" />
+        <figcaption>Búscanos: la fachada roja de la C. 140-A #730</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="servicios" id="servicios">
+    <div class="wrap">
+      <p class="kicker" data-reveal>
+        <svg class="bull-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M4 8 L20 14 L24 24 L14 20 Z"/><path d="M60 8 L44 14 L40 24 L50 20 Z"/><path d="M22 20 L42 20 L46 34 L38 52 L32 58 L26 52 L18 34 Z"/></svg>
+        Lo que hay adentro
+      </p>
+      <h2 class="servicios-title" data-reveal>Todo listo para<br /><em>tu mejor versión</em></h2>
+      <div class="serv-grid">
+        <article class="serv-card" data-reveal>
+          <span class="serv-num">01</span>
+          <h3>Asesoría en piso</h3>
+          <p>Entrenadores capacitados que te asesoran y apoyan en todo momento, desde tu primer día.</p>
+        </article>
+        <article class="serv-card" data-reveal>
+          <span class="serv-num">02</span>
+          <h3>Equipo nuevo y climatizado</h3>
+          <p>Máquinas nuevas con mantenimiento continuo y clima para entrenar a gusto todo el año.</p>
+        </article>
+        <article class="serv-card" data-reveal>
+          <span class="serv-num">03</span>
+          <h3>Retos mensuales</h3>
+          <p>Cada mes hay un reto nuevo para que no pierdas el ritmo y entrenes con objetivo.</p>
+        </article>
+        <article class="serv-card" data-reveal>
+          <span class="serv-num">04</span>
+          <h3>Área ampliada</h3>
+          <p>Ampliamos el espacio: más lugar para pesas, máquinas y para ti.</p>
+        </article>
+        <article class="serv-card" data-reveal>
+          <span class="serv-num">05</span>
+          <h3>Horario extendido</h3>
+          <p>Abrimos a las 6:00 y cerramos a las 23:00 entre semana. Entrena antes o después del trabajo.</p>
+        </article>
+        <article class="serv-card" data-reveal>
+          <span class="serv-num">06</span>
+          <h3>Pago con tarjeta</h3>
+          <p>Aceptamos tarjetas para tu inscripción y mensualidad, sin vueltas al cajero.</p>
+        </article>
+      </div>
+    </div>
+    <figure class="serv-band" data-reveal>
+      <img src="/bull-gym/img/foto_3.jpg" alt="Fila de mancuernas en el área de peso libre de BULL GYM" loading="lazy" />
+    </figure>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section class="resenas" id="resenas">
+    <div class="wrap">
+      <p class="kicker kicker-dark" data-reveal>
+        <svg class="bull-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M4 8 L20 14 L24 24 L14 20 Z"/><path d="M60 8 L44 14 L40 24 L50 20 Z"/><path d="M22 20 L42 20 L46 34 L38 52 L32 58 L26 52 L18 34 Z"/></svg>
+        Palabra de la manada
+      </p>
+      <div class="rating-hero" data-reveal>
+        <span class="rating-big">4.5</span>
+        <div class="rating-side">
+          <span class="stars stars-lg" aria-hidden="true">★★★★★</span>
+          <p>24 reseñas en Google</p>
+        </div>
+      </div>
+      <div class="quotes">
+        <figure class="quote quote-featured" data-reveal>
+          <blockquote>
+            <p>El gimnasio está muy bien equipado. Lo ampliaron recientemente y se entrena mucho más cómoda. Los entrenadores están muy capacitados. Te asesoran y apoyan en todo momento. El ambiente es muy agradable. Tienen retos mensuales, puedes pedir la música que te gustaría escuchar, te prestan su tripié para fotos y ponen películas!! 10000/10</p>
+          </blockquote>
+          <figcaption>
+            <span class="q-author">Yessenia Priego</span>
+            <span class="q-meta">★★★★★ · Hace un año</span>
+          </figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote>
+            <p>Excelente gimansio, muy limpio, el personal muy amable, maquinas nuevas con mantenimiento continuo.</p>
+          </blockquote>
+          <figcaption>
+            <span class="q-author">Freddy Dzul Peba</span>
+            <span class="q-meta">★★★★★ · Hace 6 meses</span>
+          </figcaption>
+        </figure>
+        <figure class="quote" data-reveal>
+          <blockquote>
+            <p>Muy buen gimnasio<br />Realmente me siento cómoda ahí.</p>
+          </blockquote>
+          <figcaption>
+            <span class="q-author">monserrat castillo</span>
+            <span class="q-meta">★★★★★ · Hace 2 meses</span>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="resenas-cta" data-reveal>
+        <a class="btn btn-dark" href="https://maps.google.com/?cid=313443978996572188&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+          Leer más reseñas en Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HORARIOS + UBICACIÓN ============ -->
+  <section class="lugar" id="horarios">
+    <div class="wrap lugar-grid">
+      <div class="lugar-horarios" data-reveal>
+        <p class="kicker">
+          <svg class="bull-mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="M4 8 L20 14 L24 24 L14 20 Z"/><path d="M60 8 L44 14 L40 24 L50 20 Z"/><path d="M22 20 L42 20 L46 34 L38 52 L32 58 L26 52 L18 34 Z"/></svg>
+          Horarios
+        </p>
+        <h2>Aquí te<br /><em>esperamos</em></h2>
+        <div class="tabla-scroll">
+          <table class="horarios-tabla">
+            <caption class="sr-only">Horarios de BULL GYM por día</caption>
+            <tbody>
+              <tr data-dia="1"><th scope="row">Lunes</th><td>6:00 – 23:00</td></tr>
+              <tr data-dia="2"><th scope="row">Martes</th><td>6:00 – 23:00</td></tr>
+              <tr data-dia="3"><th scope="row">Miércoles</th><td>6:00 – 23:00</td></tr>
+              <tr data-dia="4"><th scope="row">Jueves</th><td>6:00 – 23:00</td></tr>
+              <tr data-dia="5"><th scope="row">Viernes</th><td>6:00 – 23:00</td></tr>
+              <tr data-dia="6"><th scope="row">Sábado</th><td>7:00 – 17:00</td></tr>
+              <tr data-dia="0" class="cerrado"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="lugar-mapa" data-reveal>
+        <p class="lugar-dir">
+          <strong>C. 140 A 730, Los Héroes</strong><br />
+          97306 Mérida, Yuc., México
+        </p>
+        <div class="mapa-frame">
+          <iframe
+            src="https://www.google.com/maps?q=C.%20140%20A%20730%2C%20Los%20H%C3%A9roes%2C%2097306%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+            width="600"
+            height="420"
+            style="border:0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Mapa de ubicación de BULL GYM en Los Héroes, Mérida">
+          </iframe>
+        </div>
+        <a class="btn btn-red btn-full" href="https://maps.google.com/?cid=313443978996572188&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          Abrir en Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div class="footer-brand">
+        <svg class="bull-mark bull-mark--footer" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <path d="M4 8 L20 14 L24 24 L14 20 Z" />
+          <path d="M60 8 L44 14 L40 24 L50 20 Z" />
+          <path d="M22 20 L42 20 L46 34 L38 52 L32 58 L26 52 L18 34 Z" />
+        </svg>
+        <p class="footer-name">Bull Gym</p>
+        <p class="footer-tag">Entrena con casta · Los Héroes, Mérida</p>
+      </div>
+      <div class="footer-info">
+        <p>C. 140 A 730, Los Héroes,<br />97306 Mérida, Yuc., México</p>
+        <p>Lun–Vie 6:00–23:00 · Sáb 7:00–17:00</p>
+        <p>⭐ 4.5 · 24 reseñas en Google</p>
+        <a href="https://maps.google.com/?cid=313443978996572188&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Ver ficha en Google Maps →</a>
+      </div>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --carbon: #141013;
+      --carbon-2: #1d181b;
+      --rojo: #E7333D;
+      --rojo-hondo: #7E121C;
+      --hueso: #F3ECE3;
+      --humo: #A89DA1;
+      --tinta: #241d20;
+      --tinta-suave: #6E5F63;
+      --display: 'Big Shoulders Display', 'Arial Narrow', sans-serif;
+      --texto: 'Instrument Sans', system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--carbon);
+      color: var(--hueso);
+      font-family: var(--texto);
+      font-size: 1rem;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    a:focus-visible, .btn:focus-visible {
+      outline: 3px solid var(--rojo);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    /* ---------- Marca de toro (firma) ---------- */
+    .bull-mark { width: 34px; height: 34px; fill: var(--rojo); flex: 0 0 auto; }
+    .bull-mark--hero { width: 46px; height: 46px; fill: var(--hueso); }
+    .bull-mark--footer { width: 40px; height: 40px; margin: 0 auto 10px; }
+
+    /* ---------- Botones ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      font-family: var(--display); font-weight: 800; font-size: 1.15rem;
+      letter-spacing: .06em; text-transform: uppercase; text-decoration: none;
+      padding: 15px 26px; min-height: 52px;
+      border: 2px solid transparent;
+      transition: transform .18s ease, background .18s ease, color .18s ease;
+    }
+    .btn svg { width: 20px; height: 20px; }
+    .btn:active { transform: scale(.97); }
+    .btn-red { background: var(--rojo); color: #fff; clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%); }
+    .btn-red:hover { background: #c9202b; }
+    .btn-ghost { border-color: rgba(243, 236, 227, .55); color: var(--hueso); }
+    .btn-ghost:hover { border-color: var(--hueso); background: rgba(243, 236, 227, .08); }
+    .btn-dark { background: var(--tinta); color: var(--hueso); clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%); }
+    .btn-dark:hover { background: var(--rojo-hondo); }
+    .btn-full { width: 100%; }
+
+    /* ---------- Kickers / titulares ---------- */
+    .kicker {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-weight: 700; font-size: .8rem; letter-spacing: .22em;
+      text-transform: uppercase; color: var(--rojo); margin: 0 0 14px;
+    }
+    .kicker .bull-mark { width: 22px; height: 22px; }
+    h2 {
+      font-family: var(--display); font-weight: 900;
+      font-size: clamp(2.6rem, 9vw, 4.4rem);
+      line-height: .92; text-transform: uppercase; letter-spacing: .01em;
+      margin: 0 0 22px;
+    }
+    h2 em { font-style: normal; color: var(--rojo); }
+
+    /* ---------- Hero ---------- */
+    .hero {
+      position: relative; min-height: calc(100svh - 38px);
+      display: flex; align-items: flex-end;
+      isolation: isolate;
+    }
+    .hero-img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: 60% center; z-index: -2;
+    }
+    .hero-shade {
+      position: absolute; inset: 0; z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(20,16,19,.45) 0%, rgba(20,16,19,.18) 35%, rgba(20,16,19,.82) 78%, #141013 100%);
+    }
+    .hero-content {
+      width: 100%; max-width: 1100px; margin: 0 auto;
+      padding: 90px 20px 56px;
+    }
+    .hero-brand { display: flex; align-items: center; gap: 14px; margin-bottom: 6px; }
+    .hero-eyebrow {
+      margin: 0; font-weight: 600; font-size: .85rem;
+      letter-spacing: .24em; text-transform: uppercase; color: var(--hueso);
+      text-shadow: 0 1px 8px rgba(0,0,0,.6);
+    }
+    .hero-title {
+      margin: 0 0 14px; font-family: var(--display); font-weight: 900;
+      font-size: clamp(5rem, 24vw, 12.5rem);
+      line-height: .82; text-transform: uppercase; letter-spacing: .01em;
+      display: flex; flex-direction: column;
+      text-shadow: 0 4px 30px rgba(0,0,0,.45);
+    }
+    .hero-title-red { color: var(--rojo); }
+    .hero-hook {
+      max-width: 34ch; margin: 0 0 26px;
+      font-size: 1.1rem; font-weight: 500; line-height: 1.5;
+      color: #fdfaf6; text-shadow: 0 1px 10px rgba(0,0,0,.55);
+    }
+    .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
+    .hero-rating { margin: 0; font-size: .95rem; color: var(--hueso); text-shadow: 0 1px 8px rgba(0,0,0,.6); }
+    .hero-rating strong { font-size: 1.05rem; }
+    .stars { color: var(--rojo); letter-spacing: .12em; }
+
+    /* ---------- Strip diagonal (firma) ---------- */
+    .strip {
+      background: var(--rojo);
+      clip-path: polygon(0 14px, 100% 0, 100% calc(100% - 14px), 0 100%);
+      padding: 26px 0; margin: -1px 0;
+      overflow: hidden;
+    }
+    .strip-inner {
+      margin: 0; white-space: nowrap; text-align: center;
+      font-family: var(--display); font-weight: 800; font-size: 1.15rem;
+      letter-spacing: .1em; text-transform: uppercase; color: #fff;
+      display: flex; justify-content: center; gap: 16px;
+      animation: strip-slide 26s linear infinite;
+      width: max-content; margin-inline: auto;
+    }
+    .strip-inner i { font-style: normal; font-size: .7rem; align-self: center; opacity: .8; }
+    @keyframes strip-slide {
+      0%, 100% { transform: translateX(12px); }
+      50% { transform: translateX(-12px); }
+    }
+
+    /* ---------- Sobre nosotros (editorial hueso) ---------- */
+    .sobre { background: var(--hueso); color: var(--tinta); padding: 72px 0 76px; }
+    .kicker-dark { color: var(--rojo-hondo); }
+    .kicker-dark .bull-mark { fill: var(--rojo-hondo); }
+    .sobre h2 { color: var(--tinta); }
+    .sobre h2 em { color: var(--rojo); }
+    .sobre-grid { display: grid; gap: 40px; }
+    .sobre-text p:not(.kicker) { margin: 0 0 16px; color: var(--tinta); font-size: 1.02rem; }
+    .sobre-text p:not(.kicker) + p { color: #4a3f43; }
+    .sobre-photo { margin: 0; }
+    .sobre-photo img {
+      width: 100%; clip-path: polygon(0 0, 100% 12px, 100% 100%, 0 calc(100% - 12px));
+    }
+    .sobre-photo figcaption {
+      margin-top: 12px; font-size: .85rem; font-weight: 600;
+      letter-spacing: .08em; text-transform: uppercase; color: var(--tinta-suave);
+    }
+
+    /* ---------- Servicios (carbón) ---------- */
+    .servicios { background: var(--carbon); padding: 76px 0 0; }
+    .servicios-title { color: var(--hueso); }
+    .serv-grid { display: grid; gap: 14px; margin-top: 34px; }
+    .serv-card {
+      background: var(--carbon-2); border-left: 3px solid var(--rojo);
+      padding: 22px 20px 20px; position: relative;
+    }
+    .serv-num {
+      font-family: var(--display); font-weight: 800; font-size: 1rem;
+      color: var(--rojo); letter-spacing: .1em;
+    }
+    .serv-card h3 {
+      margin: 6px 0 8px; font-family: var(--display); font-weight: 800;
+      font-size: 1.5rem; text-transform: uppercase; letter-spacing: .03em;
+      color: var(--hueso); line-height: 1.05;
+    }
+    .serv-card p { margin: 0; color: var(--humo); font-size: .95rem; }
+    .serv-band { margin: 56px 0 0; }
+    .serv-band img {
+      width: 100%; max-height: 420px; object-fit: cover; object-position: center 62%;
+    }
+
+    /* ---------- Reseñas (hueso) ---------- */
+    .resenas { background: var(--hueso); color: var(--tinta); padding: 72px 0 76px; }
+    .rating-hero { display: flex; align-items: center; gap: 20px; margin: 4px 0 34px; }
+    .rating-big {
+      font-family: var(--display); font-weight: 900; font-size: clamp(4.5rem, 16vw, 7rem);
+      line-height: .85; color: var(--tinta);
+    }
+    .rating-side p { margin: 4px 0 0; font-weight: 600; color: var(--tinta-suave); }
+    .stars-lg { font-size: 1.5rem; }
+    .quotes { display: grid; gap: 16px; }
+    .quote {
+      margin: 0; background: #fffdf9; border: 1px solid #e4d9cb;
+      padding: 26px 22px 20px; position: relative;
+    }
+    .quote::before {
+      content: '“'; position: absolute; top: -6px; left: 14px;
+      font-family: var(--display); font-weight: 900; font-size: 4rem;
+      line-height: 1; color: var(--rojo); opacity: .9;
+    }
+    .quote blockquote { margin: 0 0 16px; }
+    .quote blockquote p { margin: 0; font-size: 1rem; line-height: 1.6; color: var(--tinta); }
+    .quote-featured { border-top: 4px solid var(--rojo); }
+    .quote-featured blockquote p { font-size: 1.06rem; }
+    .quote figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .q-author { font-weight: 700; color: var(--tinta); }
+    .q-meta { font-size: .85rem; color: var(--rojo-hondo); letter-spacing: .04em; }
+    .resenas-cta { margin-top: 30px; text-align: center; }
+
+    /* ---------- Horarios + ubicación ---------- */
+    .lugar { background: var(--carbon); padding: 76px 0; }
+    .lugar h2 { color: var(--hueso); }
+    .lugar-grid { display: grid; gap: 44px; }
+    .tabla-scroll { overflow-x: auto; }
+    .horarios-tabla { width: 100%; border-collapse: collapse; }
+    .horarios-tabla th, .horarios-tabla td {
+      padding: 13px 8px; text-align: left;
+      border-bottom: 1px solid rgba(243, 236, 227, .14);
+    }
+    .horarios-tabla th {
+      font-weight: 600; color: var(--humo); font-size: .95rem;
+      letter-spacing: .06em; text-transform: uppercase;
+    }
+    .horarios-tabla td {
+      font-family: var(--display); font-weight: 800; font-size: 1.6rem;
+      letter-spacing: .04em; color: var(--hueso); text-align: right;
+    }
+    .horarios-tabla tr.cerrado td { color: var(--humo); }
+    .horarios-tabla tr.hoy th, .horarios-tabla tr.hoy td { color: var(--rojo); }
+    .horarios-tabla tr.hoy th::after {
+      content: ' · Hoy'; color: var(--rojo); font-weight: 700;
+    }
+    .lugar-dir { margin: 0 0 16px; font-size: 1.05rem; line-height: 1.5; color: var(--hueso); }
+    .lugar-dir strong { font-size: 1.15rem; }
+    .mapa-frame {
+      clip-path: polygon(0 10px, 100% 0, 100% calc(100% - 10px), 0 100%);
+      margin-bottom: 16px; background: var(--carbon-2);
+    }
+    .mapa-frame iframe { display: block; width: 100%; height: 340px; border: 0; }
+
+    /* ---------- Footer ---------- */
+    .footer {
+      background: #0d0a0c; padding: 56px 0 90px;
+      border-top: 3px solid var(--rojo);
+      text-align: center;
+    }
+    .footer-name {
+      margin: 0; font-family: var(--display); font-weight: 900;
+      font-size: 2.4rem; text-transform: uppercase; letter-spacing: .04em;
+      color: var(--hueso); line-height: 1;
+    }
+    .footer-tag {
+      margin: 6px 0 26px; font-size: .85rem; letter-spacing: .14em;
+      text-transform: uppercase; color: var(--rojo); font-weight: 600;
+    }
+    .footer-info p { margin: 0 0 10px; color: var(--humo); font-size: .95rem; }
+    .footer-info a {
+      color: var(--hueso); font-weight: 600; text-decoration: none;
+      border-bottom: 2px solid var(--rojo);
+    }
+    .footer-info a:hover { color: var(--rojo); }
+
+    /* ---------- Scroll reveal (solo con JS) ---------- */
+    html.js-anim [data-reveal] {
+      opacity: 0; transform: translateY(18px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    html.js-anim [data-reveal].visto { opacity: 1; transform: none; }
+
+    /* ---------- Desktop ---------- */
+    @media (min-width: 760px) {
+      .hero-content { padding-bottom: 72px; }
+      .hero-hook { font-size: 1.25rem; }
+      .sobre-grid { grid-template-columns: 1.1fr .9fr; align-items: center; gap: 56px; }
+      .serv-grid { grid-template-columns: repeat(3, 1fr); }
+      .quotes { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .quote-featured { grid-column: 1 / -1; }
+      .quote-featured blockquote p { font-size: 1.15rem; max-width: 62ch; }
+      .lugar-grid { grid-template-columns: .9fr 1.1fr; align-items: start; gap: 56px; }
+      .mapa-frame iframe { height: 400px; }
+      .footer { text-align: left; }
+      .footer-grid { display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; }
+      .bull-mark--footer { margin: 0 0 10px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      // Resaltar el día de hoy en la tabla de horarios
+      var hoy = new Date().getDay(); // 0 = domingo
+      var fila = document.querySelector('.horarios-tabla tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      // Scroll reveal como mejora progresiva (sin JS todo queda visible)
+      if ('IntersectionObserver' in window &&
+          !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        document.documentElement.classList.add('js-anim');
+        var obs = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('visto');
+              obs.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        document.querySelectorAll('[data-reveal]').forEach(function (el) {
+          obs.observe(el);
+        });
+      }
+    })();
+  </script>
+</BaseLayout>

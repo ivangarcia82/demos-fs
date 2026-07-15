@@ -1,0 +1,755 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const nombre = 'Estética Unisex Hola';
+const slug = 'estetica-unisex-hola';
+const whatsapp = 'https://wa.me/529999533401';
+const telefono = '999 953 3401';
+const telHref = 'tel:9999533401';
+const mapsUrl = 'https://maps.google.com/?cid=3323980167379768391';
+const direccion = 'C. 42 337-Loc 5, Francisco de Montejo, 97203 Mérida, Yuc., México';
+const mapSrc =
+  'https://www.google.com/maps?q=C.%2042%20337-Loc%205%2C%20Francisco%20de%20Montejo%2C%2097203%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed';
+
+const horarios = [
+  { dia: 'Lunes', h: 'Cerrado', cerrado: true },
+  { dia: 'Martes', h: '10:00 – 20:00', cerrado: false },
+  { dia: 'Miércoles', h: '10:00 – 20:00', cerrado: false },
+  { dia: 'Jueves', h: '10:00 – 20:00', cerrado: false },
+  { dia: 'Viernes', h: '10:00 – 20:00', cerrado: false },
+  { dia: 'Sábado', h: '10:00 – 18:00', cerrado: false },
+  { dia: 'Domingo', h: 'Cerrado', cerrado: true },
+];
+
+const servicios = [
+  {
+    icon: '✂️',
+    t: 'Corte unisex',
+    d: 'Para dama, caballero y los más pequeños de la casa. Escuchamos qué buscas y te asesoramos antes de empezar.',
+  },
+  {
+    icon: '🎨',
+    t: 'Color, mechas y balayage',
+    d: 'Desde un rubio platino hasta los tonos que parecen imposibles. Trabajamos el color con calma y precisión.',
+  },
+  {
+    icon: '🌀',
+    t: 'Cabello chino, bienvenido',
+    d: 'Si te cuesta encontrar quién te corte bien el cabello chino o difícil, este es justo el reto que disfrutamos.',
+  },
+  {
+    icon: '🧔',
+    t: 'Barbería y barba',
+    d: 'Corte de caballero y arreglo de barba con el mismo cuidado y detalle de siempre.',
+  },
+];
+
+const fotos = [
+  { src: '/estetica-unisex-hola/img/foto_2.jpg', alt: 'Interior de la estética Hola con sillón y espejos' },
+  { src: '/estetica-unisex-hola/img/foto_5.jpg', alt: 'Recepción y estantes con productos profesionales' },
+  { src: '/estetica-unisex-hola/img/foto_3.jpg', alt: 'Raúl, estilista de la estética Hola' },
+  { src: '/estetica-unisex-hola/img/foto_4.jpg', alt: 'Fachada de Estética Unisex Hola en Francisco de Montejo' },
+];
+
+const resenas = [
+  {
+    autor: 'Romina Sámano',
+    cuando: 'Hace 12 meses',
+    texto: '…yo que tengo el cabello chino es difícil encontrar un lugar donde si me lo corten bien y aquí me encantó el resultado. Lo recomiendo mucho, muy bueno el señor Raúl.',
+  },
+  {
+    autor: 'Elizabeth Carreto',
+    cuando: 'Hace 9 meses',
+    texto: 'Excelente servicio, tienen muchísima paciencia y hacen un trabajo precioso, además te explican y te aconsejan buscando lo mejor para ti.',
+  },
+  {
+    autor: 'María Pérez',
+    cuando: 'Hace un año',
+    texto: 'Buena atención, lugar agradable y limpio, cajones de estacionamiento libres, precios adecuados.',
+  },
+  {
+    autor: 'Gisela Partida',
+    cuando: 'Hace 2 semanas',
+    texto: 'Excelente servicio, lo recomiendo ampliamente.',
+  },
+];
+
+const faqs = [
+  { q: '¿Atienden a hombres y mujeres?', a: 'Sí, somos una estética unisex. También cortamos a los niños de la casa.' },
+  { q: '¿Aceptan pago con tarjeta?', a: 'Sí, puedes pagar con tarjeta sin problema.' },
+  { q: '¿El local es accesible?', a: 'Sí, contamos con acceso para silla de ruedas.' },
+  { q: '¿Hay dónde estacionarse?', a: 'Sí. Nuestros clientes suelen encontrar cajones de estacionamiento libres cerca.' },
+];
+---
+<BaseLayout
+  title="Estética Unisex Hola — Alta peluquería en Mérida"
+  description="Estética unisex en Francisco de Montejo, Mérida. ⭐ 4.9 · 142 reseñas. Corte, color y balayage con Raúl. Te saludamos con una sonrisa."
+  slug={slug}
+  ogImage="/estetica-unisex-hola/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Righteous&family=Rubik:wght@400;500;600;700&display=swap"
+  favicon="👋"
+  themeColor="#12B4C8"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <div class="hola">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <div class="hero__grid">
+        <div class="hero__copy">
+          <p class="eyebrow">Alta peluquería unisex · Francisco de Montejo, Mérida</p>
+
+          <div class="bubble" aria-hidden="true">
+            <span class="bubble__word">¡Hola!</span>
+            <span class="bubble__wave">👋</span>
+          </div>
+
+          <h1 class="hero__title">Te saludamos con una sonrisa<br />y te vas con el corte que querías.</h1>
+
+          <p class="hero__lead">
+            Estética unisex para toda la familia. Corte, color y balayage con
+            <strong>Raúl</strong>, en un lugar limpio, luminoso y de buena vibra.
+          </p>
+
+          <div class="rating" role="img" aria-label="Calificación 4.9 de 5 con 142 reseñas en Google">
+            <span class="rating__stars">★★★★★</span>
+            <span class="rating__num">4.9</span>
+            <span class="rating__meta">· 142 reseñas en Google</span>
+          </div>
+
+          <div class="cta-row">
+            <a class="btn btn--wa" href={whatsapp} target="_blank" rel="noopener">
+              <span class="btn__ic" aria-hidden="true">💬</span> Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+          </div>
+        </div>
+
+        <div class="hero__media">
+          <img
+            src="/estetica-unisex-hola/img/foto_1.jpg"
+            alt="Rubio platino con balayage trabajado en la estética Hola"
+            width="1000" height="1250" fetchpriority="high" decoding="async"
+          />
+          <span class="hero__tag">Trabajo real de la casa ✨</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ RIBBON ============ -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <span>hola</span><span>·</span><span>bienvenido</span><span>·</span><span>pásale</span><span>·</span>
+        <span>hola</span><span>·</span><span>bienvenido</span><span>·</span><span>pásale</span><span>·</span>
+        <span>hola</span><span>·</span><span>bienvenido</span><span>·</span><span>pásale</span><span>·</span>
+      </div>
+    </div>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="about" aria-labelledby="about-h">
+      <div class="wrap about__grid">
+        <div class="about__text reveal">
+          <p class="kicker">Mucho gusto</p>
+          <h2 id="about-h">Somos Hola, y entrar se siente justo como suena.</h2>
+          <p>
+            Atendemos a las familias de Francisco de Montejo y nos gusta que llegar aquí se sienta
+            como un buen saludo: cercano y sin complicaciones. Somos una estética unisex de alta
+            peluquería, así que aquí cabemos todos —damas, caballeros y los más pequeños—.
+          </p>
+          <p>
+            Al frente está <strong>Raúl</strong>, a quien varios clientes buscan por su nombre. Le
+            tiene paciencia a cada cabello: si el tuyo es chino o de esos «difíciles de cortar», es
+            justo el reto que disfruta. Antes de tomar las tijeras te explicamos las opciones y te
+            aconsejamos lo que de verdad te queda bien.
+          </p>
+          <p>
+            Trabajamos con productos profesionales y cuidamos que el local siempre esté limpio y
+            agradable. Tú llegas, nos saludas, y te vas con el corte o el color que querías.
+          </p>
+        </div>
+        <figure class="about__photo reveal">
+          <img
+            src="/estetica-unisex-hola/img/foto_2.jpg"
+            alt="Raúl atendiendo a un cliente dentro de la estética Hola"
+            width="900" height="1200" loading="lazy" decoding="async"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="services" aria-labelledby="serv-h">
+      <div class="wrap">
+        <p class="kicker kicker--center">Lo que hacemos</p>
+        <h2 id="serv-h" class="section-h">Servicios de alta peluquería</h2>
+        <div class="serv-grid">
+          {servicios.map((s) => (
+            <article class="serv-card reveal">
+              <span class="serv-card__ic" aria-hidden="true">{s.icon}</span>
+              <h3>{s.t}</h3>
+              <p>{s.d}</p>
+            </article>
+          ))}
+        </div>
+        <p class="serv-note">Cada servicio se cotiza al momento según tu cabello. Pregúntanos con confianza.</p>
+      </div>
+    </section>
+
+    <!-- ============ DIFERENCIADORES ============ -->
+    <section class="why" aria-labelledby="why-h">
+      <div class="wrap">
+        <p class="kicker kicker--center">Por qué la gente vuelve</p>
+        <h2 id="why-h" class="section-h">Lo que más nos reconocen</h2>
+        <div class="why-grid">
+          <div class="why-card reveal"><span aria-hidden="true">🎯</span><h3>Precisos</h3><p>Hasta con el cabello más difícil. «Muy rápido y preciso», dicen quienes nos visitan.</p></div>
+          <div class="why-card reveal"><span aria-hidden="true">🫶</span><h3>Con paciencia</h3><p>Te explicamos y te aconsejamos buscando lo mejor para ti, sin prisas.</p></div>
+          <div class="why-card reveal"><span aria-hidden="true">✨</span><h3>Limpio y agradable</h3><p>Un espacio luminoso y ordenado donde da gusto sentarse un rato.</p></div>
+          <div class="why-card reveal"><span aria-hidden="true">🧴</span><h3>Productos pro</h3><p>Trabajamos con marcas profesionales de color y cuidado del cabello.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="gallery" aria-labelledby="gal-h">
+      <div class="wrap">
+        <p class="kicker kicker--center">El lugar</p>
+        <h2 id="gal-h" class="section-h">Un vistazo a la casa</h2>
+        <div class="gal-grid">
+          {fotos.map((f) => (
+            <figure class="gal-item reveal">
+              <img src={f.src} alt={f.alt} loading="lazy" decoding="async" />
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEÑAS ============ -->
+    <section class="reviews" aria-labelledby="rev-h">
+      <div class="wrap">
+        <div class="reviews__head">
+          <p class="kicker kicker--center">Lo dicen ellos</p>
+          <h2 id="rev-h" class="section-h">Lo que cuentan nuestros clientes</h2>
+          <div class="rating rating--center" role="img" aria-label="4.9 de 5 con 142 reseñas en Google">
+            <span class="rating__stars">★★★★★</span>
+            <span class="rating__num">4.9</span>
+            <span class="rating__meta">· 142 reseñas en Google</span>
+          </div>
+        </div>
+
+        <div class="rev-grid">
+          {resenas.map((r) => (
+            <figure class="rev-card reveal">
+              <span class="rev-card__q" aria-hidden="true">“</span>
+              <blockquote>{r.texto}</blockquote>
+              <figcaption>
+                <span class="rev-card__name">{r.autor}</span>
+                <span class="rev-card__when">{r.cuando} · ★★★★★</span>
+              </figcaption>
+            </figure>
+          ))}
+        </div>
+
+        <div class="reviews__cta">
+          <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq" aria-labelledby="faq-h">
+      <div class="wrap">
+        <p class="kicker kicker--center">Antes de venir</p>
+        <h2 id="faq-h" class="section-h">Preguntas rápidas</h2>
+        <div class="faq-list">
+          {faqs.map((f) => (
+            <details class="faq-item reveal">
+              <summary>{f.q}</summary>
+              <p>{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN + HORARIOS ============ -->
+    <section class="location" aria-labelledby="loc-h">
+      <div class="wrap loc-grid">
+        <div class="loc-info reveal">
+          <p class="kicker">Ven a saludarnos</p>
+          <h2 id="loc-h" class="section-h section-h--left">Dónde estamos</h2>
+          <address class="loc-addr">{direccion}</address>
+
+          <table class="hours">
+            <caption class="sr-only">Horarios de atención</caption>
+            <tbody>
+              {horarios.map((d) => (
+                <tr class={d.cerrado ? 'is-closed' : ''} data-dia={d.dia}>
+                  <th scope="row">{d.dia}</th>
+                  <td>{d.h}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <div class="attrs">
+            <span class="chip">💳 Acepta tarjetas</span>
+            <span class="chip">♿ Acceso para silla de ruedas</span>
+          </div>
+
+          <div class="cta-row cta-row--left">
+            <a class="btn btn--wa" href={whatsapp} target="_blank" rel="noopener">
+              <span class="btn__ic" aria-hidden="true">💬</span> Agendar por WhatsApp
+            </a>
+            <a class="btn btn--ghost" href={telHref}>Llamar: {telefono}</a>
+          </div>
+        </div>
+
+        <div class="loc-map reveal">
+          <iframe
+            title="Mapa de Estética Unisex Hola"
+            src={mapSrc}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="final">
+      <div class="wrap final__box">
+        <div class="bubble bubble--final" aria-hidden="true">
+          <span class="bubble__word">¡Hola!</span>
+          <span class="bubble__wave">👋</span>
+        </div>
+        <h2>¿Nos vemos pronto?</h2>
+        <p>Cuéntanos qué tienes en mente y te decimos cómo ayudarte. Sin compromiso.</p>
+        <div class="cta-row cta-row--center">
+          <a class="btn btn--wa" href={whatsapp} target="_blank" rel="noopener">
+            <span class="btn__ic" aria-hidden="true">💬</span> Escríbenos por WhatsApp
+          </a>
+          <a class="btn btn--ghost btn--ghost-light" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="foot">
+      <div class="wrap foot__inner">
+        <p class="foot__name">Estética Unisex Hola</p>
+        <p class="foot__line">{direccion}</p>
+        <p class="foot__line">
+          <a href={telHref}>{telefono}</a> · Mar a Vie 10–20 h · Sáb 10–18 h
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+  <style is:global>
+    .hola {
+      --turq: #12b4c8;
+      --turq-deep: #0b7a8a;
+      --turq-ink: #0a5b67;
+      --ink: #123138;
+      --coral: #ff6b5b;
+      --coral-soft: #ffe7e1;
+      --cream: #fff7f4;
+      --sky: #eaf9fb;
+      --white: #ffffff;
+      --line: #d8eef1;
+
+      font-family: 'Rubik', system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+    .hola *,
+    .hola *::before,
+    .hola *::after { box-sizing: border-box; }
+
+    .hola img { display: block; max-width: 100%; height: auto; }
+
+    .wrap { width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: 20px; }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    .hola a { color: var(--turq-deep); }
+
+    .hola :focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 3px;
+      border-radius: 6px;
+    }
+
+    /* ---------- shared type ---------- */
+    .kicker {
+      font-family: 'Righteous', cursive;
+      color: var(--turq-deep);
+      letter-spacing: .04em;
+      text-transform: lowercase;
+      font-size: .95rem;
+      margin: 0 0 .5rem;
+    }
+    .kicker--center { text-align: center; }
+
+    .section-h {
+      font-family: 'Righteous', cursive;
+      font-weight: 400;
+      font-size: clamp(1.7rem, 5.2vw, 2.7rem);
+      line-height: 1.08;
+      text-align: center;
+      color: var(--ink);
+      margin: 0 0 2rem;
+    }
+    .section-h--left { text-align: left; margin-bottom: 1rem; }
+
+    /* ---------- speech bubble signature ---------- */
+    .bubble {
+      position: relative;
+      display: inline-flex;
+      align-items: baseline;
+      gap: .35rem;
+      background: var(--coral);
+      color: var(--ink);
+      padding: .35em .75em .4em;
+      border-radius: 1.1rem 1.1rem 1.1rem .35rem;
+      box-shadow: 0 10px 24px rgba(255, 107, 91, .28);
+      margin-bottom: 1.1rem;
+      transform-origin: bottom left;
+      animation: pop .6s cubic-bezier(.2,1.3,.5,1) both;
+    }
+    .bubble::after {
+      content: '';
+      position: absolute;
+      left: 1.1rem; bottom: -.55rem;
+      border-width: .6rem .55rem 0 0;
+      border-style: solid;
+      border-color: var(--coral) transparent transparent transparent;
+    }
+    .bubble__word {
+      font-family: 'Righteous', cursive;
+      font-size: clamp(1.5rem, 6vw, 2.1rem);
+      line-height: 1;
+    }
+    .bubble__wave {
+      font-size: 1.25rem;
+      display: inline-block;
+      transform-origin: 70% 80%;
+      animation: wave 2.6s ease-in-out 1s infinite;
+    }
+    @keyframes pop { from { transform: scale(.7) rotate(-6deg); opacity: 0; } to { transform: none; opacity: 1; } }
+    @keyframes wave {
+      0%,60%,100% { transform: rotate(0); }
+      66% { transform: rotate(16deg); }
+      72% { transform: rotate(-8deg); }
+      78% { transform: rotate(14deg); }
+      84% { transform: rotate(-4deg); }
+      90% { transform: rotate(10deg); }
+    }
+
+    /* ---------- hero ---------- */
+    .hero {
+      background:
+        radial-gradient(120% 90% at 88% 0%, var(--sky) 0%, rgba(234,249,251,0) 55%),
+        linear-gradient(180deg, var(--white) 0%, var(--cream) 100%);
+      padding: clamp(1.5rem, 5vw, 3rem) 0 clamp(2.5rem, 6vw, 4rem);
+    }
+    .hero__grid {
+      width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: 20px;
+      display: grid; gap: clamp(1.5rem, 4vw, 3rem);
+      align-items: center;
+    }
+    .eyebrow {
+      font-size: .82rem; font-weight: 600; letter-spacing: .02em;
+      color: var(--turq-ink); margin: 0 0 1rem; text-transform: uppercase;
+    }
+    .hero__title {
+      font-family: 'Righteous', cursive; font-weight: 400;
+      font-size: clamp(2rem, 8vw, 3.4rem);
+      line-height: 1.05;
+      margin: 0 0 1rem;
+      color: var(--ink);
+    }
+    .hero__lead {
+      font-size: clamp(1.02rem, 2.4vw, 1.18rem);
+      max-width: 34ch; margin: 0 0 1.3rem; color: #2b4b52;
+    }
+    .hero__lead strong { color: var(--turq-deep); }
+
+    .hero__media { position: relative; }
+    .hero__media img {
+      width: 100%;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      border-radius: 1.4rem;
+      box-shadow: 0 24px 50px rgba(11, 122, 138, .22);
+      border: 6px solid var(--white);
+    }
+    .hero__tag {
+      position: absolute; left: 12px; bottom: 12px;
+      background: var(--turq-deep); color: #fff;
+      font-size: .82rem; font-weight: 600;
+      padding: .45rem .8rem; border-radius: 999px;
+      box-shadow: 0 8px 18px rgba(11,122,138,.35);
+    }
+
+    /* ---------- rating ---------- */
+    .rating { display: inline-flex; align-items: center; gap: .45rem; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .rating--center { justify-content: center; margin: .5rem auto 0; }
+    .rating__stars { color: #ffb020; letter-spacing: .06em; font-size: 1.05rem; }
+    .rating__num { font-family: 'Righteous', cursive; font-size: 1.2rem; color: var(--ink); }
+    .rating__meta { color: #4d636b; font-size: .92rem; }
+
+    /* ---------- buttons ---------- */
+    .cta-row { display: flex; flex-wrap: wrap; gap: .7rem; }
+    .cta-row--center { justify-content: center; }
+    .cta-row--left { justify-content: flex-start; }
+    .btn {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-family: 'Rubik', sans-serif; font-weight: 700; font-size: 1.02rem;
+      text-decoration: none; border-radius: 999px;
+      padding: .85rem 1.4rem; border: 2.5px solid transparent;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+      cursor: pointer; line-height: 1;
+    }
+    .btn__ic { font-size: 1.1rem; }
+    .btn--wa {
+      background: var(--coral); color: var(--ink);
+      box-shadow: 0 12px 24px rgba(255,107,91,.32);
+    }
+    .btn--wa:hover { transform: translateY(-2px); box-shadow: 0 16px 30px rgba(255,107,91,.42); }
+    .btn--ghost {
+      background: var(--white); color: var(--turq-deep);
+      border-color: var(--turq);
+    }
+    .btn--ghost:hover { transform: translateY(-2px); background: var(--sky); }
+    .btn--ghost-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.85); }
+    .btn--ghost-light:hover { background: rgba(255,255,255,.14); }
+
+    /* ---------- ribbon ---------- */
+    .ribbon {
+      background: var(--turq);
+      color: #fff; overflow: hidden; padding: .6rem 0;
+    }
+    .ribbon__track {
+      display: flex; gap: 1.4rem; width: max-content;
+      font-family: 'Righteous', cursive; font-size: 1.05rem;
+      text-transform: lowercase; letter-spacing: .05em;
+      animation: slide 24s linear infinite;
+    }
+    .ribbon__track span:nth-child(3n+2) { opacity: .6; }
+    @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* ---------- section rhythm ---------- */
+    .about, .services, .why, .gallery, .reviews, .faq, .location {
+      padding-block: clamp(3rem, 8vw, 5rem);
+    }
+    .services { background: var(--sky); }
+    .why { background: var(--white); }
+    .gallery { background: var(--cream); }
+    .faq { background: var(--sky); }
+
+    /* ---------- about ---------- */
+    .about__grid { display: grid; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+    .about__text h2 {
+      font-family: 'Righteous', cursive; font-weight: 400;
+      font-size: clamp(1.6rem, 5vw, 2.4rem); line-height: 1.12;
+      margin: 0 0 1.1rem; color: var(--ink);
+    }
+    .about__text p { margin: 0 0 1rem; color: #2f4a51; }
+    .about__text strong { color: var(--turq-deep); }
+    .about__photo img {
+      width: 100%; aspect-ratio: 3 / 4; object-fit: cover;
+      border-radius: 1.4rem; border: 6px solid var(--white);
+      box-shadow: 0 18px 40px rgba(11,122,138,.18);
+    }
+
+    /* ---------- services ---------- */
+    .serv-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    .serv-card {
+      background: var(--white); border-radius: 1.2rem;
+      padding: 1.4rem 1.3rem; border: 1px solid var(--line);
+      box-shadow: 0 8px 22px rgba(11,122,138,.07);
+    }
+    .serv-card__ic {
+      font-size: 1.7rem; display: inline-grid; place-items: center;
+      width: 3rem; height: 3rem; border-radius: .9rem;
+      background: var(--coral-soft); margin-bottom: .7rem;
+    }
+    .serv-card h3 {
+      font-family: 'Righteous', cursive; font-weight: 400;
+      font-size: 1.2rem; margin: 0 0 .35rem; color: var(--ink);
+    }
+    .serv-card p { margin: 0; color: #46626a; font-size: .97rem; }
+    .serv-note { text-align: center; margin: 1.6rem 0 0; color: #4d636b; font-size: .92rem; }
+
+    /* ---------- why ---------- */
+    .why-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    .why-card {
+      background: var(--sky); border-radius: 1.2rem; padding: 1.3rem;
+      border: 1px solid var(--line);
+    }
+    .why-card span { font-size: 1.6rem; }
+    .why-card h3 {
+      font-family: 'Righteous', cursive; font-weight: 400;
+      font-size: 1.15rem; margin: .5rem 0 .3rem; color: var(--turq-ink);
+    }
+    .why-card p { margin: 0; font-size: .95rem; color: #46626a; }
+
+    /* ---------- gallery ---------- */
+    .gal-grid {
+      display: grid; gap: .8rem;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .gal-item { margin: 0; border-radius: 1rem; overflow: hidden; box-shadow: 0 10px 26px rgba(11,122,138,.12); }
+    .gal-item img { width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; transition: transform .4s ease; }
+    .gal-item:hover img { transform: scale(1.05); }
+
+    /* ---------- reviews ---------- */
+    .reviews__head { margin-bottom: 2rem; }
+    .rev-grid { display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    .rev-card {
+      position: relative; background: var(--white);
+      border-radius: 1.2rem; padding: 1.6rem 1.4rem 1.3rem;
+      border: 1px solid var(--line); box-shadow: 0 8px 22px rgba(11,122,138,.08);
+    }
+    .rev-card__q {
+      position: absolute; top: -.3rem; left: 1rem;
+      font-family: 'Righteous', cursive; font-size: 3.2rem;
+      color: var(--coral); line-height: 1;
+    }
+    .rev-card blockquote { margin: 1rem 0 1rem; color: #2f4a51; font-size: 1rem; }
+    .rev-card figcaption { display: flex; flex-direction: column; gap: .1rem; }
+    .rev-card__name { font-weight: 700; color: var(--ink); }
+    .rev-card__when { font-size: .82rem; color: #566a70; }
+    .reviews__cta { text-align: center; margin-top: 1.8rem; }
+
+    /* ---------- faq ---------- */
+    .faq-list { max-width: 720px; margin-inline: auto; display: grid; gap: .7rem; }
+    .faq-item {
+      background: var(--white); border: 1px solid var(--line);
+      border-radius: .9rem; padding: .3rem 1.1rem;
+    }
+    .faq-item summary {
+      cursor: pointer; list-style: none; padding: .85rem 0;
+      font-weight: 600; color: var(--ink);
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+'; font-family: 'Righteous', cursive; color: var(--turq);
+      font-size: 1.4rem; line-height: 1; transition: transform .2s ease;
+    }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-item p { margin: 0 0 .9rem; color: #46626a; font-size: .96rem; }
+
+    /* ---------- location ---------- */
+    .loc-grid { display: grid; gap: clamp(1.5rem, 4vw, 2.5rem); align-items: start; }
+    .loc-addr { font-style: normal; color: #2f4a51; margin: 0 0 1.2rem; font-size: 1.02rem; }
+    .hours { width: 100%; border-collapse: collapse; margin-bottom: 1.3rem; }
+    .hours th, .hours td { text-align: left; padding: .55rem .2rem; border-bottom: 1px solid var(--line); font-weight: 500; }
+    .hours th { color: var(--ink); }
+    .hours td { text-align: right; color: var(--turq-ink); font-variant-numeric: tabular-nums; }
+    .hours .is-closed th { color: #8aa0a5; }
+    .hours .is-closed td { color: #a9bcc0; }
+    .hours tr.is-today th, .hours tr.is-today td { color: var(--coral); font-weight: 700; }
+    .attrs { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.4rem; }
+    .chip {
+      background: var(--sky); color: var(--turq-ink);
+      border: 1px solid var(--line); border-radius: 999px;
+      padding: .45rem .85rem; font-size: .88rem; font-weight: 500;
+    }
+    .loc-map {
+      border-radius: 1.2rem; overflow: hidden;
+      border: 6px solid var(--white);
+      box-shadow: 0 18px 40px rgba(11,122,138,.18);
+      min-height: 300px;
+    }
+    .loc-map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; }
+
+    /* ---------- final CTA ---------- */
+    .final {
+      background:
+        radial-gradient(130% 120% at 15% 0%, #16c4d8 0%, var(--turq) 45%, var(--turq-deep) 100%);
+      padding-block: clamp(3rem, 8vw, 5rem);
+      color: #fff;
+    }
+    .final__box { text-align: center; }
+    .final .bubble--final { background: #fff; color: var(--turq-deep); box-shadow: 0 12px 26px rgba(0,0,0,.18); margin-inline: auto; }
+    .final .bubble--final::after { border-color: #fff transparent transparent transparent; }
+    .final h2 {
+      font-family: 'Righteous', cursive; font-weight: 400;
+      font-size: clamp(1.8rem, 6vw, 2.8rem); margin: .5rem 0 .6rem;
+    }
+    .final p { margin: 0 auto 1.6rem; max-width: 42ch; color: rgba(255,255,255,.92); }
+
+    /* ---------- footer ---------- */
+    .foot {
+      background: var(--ink); color: #cfe4e8;
+      padding: 2.4rem 0 96px;
+      text-align: center;
+    }
+    .foot__name { font-family: 'Righteous', cursive; font-size: 1.4rem; color: #fff; margin: 0 0 .5rem; }
+    .foot__line { margin: .25rem 0; font-size: .92rem; }
+    .foot__line a { color: #7fe0ee; font-weight: 600; }
+
+    /* ---------- reveal (progressive) ---------- */
+    html.reveal-on .hola .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    html.reveal-on .hola .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- responsive up ---------- */
+    @media (min-width: 620px) {
+      .serv-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .rev-grid { grid-template-columns: repeat(2, 1fr); }
+      .gal-grid { grid-template-columns: repeat(4, 1fr); }
+      .gal-item img { aspect-ratio: 4 / 5; }
+    }
+    @media (min-width: 860px) {
+      .hero__grid { grid-template-columns: 1.05fr .95fr; }
+      .about__grid { grid-template-columns: 1.1fr .9fr; }
+      .loc-grid { grid-template-columns: 1fr 1fr; }
+      .serv-grid { grid-template-columns: repeat(4, 1fr); }
+    }
+
+    /* ---------- reduced motion ---------- */
+    @media (prefers-reduced-motion: reduce) {
+      .bubble, .bubble__wave { animation: none; }
+      .ribbon__track { animation: none; }
+      .gal-item img { transition: none; }
+      html.reveal-on .hola .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* highlight today's row */
+      try {
+        var dias = ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'];
+        var hoy = dias[new Date().getDay()];
+        var row = document.querySelector('.hours tr[data-dia="' + hoy + '"]');
+        if (row) row.classList.add('is-today');
+      } catch (e) {}
+
+      /* scroll reveal (progressive enhancement) */
+      if (reduce || !('IntersectionObserver' in window)) return;
+      document.documentElement.classList.add('reveal-on');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('.hola .reveal').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

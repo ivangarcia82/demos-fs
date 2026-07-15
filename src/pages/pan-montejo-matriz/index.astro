@@ -1,0 +1,828 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slug = 'pan-montejo-matriz';
+const nombre = 'Pan Montejo';
+const whatsapp = 'https://wa.me/529999272256';
+const telefono = '999 927 2256';
+const mapsUrl = 'https://maps.google.com/?cid=12419252127641096636';
+const direccion = 'C. 58 487, Itzimná, 97100 Mérida, Yucatán, México';
+const mapQ = encodeURIComponent('Pan Montejo Matriz, ' + direccion);
+const mapSrc = `https://www.google.com/maps?q=${mapQ}&output=embed`;
+
+const horarios = [
+  { d: 'lun', dia: 'Lunes', h: '6:30 – 20:30' },
+  { d: 'mar', dia: 'Martes', h: '6:30 – 20:30' },
+  { d: 'mie', dia: 'Miércoles', h: '6:30 – 20:30' },
+  { d: 'jue', dia: 'Jueves', h: '6:30 – 19:30' },
+  { d: 'vie', dia: 'Viernes', h: '6:30 – 20:30' },
+  { d: 'sab', dia: 'Sábado', h: '6:30 – 20:30' },
+  { d: 'dom', dia: 'Domingo', h: '7:00 – 20:00' },
+];
+
+const atributos = [
+  { ic: 'ic-delivery', t: 'Servicio a domicilio' },
+  { ic: 'ic-bag', t: 'Para llevar' },
+  { ic: 'ic-coffee', t: 'Desayunos' },
+  { ic: 'ic-card', t: 'Acepta tarjetas' },
+  { ic: 'ic-parking', t: 'Estacionamiento' },
+  { ic: 'ic-access', t: 'Acceso silla de ruedas' },
+];
+
+const panes = [
+  { n: 'Yo-yos', t: 'clásicos de la casa' },
+  { n: 'Croissant y cuernos', t: 'hojaldre dorado' },
+  { n: 'El francés', t: 'el bolillo de siempre' },
+  { n: 'Conchas', t: 'vainilla y chocolate' },
+  { n: 'Merengues', t: 'ligeros y dulces' },
+  { n: 'Bolita de queso', t: 'recién horneadas' },
+  { n: 'Pan de piedra glass', t: 'con glaseado' },
+  { n: 'Pastelito de coco', t: 'para la tarde' },
+];
+---
+<BaseLayout
+  title="Pan Montejo — Panadería tradicional en Mérida"
+  description="Pan recién horneado que Mérida ama desde temprano, a un costado del Monumento a la Patria. ⭐ 4.5 · 2,015 reseñas en Google."
+  slug={slug}
+  ogImage="/pan-montejo-matriz/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Karla:wght@400;500;700&display=swap"
+  favicon="🥖"
+  themeColor="#BE7A2B"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+<main class="pm">
+  <svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+    <symbol id="espiga" viewBox="0 0 48 72">
+      <line x1="24" y1="72" x2="24" y2="30" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <g fill="currentColor">
+        <ellipse cx="24" cy="17" rx="4" ry="9"/>
+        <ellipse cx="24" cy="33" rx="4" ry="9" transform="rotate(32 24 33)"/>
+        <ellipse cx="24" cy="33" rx="4" ry="9" transform="rotate(-32 24 33)"/>
+        <ellipse cx="24" cy="45" rx="3.9" ry="8.6" transform="rotate(38 24 45)"/>
+        <ellipse cx="24" cy="45" rx="3.9" ry="8.6" transform="rotate(-38 24 45)"/>
+        <ellipse cx="24" cy="56" rx="3.6" ry="7.8" transform="rotate(42 24 56)"/>
+        <ellipse cx="24" cy="56" rx="3.6" ry="7.8" transform="rotate(-42 24 56)"/>
+      </g>
+    </symbol>
+    <symbol id="ic-delivery" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="6" cy="17" r="2.6"/><circle cx="18" cy="17" r="2.6"/>
+      <path d="M8.6 17h6l2-6h2"/><path d="M4 8h4l2.4 6"/><path d="M14 8h3l1.6 3"/>
+    </symbol>
+    <symbol id="ic-bag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M6 8h12l-1 12H7z"/><path d="M9 8a3 3 0 0 1 6 0"/>
+    </symbol>
+    <symbol id="ic-coffee" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 9h11v4a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4z"/><path d="M16 10h2a2 2 0 0 1 0 4h-2"/><path d="M8 3.5v2M11 3.5v2"/>
+    </symbol>
+    <symbol id="ic-card" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="6" width="18" height="12" rx="2.2"/><path d="M3 10h18"/>
+    </symbol>
+    <symbol id="ic-parking" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 16.5V8h3.2a2.6 2.6 0 0 1 0 5.2H9"/>
+    </symbol>
+    <symbol id="ic-access" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="4.2" r="1.7"/><path d="M11 6.5v5h4l2.2 5"/><path d="M11 11.5a5 5 0 1 0 4.2 7.7"/>
+    </symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="8.6"/><path d="M12 7v5l3.4 2"/>
+    </symbol>
+    <symbol id="ic-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 21s7-6.3 7-11a7 7 0 0 0-14 0c0 4.7 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/>
+    </symbol>
+    <symbol id="ic-wa" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M19.05 4.91A9.82 9.82 0 0 0 12.04 2C6.58 2 2.13 6.45 2.13 11.9c0 1.76.46 3.48 1.34 5L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.9-4.45 9.9-9.9 0-2.64-1.03-5.13-2.9-7.03zM12.05 20.06h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24a8.2 8.2 0 0 1 5.83 2.42 8.2 8.2 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.12-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.38-1.72-.15-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28z"/>
+    </symbol>
+  </svg>
+
+  <!-- ===== HERO ===== -->
+  <header class="hero">
+    <div class="hero-bg">
+      <img src="/pan-montejo-matriz/img/foto_2.jpg" alt="Roscas de pan recién horneadas y doradas en la vitrina de Pan Montejo" fetchpriority="high" decoding="async" />
+    </div>
+    <div class="hero-inner">
+      <p class="eyebrow eyebrow--light">Panadería tradicional · Mérida, Yucatán</p>
+      <h1 class="hero-title">Pan Montejo</h1>
+      <p class="hero-sub">El pan recién horneado que Mérida reconoce de toda la vida, a un costado del Monumento a la Patria.</p>
+      <div class="rating-chip">
+        <span class="rc-star">⭐</span>
+        <strong>4.5</strong>
+        <span class="rc-sep">·</span>
+        <span>2,015 reseñas en Google</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn-wa" href={whatsapp} target="_blank" rel="noopener">
+          <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+          Pedir por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href={mapsUrl} target="_blank" rel="noopener">
+          <svg class="ic" aria-hidden="true"><use href="#ic-pin"/></svg>
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===== NÚMERO MONUMENTAL ===== -->
+  <section class="numero" aria-labelledby="num-h">
+    <div class="divisor" aria-hidden="true"><svg class="espiga"><use href="#espiga"/></svg></div>
+    <p class="eyebrow">La cuenta habla por sí sola</p>
+    <p class="bignum" id="bigNum">2,015</p>
+    <h2 id="num-h" class="numero-label">reseñas de gente de Mérida</h2>
+    <div class="stars-wrap">
+      <span class="stars" role="img" aria-label="Calificación 4.5 de 5"><span class="stars-fill">★★★★★</span>★★★★★</span>
+      <span class="stars-num">4.5 en Google</span>
+    </div>
+    <figure class="quote-70">
+      <blockquote>“…cumplen 70 años de servicio brindando pan de excelente calidad !”</blockquote>
+      <figcaption>Elias Cisneros · reseña en Google · Hace 5 meses</figcaption>
+    </figure>
+  </section>
+
+  <!-- ===== QUIÉNES SOMOS ===== -->
+  <section class="somos" aria-labelledby="somos-h">
+    <div class="somos-grid">
+      <div class="somos-text reveal">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2 id="somos-h" class="h2">Un clásico de Mérida,<br/>recién salido del horno</h2>
+        <p>En Pan Montejo hacemos lo mismo cada mañana: prendemos el horno temprano y llenamos las charolas de pan recién hecho. Somos la Matriz, a un costado del Monumento a la Patria, y para mucha gente de la ciudad pasar por aquí ya es parte del día.</p>
+        <p>Nos gusta que el pan salga suave y esponjoso, con ese sabor casero que reconoce quien creció comprándolo aquí: los yo-yos, el francés, los cuernos, las conchas y los merengues salen a lo largo del día.</p>
+        <p>Vas a encontrar una vitrina llena y bien presentada, un local limpio y a alguien que te atiende rápido y de buena manera. Eso es lo que nos han dicho miles de clientes, y es justo lo que queremos que sientas cuando entres.</p>
+      </div>
+      <figure class="somos-photo reveal">
+        <img src="/pan-montejo-matriz/img/foto_4.jpg" alt="Estantería de madera con conchas, cuernos, banderillas y pan variado en Pan Montejo" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== LO MÁS PEDIDO ===== -->
+  <section class="pedido" aria-labelledby="pedido-h">
+    <div class="divisor" aria-hidden="true"><svg class="espiga"><use href="#espiga"/></svg></div>
+    <p class="eyebrow eyebrow--center">Del horno a tu bolsa</p>
+    <h2 id="pedido-h" class="h2 h2--center">Lo más pedido</h2>
+    <p class="lead lead--center">“…los yo-yos, croissant y el francés”, dicen sus clientes. Esto es lo que la gente busca todos los días.</p>
+    <ul class="pan-grid">
+      {panes.map((p) => (
+        <li class="pan-card reveal">
+          <span class="pan-mark" aria-hidden="true"><svg class="espiga sm"><use href="#espiga"/></svg></span>
+          <span class="pan-name">{p.n}</span>
+          <span class="pan-tag">{p.t}</span>
+        </li>
+      ))}
+    </ul>
+    <p class="pan-foot">Y en temporada, la Rosca de Reyes que muchos ya esperan.</p>
+  </section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section class="galeria" aria-labelledby="gal-h">
+    <p class="eyebrow eyebrow--light eyebrow--center">La vitrina</p>
+    <h2 id="gal-h" class="h2 h2--center h2--light">Así se ve el mostrador</h2>
+    <div class="gal-grid">
+      <figure class="gal-a reveal">
+        <img src="/pan-montejo-matriz/img/foto_2.jpg" alt="Roscas doradas y brillantes sobre platos en el mostrador" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="gal-b reveal">
+        <img src="/pan-montejo-matriz/img/foto_3.jpg" alt="Charolas de bolitas de queso y pastelitos de coco recién horneados" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="gal-c reveal">
+        <img src="/pan-montejo-matriz/img/foto_5.jpg" alt="Pan de piedra con glaseado blanco en charola metálica" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== POR QUÉ ELEGIRNOS ===== -->
+  <section class="porque" aria-labelledby="pq-h">
+    <div class="divisor" aria-hidden="true"><svg class="espiga"><use href="#espiga"/></svg></div>
+    <p class="eyebrow eyebrow--center">Por qué la gente vuelve</p>
+    <h2 id="pq-h" class="h2 h2--center">Lo que nos hace la panadería de siempre</h2>
+    <div class="pq-grid">
+      <article class="pq-card reveal">
+        <span class="pq-ic" aria-hidden="true"><svg class="ic"><use href="#ic-pin"/></svg></span>
+        <h3>Junto al Monumento a la Patria</h3>
+        <p>Una ubicación que todos conocen. “Excelente ubicación, a un costado del Monumento a la Patria”, cuentan quienes nos visitan.</p>
+      </article>
+      <article class="pq-card reveal">
+        <span class="pq-ic" aria-hidden="true"><svg class="ic"><use href="#ic-clock"/></svg></span>
+        <h3>Recién horneado desde temprano</h3>
+        <p>Abrimos a las 6:30 de la mañana, así que el pan de la vitrina siempre está fresco, para el desayuno o para cerrar el día.</p>
+      </article>
+      <article class="pq-card reveal">
+        <span class="pq-ic" aria-hidden="true"><svg class="espiga"><use href="#espiga"/></svg></span>
+        <h3>Sabor casero y tradicional</h3>
+        <p>“Un sabor casero que encanta al paladar. El pan es suave, esponjoso y delicioso”, resume una de las reseñas.</p>
+      </article>
+      <article class="pq-card reveal">
+        <span class="pq-ic" aria-hidden="true"><svg class="ic"><use href="#ic-bag"/></svg></span>
+        <h3>Local limpio y servicio rápido</h3>
+        <p>Gran variedad, todo bien presentado, un local muy limpio y personal amable que atiende sin hacerte esperar.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===== ATRIBUTOS ===== -->
+  <section class="atributos" aria-label="Servicios disponibles">
+    <ul class="atr-strip">
+      {atributos.map((a) => (
+        <li class="atr">
+          <svg class="ic" aria-hidden="true"><use href={'#' + a.ic}/></svg>
+          <span>{a.t}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- ===== CTA INTERMEDIO ===== -->
+  <section class="cta-band">
+    <div class="cta-inner">
+      <p class="cta-kicker">¿Se te antojó?</p>
+      <h2 class="cta-title">Aparta tu pan o pídelo a domicilio por WhatsApp</h2>
+      <a class="btn btn-gold" href={whatsapp} target="_blank" rel="noopener">
+        <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+        Escribirnos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== RESEÑAS ===== -->
+  <section class="resenas" aria-labelledby="res-h">
+    <div class="divisor" aria-hidden="true"><svg class="espiga"><use href="#espiga"/></svg></div>
+    <p class="eyebrow eyebrow--center">Lo que dicen en Google</p>
+    <h2 id="res-h" class="h2 h2--center">Miles de meridanos ya opinaron</h2>
+    <div class="res-head">
+      <span class="stars" role="img" aria-label="4.5 de 5"><span class="stars-fill">★★★★★</span>★★★★★</span>
+      <span class="res-head-num"><strong>4.5</strong> · 2,015 reseñas</span>
+    </div>
+    <div class="res-grid">
+      <figure class="res-card reveal">
+        <blockquote>De las mejores panaderías de la ciudad de Mérida, es un clásico !…</blockquote>
+        <figcaption><span class="res-au">Elias Cisneros</span><span class="res-when">Hace 5 meses</span></figcaption>
+      </figure>
+      <figure class="res-card reveal">
+        <blockquote>Panadería tradicional de Mérida con un sabor casero que encanta al paladar. El pan es suave, esponjoso y delicioso.</blockquote>
+        <figcaption><span class="res-au">Guillermo Contreras</span><span class="res-when">Hace 3 meses</span></figcaption>
+      </figure>
+      <figure class="res-card reveal">
+        <blockquote>Hermosa panadería con gran variedad de productos, todos muy bien presentados. El local es muy limpio y el personal muy amable. El servicio es rápido.</blockquote>
+        <figcaption><span class="res-au">Ale Gomez</span><span class="res-when">Hace 4 meses</span></figcaption>
+      </figure>
+      <figure class="res-card reveal">
+        <blockquote>Merengues muy bien preparados…</blockquote>
+        <figcaption><span class="res-au">Alejandro Peña</span><span class="res-when">Hace 10 meses</span></figcaption>
+      </figure>
+    </div>
+    <div class="res-cta">
+      <a class="btn btn-ghost btn-ghost--dark" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+    </div>
+  </section>
+
+  <!-- ===== UBICACIÓN Y HORARIOS ===== -->
+  <section class="ubica" aria-labelledby="ub-h">
+    <div class="divisor" aria-hidden="true"><svg class="espiga"><use href="#espiga"/></svg></div>
+    <p class="eyebrow eyebrow--center">Dónde encontrarnos</p>
+    <h2 id="ub-h" class="h2 h2--center">Visítanos en Itzimná</h2>
+    <div class="ub-grid">
+      <div class="ub-info reveal">
+        <figure class="ub-photo">
+          <img src="/pan-montejo-matriz/img/foto_1.jpg" alt="Entrada de Pan Montejo Matriz sobre la Calle 58, junto al Monumento a la Patria" loading="lazy" decoding="async" />
+        </figure>
+        <p class="ub-dir">
+          <svg class="ic" aria-hidden="true"><use href="#ic-pin"/></svg>
+          C. 58 #487 · Itzimná, 97100 Mérida, Yucatán
+        </p>
+        <p class="ub-note">A un costado del Monumento a la Patria.</p>
+        <table class="horas">
+          <caption class="sr-only">Horarios de atención</caption>
+          <tbody>
+            {horarios.map((row) => (
+              <tr class="hrow" data-d={row.d}>
+                <th scope="row">{row.dia}</th>
+                <td>{row.h}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div class="ub-btns">
+          <a class="btn btn-wa" href={whatsapp} target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn btn-ghost btn-ghost--dark" href={mapsUrl} target="_blank" rel="noopener">
+            <svg class="ic" aria-hidden="true"><use href="#ic-pin"/></svg>
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+      <div class="ub-map reveal">
+        <iframe
+          title="Mapa de Pan Montejo Matriz en Mérida"
+          src={mapSrc}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="faq" aria-labelledby="faq-h">
+    <p class="eyebrow eyebrow--center">Antes de venir</p>
+    <h2 id="faq-h" class="h2 h2--center">Preguntas rápidas</h2>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>¿Aceptan tarjeta?</summary>
+        <p>Sí, puedes pagar con tarjeta sin problema.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Hacen entregas a domicilio?</summary>
+        <p>Sí, contamos con servicio a domicilio, y también puedes pedir tu pan para llevar.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿Tienen estacionamiento?</summary>
+        <p>Sí, hay estacionamiento disponible para nuestros clientes.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿A qué hora abren?</summary>
+        <p>Abrimos desde las 6:30 a.m. de lunes a sábado, y a las 7:00 a.m. los domingos.</p>
+      </details>
+      <details class="faq-item">
+        <summary>¿El local es accesible?</summary>
+        <p>Sí, cuenta con acceso para silla de ruedas.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===== CTA FINAL ===== -->
+  <section class="cta-final">
+    <div class="divisor divisor--light" aria-hidden="true"><svg class="espiga"><use href="#espiga"/></svg></div>
+    <h2 class="cf-title">Pásate por tu pan de hoy</h2>
+    <p class="cf-sub">Escríbenos por WhatsApp para apartar, pedir a domicilio o resolver cualquier duda.</p>
+    <a class="btn btn-gold btn-lg" href={whatsapp} target="_blank" rel="noopener">
+      <svg class="ic" aria-hidden="true"><use href="#ic-wa"/></svg>
+      Escribir a Pan Montejo
+    </a>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="pm-footer">
+    <p class="ft-name">Pan Montejo · Matriz</p>
+    <p class="ft-line">C. 58 #487, Itzimná, 97100 Mérida, Yucatán</p>
+    <p class="ft-line">
+      <a href="tel:+529999272256">📞 999 927 2256</a>
+    </p>
+    <p class="ft-line ft-hours">Abierto todos los días desde las 6:30 a.m.</p>
+  </footer>
+</main>
+
+<style is:global>
+  :root {
+    --masa: #F7F0DD;
+    --masa-2: #FBF6E9;
+    --corteza: #BE7A2B;
+    --miel: #E5A64A;
+    --ladrillo: #9E3A2A;
+    --ladrillo-d: #7C2C20;
+    --espresso: #33210F;
+    --espresso-2: #5A4326;
+    --trigo: #CBA45C;
+    --linea: rgba(51, 33, 15, 0.12);
+  }
+
+  body { background: var(--masa); color: var(--espresso); }
+
+  .pm {
+    font-family: 'Karla', system-ui, sans-serif;
+    color: var(--espresso);
+    line-height: 1.65;
+    overflow-x: clip;
+  }
+  .pm img { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+  .pm .ic { width: 1.15em; height: 1.15em; flex: none; }
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+    overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+  }
+
+  /* ---- shared typography ---- */
+  .pm .eyebrow {
+    font-size: 0.76rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--corteza); margin: 0 0 0.9rem;
+  }
+  .pm .eyebrow--center { text-align: center; }
+  .pm .eyebrow--light { color: var(--miel); }
+  .pm .h2 {
+    font-family: 'Yeseva One', Georgia, serif; font-weight: 400;
+    font-size: clamp(1.9rem, 6vw, 3.05rem); line-height: 1.08;
+    letter-spacing: 0.005em; color: var(--espresso); margin: 0 0 1rem;
+  }
+  .pm .h2--center { text-align: center; }
+  .pm .h2--light { color: var(--masa); }
+  .pm .lead { font-size: 1.06rem; color: var(--espresso-2); max-width: 46ch; }
+  .pm .lead--center { margin-left: auto; margin-right: auto; text-align: center; }
+
+  /* ---- section frame ---- */
+  .pm section { padding: clamp(3.6rem, 9vw, 6rem) 1.25rem; }
+  .pm .somos-grid, .pm .pq-grid, .pm .ub-grid, .pm .gal-grid,
+  .pm .pan-grid, .pm .faq-list, .pm .res-grid, .pm .cta-inner,
+  .pm .numero > *, .pm .atr-strip {
+    max-width: 1080px; margin-left: auto; margin-right: auto;
+  }
+
+  /* ---- divisor / espiga ---- */
+  .pm .divisor {
+    display: flex; align-items: center; justify-content: center; gap: 16px;
+    color: var(--corteza); margin: 0 auto 1.4rem;
+  }
+  .pm .divisor::before, .pm .divisor::after {
+    content: ""; height: 1px; width: min(78px, 16vw);
+    background: linear-gradient(90deg, transparent, var(--trigo));
+  }
+  .pm .divisor::after { transform: scaleX(-1); }
+  .pm .divisor--light { color: var(--miel); }
+  .pm .divisor--light::before, .pm .divisor--light::after {
+    background: linear-gradient(90deg, transparent, rgba(229,166,74,0.55));
+  }
+  .pm .espiga { width: 26px; height: 39px; }
+  .pm .espiga.sm { width: 18px; height: 27px; }
+
+  /* ---- buttons ---- */
+  .pm .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 0.55rem;
+    padding: 0.85rem 1.4rem; border-radius: 999px; font-weight: 700;
+    font-size: 1rem; line-height: 1; text-decoration: none; cursor: pointer;
+    border: 1.5px solid transparent; transition: transform .18s ease, background-color .18s ease, box-shadow .18s ease;
+  }
+  .pm .btn-lg { padding: 1rem 1.7rem; font-size: 1.06rem; }
+  .pm .btn-wa { background: var(--ladrillo); color: #fff5ec; box-shadow: 0 8px 22px -12px rgba(126,44,32,0.9); }
+  .pm .btn-wa:hover { background: var(--ladrillo-d); transform: translateY(-2px); }
+  .pm .btn-gold { background: var(--miel); color: var(--espresso); box-shadow: 0 10px 24px -14px rgba(51,33,15,0.7); }
+  .pm .btn-gold:hover { background: #f0b862; transform: translateY(-2px); }
+  .pm .btn-ghost { background: transparent; border-color: rgba(255,246,233,0.6); color: #fff5ec; }
+  .pm .btn-ghost:hover { border-color: #fff5ec; background: rgba(255,246,233,0.1); }
+  .pm .btn-ghost--dark { border-color: var(--corteza); color: var(--espresso); }
+  .pm .btn-ghost--dark:hover { background: rgba(190,122,43,0.12); }
+
+  .pm a:focus-visible, .pm button:focus-visible, .pm summary:focus-visible {
+    outline: 3px solid var(--corteza); outline-offset: 3px; border-radius: 6px;
+  }
+  .pm .hero a:focus-visible, .pm .galeria a:focus-visible,
+  .pm .cta-band a:focus-visible, .pm .cta-final a:focus-visible,
+  .pm .pm-footer a:focus-visible { outline-color: var(--miel); }
+
+  /* ---- HERO ---- */
+  .pm .hero {
+    position: relative; isolation: isolate;
+    min-height: calc(100svh - var(--demo-banner-h, 38px));
+    display: flex; align-items: flex-end;
+    padding: clamp(2rem, 8vw, 4rem) 1.25rem clamp(2.6rem, 7vw, 4rem);
+    background: var(--espresso);
+  }
+  .pm .hero-bg { position: absolute; inset: 0; z-index: -2; }
+  .pm .hero-bg img { filter: saturate(1.05) contrast(1.02); }
+  .pm .hero::after {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background:
+      linear-gradient(180deg, rgba(30,18,8,0.15) 0%, rgba(30,18,8,0.35) 42%, rgba(24,14,6,0.9) 100%),
+      radial-gradient(120% 80% at 20% 100%, rgba(126,44,32,0.42), transparent 60%);
+  }
+  .pm .hero-inner { max-width: 640px; }
+  .pm .hero-title {
+    font-family: 'Yeseva One', Georgia, serif; font-weight: 400;
+    font-size: clamp(3.2rem, 15vw, 6.4rem); line-height: 0.92;
+    margin: 0.2rem 0 0.7rem; color: #fff6e9;
+    text-shadow: 0 2px 26px rgba(0,0,0,0.4);
+  }
+  .pm .hero-sub {
+    font-size: clamp(1.05rem, 3.6vw, 1.3rem); color: #fbeede;
+    max-width: 34ch; margin: 0 0 1.4rem; text-shadow: 0 1px 12px rgba(0,0,0,0.5);
+  }
+  .pm .rating-chip {
+    display: inline-flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;
+    background: rgba(255,246,233,0.14); border: 1px solid rgba(255,246,233,0.28);
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+    color: #fff6e9; padding: 0.5rem 0.95rem; border-radius: 999px;
+    font-size: 0.95rem; margin-bottom: 1.5rem;
+  }
+  .pm .rating-chip strong { font-size: 1.1rem; }
+  .pm .rc-sep { opacity: 0.5; }
+  .pm .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+  /* ---- NÚMERO MONUMENTAL ---- */
+  .pm .numero {
+    position: relative; text-align: center; isolation: isolate;
+    background:
+      radial-gradient(60% 70% at 50% 42%, rgba(229,166,74,0.22), transparent 70%),
+      var(--masa);
+  }
+  .pm .numero .eyebrow { text-align: center; }
+  .pm .bignum {
+    font-family: 'Yeseva One', Georgia, serif; font-weight: 400;
+    font-size: clamp(5rem, 27vw, 15rem); line-height: 0.86;
+    margin: 0.2rem 0 0.1rem; letter-spacing: -0.01em;
+    color: var(--corteza);
+    background: linear-gradient(178deg, #d98f36 0%, #b16a20 62%, #8a5216 100%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 6px 30px rgba(138,82,22,0.18);
+  }
+  .pm .numero-label {
+    font-family: 'Yeseva One', Georgia, serif; font-weight: 400;
+    font-size: clamp(1.2rem, 4.5vw, 1.9rem); color: var(--espresso);
+    margin: 0 0 0.9rem; letter-spacing: 0.01em;
+  }
+  .pm .stars-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; }
+  .pm .stars {
+    position: relative; display: inline-block; font-size: 1.5rem; line-height: 1;
+    color: #e2cfa2; letter-spacing: 3px; white-space: nowrap;
+  }
+  .pm .stars .stars-fill {
+    position: absolute; left: 0; top: 0; width: 90%; overflow: hidden;
+    color: var(--corteza); white-space: nowrap;
+  }
+  .pm .stars-num { font-weight: 700; color: var(--espresso-2); font-size: 0.95rem; letter-spacing: 0.02em; }
+  .pm .quote-70 {
+    margin: 2.2rem auto 0; max-width: 40ch; padding: 0;
+  }
+  .pm .quote-70 blockquote {
+    font-family: 'Yeseva One', Georgia, serif; font-size: clamp(1.15rem, 4vw, 1.55rem);
+    line-height: 1.3; color: var(--ladrillo); margin: 0 0 0.6rem;
+  }
+  .pm .quote-70 figcaption { font-size: 0.82rem; color: var(--espresso-2); letter-spacing: 0.02em; }
+
+  /* ---- QUIÉNES SOMOS ---- */
+  .pm .somos { background: var(--masa-2); }
+  .pm .somos-grid { display: grid; gap: clamp(1.6rem, 5vw, 3rem); align-items: center; }
+  .pm .somos-text p { color: var(--espresso-2); margin: 0 0 1rem; max-width: 54ch; }
+  .pm .somos-text .h2 br { display: none; }
+  .pm .somos-photo {
+    margin: 0; border-radius: 18px; overflow: hidden; aspect-ratio: 4 / 3;
+    box-shadow: 0 24px 46px -28px rgba(51,33,15,0.55);
+    border: 1px solid rgba(190,122,43,0.25);
+  }
+
+  /* ---- LO MÁS PEDIDO ---- */
+  .pm .pedido { background: var(--masa); }
+  .pm .pan-grid {
+    list-style: none; padding: 0; margin: 2rem auto 0;
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.85rem;
+  }
+  .pm .pan-card {
+    display: flex; flex-direction: column; gap: 0.15rem;
+    background: var(--masa-2); border: 1px solid rgba(190,122,43,0.22);
+    border-radius: 14px; padding: 1.1rem 1rem 1.15rem; text-align: left;
+    box-shadow: 0 12px 24px -22px rgba(51,33,15,0.6);
+  }
+  .pm .pan-mark { color: var(--trigo); margin-bottom: 0.35rem; height: 27px; }
+  .pm .pan-name {
+    font-family: 'Yeseva One', Georgia, serif; font-size: 1.12rem;
+    color: var(--espresso); line-height: 1.15;
+  }
+  .pm .pan-tag { font-size: 0.86rem; color: var(--espresso-2); }
+  .pm .pan-foot { text-align: center; margin: 1.6rem auto 0; color: var(--espresso-2); font-style: italic; max-width: 40ch; }
+
+  /* ---- GALERÍA ---- */
+  .pm .galeria { background: #271807; }
+  .pm .gal-grid {
+    display: grid; gap: 0.8rem; margin-top: 1.8rem;
+    grid-template-columns: 1fr;
+  }
+  .pm .galeria figure {
+    margin: 0; border-radius: 16px; overflow: hidden;
+    border: 1px solid rgba(229,166,74,0.22);
+  }
+  .pm .gal-a { aspect-ratio: 16 / 10; }
+  .pm .gal-b, .pm .gal-c { aspect-ratio: 4 / 3; }
+  .pm .galeria img { transition: transform .5s ease; }
+  .pm .galeria figure:hover img { transform: scale(1.04); }
+
+  /* ---- POR QUÉ ---- */
+  .pm .porque { background: var(--masa-2); }
+  .pm .pq-grid {
+    display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem;
+  }
+  .pm .pq-card {
+    background: var(--masa); border: 1px solid rgba(190,122,43,0.22);
+    border-radius: 16px; padding: 1.5rem 1.4rem;
+  }
+  .pm .pq-ic {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 46px; height: 46px; border-radius: 12px;
+    background: rgba(190,122,43,0.14); color: var(--corteza); margin-bottom: 0.9rem;
+  }
+  .pm .pq-ic .ic, .pm .pq-ic .espiga { width: 24px; height: 24px; }
+  .pm .pq-card h3 {
+    font-family: 'Yeseva One', Georgia, serif; font-weight: 400;
+    font-size: 1.24rem; margin: 0 0 0.5rem; color: var(--espresso);
+  }
+  .pm .pq-card p { margin: 0; color: var(--espresso-2); font-size: 0.97rem; }
+
+  /* ---- ATRIBUTOS ---- */
+  .pm .atributos { background: var(--masa); padding-top: 0; }
+  .pm .atr-strip {
+    list-style: none; padding: 1.4rem 1.2rem; margin: 0 auto;
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.7rem 1.4rem;
+    border-top: 1px solid var(--linea); border-bottom: 1px solid var(--linea);
+  }
+  .pm .atr {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.9rem; font-weight: 500; color: var(--espresso-2);
+  }
+  .pm .atr .ic { color: var(--corteza); width: 1.3em; height: 1.3em; }
+
+  /* ---- CTA BANDS ---- */
+  .pm .cta-band { background: var(--ladrillo); }
+  .pm .cta-inner { text-align: center; max-width: 640px; }
+  .pm .cta-kicker {
+    font-size: 0.76rem; font-weight: 700; letter-spacing: 0.2em;
+    text-transform: uppercase; color: #f4c79a; margin: 0 0 0.7rem;
+  }
+  .pm .cta-title {
+    font-family: 'Yeseva One', Georgia, serif; font-weight: 400;
+    font-size: clamp(1.6rem, 5.4vw, 2.5rem); line-height: 1.12;
+    color: #fff4e8; margin: 0 0 1.5rem;
+  }
+
+  /* ---- RESEÑAS ---- */
+  .pm .resenas { background: var(--masa-2); }
+  .pm .res-head {
+    display: flex; flex-direction: column; align-items: center; gap: 0.3rem;
+    margin: 0.4rem 0 2rem;
+  }
+  .pm .res-head-num { color: var(--espresso-2); font-size: 0.95rem; }
+  .pm .res-head-num strong { color: var(--espresso); font-size: 1.15rem; }
+  .pm .res-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+  .pm .res-card {
+    margin: 0; background: var(--masa); border: 1px solid rgba(190,122,43,0.22);
+    border-radius: 16px; padding: 1.5rem 1.4rem; position: relative;
+  }
+  .pm .res-card::before {
+    content: "\201C"; font-family: 'Yeseva One', Georgia, serif;
+    font-size: 3.4rem; line-height: 1; color: var(--trigo);
+    position: absolute; top: 0.35rem; left: 1rem; opacity: 0.55;
+  }
+  .pm .res-card blockquote {
+    margin: 1.1rem 0 1rem; font-size: 1.03rem; color: var(--espresso);
+    line-height: 1.55; position: relative;
+  }
+  .pm .res-card figcaption { display: flex; flex-direction: column; }
+  .pm .res-au { font-weight: 700; color: var(--espresso); }
+  .pm .res-when { font-size: 0.82rem; color: var(--espresso-2); }
+  .pm .res-cta { text-align: center; margin-top: 2rem; }
+
+  /* ---- UBICACIÓN ---- */
+  .pm .ubica { background: var(--masa); }
+  .pm .ub-grid { display: grid; grid-template-columns: 1fr; gap: 1.6rem; }
+  .pm .ub-photo {
+    margin: 0 0 1.3rem; border-radius: 16px; overflow: hidden; aspect-ratio: 16 / 10;
+    border: 1px solid rgba(190,122,43,0.25);
+    box-shadow: 0 20px 40px -28px rgba(51,33,15,0.5);
+  }
+  .pm .ub-dir {
+    display: flex; align-items: center; gap: 0.5rem; font-weight: 700;
+    color: var(--espresso); margin: 0 0 0.25rem;
+  }
+  .pm .ub-dir .ic { color: var(--ladrillo); }
+  .pm .ub-note { margin: 0 0 1.2rem; color: var(--espresso-2); font-style: italic; }
+  .pm .horas { width: 100%; border-collapse: collapse; margin: 0 0 1.4rem; }
+  .pm .horas th, .pm .horas td {
+    text-align: left; padding: 0.55rem 0.2rem; font-size: 0.95rem;
+    border-bottom: 1px solid var(--linea);
+  }
+  .pm .horas th { font-weight: 500; color: var(--espresso-2); }
+  .pm .horas td { text-align: right; color: var(--espresso); font-weight: 500; font-variant-numeric: tabular-nums; }
+  .pm .horas .is-today th, .pm .horas .is-today td { color: var(--ladrillo); font-weight: 700; }
+  .pm .horas .is-today th::after { content: " · hoy"; font-weight: 500; font-size: 0.78rem; color: var(--corteza); }
+  .pm .ub-btns { display: flex; flex-wrap: wrap; gap: 0.7rem; }
+  .pm .ub-map {
+    border-radius: 16px; overflow: hidden; min-height: 300px;
+    border: 1px solid rgba(190,122,43,0.25); background: var(--masa-2);
+  }
+  .pm .ub-map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; }
+
+  /* ---- FAQ ---- */
+  .pm .faq { background: var(--masa-2); }
+  .pm .faq-list { margin-top: 1.8rem; display: flex; flex-direction: column; gap: 0.7rem; }
+  .pm .faq-item {
+    background: var(--masa); border: 1px solid rgba(190,122,43,0.22);
+    border-radius: 12px; padding: 0.3rem 1.15rem;
+  }
+  .pm .faq-item summary {
+    cursor: pointer; list-style: none; padding: 0.9rem 1.8rem 0.9rem 0; position: relative;
+    font-weight: 700; color: var(--espresso); font-size: 1.02rem;
+  }
+  .pm .faq-item summary::-webkit-details-marker { display: none; }
+  .pm .faq-item summary::after {
+    content: "+"; position: absolute; right: 0; top: 50%; transform: translateY(-50%);
+    font-family: 'Yeseva One', Georgia, serif; font-size: 1.4rem; color: var(--corteza);
+    transition: transform .2s ease;
+  }
+  .pm .faq-item[open] summary::after { content: "\2013"; }
+  .pm .faq-item p { margin: 0 0 1rem; color: var(--espresso-2); }
+
+  /* ---- CTA FINAL ---- */
+  .pm .cta-final {
+    text-align: center; background: var(--espresso);
+    background-image: radial-gradient(70% 90% at 50% 0%, rgba(158,58,42,0.35), transparent 60%);
+  }
+  .pm .cf-title {
+    font-family: 'Yeseva One', Georgia, serif; font-weight: 400;
+    font-size: clamp(2rem, 7vw, 3.2rem); color: #fff4e8; margin: 0.4rem 0 0.7rem; line-height: 1.06;
+  }
+  .pm .cf-sub { color: #f3e2d0; max-width: 40ch; margin: 0 auto 1.7rem; }
+
+  /* ---- FOOTER ---- */
+  .pm .pm-footer {
+    background: #1f1305; color: #e9d8bf; text-align: center;
+    padding: 2.6rem 1.25rem 96px;
+  }
+  .pm .ft-name {
+    font-family: 'Yeseva One', Georgia, serif; font-size: 1.5rem;
+    color: #fff4e8; margin: 0 0 0.6rem;
+  }
+  .pm .ft-line { margin: 0.2rem 0; font-size: 0.94rem; color: #d9c6a8; }
+  .pm .ft-line a { color: #f0c98a; text-decoration: none; font-weight: 700; }
+  .pm .ft-line a:hover { text-decoration: underline; }
+  .pm .ft-hours { margin-top: 0.8rem; font-size: 0.85rem; color: #b89e78; }
+
+  /* ---- reveal (progressive enhancement) ---- */
+  .pm .reveal { opacity: 1; }
+  .has-js .pm .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+  .has-js .pm .reveal.in { opacity: 1; transform: none; }
+
+  /* ---- responsive ---- */
+  @media (min-width: 720px) {
+    .pm .somos-grid { grid-template-columns: 1.15fr 1fr; }
+    .pm .somos-text .h2 br { display: inline; }
+    .pm .pan-grid { grid-template-columns: repeat(4, 1fr); }
+    .pm .pq-grid { grid-template-columns: repeat(2, 1fr); }
+    .pm .res-grid { grid-template-columns: repeat(2, 1fr); }
+    .pm .gal-grid {
+      grid-template-columns: repeat(2, 1fr); grid-auto-rows: 1fr;
+    }
+    .pm .gal-a { grid-column: 1 / -1; aspect-ratio: 21 / 9; }
+    .pm .ub-grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
+    .pm .ub-map { min-height: 420px; }
+  }
+  @media (min-width: 980px) {
+    .pm .pq-grid { grid-template-columns: repeat(4, 1fr); }
+    .pm .gal-grid { grid-template-columns: 2fr 1fr 1fr; }
+    .pm .gal-a { grid-column: 1; grid-row: 1 / 3; aspect-ratio: auto; }
+    .pm .gal-b, .pm .gal-c { aspect-ratio: 16 / 11; }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var d = document;
+    d.documentElement.classList.add('has-js');
+    var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // scroll reveal
+    var revs = d.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && revs.length) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+      revs.forEach(function (el) { io.observe(el); });
+    } else {
+      revs.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    // count-up del número monumental
+    var num = d.getElementById('bigNum');
+    if (num) {
+      var target = 2015;
+      if (rm || !('IntersectionObserver' in window)) {
+        num.textContent = target.toLocaleString('es-MX');
+      } else {
+        var started = false;
+        var cio = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting && !started) {
+              started = true;
+              var t0 = null, dur = 1500;
+              function step(ts) {
+                if (!t0) t0 = ts;
+                var p = Math.min((ts - t0) / dur, 1);
+                var ease = 1 - Math.pow(1 - p, 3);
+                num.textContent = Math.round(ease * target).toLocaleString('es-MX');
+                if (p < 1) requestAnimationFrame(step);
+              }
+              requestAnimationFrame(step);
+              cio.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.5 });
+        cio.observe(num);
+      }
+    }
+
+    // resaltar el día de hoy en horarios
+    var map = { 0: 'dom', 1: 'lun', 2: 'mar', 3: 'mie', 4: 'jue', 5: 'vie', 6: 'sab' };
+    var row = d.querySelector('.hrow[data-d="' + map[new Date().getDay()] + '"]');
+    if (row) row.classList.add('is-today');
+  })();
+</script>
+</BaseLayout>

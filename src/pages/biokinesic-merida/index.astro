@@ -1,0 +1,739 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const negocio = 'Biokinesic Mérida';
+const whatsapp = 'https://wa.me/529992350431';
+const telefono = '999 235 0431';
+const mapsUrl = 'https://maps.google.com/?cid=980175525949401603';
+const direccion = 'C. 36 221, Montes de Amé, 97115 Mérida, Yuc., México';
+const mapEmbed = 'https://www.google.com/maps?q=' + encodeURIComponent(direccion) + '&output=embed';
+
+const horarios = [
+  { dia: 'Lunes', h: '8:00 – 20:00' },
+  { dia: 'Martes', h: '8:00 – 20:00' },
+  { dia: 'Miércoles', h: '8:00 – 20:00' },
+  { dia: 'Jueves', h: '8:00 – 20:00' },
+  { dia: 'Viernes', h: '8:00 – 20:00' },
+  { dia: 'Sábado', h: '8:00 – 13:00' },
+  { dia: 'Domingo', h: 'Cerrado', cerrado: true },
+];
+
+const servicios = [
+  { t: 'Rehabilitación física', d: 'Recuperación guiada tras lesiones, con seguimiento sesión a sesión hasta que vuelves a tu ritmo.' },
+  { t: 'Fisioterapia para deportistas', d: 'Recuperación post-carrera y trabajo con quienes entrenan: una excelente opción para deportistas.' },
+  { t: 'Masajes de descarga muscular', d: 'Descargas para aliviar la tensión, soltar el músculo y prevenir molestias.' },
+  { t: 'Ejercicio terapéutico personalizado', d: 'Ejercicios ajustados a tus necesidades, no una rutina genérica.' },
+  { t: 'Prevención de lesiones', d: 'Trabajo preventivo para que el cuerpo aguante el entrenamiento y el día a día.' },
+  { t: 'Valoración y diagnóstico', d: 'Evaluación profesional para entender qué pasa antes de empezar tu terapia.' },
+];
+
+const proceso = [
+  { n: '01', t: 'Valoración y diagnóstico', d: 'Escuchamos tu caso y evaluamos. Nuestros pacientes destacan lo profesional del diagnóstico.' },
+  { n: '02', t: 'Terapia guiada', d: 'Cada sesión con tu fisio es muy bien guiada, con acompañamiento de principio a fin.' },
+  { n: '03', t: 'Ejercicio personalizado', d: 'Terapias y ejercicios personalizados según tus necesidades, no un plan igual para todos.' },
+  { n: '04', t: 'Tu avance, con constancia', d: 'Medimos el progreso y te motivamos a seguir. El avance suele ser significativo.' },
+];
+
+const reviews = [
+  {
+    autor: 'Fernando Marín',
+    cuando: 'Hace 9 meses',
+    texto: 'Excelente servicio e instalaciones, llevo más de un año siendo cliente, me han ayudado en la recuperación post carrera con masajes de descarga y ejercicios para prevenir lesiones…',
+  },
+  {
+    autor: 'Bambu Dental',
+    cuando: 'Hace 2 meses',
+    texto: 'Desde mi primera sesión, la experiencia ha sido inmejorable. Estoy muy agradecida con José Carlos por su excelente terapia; además de ser un gran profesional, tiene una paciencia increíble. Gracias a su acompañamiento, he logrado mis metas. ¡Cinco estrellas sin duda!',
+  },
+  {
+    autor: 'Monica Ivethe Soni',
+    cuando: 'Hace 2 meses',
+    texto: '…el trabajo con el fisio en cada sesión es muy bien guiado. El avance ha sido significativo. En especial yo trabajé con Romel y estoy muy cómoda con su Profesionalismo y ética.',
+  },
+  {
+    autor: 'Andrea Aviles',
+    cuando: 'Hace 9 meses',
+    texto: 'Excelente atención, siempre me siento muy cómoda con todas las personas que me han atendido y muy consentida. Puntuales, excelente opción para deportistas y para tratamiento de lesiones…',
+  },
+];
+
+const galeria = [
+  { src: '/biokinesic-merida/img/foto_1.jpg', alt: 'Área de entrenamiento y rehabilitación con césped y equipo' },
+  { src: '/biokinesic-merida/img/foto_5.jpg', alt: 'Consultorio de valoración con camilla de terapia' },
+  { src: '/biokinesic-merida/img/foto_3.jpg', alt: 'Fachada de Biokinesic en Montes de Amé, Mérida' },
+  { src: '/biokinesic-merida/img/foto_4.jpg', alt: 'Rincón de bienvenida: Welcome to the good life' },
+];
+---
+<BaseLayout
+  title="Biokinesic Mérida · Rehabilitación y fisioterapia"
+  description="Rehabilitación especializada en Mérida. ⭐ 5.0 con 293 reseñas: terapia guiada, ejercicio personalizado y masajes de descarga para volver a moverte."
+  slug="biokinesic-merida"
+  ogImage="/biokinesic-merida/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap"
+  favicon="💪"
+  themeColor="#12988B"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="hero__media" aria-hidden="true"></div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="hero__eyebrow">Rehabilitación especializada · Montes de Amé, Mérida</p>
+      <h1 class="hero__title">Volver a moverte,<br><span>bien acompañado.</span></h1>
+      <p class="hero__lead">
+        Fisioterapia y rehabilitación con terapia guiada, ejercicio personalizado
+        y masajes de descarga. Cada sesión, un paso más cerca de tu ritmo.
+      </p>
+
+      <div class="hero__rating" role="img" aria-label="5.0 estrellas con 293 reseñas en Google">
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <strong>5.0</strong>
+        <span class="hero__rating-sub">· 293 reseñas en Google</span>
+      </div>
+
+      <div class="hero__cta">
+        <a class="btn btn--wa" href={whatsapp} target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.78 1.22h.01c5.5 0 9.96-4.46 9.96-9.96 0-2.66-1.04-5.16-2.92-7.04A9.9 9.9 0 0 0 12.04 2Zm0 1.82c2.18 0 4.23.85 5.77 2.4a8.1 8.1 0 0 1 2.39 5.75c0 4.5-3.66 8.15-8.16 8.15a8.1 8.1 0 0 1-4.14-1.13l-.3-.18-3.11.82.83-3.04-.19-.31a8.1 8.1 0 0 1-1.25-4.31c0-4.5 3.66-8.15 8.16-8.15Zm4.7 11.53c-.06-.11-.24-.18-.5-.31-.26-.13-1.54-.76-1.78-.85-.24-.09-.42-.13-.6.13-.17.26-.68.85-.83 1.02-.15.17-.31.2-.57.07-.26-.13-1.1-.4-2.09-1.29-.77-.69-1.3-1.53-1.45-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.31.4-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.06-.13-.6-1.45-.83-1.98-.22-.52-.44-.45-.6-.46l-.51-.01c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.94 2.55 1.07 2.72.13.17 1.85 2.82 4.48 3.95.63.27 1.11.44 1.49.56.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24Z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          Cómo llegar
+        </a>
+      </div>
+    </div>
+
+    <!-- Firma: línea de recuperación (pulso + progreso, con nodos como la columna del logo) -->
+    <svg class="pulse pulse--hero" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="pulseGrad" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0" stop-color="#79C748"/>
+          <stop offset="0.55" stop-color="#26B5A6"/>
+          <stop offset="1" stop-color="#8DE3D6"/>
+        </linearGradient>
+      </defs>
+      <path class="pulse__line" d="M0,86 L64,86 L82,86 L96,50 L110,104 L128,72 L152,68 C214,60 252,46 300,36 C338,28 372,22 400,16"
+        fill="none" stroke="url(#pulseGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <circle class="pulse__dot" cx="152" cy="68" r="3.4"/>
+      <circle class="pulse__dot" cx="252" cy="46" r="3.4"/>
+      <circle class="pulse__dot" cx="330" cy="30" r="3.4"/>
+      <circle class="pulse__dot pulse__dot--live" cx="400" cy="16" r="4.4"/>
+    </svg>
+  </header>
+
+  <!-- ===================== TRUST BAR ===================== -->
+  <section class="trust" aria-label="Datos de confianza">
+    <div class="wrap trust__grid">
+      <div class="trust__item"><strong>5.0</strong><span>Calificación en Google</span></div>
+      <div class="trust__item"><strong>293</strong><span>Reseñas de pacientes</span></div>
+      <div class="trust__item"><strong>L–S</strong><span>Abierto de lunes a sábado</span></div>
+      <div class="trust__item"><strong>♿︎ · 💳</strong><span>Acceso silla de ruedas · tarjetas</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== QUIÉNES SOMOS ===================== -->
+  <section class="about" id="nosotros">
+    <div class="wrap about__grid">
+      <div class="about__text reveal">
+        <p class="eyebrow eyebrow--teal">Quiénes somos</p>
+        <h2 class="h2">Rehabilitación especializada, con nombre y apellido.</h2>
+        <p>
+          En Biokinesic acompañamos tu recuperación de principio a fin. Hacemos
+          fisioterapia y rehabilitación para lesiones, y trabajamos de cerca con
+          deportistas: recuperación post-carrera, masajes de descarga y ejercicios
+          pensados para tu cuerpo.
+        </p>
+        <p>
+          Lo que más repiten quienes vienen es el <strong>trato</strong>: personas
+          profesionales, éticas y con mucha paciencia, en instalaciones bien
+          equipadas y con mucha higiene. Aquí no eres un expediente más — muchos
+          pacientes agradecen por su nombre a <strong>Romel</strong>,
+          <strong>Michelle</strong> y <strong>José Carlos</strong>.
+        </p>
+        <p class="about__neon">“Welcome to the good life.” Volver a moverte sin dolor también es eso.</p>
+      </div>
+      <figure class="about__figure reveal">
+        <img src="/biokinesic-merida/img/foto_2.jpg" width="900" height="1200"
+          alt="Recepción de Biokinesic con su logotipo iluminado" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="care" id="servicios">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--teal">Qué hacemos</p>
+      <h2 class="h2">Terapias que devuelven el movimiento</h2>
+      <p class="care__lead">Todo lo que ofrecemos nace de lo que nuestros pacientes vienen a resolver.</p>
+      <ul class="care__grid">
+        {servicios.map((s) => (
+          <li class="care__card reveal">
+            <span class="care__spine" aria-hidden="true"></span>
+            <h3>{s.t}</h3>
+            <p>{s.d}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== PROCESO (firma: línea de recuperación) ===================== -->
+  <section class="path" id="proceso">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--lime">Así acompañamos tu recuperación</p>
+      <h2 class="h2 h2--light">Un camino claro, no una promesa vacía</h2>
+      <ol class="path__track">
+        {proceso.map((p) => (
+          <li class="path__step reveal">
+            <span class="path__node" aria-hidden="true"><span class="path__pulse"></span></span>
+            <span class="path__num">{p.n}</span>
+            <h3>{p.t}</h3>
+            <p>{p.d}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="gallery" id="galeria">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--teal">El espacio</p>
+      <h2 class="h2">Instalaciones bien equipadas y con mucha higiene</h2>
+      <div class="gallery__grid">
+        {galeria.map((g, i) => (
+          <figure class={i === 0 ? 'gallery__cell gallery__cell--wide reveal' : 'gallery__cell reveal'}>
+            <img src={g.src} alt={g.alt} loading="lazy" decoding="async" />
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA INTERMEDIO ===================== -->
+  <section class="midcta">
+    <div class="wrap midcta__inner">
+      <div>
+        <h2 class="midcta__title">¿Con una molestia o volviendo de una lesión?</h2>
+        <p class="midcta__sub">Cuéntanos qué te pasa por WhatsApp y agendamos tu valoración.</p>
+      </div>
+      <a class="btn btn--wa btn--lg" href={whatsapp} target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.78 1.22h.01c5.5 0 9.96-4.46 9.96-9.96 0-2.66-1.04-5.16-2.92-7.04A9.9 9.9 0 0 0 12.04 2Zm0 1.82c2.18 0 4.23.85 5.77 2.4a8.1 8.1 0 0 1 2.39 5.75c0 4.5-3.66 8.15-8.16 8.15a8.1 8.1 0 0 1-4.14-1.13l-.3-.18-3.11.82.83-3.04-.19-.31a8.1 8.1 0 0 1-1.25-4.31c0-4.5 3.66-8.15 8.16-8.15Zm4.7 11.53c-.06-.11-.24-.18-.5-.31-.26-.13-1.54-.76-1.78-.85-.24-.09-.42-.13-.6.13-.17.26-.68.85-.83 1.02-.15.17-.31.2-.57.07-.26-.13-1.1-.4-2.09-1.29-.77-.69-1.3-1.53-1.45-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.31.4-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.06-.13-.6-1.45-.83-1.98-.22-.52-.44-.45-.6-.46l-.51-.01c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.94 2.55 1.07 2.72.13.17 1.85 2.82 4.48 3.95.63.27 1.11.44 1.49.56.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24Z"/></svg>
+        Escríbenos
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== RESEÑAS ===================== -->
+  <section class="reviews" id="resenas">
+    <div class="wrap">
+      <div class="reviews__head reveal">
+        <div class="reviews__score">
+          <span class="reviews__num">5.0</span>
+          <span class="stars stars--lg" aria-hidden="true">★★★★★</span>
+          <span class="reviews__count">293 reseñas en Google</span>
+        </div>
+        <p class="reviews__intro">Lo que más valoran: el trato humano, la constancia y ver de verdad el avance.</p>
+      </div>
+
+      <div class="reviews__grid">
+        {reviews.map((r) => (
+          <figure class="review reveal">
+            <span class="stars" aria-hidden="true">★★★★★</span>
+            <blockquote>{r.texto}</blockquote>
+            <figcaption>
+              <span class="review__name">{r.autor}</span>
+              <span class="review__when">{r.cuando}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <div class="reviews__more">
+        <a class="btn btn--outline" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== UBICACIÓN + HORARIOS ===================== -->
+  <section class="place" id="ubicacion">
+    <div class="wrap place__grid">
+      <div class="place__info reveal">
+        <p class="eyebrow eyebrow--teal">Dónde estamos</p>
+        <h2 class="h2">Montes de Amé, Mérida</h2>
+        <p class="place__addr">{direccion}</p>
+
+        <div class="place__chips" aria-label="Servicios verificados">
+          <span class="chip"><span aria-hidden="true">♿︎</span> Acceso para silla de ruedas</span>
+          <span class="chip"><span aria-hidden="true">💳</span> Acepta tarjetas</span>
+        </div>
+
+        <table class="hours" aria-label="Horarios de atención">
+          <tbody>
+            {horarios.map((d) => (
+              <tr class={d.cerrado ? 'hours__row hours__row--off' : 'hours__row'}>
+                <th scope="row">{d.dia}</th>
+                <td>{d.h}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <a class="btn btn--ghost btn--dark" href={mapsUrl} target="_blank" rel="noopener">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
+          Abrir en Google Maps
+        </a>
+      </div>
+      <div class="place__map reveal">
+        <iframe
+          src={mapEmbed}
+          title="Ubicación de Biokinesic Mérida en Google Maps"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq" aria-label="Preguntas frecuentes">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--teal">Antes de venir</p>
+      <h2 class="h2">Preguntas frecuentes</h2>
+      <div class="faq__list">
+        <details class="faq__item">
+          <summary>¿Atienden lesiones deportivas?</summary>
+          <p>Sí. Somos una excelente opción para deportistas: recuperación post-carrera, masajes de descarga y ejercicios para prevenir lesiones.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Puedo pagar con tarjeta?</summary>
+          <p>Sí, aceptamos pago con tarjeta.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿El lugar tiene acceso para silla de ruedas?</summary>
+          <p>Sí, las instalaciones cuentan con acceso para silla de ruedas.</p>
+        </details>
+        <details class="faq__item">
+          <summary>¿Qué días abren?</summary>
+          <p>De lunes a viernes de 8:00 a 20:00 y sábados de 8:00 a 13:00. Domingo cerrado.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="final">
+    <div class="wrap final__inner">
+      <p class="eyebrow eyebrow--lime">Da el primer paso</p>
+      <h2 class="final__title">Tu recuperación empieza con un mensaje</h2>
+      <p class="final__sub">Escríbenos por WhatsApp y agenda tu valoración en Biokinesic Mérida.</p>
+      <a class="btn btn--wa btn--lg" href={whatsapp} target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12.04 2c-5.5 0-9.96 4.46-9.96 9.96 0 1.76.46 3.45 1.33 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.78 1.22h.01c5.5 0 9.96-4.46 9.96-9.96 0-2.66-1.04-5.16-2.92-7.04A9.9 9.9 0 0 0 12.04 2Zm0 1.82c2.18 0 4.23.85 5.77 2.4a8.1 8.1 0 0 1 2.39 5.75c0 4.5-3.66 8.15-8.16 8.15a8.1 8.1 0 0 1-4.14-1.13l-.3-.18-3.11.82.83-3.04-.19-.31a8.1 8.1 0 0 1-1.25-4.31c0-4.5 3.66-8.15 8.16-8.15Zm4.7 11.53c-.06-.11-.24-.18-.5-.31-.26-.13-1.54-.76-1.78-.85-.24-.09-.42-.13-.6.13-.17.26-.68.85-.83 1.02-.15.17-.31.2-.57.07-.26-.13-1.1-.4-2.09-1.29-.77-.69-1.3-1.53-1.45-1.79-.15-.26-.02-.4.11-.53.12-.12.26-.31.4-.46.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.06-.13-.6-1.45-.83-1.98-.22-.52-.44-.45-.6-.46l-.51-.01c-.17 0-.46.07-.7.33-.24.26-.92.9-.92 2.2 0 1.3.94 2.55 1.07 2.72.13.17 1.85 2.82 4.48 3.95.63.27 1.11.44 1.49.56.63.2 1.2.17 1.65.1.5-.07 1.54-.63 1.76-1.24.22-.61.22-1.13.15-1.24Z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+      <p class="final__phone">o llámanos al <a href="tel:+529992350431">999 235 0431</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <p class="foot__name">Biokinesic Mérida</p>
+      <p class="foot__line">Rehabilitación especializada · Montes de Amé, Mérida, Yuc.</p>
+      <p class="foot__line"><a href="tel:+529992350431">999 235 0431</a> · <a href={whatsapp} target="_blank" rel="noopener">WhatsApp</a></p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --navy: #14324F;
+      --navy-deep: #0E2740;
+      --teal: #12988B;
+      --teal-600: #0C7268;
+      --teal-050: #E4F2F0;
+      --lime: #79C748;
+      --mist: #EEF4F5;
+      --white: #FFFFFF;
+      --line: #D6E3E2;
+      --ink: #1C333F;
+      --ink-soft: #557079;
+      --wa: #1FA855;
+      --wa-deep: #178A45;
+      --shadow: 0 18px 44px -22px rgba(20,50,79,.45);
+      --radius: 18px;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--white);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { width: min(1120px, 92vw); margin-inline: auto; }
+
+    h1, h2, h3 { font-family: 'Sora', system-ui, sans-serif; line-height: 1.1; margin: 0; }
+
+    .h2 {
+      font-size: clamp(1.6rem, 5.4vw, 2.6rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--navy);
+      max-width: 18ch;
+    }
+    .h2--light { color: var(--white); }
+
+    .eyebrow {
+      font-size: .78rem; font-weight: 600; letter-spacing: .16em;
+      text-transform: uppercase; margin: 0 0 .8rem;
+    }
+    .eyebrow--teal { color: var(--teal-600); }
+    .eyebrow--lime { color: var(--lime); }
+
+    .stars { color: var(--lime); letter-spacing: 2px; }
+    .stars--lg { font-size: 1.35rem; }
+
+    /* ---------- Botones ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .55rem;
+      font-family: 'Sora', sans-serif; font-weight: 600; font-size: 1rem;
+      padding: .82rem 1.3rem; border-radius: 999px; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+    }
+    .btn .ico { width: 1.25em; height: 1.25em; flex: none; }
+    .btn--lg { font-size: 1.06rem; padding: .95rem 1.7rem; }
+    .btn--wa { background: var(--wa); color: #fff; box-shadow: 0 14px 30px -14px rgba(31,168,85,.8); }
+    .btn--wa:hover { background: var(--wa-deep); transform: translateY(-2px); }
+    .btn--ghost { background: rgba(255,255,255,.08); color: #fff; border-color: rgba(255,255,255,.55); }
+    .btn--ghost:hover { background: rgba(255,255,255,.18); transform: translateY(-2px); }
+    .btn--ghost.btn--dark { color: var(--navy); border-color: var(--line); background: #fff; }
+    .btn--ghost.btn--dark:hover { background: var(--mist); }
+    .btn--outline { background: #fff; color: var(--teal-600); border-color: var(--teal); }
+    .btn--outline:hover { background: var(--teal-050); transform: translateY(-2px); }
+    .btn:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      display: flex; align-items: flex-end;
+      padding: 0 0 clamp(2.4rem, 7vw, 4.4rem);
+      background: var(--navy-deep);
+    }
+    .hero__media {
+      position: absolute; inset: 0; z-index: -2;
+      background: url('/biokinesic-merida/img/foto_2.jpg') center 32% / cover no-repeat;
+      transform: scale(1.04);
+    }
+    .hero__scrim {
+      position: absolute; inset: 0; z-index: -1;
+      background:
+        linear-gradient(180deg, rgba(14,39,64,.42) 0%, rgba(14,39,64,.12) 34%, rgba(12,60,72,.72) 74%, rgba(11,49,60,.94) 100%),
+        radial-gradient(120% 80% at 12% 88%, rgba(18,152,139,.42), transparent 60%);
+    }
+    .hero__inner { width: min(1120px, 92vw); margin-inline: auto; color: #fff; }
+    .hero__eyebrow {
+      font-family: 'Sora', sans-serif; font-weight: 600; font-size: .82rem;
+      letter-spacing: .14em; text-transform: uppercase; color: #bfeee6; margin: 0 0 1rem;
+    }
+    .hero__title {
+      font-size: clamp(2.5rem, 11vw, 4.6rem); font-weight: 800; letter-spacing: -0.03em;
+      text-shadow: 0 4px 30px rgba(11,40,64,.4);
+    }
+    .hero__title span { color: #7fe3d4; }
+    .hero__lead {
+      max-width: 40ch; margin: 1.1rem 0 0; font-size: clamp(1rem, 3.5vw, 1.18rem);
+      color: #e7f4f2;
+    }
+    .hero__rating {
+      display: inline-flex; align-items: center; gap: .5rem; margin-top: 1.5rem;
+      background: rgba(255,255,255,.12); backdrop-filter: blur(6px);
+      border: 1px solid rgba(255,255,255,.28); border-radius: 999px;
+      padding: .5rem .95rem; font-size: .96rem;
+    }
+    .hero__rating strong { font-family: 'Sora', sans-serif; font-size: 1.1rem; }
+    .hero__rating-sub { color: #d5ece8; }
+    .hero__cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.9rem; }
+
+    .pulse { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 120px; z-index: -1; }
+    .pulse--hero { opacity: .9; }
+    .pulse__line {
+      stroke-dasharray: 620; stroke-dashoffset: 0;
+      filter: drop-shadow(0 0 8px rgba(126,227,212,.35));
+      animation: draw 2.4s ease-out .25s both;
+    }
+    .pulse__dot { fill: #bff0e6; opacity: 0; animation: dotIn .4s ease-out both; }
+    .pulse__dot:nth-of-type(1) { animation-delay: 1.4s; }
+    .pulse__dot:nth-of-type(2) { animation-delay: 1.8s; }
+    .pulse__dot:nth-of-type(3) { animation-delay: 2.2s; }
+    .pulse__dot--live { fill: var(--lime); animation-delay: 2.5s; }
+    .pulse__dot--live { animation: dotIn .4s ease-out 2.5s both, live 2.4s ease-in-out 3s infinite; }
+    @keyframes draw { from { stroke-dashoffset: 620; } to { stroke-dashoffset: 0; } }
+    @keyframes dotIn { from { opacity: 0; transform: scale(0); } to { opacity: 1; transform: scale(1); } }
+    @keyframes live {
+      0%, 100% { r: 4.4; opacity: 1; }
+      50% { r: 6.2; opacity: .55; }
+    }
+
+    /* ---------- TRUST ---------- */
+    .trust { background: var(--navy); color: #fff; }
+    .trust__grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: 1px; background: rgba(255,255,255,.12);
+      border-radius: 0;
+    }
+    .trust__item {
+      background: var(--navy); padding: 1.3rem 1rem; text-align: center;
+      display: flex; flex-direction: column; gap: .25rem;
+    }
+    .trust__item strong { font-family: 'Sora', sans-serif; font-size: 1.55rem; color: #7fe3d4; }
+    .trust__item span { font-size: .82rem; color: #c6d6de; line-height: 1.35; }
+
+    /* ---------- ABOUT ---------- */
+    .about { padding: clamp(3.5rem, 9vw, 6rem) 0; background: var(--white); }
+    .about__grid { display: grid; gap: 2.4rem; align-items: center; }
+    .about__text p { color: var(--ink-soft); margin: 0 0 1rem; font-size: 1.03rem; }
+    .about__text strong { color: var(--navy); font-weight: 600; }
+    .about__neon {
+      font-family: 'Sora', sans-serif; font-weight: 600; color: var(--teal-600) !important;
+      border-left: 3px solid var(--lime); padding-left: .9rem; font-size: 1.05rem;
+    }
+    .about__figure {
+      margin: 0; border-radius: var(--radius); overflow: hidden;
+      box-shadow: var(--shadow); position: relative;
+    }
+    .about__figure::after {
+      content: ''; position: absolute; inset: 0;
+      box-shadow: inset 0 0 0 1px rgba(20,50,79,.06); border-radius: var(--radius);
+    }
+    .about__figure img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+
+    /* ---------- CARE / SERVICIOS ---------- */
+    .care { padding: clamp(3.5rem, 9vw, 6rem) 0; background: var(--mist); }
+    .care__lead { color: var(--ink-soft); margin: .7rem 0 2.2rem; max-width: 46ch; }
+    .care__grid {
+      list-style: none; margin: 0; padding: 0;
+      display: grid; grid-template-columns: 1fr; gap: 1rem;
+    }
+    .care__card {
+      background: #fff; border: 1px solid var(--line); border-radius: var(--radius);
+      padding: 1.5rem 1.5rem 1.55rem; position: relative; overflow: hidden;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+    .care__spine {
+      position: absolute; left: 0; top: 0; bottom: 0; width: 4px;
+      background: linear-gradient(180deg, var(--lime), var(--teal));
+      transform: scaleY(0); transform-origin: top; transition: transform .3s ease;
+    }
+    .care__card:hover { transform: translateY(-4px); box-shadow: var(--shadow); border-color: transparent; }
+    .care__card:hover .care__spine { transform: scaleY(1); }
+    .care__card h3 { font-size: 1.16rem; color: var(--navy); margin-bottom: .45rem; }
+    .care__card p { margin: 0; color: var(--ink-soft); font-size: .97rem; }
+
+    /* ---------- PATH / PROCESO (firma) ---------- */
+    .path {
+      padding: clamp(3.5rem, 9vw, 6rem) 0;
+      background:
+        radial-gradient(120% 90% at 88% 0%, rgba(18,152,139,.35), transparent 55%),
+        var(--navy);
+      color: #fff;
+    }
+    .path .care__lead { color: #c6d6de; }
+    .path__track {
+      list-style: none; margin: 2.4rem 0 0; padding: 0;
+      display: grid; grid-template-columns: 1fr; gap: 0;
+      position: relative;
+    }
+    .path__step {
+      position: relative; padding: 0 0 2rem 3.4rem;
+    }
+    .path__step:last-child { padding-bottom: 0; }
+    /* la línea de recuperación que conecta los pasos */
+    .path__step::before {
+      content: ''; position: absolute; left: 13px; top: 1.6rem; bottom: -0.4rem;
+      width: 2px; background: linear-gradient(180deg, var(--teal), rgba(127,227,212,.25));
+    }
+    .path__step:last-child::before { display: none; }
+    .path__node {
+      position: absolute; left: 3px; top: .3rem; width: 22px; height: 22px;
+      border-radius: 50%; background: var(--navy);
+      border: 2px solid var(--lime); display: grid; place-items: center; z-index: 1;
+    }
+    .path__pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); }
+    .path__num {
+      font-family: 'Sora', sans-serif; font-weight: 700; font-size: .8rem;
+      letter-spacing: .1em; color: #7fe3d4;
+    }
+    .path__step h3 { font-size: 1.2rem; margin: .15rem 0 .4rem; color: #fff; }
+    .path__step p { margin: 0; color: #c6d6de; font-size: .98rem; max-width: 46ch; }
+
+    /* ---------- GALLERY ---------- */
+    .gallery { padding: clamp(3.5rem, 9vw, 6rem) 0; background: var(--white); }
+    .gallery__grid {
+      display: grid; grid-template-columns: repeat(2, 1fr);
+      gap: .8rem; margin-top: 2rem;
+    }
+    .gallery__cell {
+      margin: 0; border-radius: 14px; overflow: hidden; background: var(--mist);
+      box-shadow: 0 10px 26px -18px rgba(20,50,79,.5);
+    }
+    .gallery__cell img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; transition: transform .5s ease; }
+    .gallery__cell:hover img { transform: scale(1.05); }
+    .gallery__cell--wide { grid-column: 1 / -1; }
+    .gallery__cell--wide img { aspect-ratio: 16 / 10; }
+
+    /* ---------- MID CTA ---------- */
+    .midcta {
+      padding: clamp(2.6rem, 7vw, 3.6rem) 0;
+      background: linear-gradient(100deg, var(--teal-600), var(--teal));
+      color: #fff;
+    }
+    .midcta__inner { display: flex; flex-direction: column; gap: 1.3rem; align-items: flex-start; }
+    .midcta__title { font-size: clamp(1.35rem, 4.6vw, 1.9rem); font-weight: 700; max-width: 20ch; }
+    .midcta__sub { margin: .5rem 0 0; color: #dcf5f0; }
+    .midcta .btn--wa { background: #fff; color: var(--teal-600); box-shadow: 0 14px 30px -14px rgba(0,0,0,.35); }
+    .midcta .btn--wa:hover { background: #eafaf6; }
+
+    /* ---------- REVIEWS ---------- */
+    .reviews { padding: clamp(3.5rem, 9vw, 6rem) 0; background: var(--teal-050); }
+    .reviews__head { text-align: center; display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+    .reviews__score { display: flex; flex-direction: column; align-items: center; gap: .1rem; }
+    .reviews__num { font-family: 'Sora', sans-serif; font-size: 3rem; font-weight: 800; color: var(--navy); line-height: 1; }
+    .reviews__count { font-size: .9rem; color: var(--ink-soft); }
+    .reviews__intro { max-width: 42ch; color: var(--ink-soft); margin: .6rem 0 0; }
+    .reviews__grid {
+      display: grid; grid-template-columns: 1fr; gap: 1rem; margin: 2.4rem 0 0;
+    }
+    .review {
+      background: #fff; border-radius: var(--radius); padding: 1.5rem;
+      border: 1px solid var(--line); margin: 0;
+      display: flex; flex-direction: column; gap: .7rem;
+    }
+    .review blockquote {
+      margin: 0; color: var(--ink); font-size: 1.02rem; line-height: 1.62;
+    }
+    .review figcaption { display: flex; flex-direction: column; margin-top: auto; }
+    .review__name { font-family: 'Sora', sans-serif; font-weight: 600; color: var(--navy); }
+    .review__when { font-size: .82rem; color: var(--ink-soft); }
+    .reviews__more { text-align: center; margin-top: 2rem; }
+
+    /* ---------- PLACE ---------- */
+    .place { padding: clamp(3.5rem, 9vw, 6rem) 0; background: var(--white); }
+    .place__grid { display: grid; gap: 2rem; }
+    .place__addr { color: var(--ink-soft); margin: .6rem 0 1.2rem; font-size: 1.02rem; }
+    .place__chips { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 1.4rem; }
+    .chip {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: var(--teal-050); color: var(--teal-600); font-weight: 600;
+      font-size: .85rem; padding: .45rem .8rem; border-radius: 999px;
+      border: 1px solid var(--line);
+    }
+    .hours { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; font-size: .96rem; }
+    .hours__row th, .hours__row td { padding: .6rem .2rem; text-align: left; border-bottom: 1px solid var(--line); }
+    .hours__row th { font-weight: 500; color: var(--navy); }
+    .hours__row td { text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .hours__row--off td { color: #b23b3b; }
+    .place__map {
+      border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+      border: 1px solid var(--line); min-height: 300px;
+    }
+    .place__map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; }
+
+    /* ---------- FAQ ---------- */
+    .faq { padding: clamp(3.5rem, 9vw, 6rem) 0; background: var(--mist); }
+    .faq__list { margin-top: 2rem; display: grid; gap: .8rem; }
+    .faq__item {
+      background: #fff; border: 1px solid var(--line); border-radius: 14px;
+      padding: 0 1.3rem; overflow: hidden;
+    }
+    .faq__item summary {
+      cursor: pointer; list-style: none; padding: 1.1rem 0;
+      font-family: 'Sora', sans-serif; font-weight: 600; color: var(--navy);
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .faq__item summary::-webkit-details-marker { display: none; }
+    .faq__item summary::after {
+      content: '+'; font-size: 1.4rem; color: var(--teal); transition: transform .2s ease; line-height: 1;
+    }
+    .faq__item[open] summary::after { transform: rotate(45deg); }
+    .faq__item p { margin: 0 0 1.1rem; color: var(--ink-soft); }
+    .faq__item summary:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; border-radius: 6px; }
+
+    /* ---------- FINAL CTA ---------- */
+    .final {
+      padding: clamp(4rem, 10vw, 6.5rem) 0;
+      background:
+        radial-gradient(120% 100% at 85% 10%, rgba(121,199,72,.28), transparent 55%),
+        linear-gradient(160deg, var(--navy), var(--navy-deep));
+      color: #fff; text-align: center;
+    }
+    .final__inner { display: flex; flex-direction: column; align-items: center; }
+    .final__title { font-size: clamp(1.8rem, 6vw, 3rem); font-weight: 800; letter-spacing: -0.02em; max-width: 16ch; }
+    .final__sub { color: #cfe6e2; margin: .9rem 0 1.9rem; max-width: 40ch; }
+    .final__phone { margin-top: 1.2rem; color: #cfe6e2; font-size: .96rem; }
+    .final__phone a { color: #7fe3d4; font-weight: 600; }
+
+    /* ---------- FOOTER ---------- */
+    .foot { background: var(--navy-deep); color: #cddbe2; padding: 2.4rem 0 96px; text-align: center; }
+    .foot__name { font-family: 'Sora', sans-serif; font-weight: 700; font-size: 1.15rem; color: #fff; margin: 0 0 .4rem; }
+    .foot__line { margin: .2rem 0; font-size: .92rem; }
+    .foot a { color: #7fe3d4; text-decoration: none; }
+    .foot a:hover { text-decoration: underline; }
+
+    /* ---------- REVEAL (mejora progresiva; sin JS todo visible) ---------- */
+    .reveal { opacity: 1; transform: none; }
+    .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity .7s ease, transform .7s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    a:focus-visible { outline: 3px solid var(--lime); outline-offset: 3px; border-radius: 6px; }
+
+    /* ---------- Desktop ---------- */
+    @media (min-width: 720px) {
+      .about__grid { grid-template-columns: 1.05fr .95fr; gap: 3rem; }
+      .care__grid { grid-template-columns: repeat(3, 1fr); }
+      .trust__grid { grid-template-columns: repeat(4, 1fr); }
+      .path__track {
+        grid-template-columns: repeat(4, 1fr); gap: 1.4rem;
+      }
+      .path__step { padding: 3.2rem 0 0; }
+      .path__step::before {
+        left: -0.7rem; right: auto; top: 10px; bottom: auto;
+        width: calc(100% + 1.4rem); height: 2px;
+        background: linear-gradient(90deg, var(--teal), rgba(127,227,212,.25));
+      }
+      .path__step:last-child::before { display: none; }
+      .path__node { left: 0; top: 0; }
+      .reviews__grid { grid-template-columns: repeat(2, 1fr); }
+      .gallery__grid { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; }
+      .gallery__cell--wide { grid-column: span 2; grid-row: span 2; }
+      .gallery__cell--wide img { aspect-ratio: auto; }
+      .midcta__inner { flex-direction: row; justify-content: space-between; align-items: center; }
+      .place__grid { grid-template-columns: 1fr 1.1fr; align-items: stretch; }
+    }
+
+    @media (min-width: 1000px) {
+      .hero__lead { font-size: 1.22rem; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce || !('IntersectionObserver' in window)) return;
+      document.documentElement.classList.add('js');
+      var els = document.querySelectorAll('.reveal');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

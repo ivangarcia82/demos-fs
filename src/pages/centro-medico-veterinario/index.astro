@@ -1,0 +1,625 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Centro Médico Veterinario — Tu veterinaria de confianza en Mérida"
+  description="Consulta, urgencias, estudios, medicamentos y alimento para tus perros y gatos en Francisco Villa Poniente, Mérida. ⭐ 4.7 con 573 reseñas en Google. Escríbenos por WhatsApp."
+  slug="centro-medico-veterinario"
+  ogImage="/centro-medico-veterinario/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Instrument+Sans:ital,wght@0,400..600;1,400&display=swap"
+  favicon="🐾"
+  themeColor="#2a2f18"
+  whatsapp={"https://wa.me/529999205039"}
+  telefono={"999 920 5039"}
+  mapsUrl={"https://maps.google.com/?cid=13941033812148723018&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <!-- HERO compacto: letrero luminoso -->
+  <header class="v-hero">
+    <p class="v-hero-eyebrow">Francisco Villa Poniente · Mérida, Yucatán</p>
+    <h1 class="v-sign">
+      <span class="v-sign-line">Centro Médico</span>
+      <span class="v-sign-line">Veterinario</span>
+      <span class="v-sign-num" aria-hidden="true">328</span>
+    </h1>
+    <p class="v-hook">
+      Diagnósticos claros, trato honesto y urgencias que se atienden
+      de inmediato. Así cuidamos a tus perros y gatos.
+    </p>
+    <div class="v-hero-chips">
+      <span class="v-chip v-chip-gold">★ 4.7 · 573 reseñas en Google</span>
+      <span class="v-chip">Sin cita · por orden de llegada</span>
+    </div>
+    <div class="v-hero-ctas">
+      <a class="v-btn v-btn-wa" href="https://wa.me/529999205039" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1-.3-.1-1.1-.4-2-1.2-.8-.7-1.3-1.5-1.4-1.8-.2-.3 0-.4.1-.5l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.1s.9 2.5 1 2.6c.1.2 1.8 2.7 4.3 3.8.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0-.1-.2-.2-.5-.3z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+      <a class="v-btn v-btn-ghost" href="https://maps.google.com/?cid=13941033812148723018&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+        Cómo llegar
+      </a>
+    </div>
+  </header>
+
+  <!-- MOSAICO arriba del pliegue -->
+  <section class="v-mosaic" aria-label="Fotos del Centro Médico Veterinario">
+    <figure class="v-tile v-tile-facade">
+      <img src="/centro-medico-veterinario/img/foto_2.jpg" alt="Fachada del Centro Médico Veterinario con su letrero luminoso en la calle 103, Mérida" width="822" height="1094" fetchpriority="high" />
+    </figure>
+    <figure class="v-tile v-tile-exam">
+      <img src="/centro-medico-veterinario/img/foto_4.jpg" alt="Gatita gris y blanca en la mesa de exploración durante su consulta" width="1100" height="619" loading="lazy" />
+    </figure>
+    <div class="v-tile v-tile-stat" role="figure" aria-label="Calificación 4.7 de 5 con 573 reseñas en Google">
+      <span class="v-stat-num">4.7</span>
+      <span class="v-stat-stars" aria-hidden="true">★★★★★</span>
+      <span class="v-stat-label">573 reseñas en Google</span>
+    </div>
+    <figure class="v-tile v-tile-collar">
+      <img src="/centro-medico-veterinario/img/foto_3.jpg" alt="Gato atigrado con collar tejido verde, paciente de la clínica" width="822" height="1096" loading="lazy" />
+    </figure>
+    <figure class="v-tile v-tile-tabby">
+      <img src="/centro-medico-veterinario/img/foto_5.jpg" alt="Retrato de un gato atigrado con collar azul en la clínica" width="1100" height="825" loading="lazy" />
+    </figure>
+    <figure class="v-tile v-tile-store">
+      <img src="/centro-medico-veterinario/img/foto_1.jpg" alt="Recepción y tienda con alimento y dietas especializadas para mascotas" width="822" height="1094" loading="lazy" />
+    </figure>
+  </section>
+
+  <main>
+    <!-- SOBRE NOSOTROS -->
+    <section class="v-section reveal" id="nosotros">
+      <p class="v-eyebrow">Quiénes somos</p>
+      <h2>La veterinaria de confianza del rumbo</h2>
+      <p>
+        Somos un centro médico veterinario de barrio en Francisco Villa Poniente,
+        en Mérida. Aquí las doctoras te explican cada diagnóstico con claridad y
+        honestidad, sin rodeos ni tecnicismos, para que sepas exactamente qué
+        tiene tu mascota y qué sigue. Por eso muchas familias nos llaman
+        "la veterinaria de confianza" de sus perritos y gatitos.
+      </p>
+      <p>
+        Cuando llega una urgencia, la recibimos de inmediato: primero se atiende
+        al paciente, después el papeleo. Para consultas del día a día trabajamos
+        por orden de llegada — pasa a recepción, dinos qué servicio necesitas y
+        te avisamos cuando sea tu turno.
+      </p>
+      <p>
+        Además de consulta, en nuestra recepción encuentras alimento, dietas
+        especializadas, premios y accesorios, para que resuelvas todo en una
+        sola vuelta.
+      </p>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section class="v-section v-section-services reveal" id="servicios">
+      <p class="v-eyebrow">Servicios</p>
+      <h2>Todo para tu mascota, en un solo lugar</h2>
+      <ul class="v-services">
+        <li>
+          <span class="v-svc-ico" aria-hidden="true">🩺</span>
+          <h3>Consulta médica general</h3>
+          <p>Revisión completa y diagnóstico claro para perros y gatos.</p>
+        </li>
+        <li>
+          <span class="v-svc-ico" aria-hidden="true">🚨</span>
+          <h3>Urgencias</h3>
+          <p>Te recibimos de inmediato cuando tu mascota más lo necesita.</p>
+        </li>
+        <li>
+          <span class="v-svc-ico" aria-hidden="true">🔬</span>
+          <h3>Estudios y análisis</h3>
+          <p>Apoyamos cada diagnóstico con los estudios necesarios.</p>
+        </li>
+        <li>
+          <span class="v-svc-ico" aria-hidden="true">💊</span>
+          <h3>Medicamentos</h3>
+          <p>Sales de consulta con el tratamiento en la mano.</p>
+        </li>
+        <li>
+          <span class="v-svc-ico" aria-hidden="true">🛒</span>
+          <h3>Alimento y accesorios</h3>
+          <p>Croquetas, dietas especializadas, premios y más en recepción.</p>
+        </li>
+        <li>
+          <span class="v-svc-ico" aria-hidden="true">📋</span>
+          <h3>Atención sin cita</h3>
+          <p>Por orden de llegada: regístrate en recepción y te llamamos.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- PRUEBA SOCIAL -->
+    <section class="v-section v-section-reviews reveal" id="resenas">
+      <p class="v-eyebrow">Reseñas reales</p>
+      <h2>Lo que dicen sus familias</h2>
+      <p class="v-rating-line"><strong>★ 4.7</strong> · 573 reseñas en Google</p>
+
+      <blockquote class="v-review">
+        <p>"Muy recomendable la doctora Mayte, siempre nos ha atendido muy bien,
+        es la veterinaria de confianza de mis perritos! Siempre explica muy bien,
+        de manera honesta, clara y con diagnósticos certeros…"</p>
+        <footer><cite>Amanda Molina</cite> · ★★★★★ · Hace 6 meses</footer>
+      </blockquote>
+
+      <blockquote class="v-review">
+        <p>"Anoche llevamos de urgencia a mi cachorro, nos recibieron de inmediato,
+        gracias a Dios las doctoras nos brindaron su excelente atención y
+        solucionaron en el momento el problema de mi cachorro, al final no fue
+        nada de cuidado, supieron abordar excelente el problema, estamos
+        agradecidos, lo recomendamos 🙏🏼❤️"</p>
+        <footer><cite>Laura Perez ruiz</cite> · ★★★★★ · Hace 4 meses</footer>
+      </blockquote>
+
+      <blockquote class="v-review">
+        <p>"Buen trato de la Dra. Todo el personal muy amable. Excelente servicio.
+        Lo recomiendo mucho."</p>
+        <footer><cite>CARLOS MOYAO VALADES</cite> · ★★★★★ · Hace 3 meses</footer>
+      </blockquote>
+
+      <a class="v-btn v-btn-outline" href="https://maps.google.com/?cid=13941033812148723018&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+        Leer más reseñas en Google
+      </a>
+    </section>
+
+    <!-- UBICACIÓN Y HORARIOS -->
+    <section class="v-section v-section-map reveal" id="ubicacion">
+      <p class="v-eyebrow">Visítanos</p>
+      <h2>Ubicación y horarios</h2>
+      <p class="v-address">
+        C. 103 Diag. 328, entre 34 y 36,<br />
+        Francisco Villa Poniente, 97206 Mérida, Yuc.
+      </p>
+      <div class="v-map">
+        <iframe
+          src="https://www.google.com/maps?q=C.%20103%20Diag.%20328%2C%20entre%2034%20y%2036%2C%20Francisco%20Villa%20Poniente%2C%2097206%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&amp;output=embed"
+          width="600" height="320" style="border:0" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa: Centro Médico Veterinario, Francisco Villa Poniente, Mérida"></iframe>
+      </div>
+      <div class="v-hours-wrap">
+        <table class="v-hours">
+          <caption>Horarios de atención</caption>
+          <tbody>
+            <tr data-day="1"><th scope="row">Lunes</th><td>9:00–14:00 y 16:00–20:00</td></tr>
+            <tr data-day="2"><th scope="row">Martes</th><td>9:00–14:00 y 16:00–20:00</td></tr>
+            <tr data-day="3"><th scope="row">Miércoles</th><td>9:00–14:00 y 16:00–20:00</td></tr>
+            <tr data-day="4"><th scope="row">Jueves</th><td>9:00–14:00 y 16:00–20:00</td></tr>
+            <tr data-day="5"><th scope="row">Viernes</th><td>9:00–14:00 y 16:00–20:00</td></tr>
+            <tr data-day="6"><th scope="row">Sábado</th><td>8:00–16:00</td></tr>
+            <tr data-day="0" class="v-closed"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="v-footer">
+    <p class="v-footer-sign">Centro Médico Veterinario</p>
+    <p class="v-footer-addr">C. 103 Diag. 328, Francisco Villa Poniente, Mérida, Yuc.</p>
+    <p class="v-footer-tel">
+      <a href="tel:+529999205039">999 920 5039</a>
+    </p>
+  </footer>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Centro Médico Veterinario",
+    "telephone": "+52 999 920 5039",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 103 Diag. 328, entre 34 y 36, Francisco Villa Poniente",
+      "postalCode": "97206",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.7",
+      "reviewCount": "573"
+    },
+    "openingHours": ["Mo-Fr 09:00-14:00", "Mo-Fr 16:00-20:00", "Sa 08:00-16:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --paper: #f6f3e9;
+      --ink: #23261a;
+      --olive: #2a2f18;
+      --olive-soft: #3a4022;
+      --khaki: #b3a176;
+      --green: #57a11e;
+      --green-deep: #47821a;
+      --gold: #f3c53a;
+      --cream: #f5efd8;
+    }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Instrument Sans', system-ui, sans-serif;
+      font-size: 1.0625rem;
+      line-height: 1.65;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Bricolage Grotesque', 'Instrument Sans', sans-serif;
+      line-height: 1.12;
+      margin: 0 0 0.6em;
+    }
+
+    /* ---------- HERO: letrero luminoso (elemento firma) ---------- */
+    .v-hero {
+      background:
+        radial-gradient(120% 90% at 50% 0%, var(--olive-soft) 0%, var(--olive) 62%);
+      color: var(--cream);
+      text-align: center;
+      padding: 2.4rem 1.25rem 2rem;
+      border-bottom: 6px solid var(--green);
+    }
+    .v-hero-eyebrow {
+      margin: 0 0 1.2rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--khaki);
+    }
+    .v-sign {
+      position: relative;
+      display: inline-block;
+      margin: 0 auto 1rem;
+      font-weight: 800;
+      font-optical-sizing: auto;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: clamp(1.7rem, 7.4vw, 3.4rem);
+      color: var(--cream);
+      text-shadow:
+        0 0 14px rgba(243, 197, 58, 0.55),
+        0 0 38px rgba(243, 197, 58, 0.32),
+        0 2px 2px rgba(0, 0, 0, 0.35);
+      animation: v-glow 4.5s ease-in-out infinite;
+    }
+    .v-sign-line { display: block; }
+    .v-sign-num {
+      position: absolute;
+      top: -0.9em;
+      right: -0.4em;
+      font-size: 0.34em;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      color: var(--olive);
+      background: var(--khaki);
+      border-radius: 4px;
+      padding: 0.15em 0.5em;
+      text-shadow: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+    @keyframes v-glow {
+      0%, 100% { text-shadow: 0 0 14px rgba(243,197,58,.55), 0 0 38px rgba(243,197,58,.32), 0 2px 2px rgba(0,0,0,.35); }
+      50%      { text-shadow: 0 0 20px rgba(243,197,58,.7),  0 0 52px rgba(243,197,58,.42), 0 2px 2px rgba(0,0,0,.35); }
+    }
+    .v-hook {
+      max-width: 34ch;
+      margin: 0 auto 1.25rem;
+      font-size: 1.06rem;
+      color: #e8e3cd;
+    }
+    .v-hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 1.4rem;
+    }
+    .v-chip {
+      font-size: 0.82rem;
+      font-weight: 600;
+      padding: 0.32em 0.85em;
+      border-radius: 999px;
+      border: 1px solid rgba(245, 239, 216, 0.35);
+      color: var(--cream);
+    }
+    .v-chip-gold {
+      border-color: transparent;
+      background: var(--gold);
+      color: var(--olive);
+    }
+    .v-hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.7rem;
+    }
+
+    /* ---------- Botones ---------- */
+    .v-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      border-radius: 12px;
+      padding: 0.8em 1.4em;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .v-btn:active { transform: scale(0.97); }
+    .v-btn:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 2px;
+    }
+    .v-btn-wa {
+      background: var(--green-deep);
+      color: #fff;
+      box-shadow: 0 6px 18px rgba(71, 130, 26, 0.45);
+    }
+    .v-btn-ghost {
+      border: 2px solid rgba(245, 239, 216, 0.55);
+      color: var(--cream);
+    }
+    .v-btn-outline {
+      border: 2px solid var(--green-deep);
+      color: var(--green-deep);
+      margin-top: 0.5rem;
+    }
+
+    /* ---------- MOSAICO ---------- */
+    .v-mosaic {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 150px;
+      gap: 6px;
+      padding: 6px;
+      background: var(--olive);
+    }
+    .v-tile {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 10px;
+      position: relative;
+    }
+    .v-tile img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .v-tile-facade { grid-column: span 2; grid-row: span 2; }
+    .v-tile-facade img { object-position: 50% 16%; }
+    .v-tile-store  { grid-column: span 2; }
+    .v-tile-store img { object-position: 50% 26%; }
+    .v-tile-tabby img { object-position: 62% 40%; }
+    .v-tile-stat {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.1rem;
+      background: var(--green);
+      color: var(--olive);
+      text-align: center;
+      padding: 0.5rem;
+    }
+    .v-stat-num {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      font-size: 2.4rem;
+      line-height: 1;
+    }
+    .v-stat-stars { color: var(--cream); font-size: 1rem; letter-spacing: 0.1em; }
+    .v-stat-label { font-size: 0.78rem; font-weight: 600; }
+
+    @media (min-width: 720px) {
+      .v-mosaic {
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 175px;
+        gap: 8px;
+        padding: 8px;
+      }
+      .v-tile-facade { grid-column: 1 / 3; grid-row: 1 / 3; }
+      .v-tile-exam   { grid-column: 3 / 4; grid-row: 1; }
+      .v-tile-stat   { grid-column: 4 / 5; grid-row: 1; }
+      .v-tile-collar { grid-column: 3 / 4; grid-row: 2; }
+      .v-tile-tabby  { grid-column: 4 / 5; grid-row: 2; }
+      .v-tile-store  { grid-column: 1 / 5; grid-row: 3; }
+    }
+
+    /* ---------- Secciones ---------- */
+    .v-section {
+      max-width: 660px;
+      margin: 0 auto;
+      padding: 3rem 1.35rem 1rem;
+    }
+    .v-section h2 {
+      font-size: clamp(1.55rem, 5.4vw, 2.1rem);
+      font-weight: 700;
+    }
+    .v-eyebrow {
+      margin: 0 0 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--green-deep);
+    }
+
+    /* Servicios */
+    .v-services {
+      list-style: none;
+      margin: 1.4rem 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+    @media (min-width: 560px) {
+      .v-services { grid-template-columns: 1fr 1fr; }
+    }
+    .v-services li {
+      background: #fff;
+      border: 1px solid #e5dfc9;
+      border-top: 4px solid var(--khaki);
+      border-radius: 12px;
+      padding: 1.1rem 1.15rem 1rem;
+    }
+    .v-services li:nth-child(odd) { border-top-color: var(--green); }
+    .v-svc-ico { font-size: 1.5rem; display: block; margin-bottom: 0.35rem; }
+    .v-services h3 { font-size: 1.08rem; margin-bottom: 0.25em; }
+    .v-services p { margin: 0; font-size: 0.94rem; color: #4a4c3c; }
+
+    /* Reseñas */
+    .v-rating-line {
+      font-size: 1.05rem;
+      margin-top: -0.4rem;
+    }
+    .v-rating-line strong { color: var(--green-deep); }
+    .v-review {
+      margin: 1.1rem 0;
+      background: #fff;
+      border: 1px solid #e5dfc9;
+      border-radius: 14px;
+      padding: 1.2rem 1.25rem 1rem;
+      position: relative;
+    }
+    .v-review::before {
+      content: "“";
+      position: absolute;
+      top: -0.35em;
+      left: 0.35rem;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-size: 3.2rem;
+      font-weight: 800;
+      color: var(--khaki);
+      line-height: 1;
+    }
+    .v-review p { margin: 0 0 0.7rem; font-style: italic; }
+    .v-review footer {
+      font-size: 0.87rem;
+      font-weight: 600;
+      color: var(--green-deep);
+    }
+    .v-review cite { font-style: normal; }
+
+    /* Mapa y horarios */
+    .v-address { font-weight: 500; }
+    .v-map {
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e5dfc9;
+      margin: 1.1rem 0 1.4rem;
+    }
+    .v-map iframe { width: 100%; height: 320px; display: block; }
+    .v-hours-wrap {
+      overflow-x: auto;
+      background: #fff;
+      border: 1px solid #e5dfc9;
+      border-radius: 14px;
+      padding: 0.4rem 0 0;
+    }
+    .v-hours {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+    .v-hours caption {
+      text-align: left;
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      padding: 0.5rem 0.9rem 0.4rem;
+    }
+    .v-hours th, .v-hours td {
+      padding: 0.62rem 0.9rem;
+      border-bottom: 1px solid #efe9d5;
+      text-align: left;
+      font-size: 0.95rem;
+    }
+    .v-hours tr:last-child th, .v-hours tr:last-child td { border-bottom: 0; }
+    .v-hours th { font-weight: 600; }
+    .v-hours .v-closed td { color: #8a8570; }
+    .v-hours tr.hoy th, .v-hours tr.hoy td {
+      background: var(--green);
+      color: var(--olive);
+      font-weight: 700;
+    }
+    .v-hours tr.hoy th::after {
+      content: " · hoy";
+      font-size: 0.78em;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Footer */
+    .v-footer {
+      margin-top: 3rem;
+      background: var(--olive);
+      color: var(--cream);
+      text-align: center;
+      padding: 2.2rem 1.25rem 5.5rem; /* espacio extra para el CTA flotante */
+      border-top: 6px solid var(--green);
+    }
+    .v-footer-sign {
+      font-family: 'Bricolage Grotesque', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-size: 1.15rem;
+      margin: 0 0 0.4rem;
+      text-shadow: 0 0 12px rgba(243, 197, 58, 0.45);
+    }
+    .v-footer-addr { margin: 0 0 0.5rem; font-size: 0.9rem; color: #d9d3b8; }
+    .v-footer-tel { margin: 0; }
+    .v-footer-tel a {
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 1.15rem;
+      text-decoration: none;
+    }
+    .v-footer-tel a:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+    }
+
+    /* Scroll-reveal (solo cuando hay JS) */
+    .js .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.55s ease, transform 0.55s ease;
+    }
+    .js .reveal.in {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+
+  <script is:inline>
+    document.documentElement.classList.add('js');
+
+    // Resaltar el día actual en la tabla de horarios
+    var hoy = new Date().getDay();
+    var fila = document.querySelector('.v-hours tr[data-day="' + hoy + '"]');
+    if (fila) fila.classList.add('hoy');
+
+    // Scroll-reveal como mejora progresiva
+    var reveals = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('in');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -8% 0px' });
+      reveals.forEach(function (el) { io.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add('in'); });
+    }
+  </script>
+</BaseLayout>

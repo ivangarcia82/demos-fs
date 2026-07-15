@@ -1,0 +1,601 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// ── Datos del dossier (fuente de verdad) ───────────────────────────────
+const nombre = 'Cucu Bistro & Coffee';
+const wa = 'https://wa.me/529991998428';
+const tel = '999 199 8428';
+const telHref = 'tel:9991998428';
+const maps = 'https://maps.google.com/?cid=3389459478314301122';
+const direccion = 'Av. José Díaz Bolio 78, Col. México, 97125 Mérida, Yuc.';
+const mapQ =
+  'https://www.google.com/maps?q=' +
+  encodeURIComponent(
+    'Av Jose Diaz Bolio 78, Col. México, México, 97125 Mérida, Yuc., México'
+  ) +
+  '&output=embed';
+
+const horarios = [
+  ['Lunes', '8:00 – 15:00'],
+  ['Martes', '8:00 – 15:00'],
+  ['Miércoles', '8:00 – 15:00'],
+  ['Jueves', '8:00 – 15:00'],
+  ['Viernes', '8:00 – 15:00'],
+  ['Sábado', '8:00 – 15:00'],
+  ['Domingo', '8:00 – 15:00'],
+];
+
+const atributos = [
+  'Aceptan reservaciones',
+  'Servicio a domicilio',
+  'Para llevar',
+  'Área al aire libre',
+  'Opciones vegetarianas',
+  'Aceptan tarjetas',
+  'Estacionamiento',
+  'Acceso silla de ruedas',
+];
+
+// Reseñas reales, fragmentos CONTIGUOS y verbatim (sin quejas).
+const resenas = [
+  {
+    texto:
+      '…acompañan con papas hechas en casa, tipo guisaditas, en lugar de las típicas papas de bolsa que muchos lugares terminan usando. Ese detalle se agradece muchísimo.',
+    autor: 'Rubén Darío Pérez Padilla',
+    cuando: 'Hace 3 meses',
+  },
+  {
+    texto:
+      'Me gusto mucho la distribucion del lugar ya que tiene diferentes areas para sentarse dependiendo el mood.',
+    autor: 'Paulina T. Macías',
+    cuando: 'Hace 2 meses',
+  },
+  {
+    texto:
+      'El pan de elote es súper delicioso, bien húmedo y crujiente por afuera.',
+    autor: 'Julito R.',
+    cuando: 'Hace 3 meses',
+  },
+  {
+    texto:
+      '…El café estuvo muy muy rico y fresco. Y la atención de Angélica fue excelente!',
+    autor: 'Naila Rogu',
+    cuando: 'Hace 5 meses',
+  },
+];
+
+const platillos = [
+  {
+    img: '/cucu-bistro-norte/img/foto_3.jpg',
+    nombre: 'Chilaquiles rojos',
+    desc: 'Totopos crujientes bañados en salsa de la casa, con huevo y su toque de chile. Van con jugo natural.',
+  },
+  {
+    img: '/cucu-bistro-norte/img/foto_5.jpg',
+    nombre: 'Chilaquiles verdes con pollo',
+    desc: 'Salsa verde, crema, queso y pollo a la plancha. Un plato generoso para arrancar el día.',
+  },
+  {
+    img: '/cucu-bistro-norte/img/foto_4.jpg',
+    nombre: 'Café de especialidad',
+    desc: '«El café estuvo muy muy rico y fresco», dicen los clientes. Cappuccino con arte, latte o americano.',
+  },
+];
+
+const favoritos = [
+  ['Waffles Cucu', 'De los más pedidos para desayunar.'],
+  ['Pan de elote', 'Húmedo por dentro, crujiente por fuera.'],
+  ['Papas hechas en casa', 'Guisaditas, nada de bolsa.'],
+];
+
+const faqs = [
+  ['¿Necesito reservar?', 'Aceptamos reservaciones con gusto. Escríbenos por WhatsApp y te apartamos mesa.'],
+  ['¿Tienen opciones vegetarianas?', 'Sí, contamos con opciones vegetarianas en la carta.'],
+  ['¿Puedo llevar a mi mascota?', 'Sí. Como cuenta un cliente: «En el salón comedor aceptan mascotas.»'],
+  ['¿Aceptan tarjeta?', 'Sí, aceptamos pagos con tarjeta, además de servicio a domicilio y para llevar.'],
+];
+---
+<BaseLayout
+  title="Cucu Bistro & Coffee · Desayunos en Mérida"
+  description="Desayunos y comidas todos los días de 8 a 3 en el norte de Mérida. ⭐ 4.8 con 1,277 reseñas en Google. Reserva tu mesa por WhatsApp."
+  slug="cucu-bistro-norte"
+  ogImage="/cucu-bistro-norte/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=Work+Sans:wght@400;500;600;700&display=swap"
+  favicon="🐦"
+  themeColor="#3B1522"
+  whatsapp={wa}
+  telefono={tel}
+  mapsUrl={maps}
+>
+  <main class="cucu">
+
+    <!-- ══════════ HERO ══════════ -->
+    <header class="hero">
+      <div class="wrap hero__top">
+        <p class="eyebrow eyebrow--cream">Bistro &amp; Coffee · Norte de Mérida</p>
+        <h1 class="wordmark">
+          <span>C</span><span>U</span><span class="wordmark__bird">C</span><span>U</span>
+        </h1>
+        <p class="hero__hook">
+          Desayunos que se disfrutan sin prisa. Comida hecha con cariño,
+          café fresco y una casa con rincones para cada <em>mood</em>.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn--solid" href={wa} target="_blank" rel="noopener">
+            <svg class="wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4A9.8 9.8 0 016.2 15c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 01-2.4-1.5 9 9 0 01-1.6-2c-.2-.3 0-.5.1-.6l.5-.5.3-.5v-.5c0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7 2.6 1.1 3.1.9 3.7.8.6-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+            Reservar por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href={maps} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="hero__plate">
+        <img
+          src="/cucu-bistro-norte/img/foto_2.jpg"
+          alt="Mesa de Cucu Bistro con waffles, chilaquiles, pan de masa madre, jugo de naranja y café"
+          width="2870" height="1200"
+          fetchpriority="high" decoding="async"
+        />
+        <div class="seal" aria-label="Calificación 4.8 de 5 con 1,277 reseñas en Google">
+          <svg class="seal__ring" viewBox="0 0 200 200" aria-hidden="true">
+            <defs>
+              <path id="sealpath" d="M100,100 m-73,0 a73,73 0 1,1 146,0 a73,73 0 1,1 -146,0" />
+            </defs>
+            <text><textPath href="#sealpath" startOffset="0">· BISTRO &amp; COFFEE · MÉRIDA · DESAYUNOS DE 8 A 3 </textPath></text>
+          </svg>
+          <div class="seal__core">
+            <span class="seal__num">4.8</span>
+            <span class="seal__stars" aria-hidden="true">★★★★★</span>
+            <span class="seal__label">1,277 reseñas</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════════ QUIÉNES SOMOS ══════════ -->
+    <section class="band band--cream reveal">
+      <div class="wrap intro">
+        <p class="eyebrow eyebrow--tomato">La casa</p>
+        <h2 class="h2">Una casa para desayunar<br />con calma en el norte</h2>
+        <div class="intro__body">
+          <p>
+            Somos un bistró de barrio en la colonia México. La casa está cuidada
+            en cada detalle y se siente acogedora desde que llegas: hay
+            distintas áreas para sentarte según el <em>mood</em> del día, un salón
+            comedor donde también son bienvenidas las mascotas y un rincón al
+            aire libre entre plantas.
+          </p>
+          <p>
+            En la cocina se nota el cariño. Preparamos desde nuestras
+            papas guisaditas hechas en casa hasta el pan de elote, y servimos
+            café fresco todos los días. Buenas porciones, sabor honesto y una
+            atención por la que la gente vuelve.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ ATRIBUTOS ══════════ -->
+    <section class="band band--tomato attrs reveal" aria-label="Lo que ofrecemos">
+      <div class="wrap">
+        <ul class="chips">
+          {atributos.map((a) => (
+            <li class="chip"><span class="chip__tick" aria-hidden="true">✓</span>{a}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════ LO MÁS PEDIDO ══════════ -->
+    <section class="band band--cream reveal">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--tomato">De la cocina</p>
+        <h2 class="h2">Lo más pedido</h2>
+        <div class="dishes">
+          {platillos.map((p) => (
+            <article class="dish">
+              <div class="dish__img">
+                <img src={p.img} alt={p.nombre} width="900" height="900" loading="lazy" decoding="async" />
+              </div>
+              <h3 class="dish__name">{p.nombre}</h3>
+              <p class="dish__desc">{p.desc}</p>
+            </article>
+          ))}
+        </div>
+        <div class="favs">
+          <span class="favs__label">También favoritos</span>
+          <ul class="favs__list">
+            {favoritos.map((f) => (
+              <li><strong>{f[0]}</strong><span>{f[1]}</span></li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ EL LUGAR ══════════ -->
+    <section class="band band--wine place reveal">
+      <div class="wrap place__grid">
+        <div class="place__copy">
+          <p class="eyebrow eyebrow--mustard">El lugar</p>
+          <h2 class="h2 h2--cream">Rincones para cada momento</h2>
+          <p>
+            Adentro, un salón acogedor y con mascotas bienvenidas. Afuera, una
+            terraza entre plantas para los días de sol. Escoge dónde sentarte
+            según cómo amaneciste.
+          </p>
+          <a class="btn btn--solid" href={wa} target="_blank" rel="noopener">
+            <svg class="wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4A9.8 9.8 0 016.2 15c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 01-2.4-1.5 9 9 0 01-1.6-2c-.2-.3 0-.5.1-.6l.5-.5.3-.5v-.5c0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7 2.6 1.1 3.1.9 3.7.8.6-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+            Aparta tu mesa
+          </a>
+        </div>
+        <figure class="place__img">
+          <img src="/cucu-bistro-norte/img/foto_1.jpg" alt="Terraza al aire libre de Cucu Bistro, entre plantas y con sombrilla" width="920" height="1226" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ══════════ PRUEBA SOCIAL ══════════ -->
+    <section class="band band--cream reveal">
+      <div class="wrap">
+        <div class="proof__head">
+          <div class="proof__score">
+            <span class="proof__num">4.8</span>
+            <span class="proof__stars" aria-hidden="true">★★★★★</span>
+            <span class="proof__count">1,277 reseñas en Google</span>
+          </div>
+          <div class="proof__intro">
+            <p class="eyebrow eyebrow--tomato">Lo que dicen</p>
+            <h2 class="h2">Sus palabras, no las nuestras</h2>
+          </div>
+        </div>
+        <div class="quotes">
+          {resenas.map((r) => (
+            <figure class="quote">
+              <blockquote>{r.texto}</blockquote>
+              <figcaption><strong>{r.autor}</strong><span>{r.cuando}</span></figcaption>
+            </figure>
+          ))}
+        </div>
+        <a class="btn btn--outline" href={maps} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </section>
+
+    <!-- ══════════ UBICACIÓN + HORARIOS ══════════ -->
+    <section class="band band--cream reveal">
+      <div class="wrap loc">
+        <div class="loc__info">
+          <p class="eyebrow eyebrow--tomato">Visítanos</p>
+          <h2 class="h2">Dónde y cuándo</h2>
+          <p class="loc__addr">{direccion}</p>
+          <table class="hours">
+            <tbody>
+              {horarios.map((h) => (
+                <tr><th scope="row">{h[0]}</th><td>{h[1]}</td></tr>
+              ))}
+            </tbody>
+          </table>
+          <div class="cta-row cta-row--tight">
+            <a class="btn btn--solid" href={maps} target="_blank" rel="noopener">Cómo llegar</a>
+            <a class="btn btn--outline" href={telHref}>Llamar {tel}</a>
+          </div>
+        </div>
+        <div class="loc__map">
+          <iframe
+            title="Mapa de Cucu Bistro & Coffee"
+            src={mapQ}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ FAQ ══════════ -->
+    <section class="band band--cream band--tight reveal">
+      <div class="wrap faq">
+        <h2 class="h2 h2--center">Antes de venir</h2>
+        <div class="faq__list">
+          {faqs.map((q) => (
+            <details class="faq__item">
+              <summary>{q[0]}</summary>
+              <p>{q[1]}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════ CTA FINAL ══════════ -->
+    <section class="band band--wine closer reveal">
+      <div class="wrap closer__in">
+        <p class="eyebrow eyebrow--mustard">Te esperamos</p>
+        <h2 class="closer__title">Reserva tu mesa<br />y pásate a desayunar</h2>
+        <a class="btn btn--solid btn--lg" href={wa} target="_blank" rel="noopener">
+          <svg class="wa" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3C9.4 3 4 8.4 4 15c0 2.1.6 4.1 1.6 5.9L4 29l8.3-1.6c1.7.9 3.6 1.4 5.7 1.4 6.6 0 12-5.4 12-12S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.9 1 1-4.8-.3-.4A9.8 9.8 0 016.2 15c0-5.4 4.4-9.8 9.8-9.8s9.8 4.4 9.8 9.8-4.4 9.8-9.8 9.8zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.2s-.8 1-.9 1.1c-.2.2-.3.2-.6.1a8 8 0 01-2.4-1.5 9 9 0 01-1.6-2c-.2-.3 0-.5.1-.6l.5-.5.3-.5v-.5c0-.1-.7-1.6-.9-2.2-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.2 3.4 5.3 4.7 2.6 1.1 3.1.9 3.7.8.6-.1 1.8-.7 2-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <p class="closer__phone">o llámanos al <a href={telHref}>{tel}</a></p>
+      </div>
+    </section>
+
+    <footer class="foot">
+      <div class="wrap foot__in">
+        <p class="foot__name">Cucu Bistro &amp; Coffee</p>
+        <p class="foot__line">{direccion}</p>
+        <p class="foot__line">Abierto todos los días · 8:00 a 15:00</p>
+        <p class="foot__line"><a href={telHref}>{tel}</a></p>
+      </div>
+    </footer>
+  </main>
+
+  <style is:global>
+    /* ═══════════════ CUCU BISTRO — tokens ═══════════════ */
+    .cucu {
+      --wine:   #3B1522;   /* berenjena / vino profundo — agua de jamaica */
+      --wine-2: #55203033; /* wine translúcido */
+      --tomato: #C6402A;   /* rojo tomate — salsa de chilaquiles rojos */
+      --tomato-d:#A5321F;
+      --cream:  #F6EEE1;   /* crema cálida — platos y pan */
+      --cream-2:#FBF7EF;
+      --mustard:#E3A21C;   /* ámbar — logo "Bistro & Coffee" + jugo */
+      --teal:   #3E7E8F;   /* azul del pájaro cucú / sombrilla */
+      --ink:    #241519;   /* casi negro cálido */
+      --muted:  #7A5A54;
+
+      font-family: 'Work Sans', system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--cream);
+      line-height: 1.65;
+      overflow-x: clip;
+    }
+    .cucu :where(h1,h2,h3){ margin: 0; line-height: 1.02; }
+    .cucu p{ margin: 0 0 1em; }
+    .cucu a{ color: inherit; }
+    .cucu :focus-visible{
+      outline: 3px solid var(--teal);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .wrap{ width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: clamp(1.25rem, 5vw, 3rem); }
+
+    .band{ padding-block: clamp(3.5rem, 9vw, 6rem); }
+    .band--tight{ padding-block: clamp(2.75rem, 7vw, 4rem); }
+    .band--cream{ background: var(--cream); }
+    .band--wine{ background: var(--wine); color: var(--cream); }
+    .band--tomato{ background: var(--tomato); color: var(--cream); }
+
+    /* ── Tipografía compartida ── */
+    .eyebrow{
+      font: 600 .78rem/1 'Work Sans', sans-serif;
+      letter-spacing: .22em; text-transform: uppercase;
+      margin: 0 0 1rem;
+    }
+    .eyebrow--tomato{ color: var(--tomato); }
+    .eyebrow--mustard{ color: var(--mustard); }
+    .eyebrow--cream{ color: var(--mustard); }
+    .h2{
+      font: 800 clamp(2rem, 6.4vw, 3.4rem)/1.02 'Syne', sans-serif;
+      letter-spacing: -.02em; color: var(--wine);
+    }
+    .h2--cream{ color: var(--cream); }
+    .h2--center{ text-align: center; }
+
+    /* ── Botones ── */
+    .btn{
+      display: inline-flex; align-items: center; gap: .55rem;
+      font: 700 1rem/1 'Syne', sans-serif; letter-spacing: -.01em;
+      text-decoration: none; padding: .95rem 1.5rem; border-radius: 999px;
+      border: 2px solid transparent; cursor: pointer;
+      transition: transform .18s ease, background-color .18s ease, color .18s ease;
+    }
+    .btn .wa{ width: 1.2em; height: 1.2em; fill: currentColor; flex: none; }
+    .btn:hover{ transform: translateY(-2px); }
+    .btn--solid{ background: var(--tomato); color: #fff; }
+    .btn--solid:hover{ background: var(--tomato-d); }
+    .btn--ghost{ background: transparent; color: var(--cream); border-color: #ffffff66; }
+    .btn--ghost:hover{ border-color: var(--cream); }
+    .btn--outline{ background: transparent; color: var(--wine); border-color: var(--wine); }
+    .btn--outline:hover{ background: var(--wine); color: var(--cream); }
+    .btn--lg{ font-size: 1.12rem; padding: 1.1rem 1.9rem; }
+
+    .cta-row{ display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
+    .cta-row--tight{ margin-top: 1.4rem; }
+
+    /* ═══════════════ HERO ═══════════════ */
+    .hero{ background: var(--wine); color: var(--cream); }
+    .hero__top{ padding-top: clamp(2.5rem, 8vw, 4.5rem); padding-bottom: clamp(2rem, 6vw, 3rem); }
+    .wordmark{
+      font: 800 clamp(4.5rem, 27vw, 13rem)/.85 'Syne', sans-serif;
+      letter-spacing: -.04em; display: flex; gap: .01em;
+      margin: .3rem 0 1.2rem; color: var(--cream);
+    }
+    .wordmark__bird{ color: var(--mustard); position: relative; }
+    .wordmark__bird::after{
+      content:""; position: absolute; top: .1em; right: .06em;
+      width: .16em; height: .16em; border-radius: 50%;
+      background: var(--teal);
+    }
+    .hero__hook{
+      font-size: clamp(1.08rem, 3.6vw, 1.4rem); line-height: 1.5;
+      max-width: 30ch; color: #f6eee1e0;
+    }
+    .hero__hook em{ color: var(--mustard); font-style: italic; }
+
+    .hero__plate{ position: relative; }
+    .hero__plate img{
+      width: 100%; aspect-ratio: 21/10; object-fit: cover;
+      object-position: center 40%;
+    }
+    @media (max-width: 560px){
+      .hero__plate img{ aspect-ratio: 4/3; }
+    }
+
+    /* Sello circular (elemento firma) */
+    .seal{
+      position: absolute; right: clamp(1rem, 5vw, 3rem);
+      top: 0; transform: translateY(-50%);
+      width: clamp(112px, 30vw, 164px); aspect-ratio: 1;
+      display: grid; place-items: center; color: var(--wine);
+    }
+    .seal__ring{
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      animation: sealspin 26s linear infinite;
+    }
+    .seal__ring text{
+      font: 700 13px 'Syne', sans-serif; letter-spacing: 1.5px;
+      fill: var(--wine); text-transform: uppercase;
+    }
+    .seal__core{
+      position: relative; width: 74%; aspect-ratio: 1; border-radius: 50%;
+      background: var(--mustard); display: grid; place-content: center;
+      text-align: center; box-shadow: 0 10px 26px #1c0a1040;
+    }
+    .seal__num{ font: 800 clamp(1.6rem, 6vw, 2.3rem)/1 'Syne', sans-serif; letter-spacing: -.02em; }
+    .seal__stars{ display: block; font-size: .62rem; letter-spacing: 1px; margin-top: -.1em; color: var(--tomato-d); }
+    .seal__label{ display: block; font: 600 .58rem/1.1 'Work Sans', sans-serif; margin-top: .2em; text-transform: uppercase; letter-spacing: .06em; }
+    @keyframes sealspin{ to{ transform: rotate(360deg); } }
+
+    /* ═══════════════ QUIÉNES SOMOS ═══════════════ */
+    .intro .h2{ margin-bottom: 1.6rem; }
+    .intro__body{ display: grid; gap: 1.1rem; max-width: 62ch; font-size: 1.06rem; }
+    .intro__body em{ color: var(--tomato); font-style: normal; font-weight: 600; }
+
+    /* ═══════════════ ATRIBUTOS ═══════════════ */
+    .attrs{ padding-block: clamp(2rem, 5vw, 2.75rem); }
+    .chips{ list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .7rem; justify-content: center; }
+    .chip{
+      display: inline-flex; align-items: center; gap: .5rem;
+      background: #ffffff1a; border: 1px solid #ffffff40;
+      padding: .55rem 1rem; border-radius: 999px;
+      font: 600 .92rem/1 'Work Sans', sans-serif;
+    }
+    .chip__tick{ color: var(--mustard); font-weight: 800; }
+
+    /* ═══════════════ LO MÁS PEDIDO ═══════════════ */
+    .dishes{ display: grid; gap: 1.4rem; grid-template-columns: 1fr; margin-top: 2rem; }
+    @media (min-width: 620px){ .dishes{ grid-template-columns: repeat(3, 1fr); } }
+    .dish__img{ border-radius: 16px; overflow: hidden; background: #e7dccb; box-shadow: 0 14px 30px #3b152218; }
+    .dish__img img{ width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform .5s ease; }
+    .dish:hover .dish__img img{ transform: scale(1.05); }
+    .dish__name{ font: 700 1.25rem/1.1 'Syne', sans-serif; color: var(--wine); margin: 1rem 0 .35rem; }
+    .dish__desc{ font-size: .96rem; color: var(--muted); margin: 0; }
+
+    .favs{
+      margin-top: 2.4rem; border-top: 2px dashed #c9b7a4;
+      padding-top: 1.6rem; display: grid; gap: 1rem;
+    }
+    .favs__label{ font: 600 .78rem/1 'Work Sans'; letter-spacing: .18em; text-transform: uppercase; color: var(--tomato); }
+    .favs__list{ list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; grid-template-columns: 1fr; }
+    @media (min-width: 620px){ .favs__list{ grid-template-columns: repeat(3, 1fr); } }
+    .favs__list li{ display: flex; flex-direction: column; }
+    .favs__list strong{ font: 700 1.06rem/1.2 'Syne', sans-serif; color: var(--wine); }
+    .favs__list span{ font-size: .9rem; color: var(--muted); }
+
+    /* ═══════════════ EL LUGAR ═══════════════ */
+    .place__grid{ display: grid; gap: 2rem; align-items: center; }
+    @media (min-width: 760px){ .place__grid{ grid-template-columns: 1fr 1fr; gap: 3rem; } }
+    .place__copy p{ color: #f6eee1cc; font-size: 1.06rem; max-width: 40ch; }
+    .place__copy .h2{ margin-bottom: 1.1rem; }
+    .place__copy em{ color: var(--mustard); font-style: italic; }
+    .place__img{ margin: 0; border-radius: 18px; overflow: hidden; box-shadow: 0 20px 44px #1c0a1055; }
+    .place__img img{ width: 100%; aspect-ratio: 3/4; object-fit: cover; }
+    @media (max-width: 759px){ .place__img img{ aspect-ratio: 4/3; } }
+
+    /* ═══════════════ PRUEBA SOCIAL ═══════════════ */
+    .proof__head{ display: grid; gap: 1.6rem; align-items: center; margin-bottom: 2.2rem; }
+    @media (min-width: 640px){ .proof__head{ grid-template-columns: auto 1fr; gap: 2rem; } }
+    .proof__score{
+      background: var(--wine); color: var(--cream); border-radius: 18px;
+      padding: 1.4rem 1.8rem; text-align: center; align-self: start;
+    }
+    .proof__num{ font: 800 3.4rem/1 'Syne', sans-serif; letter-spacing: -.03em; display: block; color: var(--mustard); }
+    .proof__stars{ display: block; color: var(--mustard); letter-spacing: 3px; margin: .2rem 0; }
+    .proof__count{ font-size: .82rem; letter-spacing: .04em; opacity: .85; }
+
+    .quotes{ display: grid; gap: 1.2rem; grid-template-columns: 1fr; }
+    @media (min-width: 640px){ .quotes{ grid-template-columns: 1fr 1fr; } }
+    .quote{
+      margin: 0; background: var(--cream-2); border: 1px solid #e4d6c2;
+      border-left: 5px solid var(--tomato); border-radius: 12px;
+      padding: 1.4rem 1.5rem;
+    }
+    .quote blockquote{ margin: 0 0 1rem; font-size: 1.04rem; line-height: 1.55; color: var(--ink); }
+    .quote figcaption{ display: flex; flex-direction: column; }
+    .quote figcaption strong{ font: 700 .98rem/1.2 'Syne', sans-serif; color: var(--wine); }
+    .quote figcaption span{ font-size: .82rem; color: var(--muted); }
+    .quotes + .btn{ margin-top: 1.8rem; }
+
+    /* ═══════════════ UBICACIÓN ═══════════════ */
+    .loc{ display: grid; gap: 2rem; }
+    @media (min-width: 780px){ .loc{ grid-template-columns: .9fr 1.1fr; gap: 2.5rem; align-items: start; } }
+    .loc__addr{ font-size: 1.08rem; max-width: 34ch; margin-top: 1rem; }
+    .hours{ width: 100%; border-collapse: collapse; margin: .4rem 0 .2rem; max-width: 360px; }
+    .hours tr{ border-bottom: 1px solid #e0d0bd; }
+    .hours th{ text-align: left; font: 600 .96rem/1 'Work Sans'; padding: .55rem 0; color: var(--ink); }
+    .hours td{ text-align: right; font-variant-numeric: tabular-nums; color: var(--muted); padding: .55rem 0; }
+    .loc__map{ border-radius: 16px; overflow: hidden; box-shadow: 0 16px 36px #3b152220; min-height: 300px; }
+    .loc__map iframe{ width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+    /* ═══════════════ FAQ ═══════════════ */
+    .faq{ max-width: 720px; }
+    .faq .h2{ margin-bottom: 1.8rem; }
+    .faq__list{ display: grid; gap: .7rem; }
+    .faq__item{
+      background: var(--cream-2); border: 1px solid #e4d6c2;
+      border-radius: 12px; padding: 0 1.2rem;
+    }
+    .faq__item summary{
+      cursor: pointer; list-style: none; padding: 1.05rem 0;
+      font: 700 1.04rem/1.3 'Syne', sans-serif; color: var(--wine);
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .faq__item summary::-webkit-details-marker{ display: none; }
+    .faq__item summary::after{ content: "+"; color: var(--tomato); font-size: 1.4rem; line-height: 1; transition: transform .2s ease; }
+    .faq__item[open] summary::after{ transform: rotate(45deg); }
+    .faq__item p{ margin: 0 0 1.1rem; color: var(--muted); font-size: .98rem; }
+
+    /* ═══════════════ CTA FINAL ═══════════════ */
+    .closer__in{ text-align: center; display: grid; justify-items: center; }
+    .closer__title{
+      font: 800 clamp(2.2rem, 7vw, 3.6rem)/1.03 'Syne', sans-serif;
+      letter-spacing: -.02em; color: var(--cream); margin: .2rem 0 1.8rem;
+    }
+    .closer__phone{ margin-top: 1.3rem; color: #f6eee1b0; font-size: .98rem; }
+    .closer__phone a{ color: var(--mustard); font-weight: 600; text-decoration: none; }
+
+    /* ═══════════════ FOOTER ═══════════════ */
+    .foot{ background: var(--ink); color: #e8ddd0; padding-block: clamp(2.5rem, 6vw, 3.5rem) 90px; }
+    .foot__name{ font: 800 1.5rem/1 'Syne', sans-serif; color: var(--mustard); margin-bottom: .8rem; }
+    .foot__line{ margin: .2rem 0; font-size: .95rem; color: #cbbcad; }
+    .foot__line a{ color: #e8ddd0; text-decoration: underline; text-underline-offset: 3px; }
+
+    /* ═══════════════ SCROLL REVEAL (progresivo) ═══════════════ */
+    .js .reveal{ opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+    .js .reveal.in{ opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce){
+      .reveal, .js .reveal{ opacity: 1 !important; transform: none !important; }
+      .seal__ring{ animation: none !important; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

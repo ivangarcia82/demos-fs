@@ -1,0 +1,657 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const WA = 'https://wa.me/529994108497';
+const TEL = '999 410 8497';
+const MAPS = 'https://maps.google.com/?cid=15429569143750990764&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const MAPA_EMBED = 'https://www.google.com/maps?q=Maa%20Ke%20Mascota%2C%20Calle%2047%20286%2C%20entre%2014%20y%2016%2C%20Leandro%20Valle%2C%2097143%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed';
+
+// Firma visual: "toldo" de casita — un borde festoneado, como el toldo de tela
+// real del patio de Maa Ke Mascota. Se calcula en build-time con curvas Bézier
+// (evita el ambiguo sweep-flag de los arcos SVG), sin dependencias externas.
+const scallops = 14;
+const sw = 50;
+const depth = 30;
+let scallopPath = `M0,0 `;
+for (let i = 0; i < scallops; i++) {
+  const x0 = i * sw;
+  const xMid = x0 + sw / 2;
+  const x1 = x0 + sw;
+  scallopPath += `Q${xMid},${depth} ${x1},0 `;
+}
+scallopPath += `L${scallops * sw},22 L0,22 Z`;
+const scallopViewBox = `0 0 ${scallops * sw} 22`;
+---
+<BaseLayout
+  title="Maa Ke Mascota · Veterinaria, estética y hospedaje en Mérida"
+  description="⭐ 5.0 con 205 reseñas en Google. Veterinaria, spa y hospedaje sin jaulas para tu mascota en Leandro Valle, Mérida — la Dra. Raquel te manda foto y video de cómo la está pasando. Escríbenos por WhatsApp."
+  slug="maa-ke-mascota"
+  ogImage="/maa-ke-mascota/img/foto_4.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@500;700;800&family=Mulish:wght@400;500;700&display=swap"
+  favicon="🐶"
+  themeColor="#1fb0a6"
+  whatsapp={WA}
+  telefono={TEL}
+  mapsUrl={MAPS}
+>
+  <main class="mkm">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero" id="inicio">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="kicker reveal">Estética · Guardería · Veterinaria en Leandro Valle, Mérida</p>
+          <h1 class="brand reveal">Maa <span class="ke">Ke</span> Mascota</h1>
+          <p class="brand-sub reveal">Veterinaria Integrativa &amp; Spa</p>
+          <p class="tagline reveal">Tu mascota se queda como en casa — y la <strong>Dra. Raquel</strong> te manda foto y video para que la veas sonreír.</p>
+
+          <a class="chip reveal" href={MAPS} target="_blank" rel="noopener">
+            <span class="star" aria-hidden="true">★</span> 5.0 · 205 reseñas en Google
+          </a>
+
+          <div class="cta-row reveal">
+            <a class="btn btn-solid" href={WA} target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3z"/></svg>
+              Escríbenos por WhatsApp
+            </a>
+            <a class="btn btn-ghost" href={MAPS} target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+              Cómo llegar
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo reveal">
+          <div class="casita-frame">
+            <img
+              src="/maa-ke-mascota/img/foto_4.jpg"
+              alt="Perro descansando tranquilo y bien cuidado en las instalaciones de Maa Ke Mascota"
+              width="825" height="1100"
+            />
+          </div>
+        </div>
+      </div>
+
+      <svg class="toldo" viewBox={scallopViewBox} preserveAspectRatio="none" aria-hidden="true">
+        <path d={scallopPath}></path>
+      </svg>
+    </header>
+
+    <!-- ============ QUIÉNES SOMOS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap nosotros-grid">
+        <div class="nosotros-copy">
+          <p class="kicker reveal">Quiénes somos</p>
+          <h2 class="sec-title reveal">Como en casa, con la Dra. Raquel al pendiente</h2>
+          <div class="about reveal">
+            <p>En <strong>Maa Ke Mascota</strong> juntamos veterinaria, estética y hospedaje bajo un mismo techo, en Leandro Valle. La Dra. Raquel y su equipo revisan, bañan y consienten a cada paciente como si fuera propio — y te lo cuentan: mientras tu mascota se queda con nosotros te mandamos fotos y videos, para que no te quedes con la duda de cómo la está pasando.</p>
+            <p>Aquí las mascotas se hospedan libres de jaulas y socializan entre ellas. Del lado del spa salen bañadas, con corte de pelo y de uñas, y hasta con un detalle de color si lo pides. Perros, gatos y cachorros pasan por nuestras manos con el mismo cariño.</p>
+            <p>Si vas a dejar a tu mejor amigo unos días, a bañarlo o solo a que lo revisen, aquí lo tratamos como de la familia — la nuestra.</p>
+          </div>
+        </div>
+
+        <aside class="video-nota reveal" aria-label="Cómo te mantenemos informado">
+          <span class="video-nota-play" aria-hidden="true">▶</span>
+          <p><strong>Dra. Raquel</strong> — foto y video de tu mascota, directo a tu WhatsApp, mientras está con nosotros.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="sec sec-panel" id="servicios">
+      <div class="wrap">
+        <p class="kicker reveal">Qué ofrecemos</p>
+        <h2 class="sec-title reveal">Tres cuidados, una sola casa</h2>
+        <div class="servicios reveal">
+          <div class="serv-card">
+            <span class="icon-badge" aria-hidden="true">🩺</span>
+            <h3>Veterinaria</h3>
+            <p>Consultas con la Dra. Raquel, revisión general y orientación en alimentación y comportamiento.</p>
+          </div>
+          <div class="serv-card">
+            <span class="icon-badge" aria-hidden="true">✂️</span>
+            <h3>Estética y spa</h3>
+            <p>Baño, corte de pelo, corte de uñas y limpieza — con detalles como el toque de color que pidas.</p>
+          </div>
+          <div class="serv-card">
+            <span class="icon-badge" aria-hidden="true">🏡</span>
+            <h3>Guardería y hospedaje</h3>
+            <p>Estancia libre de jaulas, con fotos y video todos los días para que estés tranquilo.</p>
+          </div>
+          <div class="serv-card">
+            <span class="icon-badge" aria-hidden="true">🚐</span>
+            <h3>Transporte de mascotas</h3>
+            <p>Pasamos por tu mascota y la regresamos a la puerta de tu casa.</p>
+          </div>
+          <div class="serv-card">
+            <span class="icon-badge" aria-hidden="true">♿</span>
+            <h3>Instalaciones accesibles</h3>
+            <p>Acceso para silla de ruedas en todo el local.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESEÑAS ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="kicker reveal">Lo que dicen en Google</p>
+        <h2 class="sec-title reveal">5.0 <span class="stars" aria-hidden="true">★★★★★</span></h2>
+        <p class="sec-sub reveal">205 reseñas reales de clientes en Google</p>
+
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Nos encantó la atención de la Dra. Raquel, nos mantuvo informados de nuestra perrita con videos y mensajes, pero sobretodo ver socializar a nuestra Mayita sin problemas, fue genial y tranquilizador.»</blockquote>
+            <figcaption><strong>Aimee Ardines</strong><span>Hace 3 meses · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«…dejamos a su cuidado por 4 días a nuestra Pomerania de 9 meses y estuvo en las mejores manos, se veía muy contenta y bien atendida, igualmente la bañaron y le hicieron un corte de pelo que le quedo espectacular, el detalle de color en su colita fue maravilloso.»</blockquote>
+            <figcaption><strong>Isis Herrera</strong><span>Hace 1 mes · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Dejé a mi gatito Griseldo en estancia. En todos los videos y fotos se veía muy a gusto y muy consentido por Gretel y su mamá. Parece que Gris disfrutó mucho de su estancia y regresó igual o más amoroso que de costumbre.»</blockquote>
+            <figcaption><strong>Adriana Ramirez</strong><span>Hace 7 meses · Google</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="center reveal">
+          <a class="btn btn-ghost-dark" href={MAPS} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERÍA ============ -->
+    <section class="sec sec-panel" id="galeria">
+      <div class="wrap">
+        <p class="kicker reveal">Así se vive un día aquí</p>
+        <h2 class="sec-title reveal">Casa, spa y paseo</h2>
+        <div class="galeria reveal">
+          <div class="casita-frame g-item">
+            <img src="/maa-ke-mascota/img/foto_3.jpg" alt="Patio y entrada de Maa Ke Mascota, decorado con figuras de gato, en Leandro Valle, Mérida" loading="lazy" width="715" height="1100" />
+          </div>
+          <div class="casita-frame g-item">
+            <img src="/maa-ke-mascota/img/foto_2.jpg" alt="Cachorro recién llegado a hospedaje en Maa Ke Mascota" loading="lazy" width="619" height="1100" />
+          </div>
+          <div class="casita-frame g-item">
+            <img src="/maa-ke-mascota/img/foto_5.jpg" alt="Mascotas en paseo dentro de las instalaciones de Maa Ke Mascota" loading="lazy" width="825" height="1100" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec" id="ubicacion">
+      <div class="wrap">
+        <p class="kicker reveal">Visítanos</p>
+        <h2 class="sec-title reveal">Leandro Valle, Mérida</h2>
+        <div class="ubica reveal">
+          <div class="ubica-info">
+            <p class="dir">Calle 47 286, entre 14 y 16<br />Leandro Valle, 97143 Mérida, Yuc.</p>
+            <a class="btn btn-solid btn-sm" href={MAPS} target="_blank" rel="noopener">Abrir en Google Maps</a>
+
+            <h3 class="horario-titulo">Horario</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>10:00–19:30</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>10:00–19:30</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>10:00–19:30</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>10:00–19:30</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>10:00–17:00</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>Cerrado</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>10:30–17:00</td></tr>
+              </tbody>
+            </table>
+            <p class="nota-acceso">♿ Instalaciones con acceso para silla de ruedas.</p>
+          </div>
+          <div class="mapa">
+            <iframe
+              src={MAPA_EMBED}
+              title="Mapa: Maa Ke Mascota en Leandro Valle, Mérida"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <h2 class="banda-title">¿Le damos casa, spa y cuidado a tu mascota?</h2>
+        <p class="banda-sub">Escríbenos y te contamos cómo funciona el hospedaje, la estética o la próxima consulta.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href={WA} target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn-dark-ghost" href="tel:+529994108497">Llamar · 999 410 8497</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <p class="pie-logo">Maa Ke Mascota</p>
+        <p class="pie-dato">Veterinaria, estética y hospedaje · Calle 47 286, Leandro Valle, 97143 Mérida, Yuc.</p>
+        <p class="pie-dato"><a href="tel:+529994108497">999 410 8497</a> · <a href={WA} target="_blank" rel="noopener">WhatsApp</a></p>
+        <p class="pie-mini">Lun–jue 10:00–19:30 · Vie 10:00–17:00 · Dom 10:30–17:00 · Sáb cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Maa Ke Mascota",
+    "telephone": "+529994108497",
+    "url": "https://demos.ivang.mx/maa-ke-mascota",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 47 286, entre 14 y 16, Leandro Valle",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97143",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "205"
+    },
+    "openingHours": ["Mo-Th 10:00-19:30", "Fr 10:00-17:00", "Su 10:30-17:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --durazno: #fff0e4;
+      --paper: #fffaf4;
+      --turquesa: #1fb0a6;
+      --turquesa-deep: #0e7d76;
+      --coral: #ff8551;
+      --coral-deep: #a8451f;
+      --tinta: #3a2a20;
+      --muted: #6b5648;
+      --line: rgba(58, 42, 32, 0.14);
+      --display: "Baloo Bhai 2", system-ui, sans-serif;
+      --body: "Mulish", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--durazno);
+      color: var(--tinta);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .mkm ::selection { background: var(--coral); color: #fff; }
+    .mkm a:focus-visible,
+    .mkm .btn:focus-visible,
+    .mkm .chip:focus-visible {
+      outline: 3px solid var(--tinta);
+      outline-offset: 3px;
+      box-shadow: 0 0 0 6px rgba(255, 255, 255, 0.55);
+      border-radius: 4px;
+    }
+
+    .wrap { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+    .kicker {
+      font-weight: 700;
+      font-size: 12.5px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--coral-deep);
+      margin: 0 0 12px;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(30px, 7vw, 50px);
+      line-height: 1.04;
+      margin: 0 0 18px;
+      color: var(--tinta);
+    }
+    .sec-sub { margin: -8px 0 30px; color: var(--muted); font-size: 15.5px; }
+
+    /* ---------- BOTONES ---------- */
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 16.5px;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 999px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--coral); color: #2b1a10; }
+    .btn-solid:hover { background: #ff9a6c; }
+    .btn-ghost { border: 2px solid rgba(58, 42, 32, 0.32); color: var(--tinta); }
+    .btn-ghost:hover { border-color: var(--tinta); background: rgba(58, 42, 32, 0.08); }
+    .btn-ghost-dark { border: 2px solid var(--line); color: var(--tinta); }
+    .btn-ghost-dark:hover { border-color: var(--coral-deep); color: var(--coral-deep); }
+    .btn-sm { font-size: 15px; padding: 11px 18px; }
+    .btn-dark { background: var(--tinta); color: var(--durazno); }
+    .btn-dark:hover { background: #4c382a; }
+    .btn-dark-ghost { border: 2px solid rgba(58, 42, 32, 0.4); color: var(--tinta); }
+    .btn-dark-ghost:hover { border-color: var(--tinta); }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      background: var(--turquesa);
+      padding: 44px 0 0;
+      overflow: hidden;
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding-bottom: 56px;
+    }
+    .hero-copy .kicker { color: var(--tinta); }
+    .brand {
+      margin: 0;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(40px, 12vw, 68px);
+      line-height: 1;
+      color: var(--tinta);
+    }
+    .brand .ke {
+      display: inline-block;
+      background: var(--paper);
+      color: var(--coral-deep);
+      font-size: 0.5em;
+      padding: 0.05em 0.4em 0.12em;
+      border-radius: 999px;
+      transform: rotate(-6deg);
+      vertical-align: middle;
+      box-shadow: 0 4px 10px rgba(58, 42, 32, 0.25);
+    }
+    .brand-sub {
+      margin: 10px 0 0;
+      font-weight: 700;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--tinta);
+    }
+    .tagline {
+      font-size: clamp(18px, 4.4vw, 22px);
+      font-weight: 500;
+      color: var(--tinta);
+      max-width: 34ch;
+      margin: 20px 0 0;
+    }
+    .tagline strong { font-weight: 800; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--paper);
+      border-radius: 999px;
+      padding: 9px 16px;
+      margin-top: 22px;
+      font-weight: 700;
+      font-size: 14.5px;
+      color: var(--tinta);
+      text-decoration: none;
+    }
+    .chip .star { color: var(--coral-deep); }
+    .chip:hover { background: #fff; }
+
+    .hero-photo { display: flex; justify-content: center; }
+    .casita-frame {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      max-width: 340px;
+      aspect-ratio: 3 / 4;
+      border-radius: 999px 999px 20px 20px;
+      box-shadow: 0 20px 44px rgba(58, 42, 32, 0.3);
+      background: var(--paper);
+    }
+    .casita-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+    .toldo { display: block; width: 100%; height: 22px; }
+    .toldo path { fill: var(--durazno); }
+
+    /* ---------- QUIÉNES SOMOS ---------- */
+    .sec { padding: 64px 0; }
+    .sec-panel { background: var(--paper); }
+    .nosotros-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 30px;
+      align-items: start;
+    }
+    .about p { max-width: 62ch; margin: 0 0 16px; color: #55402f; }
+    .about strong { color: var(--tinta); }
+
+    .video-nota {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      background: var(--turquesa);
+      color: var(--tinta);
+      border-radius: 20px 20px 20px 4px;
+      padding: 20px 22px;
+      max-width: 420px;
+      box-shadow: 0 14px 30px rgba(31, 176, 166, 0.28);
+    }
+    .video-nota-play {
+      flex: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: var(--coral);
+      color: #2b1a10;
+      font-size: 13px;
+    }
+    .video-nota p { margin: 0; font-size: 15px; line-height: 1.5; }
+    .video-nota strong { color: var(--tinta); }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+    .serv-card {
+      background: var(--durazno);
+      border-radius: 18px;
+      padding: 24px;
+      border: 1px solid var(--line);
+    }
+    .icon-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--paper);
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+    .serv-card h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 19px;
+      margin: 0 0 6px;
+      color: var(--tinta);
+    }
+    .serv-card p { margin: 0; color: var(--muted); font-size: 15px; }
+
+    /* ---------- RESEÑAS ---------- */
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+      margin: 0 0 30px;
+    }
+    .rev {
+      margin: 0;
+      background: var(--paper);
+      border-radius: 18px;
+      padding: 22px 22px 20px;
+      border: 1px solid var(--line);
+    }
+    .rev-stars { color: var(--coral-deep); font-size: 16px; letter-spacing: 0.16em; margin: 0 0 10px; }
+    .rev blockquote { margin: 0 0 16px; font-size: 16px; line-height: 1.56; color: #453425; }
+    .rev figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .rev figcaption strong { font-family: var(--display); font-weight: 700; font-size: 16px; color: var(--tinta); }
+    .rev figcaption span { font-size: 13px; color: var(--muted); }
+    .center { text-align: center; }
+    .stars { color: var(--coral-deep); font-size: 0.55em; letter-spacing: 0.1em; vertical-align: middle; }
+
+    /* ---------- GALERÍA ---------- */
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+    .g-item { max-width: none; box-shadow: 0 12px 26px rgba(58, 42, 32, 0.2); }
+    .g-item:first-child { grid-column: 1 / -1; max-width: 320px; margin: 0 auto; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 26px; }
+    .dir { font-size: 17px; font-weight: 600; margin: 0 0 16px; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 19px;
+      margin: 28px 0 10px;
+      color: var(--tinta);
+    }
+    .horarios { width: 100%; max-width: 400px; border-collapse: collapse; font-size: 15px; }
+    .horarios th, .horarios td { padding: 9px 4px; border-bottom: 1px solid var(--line); text-align: left; }
+    .horarios th { font-weight: 600; color: var(--tinta); }
+    .horarios td { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: #fff; background: var(--turquesa-deep); font-weight: 700; }
+    .horarios tr.hoy th { border-radius: 8px 0 0 8px; padding-left: 10px; }
+    .horarios tr.hoy td { border-radius: 0 8px 8px 0; padding-right: 10px; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-size: 10.5px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--coral);
+      color: #2b1a10;
+      border-radius: 4px;
+      padding: 2px 6px;
+      margin-left: 8px;
+    }
+    .nota-acceso { margin: 16px 0 0; color: var(--muted); font-size: 14px; }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 18px;
+      display: block;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda {
+      background: var(--coral);
+      color: #2b1a10;
+      padding: 56px 0;
+      text-align: center;
+    }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(28px, 7vw, 44px);
+      line-height: 1.08;
+      margin: 0 0 12px;
+    }
+    .banda-sub { margin: 0 auto 24px; max-width: 40ch; font-weight: 500; }
+    .banda .cta-row { justify-content: center; }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      background: var(--tinta);
+      color: var(--durazno);
+      padding: 40px 0 88px;
+      text-align: center;
+    }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 26px;
+      margin: 0 0 10px;
+      color: #fff;
+    }
+    .pie-dato { margin: 5px 0; color: #d9c3b3; font-size: 14px; }
+    .pie-dato a { color: var(--durazno); text-decoration: none; border-bottom: 1px solid var(--coral); }
+    .pie-dato a:hover { color: var(--coral); }
+    .pie-mini { margin: 14px 0 0; color: #b8a493; font-size: 12px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 96px 0; }
+      .hero-grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; padding-bottom: 72px; }
+      .hero-photo { justify-content: flex-end; }
+      .nosotros-grid { grid-template-columns: 1.3fr 0.9fr; }
+      .servicios { grid-template-columns: repeat(3, 1fr); }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .galeria { grid-template-columns: repeat(3, 1fr); }
+      .g-item:first-child { grid-column: auto; max-width: none; margin: 0; }
+      .ubica { grid-template-columns: 1fr 1.15fr; align-items: start; }
+      .mapa iframe { height: 400px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      // Resaltar el día de hoy en la tabla de horarios
+      var hoy = new Date().getDay(); // 0 = domingo
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      // Scroll-reveal (mejora progresiva)
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,633 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="A&K Barbershop — Corte y barba en Residencial Floresta, Mérida"
+  description="Barbería en Plaza Laurel, Mérida · ★ 5.0 con 73 reseñas en Google. Degradados a la primera, barba con toallas calientes y frías, y café de cortesía. Agenda por WhatsApp."
+  slug="ak-barbershop"
+  ogImage="/ak-barbershop/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&display=swap"
+  favicon="💈"
+  themeColor="#131316"
+  whatsapp={"https://wa.me/528128868312"}
+  telefono={"81 2886 8312"}
+  mapsUrl={"https://maps.google.com/?cid=506619387974521067&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="ak">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <img
+        class="hero__bg"
+        src="/ak-barbershop/img/foto_2.jpg"
+        alt="Interior de A&amp;K Barbershop: paredes negras, lámparas hexagonales de LED y un barbero trabajando un corte"
+        fetchpriority="high"
+      />
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__content wrap">
+        <p class="hero__kicker">Barbería · Plaza Laurel · Mérida, Yuc.</p>
+        <h1 class="hero__name">
+          <span class="hero__ak">A<em>&amp;</em>K</span>
+          <span class="hero__word">Barbershop</span>
+        </h1>
+        <div class="hero__flourish" aria-hidden="true">
+          <span class="hero__line"></span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" width="22" height="22"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M8.3 7.6 20 19"/><path d="M8.3 16.4 20 5"/></svg>
+          <span class="hero__line"></span>
+        </div>
+        <p class="hero__hook">
+          Degradados a la primera, barba con toallas calientes y un café recién
+          hecho que — según nuestros clientes — vale la pena por sí solo.
+        </p>
+        <p class="hero__chip">
+          <span class="stars" aria-hidden="true">★★★★★</span>
+          <strong>5.0</strong>&nbsp;· 73 reseñas en Google
+        </p>
+        <div class="hero__cta">
+          <a class="btn btn--red" href="https://wa.me/528128868312" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4 0-.5.2-.8l.5-.6c.1-.2 0-.4 0-.5l-.8-1.9c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.9.9-1.1 2.2-.2 3.8 1 1.7 2.5 3.3 4.5 4.2 1.9.9 2.6.8 3.4.7.6-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.1-1.2 0 0-.2-.1-.5-.2Z"/></svg>
+            Agendar por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href="https://maps.google.com/?cid=506619387974521067&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- divisor firma: cadena de hexágonos (las lámparas del techo) -->
+    <div class="hexline hexline--bone" aria-hidden="true">
+      <svg width="100%" height="30" role="presentation">
+        <defs>
+          <pattern id="hexWarm" width="76" height="30" patternUnits="userSpaceOnUse">
+            <polygon points="20,3 56,3 71,15 56,27 20,27 5,15" fill="none" stroke="#b9854e" stroke-opacity="0.55" stroke-width="2"/>
+          </pattern>
+          <pattern id="hexDim" width="76" height="30" patternUnits="userSpaceOnUse">
+            <polygon points="20,3 56,3 71,15 56,27 20,27 5,15" fill="none" stroke="#8e8e97" stroke-opacity="0.4" stroke-width="2"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="30" fill="url(#hexWarm)"/>
+      </svg>
+    </div>
+
+    <!-- ============ SOBRE NOSOTROS ============ -->
+    <section class="about" id="nosotros">
+      <div class="wrap about__grid">
+        <div class="about__text rv">
+          <p class="eyebrow eyebrow--red">La casa</p>
+          <h2>Atendida por sus dueños,<br/> de principio a fin</h2>
+          <p>
+            Somos A&amp;K Barbershop, una barbería exclusiva para caballeros en
+            Plaza Laurel, dentro de Residencial Floresta. Aquí el servicio
+            empieza antes de la silla: llegas, te acomodas y te ofrecemos agua
+            o un café recién hecho — nuestros clientes insisten en que el café
+            vale la visita por sí solo.
+          </p>
+          <p>
+            El corte y la barba se trabajan sin prisa. El servicio completo
+            lleva toallas calientes y frías, navaja y cuidado en cada pasada;
+            y los degradados salen bien a la primera — palabra de quienes se
+            sientan aquí. Nuestros clientes nos conocen por nombre: Alain y
+            Ernesto.
+          </p>
+          <p>
+            Y si vienes acompañado, adelante: somos pet friendly y te
+            atendemos en español, inglés o italiano.
+          </p>
+        </div>
+        <div class="about__media rv">
+          <figure class="about__ph about__ph--day">
+            <img src="/ak-barbershop/img/foto_5.jpg" alt="Fachada de A&amp;K Barbershop en Plaza Laurel durante el día, con su poste de barbero" loading="lazy"/>
+          </figure>
+          <figure class="about__ph about__ph--night">
+            <img src="/ak-barbershop/img/foto_4.jpg" alt="Letrero iluminado de A&amp;K Barbershop de noche, con el letrero de OPEN encendido" loading="lazy"/>
+          </figure>
+          <figcaption class="about__cap">Plaza Laurel · C. 65, local 13 — de día y de noche</figcaption>
+        </div>
+      </div>
+    </section>
+
+    <div class="hexline hexline--ink" aria-hidden="true">
+      <svg width="100%" height="30" role="presentation"><rect width="100%" height="30" fill="url(#hexDim)"/></svg>
+    </div>
+
+    <!-- ============ SERVICIOS ============ -->
+    <section class="services" id="servicios">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--wood rv">En la silla</p>
+        <h2 class="services__title rv">El servicio completo,<br/> como debe ser</h2>
+        <div class="cards">
+          <article class="card rv">
+            <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="6" cy="6" r="2.6"/><circle cx="6" cy="18" r="2.6"/><path d="M8.3 7.6 20 19"/><path d="M8.3 16.4 20 5"/></svg></span>
+            <h3>Corte de caballero</h3>
+            <p>Degradados, tijera y línea limpia, al ritmo que pide tu estilo.</p>
+          </article>
+          <article class="card rv">
+            <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M7 2.5c-1.4 1.8 1.4 2.7 0 4.5"/><path d="M12 2.5c-1.4 1.8 1.4 2.7 0 4.5"/><path d="M17 2.5c-1.4 1.8 1.4 2.7 0 4.5"/><rect x="4" y="11.5" width="16" height="7.5" rx="3"/><path d="M8 11.5v7.5"/></svg></span>
+            <h3>Barba con toallas calientes y frías</h3>
+            <p>Rasurado con navaja y mucho cuidado al trabajar la barba.</p>
+          </article>
+          <article class="card rv">
+            <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="12,2.5 20,7 20,17 12,21.5 4,17 4,7"/><path d="M9 12.2l2.2 2.2L15.5 9.6"/></svg></span>
+            <h3>Servicio completo</h3>
+            <p>Corte y barba en una sola sesión: la experiencia entera.</p>
+          </article>
+          <article class="card rv">
+            <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><circle cx="12" cy="8" r="3.6"/><path d="M5.5 20.5c1-4.2 4-5.8 6.5-5.8s5.5 1.6 6.5 5.8"/></svg></span>
+            <h3>Corte para niños</h3>
+            <p>Los más pequeños de la casa también salen con su mejor corte.</p>
+          </article>
+          <article class="card rv">
+            <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 9h11v5.5A4.5 4.5 0 0 1 11.5 19h-2A4.5 4.5 0 0 1 5 14.5Z"/><path d="M16 10h1.8a2.4 2.4 0 0 1 0 4.8H16"/><path d="M8 3.5c-1 1.2 1 1.8 0 3"/><path d="M12 3.5c-1 1.2 1 1.8 0 3"/></svg></span>
+            <h3>Café y bebidas de cortesía</h3>
+            <p>Agua o café recién hecho mientras llega tu turno.</p>
+          </article>
+          <article class="card rv">
+            <span class="card__ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="4.5" width="10" height="4" rx="1.2"/><rect x="4.5" y="8.5" width="15" height="11" rx="2"/><path d="M4.5 12.5h15"/></svg></span>
+            <h3>Productos de barbería</h3>
+            <p>Ceras, polvos, aftershave y más, disponibles en el local.</p>
+          </article>
+        </div>
+        <div class="perks rv">
+          <span class="perk">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="17" height="17" aria-hidden="true"><circle cx="8" cy="7.2" r="1.8"/><circle cx="16" cy="7.2" r="1.8"/><circle cx="4.6" cy="11.4" r="1.7"/><circle cx="19.4" cy="11.4" r="1.7"/><path d="M12 11c-3.1 0-5.6 2.7-5.6 5.2 0 1.7 1.2 2.7 2.7 2.7 1.1 0 2-.6 2.9-.6s1.8.6 2.9.6c1.5 0 2.7-1 2.7-2.7 0-2.5-2.5-5.2-5.6-5.2Z"/></svg>
+            Pet friendly
+          </span>
+          <span class="perk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" width="17" height="17" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17"/><path d="M12 3.5c2.8 2.3 2.8 14.7 0 17-2.8-2.3-2.8-14.7 0-17Z"/></svg>
+            Español · English · Italiano
+          </span>
+        </div>
+        <div class="shelf">
+          <figure class="shelf__ph rv">
+            <img src="/ak-barbershop/img/foto_1.jpg" alt="Repisa de madera con ceras, polvo voluminizador y aftershave en A&amp;K Barbershop" loading="lazy"/>
+          </figure>
+          <figure class="shelf__ph rv">
+            <img src="/ak-barbershop/img/foto_3.jpg" alt="Ceras para cabello y mascarilla negra en la repisa de productos de A&amp;K Barbershop" loading="lazy"/>
+          </figure>
+          <figcaption class="shelf__cap rv">La repisa de la casa: lo que usamos y lo que te llevas.</figcaption>
+        </div>
+      </div>
+    </section>
+
+    <div class="hexline hexline--bone" aria-hidden="true">
+      <svg width="100%" height="30" role="presentation"><rect width="100%" height="30" fill="url(#hexWarm)"/></svg>
+    </div>
+
+    <!-- ============ RESEÑAS ============ -->
+    <section class="reviews" id="resenas">
+      <div class="wrap">
+        <p class="eyebrow eyebrow--red rv">Reseñas de Google</p>
+        <div class="reviews__score rv">
+          <span class="reviews__num">5.0</span>
+          <span class="reviews__meta">
+            <span class="stars stars--big" aria-hidden="true">★★★★★</span>
+            <span>73 reseñas · calificación perfecta</span>
+          </span>
+        </div>
+        <div class="quotes">
+          <blockquote class="quote rv">
+            <p>“Si buscas una barbería donde el servicio vaya más allá de un
+            simple corte, este es el lugar. Alain cuida cada detalle: desde el
+            momento en que llegas te reciben con agua o café recién hecho que
+            vale la pena por sí solo. El ambiente es súper cómodo y el rasurado
+            de barba con toallas calientes y frías es una experiencia completa.
+            Se nota la dedicación y el profesionalismo. Totalmente recomendado”</p>
+            <footer><cite>Daniel AS</cite> · hace 3 meses</footer>
+          </blockquote>
+          <blockquote class="quote rv">
+            <p>“Excelente ambiente y atención de Ernesto, al fin un peluquero
+            que me hace bien un degradado, lo recomiendo 100%”</p>
+            <footer><cite>Juan Carlos Bañuelos Gomez</cite> · hace 1 mes</footer>
+          </blockquote>
+          <blockquote class="quote rv">
+            <p>“…El profesionalismo del corte es de alta calidad, muy diferente
+            a otras barberías de Mérida. El servicio completo de corte y barba
+            es excelente, con toallas calientes y frías y con mucho cuidado al
+            trabajar la barba. Mi nueva barbería de confianza. Lo recomiendo
+            ampliamente 🤘🏼”</p>
+            <footer><cite>Rodrigo Espinosa</cite> · hace un año</footer>
+          </blockquote>
+        </div>
+        <div class="reviews__more rv">
+          <a class="btn btn--dark" href="https://maps.google.com/?cid=506619387974521067&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            Leer más reseñas en Google
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div class="hexline hexline--ink" aria-hidden="true">
+      <svg width="100%" height="30" role="presentation"><rect width="100%" height="30" fill="url(#hexDim)"/></svg>
+    </div>
+
+    <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+    <section class="place" id="ubicacion">
+      <div class="wrap place__grid">
+        <div class="place__info rv">
+          <p class="eyebrow eyebrow--wood">Ubicación y horarios</p>
+          <h2>Estamos en Plaza Laurel</h2>
+          <p class="place__addr">
+            Plaza Laurel, C. 65 local 13,<br/>
+            Residencial Floresta, 97306 Mérida, Yuc.
+          </p>
+          <p id="open-chip" class="open-chip" hidden></p>
+          <table class="hours">
+            <caption class="sr-only">Horarios de A&amp;K Barbershop</caption>
+            <tbody>
+              <tr data-d="0"><th scope="row">Lunes</th><td>10:00 – 20:30</td></tr>
+              <tr data-d="1"><th scope="row">Martes</th><td>10:00 – 20:30</td></tr>
+              <tr data-d="2"><th scope="row">Miércoles</th><td>10:00 – 20:30</td></tr>
+              <tr data-d="3"><th scope="row">Jueves</th><td>10:00 – 20:30</td></tr>
+              <tr data-d="4"><th scope="row">Viernes</th><td>10:00 – 20:30</td></tr>
+              <tr data-d="5"><th scope="row">Sábado</th><td>10:00 – 20:30</td></tr>
+              <tr data-d="6"><th scope="row">Domingo</th><td>11:00 – 16:00</td></tr>
+            </tbody>
+          </table>
+          <a class="btn btn--red place__btn" href="https://maps.google.com/?cid=506619387974521067&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            Cómo llegar
+          </a>
+        </div>
+        <div class="place__map rv">
+          <iframe
+            src="https://www.google.com/maps?q=A%26K+Barbershop,+Plaza+Laurel,+C.+65+local+13,+Residencial+Floresta,+97306+M%C3%A9rida,+Yucat%C3%A1n&output=embed"
+            title="Mapa: A&amp;K Barbershop en Plaza Laurel, Residencial Floresta, Mérida"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="foot">
+      <div class="wrap">
+        <p class="foot__name">A<em>&amp;</em>K <span>Barbershop</span></p>
+        <a class="foot__tel" href="tel:+528128868312">81 2886 8312</a>
+        <p class="foot__addr">Plaza Laurel, C. 65 local 13 · Residencial Floresta · Mérida, Yuc.</p>
+        <p class="foot__small">Exclusivo para caballeros · Pet friendly · Español, English e Italiano</p>
+      </div>
+    </footer>
+
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "BarberShop",
+    "name": "A&K Barbershop",
+    "telephone": "+52 81 2886 8312",
+    "url": "https://demos.ivang.mx/ak-barbershop",
+    "image": "https://demos.ivang.mx/ak-barbershop/img/foto_2.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Plaza Laurel, C. 65 local 13, Residencial Floresta",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97306",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "73"
+    },
+    "openingHours": ["Mo-Sa 10:00-20:30", "Su 11:00-16:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --ink: #131316;        /* pared negra mate */
+      --coal: #1d1d22;       /* tarjetas sobre oscuro */
+      --deep: #0c0c0e;       /* footer */
+      --bone: #f3eee4;       /* fachada crema */
+      --paper: #fbf8f1;      /* tarjetas sobre claro */
+      --wood: #c08a54;       /* repisa de pino */
+      --red: #b32f27;        /* lámparas rojas / OPEN */
+      --red-bright: #d64840;
+      --txt-dark: #22221f;
+      --txt-light: #ece9e1;
+      --muted-light: #a9a9b2;
+      --muted-dark: #6d6a60;
+      --serif: 'Cormorant Garamond', Georgia, serif;
+      --sans: 'Archivo', system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      font-family: var(--sans);
+      background: var(--ink);
+      color: var(--txt-light);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 1060px; margin-inline: auto; padding-inline: 20px; }
+
+    .sr-only {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+    }
+
+    .ak a:focus-visible, .ak button:focus-visible {
+      outline: 3px solid var(--red-bright);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    .eyebrow {
+      font-size: 12px; font-weight: 600; letter-spacing: .24em;
+      text-transform: uppercase; margin: 0 0 14px;
+    }
+    .eyebrow--red { color: var(--red); }
+    .eyebrow--wood { color: var(--wood); }
+
+    h2 {
+      font-family: var(--serif); font-weight: 700;
+      font-size: clamp(32px, 6.4vw, 48px);
+      line-height: 1.08; margin: 0 0 20px; letter-spacing: .01em;
+    }
+
+    /* ---------- botones ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+      padding: 15px 24px; border-radius: 9px;
+      font-family: var(--sans); font-weight: 600; font-size: 16px;
+      text-decoration: none; line-height: 1.2;
+      transition: transform .18s ease, background-color .18s ease, border-color .18s ease;
+    }
+    .btn:active { transform: scale(.97); }
+    .btn--red { background: var(--red); color: #fff; box-shadow: 0 10px 26px rgba(179,47,39,.35); }
+    .btn--red:hover { background: var(--red-bright); }
+    .btn--ghost {
+      color: var(--txt-light); border: 1.5px solid rgba(236,233,225,.45);
+      background: rgba(19,19,22,.35); backdrop-filter: blur(3px);
+    }
+    .btn--ghost:hover { border-color: var(--bone); }
+    .btn--dark { background: var(--ink); color: var(--bone); }
+    .btn--dark:hover { background: var(--coal); }
+
+    /* ---------- hero ---------- */
+    .hero {
+      position: relative; overflow: hidden;
+      min-height: 88vh; min-height: 92svh;
+      display: flex; align-items: flex-end;
+    }
+    .hero__bg {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: 62% 32%;
+    }
+    .hero__veil {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg,
+        rgba(19,19,22,.60) 0%,
+        rgba(19,19,22,.30) 38%,
+        rgba(19,19,22,.78) 72%,
+        var(--ink) 100%);
+    }
+    .hero__content {
+      position: relative; width: 100%; text-align: center;
+      padding-top: 16vh; padding-bottom: 58px;
+      animation: heroIn 1s ease both;
+    }
+    @keyframes heroIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+    .hero__kicker {
+      font-size: 12px; font-weight: 600; letter-spacing: .26em; text-transform: uppercase;
+      color: var(--wood); margin: 0 0 10px;
+    }
+    .hero__name { margin: 0; line-height: .95; }
+    .hero__ak {
+      display: block; font-family: var(--serif); font-weight: 700;
+      font-size: clamp(74px, 21vw, 150px); color: #fff;
+      text-shadow: 0 4px 30px rgba(0,0,0,.45);
+    }
+    .hero__ak em { font-style: italic; color: var(--red-bright); font-size: .74em; }
+    .hero__word {
+      display: block; font-family: var(--serif); font-weight: 600;
+      font-size: clamp(17px, 4.6vw, 30px); text-transform: uppercase;
+      letter-spacing: .42em; text-indent: .42em; color: var(--bone);
+      margin-top: 8px;
+    }
+    .hero__flourish {
+      display: flex; align-items: center; justify-content: center; gap: 14px;
+      color: var(--wood); margin: 18px auto 0; max-width: 320px;
+    }
+    .hero__line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--wood)); }
+    .hero__line:last-child { background: linear-gradient(90deg, var(--wood), transparent); }
+    .hero__hook {
+      max-width: 34em; margin: 20px auto 0;
+      font-size: clamp(16px, 4vw, 19px); color: var(--txt-light);
+    }
+    .hero__chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      margin: 18px 0 0; padding: 9px 16px;
+      background: rgba(12,12,14,.62); border: 1px solid rgba(192,138,84,.5);
+      border-radius: 999px; font-size: 14.5px; backdrop-filter: blur(4px);
+    }
+    .stars { color: var(--wood); letter-spacing: .12em; }
+    .hero__cta {
+      display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+      margin-top: 24px;
+    }
+
+    /* ---------- divisor de hexágonos (firma) ---------- */
+    .hexline { line-height: 0; padding: 14px 0; }
+    .hexline--bone { background: var(--bone); }
+    .hexline--ink { background: var(--ink); }
+    .hexline svg { animation: hexGlow 5.5s ease-in-out infinite; }
+    @keyframes hexGlow { 0%, 100% { opacity: 1; } 50% { opacity: .45; } }
+
+    /* ---------- sobre nosotros ---------- */
+    .about { background: var(--bone); color: var(--txt-dark); padding: 58px 0 72px; }
+    .about h2 { color: #1b1a17; }
+    .about p { margin: 0 0 16px; font-size: 16.5px; color: #3d3a33; }
+    .about p:last-child { margin-bottom: 0; }
+    .about__grid { display: grid; gap: 40px; }
+    .about__media { position: relative; padding-bottom: 8px; }
+    .about__ph {
+      margin: 0; overflow: hidden; background: var(--paper);
+      clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
+    }
+    .about__ph img { width: 100%; height: 100%; object-fit: cover; }
+    .about__ph--day { width: 78%; aspect-ratio: 4 / 5; }
+    .about__ph--night {
+      width: 52%; aspect-ratio: 4 / 5;
+      position: absolute; right: 0; top: 18%;
+      box-shadow: 0 18px 44px rgba(27,26,23,.35);
+    }
+    .about__cap {
+      margin-top: 14px; font-size: 13px; letter-spacing: .06em;
+      color: var(--muted-dark);
+    }
+
+    /* ---------- servicios ---------- */
+    .services { background: var(--ink); padding: 58px 0 72px; }
+    .services__title { color: var(--bone); }
+    .cards { display: grid; gap: 14px; margin-top: 30px; }
+    .card {
+      background: var(--coal); padding: 22px 20px 20px;
+      border: 1px solid rgba(192,138,84,.16);
+      clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px);
+    }
+    .card__ico {
+      display: inline-flex; width: 46px; height: 46px;
+      align-items: center; justify-content: center;
+      color: var(--wood); background: rgba(192,138,84,.1);
+      clip-path: polygon(25% 0, 75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%);
+      margin-bottom: 14px;
+    }
+    .card__ico svg { width: 24px; height: 24px; }
+    .card h3 {
+      font-family: var(--serif); font-size: 23px; font-weight: 700;
+      margin: 0 0 6px; color: var(--bone); line-height: 1.15;
+    }
+    .card p { margin: 0; font-size: 15px; color: var(--muted-light); }
+    .perks { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .perk {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 16px; border-radius: 999px;
+      border: 1px solid rgba(192,138,84,.4); color: var(--bone);
+      font-size: 13.5px; font-weight: 500;
+    }
+    .perk svg { color: var(--wood); flex-shrink: 0; }
+    .shelf { display: grid; gap: 14px; margin-top: 40px; }
+    .shelf__ph {
+      margin: 0;
+      clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px);
+    }
+    .shelf__ph img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .shelf__cap { font-size: 13px; letter-spacing: .06em; color: var(--muted-light); }
+
+    /* ---------- reseñas ---------- */
+    .reviews { background: var(--bone); color: var(--txt-dark); padding: 58px 0 72px; }
+    .reviews__score { display: flex; align-items: center; gap: 18px; margin-bottom: 30px; }
+    .reviews__num {
+      font-family: var(--serif); font-weight: 700; line-height: 1;
+      font-size: clamp(64px, 15vw, 96px); color: #1b1a17;
+    }
+    .reviews__meta { display: grid; gap: 4px; font-size: 14.5px; color: var(--muted-dark); }
+    .stars--big { font-size: 22px; color: var(--red); letter-spacing: .14em; }
+    .quotes { display: grid; gap: 16px; }
+    .quote {
+      margin: 0; background: var(--paper); padding: 24px 22px 20px;
+      border-left: 3px solid var(--red);
+      clip-path: polygon(0 0, calc(100% - 16px) 0, 100% 16px, 100% 100%, 16px 100%, 0 calc(100% - 16px));
+      box-shadow: 0 8px 24px rgba(27,26,23,.06);
+    }
+    .quote p {
+      margin: 0 0 14px; font-family: var(--serif); font-size: 19.5px;
+      line-height: 1.45; color: #2c2a25;
+    }
+    .quote footer { font-size: 13.5px; color: var(--muted-dark); }
+    .quote cite { font-style: normal; font-weight: 600; color: #1b1a17; }
+    .reviews__more { margin-top: 30px; }
+
+    /* ---------- ubicación ---------- */
+    .place { background: var(--ink); padding: 58px 0 72px; }
+    .place h2 { color: var(--bone); }
+    .place__grid { display: grid; gap: 36px; }
+    .place__addr { font-size: 16.5px; color: var(--txt-light); margin: 0 0 14px; }
+    .open-chip {
+      display: inline-block; margin: 0 0 18px; padding: 7px 14px;
+      border-radius: 999px; font-size: 13px; font-weight: 600; letter-spacing: .04em;
+    }
+    .open-chip.is-open { background: rgba(76,155,80,.16); color: #7fce84; border: 1px solid rgba(127,206,132,.4); }
+    .open-chip.is-closed { background: rgba(179,47,39,.14); color: #e88a84; border: 1px solid rgba(214,72,64,.4); }
+    .hours { width: 100%; border-collapse: collapse; font-size: 15px; margin-bottom: 26px; }
+    .hours th, .hours td { padding: 10px 4px; border-bottom: 1px solid rgba(236,233,225,.12); }
+    .hours th { text-align: left; font-weight: 500; color: var(--txt-light); }
+    .hours td { text-align: right; color: var(--muted-light); font-variant-numeric: tabular-nums; }
+    .hours tr.today th, .hours tr.today td { color: #fff; font-weight: 700; }
+    .hours tr.today { background: linear-gradient(90deg, rgba(179,47,39,.22), transparent 85%); }
+    .hours tr.today th { border-left: 3px solid var(--red-bright); padding-left: 10px; }
+    .place__map { line-height: 0; }
+    .place__map iframe {
+      width: 100%; height: 340px; border: 0;
+      clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
+    }
+
+    /* ---------- footer ---------- */
+    .foot {
+      background: var(--deep); text-align: center;
+      padding: 52px 0 110px; /* espacio para el botón flotante */
+      border-top: 1px solid rgba(192,138,84,.18);
+    }
+    .foot__name {
+      font-family: var(--serif); font-weight: 700; font-size: 34px;
+      color: #fff; margin: 0 0 4px; line-height: 1.1;
+    }
+    .foot__name em { font-style: italic; color: var(--red-bright); }
+    .foot__name span {
+      display: block; font-size: 13px; font-weight: 600;
+      letter-spacing: .4em; text-indent: .4em; text-transform: uppercase;
+      color: var(--wood); margin-top: 6px;
+    }
+    .foot__tel {
+      display: inline-block; margin: 16px 0 10px;
+      font-size: 22px; font-weight: 600; color: var(--bone); text-decoration: none;
+    }
+    .foot__tel:hover { color: var(--red-bright); }
+    .foot__addr { margin: 0 0 8px; font-size: 14px; color: var(--muted-light); }
+    .foot__small { margin: 0; font-size: 12.5px; color: #85858f; letter-spacing: .04em; }
+
+    /* ---------- reveal (solo con JS) ---------- */
+    .js .rv { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .js .rv.in { opacity: 1; transform: none; }
+    .js .cards .rv:nth-child(2) { transition-delay: .07s; }
+    .js .cards .rv:nth-child(3) { transition-delay: .14s; }
+    .js .cards .rv:nth-child(4) { transition-delay: .07s; }
+    .js .cards .rv:nth-child(5) { transition-delay: .14s; }
+    .js .cards .rv:nth-child(6) { transition-delay: .21s; }
+
+    /* ---------- desktop ---------- */
+    @media (min-width: 720px) {
+      .about { padding: 84px 0 96px; }
+      .services { padding: 84px 0 96px; }
+      .reviews { padding: 84px 0 96px; }
+      .place { padding: 84px 0 96px; }
+      .about__grid { grid-template-columns: 1.05fr .95fr; align-items: center; gap: 56px; }
+      .cards { grid-template-columns: repeat(3, 1fr); gap: 16px; }
+      .shelf { grid-template-columns: 1fr 1fr; align-items: start; }
+      .shelf__cap { grid-column: 1 / -1; }
+      .quotes { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .place__grid { grid-template-columns: .9fr 1.1fr; gap: 48px; align-items: start; }
+      .place__map iframe { height: 460px; }
+      .hexline svg { height: 30px; }
+    }
+  </style>
+
+  <script is:inline>
+    document.documentElement.classList.add('js');
+
+    // Scroll-reveal (mejora progresiva)
+    var els = document.querySelectorAll('.rv');
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      els.forEach(function (el) { io.observe(el); });
+    } else {
+      els.forEach(function (el) { el.classList.add('in'); });
+    }
+
+    // Resaltar el día actual y estado abierto/cerrado
+    // (lun–sáb 10:00–20:30, dom 11:00–16:00 — horarios del negocio)
+    var d = (new Date().getDay() + 6) % 7; // 0 = lunes … 6 = domingo
+    var row = document.querySelector('.hours tr[data-d="' + d + '"]');
+    if (row) row.classList.add('today');
+
+    var now = new Date();
+    var mins = now.getHours() * 60 + now.getMinutes();
+    var range = d === 6 ? [660, 960] : [600, 1230];
+    var chip = document.getElementById('open-chip');
+    if (chip) {
+      var open = mins >= range[0] && mins < range[1];
+      chip.textContent = open ? 'Abierto ahora' : 'Cerrado en este momento';
+      chip.classList.add(open ? 'is-open' : 'is-closed');
+      chip.hidden = false;
+    }
+  </script>
+</BaseLayout>

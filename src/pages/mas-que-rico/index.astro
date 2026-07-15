@@ -1,0 +1,900 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slug = 'mas-que-rico';
+const nombre = 'Mas Que Rico';
+const direccion = '41 #283 por 36 y 40, Zona Industrial, Francisco de Montejo, 97302 Mérida, Yuc., México';
+const whatsapp = 'https://wa.me/525573673585';
+const telefono = '55 7367 3585';
+const mapsUrl = 'https://maps.google.com/?cid=9738776060380088978';
+const mapSrc = 'https://www.google.com/maps?q=' + encodeURIComponent(direccion) + '&output=embed';
+
+// Lo más pedido: solo platillos nombrados por reseñas o visibles en las fotos.
+const platillos = [
+  {
+    img: '/mas-que-rico/img/foto_2.jpg',
+    alt: 'Plato cubano con ropa vieja, arroz moros y plátano maduro',
+    nombre: 'Ropa vieja con moros',
+    desc: 'Carne deshebrada en su sofrito, arroz cubano y plátano maduro. Varios la piden con tostones.',
+  },
+  {
+    img: '/mas-que-rico/img/foto_4.jpg',
+    alt: 'Tabla para compartir con montaditos, papas y antojos cubanos',
+    nombre: 'Para compartir',
+    desc: 'Torta cubana en pan prensado, montaditos, papas y antojos para picar entre todos.',
+  },
+  {
+    img: '/mas-que-rico/img/foto_3.jpg',
+    alt: 'Dos limonadas frescas con hierbabuena',
+    nombre: 'Limonadas de la casa',
+    desc: 'Limonadas bien frías y bebidas tipo frappe con hierbabuena. Van perfecto con el calor de Mérida.',
+  },
+];
+
+const tambien = ['Sopa cubana', 'Carne mechada', 'Lechón', 'Tostones', 'Pan cubano'];
+
+const diferenciadores = [
+  { emoji: '🇨🇺', titulo: 'Sabor cubano de verdad', texto: 'La sazón se siente casera, “como comer en un restaurante en Cuba”, según sus clientes.' },
+  { emoji: '👩‍🍳', titulo: 'Cocinan los dueños', texto: 'Alfredo cocina con el corazón y Bárbara atiende cada mesa como en su propia casa.' },
+  { emoji: '💛', titulo: 'Precios justos', texto: 'Reseña tras reseña coinciden: variedad de comida y precios honestos.' },
+  { emoji: '⏱️', titulo: 'Recién hecho y rápido', texto: 'La comida no tarda: te sirven pronto y sale caliente de la cocina.' },
+];
+
+const galeria = [
+  { img: '/mas-que-rico/img/foto_5.jpg', alt: 'Torta cubana en pan prensado con papas' },
+  { img: '/mas-que-rico/img/foto_2.jpg', alt: 'Plato de ropa vieja con moros y maduros' },
+  { img: '/mas-que-rico/img/foto_4.jpg', alt: 'Mesa con antojos cubanos para compartir' },
+  { img: '/mas-que-rico/img/foto_3.jpg', alt: 'Limonadas con hierbabuena para brindar' },
+  { img: '/mas-que-rico/img/foto_1.jpg', alt: 'Fachada de Mas Que Rico en Mérida con su letrero' },
+];
+
+const atributos = [
+  { emoji: '🛵', label: 'Servicio a domicilio' },
+  { emoji: '🥡', label: 'Para llevar' },
+  { emoji: '📅', label: 'Acepta reservaciones' },
+  { emoji: '🌤️', label: 'Área al aire libre' },
+  { emoji: '💳', label: 'Acepta tarjetas' },
+  { emoji: '🅿️', label: 'Estacionamiento' },
+  { emoji: '☕', label: 'Café' },
+];
+
+const horarios = [
+  { dia: 'Lunes', horas: 'Cerrado', cerrado: true },
+  { dia: 'Martes', horas: 'Cerrado', cerrado: true },
+  { dia: 'Miércoles', horas: '2:00 – 10:00 pm', cerrado: false },
+  { dia: 'Jueves', horas: '2:00 – 10:00 pm', cerrado: false },
+  { dia: 'Viernes', horas: '2:00 – 10:00 pm', cerrado: false },
+  { dia: 'Sábado', horas: '2:00 – 10:00 pm', cerrado: false },
+  { dia: 'Domingo', horas: '2:00 – 10:00 pm', cerrado: false },
+];
+
+// Reseñas del dossier — fragmentos contiguos y verbatim, solo tramos positivos.
+const resenas = [
+  { autor: 'Maria Fernanda Grimaldo', cuando: 'Hace 5 meses', texto: 'El nombre no mienteeee! Que delicia, el arroz cubano deliciosoooo, el sazon cubano, ufff, las limonadas.' },
+  { autor: 'Fulvia Bacchi Modena', cuando: 'Hace 10 meses', texto: 'Todo riquísimo. Y los dueños muy amables. Variedad de comida y precios honestos. Recomendadisimo' },
+  { autor: 'Annet', cuando: 'Hace un año', texto: '…Un lugar muy cómodo, sencillo, romántico, bonito y acogedor, los dueños muy atentos, serviciales y la comida no tarda te sirven rápido…' },
+];
+---
+
+<BaseLayout
+  title="Mas Que Rico — Cocina cubana casera en Mérida"
+  description="Rincón cubano en Mérida: ropa vieja, moros y pan cubano hechos con amor. ⭐ 5.0 · 571 reseñas en Google. Escríbenos por WhatsApp."
+  slug={slug}
+  ogImage="/mas-que-rico/img/foto_5.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Bungee&family=DM+Sans:wght@400;500;700&display=swap"
+  favicon="🍽️"
+  themeColor="#14663B"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <main class="mqr">
+
+    <!-- ===================== HERO ===================== -->
+    <header class="mqr-hero">
+      <img
+        class="mqr-hero__img"
+        src="/mas-que-rico/img/foto_5.jpg"
+        alt="Torta cubana en pan prensado, recién hecha en Mas Que Rico"
+        fetchpriority="high"
+        decoding="async"
+      />
+      <div class="mqr-hero__scrim"></div>
+
+      <div class="mqr-hero__inner">
+        <span class="mqr-sticker mqr-sticker--hero">¡Sabor cubano!</span>
+
+        <h1 class="mqr-hero__title">
+          <span>MÁS</span>
+          <span>QUE</span>
+          <span class="mqr-accent">RICO</span>
+        </h1>
+
+        <p class="mqr-hero__sub">Cocina cubana casera, escondida entre los árboles de Francisco de Montejo, en Mérida.</p>
+
+        <div class="mqr-hero__rating">
+          <span class="mqr-stars" aria-hidden="true">★★★★★</span>
+          <span><strong>5.0</strong> · 571 reseñas en Google</span>
+        </div>
+
+        <div class="mqr-hero__cta">
+          <a class="mqr-btn mqr-btn--wa" href={whatsapp} target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+            Escríbenos por WhatsApp
+          </a>
+          <a class="mqr-btn mqr-btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== TICKER ===================== -->
+    <div class="mqr-ticker" aria-hidden="true">
+      <div class="mqr-ticker__track">
+        <span>COCINA CUBANA</span><span class="mqr-dot">●</span><span>HECHO CON AMOR</span><span class="mqr-dot">●</span><span>RECIÉN HECHO</span><span class="mqr-dot">●</span><span>⭐ 5.0 EN GOOGLE</span><span class="mqr-dot">●</span>
+        <span>COCINA CUBANA</span><span class="mqr-dot">●</span><span>HECHO CON AMOR</span><span class="mqr-dot">●</span><span>RECIÉN HECHO</span><span class="mqr-dot">●</span><span>⭐ 5.0 EN GOOGLE</span><span class="mqr-dot">●</span>
+      </div>
+    </div>
+
+    <!-- ===================== QUIÉNES SOMOS ===================== -->
+    <section class="mqr-about">
+      <div class="mqr-about__grid">
+        <div class="mqr-about__text mqr-reveal">
+          <span class="mqr-eyebrow">Quiénes somos</span>
+          <h2 class="mqr-h2">Un abrazo en forma de comida</h2>
+          <p>Somos <strong>Más Que Rico</strong>, un rincón de cocina cubana casera en Mérida. Lo que sale de nuestra cocina no es de restaurante grande: es comida hecha con amor, con esa sazón que recuerda a la mesa de la abuela.</p>
+          <p>En la cocina está <strong>Alfredo</strong>, que cocina con el corazón, y al frente está <strong>Bárbara</strong>, que recibe a cada quien como en su propia casa. Por eso muchos de quienes nos encuentran por casualidad —porque los árboles casi nos tapan— terminan volviendo: aquí no hay pretensiones, solo platos bien hechos y con alma.</p>
+          <p>Un plato de ropa vieja, un pan cubano recién prensado, una limonada bien fría. Más que un restaurante, queremos que se sienta como comer en casa.</p>
+        </div>
+        <div class="mqr-about__media mqr-reveal">
+          <img src="/mas-que-rico/img/foto_1.jpg" alt="Fachada de Mas Que Rico con su letrero en Mérida" loading="lazy" decoding="async" />
+          <span class="mqr-sticker mqr-sticker--photo">Rincón cubano</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== LO MÁS PEDIDO ===================== -->
+    <section class="mqr-menu">
+      <div class="mqr-menu__head mqr-reveal">
+        <span class="mqr-eyebrow">De nuestra cocina</span>
+        <h2 class="mqr-h2">Lo más pedido</h2>
+        <p class="mqr-lead">Los platos que nuestros clientes nombran una y otra vez. Sin fotos de catálogo: son los que de verdad salen de esta cocina.</p>
+      </div>
+
+      <div class="mqr-menu__grid">
+        {platillos.map((p) => (
+          <article class="mqr-dish mqr-reveal">
+            <div class="mqr-dish__img">
+              <img src={p.img} alt={p.alt} loading="lazy" decoding="async" />
+            </div>
+            <div class="mqr-dish__body">
+              <h3 class="mqr-dish__name">{p.nombre}</h3>
+              <p>{p.desc}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <div class="mqr-tambien mqr-reveal">
+        <span class="mqr-tambien__label">Y también:</span>
+        {tambien.map((t) => (<span class="mqr-chip">{t}</span>))}
+      </div>
+    </section>
+
+    <!-- ===================== DIFERENCIADORES ===================== -->
+    <section class="mqr-why">
+      <div class="mqr-why__head mqr-reveal">
+        <span class="mqr-eyebrow mqr-eyebrow--light">Por qué volver</span>
+        <h2 class="mqr-h2 mqr-h2--light">Lo que dicen 571 personas</h2>
+      </div>
+      <div class="mqr-why__grid">
+        {diferenciadores.map((d) => (
+          <div class="mqr-why__card mqr-reveal">
+            <span class="mqr-why__emoji" aria-hidden="true">{d.emoji}</span>
+            <h3 class="mqr-why__title">{d.titulo}</h3>
+            <p>{d.texto}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+
+    <!-- ===================== GALERÍA ===================== -->
+    <section class="mqr-gallery">
+      <div class="mqr-menu__head mqr-reveal">
+        <span class="mqr-eyebrow">La mesa por dentro</span>
+        <h2 class="mqr-h2">Galería</h2>
+      </div>
+      <div class="mqr-gallery__grid">
+        {galeria.map((g, i) => (
+          <figure class={`mqr-gallery__item mqr-gallery__item--${i}`}>
+            <img src={g.img} alt={g.alt} loading="lazy" decoding="async" />
+          </figure>
+        ))}
+      </div>
+    </section>
+
+    <!-- ===================== PRUEBA SOCIAL ===================== -->
+    <section class="mqr-social">
+      <div class="mqr-social__score mqr-reveal">
+        <div class="mqr-score__num">5.0</div>
+        <div class="mqr-score__meta">
+          <span class="mqr-stars mqr-stars--big" aria-hidden="true">★★★★★</span>
+          <span>571 reseñas en Google</span>
+        </div>
+      </div>
+
+      <blockquote class="mqr-quote mqr-reveal">
+        <p>“Más que un restaurante, es un abrazo en forma de comida. Un lugar al que definitivamente quiero volver y que recomiendo sin dudar.”</p>
+        <cite>— Veronica Munera <span>· Hace 6 meses</span></cite>
+      </blockquote>
+
+      <div class="mqr-reviews">
+        {resenas.map((r) => (
+          <figure class="mqr-review mqr-reveal">
+            <span class="mqr-review__stars" aria-hidden="true">★★★★★</span>
+            <blockquote>{r.texto}</blockquote>
+            <figcaption><strong>{r.autor}</strong><span>{r.cuando}</span></figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <div class="mqr-social__cta mqr-reveal">
+        <a class="mqr-btn mqr-btn--ghost mqr-btn--dark" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </section>
+
+    <!-- ===================== ATRIBUTOS ===================== -->
+    <section class="mqr-attrs">
+      <h2 class="mqr-attrs__title mqr-reveal">Cómo te atendemos</h2>
+      <ul class="mqr-attrs__grid">
+        {atributos.map((a) => (
+          <li class="mqr-attr mqr-reveal">
+            <span class="mqr-attr__emoji" aria-hidden="true">{a.emoji}</span>
+            <span>{a.label}</span>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <!-- ===================== UBICACIÓN + HORARIOS ===================== -->
+    <section class="mqr-visit">
+      <div class="mqr-visit__grid">
+        <div class="mqr-visit__info mqr-reveal">
+          <span class="mqr-eyebrow">Ven a comer</span>
+          <h2 class="mqr-h2">Dónde y cuándo</h2>
+
+          <div class="mqr-visit__addr">
+            <span class="mqr-visit__pin" aria-hidden="true">📍</span>
+            <p>{direccion}</p>
+          </div>
+
+          <p class="mqr-visit__note">Abierto de <strong>miércoles a domingo</strong>, de 2:00 a 10:00 pm.</p>
+
+          <table class="mqr-hours">
+            <tbody>
+              {horarios.map((h) => (
+                <tr class={h.cerrado ? 'is-closed' : ''}>
+                  <th scope="row">{h.dia}</th>
+                  <td>{h.horas}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <a class="mqr-btn mqr-btn--wa" href={whatsapp} target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+            Reservar por WhatsApp
+          </a>
+        </div>
+
+        <div class="mqr-visit__map mqr-reveal">
+          <iframe
+            src={mapSrc}
+            title="Ubicación de Mas Que Rico en Mérida"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA FINAL ===================== -->
+    <section class="mqr-final">
+      <span class="mqr-sticker mqr-sticker--final">¡Más que rico!</span>
+      <h2 class="mqr-final__title">¿Se te antojó?</h2>
+      <p class="mqr-final__sub">Aparta tu mesa o pide para llevar. Te respondemos por WhatsApp.</p>
+      <a class="mqr-btn mqr-btn--dark mqr-btn--lg" href={whatsapp} target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="mqr-footer">
+      <p class="mqr-footer__name">Mas Que Rico</p>
+      <p class="mqr-footer__line">{direccion}</p>
+      <p class="mqr-footer__line">
+        <a href="tel:+525573673585">55 7367 3585</a>
+      </p>
+    </footer>
+
+  </main>
+
+  <style is:global>
+    .mqr {
+      --sol: #f7b500;
+      --sol-soft: #fbd25a;
+      --chile: #d62828;
+      --palma: #14663b;
+      --palma-deep: #0e4c2c;
+      --terracota: #b5532a;
+      --crema: #fbf3e3;
+      --crema-2: #f4e7cf;
+      --carbon: #1c160f;
+      --ink: #2a2118;
+      --muted: #6a5b47;
+
+      font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+      color: var(--ink);
+      background: var(--crema);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    .mqr * { box-sizing: border-box; }
+    .mqr p { margin: 0 0 1em; }
+    .mqr img { display: block; }
+
+    .mqr-accent { color: var(--sol); }
+
+    /* ---------- botones ---------- */
+    .mqr-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      padding: 0.85em 1.4em;
+      border-radius: 999px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      line-height: 1;
+      text-decoration: none;
+      border: 2.5px solid transparent;
+      cursor: pointer;
+      transition: transform 0.16s ease, box-shadow 0.16s ease, background 0.16s ease;
+    }
+    .mqr-btn--wa {
+      background: var(--palma);
+      color: #fff;
+      border-color: var(--palma-deep);
+      box-shadow: 0 5px 0 var(--palma-deep);
+    }
+    .mqr-btn--wa:hover { transform: translateY(-2px); box-shadow: 0 7px 0 var(--palma-deep); }
+    .mqr-btn--wa:active { transform: translateY(3px); box-shadow: 0 2px 0 var(--palma-deep); }
+    .mqr-btn--ghost {
+      background: rgba(255,255,255,0.08);
+      color: #fff;
+      border-color: rgba(255,255,255,0.7);
+      -webkit-backdrop-filter: blur(4px);
+      backdrop-filter: blur(4px);
+    }
+    .mqr-btn--ghost:hover { background: rgba(255,255,255,0.18); transform: translateY(-2px); }
+    .mqr-btn--dark {
+      background: var(--carbon);
+      color: #fff;
+      border-color: var(--carbon);
+      box-shadow: 0 5px 0 #000;
+    }
+    .mqr-btn--dark.mqr-btn--ghost {
+      background: transparent;
+      color: var(--carbon);
+      border-color: var(--carbon);
+      box-shadow: none;
+    }
+    .mqr-btn--dark.mqr-btn--ghost:hover { background: var(--carbon); color: #fff; }
+    .mqr-btn--dark:hover { transform: translateY(-2px); }
+    .mqr-btn--lg { font-size: 1.12rem; padding: 1.05em 1.8em; }
+    .mqr-btn:focus-visible { outline: 3px solid var(--sol); outline-offset: 3px; }
+
+    /* ---------- sticker firma ---------- */
+    .mqr-sticker {
+      display: inline-block;
+      font-family: 'Bungee', sans-serif;
+      background: var(--sol);
+      color: var(--carbon);
+      border: 3px solid var(--carbon);
+      border-radius: 10px;
+      padding: 0.4em 0.7em 0.32em;
+      font-size: 0.9rem;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      box-shadow: 3px 4px 0 rgba(28,22,15,0.9);
+      transform: rotate(-4deg);
+    }
+    .mqr-sticker--hero {
+      background: var(--chile);
+      color: #fff;
+      border-color: #fff;
+      box-shadow: 4px 5px 0 rgba(0,0,0,0.35);
+      align-self: flex-start;
+      margin-bottom: 0.9rem;
+    }
+    .mqr-sticker--photo {
+      position: absolute;
+      right: -8px;
+      bottom: 18px;
+      transform: rotate(5deg);
+      font-size: 0.82rem;
+    }
+    .mqr-sticker--final {
+      background: var(--sol);
+      transform: rotate(-3deg);
+      font-size: 1.05rem;
+      margin-bottom: 1.1rem;
+    }
+
+    /* ---------- tipografía compartida ---------- */
+    .mqr-eyebrow {
+      display: inline-block;
+      font-family: 'Bungee', sans-serif;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      color: var(--chile);
+      margin-bottom: 0.7rem;
+    }
+    .mqr-eyebrow--light { color: var(--sol); }
+    .mqr-h2 {
+      font-family: 'Bungee', sans-serif;
+      font-weight: 400;
+      color: var(--carbon);
+      font-size: clamp(1.7rem, 6vw, 2.7rem);
+      line-height: 1.05;
+      margin: 0 0 0.7rem;
+      letter-spacing: -0.01em;
+    }
+    .mqr-h2--light { color: var(--crema); }
+    .mqr-lead { color: var(--muted); max-width: 46ch; }
+
+    /* ===================== HERO ===================== */
+    .mqr-hero {
+      position: relative;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      background: var(--carbon);
+    }
+    .mqr-hero__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 55%;
+    }
+    .mqr-hero__scrim {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(28,22,15,0.15) 0%, rgba(28,22,15,0) 30%, rgba(28,22,15,0.55) 68%, rgba(28,22,15,0.92) 100%);
+    }
+    .mqr-hero__inner {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 1.3rem 2.4rem;
+    }
+    .mqr-hero__title {
+      font-family: 'Bungee', sans-serif;
+      font-weight: 400;
+      color: #fff;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      font-size: clamp(3.1rem, 17vw, 7rem);
+      line-height: 0.92;
+      letter-spacing: -0.01em;
+      text-shadow: 0 4px 22px rgba(0,0,0,0.55);
+    }
+    .mqr-hero__sub {
+      color: rgba(255,255,255,0.94);
+      font-size: clamp(1rem, 3.6vw, 1.25rem);
+      max-width: 34ch;
+      margin: 1rem 0 1.1rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .mqr-hero__rating {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5em;
+      background: rgba(255,255,255,0.14);
+      border: 1.5px solid rgba(255,255,255,0.4);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      padding: 0.45em 0.85em;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      margin-bottom: 1.3rem;
+    }
+    .mqr-hero__rating strong { font-weight: 700; }
+    .mqr-stars { color: var(--sol); letter-spacing: 0.08em; }
+    .mqr-hero__cta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      width: 100%;
+    }
+
+    /* ===================== TICKER ===================== */
+    .mqr-ticker {
+      background: var(--chile);
+      border-top: 4px solid var(--carbon);
+      border-bottom: 4px solid var(--carbon);
+      overflow: hidden;
+      padding: 0.55rem 0;
+    }
+    .mqr-ticker__track {
+      display: inline-flex;
+      align-items: center;
+      white-space: nowrap;
+      will-change: transform;
+      animation: mqr-marquee 24s linear infinite;
+    }
+    .mqr-ticker__track span {
+      font-family: 'Bungee', sans-serif;
+      font-size: 0.92rem;
+      color: #fff;
+      padding: 0 0.7rem;
+      letter-spacing: 0.02em;
+    }
+    .mqr-ticker__track .mqr-dot { color: var(--sol); }
+    @keyframes mqr-marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ===================== SECCIONES BASE ===================== */
+    .mqr-about, .mqr-menu, .mqr-gallery, .mqr-social, .mqr-attrs, .mqr-visit {
+      padding: clamp(3rem, 8vw, 5rem) 1.3rem;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    /* ---------- Quiénes somos ---------- */
+    .mqr-about__grid { display: grid; gap: 2rem; }
+    .mqr-about__text p { color: var(--ink); font-size: 1.05rem; }
+    .mqr-about__text strong { color: var(--terracota); }
+    .mqr-about__media { position: relative; }
+    .mqr-about__media img {
+      width: 100%;
+      border-radius: 18px;
+      border: 4px solid var(--carbon);
+      box-shadow: 8px 10px 0 rgba(28,22,15,0.12);
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+    }
+
+    /* ---------- Lo más pedido ---------- */
+    .mqr-menu__head { text-align: center; max-width: 44ch; margin: 0 auto 2.2rem; }
+    .mqr-menu__head .mqr-lead { margin-left: auto; margin-right: auto; }
+    .mqr-menu__grid {
+      display: grid;
+      gap: 1.4rem;
+      grid-template-columns: 1fr;
+    }
+    .mqr-dish {
+      background: #fff;
+      border: 3px solid var(--carbon);
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 6px 7px 0 rgba(28,22,15,0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    .mqr-dish__img { aspect-ratio: 4 / 3; overflow: hidden; }
+    .mqr-dish__img img { width: 100%; height: 100%; object-fit: cover; }
+    .mqr-dish__body { padding: 1.1rem 1.2rem 1.3rem; }
+    .mqr-dish__name {
+      font-family: 'Bungee', sans-serif;
+      font-weight: 400;
+      font-size: 1.15rem;
+      color: var(--palma);
+      margin: 0 0 0.5rem;
+      line-height: 1.1;
+    }
+    .mqr-dish__body p { color: var(--muted); margin: 0; font-size: 0.98rem; }
+
+    .mqr-tambien {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-top: 2rem;
+    }
+    .mqr-tambien__label {
+      font-family: 'Bungee', sans-serif;
+      font-size: 0.8rem;
+      color: var(--carbon);
+    }
+    .mqr-chip {
+      background: var(--crema-2);
+      border: 2px solid var(--carbon);
+      border-radius: 999px;
+      padding: 0.42em 0.9em;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* ---------- Diferenciadores ---------- */
+    .mqr-why {
+      background: var(--palma);
+      background-image: radial-gradient(circle at 12% 18%, rgba(247,181,0,0.14), transparent 42%), radial-gradient(circle at 88% 82%, rgba(214,40,40,0.18), transparent 45%);
+      color: var(--crema);
+      padding: clamp(3rem, 8vw, 5rem) 1.3rem;
+    }
+    .mqr-why__head { text-align: center; max-width: 900px; margin: 0 auto 2.2rem; }
+    .mqr-why__grid {
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: 1fr;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+    .mqr-why__card {
+      background: rgba(255,255,255,0.06);
+      border: 2px solid rgba(255,255,255,0.22);
+      border-radius: 16px;
+      padding: 1.4rem 1.3rem;
+    }
+    .mqr-why__emoji { font-size: 2rem; display: block; margin-bottom: 0.6rem; }
+    .mqr-why__title {
+      font-family: 'Bungee', sans-serif;
+      font-weight: 400;
+      font-size: 1.05rem;
+      color: var(--sol);
+      margin: 0 0 0.5rem;
+      line-height: 1.15;
+    }
+    .mqr-why__card p { color: rgba(251,243,227,0.9); margin: 0; font-size: 0.98rem; }
+
+    /* ---------- Galería ---------- */
+    .mqr-gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-auto-rows: 150px;
+      gap: 0.7rem;
+    }
+    .mqr-gallery__item {
+      margin: 0;
+      overflow: hidden;
+      border-radius: 14px;
+      border: 3px solid var(--carbon);
+    }
+    .mqr-gallery__item img { width: 100%; height: 100%; object-fit: cover; }
+    .mqr-gallery__item--0 { grid-column: span 2; grid-row: span 2; }
+    .mqr-gallery__item--4 { grid-column: span 2; }
+
+    /* ---------- Prueba social ---------- */
+    .mqr-social { text-align: center; }
+    .mqr-social__score {
+      display: inline-flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.8rem;
+    }
+    .mqr-score__num {
+      font-family: 'Bungee', sans-serif;
+      font-size: clamp(3.2rem, 14vw, 5rem);
+      color: var(--chile);
+      line-height: 0.9;
+    }
+    .mqr-score__meta { text-align: left; }
+    .mqr-stars--big { font-size: 1.5rem; display: block; }
+    .mqr-score__meta span:last-child { color: var(--muted); font-size: 0.95rem; }
+
+    .mqr-quote {
+      max-width: 720px;
+      margin: 0 auto 2.6rem;
+      background: var(--sol);
+      border: 3px solid var(--carbon);
+      border-radius: 20px;
+      padding: 1.8rem 1.6rem;
+      box-shadow: 7px 8px 0 rgba(28,22,15,0.15);
+    }
+    .mqr-quote p {
+      font-size: clamp(1.15rem, 4.5vw, 1.6rem);
+      font-weight: 500;
+      color: var(--carbon);
+      line-height: 1.35;
+      margin: 0 0 0.9rem;
+    }
+    .mqr-quote cite {
+      font-style: normal;
+      font-weight: 700;
+      color: var(--carbon);
+      font-size: 0.95rem;
+    }
+    .mqr-quote cite span { font-weight: 400; opacity: 0.7; }
+
+    .mqr-reviews {
+      display: grid;
+      gap: 1.2rem;
+      grid-template-columns: 1fr;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+    .mqr-review {
+      background: #fff;
+      border: 2.5px solid var(--carbon);
+      border-radius: 16px;
+      padding: 1.3rem 1.3rem 1.2rem;
+      margin: 0;
+      box-shadow: 5px 6px 0 rgba(28,22,15,0.08);
+    }
+    .mqr-review__stars { color: var(--sol); font-size: 1rem; letter-spacing: 0.06em; }
+    .mqr-review blockquote {
+      margin: 0.6rem 0 0.9rem;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    .mqr-review figcaption { display: flex; flex-direction: column; }
+    .mqr-review figcaption strong { color: var(--terracota); }
+    .mqr-review figcaption span { color: var(--muted); font-size: 0.85rem; }
+
+    /* ---------- Atributos ---------- */
+    .mqr-attrs { text-align: center; }
+    .mqr-attrs__title {
+      font-family: 'Bungee', sans-serif;
+      font-weight: 400;
+      font-size: clamp(1.3rem, 5vw, 1.8rem);
+      color: var(--carbon);
+      margin: 0 0 1.8rem;
+    }
+    .mqr-attrs__grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.8rem;
+    }
+    .mqr-attr {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      background: #fff;
+      border: 2px solid var(--carbon);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      text-align: left;
+      font-weight: 500;
+      font-size: 0.95rem;
+    }
+    .mqr-attr__emoji { font-size: 1.3rem; }
+
+    /* ---------- Ubicación + horarios ---------- */
+    .mqr-visit__grid { display: grid; gap: 2rem; }
+    .mqr-visit__addr { display: flex; gap: 0.6rem; align-items: flex-start; margin-bottom: 0.4rem; }
+    .mqr-visit__addr p { margin: 0; font-size: 1.02rem; color: var(--ink); }
+    .mqr-visit__pin { font-size: 1.2rem; }
+    .mqr-visit__note { color: var(--muted); margin: 0.8rem 0 1rem; }
+    .mqr-visit__note strong { color: var(--palma); }
+
+    .mqr-hours {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 0 0 1.5rem;
+      border: 2px solid var(--carbon);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .mqr-hours th, .mqr-hours td {
+      padding: 0.6rem 1rem;
+      text-align: left;
+      font-size: 0.96rem;
+      border-bottom: 1px solid rgba(28,22,15,0.12);
+    }
+    .mqr-hours th { font-weight: 500; color: var(--ink); }
+    .mqr-hours td { text-align: right; font-weight: 700; color: var(--palma); }
+    .mqr-hours tr:last-child th, .mqr-hours tr:last-child td { border-bottom: none; }
+    .mqr-hours tr.is-closed td { color: var(--muted); font-weight: 500; }
+    .mqr-hours tr.is-closed th { color: var(--muted); }
+
+    .mqr-visit__map {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 4px solid var(--carbon);
+      box-shadow: 8px 10px 0 rgba(28,22,15,0.12);
+      min-height: 300px;
+    }
+    .mqr-visit__map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; }
+
+    /* ---------- CTA final ---------- */
+    .mqr-final {
+      background: var(--chile);
+      background-image: radial-gradient(circle at 50% 120%, rgba(247,181,0,0.28), transparent 55%);
+      color: #fff;
+      text-align: center;
+      padding: clamp(3.2rem, 9vw, 5.5rem) 1.3rem;
+      border-top: 5px solid var(--carbon);
+    }
+    .mqr-final__title {
+      font-family: 'Bungee', sans-serif;
+      font-weight: 400;
+      font-size: clamp(2rem, 8vw, 3.4rem);
+      margin: 0 0 0.6rem;
+      line-height: 1;
+    }
+    .mqr-final__sub {
+      color: rgba(255,255,255,0.92);
+      max-width: 34ch;
+      margin: 0 auto 1.6rem;
+      font-size: 1.05rem;
+    }
+
+    /* ---------- Footer ---------- */
+    .mqr-footer {
+      background: var(--carbon);
+      color: rgba(251,243,227,0.82);
+      text-align: center;
+      padding: 2.6rem 1.3rem 90px;
+    }
+    .mqr-footer__name {
+      font-family: 'Bungee', sans-serif;
+      color: var(--sol);
+      font-size: 1.4rem;
+      margin: 0 0 0.6rem;
+    }
+    .mqr-footer__line { margin: 0.2rem 0; font-size: 0.95rem; }
+    .mqr-footer__line a { color: var(--sol-soft); font-weight: 700; text-decoration: none; }
+    .mqr-footer__line a:hover { text-decoration: underline; }
+    .mqr-footer__line a:focus-visible { outline: 2px solid var(--sol); outline-offset: 3px; border-radius: 3px; }
+
+    /* ---------- reveal (mejora progresiva) ---------- */
+    .mqr-js .mqr-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .mqr-js .mqr-reveal.is-in { opacity: 1; transform: none; }
+
+    /* ===================== DESKTOP ===================== */
+    @media (min-width: 720px) {
+      .mqr-about__grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; gap: 3rem; }
+      .mqr-menu__grid { grid-template-columns: repeat(3, 1fr); }
+      .mqr-why__grid { grid-template-columns: repeat(4, 1fr); }
+      .mqr-gallery__grid { grid-auto-rows: 200px; grid-template-columns: repeat(4, 1fr); }
+      .mqr-gallery__item--0 { grid-column: span 2; grid-row: span 2; }
+      .mqr-gallery__item--4 { grid-column: span 2; grid-row: span 1; }
+      .mqr-reviews { grid-template-columns: repeat(3, 1fr); }
+      .mqr-attrs__grid { grid-template-columns: repeat(4, 1fr); }
+      .mqr-visit__grid { grid-template-columns: 0.95fr 1.05fr; align-items: stretch; }
+      .mqr-hero__cta { width: auto; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .mqr-ticker__track { animation: none; }
+      .mqr-btn { transition: none; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      if (!('IntersectionObserver' in window)) return;
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      root.classList.add('mqr-js');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      document.querySelectorAll('.mqr-reveal').forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

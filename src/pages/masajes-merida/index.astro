@@ -1,0 +1,753 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// --- Datos del dossier (fuente de verdad) ---
+const negocio = 'Masajes Mérida';
+const slug = 'masajes-merida';
+const whatsapp = 'https://wa.me/529992430735';
+const telefono = '999 243 0735';
+const mapsUrl = 'https://maps.google.com/?cid=17192866215439170563';
+const rating = '4.6';
+const totalResenas = '301';
+const direccion = 'Calle 55ᴬ #360, entre 54 y 56, Francisco de Montejo, 97203 Mérida, Yuc.';
+const mapQuery = 'Masajes Mérida, Francisco de Montejo, 97203 Mérida, Yucatán, México';
+const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(mapQuery)}&output=embed`;
+
+const servicios = [
+  {
+    titulo: 'Masaje relajante',
+    texto: 'Para soltar el cuerpo y la mente. Entre 30 minutos y una hora en completa calma, con música ambiental y aire acondicionado.',
+  },
+  {
+    titulo: 'Masaje descontracturante',
+    texto: 'Manos firmes que deshacen la tensión acumulada en la espalda y los hombros. Justo lo que el cuerpo pide después de una semana pesada.',
+  },
+  {
+    titulo: 'Ritual facial',
+    texto: 'Un facial para consentir el rostro y darte un respiro. Parte del recorrido de nuestros circuitos de spa.',
+  },
+  {
+    titulo: 'Circuito de spa',
+    texto: 'Facial, masaje, sauna y jacuzzi: una experiencia para todos los sentidos. Perfecto para regalar o regalarte un día completo.',
+  },
+];
+
+const franja = [
+  'Manos expertas',
+  'Aire acondicionado',
+  'Música ambiental',
+  'Baño privado en cabina',
+];
+
+const resenas = [
+  {
+    texto: '…Es un pequeño oasis en la ciudad de Mérida. Salí radiante y feliz !!',
+    autor: 'Yandhira Rosillo',
+    cuando: 'Hace 5 meses',
+  },
+  {
+    texto: '…A pesar de ser un lugar pequeño, tiene un estilo colonial y la decoración es de muy buen gusto…',
+    autor: 'Dari Gps',
+    cuando: 'Hace 6 años',
+  },
+  {
+    texto: '…La Música. Perfecta. El aceite de café. Me gustó. Mucho. Y las manos. De la masajista. Increíbles…',
+    autor: 'J F T A',
+    cuando: 'Hace un año',
+  },
+];
+
+const horarios = [
+  { dias: 'Lunes a viernes', horas: '10:00 – 20:00' },
+  { dias: 'Sábado', horas: '10:00 – 17:00' },
+  { dias: 'Domingo', horas: '10:00 – 17:00' },
+];
+---
+
+<BaseLayout
+  title="Masajes Mérida — Spa y masajes en Francisco de Montejo"
+  description="Un pequeño oasis de calma en Mérida. Masaje relajante, descontracturante y circuito de spa, en manos expertas. ⭐ 4.6 · 301 reseñas en Google."
+  slug={slug}
+  ogImage="/masajes-merida/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;1,500&family=Nunito+Sans:wght@400;600;700&display=swap"
+  favicon="🌿"
+  themeColor="#5E7157"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="hero__inner container">
+      <div class="hero__copy">
+        <p class="eyebrow eyebrow--light">Spa de masajes · Francisco de Montejo, Mérida</p>
+        <h1 class="hero__title">Masajes<br />Mérida</h1>
+        <p class="hero__lead">
+          Un pequeño oasis de calma en la ciudad. Cruzas la puerta y Mérida
+          se queda afuera: manos expertas, silencio y aceite de café.
+        </p>
+
+        <div class="rating-chip" aria-label={`Calificación ${rating} de 5 con ${totalResenas} reseñas en Google`}>
+          <span class="rating-chip__stars" aria-hidden="true">★★★★★</span>
+          <span class="rating-chip__num">{rating}</span>
+          <span class="rating-chip__sep">·</span>
+          <span class="rating-chip__count">{totalResenas} reseñas en Google</span>
+        </div>
+
+        <div class="cta-row">
+          <a class="btn btn--primary" href={whatsapp} target="_blank" rel="noopener">
+            <svg class="btn__ic" viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+            Reservar por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+
+      <figure class="hero__figure">
+        <div class="hero__frame">
+          <img
+            src="/masajes-merida/img/foto_2.jpg"
+            alt="Recepción de Masajes Mérida: muros de piedra cálida, plantas verdes, madera y luz natural"
+            width="1600" height="1200"
+            fetchpriority="high" decoding="async"
+          />
+        </div>
+        <svg class="cairn cairn--float" viewBox="0 0 80 116" aria-hidden="true">
+          <ellipse cx="40" cy="104" rx="30" ry="11" fill="#364330"/>
+          <ellipse cx="40" cy="82" rx="24" ry="10" fill="#5E7157"/>
+          <ellipse cx="40" cy="61" rx="19" ry="9" fill="#9E907A"/>
+          <ellipse cx="40" cy="43" rx="14" ry="8" fill="#B27C57"/>
+          <ellipse cx="40" cy="28" rx="9" ry="6.5" fill="#364330"/>
+        </svg>
+      </figure>
+    </div>
+  </header>
+
+  <!-- ===================== FRANJA SENSACIONES ===================== -->
+  <section class="strip" aria-label="Lo que encuentras dentro">
+    <ul class="strip__list container">
+      {franja.map((item) => (
+        <li class="strip__item">
+          <svg class="leaf" viewBox="0 0 24 40" aria-hidden="true">
+            <path d="M12 1C19 11 19 29 12 39 5 29 5 11 12 1Z" fill="#5E7157"/>
+            <path d="M12 5V35" stroke="#F4EDE1" stroke-width="1.4" fill="none"/>
+          </svg>
+          <span>{item}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- ===================== QUIÉNES SOMOS ===================== -->
+  <section class="about section" id="nosotros">
+    <div class="about__inner container">
+      <div class="about__text reveal">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2 class="h2">Un pequeño oasis,<br />escondido a propósito</h2>
+        <p>
+          Masajes Mérida es un rincón de calma en Francisco de Montejo. Está
+          un poco escondido —así lo quisimos— para que, apenas cruzas la
+          puerta, la ciudad se quede afuera. Adentro te reciben paredes de
+          estilo colonial, plantas, madera y una recepción que te espera con
+          una sonrisa.
+        </p>
+        <p>
+          Somos un equipo de mujeres con manos expertas. Cada cabina tiene
+          aire acondicionado, música ambiental y un baño privado donde te
+          cambias con toda tranquilidad. Cuidamos cada detalle para que salgas
+          —como dicen quienes nos visitan— renovada, radiante y feliz.
+        </p>
+        <p>
+          Trabajamos con cita para dedicarte el tiempo completo: casi siempre,
+          en menos de diez minutos ya estás en la cabina. Silencio, buenas
+          manos y el aroma del aceite de café: eso es lo que hacemos.
+        </p>
+      </div>
+      <div class="about__media reveal">
+        <img
+          class="about__img about__img--a"
+          src="/masajes-merida/img/foto_5.jpg"
+          alt="Detalle del spa: flores frescas, toallas y aromaterapia sobre la cómoda"
+          loading="lazy" decoding="async" width="900" height="1200"
+        />
+        <img
+          class="about__img about__img--b"
+          src="/masajes-merida/img/foto_4.jpg"
+          alt="Cabina de masaje con luz cálida y mural de inspiración maya"
+          loading="lazy" decoding="async" width="900" height="1200"
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS / RITUALES ===================== -->
+  <section class="services section" id="servicios">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Lo que ofrecemos</p>
+        <h2 class="h2">Nuestros rituales</h2>
+        <p class="section-head__sub">
+          Cada servicio dura entre 30 minutos y una hora. Pregúntanos por
+          WhatsApp la disponibilidad y los paquetes del momento.
+        </p>
+      </div>
+
+      <ul class="services__grid">
+        {servicios.map((s) => (
+          <li class="svc-card reveal">
+            <svg class="svc-card__leaf leaf" viewBox="0 0 24 40" aria-hidden="true">
+              <path d="M12 1C19 11 19 29 12 39 5 29 5 11 12 1Z" fill="#5E7157"/>
+              <path d="M12 5V35" stroke="#F4EDE1" stroke-width="1.4" fill="none"/>
+            </svg>
+            <h3 class="svc-card__title">{s.titulo}</h3>
+            <p class="svc-card__text">{s.texto}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== CTA INTERMEDIO ===================== -->
+  <section class="cta-band" aria-label="Reserva tu masaje">
+    <div class="cta-band__inner container reveal">
+      <svg class="cairn cairn--band" viewBox="0 0 80 116" aria-hidden="true">
+        <ellipse cx="40" cy="104" rx="30" ry="11" fill="#DED0B8"/>
+        <ellipse cx="40" cy="82" rx="24" ry="10" fill="#B4C0A6"/>
+        <ellipse cx="40" cy="61" rx="19" ry="9" fill="#DED0B8"/>
+        <ellipse cx="40" cy="43" rx="14" ry="8" fill="#B4C0A6"/>
+        <ellipse cx="40" cy="28" rx="9" ry="6.5" fill="#DED0B8"/>
+      </svg>
+      <div class="cta-band__copy">
+        <p class="cta-band__kicker">¿Lista para tu oasis?</p>
+        <h2 class="cta-band__title">Reserva una hora de calma</h2>
+      </div>
+      <a class="btn btn--light" href={whatsapp} target="_blank" rel="noopener">
+        <svg class="btn__ic" viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="gallery section" id="galeria">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Un vistazo</p>
+        <h2 class="h2">Así se siente adentro</h2>
+      </div>
+      <div class="gallery__grid">
+        <figure class="gallery__item gallery__item--tall reveal">
+          <img src="/masajes-merida/img/foto_4.jpg" alt="Cabina de masaje con manta cálida y mural maya iluminado" loading="lazy" decoding="async" width="900" height="1200" />
+        </figure>
+        <figure class="gallery__item reveal">
+          <img src="/masajes-merida/img/foto_2.jpg" alt="Sala de espera con muros de piedra, plantas y madera" loading="lazy" decoding="async" width="1600" height="1200" />
+        </figure>
+        <figure class="gallery__item reveal">
+          <img src="/masajes-merida/img/foto_5.jpg" alt="Aromaterapia, flores frescas y toallas listas" loading="lazy" decoding="async" width="900" height="1200" />
+        </figure>
+        <figure class="gallery__item gallery__item--wide reveal">
+          <img src="/masajes-merida/img/foto_1.jpg" alt="Fachada de Masajes Mérida iluminada de noche" loading="lazy" decoding="async" width="1200" height="675" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRUEBA SOCIAL ===================== -->
+  <section class="reviews section" id="resenas">
+    <div class="container">
+      <div class="reviews__head reveal">
+        <p class="eyebrow">Lo que dicen sus clientes</p>
+        <div class="reviews__score">
+          <span class="reviews__stars" aria-hidden="true">★★★★★</span>
+          <span class="reviews__num">{rating}</span>
+          <span class="reviews__meta">· {totalResenas} reseñas en Google</span>
+        </div>
+      </div>
+
+      <ul class="reviews__grid">
+        {resenas.map((r) => (
+          <li class="review-card reveal">
+            <span class="review-card__mark" aria-hidden="true">”</span>
+            <blockquote class="review-card__quote">{r.texto}</blockquote>
+            <figcaption class="review-card__by">
+              <span class="review-card__author">{r.autor}</span>
+              <span class="review-card__when">{r.cuando}</span>
+            </figcaption>
+          </li>
+        ))}
+      </ul>
+
+      <div class="reviews__cta reveal">
+        <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== UBICACIÓN Y HORARIOS ===================== -->
+  <section class="visit section" id="ubicacion">
+    <div class="visit__inner container">
+      <div class="visit__info reveal">
+        <p class="eyebrow">Visítanos</p>
+        <h2 class="h2">Dónde estamos</h2>
+        <p class="visit__addr">{direccion}</p>
+        <p class="visit__note">
+          Estamos un poco escondidos, pero con Google Maps llegas fácil. Busca
+          esta fachada azul:
+        </p>
+        <figure class="visit__facade">
+          <img src="/masajes-merida/img/foto_3.jpg" alt="Fachada azul de Masajes Mérida sobre la calle" loading="lazy" decoding="async" width="960" height="820" />
+        </figure>
+
+        <h3 class="visit__sub">Horarios</h3>
+        <table class="hours">
+          <tbody>
+            {horarios.map((h) => (
+              <tr>
+                <th scope="row">{h.dias}</th>
+                <td>{h.horas}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+
+        <div class="visit__actions">
+          <a class="btn btn--primary" href={mapsUrl} target="_blank" rel="noopener">Abrir en Google Maps</a>
+          <a class="btn btn--ghost" href="tel:+529992430735">Llamar {telefono}</a>
+        </div>
+      </div>
+
+      <div class="visit__map reveal">
+        <iframe
+          title="Mapa de Masajes Mérida en Francisco de Montejo"
+          src={mapSrc}
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL + FOOTER ===================== -->
+  <footer class="foot">
+    <div class="foot__inner container">
+      <svg class="cairn cairn--foot" viewBox="0 0 80 116" aria-hidden="true">
+        <ellipse cx="40" cy="104" rx="30" ry="11" fill="#5E7157"/>
+        <ellipse cx="40" cy="82" rx="24" ry="10" fill="#9E907A"/>
+        <ellipse cx="40" cy="61" rx="19" ry="9" fill="#B27C57"/>
+        <ellipse cx="40" cy="43" rx="14" ry="8" fill="#9E907A"/>
+        <ellipse cx="40" cy="28" rx="9" ry="6.5" fill="#5E7157"/>
+      </svg>
+      <h2 class="foot__title">Regálate una hora<br />de calma</h2>
+      <p class="foot__lead">Reserva tu masaje hoy y date el respiro que mereces.</p>
+      <div class="cta-row cta-row--center">
+        <a class="btn btn--primary" href={whatsapp} target="_blank" rel="noopener">
+          <svg class="btn__ic" viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm5.5 14.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+          Reservar por WhatsApp
+        </a>
+        <a class="btn btn--ghost btn--ghost-light" href="tel:+529992430735">Llamar {telefono}</a>
+      </div>
+
+      <div class="foot__meta">
+        <p class="foot__name">Masajes Mérida</p>
+        <p class="foot__addr">{direccion}</p>
+        <a class="foot__tel" href="tel:+529992430735">{telefono}</a>
+      </div>
+    </div>
+  </footer>
+
+  <style is:global>
+    /* ===================== TOKENS ===================== */
+    :root {
+      --parchment: #F4EDE1;
+      --stone: #EADFCC;
+      --stone-2: #DED0B8;
+      --taupe: #9E907A;
+      --eucalyptus: #5E7157;
+      --euc-deep: #364330;
+      --leaf: #8CA07C;
+      --charcoal: #2A2621;
+      --clay: #B27C57;
+      --ink-soft: #55503f;
+
+      --wrap: 1080px;
+      --r: 16px;
+      --sh: 0 18px 44px -22px rgba(42, 38, 33, 0.45);
+      --font-display: 'Lora', Georgia, 'Times New Roman', serif;
+      --font-body: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: var(--parchment);
+      color: var(--charcoal);
+      font-family: var(--font-body);
+      font-size: 17px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .container { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 22px; }
+    .section { padding-block: clamp(56px, 9vw, 104px); }
+
+    h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.08; margin: 0; letter-spacing: -0.01em; }
+    p { margin: 0 0 1em; }
+    p:last-child { margin-bottom: 0; }
+
+    .h2 { font-size: clamp(1.9rem, 5.4vw, 3rem); color: var(--euc-deep); }
+
+    .eyebrow {
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.74rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--eucalyptus);
+      margin: 0 0 0.9em;
+    }
+    .eyebrow--light { color: var(--leaf); }
+
+    /* ===================== BUTTONS ===================== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55em;
+      font-family: var(--font-body);
+      font-weight: 700;
+      font-size: 0.98rem;
+      line-height: 1;
+      padding: 0.92em 1.5em;
+      border-radius: 999px;
+      text-decoration: none;
+      border: 1.5px solid transparent;
+      transition: transform 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease, color 0.18s ease;
+      cursor: pointer;
+    }
+    .btn__ic { flex: 0 0 auto; }
+    .btn--primary { background: var(--eucalyptus); color: #fff; box-shadow: 0 12px 26px -14px rgba(54, 67, 48, 0.9); }
+    .btn--primary:hover { background: var(--euc-deep); transform: translateY(-2px); }
+    .btn--ghost { background: transparent; color: var(--euc-deep); border-color: rgba(54, 67, 48, 0.32); }
+    .btn--ghost:hover { background: rgba(94, 113, 87, 0.1); border-color: var(--eucalyptus); }
+    .btn--ghost-light { color: #EADFCC; border-color: rgba(234, 223, 204, 0.4); }
+    .btn--ghost-light:hover { background: rgba(234, 223, 204, 0.12); border-color: rgba(234, 223, 204, 0.75); }
+    .btn--light { background: var(--parchment); color: var(--euc-deep); }
+    .btn--light:hover { background: #fff; transform: translateY(-2px); }
+    .btn:focus-visible { outline: 3px solid var(--clay); outline-offset: 3px; }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .cta-row--center { justify-content: center; }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(120% 90% at 88% 8%, rgba(94, 113, 87, 0.16), transparent 60%),
+        radial-gradient(90% 70% at 6% 100%, rgba(178, 124, 87, 0.12), transparent 55%),
+        linear-gradient(168deg, #3b4834 0%, #46523c 42%, #4c5741 100%);
+      color: #F4EDE1;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute; inset: 0;
+      background-image:
+        radial-gradient(rgba(244, 237, 225, 0.05) 1px, transparent 1px);
+      background-size: 18px 18px;
+      opacity: 0.6;
+      pointer-events: none;
+    }
+    .hero__inner {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      gap: 34px;
+      padding-block: clamp(46px, 9vw, 90px);
+      align-items: center;
+    }
+    .hero__copy { max-width: 40rem; }
+    .hero__title {
+      font-size: clamp(3.3rem, 15vw, 6.6rem);
+      line-height: 0.92;
+      letter-spacing: -0.02em;
+      margin: 0.1em 0 0.36em;
+      color: #F6F0E4;
+    }
+    .hero__lead {
+      font-size: clamp(1.06rem, 3.4vw, 1.28rem);
+      color: rgba(244, 237, 225, 0.86);
+      max-width: 30rem;
+      margin-bottom: 1.5em;
+    }
+    .hero .cta-row { margin-top: 1.7em; }
+
+    .rating-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      background: rgba(244, 237, 225, 0.1);
+      border: 1px solid rgba(244, 237, 225, 0.22);
+      padding: 0.5em 0.95em;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+    .rating-chip__stars { color: #E7C27A; letter-spacing: 0.05em; }
+    .rating-chip__num { font-weight: 800; }
+    .rating-chip__sep { opacity: 0.5; }
+    .rating-chip__count { color: rgba(244, 237, 225, 0.8); font-weight: 600; }
+
+    .hero__figure { position: relative; margin: 0; justify-self: center; width: 100%; max-width: 460px; }
+    .hero__frame {
+      border-radius: 50% 50% 18px 18px / 26% 26% 4% 4%;
+      overflow: hidden;
+      border: 6px solid rgba(244, 237, 225, 0.12);
+      box-shadow: 0 30px 60px -28px rgba(0, 0, 0, 0.6);
+      aspect-ratio: 4 / 4.4;
+    }
+    .hero__frame img { width: 100%; height: 100%; object-fit: cover; }
+
+    .cairn { display: block; }
+    .cairn--float {
+      position: absolute;
+      bottom: -22px;
+      left: -12px;
+      width: 66px;
+      height: auto;
+      filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.4));
+      animation: cairn-breathe 6s ease-in-out infinite;
+    }
+    @keyframes cairn-breathe {
+      0%, 100% { transform: translateY(0) rotate(-2deg); }
+      50% { transform: translateY(-7px) rotate(1deg); }
+    }
+
+    /* ===================== FRANJA ===================== */
+    .strip { background: var(--euc-deep); color: var(--parchment); }
+    .strip__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 14px 34px;
+      list-style: none;
+      margin: 0;
+      padding-block: 20px;
+      padding-inline: 22px;
+    }
+    .strip__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55em;
+      font-weight: 700;
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+    }
+    .leaf { width: 15px; height: auto; flex: 0 0 auto; }
+    .strip .leaf path[fill] { fill: var(--leaf); }
+    .strip .leaf path[stroke] { stroke: var(--euc-deep); }
+
+    /* ===================== ABOUT ===================== */
+    .about__inner { display: grid; gap: 40px; align-items: center; }
+    .about__text p { color: var(--ink-soft); }
+    .about__text .h2 { margin-bottom: 0.7em; }
+    .about__media {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .about__img { border-radius: var(--r); box-shadow: var(--sh); width: 100%; height: 100%; object-fit: cover; aspect-ratio: 3 / 4; }
+    .about__img--a { margin-top: 26px; }
+    .about__img--b { margin-bottom: 26px; }
+
+    /* ===================== SERVICES ===================== */
+    .services { background: linear-gradient(180deg, var(--stone) 0%, var(--parchment) 100%); }
+    .section-head { max-width: 40rem; margin-bottom: clamp(28px, 5vw, 46px); }
+    .section-head__sub { color: var(--ink-soft); margin-top: 0.8em; }
+
+    .services__grid {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 16px;
+      grid-template-columns: 1fr;
+    }
+    .svc-card {
+      position: relative;
+      background: #fff;
+      border: 1px solid rgba(158, 144, 122, 0.28);
+      border-radius: var(--r);
+      padding: 30px 26px 26px;
+      overflow: hidden;
+    }
+    .svc-card::before {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(var(--eucalyptus), var(--clay));
+    }
+    .svc-card__leaf { width: 18px; height: auto; margin-bottom: 0.5em; }
+    .svc-card__title { font-size: 1.4rem; color: var(--euc-deep); margin: 0 0 0.5em; }
+    .svc-card__text { color: var(--ink-soft); font-size: 0.98rem; margin: 0; }
+
+    /* ===================== CTA BAND ===================== */
+    .cta-band {
+      background:
+        radial-gradient(90% 120% at 100% 0%, rgba(178, 124, 87, 0.22), transparent 60%),
+        linear-gradient(120deg, var(--eucalyptus), var(--euc-deep));
+      color: var(--parchment);
+    }
+    .cta-band__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 18px;
+      padding-block: clamp(44px, 7vw, 68px);
+    }
+    .cairn--band { width: 52px; height: auto; }
+    .cta-band__kicker { font-weight: 700; letter-spacing: 0.04em; color: rgba(244, 237, 225, 0.82); margin: 0 0 0.2em; }
+    .cta-band__title { font-size: clamp(1.7rem, 5vw, 2.5rem); margin: 0; }
+
+    /* ===================== GALLERY ===================== */
+    .gallery { background: var(--parchment); }
+    .gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      grid-auto-flow: dense;
+    }
+    .gallery__item { margin: 0; border-radius: var(--r); overflow: hidden; box-shadow: var(--sh); }
+    .gallery__item img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1 / 1; transition: transform 0.5s ease; }
+    .gallery__item:hover img { transform: scale(1.05); }
+    .gallery__item--tall { grid-row: span 2; }
+    .gallery__item--tall img { aspect-ratio: 3 / 4; }
+    .gallery__item--wide { grid-column: span 2; }
+    .gallery__item--wide img { aspect-ratio: 16 / 9; }
+
+    /* ===================== REVIEWS ===================== */
+    .reviews { background: linear-gradient(180deg, var(--parchment) 0%, var(--stone) 100%); }
+    .reviews__head { margin-bottom: clamp(26px, 5vw, 44px); }
+    .reviews__score { display: flex; align-items: baseline; gap: 0.4em; flex-wrap: wrap; }
+    .reviews__stars { color: #D9A648; font-size: 1.3rem; letter-spacing: 0.06em; }
+    .reviews__num { font-family: var(--font-display); font-weight: 600; font-size: 2.3rem; color: var(--euc-deep); }
+    .reviews__meta { color: var(--ink-soft); font-weight: 600; }
+
+    .reviews__grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: 1fr; }
+    .review-card {
+      position: relative;
+      background: var(--parchment);
+      border: 1px solid rgba(158, 144, 122, 0.3);
+      border-radius: var(--r);
+      padding: 30px 26px 24px;
+      box-shadow: 0 12px 30px -24px rgba(42, 38, 33, 0.5);
+    }
+    .review-card__mark {
+      font-family: var(--font-display);
+      font-size: 3.6rem;
+      line-height: 0.4;
+      color: var(--leaf);
+      opacity: 0.55;
+      display: block;
+      height: 0.5em;
+    }
+    .review-card__quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 1.14rem;
+      line-height: 1.55;
+      color: var(--charcoal);
+      margin: 0 0 1.1em;
+    }
+    .review-card__by { display: flex; flex-direction: column; gap: 2px; }
+    .review-card__author { font-weight: 800; color: var(--euc-deep); }
+    .review-card__when { font-size: 0.85rem; color: var(--taupe); font-weight: 600; }
+    .reviews__cta { margin-top: 28px; }
+
+    /* ===================== VISIT ===================== */
+    .visit { background: var(--stone); }
+    .visit__inner { display: grid; gap: 34px; align-items: start; }
+    .visit__addr { font-size: 1.1rem; font-weight: 700; color: var(--euc-deep); margin-bottom: 0.9em; }
+    .visit__note { color: var(--ink-soft); margin-bottom: 0.9em; }
+    .visit__facade { margin: 0 0 1.6em; border-radius: var(--r); overflow: hidden; box-shadow: var(--sh); }
+    .visit__facade img { width: 100%; height: auto; }
+    .visit__sub { font-size: 1.35rem; color: var(--euc-deep); margin-bottom: 0.6em; }
+
+    .hours { width: 100%; border-collapse: collapse; margin-bottom: 1.6em; }
+    .hours th, .hours td { text-align: left; padding: 0.7em 0; border-bottom: 1px solid rgba(158, 144, 122, 0.4); }
+    .hours th { font-weight: 700; color: var(--charcoal); }
+    .hours td { text-align: right; color: var(--ink-soft); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+    .visit__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .visit__map { border-radius: var(--r); overflow: hidden; box-shadow: var(--sh); border: 5px solid #fff; min-height: 320px; }
+    .visit__map iframe { width: 100%; height: 100%; min-height: 320px; border: 0; display: block; }
+
+    /* ===================== FOOTER ===================== */
+    .foot {
+      background:
+        radial-gradient(90% 80% at 10% 0%, rgba(94, 113, 87, 0.22), transparent 60%),
+        linear-gradient(160deg, #33402d, #262f22);
+      color: var(--parchment);
+      padding-block: clamp(56px, 9vw, 96px) 96px;
+      text-align: center;
+    }
+    .foot__inner { display: flex; flex-direction: column; align-items: center; }
+    .cairn--foot { width: 58px; height: auto; margin-bottom: 22px; }
+    .foot__title { font-size: clamp(2rem, 6vw, 3.1rem); color: #F6F0E4; margin-bottom: 0.4em; }
+    .foot__lead { color: rgba(244, 237, 225, 0.82); max-width: 30rem; margin-bottom: 1.8em; }
+    .foot__meta { margin-top: 46px; padding-top: 26px; border-top: 1px solid rgba(244, 237, 225, 0.16); width: 100%; max-width: 30rem; }
+    .foot__name { font-family: var(--font-display); font-size: 1.25rem; margin-bottom: 0.2em; color: #F6F0E4; }
+    .foot__addr { font-size: 0.92rem; color: rgba(244, 237, 225, 0.72); margin-bottom: 0.5em; }
+    .foot__tel { color: var(--leaf); font-weight: 800; text-decoration: none; font-size: 1.1rem; }
+    .foot__tel:hover { text-decoration: underline; }
+    .foot__tel:focus-visible { outline: 3px solid var(--leaf); outline-offset: 3px; border-radius: 4px; }
+
+    /* ===================== SCROLL REVEAL (progresivo) ===================== */
+    .js .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+      .cairn--float { animation: none; }
+      .gallery__item img { transition: none; }
+    }
+
+    /* ===================== BREAKPOINTS ===================== */
+    @media (min-width: 720px) {
+      .services__grid { grid-template-columns: 1fr 1fr; }
+      .reviews__grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery__grid { grid-template-columns: repeat(3, 1fr); }
+      .gallery__item--wide { grid-column: span 3; }
+      .gallery__item--wide img { aspect-ratio: 21 / 8; }
+    }
+
+    @media (min-width: 900px) {
+      .hero__inner { grid-template-columns: 1.15fr 0.85fr; gap: 48px; }
+      .hero__copy { justify-self: start; }
+      .cairn--float { width: 82px; bottom: -30px; left: -26px; }
+      .about__inner { grid-template-columns: 1.05fr 0.95fr; gap: 56px; }
+      .cta-band__inner { flex-direction: row; justify-content: center; text-align: left; gap: 30px; }
+      .cta-band__inner .cta-band__copy { flex: 1; }
+      .visit__inner { grid-template-columns: 1fr 1fr; gap: 44px; }
+      .visit__map { min-height: 100%; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var els = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

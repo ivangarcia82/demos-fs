@@ -1,0 +1,650 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slug = 'veterinaria-sak-peek';
+const nombre = 'Veterinaria Sak Peek';
+const telefono = '999 988 5650';
+const telHref = 'tel:+529999885650';
+const whatsapp = 'https://wa.me/529999885650';
+const waCita = 'https://wa.me/529999885650?text=' + encodeURIComponent('Hola, vi su página y quiero agendar una cita para mi mascota 🐾');
+const mapsUrl = 'https://maps.google.com/?cid=6995852819470362992';
+const direccion = 'C. 7ᴬ 229-A, Por 20 y 20-A, Col. Juan B. Sosa, 97205 Mérida, Yucatán';
+const mapQuery = encodeURIComponent('Veterinaria Sak Peek, Calle 7A 229, Juan B Sosa, 97205 Merida, Yucatan');
+const mapEmbed = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+
+const horarios = [
+  { dia: 'Lunes', h: '9:00 – 22:00', d: 1 },
+  { dia: 'Martes', h: '9:00 – 22:00', d: 2 },
+  { dia: 'Miércoles', h: '9:00 – 22:00', d: 3 },
+  { dia: 'Jueves', h: '9:00 – 22:00', d: 4 },
+  { dia: 'Viernes', h: '9:00 – 22:00', d: 5 },
+  { dia: 'Sábado', h: '9:00 – 20:00', d: 6 },
+  { dia: 'Domingo', h: 'Cerrado', d: 0 },
+];
+
+const resenas = [
+  {
+    autor: 'Ana Estrella',
+    cuando: 'Hace 4 meses',
+    texto: '…me explican todo con claridad, resuelven mis dudas y siempre me dan diferentes opciones para tomar la mejor decisión. Se nota que realmente les importan los animales.',
+  },
+  {
+    autor: 'Eduardo Borges',
+    cuando: 'Hace 4 meses',
+    texto: 'El trato es excelente, el lugar es muy limpio y ordenado. Recomiendo al Dr. Roberto, siempre estuvo atento y trató muy bien y con mucho profesionalismo y paciencia a mi gatito rescatado…',
+  },
+  {
+    autor: 'Yanina Trujillo',
+    cuando: 'Hace 5 meses',
+    texto: 'La Dra. Yadira brindó atención en los años de cachorro de mi Lucky y seguimiento en los años de perro adulto. Siempre con un gran amor y sentido humano.',
+  },
+  {
+    autor: 'Alexis Euan',
+    cuando: 'Hace 1 mes',
+    texto: 'Siempre es una gran experiencia, me atiende siempre la Dogtora Teffy y es muy buena y profesional.',
+  },
+];
+
+const servicios = [
+  { t: 'Consulta veterinaria', d: 'Revisión general para perros y gatos, con diagnóstico y opciones explicadas con claridad.' },
+  { t: 'Vacunación y desparasitación', d: 'Esquemas al día para cachorros y adultos, con seguimiento a lo largo de su vida.' },
+  { t: 'Esterilización y cirugía', d: 'Procedimientos caninos y felinos en un espacio limpio y ordenado.' },
+  { t: 'Estética canina · baño y corte', d: 'Baño, corte, desenredado y deslanado según el pelaje de tu perro.' },
+  { t: 'Corte de uñas', d: 'Rápido y cuidadoso, para que tu mascota camine cómoda.' },
+  { t: 'Tratamientos spa', d: 'Mascarilla facial de blueberry y bálsamo hidratante para nariz y cojinetes.' },
+];
+
+const diferenciadores = [
+  { t: 'Te explicamos cada paso', d: 'En cada consulta detallamos el diagnóstico, resolvemos dudas y te damos opciones para que decidas con confianza.' },
+  { t: 'Un espacio limpio y ordenado', d: 'Nuestros clientes lo notan y lo repiten: la clínica se mantiene impecable en cada visita.' },
+  { t: 'Apoyo con el traslado', d: 'Varias familias cuentan que las acompañamos con el transporte de su mascota hacia y desde la clínica.' },
+  { t: 'Cariño de verdad', d: 'Un trato amoroso y profesional, con gran sentido humano de principio a fin.' },
+];
+
+const valores = ['Amor', 'Pasión', 'Vocación', 'Compromiso', 'Profesionalismo'];
+---
+<BaseLayout
+  title="Veterinaria Sak Peek — Mérida"
+  description="Clínica veterinaria y estética canina en Mérida, Yuc. ⭐ 4.5 · 184 reseñas. Consulta, vacunas, cirugía, baño y corte para perros y gatos. Escríbenos por WhatsApp."
+  slug={slug}
+  ogImage="/veterinaria-sak-peek/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Karla:wght@400;500;600;700&display=swap"
+  favicon="🐾"
+  themeColor="#12A79D"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy reveal">
+        <p class="eyebrow">
+          <svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 6 5 12 6 19c7 1 13-5 13-14-2-1-4-2-7-3z"/><path class="rib" d="M8.5 16.5C11 13 13 10.5 16 8"/></svg>
+          Clínica veterinaria y estética canina · Mérida, Yuc.
+        </p>
+        <h1>Veterinaria<br><span class="hero__mark">Sak Peek</span></h1>
+        <p class="hero__sub">
+          <em>Sak</em> nace de una raíz maya: lo blanco, lo claro. Así cuidamos a tu
+          perro o gato — con transparencia, cariño y manos que te explican cada paso.
+        </p>
+        <div class="rating" aria-label="Calificación 4.5 de 5 con 184 reseñas en Google">
+          <span class="rating__stars" aria-hidden="true">★★★★<span class="half">★</span></span>
+          <span class="rating__txt"><strong>4.5</strong> · 184 reseñas en Google</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn--wa" href={waCita}>Escríbenos por WhatsApp</a>
+          <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+        <p class="hero__open">Abiertos de lunes a sábado · Perros y gatos</p>
+      </div>
+
+      <figure class="hero__photo reveal">
+        <img src="/veterinaria-sak-peek/img/foto_5.jpg" width="900" height="1200"
+             alt="Fachada de la Veterinaria Sak Peek en Mérida, Yucatán" fetchpriority="high" />
+        <figcaption>Nuestra clínica en la colonia Juan B. Sosa, Mérida.</figcaption>
+        <div class="cornice" aria-hidden="true"></div>
+      </figure>
+    </div>
+  </header>
+
+  <!-- ===================== VALORES ===================== -->
+  <section class="valores" aria-label="Nuestros valores">
+    <div class="wrap valores__inner">
+      <span class="valores__lead">En Sak Peek somos</span>
+      <ul class="valores__list">
+        {valores.map((v) => (
+          <li>{v}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== QUIÉNES SOMOS ===================== -->
+  <section class="section quienes" id="nosotros">
+    <div class="wrap quienes__grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--dark">
+          <svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 6 5 12 6 19c7 1 13-5 13-14-2-1-4-2-7-3z"/><path class="rib" d="M8.5 16.5C11 13 13 10.5 16 8"/></svg>
+          Quiénes somos
+        </p>
+        <h2>Una clínica de barrio que trata a tu mascota como de la familia</h2>
+        <p>
+          Somos una clínica veterinaria y estética canina en el corazón de la
+          colonia Juan B. Sosa, en Mérida. Atendemos a perros y gatos con la calma
+          de quien conoce a cada paciente por su nombre: revisamos, explicamos y te
+          damos opciones para que tomes la mejor decisión con tu familia.
+        </p>
+        <p>
+          Nuestro equipo —la Dra. Yadira, el Dr. Roberto y la <em>Dogtora</em> Teffy—
+          acompaña a las mascotas desde cachorros y a lo largo de toda su vida, con
+          ese sentido humano que nuestras familias nos reconocen consulta tras
+          consulta. Y cuando hace falta, damos una mano hasta con el traslado.
+        </p>
+        <p>
+          Bajo la consulta también cuidamos su imagen: baño, corte y tratamientos
+          spa para que tu compañero salga limpio, guapo y feliz.
+        </p>
+      </div>
+      <ul class="mini-stats reveal">
+        <li><span class="mini-stats__num">4.5<span>★</span></span><span class="mini-stats__lbl">Calificación en Google</span></li>
+        <li><span class="mini-stats__num">184</span><span class="mini-stats__lbl">Reseñas de familias</span></li>
+        <li><span class="mini-stats__num">6</span><span class="mini-stats__lbl">Días a la semana</span></li>
+        <li><span class="mini-stats__num">🐶🐱</span><span class="mini-stats__lbl">Perros y gatos</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="band-greca" aria-hidden="true"></div>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="section servicios" id="servicios">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow--dark">
+          <svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 6 5 12 6 19c7 1 13-5 13-14-2-1-4-2-7-3z"/><path class="rib" d="M8.5 16.5C11 13 13 10.5 16 8"/></svg>
+          Qué hacemos
+        </p>
+        <h2>Todo el cuidado de tu mascota, en un solo lugar</h2>
+        <p class="section-head__sub">De la consulta médica a la estética canina. Sin prisas y con explicaciones claras.</p>
+      </div>
+      <div class="cards">
+        {servicios.map((s) => (
+          <article class="card reveal">
+            <span class="card__paw" aria-hidden="true">🐾</span>
+            <h3>{s.t}</h3>
+            <p>{s.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== DIFERENCIADORES ===================== -->
+  <section class="section porque">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow">
+          <svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 6 5 12 6 19c7 1 13-5 13-14-2-1-4-2-7-3z"/><path class="rib" d="M8.5 16.5C11 13 13 10.5 16 8"/></svg>
+          Por qué nos eligen
+        </p>
+        <h2>Lo que las familias repiten de nosotros</h2>
+      </div>
+      <div class="porque__grid">
+        {diferenciadores.map((d, i) => (
+          <article class="porque__item reveal">
+            <span class="porque__n" aria-hidden="true">{String(i + 1).padStart(2, '0')}</span>
+            <div>
+              <h3>{d.t}</h3>
+              <p>{d.d}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA INTERMEDIO ===================== -->
+  <section class="cta-band" aria-label="Agenda una cita">
+    <div class="wrap cta-band__inner reveal">
+      <div>
+        <h2>¿Tu compañero necesita una revisión?</h2>
+        <p>Escríbenos por WhatsApp y te ayudamos a agendar el día y la hora que mejor te queden.</p>
+      </div>
+      <a class="btn btn--wa btn--onteal" href={waCita}>Agendar por WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ===================== RESEÑAS ===================== -->
+  <section class="section resenas" id="resenas">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow--dark">
+          <svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 6 5 12 6 19c7 1 13-5 13-14-2-1-4-2-7-3z"/><path class="rib" d="M8.5 16.5C11 13 13 10.5 16 8"/></svg>
+          Voces de nuestras familias
+        </p>
+        <h2>⭐ 4.5 · 184 reseñas en Google</h2>
+        <p class="section-head__sub">Historias reales de quienes ya nos confían a su perro o gato.</p>
+      </div>
+      <div class="resenas__grid">
+        {resenas.map((r) => (
+          <figure class="quote reveal">
+            <div class="quote__stars" aria-hidden="true">★★★★★</div>
+            <blockquote>{r.texto}</blockquote>
+            <figcaption>
+              <span class="quote__autor">{r.autor}</span>
+              <span class="quote__cuando">{r.cuando}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="resenas__more reveal">
+        <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="section galeria" id="galeria">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <p class="eyebrow eyebrow--dark">
+          <svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 6 5 12 6 19c7 1 13-5 13-14-2-1-4-2-7-3z"/><path class="rib" d="M8.5 16.5C11 13 13 10.5 16 8"/></svg>
+          Un vistazo por dentro
+        </p>
+        <h2>Nuestro día a día</h2>
+      </div>
+      <div class="mosaic reveal">
+        <figure class="mosaic__a">
+          <img src="/veterinaria-sak-peek/img/foto_2.jpg" width="900" height="1200" loading="lazy"
+               alt="Recepción luminosa de Sak Peek con el logotipo de la clínica" />
+        </figure>
+        <figure class="mosaic__b">
+          <img src="/veterinaria-sak-peek/img/foto_1.jpg" width="900" height="1200" loading="lazy"
+               alt="Sesión de estética canina a un perrito en la clínica" />
+        </figure>
+        <figure class="mosaic__c">
+          <img src="/veterinaria-sak-peek/img/foto_3.jpg" width="900" height="1200" loading="lazy"
+               alt="Consulta veterinaria a un perro sobre la mesa de exploración" />
+        </figure>
+        <figure class="mosaic__d">
+          <img src="/veterinaria-sak-peek/img/foto_4.jpg" width="900" height="1200" loading="lazy"
+               alt="Puerta de Sak Peek con sus valores: amor, pasión, vocación, compromiso y profesionalismo" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== UBICACIÓN Y HORARIOS ===================== -->
+  <section class="section ubicacion" id="ubicacion">
+    <div class="wrap ubicacion__grid">
+      <div class="reveal">
+        <p class="eyebrow eyebrow--dark">
+          <svg class="leaf" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C7 6 5 12 6 19c7 1 13-5 13-14-2-1-4-2-7-3z"/><path class="rib" d="M8.5 16.5C11 13 13 10.5 16 8"/></svg>
+          Dónde estamos
+        </p>
+        <h2>Ven a vernos</h2>
+        <p class="ubicacion__dir">{direccion}</p>
+        <div class="ubicacion__actions">
+          <a class="btn btn--wa" href={waCita}>WhatsApp</a>
+          <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Abrir en Maps</a>
+          <a class="btn btn--ghost" href={telHref}>Llamar</a>
+        </div>
+
+        <table class="horarios">
+          <caption>Horario de atención</caption>
+          <tbody>
+            {horarios.map((h) => (
+              <tr data-day={h.d} class={h.h === 'Cerrado' ? 'is-closed' : ''}>
+                <th scope="row">{h.dia}</th>
+                <td>{h.h}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="ubicacion__map reveal">
+        <iframe
+          src={mapEmbed}
+          title="Ubicación de Veterinaria Sak Peek en Google Maps"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="cta-final">
+    <div class="wrap cta-final__inner reveal">
+      <div class="band-greca band-greca--light" aria-hidden="true"></div>
+      <h2>Tu mascota merece manos con vocación</h2>
+      <p>Estamos de lunes a sábado, listos para atender a tu perro o gato. Escríbenos y con gusto te agendamos.</p>
+      <div class="cta-row cta-row--center">
+        <a class="btn btn--wa btn--onteal" href={waCita}>Escríbenos por WhatsApp</a>
+        <a class="btn btn--outline-light" href={telHref}>{telefono}</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="foot">
+    <div class="wrap foot__inner">
+      <div class="foot__brand">
+        <span class="foot__logo">Sak Peek<span aria-hidden="true">🐾</span></span>
+        <p>Clínica veterinaria y estética canina · Mérida, Yucatán</p>
+      </div>
+      <div class="foot__contact">
+        <a href={telHref}>{telefono}</a>
+        <a href={mapsUrl} target="_blank" rel="noopener">{direccion}</a>
+      </div>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --sak: #f4faf8;
+      --sak-panel: #eaf4f1;
+      --white: #ffffff;
+      --ink: #103a36;
+      --ink-soft: #3c5a56;
+      --turquesa: #12a79d;
+      --turquesa-deep: #0a6d66;
+      --turquesa-deeper: #075751;
+      --cielo: #aecbd8;
+      --cielo-soft: #dfeef2;
+      --verde: #57a049;
+      --miel: #e29a2e;
+      --line: #d6e6e2;
+      --shadow: 0 14px 34px -20px rgba(10, 90, 84, .38);
+      --shadow-sm: 0 6px 18px -12px rgba(10, 90, 84, .45);
+      --greca: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cpath d='M0 24V18H6V12H12V6H18V0H30V6H36V12H42V18H48V24Z' fill='%2312a79d'/%3E%3C/svg%3E");
+      --greca-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='24' viewBox='0 0 48 24'%3E%3Cpath d='M0 24V18H6V12H12V6H18V0H30V6H36V12H42V18H48V24Z' fill='%23ffffff'/%3E%3C/svg%3E");
+    }
+
+    body {
+      font-family: 'Karla', system-ui, sans-serif;
+      color: var(--ink);
+      background: var(--sak);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-family: 'Outfit', system-ui, sans-serif; line-height: 1.08; margin: 0; }
+    h2 { font-size: clamp(1.6rem, 5.6vw, 2.5rem); font-weight: 700; letter-spacing: -.02em; }
+    h3 { font-size: 1.18rem; font-weight: 600; letter-spacing: -.01em; }
+    p { margin: 0 0 1rem; }
+    a { color: inherit; }
+
+    .wrap { width: 100%; max-width: 1080px; margin-inline: auto; padding-inline: 20px; }
+    .section { padding: clamp(52px, 9vw, 92px) 0; }
+
+    /* ---------- eyebrow + leaf glyph ---------- */
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: .5em;
+      font-family: 'Outfit', sans-serif; font-weight: 600;
+      font-size: .78rem; letter-spacing: .14em; text-transform: uppercase;
+      color: #bfeee9; margin: 0 0 .9rem;
+    }
+    .eyebrow--dark { color: var(--turquesa-deep); }
+    .leaf { width: 18px; height: 18px; flex: none; }
+    .leaf path:first-child { fill: var(--verde); }
+    .leaf .rib { fill: none; stroke: rgba(255,255,255,.85); stroke-width: 1.3; stroke-linecap: round; }
+    .eyebrow--dark .leaf .rib { stroke: rgba(255,255,255,.9); }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1rem;
+      padding: .85em 1.4em; border-radius: 999px; text-decoration: none;
+      border: 2px solid transparent; cursor: pointer;
+      transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease, color .18s ease;
+    }
+    .btn--wa { background: var(--turquesa-deep); color: #fff; box-shadow: var(--shadow-sm); }
+    .btn--wa::before { content: ""; width: 1.15em; height: 1.15em; margin-right: .55em; background: #fff;
+      -webkit-mask: var(--wa-icon) center/contain no-repeat; mask: var(--wa-icon) center/contain no-repeat; }
+    .btn--wa:hover { background: var(--turquesa-deeper); transform: translateY(-2px); }
+    .btn--onteal { background: #fff; color: var(--turquesa-deeper); }
+    .btn--onteal::before { background: var(--turquesa-deeper); }
+    .btn--onteal:hover { background: #eafffb; transform: translateY(-2px); }
+    .btn--ghost { background: transparent; color: var(--turquesa-deep); border-color: var(--cielo); }
+    .btn--ghost:hover { background: var(--white); border-color: var(--turquesa); transform: translateY(-2px); }
+    .btn--outline-light { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+    .btn--outline-light:hover { background: rgba(255,255,255,.14); transform: translateY(-2px); }
+    :root { --wa-icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2a10 10 0 0 0-8.6 15.05L2 22l5.1-1.33A10 10 0 1 0 12 2Zm5.4 14.2c-.23.64-1.35 1.23-1.86 1.27-.5.05-.96.24-3.24-.68-2.74-1.1-4.47-3.9-4.6-4.08-.14-.18-1.1-1.47-1.1-2.8 0-1.33.7-1.98.94-2.25a1 1 0 0 1 .72-.34c.18 0 .36 0 .52.01.17 0 .4-.06.62.48.23.55.78 1.9.85 2.04.07.14.11.3.02.48-.09.18-.14.3-.27.46-.14.16-.29.36-.41.48-.14.14-.28.29-.12.57.16.27.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.27.14.43.12.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.6-.14.25.09 1.58.75 1.86.89.27.14.45.2.52.32.07.11.07.64-.16 1.27Z'/%3E%3C/svg%3E"); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: .7rem; }
+    .cta-row--center { justify-content: center; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(120% 80% at 85% -10%, rgba(174,203,216,.5), transparent 60%),
+        linear-gradient(180deg, var(--cielo-soft), var(--sak) 72%);
+      padding-top: clamp(30px, 6vw, 56px);
+      padding-bottom: clamp(40px, 7vw, 72px);
+    }
+    .hero__grid { display: grid; gap: clamp(30px, 5vw, 56px); }
+    .hero__copy h1 {
+      font-size: clamp(2.9rem, 13vw, 5rem); font-weight: 800; letter-spacing: -.03em;
+      margin: .1em 0 .45em; color: var(--ink);
+    }
+    .hero__mark {
+      color: var(--turquesa-deep);
+      background: linear-gradient(transparent 66%, rgba(226,154,46,.32) 0);
+    }
+    .hero__sub { font-size: 1.12rem; color: var(--ink-soft); max-width: 34ch; }
+    .hero__sub em { font-style: italic; color: var(--turquesa-deep); font-weight: 600; }
+    .eyebrow.eyebrow--hero { color: var(--turquesa-deep); }
+    .hero .eyebrow { color: var(--turquesa-deep); }
+
+    .rating { display: inline-flex; align-items: center; gap: .55rem; margin: .3rem 0 1.4rem;
+      background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: .45rem .9rem;
+      box-shadow: var(--shadow-sm); }
+    .rating__stars { color: var(--miel); font-size: 1.05rem; letter-spacing: .05em; position: relative; }
+    .rating__stars .half { position: relative; }
+    .rating__stars .half::after {
+      content: "★"; position: absolute; left: 0; top: 0; width: 50%; overflow: hidden;
+      color: var(--miel);
+    }
+    .rating__stars .half { color: #d9e5e2; }
+    .rating__txt { font-size: .95rem; color: var(--ink-soft); }
+    .rating__txt strong { color: var(--ink); }
+
+    .hero__open { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: .9rem;
+      color: var(--turquesa-deep); margin: 1rem 0 0; }
+
+    .hero__photo { position: relative; margin: 0; }
+    .hero__photo img {
+      width: 100%; aspect-ratio: 5 / 4; object-fit: cover; object-position: center top;
+      border-radius: 20px; box-shadow: var(--shadow);
+    }
+    .hero__photo figcaption {
+      font-size: .82rem; color: var(--ink-soft); margin-top: 1rem; text-align: center;
+      font-family: 'Outfit', sans-serif; font-weight: 500;
+    }
+    .cornice {
+      position: absolute; left: 12px; right: 12px; bottom: 46px; height: 14px;
+      background: var(--greca); background-size: 30px 15px; background-repeat: repeat-x;
+      opacity: .9; filter: drop-shadow(0 2px 3px rgba(7,87,81,.25));
+    }
+
+    /* ---------- VALORES ---------- */
+    .valores { background: var(--turquesa-deep); color: #fff; }
+    .valores__inner { display: flex; flex-wrap: wrap; align-items: center; gap: .8rem 1.4rem;
+      padding-block: 22px; justify-content: center; text-align: center; }
+    .valores__lead { font-family: 'Outfit', sans-serif; font-weight: 500; font-size: .82rem;
+      letter-spacing: .16em; text-transform: uppercase; color: #bfeee9; }
+    .valores__list { list-style: none; display: flex; flex-wrap: wrap; gap: .5rem 1.2rem; margin: 0; padding: 0;
+      justify-content: center; }
+    .valores__list li { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: clamp(1rem, 3.6vw, 1.35rem);
+      letter-spacing: -.01em; position: relative; padding-left: 1.3rem; }
+    .valores__list li::before {
+      content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
+      width: 14px; height: 8px; background: var(--greca-light); background-size: 14px 7px; opacity: .85;
+    }
+
+    /* ---------- greca band divider ---------- */
+    .band-greca { height: 18px; background: var(--greca); background-size: 34px 17px; background-repeat: repeat-x;
+      background-position: center; opacity: .9; }
+    .band-greca--light { background: var(--greca-light); background-size: 34px 17px; background-repeat: repeat-x;
+      background-position: center; height: 16px; margin: 0 auto 1.6rem; width: 130px; opacity: .8; }
+
+    /* ---------- QUIÉNES SOMOS ---------- */
+    .quienes { background: var(--white); }
+    .quienes__grid { display: grid; gap: clamp(28px, 5vw, 54px); align-items: start; }
+    .quienes h2 { margin-bottom: 1rem; max-width: 18ch; }
+    .quienes p { color: var(--ink-soft); }
+    .quienes em { color: var(--turquesa-deep); font-style: italic; font-weight: 600; }
+    .mini-stats { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .mini-stats li { background: var(--sak-panel); border-radius: 16px; padding: 20px 18px; border: 1px solid var(--line);
+      display: flex; flex-direction: column; gap: .35rem; }
+    .mini-stats__num { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.9rem; color: var(--turquesa-deep);
+      line-height: 1; display: inline-flex; align-items: baseline; gap: .1em; }
+    .mini-stats__num span { color: var(--miel); font-size: 1.1rem; }
+    .mini-stats__lbl { font-size: .85rem; color: var(--ink-soft); }
+
+    /* ---------- SECTION HEAD ---------- */
+    .section-head { max-width: 40ch; margin-bottom: clamp(26px, 4vw, 44px); }
+    .section-head h2 { margin-bottom: .6rem; }
+    .section-head__sub { color: var(--ink-soft); margin: 0; }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios { background: var(--sak); }
+    .cards { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .card { background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 26px 22px;
+      box-shadow: var(--shadow-sm); position: relative; transition: transform .2s ease, box-shadow .2s ease; }
+    .card:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+    .card__paw { font-size: 1.4rem; display: inline-block; margin-bottom: .6rem;
+      filter: drop-shadow(0 3px 5px rgba(18,167,157,.3)); }
+    .card h3 { color: var(--ink); margin-bottom: .4rem; }
+    .card p { color: var(--ink-soft); margin: 0; font-size: .97rem; }
+
+    /* ---------- PORQUÉ ---------- */
+    .porque { background: var(--turquesa-deep); color: #fff;
+      background-image: radial-gradient(90% 60% at 100% 0%, rgba(87,160,73,.4), transparent 55%); }
+    .porque .eyebrow { color: #bfeee9; }
+    .porque h2 { color: #fff; }
+    .porque__grid { display: grid; gap: 20px; }
+    .porque__item { display: flex; gap: 18px; align-items: flex-start;
+      border-top: 1px solid rgba(255,255,255,.16); padding-top: 20px; }
+    .porque__n { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.5rem;
+      color: var(--miel); flex: none; line-height: 1.1; }
+    .porque__item h3 { color: #fff; margin-bottom: .3rem; }
+    .porque__item p { color: rgba(233,246,244,.86); margin: 0; }
+
+    /* ---------- CTA BAND ---------- */
+    .cta-band { background: var(--cielo-soft); }
+    .cta-band__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+      gap: 22px; padding: clamp(34px, 6vw, 54px) 0; }
+    .cta-band__inner h2 { color: var(--ink); margin-bottom: .3rem; }
+    .cta-band__inner p { color: var(--ink-soft); margin: 0; max-width: 42ch; }
+
+    /* ---------- RESEÑAS ---------- */
+    .resenas { background: var(--white); }
+    .resenas__grid { display: grid; gap: 18px; }
+    .quote { margin: 0; background: var(--sak); border: 1px solid var(--line); border-radius: 18px;
+      padding: 26px 24px; position: relative; }
+    .quote__stars { color: var(--miel); letter-spacing: .1em; margin-bottom: .7rem; font-size: 1rem; }
+    .quote blockquote { margin: 0 0 1.1rem; font-size: 1.08rem; line-height: 1.55; color: var(--ink); }
+    .quote figcaption { display: flex; flex-direction: column; }
+    .quote__autor { font-family: 'Outfit', sans-serif; font-weight: 700; color: var(--turquesa-deep); }
+    .quote__cuando { font-size: .82rem; color: var(--ink-soft); }
+    .resenas__more { text-align: center; margin-top: 26px; }
+
+    /* ---------- GALERÍA ---------- */
+    .galeria { background: var(--sak); }
+    .mosaic { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; grid-auto-rows: 1fr; }
+    .mosaic figure { margin: 0; border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-sm); }
+    .mosaic img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .mosaic__a { grid-column: span 2; }
+    .mosaic__a img { aspect-ratio: 16 / 11; }
+    .mosaic__b img, .mosaic__c img, .mosaic__d img { aspect-ratio: 1 / 1; }
+    .mosaic__d { grid-column: span 2; }
+    .mosaic__d img { aspect-ratio: 16 / 10; object-position: center 30%; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubicacion { background: var(--white); }
+    .ubicacion__grid { display: grid; gap: clamp(28px, 5vw, 48px); align-items: start; }
+    .ubicacion__dir { color: var(--ink-soft); font-size: 1.05rem; max-width: 34ch; }
+    .ubicacion__actions { display: flex; flex-wrap: wrap; gap: .6rem; margin-bottom: 28px; }
+    .horarios { width: 100%; border-collapse: collapse; font-size: 1rem; }
+    .horarios caption { text-align: left; font-family: 'Outfit', sans-serif; font-weight: 600;
+      color: var(--turquesa-deep); margin-bottom: .6rem; font-size: .82rem; letter-spacing: .12em; text-transform: uppercase; }
+    .horarios th, .horarios td { padding: .7rem .2rem; border-bottom: 1px solid var(--line); text-align: left; }
+    .horarios th { font-weight: 500; color: var(--ink); }
+    .horarios td { text-align: right; color: var(--ink-soft); font-variant-numeric: tabular-nums; }
+    .horarios tr.is-closed td { color: #b06a6a; }
+    .horarios tr.today { background: var(--cielo-soft); }
+    .horarios tr.today th, .horarios tr.today td { color: var(--turquesa-deeper); font-weight: 700; }
+    .ubicacion__map { border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); }
+    .ubicacion__map iframe { width: 100%; height: 340px; border: 0; display: block; }
+
+    /* ---------- CTA FINAL ---------- */
+    .cta-final { background: var(--turquesa-deeper); color: #fff; text-align: center;
+      background-image: radial-gradient(80% 120% at 50% -20%, rgba(18,167,157,.55), transparent 60%); }
+    .cta-final__inner { padding: clamp(56px, 9vw, 92px) 0; }
+    .cta-final h2 { color: #fff; max-width: 20ch; margin: 0 auto .8rem; }
+    .cta-final p { color: rgba(233,246,244,.86); max-width: 46ch; margin: 0 auto 1.8rem; }
+
+    /* ---------- FOOTER ---------- */
+    .foot { background: #063f3a; color: #cfe9e5; padding: 44px 0 96px; }
+    .foot__inner { display: flex; flex-wrap: wrap; gap: 22px; justify-content: space-between; align-items: flex-start; }
+    .foot__logo { font-family: 'Outfit', sans-serif; font-weight: 800; font-size: 1.4rem; color: #fff;
+      display: inline-flex; align-items: center; gap: .3rem; }
+    .foot__brand p { margin: .4rem 0 0; font-size: .92rem; color: #9fc7c1; }
+    .foot__contact { display: flex; flex-direction: column; gap: .5rem; }
+    .foot__contact a { color: #eafffb; text-decoration: none; font-size: .95rem; }
+    .foot__contact a:hover { text-decoration: underline; }
+
+    /* ---------- reveal (progressive enhancement) ---------- */
+    .has-js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .has-js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- focus ---------- */
+    a:focus-visible, .btn:focus-visible, iframe:focus-visible {
+      outline: 3px solid var(--miel); outline-offset: 3px; border-radius: 6px;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .card:hover, .btn:hover { transform: none; }
+    }
+
+    /* ---------- responsive up ---------- */
+    @media (min-width: 720px) {
+      .cards { grid-template-columns: repeat(2, 1fr); }
+      .resenas__grid { grid-template-columns: repeat(2, 1fr); }
+      .porque__grid { grid-template-columns: repeat(2, 1fr); gap: 20px 40px; }
+    }
+    @media (min-width: 900px) {
+      .hero__grid { grid-template-columns: 1.05fr .95fr; align-items: center; }
+      .quienes__grid { grid-template-columns: 1.4fr 1fr; }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .ubicacion__grid { grid-template-columns: 1fr 1.1fr; }
+      .mini-stats { grid-template-columns: 1fr 1fr; }
+      .ubicacion__map iframe { height: 420px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var rm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (!rm && 'IntersectionObserver' in window) {
+        document.documentElement.classList.add('has-js');
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
+        document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+      }
+      var today = new Date().getDay();
+      document.querySelectorAll('.horarios tr[data-day]').forEach(function (row) {
+        if (Number(row.getAttribute('data-day')) === today) { row.classList.add('today'); }
+      });
+    })();
+  </script>
+</BaseLayout>

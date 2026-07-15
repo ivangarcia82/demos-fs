@@ -1,0 +1,720 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Gym MG · Gimnasio en Los Reyes, Mérida"
+  description="Máquinas nuevas, buen ambiente y buena atención. ⭐ 4.8 con 58 reseñas en Google. Gimnasio en Los Reyes, Mérida, Yucatán. Escríbenos por WhatsApp."
+  slug="gym-mg"
+  ogImage="/gym-mg/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Michroma&family=Inter:wght@400;500;600&display=swap"
+  favicon="⚙️"
+  themeColor="#1f2430"
+  whatsapp={"https://wa.me/529992876020"}
+  telefono={"999 287 6020"}
+  mapsUrl={"https://maps.google.com/?cid=9622198533800205589&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="mg">
+
+    <!-- defs compartidos para el icono "placa" (disco de acero, el guiño a "máquinas nuevas") -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+      <defs>
+        <radialGradient id="plateGrad" cx="35%" cy="30%" r="75%">
+          <stop offset="0%" stop-color="#f4f6f8" />
+          <stop offset="35%" stop-color="#c7ccd3" />
+          <stop offset="70%" stop-color="#8b93a0" />
+          <stop offset="100%" stop-color="#5b6472" />
+        </radialGradient>
+      </defs>
+    </svg>
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <img class="hero-photo" src="/gym-mg/img/foto_1.jpg" alt="Área de pesas y máquinas de Gym MG" loading="eager" fetchpriority="high" />
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-perf" aria-hidden="true"></div>
+
+      <div class="wrap hero-content">
+        <div class="medallion reveal" aria-hidden="true">
+          <span>MG</span>
+        </div>
+
+        <p class="kicker reveal">Gimnasio · Los Reyes, Mérida</p>
+        <h1 class="word reveal">
+          <span class="word-gym">GYM</span>
+          <span class="word-mg">MG</span>
+        </h1>
+        <p class="tagline reveal">Máquinas nuevas, buen ambiente y la actitud que te hace volver todos los días.</p>
+
+        <a class="chip reveal" href="https://maps.google.com/?cid=9622198533800205589&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+          <span class="star" aria-hidden="true">★</span> 4.8 · 58 reseñas en Google
+        </a>
+
+        <div class="cta-row reveal">
+          <a class="btn btn-solid" href="https://wa.me/529992876020" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.6-6.1c-.3-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1-.2.3-.6.8-.8 1-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.4-3c-.3-.4 0-.5.2-.7l.4-.5c.1-.2.2-.3.3-.5v-.5c0-.1-.5-1.3-.7-1.8-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2l-.4-.3z"/></svg>
+            Escríbenos por WhatsApp
+          </a>
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=9622198533800205589&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Firma: hilera de placas/discos de acero -->
+    <div class="plates-row reveal" aria-hidden="true">
+      <svg viewBox="0 0 64 64" class="plate plate-sm"><circle cx="32" cy="32" r="28" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="#1f2430"/></svg>
+      <svg viewBox="0 0 64 64" class="plate plate-lg"><circle cx="32" cy="32" r="30" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3.5"/><circle cx="32" cy="32" r="11" fill="#1f2430"/><circle cx="32" cy="9" r="2.6" fill="#1f2430"/><circle cx="32" cy="55" r="2.6" fill="#1f2430"/><circle cx="9" cy="32" r="2.6" fill="#1f2430"/><circle cx="55" cy="32" r="2.6" fill="#1f2430"/></svg>
+      <svg viewBox="0 0 64 64" class="plate plate-md"><circle cx="32" cy="32" r="29" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="10" fill="#1f2430"/></svg>
+      <svg viewBox="0 0 64 64" class="plate plate-lg"><circle cx="32" cy="32" r="30" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3.5"/><circle cx="32" cy="32" r="11" fill="#1f2430"/><circle cx="32" cy="9" r="2.6" fill="#1f2430"/><circle cx="32" cy="55" r="2.6" fill="#1f2430"/><circle cx="9" cy="32" r="2.6" fill="#1f2430"/><circle cx="55" cy="32" r="2.6" fill="#1f2430"/></svg>
+      <svg viewBox="0 0 64 64" class="plate plate-sm"><circle cx="32" cy="32" r="28" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="#1f2430"/></svg>
+    </div>
+
+    <!-- ============ 01 NOSOTROS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Nosotros</p>
+        <h2 class="sec-title reveal">Aquí se entrena en&nbsp;serio</h2>
+        <div class="about reveal">
+          <p>En <strong>Gym MG</strong> creemos que entrenar no debería sentirse como un trámite. Por eso mantenemos el equipo renovado — nuestros socios lo notan y lo dicen en sus reseñas: máquinas nuevas, en buen estado, listas para usarse todos los días.</p>
+          <p>Tenemos zona de pesas, área de cardio con caminadoras y máquinas para distintos tipos de rutina, de fuerza a resistencia. Pero lo que más nos enorgullece es el ambiente: nuestro personal está para ayudarte con tus dudas, tus rutinas y lo que necesites, con la buena onda que hace que valga la pena madrugar.</p>
+          <p>Mantenemos el gimnasio limpio y ordenado porque ahí también se nota el cuidado. Si buscas un lugar donde entrenar en serio, sin vueltas y con buena actitud, en Los Reyes te estamos esperando.</p>
+        </div>
+        <ul class="chips reveal">
+          <li>🕐 Abrimos desde las 5:30 am</li>
+          <li>🏋️ Máquinas nuevas y en buen estado</li>
+          <li>🙌 Buen ambiente, buena atención</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 02 INSTALACIONES ============ -->
+    <section class="sec sec-panel" id="instalaciones">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Instalaciones</p>
+        <h2 class="sec-title reveal">Lo que vas a encontrar aquí</h2>
+        <div class="cards">
+          <div class="card reveal">
+            <svg viewBox="0 0 64 64" class="card-plate" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="#1f2430"/></svg>
+            <h3>Zona de pesas</h3>
+            <p>Equipo renovado y en buen estado, para que tu rutina no dependa de esperar turno.</p>
+          </div>
+          <div class="card reveal">
+            <svg viewBox="0 0 64 64" class="card-plate" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="#1f2430"/></svg>
+            <h3>Área de cardio</h3>
+            <p>Caminadoras y máquinas de cardio, listas para tus series de resistencia.</p>
+          </div>
+          <div class="card reveal">
+            <svg viewBox="0 0 64 64" class="card-plate" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="#1f2430"/></svg>
+            <h3>Entrenamiento completo</h3>
+            <p>De fuerza a cardio: rutinas para distintos objetivos, en un mismo espacio.</p>
+          </div>
+          <div class="card reveal">
+            <svg viewBox="0 0 64 64" class="card-plate" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="#1f2430"/></svg>
+            <h3>Ambiente que motiva</h3>
+            <p>Buena atención y buen ambiente — lo que más repiten nuestros socios en sus reseñas.</p>
+          </div>
+          <div class="card reveal">
+            <svg viewBox="0 0 64 64" class="card-plate" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="#1f2430"/></svg>
+            <h3>Instalaciones cuidadas</h3>
+            <p>Un gimnasio limpio y ordenado, para que entrenar se sienta cómodo todos los días.</p>
+          </div>
+          <div class="card reveal">
+            <svg viewBox="0 0 64 64" class="card-plate" aria-hidden="true"><circle cx="32" cy="32" r="28" fill="url(#plateGrad)" stroke="#dc2626" stroke-width="3"/><circle cx="32" cy="32" r="9" fill="#1f2430"/></svg>
+            <h3>Horario extendido</h3>
+            <p>Abrimos desde las 5:30 am de lunes a viernes, para que entrenes antes de arrancar tu día.</p>
+          </div>
+        </div>
+
+        <div class="gallery reveal">
+          <img src="/gym-mg/img/foto_3.jpg" alt="Área de cardio de Gym MG con caminadoras y elípticas" loading="lazy" width="1100" height="619" />
+          <img src="/gym-mg/img/foto_5.jpg" alt="Pasillo de máquinas de cardio de Gym MG" loading="lazy" width="618" height="1100" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 03 RESEÑAS ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Reseñas de Google</p>
+        <h2 class="sec-title reveal">Lo que dicen nuestros socios</h2>
+
+        <div class="rating-block reveal">
+          <span class="rating-num">4.8</span>
+          <div class="rating-side">
+            <span class="rating-stars" aria-label="4.8 de 5 estrellas">★★★★★</span>
+            <span class="rating-total">58 reseñas en Google</span>
+          </div>
+        </div>
+
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«es un gimnasio muy bueno, buena atención y buen ambiente, las máquinas son nuevas y en buen estado»</blockquote>
+            <figcaption><strong>Cinthya Keb</strong><span>Hace 5 meses · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«…El personal es amable y siempre está dispuesto a ayudar en caso de dudas sobre el uso de los equipos o rutinas de ejercicio. Además, el gimnasio se mantiene limpio y ordenado, lo que hace que la experiencia sea más cómoda.»</blockquote>
+            <figcaption><strong>Ariadne Pérez Azcorra</strong><span>Hace un año · Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Excelente lugar para entrenar, bastante completo, varias máquinas 💪🏼y caminadoras para cardio»</blockquote>
+            <figcaption><strong>Naylea Gonzalez</strong><span>Hace 3 años · Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost-l" href="https://maps.google.com/?cid=9622198533800205589&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-panel" id="ubicacion">
+      <div class="wrap">
+        <p class="sec-kicker reveal">Ubicación y horarios</p>
+        <h2 class="sec-title reveal">Los Reyes, Mérida</h2>
+        <div class="ubica reveal">
+          <div class="ubica-info">
+            <p class="dir">C. 9 515, Los Reyes<br />97156 Mérida, Yuc., México</p>
+            <a class="btn btn-solid btn-sm" href="https://maps.google.com/?cid=9622198533800205589&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+            <h3 class="horario-titulo">Horario</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>5:30–22:00</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>5:30–22:00</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>5:30–22:00</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>5:30–22:00</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>5:30–22:00</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>7:00–13:00</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps?q=gym%20MG%2C%20C.%209%20515%2C%20Los%20Reyes%2C%2097156%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+              title="Mapa: Gym MG en Los Reyes, Mérida"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <h2 class="banda-title">¿Listo para entrenar?</h2>
+        <p class="banda-sub">Escríbenos por WhatsApp y empieza hoy mismo.</p>
+        <div class="cta-row">
+          <a class="btn btn-dark" href="https://wa.me/529992876020" target="_blank" rel="noopener">WhatsApp directo</a>
+          <a class="btn btn-dark-ghost" href="tel:+529992876020">Llamar · 999 287 6020</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <div class="medallion medallion-sm" aria-hidden="true"><span>MG</span></div>
+        <p class="pie-logo">Gym MG</p>
+        <p class="pie-dato">Gimnasio · C. 9 515, Los Reyes, 97156 Mérida, Yuc., México</p>
+        <p class="pie-dato"><a href="tel:+529992876020">999 287 6020</a> · <a href="https://wa.me/529992876020" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://www.facebook.com/MGGYMSPORT/" target="_blank" rel="noopener">Facebook</a></p>
+        <p class="pie-mini">Lunes a viernes 5:30–22:00 · Sábado 7:00–13:00 · Domingo cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "HealthClub",
+    "name": "Gym MG",
+    "telephone": "+529992876020",
+    "url": "https://demos.ivang.mx/gym-mg",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "C. 9 515, Los Reyes",
+      "addressLocality": "Mérida",
+      "addressRegion": "Yucatán",
+      "postalCode": "97156",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "58"
+    },
+    "openingHours": ["Mo-Fr 05:30-22:00", "Sa 07:00-13:00"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --acero: #e2e5e9;
+      --acero-2: #d3d8dd;
+      --acero-3: #bcc3cc;
+      --grafito: #1f2430;
+      --grafito-2: #161a24;
+      --grafito-3: #2b3245;
+      --rojo: #dc2626;
+      --rojo-ink: #b91c1c;
+      --rojo-glow: #f87171;
+      --ink: #14161c;
+      --paper: #eef1f4;
+      --muted-l: #4b5563;
+      --muted-d: #aab2bf;
+      --display: "Michroma", "Arial Narrow", sans-serif;
+      --body: "Inter", system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      background: var(--acero);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 16.5px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .mg ::selection { background: var(--rojo); color: #fff; }
+    .mg a:focus-visible,
+    .mg .btn:focus-visible {
+      outline: 3px solid var(--rojo);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1060px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- MEDALLÓN "MG" (firma) ---------- */
+    .medallion {
+      width: 92px;
+      height: 92px;
+      border-radius: 50%;
+      background: conic-gradient(from 220deg, #f4f6f8, #c7ccd3 15%, #8b93a0 30%, #eef1f3 45%, #9aa1ac 60%, #f4f6f8 75%, #c7ccd3 90%, #f4f6f8 100%);
+      box-shadow:
+        inset 0 0 0 3px var(--rojo),
+        0 10px 24px rgba(0, 0, 0, 0.45),
+        inset 0 2px 4px rgba(255, 255, 255, 0.55),
+        inset 0 -3px 7px rgba(0, 0, 0, 0.35);
+      display: grid;
+      place-items: center;
+      position: relative;
+      margin: 0 0 22px;
+    }
+    .medallion::before,
+    .medallion::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #4a5261, #1c202a);
+    }
+    .medallion::before { top: 9px; left: 50%; transform: translateX(-50%); }
+    .medallion::after { bottom: 9px; left: 50%; transform: translateX(-50%); }
+    .medallion span {
+      font-family: var(--display);
+      font-size: 22px;
+      color: var(--grafito);
+      letter-spacing: 0.02em;
+    }
+    .medallion-sm { width: 60px; height: 60px; margin: 0 auto 14px; }
+    .medallion-sm span { font-size: 15px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 38px);
+      min-height: calc(100svh - 38px);
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(0deg, rgba(22, 26, 36, 0.97) 0%, rgba(22, 26, 36, 0.82) 32%, rgba(22, 26, 36, 0.45) 62%, rgba(22, 26, 36, 0.35) 100%);
+    }
+    .hero-perf {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(238, 241, 244, 0.16) 1.4px, transparent 1.6px);
+      background-size: 16px 16px;
+      mix-blend-mode: overlay;
+      opacity: 0.5;
+    }
+    .hero-content {
+      position: relative;
+      padding: 96px 20px 44px;
+      width: 100%;
+    }
+    .kicker {
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rojo-glow);
+      margin: 0 0 12px;
+    }
+    .word {
+      margin: 0;
+      font-family: var(--display);
+      line-height: 0.98;
+      display: flex;
+      flex-direction: column;
+    }
+    .word-gym {
+      font-size: clamp(20px, 5.4vw, 30px);
+      color: var(--paper);
+      letter-spacing: 0.14em;
+    }
+    .word-mg {
+      font-size: clamp(58px, 20vw, 148px);
+      color: var(--rojo);
+      letter-spacing: -0.01em;
+      margin-top: 2px;
+      text-shadow: 0 0 46px rgba(220, 38, 38, 0.35);
+    }
+    .tagline {
+      font-size: clamp(17px, 4.4vw, 22px);
+      font-weight: 400;
+      color: var(--paper);
+      max-width: 32ch;
+      margin: 20px 0 18px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(238, 241, 244, 0.28);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 500;
+      font-size: 14.5px;
+      color: var(--paper);
+      text-decoration: none;
+      background: rgba(22, 26, 36, 0.55);
+      backdrop-filter: blur(3px);
+    }
+    .chip .star { color: var(--rojo-glow); }
+    .chip:hover { border-color: var(--rojo); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 0; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      font-family: var(--body);
+      font-weight: 600;
+      font-size: 15.5px;
+      text-decoration: none;
+      padding: 14px 22px;
+      border-radius: 8px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--rojo); color: #fff; }
+    .btn-solid:hover { background: #c81f1f; }
+    .btn-ghost { border: 2px solid rgba(238, 241, 244, 0.5); color: var(--paper); }
+    .btn-ghost:hover { border-color: var(--rojo); color: var(--rojo-glow); }
+    .btn-ghost-l { border: 2px solid var(--acero-3); color: var(--ink); }
+    .btn-ghost-l:hover { border-color: var(--rojo); color: var(--rojo-ink); }
+    .btn-sm { font-size: 14.5px; padding: 11px 18px; }
+
+    /* ---------- PLACAS (firma, divisor) ---------- */
+    .plates-row {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 14px;
+      padding: 26px 20px;
+      background: var(--grafito);
+    }
+    .plate { filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.4)); }
+    .plate-sm { width: 32px; height: 32px; }
+    .plate-md { width: 44px; height: 44px; }
+    .plate-lg { width: 58px; height: 58px; }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 68px 0; }
+    .sec-panel { background: var(--grafito); }
+    .sec-panel .sec-kicker { color: var(--rojo-glow); }
+    .sec-panel .sec-title { color: var(--paper); }
+    .sec-kicker {
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rojo-ink);
+      margin: 0 0 10px;
+    }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(28px, 7vw, 46px);
+      line-height: 1.08;
+      margin: 0 0 26px;
+      color: var(--ink);
+    }
+
+    .about p { max-width: 62ch; margin: 0 0 16px; color: var(--muted-l); }
+    .about strong { color: var(--ink); }
+
+    .chips {
+      list-style: none;
+      margin: 26px 0 0;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .chips li {
+      background: var(--acero-2);
+      border: 1px solid var(--acero-3);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    /* ---------- INSTALACIONES ---------- */
+    .cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+    .card {
+      background: var(--grafito-3);
+      border-left: 4px solid var(--rojo);
+      border-radius: 4px;
+      padding: 22px;
+    }
+    .card-plate { width: 40px; height: 40px; margin: 0 0 14px; display: block; }
+    .card h3 {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 17px;
+      letter-spacing: 0.01em;
+      margin: 0 0 8px;
+      color: var(--paper);
+    }
+    .card p { margin: 0; color: var(--muted-d); font-size: 14.5px; line-height: 1.55; }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin: 32px 0 0;
+    }
+    .gallery img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid rgba(238, 241, 244, 0.12);
+    }
+
+    /* ---------- RESEÑAS ---------- */
+    .rating-block {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 0 0 32px;
+    }
+    .rating-num {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(56px, 14vw, 84px);
+      color: var(--rojo-ink);
+      line-height: 1;
+    }
+    .rating-side { display: flex; flex-direction: column; gap: 4px; }
+    .rating-stars { color: var(--rojo-ink); font-size: 17px; letter-spacing: 0.14em; }
+    .rating-total { font-size: 14px; color: var(--muted-l); font-weight: 500; }
+
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 0 0 30px;
+    }
+    .rev {
+      margin: 0;
+      background: var(--acero-2);
+      border-top: 4px solid var(--rojo);
+      border-radius: 6px;
+      padding: 20px 22px 18px;
+      position: relative;
+    }
+    .rev::before,
+    .rev::after {
+      content: "";
+      position: absolute;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 30%, #f6f7f8, #98a0ab);
+      box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+    }
+    .rev::before { left: 10px; }
+    .rev::after { right: 10px; }
+    .rev-stars { color: var(--rojo-ink); font-size: 15px; letter-spacing: 0.18em; margin: 0 0 10px; }
+    .rev blockquote {
+      margin: 0 0 16px;
+      font-size: 15.5px;
+      line-height: 1.55;
+      font-weight: 500;
+      color: var(--ink);
+    }
+    .rev figcaption {
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .rev figcaption strong { font-size: 14.5px; color: var(--ink); }
+    .rev figcaption span { font-size: 12.5px; color: var(--muted-l); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 26px; }
+    .dir { font-size: 17px; font-weight: 500; margin: 0 0 16px; color: var(--paper); }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 17px;
+      margin: 28px 0 10px;
+      color: var(--paper);
+    }
+    .horarios { width: 100%; max-width: 420px; border-collapse: collapse; font-size: 15px; }
+    .horarios th, .horarios td { padding: 9px 10px; border-bottom: 1px solid rgba(238, 241, 244, 0.14); text-align: left; }
+    .horarios th { font-weight: 500; color: var(--paper); }
+    .horarios td { color: var(--muted-d); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: #fff; background: var(--rojo); font-weight: 600; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--grafito-2);
+      color: var(--paper);
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 10px;
+      vertical-align: 1px;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 10px;
+      display: block;
+      filter: grayscale(0.2) contrast(1.02);
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda {
+      background: var(--rojo);
+      color: #fff;
+      padding: 56px 0;
+      text-align: center;
+    }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(30px, 7.5vw, 50px);
+      line-height: 1.05;
+      margin: 0 0 12px;
+      color: #fff;
+    }
+    .banda-sub { margin: 0 auto 24px; max-width: 40ch; font-weight: 500; }
+    .banda .cta-row { justify-content: center; }
+    .btn-dark { background: var(--grafito); color: var(--paper); }
+    .btn-dark:hover { background: var(--grafito-2); }
+    .btn-dark-ghost { border: 2px solid rgba(255, 255, 255, 0.7); color: #fff; }
+    .btn-dark-ghost:hover { border-color: #fff; background: rgba(255, 255, 255, 0.12); }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      background: var(--grafito-2);
+      padding: 44px 0 96px;
+      text-align: center;
+    }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: 22px;
+      color: var(--paper);
+      margin: 0 0 10px;
+    }
+    .pie-dato { margin: 4px 0; color: var(--muted-d); font-size: 14px; }
+    .pie-dato a { color: var(--paper); text-decoration: none; border-bottom: 1px solid var(--rojo); }
+    .pie-dato a:hover { color: var(--rojo-glow); }
+    .pie-mini { margin: 14px 0 0; color: #6c7484; font-size: 12px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 104px 0; }
+      .cards { grid-template-columns: repeat(3, 1fr); }
+      .gallery { grid-template-columns: 1.6fr 1fr; }
+      .gallery img { height: 320px; }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .ubica { grid-template-columns: 1fr 1.2fr; align-items: start; }
+      .mapa iframe { height: 400px; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      // Resaltar el día de hoy en la tabla de horarios
+      var hoy = new Date().getDay(); // 0 = domingo
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      // Scroll-reveal (mejora progresiva)
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

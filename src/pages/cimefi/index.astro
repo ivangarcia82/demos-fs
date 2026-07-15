@@ -1,0 +1,591 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+// --- Datos del dossier (fuente de verdad) ---
+const nombre = 'CIMEFI';
+const wa = 'https://wa.me/529993539209';
+const waMsg =
+  'https://wa.me/529993539209?text=' +
+  encodeURIComponent('Hola CIMEFI, vi su página y me gustaría agendar una valoración de fisioterapia.');
+const tel = '999 353 9209';
+const telHref = 'tel:+529993539209';
+const mapsUrl =
+  'https://maps.google.com/?cid=14020822264931248699&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const direccion = 'C. 57ᴮ 298, entre 46 y 48, Francisco de Montejo, 97203 Mérida, Yuc., México';
+const mapEmbed =
+  'https://www.google.com/maps?q=CIMEFI%20Calle%2057B%20298%20Francisco%20de%20Montejo%20M%C3%A9rida%20Yucat%C3%A1n&output=embed';
+
+// Servicios reales visibles en el anuncio de la clínica (foto de fachada)
+const servicios = [
+  { t: 'Fisioterapia ortopédica y traumatológica', d: 'Recuperación de lesiones de rodilla, hombro, columna y articulaciones tras un golpe, una caída o una cirugía.' },
+  { t: 'Fisioterapia neurológica', d: 'Acompañamiento para recuperar movilidad, fuerza y control después de un evento neurológico.' },
+  { t: 'Fisioterapia deportiva', d: 'Vuelve a tu deporte con seguridad: rehabilitación de la lesión y trabajo para que no regrese.' },
+  { t: 'Fisioterapia dermatofuncional', d: 'Cuidado de la piel y los tejidos: cicatrices, edema y recuperación de la función.' },
+  { t: 'Masajes terapéuticos', d: 'Alivio de contracturas, tensión y dolor muscular con técnica manual profesional.' },
+];
+
+// Reseñas reales (citas contiguas, solo tramos positivos)
+const resenas = [
+  { autor: 'Alex C', cuando: 'Hace 3 meses', texto: 'Excelente trato y servicio, las instalaciones son cómodas y limpias. He acudido a varias sesiones para tratar un problema de rodilla y he visto muy buena mejoría y a buen ritmo.…' },
+  { autor: 'Instituto Indigo', cuando: 'Hace 6 meses', texto: 'Son muy asertivas en el diagnóstico, me siento cómoda con el servicio pues te explican todo muy bien.' },
+  { autor: 'Clau', cuando: 'Hace 2 años', texto: 'La mejor clínica de fisioterapia. Excelente atención por parte del personal, son muy atentos, amables y profesionales.…' },
+  { autor: 'Maria Mosqueda Chan', cuando: 'Hace 2 años', texto: 'Instalaciones cómodas y equipo de calidad para una terapia personalizada. Todo el personal muy amable y profesionales.' },
+];
+
+const horarios = [
+  { d: 'Lunes', h: '9:00 – 14:00 · 16:00 – 20:00', day: 1 },
+  { d: 'Martes', h: '9:00 – 14:00 · 16:00 – 20:00', day: 2 },
+  { d: 'Miércoles', h: '9:00 – 14:00 · 16:00 – 20:00', day: 3 },
+  { d: 'Jueves', h: '9:00 – 14:00 · 16:00 – 20:00', day: 4 },
+  { d: 'Viernes', h: '9:00 – 14:00 · 16:00 – 20:00', day: 5 },
+  { d: 'Sábado', h: '9:00 – 14:00', day: 6 },
+  { d: 'Domingo', h: 'Cerrado', day: 0 },
+];
+
+const pasos = [
+  { g: 45, t: 'Valoración', d: 'Escuchamos tu historia y evaluamos el movimiento. Aquí nace un diagnóstico claro y explicado.' },
+  { g: 90, t: 'Plan personalizado', d: 'Diseñamos una terapia hecha para ti: objetivos concretos y sesiones a tu ritmo.' },
+  { g: 135, t: 'Terapia guiada', d: 'Trabajamos contigo sesión a sesión, ajustando la carga conforme recuperas rango y fuerza.' },
+  { g: 180, t: 'Alta y seguimiento', d: 'El objetivo es que vuelvas a tu vida sin dolor, con recomendaciones para no recaer.' },
+];
+---
+<BaseLayout
+  title="CIMEFI · Fisioterapia y rehabilitación en Mérida"
+  description="⭐ 5.0 · 102 reseñas. Centro Integral de Medicina y Fisioterapia en Francisco de Montejo. Recuperación medida, grado a grado. Agenda por WhatsApp."
+  slug="cimefi"
+  ogImage="/cimefi/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Barlow+Semi+Condensed:wght@500;600;700;800&display=swap"
+  favicon="💪"
+  themeColor="#16273A"
+  whatsapp={wa}
+  telefono={tel}
+  mapsUrl={mapsUrl}
+>
+  <!-- ============ HERO ============ -->
+  <header class="cf-hero">
+    <div class="cf-hero__grid">
+      <div class="cf-hero__copy">
+        <p class="cf-eyebrow cf-eyebrow--light">
+          <svg class="cf-arcglyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20a12 12 0 0 1 18 0" fill="none"/><circle cx="12" cy="20" r="1.6"/></svg>
+          Centro Integral de Medicina y Fisioterapia
+        </p>
+        <h1 class="cf-hero__title">Recuperar movimiento<br><span>se puede medir.</span></h1>
+        <p class="cf-hero__lead">
+          En CIMEFI acompañamos tu rehabilitación grado a grado: valoración clara,
+          terapia personalizada y un equipo que te explica cada paso. En Francisco
+          de Montejo, Mérida.
+        </p>
+        <div class="cf-hero__cta">
+          <a class="cf-btn cf-btn--primary" href={waMsg} target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="cf-wa"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.1.1.8-.2 1.4Z"/></svg>
+            Agendar por WhatsApp
+          </a>
+          <a class="cf-btn cf-btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+        <p class="cf-hero__rating">
+          <span class="cf-stars" aria-hidden="true">★★★★★</span>
+          <strong>5.0</strong> · 102 reseñas en Google
+        </p>
+      </div>
+
+      <!-- FIRMA: goniómetro / arco de rango de movimiento -->
+      <div class="cf-hero__viz" aria-hidden="true">
+        <div class="cf-gonio">
+          <svg viewBox="0 0 400 250" class="cf-gonio__svg" role="img" aria-label="Arco de rango de movimiento">
+            <!-- ground / fixed arm -->
+            <line x1="52" y1="210" x2="348" y2="210" class="cf-g-base"/>
+            <!-- reference arc -->
+            <path d="M 50 210 A 150 150 0 0 1 350 210" class="cf-g-ref"/>
+            <!-- minor ticks -->
+            <g class="cf-g-tick">
+              <line x1="344.9" y1="171.2" x2="353.6" y2="168.9"/>
+              <line x1="329.9" y1="135.0" x2="337.7" y2="130.5"/>
+              <line x1="275.0" y1="80.1" x2="279.5" y2="72.3"/>
+              <line x1="238.8" y1="65.1" x2="241.1" y2="56.4"/>
+              <line x1="161.2" y1="65.1" x2="158.9" y2="56.4"/>
+              <line x1="125.0" y1="80.1" x2="120.5" y2="72.3"/>
+              <line x1="70.1" y1="135.0" x2="62.3" y2="130.5"/>
+              <line x1="55.1" y1="171.2" x2="46.4" y2="168.9"/>
+            </g>
+            <!-- major ticks -->
+            <g class="cf-g-tick cf-g-tick--major">
+              <line x1="350" y1="210" x2="370" y2="210"/>
+              <line x1="306.1" y1="103.9" x2="320.2" y2="89.8"/>
+              <line x1="200" y1="60" x2="200" y2="40"/>
+              <line x1="93.9" y1="103.9" x2="79.8" y2="89.8"/>
+              <line x1="50" y1="210" x2="30" y2="210"/>
+            </g>
+            <!-- achieved arc (aqua) 0 to 140 -->
+            <path d="M 350 210 A 150 150 0 0 0 85.06 113.62" class="cf-g-achieved" pathLength="100"/>
+            <!-- moving arm (orange needle) -->
+            <g class="cf-g-needle">
+              <line x1="200" y1="210" x2="85.06" y2="113.62"/>
+              <circle cx="85.06" cy="113.62" r="6" class="cf-g-tip"/>
+            </g>
+            <!-- hub -->
+            <circle cx="200" cy="210" r="7" class="cf-g-hub"/>
+            <!-- labels -->
+            <text x="362" y="228" class="cf-g-lbl">0°</text>
+            <text x="200" y="32" class="cf-g-lbl cf-g-lbl--mid">90°</text>
+            <text x="38" y="228" class="cf-g-lbl">180°</text>
+            <text x="92" y="98" class="cf-g-read">140°</text>
+          </svg>
+          <p class="cf-gonio__cap">Rango de movimiento · <em>recuperación medida</em></p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ FRANJA DE CONFIANZA ============ -->
+  <section class="cf-strip" aria-label="Datos de la clínica">
+    <ul class="cf-strip__list">
+      <li><span class="cf-strip__num">5.0</span><span class="cf-strip__txt">calificación en Google</span></li>
+      <li><span class="cf-strip__num">102</span><span class="cf-strip__txt">reseñas de pacientes</span></li>
+      <li><span class="cf-strip__num">5</span><span class="cf-strip__txt">áreas de fisioterapia</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ QUIÉNES SOMOS ============ -->
+  <section class="cf-about cf-reveal">
+    <div class="cf-wrap cf-about__grid">
+      <div class="cf-about__text">
+        <p class="cf-eyebrow"><svg class="cf-arcglyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20a12 12 0 0 1 18 0" fill="none"/><circle cx="12" cy="20" r="1.6"/></svg> Quiénes somos</p>
+        <h2 class="cf-h2">Una clínica donde el avance se nota, sesión a sesión</h2>
+        <p>Somos un centro integral de medicina y fisioterapia en Francisco de Montejo.
+          Aquí no tratamos síntomas sueltos: valoramos con calma, explicamos lo que
+          encontramos y armamos un plan de terapia pensado para tu caso. Como nos
+          dice la gente, buscamos ser <em>«asertivas en el diagnóstico»</em> y
+          explicarte todo muy bien antes de empezar.</p>
+        <p>Nuestros pacientes llegan con molestias de rodilla, lesiones deportivas,
+          contracturas o recuperaciones que se sienten lentas, y encuentran
+          instalaciones cómodas y limpias, equipo de calidad y un trato cercano.
+          El objetivo es simple: que recuperes tu rango de movimiento a buen ritmo
+          y vuelvas a tu vida sin dolor.</p>
+      </div>
+      <figure class="cf-about__fig">
+        <img src="/cimefi/img/foto_1.jpg" alt="Recepción de CIMEFI con su logotipo iluminado" width="900" height="1200" loading="lazy" decoding="async" />
+        <figcaption>Recepción de CIMEFI, Mérida</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="cf-serv cf-reveal">
+    <div class="cf-wrap">
+      <p class="cf-eyebrow"><svg class="cf-arcglyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20a12 12 0 0 1 18 0" fill="none"/><circle cx="12" cy="20" r="1.6"/></svg> En qué te ayudamos</p>
+      <h2 class="cf-h2">Cinco áreas de fisioterapia bajo un mismo techo</h2>
+      <div class="cf-serv__grid">
+        {servicios.map((s, i) => (
+          <article class="cf-card">
+            <span class="cf-card__idx">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="cf-card__t">{s.t}</h3>
+            <p class="cf-card__d">{s.d}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESO / GRADOS ============ -->
+  <section class="cf-proc cf-reveal">
+    <div class="cf-wrap">
+      <p class="cf-eyebrow cf-eyebrow--light"><svg class="cf-arcglyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20a12 12 0 0 1 18 0" fill="none"/><circle cx="12" cy="20" r="1.6"/></svg> Cómo acompañamos tu recuperación</p>
+      <h2 class="cf-h2 cf-h2--light">De la primera valoración a volver a moverte</h2>
+      <ol class="cf-proc__steps">
+        {pasos.map((p) => (
+          <li class="cf-step">
+            <span class="cf-step__dial" style={`--g:${p.g}`} aria-hidden="true">
+              <svg viewBox="0 0 60 40"><path d="M6 36 A 24 24 0 0 1 54 36" class="cf-step__ref"/><path d="M6 36 A 24 24 0 0 1 54 36" class="cf-step__fill" pathLength="100"/></svg>
+              <b>{p.g}°</b>
+            </span>
+            <h3 class="cf-step__t">{p.t}</h3>
+            <p class="cf-step__d">{p.d}</p>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA ============ -->
+  <section class="cf-gal cf-reveal">
+    <div class="cf-wrap">
+      <p class="cf-eyebrow"><svg class="cf-arcglyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20a12 12 0 0 1 18 0" fill="none"/><circle cx="12" cy="20" r="1.6"/></svg> Conoce el espacio</p>
+      <h2 class="cf-h2">Instalaciones cómodas, limpias y equipadas</h2>
+      <div class="cf-gal__mosaic">
+        <figure class="cf-gal__item cf-gal__item--tall">
+          <img src="/cimefi/img/foto_3.jpg" alt="Sesión de fisioterapia con pelota de ejercicio en el área de rehabilitación" width="675" height="1200" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="cf-gal__item">
+          <img src="/cimefi/img/foto_5.jpg" alt="Área de recepción de la clínica con logotipo iluminado" width="900" height="1200" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="cf-gal__item">
+          <img src="/cimefi/img/foto_4.jpg" alt="Fachada de CIMEFI en la esquina de la calle 57B, Francisco de Montejo" width="1600" height="740" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="cf-gal__item cf-gal__item--wide">
+          <img src="/cimefi/img/foto_2.jpg" alt="Entrada de la clínica con estacionamiento y acceso" width="1600" height="960" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA INTERMEDIO ============ -->
+  <section class="cf-band">
+    <div class="cf-wrap cf-band__in">
+      <div>
+        <h2 class="cf-band__t">¿Cargas con una molestia que no termina de irse?</h2>
+        <p class="cf-band__d">Escríbenos por WhatsApp y agenda tu valoración. Te respondemos y te explicamos el siguiente paso.</p>
+      </div>
+      <a class="cf-btn cf-btn--primary cf-btn--lg" href={waMsg} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="cf-wa"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.1.1.8-.2 1.4Z"/></svg>
+        Escribir ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- ============ RESEÑAS ============ -->
+  <section class="cf-rev cf-reveal">
+    <div class="cf-wrap">
+      <div class="cf-rev__head">
+        <div class="cf-gauge" aria-hidden="true">
+          <svg viewBox="0 0 120 80"><path d="M12 72 A 48 48 0 0 1 108 72" class="cf-gauge__ref"/><path d="M12 72 A 48 48 0 0 1 108 72" class="cf-gauge__fill" pathLength="100"/></svg>
+          <span class="cf-gauge__num">5.0</span>
+        </div>
+        <div>
+          <p class="cf-eyebrow"><svg class="cf-arcglyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20a12 12 0 0 1 18 0" fill="none"/><circle cx="12" cy="20" r="1.6"/></svg> Lo que dicen los pacientes</p>
+          <h2 class="cf-h2">5.0 de calificación, en 102 reseñas reales</h2>
+          <a class="cf-link" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google →</a>
+        </div>
+      </div>
+      <div class="cf-rev__grid">
+        {resenas.map((r) => (
+          <figure class="cf-quote">
+            <span class="cf-quote__stars" aria-hidden="true">★★★★★</span>
+            <blockquote>{r.texto}</blockquote>
+            <figcaption><strong>{r.autor}</strong><span>{r.cuando}</span></figcaption>
+          </figure>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ UBICACIÓN Y HORARIOS ============ -->
+  <section class="cf-loc cf-reveal">
+    <div class="cf-wrap cf-loc__grid">
+      <div class="cf-loc__info">
+        <p class="cf-eyebrow"><svg class="cf-arcglyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 20a12 12 0 0 1 18 0" fill="none"/><circle cx="12" cy="20" r="1.6"/></svg> Dónde estamos</p>
+        <h2 class="cf-h2">Francisco de Montejo, Mérida</h2>
+        <p class="cf-loc__addr">{direccion}</p>
+
+        <div class="cf-attr">
+          <span class="cf-attr__i">Acepta tarjetas</span>
+          <span class="cf-attr__i">Estacionamiento disponible</span>
+          <span class="cf-attr__i">Acceso para silla de ruedas</span>
+        </div>
+
+        <div class="cf-hours">
+          <div class="cf-hours__top">
+            <h3>Horarios</h3>
+            <span class="cf-open" id="cf-open" hidden></span>
+          </div>
+          <table class="cf-hours__table">
+            <tbody>
+              {horarios.map((h) => (
+                <tr data-day={h.day}>
+                  <th scope="row">{h.d}</th>
+                  <td>{h.h}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="cf-loc__cta">
+          <a class="cf-btn cf-btn--primary" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+          <a class="cf-btn cf-btn--ghost cf-btn--ghost-dark" href={telHref}>Llamar {tel}</a>
+        </div>
+      </div>
+      <div class="cf-loc__map">
+        <iframe src={mapEmbed} title="Ubicación de CIMEFI en Google Maps" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA FINAL ============ -->
+  <section class="cf-final">
+    <div class="cf-wrap cf-final__in">
+      <p class="cf-eyebrow cf-eyebrow--light" style="justify-content:center;">Da el primer paso</p>
+      <h2 class="cf-final__t">Tu recuperación empieza con un mensaje</h2>
+      <p class="cf-final__d">Cuéntanos qué te pasa y con gusto te orientamos. En CIMEFI estarás en buenas manos.</p>
+      <a class="cf-btn cf-btn--primary cf-btn--lg" href={waMsg} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="cf-wa"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.7 4.8-1.3A10 10 0 1 0 12 2Zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.7-.6-3-1.3-5-4.4-5.1-4.6-.2-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.4 0 .5l-.4.5-.3.4c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.4 2.4 1.5.3.1.5.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.3.1.5.2.5.4.1.1.1.8-.2 1.4Z"/></svg>
+        Agendar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <footer class="cf-foot">
+    <div class="cf-wrap cf-foot__in">
+      <div class="cf-foot__brand">CIMEFI</div>
+      <p class="cf-foot__sub">Centro Integral de Medicina y Fisioterapia · Mérida, Yucatán</p>
+      <p class="cf-foot__contact">
+        <a href={telHref}>{tel}</a> · <a href={mapsUrl} target="_blank" rel="noopener">Ver en Google Maps</a>
+      </p>
+    </div>
+  </footer>
+
+  <style is:global>
+    /* ===== CIMEFI · fisioterapia · marino + aqua + naranja ===== */
+    :root {
+      --cf-marino: #16273A;
+      --cf-marino2: #1E3446;
+      --cf-pizarra: #2C3E4E;
+      --cf-aqua: #24BEC7;
+      --cf-aqua-deep: #147F86;
+      --cf-aqua-tint: #E6F6F7;
+      --cf-naranja: #E87A32;
+      --cf-naranja-deep: #C25E1C;
+      --cf-naranja-soft: #FBEEE1;
+      --cf-hueso: #F6F9FA;
+      --cf-blanco: #FFFFFF;
+      --cf-tinta: #17262F;
+      --cf-gris: #4E5F68;
+      --cf-linea: #E2E9ED;
+    }
+
+    body { background: var(--cf-hueso); color: var(--cf-tinta); font-family: 'Barlow', system-ui, sans-serif; font-size: 17px; line-height: 1.62; -webkit-font-smoothing: antialiased; }
+
+    .cf-wrap { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 22px; }
+
+    h1, h2, h3 { font-family: 'Barlow Semi Condensed', 'Barlow', sans-serif; margin: 0; line-height: 1.06; letter-spacing: -0.01em; }
+
+    .cf-h2 { font-size: clamp(1.7rem, 5vw, 2.7rem); font-weight: 700; color: var(--cf-marino); letter-spacing: -0.015em; max-width: 20ch; }
+    .cf-h2--light { color: var(--cf-blanco); }
+
+    .cf-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; color: var(--cf-aqua-deep); margin: 0 0 14px; }
+    .cf-eyebrow--light { color: var(--cf-aqua); }
+    .cf-arcglyph { width: 22px; height: 22px; flex: none; }
+    .cf-arcglyph path { stroke: currentColor; stroke-width: 2.4; stroke-linecap: round; }
+    .cf-arcglyph circle { fill: var(--cf-naranja); }
+
+    /* ---- Botones ---- */
+    .cf-btn { display: inline-flex; align-items: center; justify-content: center; gap: 9px; font-family: 'Barlow Semi Condensed', sans-serif; font-weight: 700; font-size: 1.02rem; letter-spacing: 0.01em; padding: 13px 22px; border-radius: 999px; text-decoration: none; border: 2px solid transparent; transition: transform .18s ease, box-shadow .18s ease, background .18s ease, color .18s ease; cursor: pointer; }
+    .cf-btn--lg { padding: 16px 30px; font-size: 1.12rem; }
+    .cf-btn--primary { background: var(--cf-naranja); color: #fff; box-shadow: 0 10px 22px -10px rgba(232,122,50,.75); }
+    .cf-btn--primary:hover { background: var(--cf-naranja-deep); transform: translateY(-2px); }
+    .cf-btn--ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,.5); }
+    .cf-btn--ghost:hover { border-color: #fff; background: rgba(255,255,255,.08); transform: translateY(-2px); }
+    .cf-btn--ghost-dark { color: var(--cf-marino); border-color: var(--cf-marino); }
+    .cf-btn--ghost-dark:hover { background: var(--cf-marino); color: #fff; }
+    .cf-wa { width: 20px; height: 20px; fill: currentColor; flex: none; }
+    .cf-btn:focus-visible, .cf-link:focus-visible, a:focus-visible { outline: 3px solid var(--cf-aqua); outline-offset: 3px; border-radius: 8px; }
+
+    /* ---- HERO ---- */
+    .cf-hero { background: radial-gradient(120% 120% at 85% 0%, #24405A 0%, var(--cf-marino) 55%); color: #fff; padding: clamp(30px, 6vw, 62px) 0 clamp(40px, 7vw, 74px); overflow: hidden; }
+    .cf-hero__grid { width: 100%; max-width: 1120px; margin: 0 auto; padding: 0 22px; display: grid; grid-template-columns: 1fr; gap: 30px; align-items: center; }
+    .cf-hero__title { font-size: clamp(2.5rem, 10vw, 4.4rem); font-weight: 800; letter-spacing: -0.02em; margin: 4px 0 18px; }
+    .cf-hero__title span { color: var(--cf-aqua); }
+    .cf-hero__lead { font-size: clamp(1.02rem, 2.6vw, 1.18rem); color: #C7D6E1; max-width: 46ch; margin: 0 0 26px; }
+    .cf-hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 22px; }
+    .cf-hero__rating { display: flex; align-items: center; gap: 9px; font-size: 1rem; color: #C7D6E1; margin: 0; }
+    .cf-hero__rating strong { color: #fff; font-size: 1.15rem; font-family: 'Barlow Semi Condensed'; }
+    .cf-stars { color: var(--cf-naranja); letter-spacing: 2px; font-size: 1.05rem; }
+
+    /* goniometro */
+    .cf-hero__viz { display: flex; justify-content: center; }
+    .cf-gonio { width: 100%; max-width: 440px; }
+    .cf-gonio__svg { width: 100%; height: auto; display: block; overflow: visible; }
+    .cf-g-base { stroke: rgba(255,255,255,.28); stroke-width: 2; }
+    .cf-g-ref { fill: none; stroke: rgba(255,255,255,.22); stroke-width: 2; }
+    .cf-g-tick line { stroke: rgba(255,255,255,.4); stroke-width: 2; }
+    .cf-g-tick--major line { stroke: rgba(255,255,255,.7); stroke-width: 2.4; }
+    .cf-g-achieved { fill: none; stroke: var(--cf-aqua); stroke-width: 6; stroke-linecap: round; filter: drop-shadow(0 0 10px rgba(36,190,199,.5)); }
+    .cf-g-needle line { stroke: var(--cf-naranja); stroke-width: 5; stroke-linecap: round; }
+    .cf-g-tip { fill: var(--cf-naranja); stroke: #fff; stroke-width: 2; }
+    .cf-g-hub { fill: var(--cf-marino); stroke: #fff; stroke-width: 3; }
+    .cf-g-lbl { fill: rgba(255,255,255,.65); font: 700 15px 'Barlow Semi Condensed', sans-serif; text-anchor: middle; }
+    .cf-g-lbl--mid { text-anchor: middle; }
+    .cf-g-read { fill: var(--cf-naranja); font: 800 22px 'Barlow Semi Condensed', sans-serif; text-anchor: end; }
+    .cf-gonio__cap { text-align: center; color: #9FB4C2; font-size: 0.9rem; letter-spacing: 0.04em; margin: 8px 0 0; }
+    .cf-gonio__cap em { color: var(--cf-aqua); font-style: normal; font-weight: 600; }
+
+    /* animación firma */
+    .cf-g-needle { transform-box: view-box; transform-origin: 200px 210px; }
+    .cf-anim .cf-g-needle { animation: cf-sweep 1.5s cubic-bezier(.22,.9,.28,1) .25s both; }
+    .cf-anim .cf-g-achieved { stroke-dasharray: 100; stroke-dashoffset: 0; animation: cf-draw 1.5s cubic-bezier(.22,.9,.28,1) .25s both; }
+    @keyframes cf-sweep { from { transform: rotate(88deg); } to { transform: rotate(0deg); } }
+    @keyframes cf-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
+
+    /* ---- FRANJA ---- */
+    .cf-strip { background: var(--cf-marino2); }
+    .cf-strip__list { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: clamp(18px, 6vw, 70px); margin: 0 auto; max-width: 1120px; padding: 22px; }
+    .cf-strip__list li { display: flex; flex-direction: column; align-items: center; text-align: center; }
+    .cf-strip__num { font-family: 'Barlow Semi Condensed'; font-weight: 800; font-size: 2rem; color: var(--cf-aqua); line-height: 1; }
+    .cf-strip__txt { color: #A9BCC9; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 5px; }
+
+    /* ---- ABOUT ---- */
+    .cf-about { padding: clamp(52px, 9vw, 96px) 0; }
+    .cf-about__grid { display: grid; grid-template-columns: 1fr; gap: 34px; align-items: center; }
+    .cf-about__text p { color: var(--cf-gris); margin: 0 0 16px; max-width: 56ch; }
+    .cf-about__text em { color: var(--cf-marino); font-style: normal; font-weight: 600; }
+    .cf-about__fig { margin: 0; position: relative; border-radius: 18px; overflow: hidden; box-shadow: 0 30px 60px -30px rgba(22,39,58,.45); }
+    .cf-about__fig img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
+    .cf-about__fig figcaption { position: absolute; left: 14px; bottom: 12px; background: rgba(22,39,58,.82); color: #fff; font-size: 0.78rem; padding: 6px 12px; border-radius: 999px; backdrop-filter: blur(4px); }
+
+    /* ---- SERVICIOS ---- */
+    .cf-serv { padding: clamp(52px, 9vw, 90px) 0; background: var(--cf-aqua-tint); }
+    .cf-serv__grid { display: grid; grid-template-columns: 1fr; gap: 16px; margin-top: 30px; }
+    .cf-card { background: #fff; border: 1px solid var(--cf-linea); border-radius: 16px; padding: 26px 22px; position: relative; transition: transform .2s ease, box-shadow .2s ease; }
+    .cf-card:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -26px rgba(22,39,58,.4); }
+    .cf-card__idx { font-family: 'Barlow Semi Condensed'; font-weight: 800; font-size: 0.95rem; color: var(--cf-naranja); letter-spacing: 0.1em; }
+    .cf-card__t { font-size: 1.32rem; font-weight: 700; color: var(--cf-marino); margin: 8px 0 8px; }
+    .cf-card__d { color: var(--cf-gris); font-size: 0.98rem; margin: 0; }
+
+    /* ---- PROCESO ---- */
+    .cf-proc { padding: clamp(54px, 9vw, 96px) 0; background: var(--cf-marino); color: #fff; }
+    .cf-proc .cf-h2 { margin-bottom: 8px; }
+    .cf-proc__steps { list-style: none; margin: 36px 0 0; padding: 0; display: grid; grid-template-columns: 1fr; gap: 26px; counter-reset: none; }
+    .cf-step { border-top: 1px solid rgba(255,255,255,.14); padding-top: 22px; }
+    .cf-step__dial { position: relative; display: inline-flex; align-items: flex-end; justify-content: center; width: 76px; height: 50px; margin-bottom: 12px; }
+    .cf-step__dial svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+    .cf-step__ref { fill: none; stroke: rgba(255,255,255,.2); stroke-width: 4; stroke-linecap: round; }
+    .cf-step__fill { fill: none; stroke: var(--cf-aqua); stroke-width: 4; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: calc(100 - var(--g) / 1.8); }
+    .cf-step__dial b { position: relative; font-family: 'Barlow Semi Condensed'; font-weight: 800; font-size: 1.15rem; color: var(--cf-naranja); }
+    .cf-step__t { font-size: 1.42rem; font-weight: 700; margin: 0 0 6px; }
+    .cf-step__d { color: #B7C7D3; margin: 0; font-size: 0.98rem; max-width: 40ch; }
+
+    /* ---- GALERÍA ---- */
+    .cf-gal { padding: clamp(52px, 9vw, 90px) 0; }
+    .cf-gal__mosaic { display: grid; grid-template-columns: 1fr 1fr; grid-auto-rows: 150px; gap: 12px; margin-top: 30px; }
+    .cf-gal__item { margin: 0; border-radius: 14px; overflow: hidden; background: var(--cf-pizarra); grid-row: span 1; }
+    .cf-gal__item img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+    .cf-gal__item:hover img { transform: scale(1.05); }
+    .cf-gal__item--tall { grid-row: span 2; }
+    .cf-gal__item--wide { grid-column: span 2; }
+
+    /* ---- BAND ---- */
+    .cf-band { background: linear-gradient(100deg, var(--cf-aqua-deep), var(--cf-marino)); color: #fff; }
+    .cf-band__in { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 22px; padding-top: clamp(40px, 7vw, 60px); padding-bottom: clamp(40px, 7vw, 60px); }
+    .cf-band__t { font-size: clamp(1.5rem, 4.4vw, 2.1rem); font-weight: 700; max-width: 22ch; }
+    .cf-band__d { color: #CFE6E9; margin: 10px 0 0; max-width: 44ch; }
+
+    /* ---- RESEÑAS ---- */
+    .cf-rev { padding: clamp(52px, 9vw, 92px) 0; background: var(--cf-hueso); }
+    .cf-rev__head { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-bottom: 34px; }
+    .cf-gauge { position: relative; width: 130px; flex: none; }
+    .cf-gauge svg { width: 100%; height: auto; overflow: visible; }
+    .cf-gauge__ref { fill: none; stroke: var(--cf-linea); stroke-width: 8; stroke-linecap: round; }
+    .cf-gauge__fill { fill: none; stroke: var(--cf-naranja); stroke-width: 8; stroke-linecap: round; stroke-dasharray: 100; stroke-dashoffset: 0; }
+    .cf-gauge__num { position: absolute; left: 0; right: 0; bottom: 4px; text-align: center; font-family: 'Barlow Semi Condensed'; font-weight: 800; font-size: 1.9rem; color: var(--cf-marino); }
+    .cf-link { display: inline-block; margin-top: 12px; color: var(--cf-aqua-deep); font-weight: 700; font-family: 'Barlow Semi Condensed'; text-decoration: none; letter-spacing: 0.01em; }
+    .cf-link:hover { color: var(--cf-naranja-deep); }
+    .cf-rev__grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .cf-quote { margin: 0; background: #fff; border: 1px solid var(--cf-linea); border-left: 4px solid var(--cf-aqua); border-radius: 14px; padding: 24px 22px; }
+    .cf-quote__stars { color: var(--cf-naranja); letter-spacing: 2px; font-size: 0.95rem; }
+    .cf-quote blockquote { margin: 10px 0 16px; font-size: 1.06rem; color: var(--cf-tinta); line-height: 1.55; }
+    .cf-quote figcaption { display: flex; flex-direction: column; }
+    .cf-quote figcaption strong { color: var(--cf-marino); font-family: 'Barlow Semi Condensed'; font-size: 1.05rem; }
+    .cf-quote figcaption span { color: var(--cf-gris); font-size: 0.85rem; }
+
+    /* ---- UBICACIÓN ---- */
+    .cf-loc { padding: clamp(52px, 9vw, 92px) 0; }
+    .cf-loc__grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
+    .cf-loc__addr { color: var(--cf-gris); max-width: 40ch; margin: 0 0 20px; }
+    .cf-attr { display: flex; flex-wrap: wrap; gap: 9px; margin-bottom: 26px; }
+    .cf-attr__i { display: inline-flex; align-items: center; gap: 7px; background: var(--cf-aqua-tint); color: var(--cf-aqua-deep); font-weight: 600; font-size: 0.86rem; padding: 7px 14px 7px 12px; border-radius: 999px; }
+    .cf-attr__i::before { content: ""; width: 8px; height: 8px; border-radius: 999px; background: var(--cf-naranja); flex: none; }
+    .cf-hours { border: 1px solid var(--cf-linea); border-radius: 14px; padding: 18px 20px; margin-bottom: 24px; background: #fff; }
+    .cf-hours__top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 6px; }
+    .cf-hours__top h3 { font-size: 1.2rem; color: var(--cf-marino); }
+    .cf-open { font-family: 'Barlow Semi Condensed'; font-weight: 700; font-size: 0.82rem; padding: 4px 11px; border-radius: 999px; }
+    .cf-open--yes { background: #E4F6EC; color: #197A45; }
+    .cf-open--no { background: var(--cf-naranja-soft); color: var(--cf-naranja-deep); }
+    .cf-hours__table { width: 100%; border-collapse: collapse; }
+    .cf-hours__table th, .cf-hours__table td { text-align: left; padding: 8px 0; font-size: 0.95rem; border-bottom: 1px solid var(--cf-linea); }
+    .cf-hours__table th { font-weight: 600; color: var(--cf-tinta); font-family: 'Barlow'; }
+    .cf-hours__table td { color: var(--cf-gris); text-align: right; }
+    .cf-hours__table tr:last-child th, .cf-hours__table tr:last-child td { border-bottom: none; }
+    .cf-hours__table tr.cf-today th, .cf-hours__table tr.cf-today td { color: var(--cf-aqua-deep); font-weight: 700; }
+    .cf-loc__cta { display: flex; flex-wrap: wrap; gap: 12px; }
+    .cf-loc__map { border-radius: 16px; overflow: hidden; border: 1px solid var(--cf-linea); min-height: 300px; box-shadow: 0 26px 50px -30px rgba(22,39,58,.4); }
+    .cf-loc__map iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+    /* ---- FINAL ---- */
+    .cf-final { background: radial-gradient(120% 130% at 50% 0%, #24405A 0%, var(--cf-marino) 60%); color: #fff; }
+    .cf-final__in { text-align: center; padding-top: clamp(56px, 9vw, 92px); padding-bottom: clamp(56px, 9vw, 92px); display: flex; flex-direction: column; align-items: center; }
+    .cf-final__t { font-size: clamp(1.9rem, 5.6vw, 3rem); font-weight: 800; letter-spacing: -0.02em; max-width: 18ch; margin: 4px 0 12px; }
+    .cf-final__d { color: #C7D6E1; max-width: 42ch; margin: 0 0 28px; }
+
+    /* ---- FOOTER ---- */
+    .cf-foot { background: var(--cf-marino2); color: #fff; padding: 40px 0 92px; }
+    .cf-foot__in { text-align: center; }
+    .cf-foot__brand { font-family: 'Barlow Semi Condensed'; font-weight: 800; font-size: 1.8rem; letter-spacing: 0.06em; color: var(--cf-aqua); }
+    .cf-foot__sub { color: #9FB4C2; font-size: 0.9rem; margin: 6px 0 12px; }
+    .cf-foot__contact { margin: 0; font-size: 0.95rem; }
+    .cf-foot__contact a { color: #fff; text-decoration: none; font-weight: 600; border-bottom: 1px solid rgba(255,255,255,.35); padding-bottom: 1px; }
+    .cf-foot__contact a:hover { color: var(--cf-aqua); }
+
+    /* ---- scroll reveal (mejora progresiva) ---- */
+    .cf-anim .cf-reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .cf-anim .cf-reveal.cf-in { opacity: 1; transform: none; }
+
+    /* ===== Desktop ===== */
+    @media (min-width: 760px) {
+      .cf-hero__grid { grid-template-columns: 1.05fr .95fr; gap: 40px; }
+      .cf-about__grid { grid-template-columns: 1.15fr .85fr; gap: 48px; }
+      .cf-serv__grid { grid-template-columns: repeat(3, 1fr); }
+      .cf-serv__grid .cf-card:nth-child(4) { grid-column: span 1; }
+      .cf-proc__steps { grid-template-columns: repeat(4, 1fr); gap: 20px; }
+      .cf-step { border-top: none; border-left: 1px solid rgba(255,255,255,.14); padding-top: 0; padding-left: 20px; }
+      .cf-gal__mosaic { grid-template-columns: repeat(4, 1fr); grid-auto-rows: 170px; }
+      .cf-gal__item { grid-column: span 2; }
+      .cf-gal__item--tall { grid-row: span 2; grid-column: span 2; }
+      .cf-gal__item--wide { grid-column: span 4; }
+      .cf-rev__grid { grid-template-columns: repeat(2, 1fr); }
+      .cf-loc__grid { grid-template-columns: 1fr 1fr; align-items: stretch; }
+    }
+    @media (min-width: 1000px) {
+      .cf-serv__grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('cf-anim');
+
+      // Scroll reveal
+      var els = document.querySelectorAll('.cf-reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) { e.target.classList.add('cf-in'); io.unobserve(e.target); }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('cf-in'); });
+      }
+
+      // Abierto ahora (hora local de Mérida, UTC-6)
+      try {
+        var schedule = { 1: [[540,840],[960,1200]], 2: [[540,840],[960,1200]], 3: [[540,840],[960,1200]], 4: [[540,840],[960,1200]], 5: [[540,840],[960,1200]], 6: [[540,840]], 0: [] };
+        var now = new Date();
+        var utc = now.getTime() + now.getTimezoneOffset() * 60000;
+        var merida = new Date(utc + (-6) * 3600000);
+        var day = merida.getDay();
+        var mins = merida.getHours() * 60 + merida.getMinutes();
+        var open = false;
+        (schedule[day] || []).forEach(function (r) { if (mins >= r[0] && mins < r[1]) open = true; });
+
+        var badge = document.getElementById('cf-open');
+        if (badge) {
+          badge.hidden = false;
+          badge.textContent = open ? 'Abierto ahora' : 'Cerrado ahora';
+          badge.classList.add(open ? 'cf-open--yes' : 'cf-open--no');
+        }
+        var row = document.querySelector('tr[data-day="' + day + '"]');
+        if (row) row.classList.add('cf-today');
+      } catch (e) {}
+    })();
+  </script>
+</BaseLayout>

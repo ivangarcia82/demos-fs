@@ -1,0 +1,800 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const SLUG = 'speed-pro-taller-mecanico-automotriz';
+const NOMBRE = 'Speed Pro Taller Mecánico Automotriz';
+const DIRECCION = 'C 31ᴬ 339, entre calle 10 y calle 12, San Esteban, 97149 Mérida, Yuc., México';
+const TEL = '999 106 7379';
+const WA = 'https://wa.me/529991067379';
+const WA_CITA = WA + '?text=' + encodeURIComponent('Hola Speed Pro, quiero agendar una cita para revisar mi coche.');
+const MAPS = 'https://maps.google.com/?cid=17505606668030767334';
+const mapEmbed = 'https://www.google.com/maps?q=' + encodeURIComponent('Speed Pro Taller Mecánico, C 31A 339, San Esteban, 97149 Mérida, Yucatán') + '&output=embed';
+
+const IMG = (n) => `/${SLUG}/img/foto_${n}.jpg`;
+
+// Servicios tomados de su propia señalización (foto_1 y foto_2 del taller).
+const servicios = [
+  { t: 'Mecánica general', d: 'Diagnóstico y reparación de fallas del motor y sistemas del auto.' },
+  { t: 'Afinaciones', d: 'Bujías, filtros y puesta a punto para que rinda como debe.' },
+  { t: 'Clutch y frenos', d: 'Revisión y cambio de embrague, balatas y sistema de frenado.' },
+  { t: 'Suspensión', d: 'Amortiguadores y componentes para que el manejo vuelva a sentirse firme.' },
+  { t: 'Diagnóstico por computadora', d: 'Escáner para leer los códigos exactos antes de tocar nada.' },
+  { t: 'Sistema de enfriamiento', d: 'Revisión de radiador y enfriamiento para el calor de Mérida.' },
+];
+
+const horarios = [
+  { d: 'Lunes', h: '8:00 – 17:00', hoy: false },
+  { d: 'Martes', h: '8:00 – 17:00', hoy: false },
+  { d: 'Miércoles', h: '8:00 – 17:00', hoy: false },
+  { d: 'Jueves', h: '8:00 – 17:00', hoy: false },
+  { d: 'Viernes', h: '8:00 – 17:00', hoy: false },
+  { d: 'Sábado', h: '8:00 – 13:00', hoy: false },
+  { d: 'Domingo', h: 'Cerrado', hoy: false },
+];
+---
+<BaseLayout
+  title="Speed Pro · Taller Mecánico en Mérida"
+  description="Servicio automotriz express en San Esteban, Mérida. ⭐ 5.0 · 95 reseñas. Rápidos, transparentes y con cita por WhatsApp."
+  slug={SLUG}
+  ogImage="/speed-pro-taller-mecanico-automotriz/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Rajdhani:wght@400;500;600;700&display=swap"
+  favicon="🏁"
+  themeColor="#0E1013"
+  whatsapp={WA}
+  telefono={TEL}
+  mapsUrl={MAPS}
+>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <img class="hero__bg" src={IMG(2)} alt="Fachada de Speed Pro Taller Mecánico Automotriz en San Esteban, Mérida" fetchpriority="high" width="1600" height="1200" />
+    <div class="hero__scrim"></div>
+    <div class="rail rail--hero" aria-hidden="true"></div>
+
+    <div class="hero__inner">
+      <p class="eyebrow eyebrow--light">Servicio automotriz express · Mérida, Yuc.</p>
+      <h1 class="hero__word">SPEED&nbsp;PRO</h1>
+      <p class="hero__tag">Tu coche listo <b>rápido</b> y sin sorpresas. Diagnóstico honesto, piezas a la vista y cita por WhatsApp.</p>
+
+      <a class="pill" href={MAPS} target="_blank" rel="noopener">
+        <span class="pill__star">★</span> 5.0 · 95 reseñas en Google
+      </a>
+
+      <div class="hero__cta">
+        <a class="btn btn--red" href={WA_CITA} target="_blank" rel="noopener">
+          <span class="btn__ico" aria-hidden="true">💬</span> Agendar por WhatsApp
+        </a>
+        <a class="btn btn--ghost" href={MAPS} target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+      <p class="hero__note">Cita por WhatsApp · Acepta tarjeta · Lun a Vie 8–17 h</p>
+    </div>
+
+    <div class="startline" aria-hidden="true"></div>
+  </header>
+
+  <!-- ===================== FRANJA STATS ===================== -->
+  <section class="stats" aria-label="Datos rápidos">
+    <div class="stats__grid">
+      <div class="stat"><span class="stat__n">5.0</span><span class="stat__l">Calificación en Google</span></div>
+      <div class="stat"><span class="stat__n">95</span><span class="stat__l">Reseñas reales</span></div>
+      <div class="stat"><span class="stat__n">Exprés</span><span class="stat__l">Mecánica rápida</span></div>
+      <div class="stat"><span class="stat__n">A/C</span><span class="stat__l">Sala de espera</span></div>
+    </div>
+  </section>
+
+  <!-- ===================== QUIÉNES SOMOS ===================== -->
+  <section class="about reveal" id="taller">
+    <div class="about__media">
+      <img src={IMG(3)} alt="Recepción de Speed Pro con logo cromado y sala de espera con aire acondicionado" loading="lazy" width="1600" height="1200" />
+      <span class="tag-chip"><span class="checkers checkers--chip" aria-hidden="true"></span> Taller ordenado y limpio</span>
+    </div>
+    <div class="about__text">
+      <p class="eyebrow">Bajo el cofre</p>
+      <h2 class="h2">Rápidos, pero nunca a costa de hacerlo bien</h2>
+      <p>En <b>Speed Pro</b> trabajamos con una idea simple: que salgas del taller sabiendo exactamente qué le hicimos a tu coche y por qué. Somos un taller de servicio automotriz express en San Esteban, Mérida, donde la velocidad nunca pelea con el trabajo bien hecho.</p>
+      <p>Antes de tocar una pieza, <b>diagnosticamos con escáner y con revisión manual</b> para confirmar la falla. Te mostramos las piezas que vamos a cambiar y las nuevas que van a entrar, y puedes pasar a ver el trabajo mientras se hace. Sin letras chiquitas.</p>
+      <p>Mientras esperas, nuestra sala tiene sofá y aire acondicionado —que en Mérida se agradece—. Cotiza y agenda por WhatsApp; y si es de las primeras veces que llevas tu coche a un taller, aquí vas a encontrar quién te explique todo con calma.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="services reveal" id="servicios">
+    <div class="section-head">
+      <p class="eyebrow">En el pit</p>
+      <h2 class="h2">Lo que hacemos</h2>
+      <p class="section-sub">Los servicios que ofrecemos en el taller, sin adornos.</p>
+    </div>
+    <ul class="svc-grid">
+      {servicios.map((s) => (
+        <li class="svc">
+          <span class="svc__chev" aria-hidden="true"></span>
+          <h3 class="svc__t">{s.t}</h3>
+          <p class="svc__d">{s.d}</p>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <!-- ===================== DIFERENCIADORES ===================== -->
+  <section class="why reveal">
+    <div class="section-head">
+      <p class="eyebrow eyebrow--light">Por qué te conviene</p>
+      <h2 class="h2 h2--light">Cuatro cosas que nuestros clientes repiten</h2>
+    </div>
+    <div class="why__grid">
+      <article class="why__card">
+        <span class="why__k">01</span>
+        <h3 class="why__t">Rápidos de verdad</h3>
+        <p>Los mecánicos trabajan a buen ritmo y te entregan cuando quedan. Servicio exprés, sin dejarte el coche una semana.</p>
+      </article>
+      <article class="why__card">
+        <span class="why__k">02</span>
+        <h3 class="why__t">Transparencia total</h3>
+        <p>Te enseñamos las piezas que salen y las que entran, con evidencia del cambio. Puedes pasar a ver el trabajo mientras se hace.</p>
+      </article>
+      <article class="why__card">
+        <span class="why__k">03</span>
+        <h3 class="why__t">Diagnóstico bien hecho</h3>
+        <p>Escáner por computadora y revisión manual para confirmar que la falla es la que es, antes de cambiar nada.</p>
+      </article>
+      <article class="why__card">
+        <span class="why__k">04</span>
+        <h3 class="why__t">Te explican con calma</h3>
+        <p>Orientación clara sobre lo que detectan en tu auto y una sala cómoda con A/C mientras esperas.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="gallery reveal" id="galeria">
+    <div class="section-head">
+      <p class="eyebrow">El taller por dentro</p>
+      <h2 class="h2">Así se ve Speed Pro</h2>
+    </div>
+    <div class="gal-grid">
+      <figure class="gal gal--wide"><img src={IMG(5)} alt="Patio de Speed Pro con varios autos en servicio bajo techo" loading="lazy" width="1600" height="1067" /></figure>
+      <figure class="gal"><img src={IMG(4)} alt="Oficina de Speed Pro con sofá y ventanales" loading="lazy" width="1600" height="1200" /></figure>
+      <figure class="gal"><img src={IMG(1)} alt="Servicios de Speed Pro: mecánica general, afinaciones, suspensión, clutch y frenos" loading="lazy" width="1600" height="900" /></figure>
+    </div>
+  </section>
+
+  <!-- ===================== CTA INTERMEDIO ===================== -->
+  <section class="midcta" aria-label="Agenda tu servicio">
+    <div class="checkers checkers--band" aria-hidden="true"></div>
+    <div class="midcta__body">
+      <p class="midcta__k">¿Ya sabes qué le pasa a tu coche?</p>
+      <h2 class="midcta__h">Cotiza y agenda en un mensaje</h2>
+      <a class="btn btn--red btn--lg" href={WA_CITA} target="_blank" rel="noopener">
+        <span class="btn__ico" aria-hidden="true">💬</span> Escribir por WhatsApp
+      </a>
+    </div>
+    <div class="checkers checkers--band" aria-hidden="true"></div>
+  </section>
+
+  <!-- ===================== PRUEBA SOCIAL ===================== -->
+  <section class="reviews reveal" id="resenas">
+    <div class="section-head">
+      <p class="eyebrow">Lo que dicen en Google</p>
+      <h2 class="h2">
+        <span class="rating-big"><span class="rating-big__n">5.0</span><span class="rating-big__stars">★★★★★</span></span>
+      </h2>
+      <p class="section-sub">95 reseñas · calificación perfecta</p>
+    </div>
+
+    <div class="rev-wall">
+      <blockquote class="rev">
+        <p>“…el personal me atendió con mucha amabilidad, los mecánicos trabajan muy rápido. Estoy satisfecho con su trabajo. Te explican y orientan sobre otros problemas que detectan en tu auto.”</p>
+        <footer><span class="rev__who">Kevin Baas</span><span class="rev__when">Hace 2 meses</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p>“Antes de hacer cualquier cambio me mostraron las piezas que iban a sustituir y las nuevas que iban a colocar. Incluso pude pasar a verificar el trabajo mientras lo realizaban, todo con total transparencia.”</p>
+        <footer><span class="rev__who">Víctor Lavalle</span><span class="rev__when">Hace 7 meses</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p>“Confiables y profesionales. Explican lo que le van a hacer al coche y dan evidencias de los cambios. Buen precio y entrega cuando quedan. Los recomiendo mucho…”</p>
+        <footer><span class="rev__who">Clau Cordero</span><span class="rev__when">Hace 6 meses</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p>“La calidad de servicio que brindan sobrepasa a muchos talleres que se dicen ser de «alta gama», la verdad pocos talleres tienen la atención y la calidad de servicio como la que tiene Speed Pro…”</p>
+        <footer><span class="rev__who">Cion</span><span class="rev__when">Hace 3 semanas</span></footer>
+      </blockquote>
+
+      <blockquote class="rev">
+        <p>“Buen servicio, buena atención, con un taller ordenado y limpio te da confianza, me dieron un servicio rápido y conforme a lo estipulado, lo recomiendo!”</p>
+        <footer><span class="rev__who">samestrada</span><span class="rev__when">Hace 5 meses</span></footer>
+      </blockquote>
+    </div>
+
+    <a class="btn btn--ghost btn--center" href={MAPS} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+  </section>
+
+  <!-- ===================== ATRIBUTOS ===================== -->
+  <section class="attrs" aria-label="Datos del taller">
+    <ul class="attrs__list">
+      <li class="attr"><span class="attr__ico" aria-hidden="true">💳</span> Acepta tarjeta</li>
+      <li class="attr"><span class="attr__ico" aria-hidden="true">♿</span> Acceso para silla de ruedas</li>
+      <li class="attr"><span class="attr__ico" aria-hidden="true">📲</span> Cita por WhatsApp</li>
+      <li class="attr"><span class="attr__ico" aria-hidden="true">🖥️</span> Diagnóstico por computadora</li>
+    </ul>
+  </section>
+
+  <!-- ===================== UBICACIÓN + HORARIOS ===================== -->
+  <section class="loc reveal" id="ubicacion">
+    <div class="loc__info">
+      <p class="eyebrow">Dónde estamos</p>
+      <h2 class="h2">San Esteban, Mérida</h2>
+      <p class="loc__addr">{DIRECCION}</p>
+
+      <div class="loc__actions">
+        <a class="btn btn--red" href={MAPS} target="_blank" rel="noopener">Cómo llegar</a>
+        <a class="btn btn--ghost" href={`tel:${TEL.replace(/\s+/g, '')}`}>Llamar {TEL}</a>
+      </div>
+
+      <table class="hours">
+        <caption class="hours__cap">Horario</caption>
+        <tbody>
+          {horarios.map((r) => (
+            <tr class={r.h === 'Cerrado' ? 'is-closed' : ''}>
+              <th scope="row">{r.d}</th>
+              <td>{r.h}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="loc__map">
+      <iframe
+        title="Ubicación de Speed Pro en Google Maps"
+        src={mapEmbed}
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- ===================== FAQ ===================== -->
+  <section class="faq reveal" id="faq">
+    <div class="section-head">
+      <p class="eyebrow">Antes de venir</p>
+      <h2 class="h2">Preguntas rápidas</h2>
+    </div>
+    <div class="faq__list">
+      <details class="faq__item">
+        <summary>¿Cómo agendo una cita?</summary>
+        <p>Por WhatsApp. Mándanos qué le pasa a tu coche y te cotizamos la mano de obra antes de que llegues.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Aceptan tarjeta?</summary>
+        <p>Sí, aceptamos pago con tarjeta.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Hacen diagnóstico por computadora?</summary>
+        <p>Sí. Usamos escáner para leer los códigos y lo confirmamos con revisión manual antes de cambiar cualquier pieza.</p>
+      </details>
+      <details class="faq__item">
+        <summary>¿Tienen acceso para silla de ruedas?</summary>
+        <p>Sí, el taller cuenta con acceso para silla de ruedas.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL / META ===================== -->
+  <section class="finish" aria-label="Contacto">
+    <div class="checkers checkers--band checkers--band-lg" aria-hidden="true"></div>
+    <div class="finish__body">
+      <p class="eyebrow eyebrow--light">Meta</p>
+      <h2 class="finish__h">Deja tu coche en buenas manos</h2>
+      <p class="finish__p">Rápidos, transparentes y con calificación perfecta en Google. Escríbenos y agenda tu servicio hoy.</p>
+      <a class="btn btn--red btn--lg" href={WA_CITA} target="_blank" rel="noopener">
+        <span class="btn__ico" aria-hidden="true">💬</span> Agendar por WhatsApp
+      </a>
+      <p class="finish__tel">o llámanos: <a href={`tel:${TEL.replace(/\s+/g, '')}`}>{TEL}</a></p>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="foot">
+    <p class="foot__name">Speed Pro · Taller Mecánico Automotriz</p>
+    <p class="foot__addr">{DIRECCION}</p>
+    <p class="foot__contact">
+      <a href={`tel:${TEL.replace(/\s+/g, '')}`}>{TEL}</a>
+      <span aria-hidden="true">·</span>
+      <a href={WA} target="_blank" rel="noopener">WhatsApp</a>
+    </p>
+  </footer>
+
+  <style is:global>
+    :root {
+      --asphalt: #0E1013;
+      --graphite: #191C21;
+      --graphite-2: #23272E;
+      --line: #2C3138;
+      --red: #E4121A;
+      --red-2: #FF2E36;
+      --red-deep: #8F0A0F;
+      --white: #F3F5F7;
+      --chrome: #C6CDD5;
+      --chrome-dim: #8B939C;
+      --ink: #DCE0E5;
+      --shadow: 0 18px 44px rgba(0,0,0,.45);
+    }
+
+    body {
+      background: var(--asphalt);
+      color: var(--ink);
+      font-family: 'Rajdhani', system-ui, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+      font-weight: 500;
+      overflow-x: hidden;
+    }
+
+    /* ---------- primitives ---------- */
+    .eyebrow {
+      font-weight: 700;
+      font-size: .8rem;
+      letter-spacing: .28em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin: 0 0 .6rem;
+    }
+    .eyebrow--light { color: var(--red-2); }
+
+    .h2 {
+      font-family: 'Racing Sans One', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: clamp(1.9rem, 6.5vw, 3.1rem);
+      line-height: 1.02;
+      letter-spacing: .01em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin: 0 0 .5rem;
+    }
+    .h2--light { color: var(--white); }
+
+    .section-head { max-width: 720px; margin: 0 auto clamp(1.6rem, 5vw, 2.6rem); text-align: center; }
+    .section-sub { margin: .4rem 0 0; color: var(--chrome-dim); font-size: 1.05rem; }
+
+    p { margin: 0 0 1rem; }
+    b { color: var(--white); font-weight: 700; }
+
+    a { color: inherit; }
+    :focus-visible { outline: 3px solid var(--red-2); outline-offset: 3px; border-radius: 4px; }
+
+    /* ---------- buttons ---------- */
+    .btn {
+      display: inline-flex; align-items: center; gap: .55rem;
+      font-family: 'Rajdhani', sans-serif;
+      font-weight: 700; font-size: 1.05rem;
+      letter-spacing: .04em; text-transform: uppercase;
+      text-decoration: none;
+      padding: .85rem 1.5rem;
+      border-radius: 3px;
+      transition: transform .15s ease, background .15s ease, box-shadow .15s ease, border-color .15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .btn__ico { font-size: 1.1em; }
+    .btn--red {
+      background: var(--red); color: #fff;
+      box-shadow: 0 10px 24px rgba(228,18,26,.35), inset 0 0 0 1px rgba(255,255,255,.08);
+      border: 1px solid transparent;
+      clip-path: polygon(0 0, 100% 0, calc(100% - 12px) 100%, 0 100%);
+    }
+    .btn--red:hover { background: var(--red-2); transform: translateY(-2px); }
+    .btn--ghost {
+      background: transparent; color: var(--white);
+      border: 1.5px solid var(--chrome-dim);
+    }
+    .btn--ghost:hover { border-color: var(--white); transform: translateY(-2px); }
+    .btn--lg { padding: 1.05rem 2rem; font-size: 1.18rem; }
+    .btn--center { display: inline-flex; margin: 2rem auto 0; }
+
+    /* ---------- signature: checkers ---------- */
+    .checkers {
+      background-image: conic-gradient(
+        var(--white) 0 90deg, var(--asphalt) 0 180deg,
+        var(--white) 0 270deg, var(--asphalt) 0 360deg);
+      background-size: 18px 18px;
+    }
+    .checkers--band { height: 18px; width: 100%; opacity: .95; }
+    .checkers--band-lg { height: 22px; background-size: 22px 22px; }
+    .checkers--chip {
+      display: inline-block; width: 26px; height: 13px; vertical-align: middle;
+      background-size: 6.5px 6.5px; border-radius: 2px; margin-right: .4rem;
+    }
+
+    /* ---------- signature: speed chevrons rail ---------- */
+    .rail {
+      background-image: repeating-linear-gradient(
+        118deg,
+        var(--red) 0 7px,
+        transparent 7px 13px,
+        var(--chrome) 13px 16px,
+        transparent 16px 30px);
+    }
+
+    /* ===================== HERO ===================== */
+    .hero {
+      position: relative;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      display: flex; flex-direction: column; justify-content: flex-end;
+      overflow: hidden;
+      padding: 0 1.3rem;
+      isolation: isolate;
+    }
+    .hero__bg {
+      position: absolute; inset: 0; z-index: -3;
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: 62% center;
+    }
+    .hero__scrim {
+      position: absolute; inset: 0; z-index: -2;
+      background:
+        linear-gradient(180deg, rgba(14,16,19,.55) 0%, rgba(14,16,19,.35) 32%, rgba(14,16,19,.82) 74%, var(--asphalt) 100%),
+        linear-gradient(90deg, rgba(14,16,19,.78) 0%, rgba(14,16,19,.25) 60%, rgba(14,16,19,.55) 100%);
+    }
+    .rail--hero {
+      position: absolute; z-index: -1;
+      top: 8%; right: -6%;
+      width: 62%; height: 46px;
+      transform: skewX(-18deg);
+      opacity: .5;
+      mask-image: linear-gradient(90deg, transparent, #000 40%, #000);
+      -webkit-mask-image: linear-gradient(90deg, transparent, #000 40%, #000);
+      animation: railshimmer 5.5s linear infinite;
+    }
+    @keyframes railshimmer { to { background-position: -60px 0; } }
+
+    .hero__inner {
+      position: relative;
+      max-width: 640px;
+      padding-bottom: clamp(2.2rem, 7vh, 4rem);
+      animation: heroUp .7s cubic-bezier(.2,.7,.2,1) both;
+    }
+    @keyframes heroUp { from { opacity: 0; transform: translateY(22px); } }
+
+    .eyebrow--light { color: var(--red-2); }
+    .hero__word {
+      font-family: 'Racing Sans One', system-ui, sans-serif;
+      font-weight: 400;
+      font-size: clamp(3.6rem, 19vw, 7.5rem);
+      line-height: .86;
+      letter-spacing: .005em;
+      margin: 0 0 .7rem;
+      color: var(--white);
+      text-transform: uppercase;
+      text-shadow: 0 6px 30px rgba(0,0,0,.55);
+    }
+    .hero__word::after {
+      content: '';
+      display: block;
+      width: clamp(120px, 40vw, 240px);
+      height: 6px;
+      margin-top: .5rem;
+      background: linear-gradient(90deg, var(--red) 0 60%, var(--white) 60% 100%);
+      clip-path: polygon(0 0, 100% 0, calc(100% - 10px) 100%, 0 100%);
+    }
+    .hero__tag {
+      font-size: clamp(1.05rem, 4.3vw, 1.3rem);
+      color: var(--ink);
+      max-width: 30ch;
+      margin: 0 0 1.2rem;
+    }
+    .hero__tag b { color: var(--red-2); }
+
+    .pill {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-weight: 700; letter-spacing: .04em;
+      font-size: .95rem;
+      color: var(--white);
+      text-decoration: none;
+      padding: .5rem .95rem;
+      border: 1px solid rgba(198,205,213,.4);
+      border-radius: 999px;
+      background: rgba(14,16,19,.55);
+      backdrop-filter: blur(4px);
+      margin-bottom: 1.4rem;
+    }
+    .pill__star { color: var(--red-2); }
+
+    .hero__cta { display: flex; flex-wrap: wrap; gap: .8rem; margin-bottom: 1rem; }
+    .hero__note { font-size: .92rem; color: var(--chrome-dim); letter-spacing: .03em; margin: 0; }
+
+    .startline {
+      position: absolute; left: 0; right: 0; bottom: 0; height: 5px;
+      background: linear-gradient(90deg, var(--red), var(--red-2) 55%, var(--white));
+      z-index: 1;
+    }
+
+    /* ===================== STATS ===================== */
+    .stats {
+      background: var(--graphite);
+      border-bottom: 1px solid var(--line);
+      padding: clamp(1.4rem, 5vw, 2rem) 1.2rem;
+    }
+    .stats__grid {
+      max-width: 900px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.1rem;
+      text-align: center;
+    }
+    .stat { display: flex; flex-direction: column; gap: .1rem; }
+    .stat__n {
+      font-family: 'Racing Sans One', sans-serif;
+      font-size: clamp(1.8rem, 8vw, 2.6rem);
+      color: var(--red-2); line-height: 1;
+    }
+    .stat__l { font-size: .82rem; letter-spacing: .06em; text-transform: uppercase; color: var(--chrome-dim); font-weight: 600; }
+
+    /* ===================== ABOUT ===================== */
+    .about {
+      max-width: 1080px; margin: 0 auto;
+      padding: clamp(3rem, 9vw, 5rem) 1.3rem;
+      display: grid; gap: clamp(1.6rem, 5vw, 3rem);
+    }
+    .about__media { position: relative; }
+    .about__media img {
+      width: 100%; border-radius: 8px; border: 1px solid var(--line);
+      box-shadow: var(--shadow); aspect-ratio: 4 / 3; object-fit: cover;
+    }
+    .tag-chip {
+      position: absolute; left: 12px; bottom: 12px;
+      display: inline-flex; align-items: center;
+      background: rgba(14,16,19,.86); color: var(--white);
+      border: 1px solid var(--line);
+      padding: .4rem .7rem; border-radius: 4px;
+      font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase;
+    }
+    .about__text p { color: var(--ink); }
+    .about__text .h2 { margin-top: .2rem; }
+
+    /* ===================== SERVICES ===================== */
+    .services {
+      background: var(--graphite);
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      padding: clamp(3rem, 9vw, 5rem) 1.3rem;
+    }
+    .svc-grid {
+      list-style: none; margin: 0 auto; padding: 0;
+      max-width: 1080px;
+      display: grid; grid-template-columns: 1fr; gap: 1rem;
+    }
+    .svc {
+      position: relative;
+      background: var(--graphite-2);
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--red);
+      border-radius: 5px;
+      padding: 1.15rem 1.25rem 1.15rem 1.4rem;
+      overflow: hidden;
+    }
+    .svc__chev {
+      position: absolute; top: 0; right: 0; width: 90px; height: 100%;
+      background-image: repeating-linear-gradient(115deg, rgba(228,18,26,.18) 0 6px, transparent 6px 14px);
+      pointer-events: none;
+    }
+    .svc__t {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700;
+      font-size: 1.25rem; letter-spacing: .02em; text-transform: uppercase;
+      color: var(--white); margin: 0 0 .25rem;
+    }
+    .svc__d { margin: 0; color: var(--chrome-dim); font-size: 1rem; }
+
+    /* ===================== WHY ===================== */
+    .why {
+      max-width: 1080px; margin: 0 auto;
+      padding: clamp(3rem, 9vw, 5rem) 1.3rem;
+    }
+    .why__grid { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+    .why__card {
+      position: relative;
+      background: linear-gradient(160deg, var(--graphite-2), var(--graphite));
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 1.5rem 1.4rem 1.4rem;
+    }
+    .why__k {
+      font-family: 'Racing Sans One', sans-serif;
+      font-size: 2rem; color: var(--red);
+      display: block; line-height: 1; margin-bottom: .5rem;
+    }
+    .why__t {
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1.3rem;
+      text-transform: uppercase; letter-spacing: .02em;
+      color: var(--white); margin: 0 0 .4rem;
+    }
+    .why__card p { margin: 0; color: var(--chrome-dim); font-size: 1rem; }
+
+    /* ===================== GALLERY ===================== */
+    .gallery {
+      background: var(--graphite);
+      border-top: 1px solid var(--line);
+      padding: clamp(3rem, 9vw, 5rem) 1.3rem;
+    }
+    .gal-grid {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: .8rem;
+    }
+    .gal { margin: 0; border-radius: 7px; overflow: hidden; border: 1px solid var(--line); box-shadow: var(--shadow); }
+    .gal img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3; }
+    .gal--wide { grid-column: 1 / -1; }
+    .gal--wide img { aspect-ratio: 16 / 9; }
+
+    /* ===================== MID CTA ===================== */
+    .midcta { background: var(--asphalt); }
+    .midcta__body {
+      text-align: center;
+      padding: clamp(2.6rem, 8vw, 4rem) 1.3rem;
+    }
+    .midcta__k { color: var(--chrome-dim); letter-spacing: .1em; text-transform: uppercase; font-weight: 700; font-size: .85rem; margin: 0 0 .5rem; }
+    .midcta__h {
+      font-family: 'Racing Sans One', sans-serif; font-weight: 400;
+      font-size: clamp(1.6rem, 6vw, 2.6rem); text-transform: uppercase;
+      color: var(--white); margin: 0 0 1.4rem; line-height: 1.02;
+    }
+
+    /* ===================== REVIEWS ===================== */
+    .reviews {
+      max-width: 1080px; margin: 0 auto;
+      padding: clamp(3rem, 9vw, 5rem) 1.3rem;
+      text-align: center;
+    }
+    .rating-big { display: inline-flex; flex-direction: column; align-items: center; gap: .1rem; }
+    .rating-big__n {
+      font-family: 'Racing Sans One', sans-serif;
+      font-size: clamp(3rem, 16vw, 5rem); color: var(--white); line-height: .9;
+    }
+    .rating-big__stars { color: var(--red-2); font-size: 1.5rem; letter-spacing: .2em; }
+
+    .rev-wall {
+      display: grid; grid-template-columns: 1fr; gap: 1rem;
+      text-align: left; margin-top: .5rem;
+    }
+    .rev {
+      background: var(--graphite);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--red);
+      border-radius: 6px;
+      padding: 1.3rem 1.35rem 1.1rem;
+      margin: 0;
+    }
+    .rev p { color: var(--ink); font-size: 1.06rem; margin: 0 0 .9rem; }
+    .rev footer { display: flex; flex-direction: column; }
+    .rev__who { font-weight: 700; color: var(--white); letter-spacing: .02em; }
+    .rev__when { font-size: .85rem; color: var(--chrome-dim); }
+
+    /* ===================== ATTRS ===================== */
+    .attrs {
+      background: var(--graphite-2);
+      border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+      padding: 1.4rem 1.3rem;
+    }
+    .attrs__list {
+      list-style: none; margin: 0 auto; padding: 0;
+      max-width: 1000px;
+      display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem 1.4rem;
+    }
+    .attr {
+      display: inline-flex; align-items: center; gap: .5rem;
+      font-weight: 600; letter-spacing: .03em; color: var(--ink);
+      font-size: .98rem;
+    }
+    .attr__ico { font-size: 1.15rem; }
+
+    /* ===================== LOCATION ===================== */
+    .loc {
+      max-width: 1080px; margin: 0 auto;
+      padding: clamp(3rem, 9vw, 5rem) 1.3rem;
+      display: grid; gap: clamp(1.5rem, 5vw, 2.5rem);
+    }
+    .loc__addr { color: var(--ink); font-size: 1.1rem; max-width: 34ch; }
+    .loc__actions { display: flex; flex-wrap: wrap; gap: .8rem; margin: 1.2rem 0 1.8rem; }
+    .hours { width: 100%; border-collapse: collapse; max-width: 420px; }
+    .hours__cap {
+      text-align: left; font-weight: 700; text-transform: uppercase;
+      letter-spacing: .1em; color: var(--red); font-size: .8rem; margin-bottom: .5rem;
+    }
+    .hours th, .hours td { padding: .55rem .2rem; border-bottom: 1px solid var(--line); text-align: left; }
+    .hours th { font-weight: 600; color: var(--ink); }
+    .hours td { color: var(--white); font-weight: 700; text-align: right; }
+    .hours .is-closed td { color: var(--chrome-dim); font-weight: 500; }
+    .loc__map {
+      border-radius: 8px; overflow: hidden; border: 1px solid var(--line);
+      box-shadow: var(--shadow); min-height: 300px;
+    }
+    .loc__map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; filter: saturate(.9); }
+
+    /* ===================== FAQ ===================== */
+    .faq {
+      max-width: 780px; margin: 0 auto;
+      padding: clamp(3rem, 9vw, 5rem) 1.3rem;
+    }
+    .faq__list { display: grid; gap: .7rem; }
+    .faq__item {
+      background: var(--graphite); border: 1px solid var(--line);
+      border-radius: 6px; padding: .3rem 1.1rem;
+    }
+    .faq__item summary {
+      cursor: pointer; list-style: none;
+      font-family: 'Rajdhani', sans-serif; font-weight: 700; font-size: 1.12rem;
+      letter-spacing: .01em; color: var(--white);
+      padding: .85rem 0; display: flex; align-items: center; justify-content: space-between;
+    }
+    .faq__item summary::-webkit-details-marker { display: none; }
+    .faq__item summary::after {
+      content: '+'; color: var(--red-2); font-size: 1.5rem; line-height: 1; margin-left: 1rem;
+      transition: transform .2s ease;
+    }
+    .faq__item[open] summary::after { transform: rotate(45deg); }
+    .faq__item p { margin: 0 0 .9rem; color: var(--chrome-dim); }
+
+    /* ===================== FINISH / FINAL CTA ===================== */
+    .finish { background: linear-gradient(180deg, var(--graphite) 0%, var(--asphalt) 100%); }
+    .finish__body { text-align: center; padding: clamp(3rem, 9vw, 5rem) 1.3rem; max-width: 680px; margin: 0 auto; }
+    .finish__h {
+      font-family: 'Racing Sans One', sans-serif; font-weight: 400;
+      font-size: clamp(2rem, 8vw, 3.4rem); text-transform: uppercase;
+      color: var(--white); line-height: 1; margin: 0 0 .8rem;
+    }
+    .finish__p { color: var(--ink); max-width: 40ch; margin: 0 auto 1.6rem; }
+    .finish__tel { margin: 1.1rem 0 0; color: var(--chrome-dim); font-size: .98rem; }
+    .finish__tel a { color: var(--white); font-weight: 700; text-decoration: none; border-bottom: 2px solid var(--red); }
+
+    /* ===================== FOOTER ===================== */
+    .foot {
+      background: var(--asphalt);
+      border-top: 1px solid var(--line);
+      text-align: center;
+      padding: 2.2rem 1.3rem 88px;
+    }
+    .foot__name { font-family: 'Racing Sans One', sans-serif; color: var(--white); text-transform: uppercase; letter-spacing: .03em; margin: 0 0 .5rem; font-size: 1.05rem; }
+    .foot__addr { color: var(--chrome-dim); font-size: .92rem; margin: 0 0 .7rem; }
+    .foot__contact { display: flex; gap: .7rem; justify-content: center; align-items: center; margin: 0; }
+    .foot__contact a { color: var(--white); font-weight: 700; text-decoration: none; }
+    .foot__contact a:hover { color: var(--red-2); }
+
+    /* ===================== REVEAL (progressive) ===================== */
+    .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+    .js .reveal.in { opacity: 1; transform: none; }
+
+    /* ===================== RESPONSIVE ===================== */
+    @media (min-width: 720px) {
+      .stats__grid { grid-template-columns: repeat(4, 1fr); }
+      .about { grid-template-columns: 1fr 1.1fr; align-items: center; }
+      .svc-grid { grid-template-columns: repeat(2, 1fr); }
+      .why__grid { grid-template-columns: repeat(2, 1fr); }
+      .loc { grid-template-columns: 1fr 1fr; align-items: start; }
+      .rev-wall { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1000px) {
+      .svc-grid { grid-template-columns: repeat(3, 1fr); }
+      .why__grid { grid-template-columns: repeat(4, 1fr); }
+      .rev-wall { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .rail--hero { animation: none; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+
+  <script is:inline>
+    document.documentElement.classList.add('js');
+    (function () {
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</BaseLayout>

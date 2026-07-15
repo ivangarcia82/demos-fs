@@ -1,0 +1,531 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slug = 'marien-skincare-spa-en-merida-de-tratamientos-faciales-y-corporales';
+const img = (n) => `/${slug}/img/${n}`;
+
+const tel = '999 217 8045';
+const wa = 'https://wa.me/529992178045';
+const waCita = wa + '?text=' + encodeURIComponent('Hola Marien SkinCare 🌿, vi su página y me gustaría agendar una cita.');
+const maps = 'https://maps.google.com/?cid=10718969027364564500&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const mapEmbed = 'https://www.google.com/maps?q=' + encodeURIComponent('C. 19, Temozon Norte, 97302 Mérida, Yuc., México') + '&output=embed';
+
+const tratamientos = [
+  { t: 'Limpieza facial', d: 'La rutina que deja la piel fresca y descansada.' },
+  { t: 'Facial para piel con acné', d: 'Tratamiento pensado para piel que sufre brotes.' },
+  { t: 'Depilación láser', d: 'Para las zonas donde no quieres vello, incluida la barba.' },
+  { t: 'Reductor linfático con cavitación', d: 'Drenaje corporal con aparatología profesional.' },
+  { t: 'Esculpido corporal', d: 'Maquinaria que ayuda a moldear y reducir.' },
+  { t: 'Plan personalizado', d: 'Te recomendamos solo lo que de verdad necesitas.' },
+];
+
+const resenas = [
+  { autor: 'Ricardo Guerra', cuando: 'Hace 7 meses', pre: true, post: false,
+    cita: 'El trato es súper cálido y profesional, te explican todo con mucha paciencia y te hacen sentir en confianza desde que llegas.' },
+  { autor: 'Andres DZ', cuando: 'Hace un año', pre: true, post: false,
+    cita: 'Productos de alta calidad, atención personalizada y resultados impresionantes.' },
+  { autor: 'Sara Santos Córcoles', cuando: 'Hace 7 meses', pre: true, post: false,
+    cita: 'Yo vengo de España y allí me hacía tratamientos igual semanales, al mudarme a México busqué varias clínicas y definitivamente me quedo con esta.' },
+  { autor: 'Mia Blankenship', cuando: 'Hace 4 meses', pre: true, post: true,
+    cita: 'mi cara quedó perfecta, si tienes una piel que sufre acne recomendaría ampliamente este lugar' },
+];
+
+const faqs = [
+  { q: '¿Aceptan tarjeta?', a: 'Sí, puedes pagar con tarjeta.' },
+  { q: '¿Tienen acceso para silla de ruedas?', a: 'Sí, el lugar cuenta con acceso para silla de ruedas.' },
+  { q: '¿Hacen tratamientos faciales y corporales?', a: 'Sí: faciales, corporales, depilación láser y planes a tu medida. Escríbenos por WhatsApp y te decimos cuál te conviene.' },
+  { q: '¿Cuál es su horario?', a: 'Lunes a viernes de 9:00 a 19:00 y sábado de 9:00 a 14:00. Domingo cerrado.' },
+];
+
+const horarios = [
+  { d: 'Lunes', h: '9:00 – 19:00' },
+  { d: 'Martes', h: '9:00 – 19:00' },
+  { d: 'Miércoles', h: '9:00 – 19:00' },
+  { d: 'Jueves', h: '9:00 – 19:00' },
+  { d: 'Viernes', h: '9:00 – 19:00' },
+  { d: 'Sábado', h: '9:00 – 14:00' },
+  { d: 'Domingo', h: 'Cerrado', off: true },
+];
+---
+<BaseLayout
+  title="Marien SkinCare · Spa facial y corporal en Mérida"
+  description="Spa y clínica de skincare en Temozon Norte, Mérida. ⭐ 4.9 · 128 reseñas en Google. Faciales, corporales y depilación láser. Agenda por WhatsApp."
+  slug={slug}
+  ogImage={img('foto_5.jpg')}
+  fonts="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Figtree:wght@400;500;600;700&display=swap"
+  favicon="🌿"
+  themeColor="#F3C7A1"
+  whatsapp={wa}
+  telefono={tel}
+  mapsUrl={maps}
+>
+  <!-- HERO -->
+  <header class="ms-hero">
+    <div class="ms-hero__glow" aria-hidden="true"></div>
+    <div class="ms-wrap ms-hero__inner">
+      <div class="ms-hero__copy">
+        <p class="ms-eyebrow">Spa de skincare · Temozon Norte, Mérida</p>
+        <h1 class="ms-hero__title">Tu piel, <em>luminosa</em><br>y saludable.</h1>
+        <p class="ms-hero__lead">
+          Spa y clínica de tratamientos faciales y corporales. Cada cita empieza
+          escuchándote: revisamos tu piel y te recomendamos solo lo que de verdad
+          necesitas.
+        </p>
+        <div class="ms-rating">
+          <span class="ms-rating__star">★</span>
+          <strong>4.9</strong>
+          <span class="ms-rating__sep">·</span>
+          <span>128 reseñas en Google</span>
+        </div>
+        <div class="ms-cta-row">
+          <a class="ms-btn ms-btn--wa" href={waCita} target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.3-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5m0-21a11.4 11.4 0 0 0-9.8 17.2L.5 24l6.5-1.7A11.5 11.5 0 1 0 12 .5"/></svg>
+            Escríbenos por WhatsApp
+          </a>
+          <a class="ms-btn ms-btn--ghost" href={maps} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+      <figure class="ms-hero__figure">
+        <span class="ms-hero__ring" aria-hidden="true"></span>
+        <img src={img('foto_5.jpg')} width="1080" height="720"
+          alt="Especialista de Marien SkinCare sonriendo en su clínica de piel en Mérida" />
+      </figure>
+    </div>
+    <div class="ms-hero__dew" aria-hidden="true"></div>
+  </header>
+
+  <!-- QUIÉNES SOMOS -->
+  <section class="ms-about ms-reveal" aria-labelledby="about-h">
+    <div class="ms-wrap ms-about__grid">
+      <figure class="ms-about__fig">
+        <img src={img('foto_1.jpg')} width="1080" height="720" loading="lazy"
+          alt="Especialista de Marien SkinCare con equipo de tratamiento corporal" />
+      </figure>
+      <div class="ms-about__copy">
+        <p class="ms-eyebrow ms-eyebrow--sage">Quiénes somos</p>
+        <h2 id="about-h" class="ms-h2">Cuidamos tu piel como si fuera la nuestra.</h2>
+        <p>
+          Marien SkinCare es un spa y clínica de estética en Temozon Norte donde el
+          cuidado de la piel se toma en serio y con calma. Trabajamos por igual el
+          rostro y el cuerpo, con productos de alta calidad y aparatología profesional.
+        </p>
+        <p>
+          Nuestras clientas lo resumen mejor que nosotros: un trato cálido y profesional,
+          explicaciones con paciencia y la confianza de sentirse en buenas manos desde
+          que llegan. Y algo que repiten mucho: aquí no te venden de más, solo te
+          recomendamos lo que realmente necesitas. La meta siempre es la misma: que
+          salgas con la piel más suave, luminosa y fresca.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRATAMIENTOS -->
+  <section class="ms-treat ms-reveal" aria-labelledby="treat-h">
+    <div class="ms-wrap">
+      <div class="ms-sec-head">
+        <p class="ms-eyebrow ms-eyebrow--sage">Faciales y corporales</p>
+        <h2 id="treat-h" class="ms-h2">Lo que hacemos</h2>
+        <p class="ms-sec-head__lead">
+          Estos son los tratamientos que nuestras clientas mencionan. Escríbenos y te
+          decimos cuál es ideal para ti.
+        </p>
+      </div>
+      <ul class="ms-treat__grid">
+        {tratamientos.map((it) => (
+          <li class="ms-treat__card">
+            <span class="ms-drop" aria-hidden="true"></span>
+            <h3 class="ms-treat__t">{it.t}</h3>
+            <p class="ms-treat__d">{it.d}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- DIFERENCIADORES -->
+  <section class="ms-why ms-reveal" aria-labelledby="why-h">
+    <div class="ms-wrap">
+      <div class="ms-sec-head">
+        <p class="ms-eyebrow">Por qué Marien</p>
+        <h2 id="why-h" class="ms-h2 ms-h2--light">Por qué vuelven cita tras cita</h2>
+      </div>
+      <div class="ms-why__grid">
+        <div class="ms-why__item">
+          <h3>Atención honesta</h3>
+          <p>Te recomiendan solo lo que realmente necesitas, sin venderte nada extra.</p>
+        </div>
+        <div class="ms-why__item">
+          <h3>Resultados desde la primera cita</h3>
+          <p>La piel se nota más suave, luminosa y fresca desde el primer tratamiento.</p>
+        </div>
+        <div class="ms-why__item">
+          <h3>Productos de alta calidad</h3>
+          <p>Cuidado profesional y detalle en cada paso del tratamiento.</p>
+        </div>
+        <div class="ms-why__item">
+          <h3>Rostro y cuerpo</h3>
+          <p>Faciales, depilación láser y tratamientos corporales bajo un mismo techo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="ms-gallery ms-reveal" aria-label="Galería de Marien SkinCare">
+    <div class="ms-wrap">
+      <div class="ms-sec-head">
+        <p class="ms-eyebrow ms-eyebrow--sage">Un vistazo</p>
+        <h2 class="ms-h2">Así se siente Marien</h2>
+      </div>
+      <div class="ms-gallery__grid">
+        <figure class="ms-gallery__a">
+          <img src={img('foto_4.jpg')} width="1080" height="720" loading="lazy"
+            alt="Detalle de un tratamiento facial con equipo profesional en Marien SkinCare" />
+        </figure>
+        <figure class="ms-gallery__b">
+          <img src={img('foto_1.jpg')} width="1080" height="720" loading="lazy"
+            alt="Tratamiento corporal con aparatología en Marien SkinCare" />
+        </figure>
+        <figure class="ms-gallery__c">
+          <img src={img('foto_5.jpg')} width="1080" height="720" loading="lazy"
+            alt="Especialista de Marien SkinCare en la clínica" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRUEBA SOCIAL -->
+  <section class="ms-reviews ms-reveal" aria-labelledby="rev-h">
+    <div class="ms-score" aria-hidden="true">
+      <span class="ms-score__glow"></span>
+    </div>
+    <div class="ms-wrap">
+      <div class="ms-reviews__head">
+        <p class="ms-eyebrow ms-eyebrow--sage">Lo que dicen sus clientas</p>
+        <div class="ms-bignum"><span>4.9</span></div>
+        <h2 id="rev-h" class="ms-h2">128 reseñas · ★ promedio en Google</h2>
+      </div>
+      <ul class="ms-reviews__grid">
+        {resenas.map((r) => (
+          <li class="ms-quote">
+            <div class="ms-quote__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+            <blockquote>{r.pre ? '…' : ''}{r.cita}{r.post ? '…' : ''}</blockquote>
+            <figcaption>
+              <span class="ms-quote__name">{r.autor}</span>
+              <span class="ms-quote__when">{r.cuando}</span>
+            </figcaption>
+          </li>
+        ))}
+      </ul>
+      <div class="ms-center">
+        <a class="ms-btn ms-btn--ghost" href={maps} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA INTERMEDIO -->
+  <section class="ms-midcta ms-reveal" aria-label="Agenda tu cita">
+    <div class="ms-wrap ms-midcta__inner">
+      <div>
+        <h2 class="ms-h2">¿Lista para ver la diferencia?</h2>
+        <p class="ms-midcta__p">Cuéntanos qué buscas para tu piel y te decimos por dónde empezar.</p>
+      </div>
+      <a class="ms-btn ms-btn--wa" href={waCita} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.3-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5m0-21a11.4 11.4 0 0 0-9.8 17.2L.5 24l6.5-1.7A11.5 11.5 0 1 0 12 .5"/></svg>
+        Agendar por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- UBICACIÓN + HORARIOS -->
+  <section class="ms-loc ms-reveal" aria-labelledby="loc-h">
+    <div class="ms-wrap">
+      <div class="ms-sec-head">
+        <p class="ms-eyebrow ms-eyebrow--sage">Dónde estamos</p>
+        <h2 id="loc-h" class="ms-h2">Ubicación y horarios</h2>
+      </div>
+      <div class="ms-loc__grid">
+        <div class="ms-loc__info">
+          <figure class="ms-loc__fig">
+            <img src={img('foto_3.jpg')} width="1080" height="810" loading="lazy"
+              alt="Fachada de Marien SkinCare con su logotipo en Temozon Norte, Mérida" />
+          </figure>
+          <p class="ms-loc__addr">C. 19, Temozon Norte<br>97302 Mérida, Yucatán</p>
+          <a class="ms-btn ms-btn--ghost ms-btn--sm" href={maps} target="_blank" rel="noopener">Abrir en Google Maps</a>
+
+          <table class="ms-hours">
+            <caption class="ms-hours__cap">Horario</caption>
+            <tbody>
+              {horarios.map((h) => (
+                <tr class={h.off ? 'is-off' : ''}>
+                  <th scope="row">{h.d}</th>
+                  <td>{h.h}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+
+          <ul class="ms-attrs">
+            <li><span aria-hidden="true">💳</span> Acepta tarjetas</li>
+            <li><span aria-hidden="true">♿</span> Acceso para silla de ruedas</li>
+          </ul>
+        </div>
+        <div class="ms-loc__map">
+          <iframe src={mapEmbed} title="Mapa de Marien SkinCare"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="ms-faq ms-reveal" aria-labelledby="faq-h">
+    <div class="ms-wrap ms-faq__wrap">
+      <div class="ms-sec-head ms-sec-head--left">
+        <p class="ms-eyebrow ms-eyebrow--sage">Antes de venir</p>
+        <h2 id="faq-h" class="ms-h2">Preguntas frecuentes</h2>
+      </div>
+      <div class="ms-faq__list">
+        {faqs.map((f) => (
+          <details class="ms-faq__item">
+            <summary>{f.q}</summary>
+            <p>{f.a}</p>
+          </details>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section class="ms-final ms-reveal" aria-label="Contacto">
+    <span class="ms-final__glow" aria-hidden="true"></span>
+    <div class="ms-wrap ms-final__inner">
+      <p class="ms-eyebrow ms-eyebrow--onDark">Marien SkinCare · Mérida</p>
+      <h2 class="ms-final__h">Empieza el cuidado que tu piel merece.</h2>
+      <p class="ms-final__p">Agenda por WhatsApp y platícanos qué buscas. Te respondemos personalmente.</p>
+      <a class="ms-btn ms-btn--apricot" href={waCita} target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.2-1.7-.9-2-1-.3-.1-.5-.1-.6.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5-.1-.1-.6-1.5-.9-2-.2-.5-.4-.4-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.3-.9.9-.9 2.2 0 1.3.9 2.5 1.1 2.7.1.2 1.8 2.8 4.4 3.9.6.3 1.1.4 1.5.6.6.2 1.2.2 1.6.1.5-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4M12 21.5a9.5 9.5 0 0 1-4.8-1.3l-.3-.2-3.5.9.9-3.4-.2-.4A9.5 9.5 0 1 1 12 21.5m0-21a11.4 11.4 0 0 0-9.8 17.2L.5 24l6.5-1.7A11.5 11.5 0 1 0 12 .5"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+      <p class="ms-final__tel">o llámanos: <a href={`tel:+52${tel.replace(/\s/g,'')}`}>{tel}</a></p>
+    </div>
+  </section>
+
+  <footer class="ms-footer">
+    <div class="ms-wrap">
+      <p class="ms-footer__name">Marien SkinCare</p>
+      <p class="ms-footer__meta">C. 19, Temozon Norte, Mérida, Yuc. · <a href={`tel:+52${tel.replace(/\s/g,'')}`}>{tel}</a></p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --bg: #FBF6EF;
+      --bg-warm: #F6ECDE;
+      --cream: #F2E6D6;
+      --ink: #3B4234;
+      --ink-soft: #5F6552;
+      --sage: #94A382;
+      --sage-deep: #46523C;
+      --sage-dark: #3A4531;
+      --apricot: #F3C7A1;
+      --apricot-deep: #E39A6B;
+      --peach-tint: #FCE9D8;
+      --line: rgba(70, 82, 60, 0.16);
+      --shadow: 0 18px 50px -24px rgba(80, 66, 48, 0.45);
+    }
+
+    body { background: var(--bg); color: var(--ink); font-family: 'Figtree', system-ui, sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+
+    .ms-wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 22px; }
+
+    /* Typography */
+    .ms-h2 { font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(1.85rem, 6vw, 2.9rem); line-height: 1.08; letter-spacing: -0.01em; margin: 0; color: var(--ink); }
+    .ms-h2--light { color: var(--bg); }
+    .ms-eyebrow { font-size: 0.74rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--apricot-deep); margin: 0 0 0.9rem; }
+    .ms-eyebrow--sage { color: var(--sage-deep); }
+    .ms-eyebrow--onDark { color: var(--apricot); }
+    p { margin: 0 0 1rem; color: var(--ink-soft); }
+
+    /* Buttons */
+    .ms-btn { display: inline-flex; align-items: center; gap: 0.55rem; font-family: 'Figtree', sans-serif; font-weight: 600; font-size: 1rem; padding: 0.9rem 1.5rem; border-radius: 999px; text-decoration: none; cursor: pointer; border: 1.6px solid transparent; transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, color 0.25s ease; line-height: 1; }
+    .ms-btn svg { flex: none; }
+    .ms-btn--sm { padding: 0.7rem 1.2rem; font-size: 0.92rem; }
+    .ms-btn--wa { background: linear-gradient(160deg, #4E5C41, var(--sage-dark)); color: #FBF6EF; box-shadow: 0 14px 30px -14px rgba(58, 69, 49, 0.7); }
+    .ms-btn--wa:hover { transform: translateY(-2px); box-shadow: 0 20px 36px -14px rgba(58, 69, 49, 0.75); }
+    .ms-btn--ghost { background: transparent; color: var(--ink); border-color: var(--apricot-deep); }
+    .ms-btn--ghost:hover { background: var(--peach-tint); transform: translateY(-2px); }
+    .ms-btn--apricot { background: linear-gradient(160deg, var(--apricot), var(--apricot-deep)); color: #3A2A1C; box-shadow: 0 16px 34px -14px rgba(227, 154, 107, 0.75); }
+    .ms-btn--apricot:hover { transform: translateY(-2px); }
+    .ms-btn:focus-visible { outline: 3px solid var(--sage-deep); outline-offset: 3px; }
+
+    .ms-cta-row { display: flex; flex-wrap: wrap; gap: 0.7rem; margin-top: 1.6rem; }
+    .ms-center { text-align: center; margin-top: 2.4rem; }
+
+    /* HERO */
+    .ms-hero { position: relative; overflow: hidden; background:
+      radial-gradient(120% 90% at 88% -10%, var(--peach-tint), transparent 60%),
+      linear-gradient(180deg, #FDF9F3, var(--bg)); }
+    .ms-hero__glow { position: absolute; top: -14%; right: -8%; width: min(70vw, 620px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(243, 199, 161, 0.7), rgba(243, 199, 161, 0) 62%); filter: blur(6px); animation: ms-breathe 9s ease-in-out infinite; z-index: 0; pointer-events: none; }
+    .ms-hero__inner { position: relative; z-index: 1; display: grid; gap: 2rem; padding: clamp(2.4rem, 7vw, 4.4rem) 0 clamp(2.6rem, 7vw, 4rem); }
+    .ms-hero__copy { max-width: 34rem; }
+    .ms-hero__title { font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: clamp(2.7rem, 11vw, 4.6rem); line-height: 1.0; letter-spacing: -0.02em; margin: 0 0 1.1rem; color: var(--ink); }
+    .ms-hero__title em { font-style: italic; font-weight: 500; color: var(--apricot-deep); }
+    .ms-hero__lead { font-size: 1.08rem; max-width: 30rem; }
+    .ms-rating { display: inline-flex; align-items: center; gap: 0.5rem; margin-top: 1.5rem; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 1.05rem; font-size: 0.95rem; color: var(--ink); box-shadow: 0 10px 26px -18px rgba(80, 66, 48, 0.6); }
+    .ms-rating strong { font-weight: 700; }
+    .ms-rating__star { color: var(--apricot-deep); font-size: 1.05rem; }
+    .ms-rating__sep { color: var(--line); }
+
+    .ms-hero__figure { position: relative; margin: 0; }
+    .ms-hero__figure img { width: 100%; border-radius: 26px 26px 120px 26px; box-shadow: var(--shadow); position: relative; z-index: 1; }
+    .ms-hero__ring { position: absolute; inset: -14px -14px auto auto; width: 62%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(148, 163, 130, 0.28), transparent 68%); z-index: 0; }
+    .ms-hero__dew { position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+
+    /* ABOUT */
+    .ms-about { padding: clamp(3rem, 8vw, 5rem) 0; }
+    .ms-about__grid { display: grid; gap: 2rem; align-items: center; }
+    .ms-about__fig { margin: 0; }
+    .ms-about__fig img { width: 100%; border-radius: 22px; box-shadow: var(--shadow); }
+    .ms-about__copy .ms-h2 { margin-bottom: 1.1rem; }
+
+    /* TREATMENTS */
+    .ms-treat { padding: clamp(3rem, 8vw, 5rem) 0; background: var(--bg-warm); }
+    .ms-sec-head { max-width: 40rem; margin: 0 auto 2.4rem; text-align: center; }
+    .ms-sec-head--left { text-align: left; margin-left: 0; }
+    .ms-sec-head__lead { margin-top: 0.9rem; }
+    .ms-treat__grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    .ms-treat__card { position: relative; background: #fff; border: 1px solid var(--line); border-radius: 18px; padding: 1.5rem 1.4rem 1.4rem; box-shadow: 0 14px 34px -26px rgba(80, 66, 48, 0.55); transition: transform 0.25s ease, box-shadow 0.25s ease; }
+    .ms-treat__card:hover { transform: translateY(-3px); box-shadow: 0 20px 40px -26px rgba(80, 66, 48, 0.6); }
+    .ms-drop { display: block; width: 20px; height: 20px; margin-bottom: 0.9rem; background: linear-gradient(160deg, var(--apricot), var(--apricot-deep)); border-radius: 50% 50% 50% 0; transform: rotate(45deg); box-shadow: 0 4px 10px -3px rgba(227, 154, 107, 0.7); }
+    .ms-treat__t { font-family: 'Newsreader', serif; font-weight: 600; font-size: 1.28rem; margin: 0 0 0.35rem; color: var(--ink); }
+    .ms-treat__d { margin: 0; font-size: 0.96rem; }
+
+    /* WHY */
+    .ms-why { padding: clamp(3rem, 8vw, 5rem) 0; background: linear-gradient(165deg, var(--sage-deep), var(--sage-dark)); color: var(--bg); }
+    .ms-why .ms-eyebrow { color: var(--apricot); }
+    .ms-why__grid { display: grid; gap: 1.6rem; grid-template-columns: 1fr; }
+    .ms-why__item { padding-top: 1.4rem; border-top: 1px solid rgba(251, 246, 239, 0.22); }
+    .ms-why__item h3 { font-family: 'Newsreader', serif; font-weight: 500; font-size: 1.35rem; margin: 0 0 0.4rem; color: #fff; }
+    .ms-why__item p { color: rgba(251, 246, 239, 0.82); margin: 0; }
+
+    /* GALLERY */
+    .ms-gallery { padding: clamp(3rem, 8vw, 5rem) 0; }
+    .ms-gallery__grid { display: grid; gap: 0.8rem; grid-template-columns: 1fr 1fr; grid-auto-rows: 1fr; }
+    .ms-gallery figure { margin: 0; overflow: hidden; border-radius: 18px; box-shadow: var(--shadow); }
+    .ms-gallery img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease; }
+    .ms-gallery figure:hover img { transform: scale(1.05); }
+    .ms-gallery__a { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+    .ms-gallery__b, .ms-gallery__c { aspect-ratio: 1 / 1; }
+
+    /* REVIEWS */
+    .ms-reviews { position: relative; padding: clamp(3rem, 8vw, 5.4rem) 0; background: var(--peach-tint); overflow: hidden; }
+    .ms-score { position: absolute; inset: 0; display: flex; justify-content: center; pointer-events: none; }
+    .ms-score__glow { margin-top: -6%; width: min(80vw, 520px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(255, 255, 255, 0.85), rgba(243, 199, 161, 0) 62%); }
+    .ms-reviews > .ms-wrap { position: relative; z-index: 1; }
+    .ms-reviews__head { text-align: center; margin-bottom: 2.4rem; }
+    .ms-bignum { font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(4.5rem, 20vw, 8rem); line-height: 0.9; color: var(--apricot-deep); letter-spacing: -0.03em; margin: 0.2rem 0; text-shadow: 0 10px 40px rgba(227, 154, 107, 0.35); }
+    .ms-reviews__grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 1rem; grid-template-columns: 1fr; }
+    .ms-quote { background: #fff; border-radius: 18px; padding: 1.6rem 1.5rem; box-shadow: 0 16px 40px -28px rgba(80, 66, 48, 0.6); border: 1px solid rgba(255,255,255,0.6); }
+    .ms-quote__stars { color: var(--apricot-deep); letter-spacing: 0.15em; font-size: 0.9rem; margin-bottom: 0.7rem; }
+    .ms-quote blockquote { margin: 0 0 1.1rem; font-family: 'Newsreader', serif; font-size: 1.16rem; line-height: 1.5; color: var(--ink); font-weight: 400; }
+    .ms-quote figcaption { display: flex; flex-direction: column; gap: 0.1rem; }
+    .ms-quote__name { font-weight: 600; color: var(--ink); font-size: 0.98rem; }
+    .ms-quote__when { font-size: 0.85rem; color: var(--ink-soft); }
+
+    /* MID CTA */
+    .ms-midcta { padding: clamp(2.6rem, 7vw, 4rem) 0; background: var(--bg); }
+    .ms-midcta__inner { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; background: linear-gradient(150deg, #FFF6EC, var(--peach-tint)); border: 1px solid var(--line); border-radius: 26px; padding: clamp(1.8rem, 5vw, 2.8rem); }
+    .ms-midcta__p { margin: 0.7rem 0 0; }
+
+    /* LOCATION */
+    .ms-loc { padding: clamp(3rem, 8vw, 5rem) 0; background: var(--bg-warm); }
+    .ms-loc__grid { display: grid; gap: 1.6rem; grid-template-columns: 1fr; }
+    .ms-loc__fig { margin: 0 0 1.2rem; }
+    .ms-loc__fig img { width: 100%; border-radius: 18px; box-shadow: var(--shadow); }
+    .ms-loc__addr { font-family: 'Newsreader', serif; font-size: 1.35rem; color: var(--ink); line-height: 1.35; margin: 0 0 1.1rem; }
+    .ms-hours { width: 100%; border-collapse: collapse; margin-top: 1.6rem; font-size: 0.98rem; }
+    .ms-hours__cap { text-align: left; font-weight: 700; color: var(--ink); margin-bottom: 0.4rem; caption-side: top; padding-bottom: 0.5rem; }
+    .ms-hours th { text-align: left; font-weight: 500; color: var(--ink); padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+    .ms-hours td { text-align: right; color: var(--ink-soft); padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+    .ms-hours tr.is-off th, .ms-hours tr.is-off td { color: #A89B87; }
+    .ms-attrs { list-style: none; margin: 1.6rem 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.7rem; }
+    .ms-attrs li { display: inline-flex; align-items: center; gap: 0.5rem; background: #fff; border: 1px solid var(--line); border-radius: 999px; padding: 0.5rem 1rem; font-size: 0.9rem; color: var(--ink); }
+    .ms-loc__map { border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); min-height: 300px; }
+    .ms-loc__map iframe { width: 100%; height: 100%; min-height: 300px; border: 0; display: block; }
+
+    /* FAQ */
+    .ms-faq { padding: clamp(3rem, 8vw, 5rem) 0; }
+    .ms-faq__wrap { display: grid; gap: 1.8rem; }
+    .ms-faq__item { border-bottom: 1px solid var(--line); }
+    .ms-faq__item summary { cursor: pointer; list-style: none; padding: 1.1rem 2rem 1.1rem 0; font-family: 'Newsreader', serif; font-size: 1.2rem; color: var(--ink); position: relative; }
+    .ms-faq__item summary::-webkit-details-marker { display: none; }
+    .ms-faq__item summary::after { content: '+'; position: absolute; right: 0.2rem; top: 50%; transform: translateY(-50%); font-size: 1.4rem; color: var(--apricot-deep); transition: transform 0.25s ease; }
+    .ms-faq__item[open] summary::after { transform: translateY(-50%) rotate(45deg); }
+    .ms-faq__item p { margin: 0 0 1.2rem; max-width: 40rem; }
+    .ms-faq__item summary:focus-visible { outline: 3px solid var(--sage-deep); outline-offset: 3px; border-radius: 6px; }
+
+    /* FINAL CTA */
+    .ms-final { position: relative; overflow: hidden; padding: clamp(3.4rem, 9vw, 5.4rem) 0; background: linear-gradient(160deg, var(--sage-deep), var(--sage-dark)); color: var(--bg); text-align: center; }
+    .ms-final__glow { position: absolute; top: -30%; left: 50%; transform: translateX(-50%); width: min(90vw, 640px); aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, rgba(243, 199, 161, 0.28), transparent 62%); pointer-events: none; }
+    .ms-final__inner { position: relative; z-index: 1; max-width: 34rem; margin: 0 auto; }
+    .ms-final__h { font-family: 'Newsreader', serif; font-weight: 500; font-size: clamp(2rem, 7vw, 3.1rem); line-height: 1.08; margin: 0 0 0.9rem; color: #fff; letter-spacing: -0.01em; }
+    .ms-final__p { color: rgba(251, 246, 239, 0.85); margin: 0 auto 1.8rem; max-width: 26rem; }
+    .ms-final__inner .ms-btn { margin: 0 auto; }
+    .ms-final__tel { margin: 1.3rem 0 0; font-size: 0.95rem; color: rgba(251, 246, 239, 0.8); }
+    .ms-final__tel a { color: var(--apricot); text-decoration: none; font-weight: 600; }
+    .ms-final__tel a:hover { text-decoration: underline; }
+
+    /* FOOTER */
+    .ms-footer { background: var(--sage-dark); color: rgba(251, 246, 239, 0.75); padding: 2.2rem 0 88px; text-align: center; }
+    .ms-footer__name { font-family: 'Newsreader', serif; font-size: 1.3rem; color: #fff; margin: 0 0 0.3rem; }
+    .ms-footer__meta { font-size: 0.9rem; margin: 0; color: rgba(251, 246, 239, 0.65); }
+    .ms-footer__meta a { color: var(--apricot); text-decoration: none; }
+
+    /* Reveal (progressive enhancement) */
+    @media (prefers-reduced-motion: no-preference) {
+      .js .ms-reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; }
+      .js .ms-reveal.ms-in { opacity: 1; transform: none; }
+    }
+
+    @keyframes ms-breathe {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.07); opacity: 1; }
+    }
+
+    /* Tablet / desktop */
+    @media (min-width: 720px) {
+      .ms-hero__inner { grid-template-columns: 1.05fr 0.95fr; align-items: center; gap: 2.6rem; }
+      .ms-about__grid { grid-template-columns: 0.9fr 1.1fr; }
+      .ms-treat__grid { grid-template-columns: repeat(3, 1fr); }
+      .ms-why__grid { grid-template-columns: repeat(2, 1fr); column-gap: 2.6rem; }
+      .ms-reviews__grid { grid-template-columns: repeat(2, 1fr); }
+      .ms-midcta__inner { flex-direction: row; align-items: center; justify-content: space-between; gap: 2rem; }
+      .ms-loc__grid { grid-template-columns: 1fr 1.15fr; align-items: stretch; }
+      .ms-faq__wrap { grid-template-columns: 0.8fr 1.2fr; align-items: start; }
+      .ms-sec-head--left { margin-bottom: 0; }
+    }
+    @media (min-width: 980px) {
+      .ms-reviews__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var els = document.querySelectorAll('.ms-reveal');
+      if (!('IntersectionObserver' in window) || !els.length) {
+        els.forEach(function (el) { el.classList.add('ms-in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('ms-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,661 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+<BaseLayout
+  title="Taller Mecánico & Autoclima Andrade · Kanasín, Yucatán"
+  description="Mecánica general y aire acondicionado automotriz en Santa Rosa, Kanasín. ⭐ 4.5 con 28 reseñas en Google. Trato honesto y precios justos — del radiador al clima de tu auto."
+  slug="taller-mecanico-autoclima-andrade"
+  ogImage="/taller-mecanico-autoclima-andrade/img/foto_3.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Epilogue:wght@600;800&family=Mulish:wght@400;500;700&display=swap"
+  favicon="🌡️"
+  themeColor="#0d5c63"
+  whatsapp={null}
+  telefono={null}
+  mapsUrl={"https://maps.google.com/?cid=18117449030100054030&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA"}
+>
+  <main class="tma">
+
+    <!-- ============ HERO ============ -->
+    <header class="hero">
+      <img
+        class="hero-img"
+        src="/taller-mecanico-autoclima-andrade/img/foto_3.jpg"
+        alt="Mecánico revisando el motor de un auto con el cofre abierto en Taller Andrade"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="wrap hero-content">
+        <p class="kicker reveal">Taller mecánico y autoclima · Santa Rosa, Kanasín</p>
+        <h1 class="hero-title reveal">Taller Mecánico <span class="amp">&amp; Autoclima</span> Andrade</h1>
+        <p class="tagline reveal">Mecánica general y aire acondicionado automotriz bajo un mismo techo, para que el calor de Yucatán se quede en la calle.</p>
+
+        <a class="chip reveal" href="https://maps.google.com/?cid=18117449030100054030&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+          <span class="star" aria-hidden="true">★</span> 4.5 · 28 reseñas en Google
+        </a>
+
+        <div class="cta-row reveal">
+          <a class="btn btn-solid" href="https://maps.google.com/?cid=18117449030100054030&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+            Cómo llegar
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Firma: barra de gradiente de temperatura -->
+    <div class="gauge reveal" aria-hidden="true">
+      <span class="gauge-label gauge-label-hot">☀️ Calor de la calle</span>
+      <div class="gauge-bar"><span class="gauge-dot"></span></div>
+      <span class="gauge-label gauge-label-cool">Frescura Andrade ❄️</span>
+    </div>
+
+    <!-- ============ 01 SOBRE NOSOTROS ============ -->
+    <section class="sec" id="nosotros">
+      <div class="wrap two-col">
+        <div class="about reveal">
+          <p class="sec-kicker">Quiénes somos</p>
+          <h2 class="sec-title">Reparamos coches. <span class="coral">Y les devolvemos el aire frío.</span></h2>
+          <p>En <strong>Taller Mecánico &amp; Autoclima Andrade</strong> hacemos mecánica general y aire acondicionado automotriz bajo el mismo techo, en Santa Rosa, Kanasín. No hace falta ir a un taller para el motor y a otro para el clima: aquí se resuelve todo junto.</p>
+          <p>Quienes ya pasaron por aquí hablan del trato del <strong>señor Adrián</strong>: atención cercana, profesional y con excelente determinación para dar con el problema, siempre bajo un costo justo. A un cliente que llegó con el radiador roto lo dejamos listo con uno nuevo en poco más de una hora, con precios accesibles y sin sorpresas.</p>
+          <p>Trabajamos con las marcas que circulan todos los días por Yucatán: Ford, Volkswagen, Nissan, Chevrolet, BMW, Audi, Toyota, Mazda y Mitsubishi.</p>
+          <div class="marcas" role="list" aria-label="Marcas que atendemos">
+            <span role="listitem">Ford</span><span role="listitem">Volkswagen</span><span role="listitem">Nissan</span>
+            <span role="listitem">Chevrolet</span><span role="listitem">BMW</span><span role="listitem">Audi</span>
+            <span role="listitem">Toyota</span><span role="listitem">Mazda</span><span role="listitem">Mitsubishi</span>
+          </div>
+        </div>
+        <figure class="about-photo reveal">
+          <img
+            src="/taller-mecanico-autoclima-andrade/img/foto_4.jpg"
+            alt="Fachada del taller con el rótulo Aire Acondicionado Automotriz y Mecánica Automotriz Andrade"
+            loading="lazy"
+            width="1100"
+            height="620"
+          />
+          <figcaption>Nuestra fachada en Santa Rosa, Kanasín.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ 02 SERVICIOS ============ -->
+    <section class="sec sec-panel" id="servicios">
+      <div class="wrap">
+        <p class="sec-kicker sec-kicker-panel">Qué ofrecemos</p>
+        <h2 class="sec-title sec-title-panel">Del clima al motor, resuelto aquí</h2>
+        <ul class="servicios reveal">
+          <li>
+            <span class="ico" aria-hidden="true">🌡️</span>
+            <div><h3>Aire acondicionado automotriz</h3><p>Diagnóstico, recarga y reparación del sistema de clima de tu auto — nuestra especialidad.</p></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true">♨️</span>
+            <div><h3>Sistema de enfriamiento y radiadores</h3><p>De fugas a cambio completo, como el radiador que reemplazamos en poco más de una hora.</p></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true">🔧</span>
+            <div><h3>Auxilio y diagnóstico de fallas mecánicas</h3><p>Encontramos el problema y te explicamos qué tiene, con determinación y costo justo.</p></div>
+          </li>
+          <li>
+            <span class="ico" aria-hidden="true">🚗</span>
+            <div><h3>Mecánica general multimarca</h3><p>Ford, Volkswagen, Nissan, Chevrolet, BMW, Audi, Toyota, Mazda y Mitsubishi.</p></div>
+          </li>
+        </ul>
+        <p class="nota-acceso reveal">♿ Instalaciones con acceso para silla de ruedas.</p>
+
+        <figure class="servicios-photo reveal">
+          <img
+            src="/taller-mecanico-autoclima-andrade/img/foto_2.jpg"
+            alt="Autos en revisión sobre la fosa y elevador del taller"
+            loading="lazy"
+            width="1100"
+            height="617"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Firma: segunda barra de gradiente, dirección invertida -->
+    <div class="gauge gauge-rev reveal" aria-hidden="true">
+      <span class="gauge-label gauge-label-cool">❄️ Frescura Andrade</span>
+      <div class="gauge-bar gauge-bar-rev"><span class="gauge-dot"></span></div>
+      <span class="gauge-label gauge-label-hot">Calor de la calle ☀️</span>
+    </div>
+
+    <!-- ============ 03 PRUEBA SOCIAL ============ -->
+    <section class="sec" id="resenas">
+      <div class="wrap">
+        <p class="sec-kicker">Lo que dicen en Google</p>
+        <h2 class="sec-title"><span class="coral">4.5 de 5</span> en 28 reseñas</h2>
+        <div class="reviews reveal">
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Excelente servicio y trato del señor Adrián, muy satisfecho con el servicio»</blockquote>
+            <figcaption><strong>Ulises Martin Villegas Palacios</strong><span>Reseña en Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«Muy buena atención y profesionalismo. Resuelven bajo un costo justo y con excelente determinación en el problema.»</blockquote>
+            <figcaption><strong>Héctor Jiménez</strong><span>Reseña en Google</span></figcaption>
+          </figure>
+          <figure class="rev">
+            <p class="rev-stars" aria-label="5 estrellas">★★★★★</p>
+            <blockquote>«En una hora llegué con radiador roto y salí con otro nuevo hora u me media después aliviado y con precios muy accesibles. Salvadora experiencia, lo recomiendo mucho en la zona. Aire acondicionado y auxilio de falla mecánica»</blockquote>
+            <figcaption><strong>Rygel Campos</strong><span>Reseña en Google</span></figcaption>
+          </figure>
+        </div>
+        <div class="center reveal">
+          <a class="btn btn-ghost" href="https://maps.google.com/?cid=18117449030100054030&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Leer más reseñas en Google</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 UBICACIÓN Y HORARIOS ============ -->
+    <section class="sec sec-alt" id="ubicacion">
+      <div class="wrap">
+        <p class="sec-kicker">Dónde estamos</p>
+        <h2 class="sec-title">Santa Rosa, Kanasín</h2>
+        <div class="ubica reveal">
+          <div class="ubica-info">
+            <p class="dir">Calle 22 entre calle 7 y calle 9<br />Santa Rosa, 97370 Kanasín, Yucatán</p>
+            <a class="btn btn-solid btn-sm" href="https://maps.google.com/?cid=18117449030100054030&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Abrir en Google Maps</a>
+            <h3 class="horario-titulo">Horario del taller</h3>
+            <table class="horarios">
+              <tbody>
+                <tr data-dia="1"><th scope="row">Lunes</th><td>8:30–18:30</td></tr>
+                <tr data-dia="2"><th scope="row">Martes</th><td>8:30–18:00</td></tr>
+                <tr data-dia="3"><th scope="row">Miércoles</th><td>8:30–18:00</td></tr>
+                <tr data-dia="4"><th scope="row">Jueves</th><td>8:30–18:00</td></tr>
+                <tr data-dia="5"><th scope="row">Viernes</th><td>8:30–18:00</td></tr>
+                <tr data-dia="6"><th scope="row">Sábado</th><td>8:30–14:30</td></tr>
+                <tr data-dia="0"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="mapa">
+            <iframe
+              src="https://www.google.com/maps?q=TALLER%20MEC%C3%81NICO%20%26%20AUTOCLIMA%20ANDRADE%2C%20Calle%2022%20entre%20calle%207%20y%20calle%209%2C%20Santa%20Rosa%2C%2097370%20Kanas%C3%ADn%2C%20Yuc.%2C%20M%C3%A9xico&output=embed"
+              title="Mapa: Taller Mecánico & Autoclima Andrade en Kanasín, Yucatán"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <figure class="ubica-photo reveal">
+          <img
+            src="/taller-mecanico-autoclima-andrade/img/foto_5.jpg"
+            alt="Auto con el cofre abierto en revisión junto al carrito de herramientas del taller"
+            loading="lazy"
+            width="1100"
+            height="617"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="banda">
+      <div class="wrap">
+        <h2 class="banda-title">¿Tu auto ya no enfría o ya te avisó algo raro?</h2>
+        <p class="banda-sub">Pasa a vernos en Santa Rosa, Kanasín. Te decimos qué tiene, a costo justo.</p>
+        <div class="cta-row center">
+          <a class="btn btn-dark" href="https://maps.google.com/?cid=18117449030100054030&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="pie">
+      <div class="wrap">
+        <p class="pie-logo">Taller Mecánico &amp; Autoclima Andrade</p>
+        <p class="pie-dato">Calle 22 entre calle 7 y calle 9, Santa Rosa, 97370 Kanasín, Yucatán</p>
+        <a class="btn btn-ghost btn-sm pie-btn" href="https://maps.google.com/?cid=18117449030100054030&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA" target="_blank" rel="noopener">Cómo llegar</a>
+        <p class="pie-mini">Lun 8:30–18:30 · Mar–Vie 8:30–18:00 · Sáb 8:30–14:30 · Dom cerrado</p>
+      </div>
+    </footer>
+  </main>
+
+  <script type="application/ld+json" is:inline>
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "Taller Mecánico & Autoclima Andrade",
+    "url": "https://demos.ivang.mx/taller-mecanico-autoclima-andrade",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle 22 entre calle 7 y calle 9, Santa Rosa",
+      "addressLocality": "Kanasín",
+      "addressRegion": "Yucatán",
+      "postalCode": "97370",
+      "addressCountry": "MX"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.5",
+      "reviewCount": "28"
+    },
+    "openingHours": ["Mo 08:30-18:30", "Tu-Fr 08:30-18:00", "Sa 08:30-14:30"]
+  }
+  </script>
+
+  <style is:global>
+    :root {
+      --crema: #f3ede2;
+      --paper: #fffbf4;
+      --petrol: #0d5c63;
+      --petrol-dark: #0a4045;
+      --petrol-darker: #073033;
+      --coral: #ff7a59;
+      --coral-text: #b8431f;
+      --ink: #1f2a2a;
+      --muted: #5c6b6a;
+      --line: rgba(31, 42, 42, 0.14);
+      --line-panel: rgba(243, 237, 226, 0.16);
+      --display: "Epilogue", system-ui, sans-serif;
+      --body: "Mulish", system-ui, sans-serif;
+    }
+
+    body {
+      background: var(--crema);
+      color: var(--ink);
+      font-family: var(--body);
+      font-size: 17px;
+      line-height: 1.6;
+      overflow-x: clip;
+    }
+
+    .tma ::selection { background: var(--coral); color: var(--ink); }
+    .tma a:focus-visible,
+    .tma .btn:focus-visible {
+      outline: 3px solid var(--coral);
+      outline-offset: 3px;
+    }
+
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 38px);
+      min-height: calc(100svh - 38px);
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background:
+        linear-gradient(0deg, rgba(7, 48, 51, 0.94) 0%, rgba(7, 48, 51, 0.72) 42%, rgba(7, 48, 51, 0.4) 68%, rgba(7, 48, 51, 0.55) 100%);
+    }
+    .hero-content { padding: 120px 20px 44px; color: var(--crema); }
+    .kicker {
+      font-family: var(--display);
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #ffb39e;
+      margin: 0 0 14px;
+    }
+    .hero-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(34px, 9.5vw, 62px);
+      line-height: 1.04;
+      margin: 0 0 18px;
+      max-width: 14ch;
+      color: var(--crema);
+    }
+    .hero-title .amp { color: var(--coral); }
+    .tagline {
+      font-size: clamp(16px, 4.2vw, 19px);
+      font-weight: 400;
+      color: #e4ded1;
+      max-width: 36ch;
+      margin: 0 0 22px;
+    }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(243, 237, 226, 0.3);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-weight: 600;
+      font-size: 14.5px;
+      color: var(--crema);
+      text-decoration: none;
+      background: rgba(243, 237, 226, 0.08);
+    }
+    .chip .star { color: var(--coral); }
+    .chip:hover { border-color: var(--coral); }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+    .cta-row.center { justify-content: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 16px;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      padding: 15px 26px;
+      border-radius: 10px;
+      transition: transform 0.15s ease, background-color 0.15s ease, border-color 0.15s ease;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-solid { background: var(--coral); color: var(--ink); }
+    .btn-solid:hover { background: #ff8f72; }
+    .btn-ghost { border: 2px solid var(--line); color: var(--ink); }
+    .btn-ghost:hover { border-color: var(--coral-text); color: var(--coral-text); }
+    .btn-sm { font-size: 14.5px; padding: 11px 18px; }
+
+    /* ---------- GAUGE (firma) ---------- */
+    .gauge {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 34px 20px 8px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .gauge-label {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      color: var(--muted);
+      flex: 0 0 auto;
+    }
+    .gauge-label-hot { color: var(--coral-text); }
+    .gauge-label-cool { color: var(--petrol); }
+    .gauge-bar {
+      position: relative;
+      flex: 1 1 auto;
+      height: 10px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--coral) 0%, #f0b26a 40%, var(--petrol) 100%);
+      box-shadow: inset 0 0 0 1px rgba(31, 42, 42, 0.08);
+    }
+    .gauge-bar-rev { background: linear-gradient(90deg, var(--petrol) 0%, #f0b26a 60%, var(--coral) 100%); }
+    .gauge-dot {
+      position: absolute;
+      top: 50%;
+      left: 8%;
+      width: 18px;
+      height: 18px;
+      margin-top: -9px;
+      border-radius: 50%;
+      background: var(--paper);
+      border: 3px solid var(--petrol);
+      box-shadow: 0 2px 6px rgba(7, 48, 51, 0.3);
+      animation: gauge-slide 5s ease-in-out infinite alternate;
+    }
+    .gauge-rev .gauge-dot { border-color: var(--coral); animation-direction: alternate-reverse; }
+    @keyframes gauge-slide {
+      0% { left: 6%; }
+      100% { left: 88%; }
+    }
+    @media (max-width: 420px) {
+      .gauge { flex-wrap: wrap; justify-content: center; row-gap: 10px; }
+      .gauge-bar { flex-basis: 100%; order: 3; }
+    }
+
+    /* ---------- SECCIONES ---------- */
+    .sec { padding: 68px 0; }
+    .sec-panel { background: var(--petrol-darker); }
+    .sec-alt { background: var(--paper); }
+    .sec-kicker {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--petrol);
+      margin: 0 0 10px;
+    }
+    .sec-kicker-panel { color: #ff9d84; }
+    .sec-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(30px, 7.5vw, 48px);
+      line-height: 1.08;
+      margin: 0 0 26px;
+      color: var(--ink);
+    }
+    .sec-title .coral { color: var(--coral-text); }
+    .sec-title-panel { color: var(--crema); }
+
+    .two-col { display: grid; grid-template-columns: 1fr; gap: 32px; align-items: start; }
+
+    .about p { max-width: 60ch; margin: 0 0 16px; color: #3a4645; }
+    .about strong { color: var(--petrol); }
+    .marcas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 22px;
+    }
+    .marcas span {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 12.5px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: var(--petrol);
+      background: rgba(13, 92, 99, 0.08);
+      border: 1px solid rgba(13, 92, 99, 0.2);
+      border-radius: 999px;
+      padding: 6px 13px;
+    }
+
+    .about-photo, .servicios-photo, .ubica-photo { margin: 0; }
+    .about-photo img, .servicios-photo img, .ubica-photo img {
+      width: 100%;
+      border-radius: 14px;
+      box-shadow: 0 18px 40px rgba(7, 48, 51, 0.18);
+    }
+    .about-photo figcaption {
+      margin-top: 10px;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .servicios-photo { margin-top: 40px; }
+    .servicios-photo img { box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4); }
+    .ubica-photo { margin-top: 30px; max-width: 560px; }
+
+    /* ---------- SERVICIOS ---------- */
+    .servicios {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .servicios li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-top: 1px solid var(--line-panel);
+    }
+    .servicios li:last-child { border-bottom: 1px solid var(--line-panel); }
+    .servicios .ico { font-size: 28px; line-height: 1.2; }
+    .servicios h3 {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 19px;
+      margin: 0 0 4px;
+      color: var(--crema);
+    }
+    .servicios p { margin: 0; color: #b9c7c5; font-size: 15px; }
+    .nota-acceso { margin: 24px 0 0; color: #b9c7c5; font-size: 14.5px; }
+
+    /* ---------- RESEÑAS ---------- */
+    .reviews {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 0 0 28px;
+    }
+    .rev {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      border-left: 5px solid var(--coral);
+      border-radius: 4px 12px 12px 4px;
+      padding: 20px 22px;
+      box-shadow: 0 10px 26px rgba(31, 42, 42, 0.08);
+    }
+    .rev-stars { color: var(--coral-text); font-size: 15px; letter-spacing: 0.15em; margin: 0 0 10px; }
+    .rev blockquote { margin: 0 0 14px; font-size: 16px; line-height: 1.55; font-weight: 500; }
+    .rev figcaption { display: flex; flex-direction: column; gap: 2px; }
+    .rev figcaption strong { font-family: var(--display); font-weight: 700; font-size: 15.5px; color: var(--petrol); }
+    .rev figcaption span { font-size: 12.5px; color: var(--muted); }
+    .center { text-align: center; }
+
+    /* ---------- UBICACIÓN ---------- */
+    .ubica { display: grid; grid-template-columns: 1fr; gap: 26px; }
+    .dir { font-size: 17px; font-weight: 500; margin: 0 0 16px; }
+    .horario-titulo {
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 19px;
+      margin: 28px 0 10px;
+      color: var(--ink);
+    }
+    .horarios { width: 100%; max-width: 420px; border-collapse: collapse; font-size: 15px; }
+    .horarios th, .horarios td { padding: 9px 10px; border-bottom: 1px solid var(--line); text-align: left; }
+    .horarios th { font-weight: 500; color: var(--ink); }
+    .horarios td { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+    .horarios tr.hoy th, .horarios tr.hoy td { color: #fff; background: var(--petrol); font-weight: 700; }
+    .horarios tr.hoy th { border-radius: 6px 0 0 6px; }
+    .horarios tr.hoy td { border-radius: 0 6px 6px 0; }
+    .horarios tr.hoy th::after {
+      content: "hoy";
+      font-family: var(--display);
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--coral);
+      color: var(--ink);
+      border-radius: 4px;
+      padding: 2px 7px;
+      margin-left: 10px;
+      vertical-align: 1px;
+    }
+    .mapa iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+      border-radius: 14px;
+      display: block;
+    }
+
+    /* ---------- CTA FINAL ---------- */
+    .banda {
+      background: var(--petrol);
+      color: var(--crema);
+      padding: 60px 0;
+      text-align: center;
+    }
+    .banda-title {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: clamp(28px, 7vw, 44px);
+      line-height: 1.1;
+      margin: 0 0 12px;
+      color: var(--crema);
+    }
+    .banda-sub { margin: 0 auto 22px; max-width: 42ch; font-weight: 500; color: #d6e7e5; }
+    .btn-dark { background: var(--crema); color: var(--petrol-darker); }
+    .btn-dark:hover { background: #fff; }
+
+    /* ---------- FOOTER ---------- */
+    .pie {
+      background: var(--petrol-darker);
+      padding: 40px 0 88px;
+      text-align: center;
+    }
+    .pie-logo {
+      font-family: var(--display);
+      font-weight: 800;
+      font-size: 21px;
+      color: var(--crema);
+      margin: 0 0 10px;
+    }
+    .pie-dato { margin: 4px 0 18px; color: #b9c7c5; font-size: 14.5px; }
+    .pie-btn { border-color: rgba(243, 237, 226, 0.3); color: var(--crema); }
+    .pie-btn:hover { border-color: var(--coral); color: var(--coral); }
+    .pie-mini { margin: 18px 0 0; color: #7f918f; font-size: 12.5px; }
+
+    /* ---------- REVEAL (solo con JS) ---------- */
+    html.js .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    html.js .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- DESKTOP ---------- */
+    @media (min-width: 760px) {
+      .sec { padding: 100px 0; }
+      .two-col { grid-template-columns: 1.1fr 0.9fr; gap: 48px; }
+      .reviews { grid-template-columns: repeat(3, 1fr); align-items: start; }
+      .ubica { grid-template-columns: 1fr 1.15fr; align-items: start; }
+      .mapa iframe { height: 400px; }
+      .servicios { grid-template-columns: 1fr 1fr; column-gap: 40px; }
+      .servicios li:nth-child(2) { border-top: 1px solid var(--line-panel); }
+      .servicios li:nth-last-child(2) { border-bottom: 1px solid var(--line-panel); }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var d = document;
+      d.documentElement.classList.add('js');
+
+      // Resaltar el día de hoy en la tabla de horarios
+      var hoy = new Date().getDay(); // 0 = domingo
+      var fila = d.querySelector('.horarios tr[data-dia="' + hoy + '"]');
+      if (fila) fila.classList.add('hoy');
+
+      // Scroll-reveal (mejora progresiva)
+      var els = d.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add('in');
+              io.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: '0px 0px -8% 0px' });
+        els.forEach(function (el) { io.observe(el); });
+      } else {
+        els.forEach(function (el) { el.classList.add('in'); });
+      }
+    })();
+  </script>
+</BaseLayout>

@@ -1,0 +1,353 @@
+---
+// Portada interna: galería de todas las demos agrupadas por giro.
+// Los datos vienen de src/data/demos.json (generado con `npm run gen-gallery`).
+// El filtro por lote lee batches/*.json directamente (no depende de gen-gallery).
+// noindex: es para uso de ivang.mx, no para leads.
+import data from '../data/demos.json';
+const { total, grupos } = data;
+
+// --- Lotes (batches) para el filtro ---
+const batchModules = import.meta.glob('../../batches/*.json', { eager: true });
+const gallerySlugs = new Set(grupos.flatMap((g) => g.items.map((d) => d.slug)));
+const batches = Object.entries(batchModules)
+  .map(([path, mod]) => {
+    const m = (mod && mod.default) || mod;
+    const id = path.split('/').pop().replace('.json', '');
+    const slugs = (m.slugs || []).filter((s) => gallerySlugs.has(s));
+    return { id, label: m.batch || id, count: slugs.length, slugs };
+  })
+  .filter((b) => b.count > 0)
+  .sort((a, b) => a.id.localeCompare(b.id, 'es', { numeric: true }));
+
+// slug -> ids de lote a los que pertenece (para el atributo data-batches)
+const slugBatches = new Map();
+for (const b of batches) {
+  for (const s of b.slugs) {
+    slugBatches.set(s, [...(slugBatches.get(s) || []), b.id]);
+  }
+}
+
+const favicon =
+  'data:image/svg+xml,' +
+  encodeURIComponent(
+    '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><text y=".9em" font-size="90">✨</text></svg>'
+  );
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galería de demos · ivang.mx</title>
+    <meta name="robots" content="noindex" />
+    <meta name="theme-color" content="#0a6e4f" />
+    <link rel="icon" href={favicon} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+    />
+  </head>
+  <body>
+    <header class="top">
+      <div class="wrap top-inner">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <span>ivang.mx</span>
+        </div>
+        <h1>Galería de demos</h1>
+        <p class="sub">
+          Sitios de muestra para negocios locales de Yucatán, listos para compartir por WhatsApp.
+        </p>
+        <p class="count">
+          <strong class="stat-total">{total}</strong> demos · <strong class="stat-giros">{grupos.length}</strong> giros
+        </p>
+
+        {batches.length > 0 && (
+          <div class="filter" role="group" aria-label="Filtrar por lote de generación">
+            <button type="button" class="fchip is-active" data-filter="all" aria-pressed="true">
+              Todas <span class="fchip-n">{total}</span>
+            </button>
+            {batches.map((b) => (
+              <button type="button" class="fchip" data-filter={b.id} aria-pressed="false">
+                {b.label} <span class="fchip-n">{b.count}</span>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    </header>
+
+    <nav class="jump" aria-label="Giros">
+      <div class="wrap jump-inner">
+        {grupos.map((g) => (
+          <a href={`#${g.key}`} class="chip" data-key={g.key}>
+            <span class="chip-emoji" aria-hidden="true">{g.emoji}</span>
+            {g.label}
+            <span class="chip-n">{g.items.length}</span>
+          </a>
+        ))}
+      </div>
+    </nav>
+
+    <main class="wrap">
+      {grupos.map((g) => (
+        <section id={g.key} class="giro" data-key={g.key}>
+          <div class="giro-head">
+            <h2>
+              <span class="giro-emoji" aria-hidden="true">{g.emoji}</span>
+              {g.label}
+            </h2>
+            <span class="giro-n">{g.items.length}</span>
+          </div>
+          <div class="grid">
+            {g.items.map((d) => (
+              <a class="card" href={`/${d.slug}`} data-batches={(slugBatches.get(d.slug) || []).join(' ')}>
+                <span class="card-name">{d.nombre}</span>
+                {d.categoria && <span class="card-cat">{d.categoria}</span>}
+                <span class="card-foot">
+                  {d.rating != null ? (
+                    <span class="rating">★ {d.rating}{d.total != null && <span class="muted"> · {d.total}</span>}</span>
+                  ) : (
+                    <span class="muted">Ver demo</span>
+                  )}
+                  <span class="go" aria-hidden="true">↗</span>
+                </span>
+              </a>
+            ))}
+          </div>
+        </section>
+      ))}
+    </main>
+
+    <footer class="foot">
+      <div class="wrap">
+        <p>Diseñadas y desarrolladas por Iván · <a href="https://ivang.mx">ivang.mx</a></p>
+        <p class="foot-mini">
+          <a href="https://wa.me/529991284580" target="_blank" rel="noopener">WhatsApp</a>
+          · Mérida, Yucatán
+        </p>
+      </div>
+    </footer>
+
+    <style is:global>
+      *, *::before, *::after { box-sizing: border-box; }
+      :root {
+        --ink: #14201a;
+        --muted: #5d6b64;
+        --line: #e5eae6;
+        --paper: #f7faf8;
+        --card: #ffffff;
+        --green: #0a6e4f;
+        --green-deep: #075038;
+        --display: 'Sora', system-ui, sans-serif;
+        --body: 'Inter', system-ui, sans-serif;
+      }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        font-family: var(--body);
+        color: var(--ink);
+        background: var(--paper);
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+      }
+      .wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+      a { color: inherit; }
+
+      /* ---------- Encabezado ---------- */
+      .top {
+        background:
+          radial-gradient(900px 380px at 85% -20%, rgba(10, 110, 79, 0.12), transparent 60%),
+          #fff;
+        border-bottom: 1px solid var(--line);
+        padding: 34px 0 30px;
+      }
+      .brand {
+        display: inline-flex; align-items: center; gap: 8px;
+        font-family: var(--display); font-weight: 700; font-size: 14px;
+        letter-spacing: 0.02em; color: var(--green-deep);
+      }
+      .brand .dot { width: 10px; height: 10px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 4px rgba(10,110,79,0.15); }
+      h1 {
+        font-family: var(--display); font-weight: 800;
+        font-size: clamp(28px, 6vw, 44px); line-height: 1.05;
+        margin: 16px 0 8px; letter-spacing: -0.02em;
+      }
+      .sub { margin: 0; color: var(--muted); max-width: 52ch; font-size: 15.5px; }
+      .count { margin: 14px 0 0; font-size: 14px; color: var(--muted); }
+      .count strong { color: var(--ink); font-family: var(--display); }
+
+      /* ---------- Filtro por lote ---------- */
+      .filter { display: none; flex-wrap: wrap; gap: 8px; margin: 18px 0 0; }
+      html.js .filter { display: flex; }
+      .fchip {
+        font-family: var(--body); font-size: 13px; font-weight: 600;
+        display: inline-flex; align-items: center; gap: 7px;
+        padding: 7px 14px; border-radius: 999px; cursor: pointer;
+        border: 1px solid var(--line); background: #fff; color: var(--ink);
+        transition: border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+      }
+      .fchip:hover { border-color: var(--green); }
+      .fchip.is-active { background: var(--green); border-color: var(--green); color: #fff; }
+      .fchip:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+      .fchip-n {
+        font-family: var(--display); font-weight: 700; font-size: 11px;
+        color: var(--green-deep); background: rgba(10,110,79,0.12);
+        border-radius: 999px; padding: 1px 7px;
+      }
+      .fchip.is-active .fchip-n { color: #fff; background: rgba(255,255,255,0.22); }
+      [hidden] { display: none !important; }
+
+      /* ---------- Nav de giros (sticky) ---------- */
+      .jump {
+        position: sticky; top: 0; z-index: 10;
+        background: rgba(247, 250, 248, 0.9);
+        backdrop-filter: saturate(1.2) blur(8px);
+        border-bottom: 1px solid var(--line);
+      }
+      .jump-inner {
+        display: flex; gap: 8px; overflow-x: auto; padding: 12px 20px;
+        scrollbar-width: none;
+      }
+      .jump-inner::-webkit-scrollbar { display: none; }
+      .chip {
+        flex: 0 0 auto;
+        display: inline-flex; align-items: center; gap: 7px;
+        text-decoration: none; white-space: nowrap;
+        font-size: 13.5px; font-weight: 500;
+        padding: 7px 13px; border-radius: 999px;
+        border: 1px solid var(--line); background: #fff; color: var(--ink);
+        transition: border-color 0.15s ease, color 0.15s ease;
+      }
+      .chip:hover { border-color: var(--green); color: var(--green-deep); }
+      .chip-emoji { font-size: 14px; }
+      .chip-n {
+        font-family: var(--display); font-weight: 700; font-size: 11px;
+        color: var(--green-deep); background: rgba(10,110,79,0.1);
+        border-radius: 999px; padding: 1px 7px;
+      }
+
+      /* ---------- Secciones por giro ---------- */
+      main { padding: 8px 0 40px; }
+      .giro { padding: 34px 0 8px; scroll-margin-top: 64px; }
+      .giro-head { display: flex; align-items: baseline; gap: 12px; margin: 0 0 18px; }
+      .giro-head h2 {
+        font-family: var(--display); font-weight: 700;
+        font-size: clamp(19px, 3.4vw, 24px); margin: 0; letter-spacing: -0.01em;
+        display: inline-flex; align-items: center; gap: 10px;
+      }
+      .giro-emoji { font-size: 22px; }
+      .giro-n {
+        font-family: var(--display); font-weight: 700; font-size: 13px;
+        color: var(--muted);
+      }
+
+      /* ---------- Grid de tarjetas ---------- */
+      .grid {
+        display: grid; gap: 12px;
+        grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+      }
+      .card {
+        display: flex; flex-direction: column; gap: 6px;
+        text-decoration: none; color: inherit;
+        background: var(--card); border: 1px solid var(--line);
+        border-radius: 14px; padding: 16px 16px 14px;
+        transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+        min-height: 108px;
+      }
+      .card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(10,110,79,0.5);
+        box-shadow: 0 12px 26px -14px rgba(10,110,79,0.4);
+      }
+      .card:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+      .card-name {
+        font-family: var(--display); font-weight: 600; font-size: 16px;
+        line-height: 1.22; color: var(--ink);
+      }
+      .card-cat { font-size: 12.5px; color: var(--muted); flex: 1; }
+      .card-foot {
+        display: flex; align-items: center; justify-content: space-between;
+        margin-top: 6px; padding-top: 10px; border-top: 1px solid var(--line);
+      }
+      .rating { font-size: 13px; font-weight: 600; color: #b8860b; }
+      .rating .muted { color: var(--muted); font-weight: 500; }
+      .card-foot .muted { font-size: 13px; color: var(--muted); }
+      .go {
+        font-size: 15px; color: var(--green);
+        transition: transform 0.16s ease;
+      }
+      .card:hover .go { transform: translate(2px, -2px); }
+
+      /* ---------- Footer ---------- */
+      .foot {
+        border-top: 1px solid var(--line); background: #fff;
+        padding: 28px 0 40px; text-align: center;
+        color: var(--muted); font-size: 14px;
+      }
+      .foot a { color: var(--green-deep); font-weight: 600; text-decoration: none; }
+      .foot a:hover { text-decoration: underline; }
+      .foot-mini { margin: 6px 0 0; font-size: 13px; }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        * { transition: none !important; }
+      }
+    </style>
+
+    <script is:inline>
+      document.documentElement.classList.add('js');
+      (function () {
+        var chips = Array.prototype.slice.call(document.querySelectorAll('.fchip'));
+        if (!chips.length) return;
+        var cards = Array.prototype.slice.call(document.querySelectorAll('.card[data-batches]'));
+        var giros = Array.prototype.slice.call(document.querySelectorAll('.giro'));
+        var jumps = Array.prototype.slice.call(document.querySelectorAll('.chip[data-key]'));
+        var totalEl = document.querySelector('.stat-total');
+        var girosEl = document.querySelector('.stat-giros');
+
+        function apply(filter) {
+          var per = {}, totalVisible = 0;
+          cards.forEach(function (c) {
+            var show = filter === 'all' ||
+              (' ' + (c.getAttribute('data-batches') || '') + ' ').indexOf(' ' + filter + ' ') !== -1;
+            c.hidden = !show;
+            if (show) {
+              totalVisible++;
+              var g = c.closest('.giro');
+              if (g) { var k = g.getAttribute('data-key'); per[k] = (per[k] || 0) + 1; }
+            }
+          });
+          var visibleGiros = 0;
+          giros.forEach(function (g) {
+            var k = g.getAttribute('data-key'), n = per[k] || 0;
+            g.hidden = n === 0;
+            if (n > 0) visibleGiros++;
+            var nEl = g.querySelector('.giro-n'); if (nEl) nEl.textContent = n;
+          });
+          jumps.forEach(function (ch) {
+            var k = ch.getAttribute('data-key'), n = per[k] || 0;
+            ch.hidden = n === 0;
+            var nEl = ch.querySelector('.chip-n'); if (nEl) nEl.textContent = n;
+          });
+          if (totalEl) totalEl.textContent = totalVisible;
+          if (girosEl) girosEl.textContent = visibleGiros;
+        }
+
+        chips.forEach(function (ch) {
+          ch.addEventListener('click', function () {
+            chips.forEach(function (x) {
+              x.classList.remove('is-active');
+              x.setAttribute('aria-pressed', 'false');
+            });
+            ch.classList.add('is-active');
+            ch.setAttribute('aria-pressed', 'true');
+            apply(ch.getAttribute('data-filter'));
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>

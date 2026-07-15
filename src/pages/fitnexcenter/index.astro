@@ -1,0 +1,767 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slug = 'fitnexcenter';
+const whatsapp = 'https://wa.me/529999469958';
+const telefono = '999 946 9958';
+const mapsUrl = 'https://maps.google.com/?cid=4912810093590794129';
+const mapEmbed =
+  'https://www.google.com/maps?q=C.%2042%20348D%2C%20Francisco%20de%20Montejo%2C%2097203%20M%C3%A9rida%2C%20Yuc.%2C%20M%C3%A9xico&output=embed';
+---
+<BaseLayout
+  title="Fitnexcenter — Gimnasio en Francisco de Montejo, Mérida"
+  description="Gimnasio con equipo para todo el cuerpo y ambiente positivo en Mérida. ⭐ 4.5 · 203 reseñas. Abierto de 6 am a 11 pm."
+  slug={slug}
+  ogImage="/fitnexcenter/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Kanit:ital,wght@0,600;0,700;0,800;1,700;1,800&display=swap"
+  favicon="⚡"
+  themeColor="#160C36"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <!-- ================= HERO ================= -->
+  <header class="hero">
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+    <div class="hero__inner">
+      <p class="brand">FITNE<span class="brand__x">✕</span>CENTER</p>
+
+      <p class="eyebrow eyebrow--lime">Gimnasio · Francisco de Montejo, Mérida</p>
+      <h1 class="hero__title">Entrena<br><span class="hero__accent">sin límites</span></h1>
+      <p class="hero__lead">
+        Equipo completo para pecho, espalda, brazo y pierna, ambiente positivo y horarios
+        amplios. Aquí sí avanzas, sin esperar tu máquina.
+      </p>
+
+      <div class="meter" role="img" aria-label="Nivel de energía al máximo">
+        <span class="meter__label">Nivel de energía</span>
+        <div class="meter__track">
+          <div class="meter__fill"><span class="meter__bolt" aria-hidden="true">⚡</span></div>
+        </div>
+        <span class="meter__max">MÁX</span>
+      </div>
+
+      <div class="hero__cta">
+        <a class="btn btn--lime" href={whatsapp} target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+
+      <p class="hero__rating"><strong>⭐ 4.5</strong> · 203 reseñas reales en Google</p>
+    </div>
+  </header>
+
+  <!-- ================= STATS / CONTADORES ================= -->
+  <section class="stats" aria-label="Cifras del gimnasio">
+    <div class="wrap stats__grid">
+      <div class="stat">
+        <span class="stat__num"><span data-count="4.5" data-dec="1">4.5</span><span class="stat__star">★</span></span>
+        <span class="stat__label">Calificación en Google</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-count="203">203</span>
+        <span class="stat__label">Reseñas de miembros</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num"><span data-count="17">17</span><span class="stat__unit">h</span></span>
+        <span class="stat__label">Abierto cada día</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num" data-count="6">6</span>
+        <span class="stat__label">Días a la semana</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= QUIÉNES SOMOS ================= -->
+  <section class="about" id="nosotros">
+    <div class="wrap about__grid">
+      <div class="about__text">
+        <p class="eyebrow eyebrow--violet">Quiénes somos</p>
+        <h2 class="h2">Un gimnasio donde el ambiente empuja tan fuerte como las pesas.</h2>
+        <p>
+          Somos <strong>Fitnexcenter</strong>, tu gimnasio de barrio en Francisco de Montejo.
+          Aquí encuentras máquinas para trabajar todo el cuerpo y un lugar cómodo donde
+          concentrarte en lo tuyo. Lo que más repiten nuestros miembros es el <em>ambiente
+          muy positivo</em>: se entrena en serio, pero se entrena a gusto.
+        </p>
+        <p>
+          Desde el primer día en recepción te explicamos cómo funciona todo para que entres
+          con confianza. Tenemos las máquinas necesarias para pecho, espalda y brazo, y una
+          zona de pierna que nuestros miembros señalan como nuestro punto fuerte. Y como el
+          espacio está bien distribuido, rara vez esperas para usar un aparato.
+        </p>
+      </div>
+      <figure class="about__quote">
+        <blockquote>“Me encanta este gimnasio. Tiene buenas máquinas, el lugar es cómodo y el ambiente es muy positivo.”</blockquote>
+        <figcaption>— Lia González · Miembro</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= ZONAS (elemento firma) ================= -->
+  <section class="zones" aria-label="Equipo por zona">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--lime">Equipo para todo el cuerpo</p>
+      <h2 class="h2 h2--light">Cuatro zonas cubiertas. Una favorita.</h2>
+      <p class="zones__intro">
+        Nuestros miembros lo resumen así: “tiene variedad de máquinas, las necesarias para
+        pecho, espalda y brazo, su parte fuerte a mi parecer es pierna”.
+      </p>
+
+      <ul class="bars">
+        <li class="bar">
+          <div class="bar__head"><span class="bar__name">Pecho</span></div>
+          <div class="bar__track"><div class="bar__fill js-reveal" style="--w:88%"></div></div>
+        </li>
+        <li class="bar">
+          <div class="bar__head"><span class="bar__name">Espalda</span></div>
+          <div class="bar__track"><div class="bar__fill js-reveal" style="--w:90%"></div></div>
+        </li>
+        <li class="bar">
+          <div class="bar__head"><span class="bar__name">Brazo</span></div>
+          <div class="bar__track"><div class="bar__fill js-reveal" style="--w:86%"></div></div>
+        </li>
+        <li class="bar bar--star">
+          <div class="bar__head"><span class="bar__name">Pierna</span><span class="bar__tag">La favorita ⚡</span></div>
+          <div class="bar__track"><div class="bar__fill bar__fill--max js-reveal" style="--w:100%"></div></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= GALERÍA ================= -->
+  <section class="gallery" aria-label="Fotos del gimnasio">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--violet">Por dentro</p>
+      <h2 class="h2">Así se ve tu próximo entrenamiento</h2>
+      <div class="gallery__grid">
+        <figure class="g-item g-item--tall">
+          <img src="/fitnexcenter/img/foto_2.jpg" alt="Miembro entrenando pierna con mancuernas en Fitnexcenter" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="g-item">
+          <img src="/fitnexcenter/img/foto_4.jpg" alt="Entrenamiento en máquina multifuncional en Fitnexcenter" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="g-item">
+          <img src="/fitnexcenter/img/foto_3.jpg" alt="Zona de aparatos con espejo y peso integrado en Fitnexcenter" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="g-item g-item--wide">
+          <img src="/fitnexcenter/img/foto_5.jpg" alt="Fachada de Fitnexcenter en Francisco de Montejo, Mérida" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIFERENCIADORES ================= -->
+  <section class="why">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--lime">Por qué entrenar aquí</p>
+      <h2 class="h2 h2--light">Razones que repiten nuestros miembros</h2>
+      <div class="why__grid">
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">🏋️</span>
+          <h3 class="card__title">Máquinas para todo el cuerpo</h3>
+          <p>Equipo para pecho, espalda, brazo y una zona de pierna que es nuestro punto fuerte.</p>
+        </article>
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">⏱️</span>
+          <h3 class="card__title">Poca espera</h3>
+          <p>El espacio está bien distribuido: a lo mucho compartes una máquina con dos personas.</p>
+        </article>
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">🔥</span>
+          <h3 class="card__title">Ambiente positivo</h3>
+          <p>Un lugar cómodo y de buena vibra, donde da gusto llegar a entrenar todos los días.</p>
+        </article>
+        <article class="card">
+          <span class="card__ico" aria-hidden="true">💳</span>
+          <h3 class="card__title">Aceptamos tarjeta</h3>
+          <p>Paga tu mensualidad con tarjeta, sin complicarte. Rápido y sin filas.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA INTERMEDIO ================= -->
+  <section class="cta-band">
+    <div class="wrap cta-band__inner">
+      <p class="cta-band__kicker">Abierto hoy hasta las 23:00</p>
+      <h2 class="cta-band__title">¿Empezamos esta semana?</h2>
+      <a class="btn btn--void" href={whatsapp} target="_blank" rel="noopener">Pregunta por WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- ================= RESEÑAS ================= -->
+  <section class="reviews" id="resenas">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--violet">Lo que dicen</p>
+      <h2 class="h2">⭐ 4.5 · 203 reseñas en Google</h2>
+      <div class="reviews__grid">
+        <figure class="review">
+          <div class="review__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>Me encanta este gimnasio. Tiene buenas máquinas, el lugar es cómodo y el ambiente es muy positivo.</blockquote>
+          <figcaption><span class="review__author">Lia González</span><span class="review__when">Hace 4 meses</span></figcaption>
+        </figure>
+        <figure class="review">
+          <div class="review__stars" aria-label="5 de 5 estrellas">★★★★★</div>
+          <blockquote>Desde el primer día en la recepción me trataron bien, aclarando ciertas cosas obligatorias para el acceso, tiene variedad de máquinas, las necesarias para pecho, espalda y brazo, su parte fuerte a mi parecer es pierna…</blockquote>
+          <figcaption><span class="review__author">Alan</span><span class="review__when">Hace 9 meses</span></figcaption>
+        </figure>
+      </div>
+      <a class="link-out" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google →</a>
+    </div>
+  </section>
+
+  <!-- ================= UBICACIÓN + HORARIOS ================= -->
+  <section class="location" id="ubicacion">
+    <div class="wrap location__grid">
+      <div class="location__info">
+        <p class="eyebrow eyebrow--lime">Dónde y cuándo</p>
+        <h2 class="h2 h2--light">Encuéntranos en Montejo</h2>
+        <p class="location__addr">C. 42 348D, entre Calle 53 F,<br>Francisco de Montejo, 97203 Mérida, Yuc.</p>
+        <a class="btn btn--lime btn--sm" href={mapsUrl} target="_blank" rel="noopener">Ver en Google Maps</a>
+
+        <table class="hours" aria-label="Horarios de atención">
+          <tbody>
+            <tr><th>Lunes</th><td>6:00 – 23:00</td></tr>
+            <tr><th>Martes</th><td>6:00 – 23:00</td></tr>
+            <tr><th>Miércoles</th><td>6:00 – 23:00</td></tr>
+            <tr><th>Jueves</th><td>6:00 – 23:00</td></tr>
+            <tr><th>Viernes</th><td>6:00 – 23:00</td></tr>
+            <tr><th>Sábado</th><td>8:00 – 16:00</td></tr>
+            <tr class="hours__off"><th>Domingo</th><td>Cerrado</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="location__map">
+        <iframe
+          src={mapEmbed}
+          title="Mapa de Fitnexcenter en Francisco de Montejo, Mérida"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAQ ================= -->
+  <section class="faq">
+    <div class="wrap">
+      <p class="eyebrow eyebrow--violet">Preguntas rápidas</p>
+      <h2 class="h2">Antes de venir</h2>
+      <div class="faq__list">
+        <details>
+          <summary>¿Aceptan pago con tarjeta?</summary>
+          <p>Sí. Puedes pagar tu mensualidad con tarjeta sin problema.</p>
+        </details>
+        <details>
+          <summary>¿Cuál es el horario?</summary>
+          <p>De lunes a viernes de 6:00 a 23:00 y sábados de 8:00 a 16:00. Domingos cerrado.</p>
+        </details>
+        <details>
+          <summary>¿Qué equipo tienen?</summary>
+          <p>Máquinas para pecho, espalda, brazo y pierna. La zona de pierna es la más completa según nuestros miembros.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL + FOOTER ================= -->
+  <section class="final">
+    <div class="wrap final__inner">
+      <p class="brand brand--footer">FITNE<span class="brand__x">✕</span>CENTER</p>
+      <h2 class="final__title">Tu mejor versión<br>empieza hoy</h2>
+      <a class="btn btn--lime btn--lg" href={whatsapp} target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" width="22" height="22" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+      <p class="final__phone">O llámanos: <a href="tel:+529999469958">999 946 9958</a></p>
+      <p class="final__addr">C. 42 348D · Francisco de Montejo, Mérida, Yuc.</p>
+    </div>
+  </section>
+
+  <style is:global>
+    :root {
+      --void: #160C36;
+      --void-2: #1E1150;
+      --void-3: #120A2C;
+      --violet: #6D28F5;
+      --violet-2: #8A5BFF;
+      --lime: #C8F135;
+      --lime-deep: #A9D617;
+      --bone: #F4F2EC;
+      --bone-2: #E8E5DB;
+      --steel: #B9BCC6;
+      --ink: #171034;
+      --ink-soft: #575072;
+      --font-d: 'Kanit', system-ui, sans-serif;
+      --font-b: 'Hanken Grotesk', system-ui, sans-serif;
+      --wrap: 1120px;
+    }
+
+    body {
+      font-family: var(--font-b);
+      background: var(--void);
+      color: var(--bone);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .wrap { width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 22px; }
+
+    /* ---- tipografía compartida ---- */
+    .eyebrow {
+      font-family: var(--font-b);
+      font-weight: 700;
+      font-size: 0.74rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin: 0 0 0.9rem;
+    }
+    .eyebrow--lime { color: var(--lime-deep); }
+    .eyebrow--violet { color: var(--violet); }
+    .zones .eyebrow--lime, .why .eyebrow--lime, .location .eyebrow--lime { color: var(--lime); }
+
+    .h2 {
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: clamp(1.9rem, 6.5vw, 3.1rem);
+      line-height: 0.98;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      margin: 0 0 1.1rem;
+    }
+    .h2--light { color: var(--bone); }
+
+    /* ---- botones ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55em;
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-size: 1rem;
+      text-decoration: none;
+      padding: 0.95em 1.5em;
+      border-radius: 4px;
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: transform 0.14s ease, box-shadow 0.14s ease, background 0.14s ease;
+    }
+    .btn--lime { background: var(--lime); color: var(--ink); box-shadow: 0 8px 24px rgba(200, 241, 53, 0.28); }
+    .btn--lime:hover { transform: translateY(-2px); box-shadow: 0 12px 30px rgba(200, 241, 53, 0.4); }
+    .btn--ghost { background: rgba(255,255,255,0.04); color: var(--bone); border-color: rgba(255,255,255,0.35); }
+    .btn--ghost:hover { border-color: var(--lime); color: var(--lime); }
+    .btn--void { background: var(--void); color: var(--bone); }
+    .btn--void:hover { transform: translateY(-2px); background: var(--void-3); }
+    .btn--sm { font-size: 0.9rem; padding: 0.75em 1.2em; }
+    .btn--lg { font-size: 1.15rem; padding: 1.05em 1.9em; }
+    .btn:focus-visible { outline: 3px solid var(--violet-2); outline-offset: 3px; }
+
+    /* ================= HERO ================= */
+    .hero {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      padding: 0 0 clamp(2.4rem, 6vw, 4rem);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .hero__bg {
+      position: absolute; inset: 0; z-index: -2;
+      background: url('/fitnexcenter/img/foto_1.jpg') center/cover no-repeat;
+      transform: scale(1.04);
+    }
+    .hero__scrim {
+      position: absolute; inset: 0; z-index: -1;
+      background:
+        radial-gradient(120% 90% at 12% 100%, rgba(109,40,245,0.55) 0%, rgba(22,12,54,0) 55%),
+        linear-gradient(180deg, rgba(18,10,44,0.55) 0%, rgba(18,10,44,0.86) 62%, rgba(18,10,44,0.97) 100%);
+    }
+    .hero__inner { position: relative; width: 100%; max-width: var(--wrap); margin-inline: auto; padding-inline: 22px; }
+
+    .brand {
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-style: italic;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      font-size: 1.05rem;
+      color: var(--bone);
+      margin: 0 0 clamp(2rem, 12vw, 4.5rem);
+      display: inline-flex;
+      align-items: center;
+    }
+    .brand__x {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5em; height: 1.5em;
+      margin: 0 0.15em;
+      color: var(--void);
+      background: var(--lime);
+      border-radius: 5px;
+      font-style: normal;
+      font-weight: 800;
+      transform: translateY(-0.02em);
+    }
+
+    .hero__title {
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: clamp(3rem, 15vw, 6.6rem);
+      line-height: 0.86;
+      letter-spacing: -0.02em;
+      margin: 0 0 1rem;
+      color: #fff;
+      text-shadow: 0 8px 40px rgba(0,0,0,0.4);
+    }
+    .hero__accent {
+      color: var(--lime);
+      -webkit-text-stroke: 0;
+    }
+    .hero__lead {
+      max-width: 30ch;
+      font-size: clamp(1.02rem, 3.4vw, 1.22rem);
+      line-height: 1.55;
+      color: rgba(244,242,236,0.9);
+      margin: 0 0 1.6rem;
+    }
+
+    /* ---- medidor de energía (firma) ---- */
+    .meter {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+      gap: 0.7rem;
+      max-width: 400px;
+      margin: 0 0 1.8rem;
+    }
+    .meter__label {
+      font-family: var(--font-b);
+      font-weight: 700;
+      font-size: 0.62rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--violet-2);
+      white-space: nowrap;
+    }
+    .meter__max {
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-style: italic;
+      font-size: 0.85rem;
+      color: var(--lime);
+    }
+    .meter__track {
+      position: relative;
+      height: 12px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.12);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.14);
+      overflow: hidden;
+    }
+    .meter__fill {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      border-radius: 20px;
+      background: linear-gradient(90deg, var(--violet) 0%, var(--violet-2) 45%, var(--lime) 100%);
+      transform-origin: left center;
+      animation: charge 1.7s 0.35s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+    }
+    .meter__bolt {
+      position: absolute;
+      right: 2px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.9rem;
+      line-height: 1;
+      filter: drop-shadow(0 0 5px rgba(200,241,53,0.9));
+    }
+    @keyframes charge { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+    .hero__cta { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 0 0 1.4rem; }
+    .hero__cta .btn { flex: 1 1 auto; }
+    .hero__rating { margin: 0; font-size: 0.95rem; color: rgba(244,242,236,0.82); }
+    .hero__rating strong { color: var(--lime); font-weight: 700; }
+
+    /* ================= STATS ================= */
+    .stats { background: linear-gradient(120deg, var(--violet) 0%, #5417C9 100%); padding: clamp(2.2rem, 6vw, 3rem) 0; }
+    .stats__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem 0.8rem; text-align: center; }
+    .stat { display: flex; flex-direction: column; align-items: center; gap: 0.3rem; }
+    .stat__num {
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-style: italic;
+      font-size: clamp(2.6rem, 12vw, 3.8rem);
+      line-height: 1;
+      color: #fff;
+      display: inline-flex;
+      align-items: baseline;
+    }
+    .stat__star { color: var(--lime); font-size: 0.55em; margin-left: 0.08em; }
+    .stat__unit { color: var(--lime); font-size: 0.5em; margin-left: 0.04em; }
+    .stat__label {
+      font-family: var(--font-b);
+      font-weight: 600;
+      font-size: 0.78rem;
+      letter-spacing: 0.03em;
+      color: rgba(255,255,255,0.86);
+      max-width: 14ch;
+    }
+
+    /* ================= ABOUT ================= */
+    .about { background: var(--bone); color: var(--ink); padding: clamp(3.2rem, 9vw, 5.5rem) 0; }
+    .about__grid { display: grid; gap: 2rem; }
+    .about__text p { font-size: 1.05rem; line-height: 1.68; color: var(--ink-soft); margin: 0 0 1rem; }
+    .about__text strong { color: var(--ink); }
+    .about__text em { font-style: italic; color: var(--violet); font-weight: 600; }
+    .about__quote {
+      margin: 0;
+      padding: 1.8rem;
+      background: var(--void);
+      border-radius: 12px;
+      border-left: 5px solid var(--lime);
+    }
+    .about__quote blockquote {
+      margin: 0 0 0.9rem;
+      font-family: var(--font-d);
+      font-weight: 600;
+      font-style: italic;
+      font-size: clamp(1.25rem, 4.5vw, 1.6rem);
+      line-height: 1.28;
+      color: var(--bone);
+    }
+    .about__quote figcaption { font-size: 0.85rem; font-weight: 700; letter-spacing: 0.04em; color: var(--lime); text-transform: uppercase; }
+
+    /* ================= ZONES (firma) ================= */
+    .zones { background: var(--void); padding: clamp(3.2rem, 9vw, 5.5rem) 0; }
+    .zones__intro { max-width: 46ch; color: rgba(244,242,236,0.72); font-size: 1.02rem; line-height: 1.6; margin: 0 0 2.4rem; font-style: italic; }
+    .bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 1.5rem; }
+    .bar__head { display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 0.55rem; gap: 0.8rem; }
+    .bar__name {
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: clamp(1.2rem, 5vw, 1.7rem);
+      letter-spacing: 0.01em;
+      color: var(--bone);
+    }
+    .bar__tag { font-family: var(--font-b); font-weight: 700; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--lime); white-space: nowrap; }
+    .bar__track { height: 16px; border-radius: 20px; background: rgba(255,255,255,0.09); box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1); overflow: hidden; }
+    .bar__fill {
+      height: 100%;
+      width: var(--w);
+      border-radius: 20px;
+      background: linear-gradient(90deg, var(--violet) 0%, var(--violet-2) 100%);
+      transform-origin: left center;
+    }
+    .bar__fill--max { background: linear-gradient(90deg, var(--violet-2) 0%, var(--lime) 100%); box-shadow: 0 0 22px rgba(200,241,53,0.35); }
+    .has-js .js-reveal { transform: scaleX(0); transition: transform 1.15s cubic-bezier(0.2, 0.8, 0.2, 1); }
+    .has-js .js-reveal.in { transform: scaleX(1); }
+
+    /* ================= GALLERY ================= */
+    .gallery { background: var(--bone); color: var(--ink); padding: clamp(3.2rem, 9vw, 5.5rem) 0; }
+    .gallery__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 1.8rem; }
+    .g-item { margin: 0; border-radius: 12px; overflow: hidden; background: var(--void-2); }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s ease; }
+    .g-item:hover img { transform: scale(1.05); }
+    .g-item:not(.g-item--wide):not(.g-item--tall) { aspect-ratio: 3/4; }
+    .g-item--tall { grid-row: span 2; }
+    .g-item--wide { grid-column: span 2; aspect-ratio: 16/9; }
+
+    /* ================= WHY ================= */
+    .why { background: var(--void-3); padding: clamp(3.2rem, 9vw, 5.5rem) 0; }
+    .why__grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 1.8rem; }
+    .card {
+      background: linear-gradient(160deg, var(--void-2) 0%, var(--void) 100%);
+      border: 1px solid rgba(138,91,255,0.22);
+      border-radius: 14px;
+      padding: 1.6rem;
+    }
+    .card__ico { display: inline-block; font-size: 1.8rem; margin-bottom: 0.7rem; }
+    .card__title {
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+      color: var(--lime);
+      margin: 0 0 0.5rem;
+    }
+    .card p { margin: 0; color: rgba(244,242,236,0.78); font-size: 0.98rem; line-height: 1.55; }
+
+    /* ================= CTA BAND ================= */
+    .cta-band { background: linear-gradient(120deg, var(--lime) 0%, var(--lime-deep) 100%); color: var(--ink); padding: clamp(2.6rem, 8vw, 4rem) 0; }
+    .cta-band__inner { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    .cta-band__kicker { font-weight: 700; font-size: 0.78rem; letter-spacing: 0.14em; text-transform: uppercase; color: #3d5406; margin: 0; }
+    .cta-band__title {
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: clamp(1.8rem, 7vw, 3rem);
+      line-height: 0.98;
+      margin: 0 0 0.7rem;
+      color: var(--void);
+    }
+
+    /* ================= REVIEWS ================= */
+    .reviews { background: var(--bone); color: var(--ink); padding: clamp(3.2rem, 9vw, 5.5rem) 0; }
+    .reviews__grid { display: grid; gap: 16px; margin: 1.8rem 0 1.6rem; }
+    .review {
+      margin: 0;
+      background: #fff;
+      border: 1px solid var(--bone-2);
+      border-radius: 14px;
+      padding: 1.7rem;
+      box-shadow: 0 12px 30px rgba(23,16,52,0.06);
+    }
+    .review__stars { color: #F5B301; letter-spacing: 0.15em; font-size: 1rem; margin-bottom: 0.8rem; }
+    .review blockquote {
+      margin: 0 0 1.1rem;
+      font-size: 1.12rem;
+      line-height: 1.55;
+      color: var(--ink);
+      font-weight: 500;
+    }
+    .review figcaption { display: flex; flex-direction: column; }
+    .review__author { font-family: var(--font-d); font-weight: 700; font-style: italic; text-transform: uppercase; color: var(--violet); font-size: 1rem; }
+    .review__when { font-size: 0.82rem; color: var(--ink-soft); }
+    .link-out { display: inline-block; font-weight: 700; color: var(--violet); text-decoration: none; border-bottom: 2px solid var(--lime); padding-bottom: 2px; }
+    .link-out:hover { color: var(--ink); }
+    .link-out:focus-visible { outline: 3px solid var(--violet); outline-offset: 3px; }
+
+    /* ================= LOCATION ================= */
+    .location { background: var(--void); padding: clamp(3.2rem, 9vw, 5.5rem) 0; }
+    .location__grid { display: grid; gap: 2rem; }
+    .location__addr { font-size: 1.08rem; line-height: 1.55; color: rgba(244,242,236,0.85); margin: 0 0 1.4rem; }
+    .hours { width: 100%; border-collapse: collapse; margin-top: 1.8rem; }
+    .hours th, .hours td { text-align: left; padding: 0.7rem 0; border-bottom: 1px solid rgba(255,255,255,0.1); font-size: 0.98rem; }
+    .hours th { font-weight: 600; color: rgba(244,242,236,0.82); }
+    .hours td { text-align: right; font-family: var(--font-d); font-weight: 600; font-style: italic; color: var(--lime); }
+    .hours__off td { color: var(--ink-soft); }
+    .location__map { border-radius: 14px; overflow: hidden; border: 1px solid rgba(138,91,255,0.3); }
+    .location__map iframe { width: 100%; height: 300px; border: 0; display: block; filter: grayscale(0.2) contrast(1.05); }
+
+    /* ================= FAQ ================= */
+    .faq { background: var(--bone); color: var(--ink); padding: clamp(3.2rem, 9vw, 5rem) 0; }
+    .faq__list { margin-top: 1.6rem; display: grid; gap: 10px; }
+    .faq details { background: #fff; border: 1px solid var(--bone-2); border-radius: 10px; overflow: hidden; }
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 1.1rem 1.3rem;
+      font-family: var(--font-d);
+      font-weight: 700;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: 1rem;
+      color: var(--ink);
+      display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: '+'; color: var(--violet); font-size: 1.5rem; line-height: 1; transition: transform 0.2s ease; }
+    .faq details[open] summary::after { transform: rotate(45deg); }
+    .faq details p { margin: 0; padding: 0 1.3rem 1.2rem; color: var(--ink-soft); line-height: 1.55; }
+    .faq summary:focus-visible { outline: 3px solid var(--violet); outline-offset: -3px; }
+
+    /* ================= FINAL ================= */
+    .final { background: radial-gradient(120% 100% at 50% 0%, var(--void-2) 0%, var(--void-3) 70%); padding: clamp(3.5rem, 10vw, 6rem) 0 96px; }
+    .final__inner { text-align: center; display: flex; flex-direction: column; align-items: center; }
+    .brand--footer { font-size: 1rem; margin: 0 0 1.4rem; color: rgba(244,242,236,0.7); }
+    .final__title {
+      font-family: var(--font-d);
+      font-weight: 800;
+      font-style: italic;
+      text-transform: uppercase;
+      font-size: clamp(2.2rem, 9vw, 4rem);
+      line-height: 0.92;
+      color: #fff;
+      margin: 0 0 1.8rem;
+    }
+    .final__phone { margin: 1.4rem 0 0.4rem; font-size: 1rem; color: rgba(244,242,236,0.8); }
+    .final__phone a { color: var(--lime); font-weight: 700; text-decoration: none; }
+    .final__phone a:hover { text-decoration: underline; }
+    .final__addr { margin: 0; font-size: 0.85rem; color: var(--ink-soft); }
+
+    /* ================= DESKTOP ================= */
+    @media (min-width: 760px) {
+      .stats__grid { grid-template-columns: repeat(4, 1fr); }
+      .about__grid { grid-template-columns: 1.35fr 1fr; align-items: center; gap: 3rem; }
+      .bars { grid-template-columns: repeat(2, 1fr); gap: 1.6rem 2.4rem; }
+      .gallery__grid { grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; }
+      .g-item--tall { grid-row: span 2; grid-column: span 1; }
+      .g-item--wide { grid-column: span 2; }
+      .why__grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews__grid { grid-template-columns: repeat(2, 1fr); }
+      .location__grid { grid-template-columns: 1fr 1.1fr; align-items: start; gap: 2.6rem; }
+      .location__map iframe { height: 100%; min-height: 440px; }
+      .faq__list { max-width: 760px; }
+      .hero__cta .btn { flex: 0 0 auto; }
+    }
+    @media (min-width: 1040px) {
+      .why__grid { grid-template-columns: repeat(4, 1fr); }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('has-js');
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var counters = [].slice.call(document.querySelectorAll('[data-count]'));
+      var bars = [].slice.call(document.querySelectorAll('.js-reveal'));
+
+      function tick(el) {
+        var target = parseFloat(el.getAttribute('data-count'));
+        var dec = parseInt(el.getAttribute('data-dec') || '0', 10);
+        if (reduce) { el.textContent = target.toFixed(dec); return; }
+        var start = null;
+        var dur = 1300;
+        function step(ts) {
+          if (!start) start = ts;
+          var p = Math.min((ts - start) / dur, 1);
+          var eased = 1 - Math.pow(1 - p, 3);
+          el.textContent = (target * eased).toFixed(dec);
+          if (p < 1) requestAnimationFrame(step);
+          else el.textContent = target.toFixed(dec);
+        }
+        requestAnimationFrame(step);
+      }
+
+      if (!('IntersectionObserver' in window)) {
+        counters.forEach(function (c) {
+          c.textContent = parseFloat(c.getAttribute('data-count')).toFixed(parseInt(c.getAttribute('data-dec') || '0', 10));
+        });
+        return;
+      }
+
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (!en.isIntersecting) return;
+          var t = en.target;
+          if (t.hasAttribute('data-count')) tick(t);
+          else t.classList.add('in');
+          io.unobserve(t);
+        });
+      }, { threshold: 0.4 });
+
+      counters.forEach(function (c) { io.observe(c); });
+      bars.forEach(function (b) { io.observe(b); });
+    })();
+  </script>
+</BaseLayout>

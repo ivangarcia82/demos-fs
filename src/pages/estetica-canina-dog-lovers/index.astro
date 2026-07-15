@@ -1,0 +1,698 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slug = 'estetica-canina-dog-lovers';
+const nombre = 'Estética Canina Dog Lovers';
+const telefono = '999 946 7002';
+const mapsUrl = 'https://maps.google.com/?cid=11828662853188579826&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const direccion = 'C. 13 230-26 A y 26 B, Prado de Chuburná, 97200 Mérida, Yuc., México';
+
+const waBase = 'https://wa.me/529999467002';
+const waText = 'Hola, vi su sitio y me gustaría agendar una cita para mi peludo 🐾';
+const wa = `${waBase}?text=${encodeURIComponent(waText)}`;
+const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(direccion)}&output=embed`;
+
+// Bibujas del hero (posición %, tamaño px, retardo/duración s, si lleva patita)
+const bubbles = [
+  { l: 6,  t: 18, s: 66, d: 0,   dur: 7,  paw: true  },
+  { l: 20, t: 60, s: 34, d: 1.2, dur: 6,  paw: false },
+  { l: 34, t: 30, s: 22, d: 2.4, dur: 5.5,paw: false },
+  { l: 52, t: 66, s: 48, d: .6,  dur: 8,  paw: true  },
+  { l: 70, t: 22, s: 30, d: 1.8, dur: 6.5,paw: false },
+  { l: 82, t: 52, s: 58, d: .3,  dur: 7.5,paw: false },
+  { l: 90, t: 30, s: 24, d: 2.1, dur: 5,  paw: true  },
+  { l: 44, t: 12, s: 18, d: 3,   dur: 6,  paw: false },
+  { l: 12, t: 44, s: 26, d: 1.5, dur: 6.8,paw: false },
+];
+
+const resenas = [
+  { autor: 'Karen Guillén', cuando: 'Hace 4 meses', ini: 'K', texto: 'Es mi veterinaria de confianza. Siempre llevo a mis perritos aquí. El trato es muy amable, los veterinarios que me han tocado han sido muy buenos y en general todo muy bien. Llevo años llevando a mis perritos aquí y siempre ha salido todo muy bien.' },
+  { autor: 'Carlos Durán Rosado', cuando: 'Hace 2 años', ini: 'C', texto: 'Así llegan de felices cuando van a vacunarlos y a su chequeo médico regular. Súper recomendada y la doctora es muy amable y paciente. Lo recomiendo ampliamente.' },
+  { autor: 'Saul Oriza', cuando: 'Hace 5 meses', ini: 'S', texto: 'Atendieron muy bien a mi Michi, tenía una infección y ya está curada. Muy agradecido.' },
+];
+---
+<BaseLayout
+  title="Estética Canina Dog Lovers · Baño y veterinaria en Mérida"
+  description="Estética canina y veterinaria de confianza en Prado de Chuburná, Mérida. ⭐ 4.5 · 382 reseñas. Baño, corte, consultas y vacunas. Agenda por WhatsApp."
+  slug={slug}
+  ogImage="/estetica-canina-dog-lovers/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Grandstander:wght@600;700;800;900&family=Nunito+Sans:wght@400;500;600;700;800&display=swap"
+  favicon="🐩"
+  themeColor="#3fb0e8"
+  whatsapp={wa}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="bubbles" aria-hidden="true">
+      {bubbles.map((b) => (
+        <span
+          class={b.paw ? 'bubble bubble--paw' : 'bubble'}
+          style={`left:${b.l}%;top:${b.t}%;width:${b.s}px;height:${b.s}px;animation-delay:${b.d}s;animation-duration:${b.dur}s;`}
+        ></span>
+      ))}
+    </div>
+
+    <div class="hero__inner wrap">
+      <div class="hero__copy">
+        <p class="eyebrow">Estética canina &amp; veterinaria · Prado de Chuburná, Mérida</p>
+        <h1 class="hero__title">Aquí tu peludo se consiente <span>y sale feliz</span></h1>
+        <p class="hero__sub">
+          Baño, corte y salud para perritos y michis en una misma casa. Somos la
+          estética canina y veterinaria de confianza del rumbo, con años cuidando
+          a las mascotas de Prado de Chuburná.
+        </p>
+
+        <div class="rating" aria-label="Calificación 4.5 de 5 con 382 reseñas en Google">
+          <span class="rating__stars" aria-hidden="true">★★★★<span class="half">★</span></span>
+          <span class="rating__num">4.5</span>
+          <span class="rating__dot">·</span>
+          <span class="rating__count">382 reseñas en Google</span>
+        </div>
+
+        <div class="btns">
+          <a class="btn btn--wa" href={wa} target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.71.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            Agendar por WhatsApp
+          </a>
+          <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <div class="hero__frame">
+          <img src="/estetica-canina-dog-lovers/img/foto_1.jpg" width="800" height="1000"
+               alt="Peluquero canino peinando con cariño a un perro en Estética Canina Dog Lovers" />
+        </div>
+        <span class="sticker">🚗 Servicio a domicilio</span>
+      </div>
+    </div>
+
+    <svg class="wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,48 C180,90 360,10 560,40 C760,70 940,20 1140,44 C1280,60 1380,54 1440,40 L1440,90 L0,90 Z"></path>
+    </svg>
+  </header>
+
+  <!-- ===================== QUIÉNES SOMOS ===================== -->
+  <section class="about" aria-labelledby="about-t">
+    <div class="wrap about__grid">
+      <div class="reveal">
+        <p class="kicker">Quiénes somos</p>
+        <h2 id="about-t" class="h2">Los cuidamos como si fueran nuestros</h2>
+        <p class="lead">
+          En Dog Lover's atendemos a los peludos de Prado de Chuburná con el
+          cariño de casa. Somos estética canina y veterinaria bajo el mismo
+          techo: aquí tu perrito recibe su baño y su corte, y también su
+          consulta, sus vacunas y su chequeo, sin andar de un lado a otro.
+        </p>
+        <p class="body">
+          No solo atendemos perros: los michis también son bienvenidos y los
+          recibimos con paciencia y buenas manos. Muchas familias llevan
+          <strong>años</strong> trayéndonos a sus mascotas porque saben que aquí
+          las tratan con cariño… y salen felices.
+        </p>
+        <p class="body">
+          Nuestra doctora es conocida por ser <strong>amable y paciente</strong>,
+          y si prefieres no salir de casa, también hacemos servicio a domicilio.
+        </p>
+      </div>
+      <ul class="pills reveal" aria-label="Lo que nos distingue">
+        <li><span class="pill__ico">🐾</span> Perros y gatos</li>
+        <li><span class="pill__ico">💛</span> Trato amable y paciente</li>
+        <li><span class="pill__ico">🏠</span> Servicio a domicilio</li>
+        <li><span class="pill__ico">🅿️</span> Estacionamiento propio</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="services" aria-labelledby="svc-t">
+    <div class="wrap">
+      <p class="kicker center">Lo que hacemos</p>
+      <h2 id="svc-t" class="h2 center">Todo para tu peludo, en un solo lugar</h2>
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <span class="svc__emoji">🛁</span>
+          <h3>Baño y estética canina</h3>
+          <p>El baño y el corte que dejan a tu peludo suavecito, limpio y oliendo rico.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__emoji">🩺</span>
+          <h3>Consulta veterinaria</h3>
+          <p>Revisión y chequeo médico con veterinarios de confianza que las familias del rumbo recomiendan.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__emoji">💉</span>
+          <h3>Vacunas y chequeo</h3>
+          <p>Sus vacunas y su control médico al día, para tenerlo sano y protegido.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__emoji">🐱</span>
+          <h3>Atención a gatos</h3>
+          <p>Tu michi también es bienvenido; lo cuidamos con calma y paciencia.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__emoji">🚗</span>
+          <h3>Servicio a domicilio</h3>
+          <p>¿No puedes traerlo? Vamos nosotros a tu casa, como dice nuestro letrero de toda la vida.</p>
+        </article>
+        <article class="svc reveal">
+          <span class="svc__emoji">🅿️</span>
+          <h3>Estacionamiento propio</h3>
+          <p>Llega en coche y estaciónate frente a la estética, sin batallar.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== POR QUÉ ===================== -->
+  <section class="why" aria-labelledby="why-t">
+    <div class="wrap">
+      <p class="kicker center">Por qué nos eligen</p>
+      <h2 id="why-t" class="h2 center">Familias que vuelven, mascotas contentas</h2>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <span class="why-num">01</span>
+          <h3>Confianza de años</h3>
+          <p>“Llevo años llevando a mis perritos aquí y siempre ha salido todo muy bien.” Nos volvemos la veterinaria de cabecera de la familia.</p>
+        </div>
+        <div class="why-card reveal">
+          <span class="why-num">02</span>
+          <h3>Salen felices</h3>
+          <p>Hasta a la vacuna llegan contentos. Cuidamos que cada visita sea tranquila y sin estrés para tu mascota.</p>
+        </div>
+        <div class="why-card reveal">
+          <span class="why-num">03</span>
+          <h3>Manos amables</h3>
+          <p>La doctora y el equipo son conocidos por ser pacientes y cariñosos: lo notas desde que entras por la puerta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA INTERMEDIO ===================== -->
+  <section class="midcta" aria-label="Agenda la cita de tu mascota">
+    <div class="wrap midcta__inner">
+      <div>
+        <h2 class="midcta__title">¿Le toca baño, corte o su chequeo?</h2>
+        <p class="midcta__sub">Aparta el lugar de tu peludo por WhatsApp. Te contestamos rapidito.</p>
+      </div>
+      <a class="btn btn--wa btn--onpink" href={wa} target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.71.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+        Escríbenos ahora
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== RESEÑAS ===================== -->
+  <section class="reviews" aria-labelledby="rev-t">
+    <div class="wrap">
+      <p class="kicker center">Lo que dicen sus dueños</p>
+      <h2 id="rev-t" class="h2 center">⭐ 4.5 · 382 reseñas en Google</h2>
+      <div class="rev-grid">
+        {resenas.map((r) => (
+          <figure class="rev reveal">
+            <div class="rev__stars" aria-hidden="true">★★★★★</div>
+            <blockquote>{r.texto}</blockquote>
+            <figcaption class="rev__who">
+              <span class="rev__ava" aria-hidden="true">{r.ini}</span>
+              <span>
+                <strong>{r.autor}</strong>
+                <em>{r.cuando}</em>
+              </span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="center">
+        <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="gallery" aria-labelledby="gal-t">
+    <div class="wrap">
+      <p class="kicker center">Un vistazo</p>
+      <h2 id="gal-t" class="h2 center">Nuestra estética por dentro</h2>
+      <div class="g-grid">
+        <figure class="g-item g-item--tall reveal">
+          <img src="/estetica-canina-dog-lovers/img/foto_2.jpg" width="900" height="600" loading="lazy"
+               alt="Poodle color canela recién esponjado durante su estética" />
+        </figure>
+        <figure class="g-item reveal">
+          <img src="/estetica-canina-dog-lovers/img/foto_3.jpg" width="900" height="700" loading="lazy"
+               alt="Gato atendido con cariño en Dog Lovers" />
+        </figure>
+        <figure class="g-item reveal">
+          <img src="/estetica-canina-dog-lovers/img/foto_5.jpg" width="900" height="600" loading="lazy"
+               alt="Fachada de Dog Lovers en Prado de Chuburná, Mérida" />
+        </figure>
+        <figure class="g-item g-item--wide reveal">
+          <img src="/estetica-canina-dog-lovers/img/foto_4.jpg" width="1200" height="800" loading="lazy"
+               alt="Letrero de Veterinaria y Estética Canina Dog Lover's" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FRANJA ATRIBUTOS ===================== -->
+  <section class="attrs" aria-label="Datos útiles">
+    <div class="wrap attrs__row">
+      <div class="attr"><span class="attr__ico">🅿️</span> Estacionamiento disponible</div>
+      <div class="attr"><span class="attr__ico">🏠</span> Servicio a domicilio</div>
+      <div class="attr"><span class="attr__ico">🐾</span> Perros y gatos</div>
+      <div class="attr"><span class="attr__ico">🕘</span> Lun a Sáb · 9 a 20 h</div>
+    </div>
+  </section>
+
+  <!-- ===================== UBICACIÓN + HORARIOS ===================== -->
+  <section class="place" aria-labelledby="place-t">
+    <div class="wrap place__grid">
+      <div class="reveal">
+        <p class="kicker">Visítanos</p>
+        <h2 id="place-t" class="h2">Dónde estamos</h2>
+        <p class="addr">📍 {direccion}</p>
+
+        <table class="hours">
+          <tbody>
+            <tr><th scope="row">Lunes</th><td>9:00 – 20:00</td></tr>
+            <tr><th scope="row">Martes</th><td>9:00 – 20:00</td></tr>
+            <tr><th scope="row">Miércoles</th><td>9:00 – 20:00</td></tr>
+            <tr><th scope="row">Jueves</th><td>9:00 – 20:00</td></tr>
+            <tr><th scope="row">Viernes</th><td>9:00 – 20:00</td></tr>
+            <tr><th scope="row">Sábado</th><td>9:00 – 20:00</td></tr>
+            <tr class="closed"><th scope="row">Domingo</th><td>Cerrado</td></tr>
+          </tbody>
+        </table>
+
+        <div class="btns">
+          <a class="btn btn--wa" href={wa} target="_blank" rel="noopener">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.71.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+            WhatsApp
+          </a>
+          <a class="btn btn--ghost" href={`tel:${telefono.replace(/\s+/g, '')}`}>Llamar {telefono}</a>
+        </div>
+      </div>
+      <div class="map reveal">
+        <iframe
+          src={mapSrc}
+          title="Mapa de Estética Canina Dog Lovers en Mérida"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL ===================== -->
+  <section class="final" aria-label="Contacto">
+    <div class="bubbles bubbles--final" aria-hidden="true">
+      <span class="bubble" style="left:8%;top:20%;width:40px;height:40px;animation-duration:7s"></span>
+      <span class="bubble bubble--paw" style="left:82%;top:30%;width:54px;height:54px;animation-duration:8s"></span>
+      <span class="bubble" style="left:70%;top:64%;width:26px;height:26px;animation-duration:6s"></span>
+      <span class="bubble" style="left:22%;top:60%;width:30px;height:30px;animation-duration:6.5s"></span>
+    </div>
+    <div class="wrap final__inner">
+      <h2 class="final__title">Tu peludo merece consentirse 🐾</h2>
+      <p class="final__sub">Agenda su baño, su corte o su chequeo en Dog Lover's. Estamos en Prado de Chuburná, de lunes a sábado.</p>
+      <a class="btn btn--wa btn--big" href={wa} target="_blank" rel="noopener">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.5 14.4c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.08 2.9 1.23 3.1c.15.2 2.12 3.24 5.14 4.54.72.31 1.28.5 1.71.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM12 2C6.48 2 2 6.48 2 12c0 1.77.46 3.43 1.27 4.88L2 22l5.25-1.38A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+        Agendar por WhatsApp
+      </a>
+      <p class="final__tel">o llámanos al <a href={`tel:${telefono.replace(/\s+/g, '')}`}>{telefono}</a></p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p><strong>Estética Canina Dog Lovers</strong> · Veterinaria &amp; estética · Mérida, Yucatán</p>
+    <p class="foot__addr">{direccion}</p>
+  </footer>
+
+  <style is:global>
+    :root {
+      --chicle: #ff5ca0;
+      --chicle-deep: #e23b86;
+      --cielo: #3fb0e8;
+      --cielo-soft: #eaf7fe;
+      --cielo-deep: #1177b0;
+      --sol: #ffc633;
+      --sol-deep: #f0a71c;
+      --crema: #fff8f0;
+      --blanco: #ffffff;
+      --tinta: #23304d;
+      --tinta-soft: #5a6480;
+      --paw: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='64' rx='23' ry='19' fill='%23ff5ca0'/%3E%3Ccircle cx='27' cy='42' r='9.5' fill='%23ff5ca0'/%3E%3Ccircle cx='44' cy='31' r='9.5' fill='%23ff5ca0'/%3E%3Ccircle cx='63' cy='33' r='9.5' fill='%23ff5ca0'/%3E%3Ccircle cx='77' cy='47' r='8.5' fill='%23ff5ca0'/%3E%3C/svg%3E");
+      --paw-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cellipse cx='50' cy='64' rx='23' ry='19' fill='rgba(255,255,255,.85)'/%3E%3Ccircle cx='27' cy='42' r='9.5' fill='rgba(255,255,255,.85)'/%3E%3Ccircle cx='44' cy='31' r='9.5' fill='rgba(255,255,255,.85)'/%3E%3Ccircle cx='63' cy='33' r='9.5' fill='rgba(255,255,255,.85)'/%3E%3Ccircle cx='77' cy='47' r='8.5' fill='rgba(255,255,255,.85)'/%3E%3C/svg%3E");
+    }
+
+    body {
+      font-family: 'Nunito Sans', system-ui, sans-serif;
+      color: var(--tinta);
+      background: var(--crema);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .wrap { width: min(1120px, 91vw); margin-inline: auto; }
+    .center { text-align: center; }
+
+    h1, h2, h3 { font-family: 'Grandstander', 'Nunito Sans', cursive; line-height: 1.06; margin: 0; }
+
+    .h2 {
+      font-size: clamp(1.7rem, 5.2vw, 2.7rem);
+      font-weight: 800;
+      letter-spacing: -.01em;
+      margin-bottom: .5em;
+    }
+    .kicker {
+      font-family: 'Grandstander', cursive;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .78rem;
+      color: var(--chicle-deep);
+      margin: 0 0 .5rem;
+      display: flex; align-items: center; gap: .5em;
+    }
+    .kicker::before {
+      content: ""; width: 1.15em; height: 1.15em; flex: none;
+      background: var(--paw) center/contain no-repeat;
+    }
+    .kicker.center { justify-content: center; }
+
+    /* ---------- Botones ---------- */
+    .btns { display: flex; flex-wrap: wrap; gap: .7rem; margin-top: 1.4rem; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+      font-family: 'Grandstander', cursive; font-weight: 800; font-size: 1.02rem;
+      text-decoration: none; border-radius: 999px;
+      padding: .82rem 1.5rem; border: 3px solid transparent;
+      transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+      cursor: pointer;
+    }
+    .btn .ico { width: 1.25em; height: 1.25em; flex: none; }
+    .btn--wa {
+      background: var(--chicle-deep); color: #fff;
+      box-shadow: 0 10px 22px -8px rgba(226,59,134,.75);
+    }
+    .btn--wa:hover { transform: translateY(-2px); box-shadow: 0 16px 28px -8px rgba(226,59,134,.8); }
+    .btn--ghost {
+      background: #fff; color: var(--cielo-deep);
+      border-color: var(--cielo);
+    }
+    .btn--ghost:hover { transform: translateY(-2px); background: var(--cielo-soft); }
+    .btn--onpink { background: #fff; color: var(--chicle-deep); box-shadow: 0 10px 22px -10px rgba(0,0,0,.4); }
+    .btn--onpink:hover { transform: translateY(-2px); }
+    .btn--big { font-size: 1.15rem; padding: 1rem 1.9rem; }
+    .btn:focus-visible { outline: 3px solid var(--tinta); outline-offset: 3px; }
+
+    /* ---------- HERO ---------- */
+    .hero {
+      position: relative;
+      background:
+        radial-gradient(120% 90% at 80% -10%, #dff3ff 0%, transparent 55%),
+        linear-gradient(170deg, #cfeefd 0%, #a6def6 48%, #8fd2f0 100%);
+      padding: clamp(2rem, 6vw, 3.5rem) 0 clamp(4rem, 9vw, 6rem);
+      overflow: hidden;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      display: flex; align-items: center;
+    }
+    .hero__inner {
+      position: relative; z-index: 2;
+      display: grid; gap: clamp(1.6rem, 4vw, 3rem);
+      align-items: center;
+      width: min(1120px, 91vw);
+    }
+    .eyebrow {
+      display: inline-block;
+      font-family: 'Grandstander', cursive; font-weight: 800;
+      background: #fff; color: var(--cielo-deep);
+      padding: .4rem .95rem; border-radius: 999px;
+      font-size: .78rem; letter-spacing: .01em; margin: 0 0 1rem;
+      box-shadow: 0 8px 18px -12px rgba(17,119,176,.9);
+    }
+    .hero__title {
+      font-size: clamp(2.3rem, 8.2vw, 4.1rem);
+      font-weight: 900; color: var(--tinta);
+      letter-spacing: -.02em;
+      text-shadow: 0 2px 0 rgba(255,255,255,.5);
+    }
+    .hero__title span { color: var(--chicle-deep); display: inline-block; }
+    .hero__sub {
+      font-size: clamp(1.02rem, 2.6vw, 1.2rem);
+      color: #2b3b57; max-width: 40ch; margin: 1.1rem 0 0;
+      font-weight: 500;
+    }
+    .rating {
+      display: inline-flex; align-items: center; gap: .45rem; flex-wrap: wrap;
+      margin-top: 1.3rem; background: #fff;
+      padding: .5rem .95rem; border-radius: 999px;
+      box-shadow: 0 10px 24px -16px rgba(17,119,176,.9);
+      font-weight: 700; font-size: .95rem;
+    }
+    .rating__stars { color: var(--sol-deep); letter-spacing: 1px; font-size: 1.05rem; position: relative; }
+    .rating__stars .half {
+      background: linear-gradient(90deg, var(--sol-deep) 50%, #d9d9d9 50%);
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .rating__num { font-family: 'Grandstander', cursive; font-weight: 800; }
+    .rating__dot { color: #c9cfda; }
+    .rating__count { color: var(--tinta-soft); font-weight: 600; }
+
+    .hero__media { position: relative; justify-self: center; width: 100%; max-width: 460px; }
+    .hero__frame {
+      border-radius: 30px; overflow: hidden;
+      border: 6px solid #fff; transform: rotate(-2deg);
+      box-shadow: 0 30px 55px -22px rgba(17,80,120,.6);
+      background: #fff;
+    }
+    .hero__frame img { width: 100%; height: auto; display: block; aspect-ratio: 4/5; object-fit: cover; }
+    .sticker {
+      position: absolute; bottom: -14px; right: -6px;
+      background: var(--sol); color: var(--tinta);
+      font-family: 'Grandstander', cursive; font-weight: 800; font-size: .9rem;
+      padding: .5rem .9rem; border-radius: 999px;
+      border: 3px solid #fff; transform: rotate(4deg);
+      box-shadow: 0 12px 22px -12px rgba(240,167,28,.9);
+    }
+
+    /* ---------- Burbujas (elemento firma) ---------- */
+    .bubbles { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+    .bubble {
+      position: absolute; border-radius: 50%;
+      background:
+        radial-gradient(circle at 32% 27%, rgba(255,255,255,.95), rgba(255,255,255,.35) 42%, rgba(255,255,255,.06) 62%);
+      border: 1.5px solid rgba(255,255,255,.7);
+      box-shadow: inset -5px -7px 12px rgba(63,176,232,.22), 0 6px 14px -8px rgba(17,119,176,.5);
+      animation-name: bob; animation-timing-function: ease-in-out;
+      animation-iteration-count: infinite; animation-direction: alternate;
+    }
+    .bubble--paw::after {
+      content: ""; position: absolute; inset: 22%;
+      background: var(--paw-white) center/contain no-repeat;
+      transform: rotate(-8deg);
+    }
+    @keyframes bob {
+      0%   { transform: translateY(6px) translateX(0); }
+      100% { transform: translateY(-14px) translateX(4px); }
+    }
+
+    /* ---------- Wave ---------- */
+    .wave { position: absolute; left: 0; right: 0; bottom: -1px; width: 100%; height: clamp(45px, 7vw, 90px); z-index: 2; display: block; }
+    .wave path { fill: var(--crema); }
+
+    /* ---------- Secciones base ---------- */
+    .about, .services, .why, .reviews, .gallery, .place { padding: clamp(3.2rem, 8vw, 5.5rem) 0; }
+
+    /* ---------- About ---------- */
+    .about { background: var(--crema); }
+    .about__grid { display: grid; gap: clamp(1.8rem, 4vw, 3rem); align-items: center; }
+    .lead { font-size: clamp(1.05rem, 2.4vw, 1.22rem); font-weight: 600; margin: .3rem 0 1rem; }
+    .body { color: #3a4560; margin: 0 0 1rem; }
+    .body strong { color: var(--chicle-deep); }
+    .pills { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+    .pills li {
+      display: flex; align-items: center; gap: .6rem;
+      background: #fff; border: 2px solid #f0e4d6; border-radius: 16px;
+      padding: .85rem 1rem; font-weight: 700; font-size: .95rem;
+      box-shadow: 0 12px 24px -20px rgba(35,48,77,.7);
+    }
+    .pill__ico { font-size: 1.3rem; }
+
+    /* ---------- Servicios ---------- */
+    .services { background: var(--cielo-soft); }
+    .svc-grid {
+      display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem;
+    }
+    .svc {
+      background: #fff; border-radius: 22px; padding: 1.5rem 1.4rem;
+      border: 2px solid #e4f1fb;
+      box-shadow: 0 18px 34px -26px rgba(17,119,176,.7);
+      transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .svc:hover { transform: translateY(-4px); box-shadow: 0 26px 40px -26px rgba(17,119,176,.75); }
+    .svc__emoji {
+      display: inline-grid; place-items: center; width: 3rem; height: 3rem;
+      font-size: 1.5rem; border-radius: 16px; margin-bottom: .8rem;
+      background: linear-gradient(160deg, var(--cielo-soft), #d6ecfb);
+    }
+    .svc h3 { font-size: 1.22rem; font-weight: 800; margin-bottom: .35rem; }
+    .svc p { margin: 0; color: #3a4560; font-size: .97rem; }
+
+    /* ---------- Por qué ---------- */
+    .why { background: var(--crema); }
+    .why-grid { display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .why-card {
+      position: relative; background: #fff; border-radius: 22px;
+      padding: 2.4rem 1.5rem 1.5rem; border: 2px dashed #ffd0e3;
+      overflow: hidden;
+    }
+    .why-num {
+      position: absolute; top: .6rem; right: 1rem;
+      font-family: 'Grandstander', cursive; font-weight: 900;
+      font-size: 2.6rem; color: #ffe0ee; line-height: 1;
+    }
+    .why-card h3 { font-size: 1.28rem; font-weight: 800; margin-bottom: .4rem; color: var(--chicle-deep); }
+    .why-card p { margin: 0; color: #3a4560; font-size: .97rem; }
+
+    /* ---------- CTA intermedio ---------- */
+    .midcta {
+      background: linear-gradient(120deg, var(--chicle) 0%, #ff7db4 60%, var(--sol) 130%);
+    }
+    .midcta__inner {
+      padding: clamp(2rem, 5vw, 3rem) 0;
+      display: flex; flex-wrap: wrap; gap: 1.3rem;
+      align-items: center; justify-content: space-between;
+    }
+    .midcta__title { color: #fff; font-size: clamp(1.5rem, 4.5vw, 2.2rem); font-weight: 800; text-shadow: 0 2px 0 rgba(0,0,0,.08); }
+    .midcta__sub { color: #fff; margin: .4rem 0 0; font-weight: 600; opacity: .95; }
+
+    /* ---------- Reseñas ---------- */
+    .reviews { background: linear-gradient(180deg, #fff6ea, var(--crema)); }
+    .rev-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; margin: 2rem 0 1.8rem; }
+    .rev {
+      background: #fff; border-radius: 22px; padding: 1.5rem;
+      border: 2px solid #ffe7b8; margin: 0;
+      box-shadow: 0 18px 34px -28px rgba(240,167,28,.9);
+    }
+    .rev__stars { color: var(--sol-deep); letter-spacing: 2px; font-size: 1.05rem; margin-bottom: .5rem; }
+    .rev blockquote { margin: 0 0 1rem; font-size: 1.02rem; color: #2f3a54; font-weight: 500; }
+    .rev__who { display: flex; align-items: center; gap: .75rem; }
+    .rev__ava {
+      display: grid; place-items: center; width: 2.6rem; height: 2.6rem; flex: none;
+      border-radius: 50%; background: linear-gradient(150deg, var(--chicle), var(--sol));
+      color: #fff; font-family: 'Grandstander', cursive; font-weight: 800; font-size: 1.1rem;
+    }
+    .rev__who strong { display: block; font-size: .98rem; }
+    .rev__who em { color: var(--tinta-soft); font-style: normal; font-size: .85rem; }
+
+    /* ---------- Galería ---------- */
+    .gallery { background: var(--cielo-soft); }
+    .g-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: .85rem; margin-top: 2rem;
+      grid-auto-flow: dense;
+    }
+    .g-item {
+      margin: 0; border-radius: 20px; overflow: hidden;
+      border: 5px solid #fff; box-shadow: 0 18px 34px -26px rgba(17,119,176,.7);
+    }
+    .g-item img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1/1; }
+    .g-item--tall { grid-row: span 2; }
+    .g-item--tall img { aspect-ratio: 3/5; }
+    .g-item--wide { grid-column: span 2; }
+    .g-item--wide img { aspect-ratio: 16/9; }
+
+    /* ---------- Franja atributos ---------- */
+    .attrs { background: var(--chicle-deep); }
+    .attrs__row {
+      display: flex; flex-wrap: wrap; justify-content: center; gap: .7rem 1.8rem;
+      padding: 1.3rem 0; color: #fff; font-weight: 700; font-size: .98rem;
+    }
+    .attr { display: flex; align-items: center; gap: .5rem; }
+    .attr__ico { font-size: 1.25rem; }
+
+    /* ---------- Ubicación ---------- */
+    .place { background: var(--crema); }
+    .place__grid { display: grid; gap: clamp(1.6rem, 4vw, 2.6rem); align-items: start; }
+    .addr { font-weight: 600; color: #3a4560; margin: .2rem 0 1.3rem; }
+    .hours { width: 100%; border-collapse: collapse; margin-bottom: 1.4rem; }
+    .hours th, .hours td { text-align: left; padding: .6rem .3rem; border-bottom: 1px solid #efe2d3; font-size: .96rem; }
+    .hours th { font-weight: 700; color: var(--tinta); }
+    .hours td { text-align: right; color: #3a4560; font-weight: 600; }
+    .hours .closed th, .hours .closed td { color: var(--chicle-deep); }
+    .hours tr:last-child th, .hours tr:last-child td { border-bottom: none; }
+    .map {
+      border-radius: 22px; overflow: hidden; border: 5px solid #fff;
+      box-shadow: 0 22px 40px -28px rgba(17,119,176,.75);
+      min-height: 300px; background: #dce8f2;
+    }
+    .map iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+    /* ---------- CTA final ---------- */
+    .final {
+      position: relative; overflow: hidden; text-align: center;
+      background:
+        radial-gradient(110% 80% at 50% 0%, #dff3ff, transparent 60%),
+        linear-gradient(160deg, #b6e5f8, #8fd2f0);
+      padding: clamp(3.5rem, 8vw, 5.5rem) 0 clamp(4rem, 8vw, 5rem);
+    }
+    .final__inner { position: relative; z-index: 2; }
+    .final__title { font-size: clamp(1.9rem, 6vw, 3rem); font-weight: 900; color: var(--tinta); text-shadow: 0 2px 0 rgba(255,255,255,.5); }
+    .final__sub { max-width: 44ch; margin: .9rem auto 1.8rem; color: #2b3b57; font-weight: 600; font-size: 1.05rem; }
+    .final__tel { margin-top: 1.2rem; color: #2b3b57; font-weight: 600; }
+    .final__tel a { color: var(--chicle-deep); font-weight: 800; text-decoration: none; }
+    .final__tel a:hover { text-decoration: underline; }
+    .bubbles--final .bubble { box-shadow: inset -5px -7px 12px rgba(63,176,232,.25), 0 6px 14px -8px rgba(17,119,176,.5); }
+
+    /* ---------- Footer ---------- */
+    .foot {
+      background: var(--tinta); color: #cdd5e6; text-align: center;
+      padding: 2.2rem 1.2rem 5.5rem; font-size: .92rem;
+    }
+    .foot strong { color: #fff; font-family: 'Grandstander', cursive; }
+    .foot__addr { color: #8b96b3; margin-top: .3rem; font-size: .85rem; }
+
+    /* ---------- Reveal (progresivo, sólo con JS) ---------- */
+    .js-reveal .reveal { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+    .js-reveal .reveal.in { opacity: 1; transform: none; }
+
+    /* ---------- Desktop ---------- */
+    @media (min-width: 720px) {
+      .svc-grid { grid-template-columns: 1fr 1fr; }
+      .why-grid { grid-template-columns: repeat(3, 1fr); }
+      .rev-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (min-width: 860px) {
+      .hero__inner { grid-template-columns: 1.05fr .95fr; }
+      .about__grid { grid-template-columns: 1.35fr 1fr; }
+      .svc-grid { grid-template-columns: repeat(3, 1fr); }
+      .place__grid { grid-template-columns: 1fr 1fr; }
+      .pills { grid-template-columns: 1fr 1fr; }
+    }
+    @media (min-width: 980px) {
+      .g-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (reduce) return;
+      var root = document.documentElement;
+      root.classList.add('js-reveal');
+      var els = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (e) { e.classList.add('in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      els.forEach(function (e) { io.observe(e); });
+    })();
+  </script>
+</BaseLayout>

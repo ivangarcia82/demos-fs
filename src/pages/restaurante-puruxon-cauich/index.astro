@@ -1,0 +1,758 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const nombre = 'Restaurante Puruxón Cauich';
+const direccion = 'C. 1 E #218-x 56, Zona Industrial, Francisco de Montejo, 97203 Mérida, Yuc., México';
+const telefono = '999 322 2504';
+const whatsapp = 'https://wa.me/529993222504';
+const mapsUrl = 'https://maps.google.com/?cid=17646424963821254059';
+const rating = '4.6';
+const totalResenas = '2,476';
+
+const mapQ = encodeURIComponent(direccion);
+const mapSrc = `https://www.google.com/maps?q=${mapQ}&output=embed`;
+const waReserva = `${whatsapp}?text=${encodeURIComponent('Hola, me gustaría reservar una mesa en Puruxón Cauich.')}`;
+
+// Reseñas reales del dossier — fragmentos contiguos, verbatim, sin quejas.
+const resenas = [
+  {
+    texto: '…tiene dibujos y arte en todas las paredes, lo que lo hace muy colorido y agradable.',
+    autor: 'Jou lo probó',
+    cuando: 'Hace 3 meses',
+  },
+  {
+    texto: 'Me pedí unos chilaquiles de lechón la porción me pareció buena, riquísimos y un café que me pareció muy rico con sabor tan peculiar del café de olla.',
+    autor: 'Ale Pérez',
+    cuando: 'Hace 9 meses',
+  },
+  {
+    texto: '…es un reflejo en todos los sentidos: atención, sabor, calidad de los alimentos, servicios generales, decoración, ambientación…',
+    autor: 'Dennis Martinez',
+    cuando: 'Hace 3 meses',
+  },
+  {
+    texto: 'El restaurante es muy bonito, colorido, especial para tomarse fotos y tener un bonito recuerdo…',
+    autor: 'LIBÉLULA MOXIIN',
+    cuando: 'Hace 7 meses',
+  },
+];
+
+const atributos = [
+  { icon: '🛵', txt: 'Servicio a domicilio' },
+  { icon: '🥡', txt: 'Para llevar' },
+  { icon: '📅', txt: 'Aceptamos reservaciones' },
+  { icon: '🍳', txt: 'Desayunos' },
+  { icon: '☕', txt: 'Café de olla' },
+  { icon: '💳', txt: 'Aceptamos tarjetas' },
+  { icon: '🅿️', txt: 'Estacionamiento' },
+  { icon: '♿', txt: 'Acceso para silla de ruedas' },
+];
+---
+<BaseLayout
+  title="Puruxón Cauich · Cocina yucateca en Mérida"
+  description="Cocina yucateca de tradición en Mérida: queso relleno, chilaquiles de lechón y café de olla. ⭐ 4.6 con 2,476 reseñas. Desayunos y comidas todos los días."
+  slug="restaurante-puruxon-cauich"
+  ogImage="/restaurante-puruxon-cauich/img/foto_2.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Karla:wght@400;500;700;800&display=swap"
+  favicon="🌶️"
+  themeColor="#BE2A18"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <!-- ================= HERO ================= -->
+  <header class="pc-hero">
+    <div class="pc-hero__inner">
+      <div class="pc-hero__copy">
+        <p class="pc-eyebrow">Mérida, Yucatán · Cocina de tradición</p>
+        <h1 class="pc-hero__title">
+          <span class="pc-hero__kicker">Restaurante</span>
+          Puruxón<br />Cauich
+        </h1>
+        <p class="pc-hero__lead">
+          La cocina yucateca de siempre, servida con la abundancia que lleva en
+          el nombre: <em>puruxón</em>, en maya, es lo grande y generoso. Desayunos
+          y comidas entre murales de colores.
+        </p>
+
+        <div class="pc-rating" aria-label={`Calificación ${rating} de 5 con ${totalResenas} reseñas`}>
+          <span class="pc-rating__stars" aria-hidden="true">★★★★★</span>
+          <span class="pc-rating__num">{rating}</span>
+          <span class="pc-rating__sep">·</span>
+          <span class="pc-rating__count">{totalResenas} reseñas en Google</span>
+        </div>
+
+        <div class="pc-cta-row">
+          <a class="pc-btn pc-btn--wa" href={waReserva} target="_blank" rel="noopener">
+            <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+            Aparta tu mesa
+          </a>
+          <a class="pc-btn pc-btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+        </div>
+
+        <p class="pc-hero__hours">Abrimos todos los días · 8:00 a.m. – 4:00 p.m.</p>
+      </div>
+
+      <figure class="pc-hero__media">
+        <img
+          src="/restaurante-puruxon-cauich/img/foto_2.jpg"
+          alt="Huevos con castacán servidos con salsa de tomate, queso y plátano frito sobre mesa de madera"
+          width="800" height="1000" fetchpriority="high" decoding="async"
+        />
+        <figcaption>Huevos con castacán · nuestro desayuno de casa</figcaption>
+      </figure>
+    </div>
+    <div class="pc-greca pc-greca--red" aria-hidden="true"></div>
+  </header>
+
+  <!-- ================= QUIÉNES SOMOS ================= -->
+  <section class="pc-story" aria-labelledby="pc-story-h">
+    <div class="pc-wrap">
+      <p class="pc-eyebrow pc-eyebrow--center">Quiénes somos</p>
+      <h2 class="pc-h2" id="pc-story-h">Yucatán en cada plato</h2>
+      <div class="pc-story__grid">
+        <div class="pc-story__text">
+          <p>
+            Somos una cocina yucateca de todos los días. Aquí se sirve el
+            desayuno abundante y la comida de casa: huevos con castacán, queso
+            relleno, café de olla con ese sabor tan de la olla, y guacamole con
+            castacán para empezar. Las porciones son grandes de verdad —hacemos
+            honor a nuestro nombre.
+          </p>
+          <p>
+            Y hay un detalle que a la gente le encanta: al pedir el postre te
+            llevamos frijol con tostadas para botanear. Todo esto entre paredes
+            pintadas a mano —colibríes, rosas y bordados de punto de cruz— bajo
+            estrellas de hojalata, con aire acondicionado y mesas para toda la
+            familia.
+          </p>
+          <blockquote class="pc-pull">
+            «Puruxon en maya hace referencia a algo grande o abundante, y la
+            verdad el lugar hace honor a su nombre.»
+            <cite>— Jou, reseña en Google</cite>
+          </blockquote>
+        </div>
+        <figure class="pc-story__media">
+          <img
+            src="/restaurante-puruxon-cauich/img/foto_3.jpg"
+            alt="Interior colorido de Puruxón Cauich con murales de colibríes, rosas y estrellas de hojalata colgando del techo"
+            width="1600" height="1200" loading="lazy" decoding="async"
+          />
+          <figcaption>Arte en cada pared del comedor</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LO MÁS PEDIDO ================= -->
+  <section class="pc-dishes" aria-labelledby="pc-dishes-h">
+    <div class="pc-wrap">
+      <p class="pc-eyebrow pc-eyebrow--center pc-eyebrow--cream">Lo más pedido</p>
+      <h2 class="pc-h2 pc-h2--cream" id="pc-dishes-h">Especialidades de la casa</h2>
+      <p class="pc-dishes__intro">Platillos que nuestros comensales nombran una y otra vez.</p>
+
+      <div class="pc-dishes__grid">
+        <article class="pc-dish">
+          <div class="pc-dish__img">
+            <img src="/restaurante-puruxon-cauich/img/foto_2.jpg" alt="Huevos con castacán con salsa, chícharos, jamón, queso y plátano frito" width="800" height="600" loading="lazy" decoding="async" />
+          </div>
+          <div class="pc-dish__body">
+            <h3>Huevos con castacán</h3>
+            <p>El desayuno yucateco: huevo, tomate, plátano frito y queso rallado. Porción para quedar servido.</p>
+          </div>
+        </article>
+
+        <article class="pc-dish">
+          <div class="pc-dish__img">
+            <img src="/restaurante-puruxon-cauich/img/foto_4.jpg" alt="Tacos de lechón sobre tortilla de chaya con rábano y cilantro" width="800" height="600" loading="lazy" decoding="async" />
+          </div>
+          <div class="pc-dish__body">
+            <h3>Chilaquiles y tacos de lechón</h3>
+            <p>Lechón deshebrado, rábano y cilantro. «Riquísimos», dicen quienes ya los probaron.</p>
+          </div>
+        </article>
+
+        <article class="pc-dish">
+          <div class="pc-dish__img">
+            <img src="/restaurante-puruxon-cauich/img/foto_5.jpg" alt="Relleno negro yucateco: caldo de chilmole con carne deshebrada y huevo cocido" width="800" height="600" loading="lazy" decoding="async" />
+          </div>
+          <div class="pc-dish__body">
+            <h3>Relleno negro</h3>
+            <p>El chilmole de tradición: caldo negro, carne deshebrada y huevo. Puro sabor de la península.</p>
+          </div>
+        </article>
+      </div>
+
+      <ul class="pc-chips-dish" aria-label="También nos piden mucho">
+        <li>Queso relleno</li>
+        <li>Café de olla</li>
+        <li>Guacamole con castacán</li>
+        <li>Crème brûlée</li>
+      </ul>
+    </div>
+    <div class="pc-greca pc-greca--cream" aria-hidden="true"></div>
+  </section>
+
+  <!-- ================= GALERÍA ================= -->
+  <section class="pc-gallery-sec" aria-labelledby="pc-gal-h">
+    <div class="pc-wrap">
+      <p class="pc-eyebrow pc-eyebrow--center">El lugar</p>
+      <h2 class="pc-h2" id="pc-gal-h">Para verlo con calma</h2>
+    </div>
+    <div class="pc-gallery">
+      <figure class="pc-gal pc-gal--wide">
+        <img src="/restaurante-puruxon-cauich/img/foto_3.jpg" alt="Murales coloridos y estrellas de hojalata en el comedor de Puruxón Cauich" width="1600" height="1200" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="pc-gal">
+        <img src="/restaurante-puruxon-cauich/img/foto_1.jpg" alt="Fachada roja del Restaurante Puruxón Cauich en Francisco de Montejo, Mérida" width="1600" height="1200" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="pc-gal">
+        <img src="/restaurante-puruxon-cauich/img/foto_4.jpg" alt="Tacos de lechón en canasta con papel de cuadros rojos" width="1600" height="1067" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="pc-gal">
+        <img src="/restaurante-puruxon-cauich/img/foto_5.jpg" alt="Plato de relleno negro con canasta de huevos y pan" width="800" height="1000" loading="lazy" decoding="async" />
+      </figure>
+      <figure class="pc-gal">
+        <img src="/restaurante-puruxon-cauich/img/foto_2.jpg" alt="Huevos con castacán servidos en plato blanco" width="800" height="1000" loading="lazy" decoding="async" />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= CTA INTERMEDIO ================= -->
+  <section class="pc-cta-mid" aria-label="Aparta tu mesa">
+    <div class="pc-wrap pc-cta-mid__inner">
+      <p class="pc-cta-mid__text">¿Se te antojó? Aparta tu mesa o pídelo para llevar.</p>
+      <a class="pc-btn pc-btn--cream" href={waReserva} target="_blank" rel="noopener">
+        <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+        Escríbenos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- ================= PRUEBA SOCIAL ================= -->
+  <section class="pc-social" aria-labelledby="pc-social-h">
+    <div class="pc-wrap">
+      <p class="pc-eyebrow pc-eyebrow--center">Lo dicen en Google</p>
+      <div class="pc-bignum">
+        <span class="pc-bignum__val">{totalResenas}</span>
+        <span class="pc-bignum__label">reseñas · <strong>★ {rating} de 5</strong></span>
+      </div>
+      <h2 class="pc-h2 pc-visually-hidden" id="pc-social-h">Reseñas reales de nuestros comensales</h2>
+
+      <div class="pc-reviews">
+        {resenas.map((r) => (
+          <figure class="pc-review">
+            <div class="pc-review__stars" aria-hidden="true">★★★★★</div>
+            <blockquote>{r.texto}</blockquote>
+            <figcaption>
+              <span class="pc-review__author">{r.autor}</span>
+              <span class="pc-review__when">{r.cuando}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+
+      <div class="pc-social__cta">
+        <a class="pc-btn pc-btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DIFERENCIADORES ================= -->
+  <section class="pc-why" aria-labelledby="pc-why-h">
+    <div class="pc-wrap">
+      <p class="pc-eyebrow pc-eyebrow--center pc-eyebrow--cream">Por qué venir</p>
+      <h2 class="pc-h2 pc-h2--cream" id="pc-why-h">Lo que nos distingue</h2>
+      <div class="pc-why__grid">
+        <div class="pc-why__item">
+          <span class="pc-why__num">01</span>
+          <h3>Porciones que abundan</h3>
+          <p>Un platillo alcanza y sobra. Hacemos honor a lo que significa «puruxón».</p>
+        </div>
+        <div class="pc-why__item">
+          <span class="pc-why__num">02</span>
+          <h3>Arte en cada pared</h3>
+          <p>Murales pintados a mano y estrellas de hojalata. Un lugar hecho para la foto y el recuerdo.</p>
+        </div>
+        <div class="pc-why__item">
+          <span class="pc-why__num">03</span>
+          <h3>Servicio atento y rápido</h3>
+          <p>Personal cercano y comida que llega pronto, en un comedor familiar con aire acondicionado.</p>
+        </div>
+      </div>
+    </div>
+    <div class="pc-greca pc-greca--cream" aria-hidden="true"></div>
+  </section>
+
+  <!-- ================= ATRIBUTOS ================= -->
+  <section class="pc-attrs" aria-label="Servicios y facilidades">
+    <div class="pc-wrap">
+      <ul class="pc-attrs__list">
+        {atributos.map((a) => (
+          <li><span class="pc-attrs__ico" aria-hidden="true">{a.icon}</span>{a.txt}</li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= UBICACIÓN Y HORARIOS ================= -->
+  <section class="pc-loc" aria-labelledby="pc-loc-h">
+    <div class="pc-wrap">
+      <p class="pc-eyebrow pc-eyebrow--center">Visítanos</p>
+      <h2 class="pc-h2" id="pc-loc-h">Dónde y a qué hora</h2>
+      <div class="pc-loc__grid">
+        <div class="pc-loc__info">
+          <div class="pc-loc__block">
+            <h3>Dirección</h3>
+            <p>C. 1 E #218-x 56, Zona Industrial,<br />Francisco de Montejo, 97203 Mérida, Yuc.</p>
+            <a class="pc-link" href={mapsUrl} target="_blank" rel="noopener">Abrir en Google Maps →</a>
+          </div>
+          <div class="pc-loc__block">
+            <h3>Horario</h3>
+            <p class="pc-hours-big">Todos los días<br /><strong>8:00 a.m. – 4:00 p.m.</strong></p>
+            <p class="pc-loc__note">Desayunos y comidas · sin cerrar entre semana.</p>
+          </div>
+          <div class="pc-loc__block">
+            <h3>Teléfono</h3>
+            <p><a class="pc-link" href="tel:+529993222504">999 322 2504</a></p>
+          </div>
+        </div>
+        <div class="pc-map">
+          <iframe
+            src={mapSrc}
+            title="Mapa de ubicación de Restaurante Puruxón Cauich"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="pc-final" aria-labelledby="pc-final-h">
+    <div class="pc-greca pc-greca--gold pc-greca--top" aria-hidden="true"></div>
+    <div class="pc-wrap pc-final__inner">
+      <h2 class="pc-final__title" id="pc-final-h">Te esperamos con hambre</h2>
+      <p class="pc-final__lead">Reserva por WhatsApp, pásate a desayunar o pide para llevar.</p>
+      <div class="pc-cta-row pc-cta-row--center">
+        <a class="pc-btn pc-btn--cream" href={waReserva} target="_blank" rel="noopener">
+          <svg viewBox="0 0 32 32" width="20" height="20" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+          Escríbenos por WhatsApp
+        </a>
+        <a class="pc-btn pc-btn--outline-light" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="pc-footer">
+    <div class="pc-wrap">
+      <p class="pc-footer__name">Puruxón Cauich</p>
+      <p class="pc-footer__meta">Francisco de Montejo, Mérida, Yucatán</p>
+      <p class="pc-footer__meta">
+        <a href="tel:+529993222504">999 322 2504</a> · Todos los días 8:00 – 16:00
+      </p>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --masa: #F4EAD2;
+      --masa-2: #EADCBB;
+      --frijol: #1C1712;
+      --frijol-2: #4A3A2C;
+      --achiote: #BE2A18;
+      --achiote-deep: #9A2013;
+      --chaya: #4E6B1E;
+      --lima: #8FAE34;
+      --dorado: #E0982F;
+      --crema: #FBF5E7;
+    }
+
+    body {
+      background: var(--masa);
+      color: var(--frijol);
+      font-family: 'Karla', system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .pc-wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+
+    /* ---------- Greca (elemento firma) ---------- */
+    .pc-greca {
+      height: 24px;
+      background-repeat: repeat-x;
+      background-position: center;
+      background-size: auto 100%;
+    }
+    .pc-greca--red {
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='26'%20viewBox='0%200%2032%2026'%20preserveAspectRatio='none'%3E%3Cpath%20d='M0%2022%20H4%20V16%20H8%20V10%20H12%20V4%20H20%20V10%20H24%20V16%20H28%20V22%20H32%20V26%20H0%20Z'%20fill='%23BE2A18'/%3E%3C/svg%3E");
+    }
+    .pc-greca--cream {
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='26'%20viewBox='0%200%2032%2026'%20preserveAspectRatio='none'%3E%3Cpath%20d='M0%2022%20H4%20V16%20H8%20V10%20H12%20V4%20H20%20V10%20H24%20V16%20H28%20V22%20H32%20V26%20H0%20Z'%20fill='%23FBF5E7'/%3E%3C/svg%3E");
+    }
+    .pc-greca--gold {
+      background-image: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='32'%20height='26'%20viewBox='0%200%2032%2026'%20preserveAspectRatio='none'%3E%3Cpath%20d='M0%2022%20H4%20V16%20H8%20V10%20H12%20V4%20H20%20V10%20H24%20V16%20H28%20V22%20H32%20V26%20H0%20Z'%20fill='%23E0982F'/%3E%3C/svg%3E");
+    }
+    .pc-greca--top { transform: scaleY(-1); }
+
+    /* ---------- Eyebrows / headings ---------- */
+    .pc-eyebrow {
+      font-weight: 800;
+      font-size: 0.78rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--achiote-deep);
+      margin: 0 0 0.6rem;
+    }
+    .pc-eyebrow--center { text-align: center; }
+    .pc-eyebrow--cream { color: var(--dorado); }
+
+    .pc-h2 {
+      font-family: 'Alfa Slab One', Georgia, serif;
+      font-weight: 400;
+      font-size: clamp(1.9rem, 6.4vw, 3.1rem);
+      line-height: 1.02;
+      letter-spacing: -0.01em;
+      color: var(--achiote);
+      text-align: center;
+      margin: 0 0 1.6rem;
+    }
+    .pc-h2--cream { color: var(--crema); }
+
+    .pc-visually-hidden {
+      position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    /* ---------- Buttons ---------- */
+    .pc-btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.5em;
+      font-family: 'Karla', sans-serif; font-weight: 800; font-size: 1rem;
+      line-height: 1; text-decoration: none; cursor: pointer;
+      padding: 0.95em 1.5em; border-radius: 999px; border: 2px solid transparent;
+      transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+    }
+    .pc-btn:hover { transform: translateY(-2px); }
+    .pc-btn:focus-visible { outline: 3px solid var(--frijol); outline-offset: 3px; }
+    .pc-btn--wa { background: var(--achiote); color: var(--crema); box-shadow: 0 8px 20px rgba(190,42,24,0.30); }
+    .pc-btn--wa:hover { background: var(--achiote-deep); }
+    .pc-btn--ghost { background: transparent; color: var(--frijol); border-color: var(--frijol); }
+    .pc-btn--ghost:hover { background: var(--frijol); color: var(--masa); }
+    .pc-btn--cream { background: var(--crema); color: var(--achiote-deep); box-shadow: 0 8px 20px rgba(0,0,0,0.18); }
+    .pc-btn--cream:hover { background: #fff; }
+    .pc-btn--outline-light { background: transparent; color: var(--crema); border-color: var(--crema); }
+    .pc-btn--outline-light:hover { background: var(--crema); color: var(--achiote-deep); }
+    .pc-btn--cream:focus-visible,
+    .pc-btn--outline-light:focus-visible { outline-color: var(--crema); }
+
+    /* ---------- HERO ---------- */
+    .pc-hero {
+      background:
+        radial-gradient(120% 90% at 85% 0%, rgba(224,152,47,0.16), transparent 60%),
+        linear-gradient(180deg, var(--masa) 0%, var(--masa-2) 100%);
+    }
+    .pc-hero__inner {
+      max-width: 1080px; margin: 0 auto; padding: 30px 20px 44px;
+      display: grid; gap: 30px;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      align-content: center;
+    }
+    .pc-hero__kicker {
+      display: block;
+      font-family: 'Karla', sans-serif; font-weight: 800;
+      font-size: clamp(0.9rem, 3.2vw, 1.15rem); letter-spacing: 0.24em;
+      text-transform: uppercase; color: var(--chaya); margin-bottom: 0.35em;
+    }
+    .pc-hero__title {
+      font-family: 'Alfa Slab One', Georgia, serif; font-weight: 400;
+      font-size: clamp(3rem, 15vw, 6rem); line-height: 0.92;
+      letter-spacing: -0.015em; color: var(--achiote); margin: 0.1em 0 0.35em;
+      text-shadow: 3px 3px 0 rgba(28,23,18,0.10);
+    }
+    .pc-hero__lead {
+      font-size: clamp(1.05rem, 3.4vw, 1.28rem); line-height: 1.55;
+      color: var(--frijol-2); max-width: 34ch; margin: 0 0 1.3rem;
+    }
+    .pc-hero__lead em { font-style: italic; color: var(--achiote-deep); font-weight: 700; }
+
+    .pc-rating {
+      display: inline-flex; align-items: center; gap: 0.5em; flex-wrap: wrap;
+      background: var(--crema); border: 2px solid var(--dorado);
+      border-radius: 999px; padding: 0.5em 1em; margin-bottom: 1.5rem;
+      font-weight: 700; font-size: 0.98rem;
+    }
+    .pc-rating__stars { color: var(--dorado); letter-spacing: 0.05em; }
+    .pc-rating__num { color: var(--frijol); font-weight: 800; }
+    .pc-rating__sep { color: var(--frijol-2); }
+    .pc-rating__count { color: var(--frijol-2); }
+
+    .pc-cta-row { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+    .pc-cta-row--center { justify-content: center; }
+    .pc-hero__hours {
+      margin: 1.3rem 0 0; font-weight: 700; font-size: 0.95rem; color: var(--frijol-2);
+    }
+
+    .pc-hero__media {
+      margin: 0; position: relative; border-radius: 18px; overflow: hidden;
+      border: 4px solid var(--achiote); box-shadow: 0 18px 40px rgba(28,23,18,0.22);
+    }
+    .pc-hero__media img { width: 100%; aspect-ratio: 4 / 3.4; object-fit: cover; }
+    .pc-hero__media figcaption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(0deg, rgba(28,23,18,0.82), transparent);
+      color: var(--crema); font-weight: 700; font-size: 0.9rem;
+      padding: 1.6em 1em 0.8em;
+    }
+
+    /* ---------- STORY ---------- */
+    .pc-story { padding: 56px 0; }
+    .pc-story__grid { display: grid; gap: 28px; margin-top: 0.5rem; }
+    .pc-story__text p { margin: 0 0 1.1rem; color: var(--frijol); }
+    .pc-pull {
+      margin: 1.5rem 0 0; padding: 1rem 0 1rem 1.2rem;
+      border-left: 5px solid var(--dorado);
+      font-family: 'Alfa Slab One', Georgia, serif; font-weight: 400;
+      font-size: clamp(1.15rem, 4vw, 1.5rem); line-height: 1.25;
+      color: var(--achiote-deep); letter-spacing: -0.01em;
+    }
+    .pc-pull cite {
+      display: block; margin-top: 0.7rem; font-family: 'Karla', sans-serif;
+      font-style: normal; font-weight: 700; font-size: 0.9rem; color: var(--frijol-2);
+    }
+    .pc-story__media {
+      margin: 0; border-radius: 16px; overflow: hidden; position: relative;
+      border: 3px solid var(--frijol); box-shadow: 0 12px 30px rgba(28,23,18,0.18);
+    }
+    .pc-story__media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+    .pc-story__media figcaption {
+      position: absolute; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(0deg, rgba(28,23,18,0.8), transparent);
+      color: var(--crema); font-weight: 700; font-size: 0.88rem; padding: 1.5em 1em 0.7em;
+    }
+
+    /* ---------- DISHES ---------- */
+    .pc-dishes { background: var(--achiote); padding: 56px 0 0; }
+    .pc-dishes__intro {
+      text-align: center; color: var(--crema); opacity: 0.9;
+      margin: -0.8rem 0 2rem; font-weight: 500;
+    }
+    .pc-dishes__grid { display: grid; gap: 20px; }
+    .pc-dish {
+      background: var(--crema); border-radius: 16px; overflow: hidden;
+      box-shadow: 0 10px 26px rgba(0,0,0,0.22);
+      display: flex; flex-direction: column;
+    }
+    .pc-dish__img img { width: 100%; aspect-ratio: 16 / 11; object-fit: cover; }
+    .pc-dish__body { padding: 1.1rem 1.2rem 1.3rem; }
+    .pc-dish__body h3 {
+      margin: 0 0 0.4rem; font-family: 'Karla', sans-serif; font-weight: 800;
+      font-size: 1.2rem; color: var(--achiote-deep);
+    }
+    .pc-dish__body p { margin: 0; color: var(--frijol-2); font-size: 0.98rem; }
+
+    .pc-chips-dish {
+      list-style: none; margin: 2rem 0 0; padding: 0 0 3rem;
+      display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center;
+    }
+    .pc-chips-dish li {
+      background: transparent; color: var(--crema);
+      border: 2px solid rgba(251,245,231,0.55); border-radius: 999px;
+      padding: 0.5em 1.05em; font-weight: 700; font-size: 0.95rem;
+    }
+
+    /* ---------- GALLERY ---------- */
+    .pc-gallery-sec { padding: 56px 0; }
+    .pc-gallery {
+      max-width: 1080px; margin: 0.5rem auto 0; padding: 0 20px;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
+    }
+    .pc-gal {
+      margin: 0; border-radius: 14px; overflow: hidden; background: var(--masa-2);
+      box-shadow: 0 8px 20px rgba(28,23,18,0.14);
+    }
+    .pc-gal img { width: 100%; height: 100%; aspect-ratio: 1 / 1; object-fit: cover; }
+    .pc-gal--wide { grid-column: 1 / -1; }
+    .pc-gal--wide img { aspect-ratio: 16 / 10; }
+
+    /* ---------- CTA MID ---------- */
+    .pc-cta-mid { background: var(--chaya); }
+    .pc-cta-mid__inner {
+      display: flex; flex-wrap: wrap; gap: 1rem 1.5rem;
+      align-items: center; justify-content: center; text-align: center;
+      padding-top: 30px; padding-bottom: 30px;
+    }
+    .pc-cta-mid__text {
+      margin: 0; color: var(--crema); font-family: 'Alfa Slab One', Georgia, serif;
+      font-size: clamp(1.2rem, 4.4vw, 1.7rem); line-height: 1.15; letter-spacing: -0.01em;
+    }
+
+    /* ---------- SOCIAL PROOF ---------- */
+    .pc-social { padding: 60px 0; text-align: center; }
+    .pc-bignum { margin: 0.3rem 0 2.2rem; line-height: 0.9; }
+    .pc-bignum__val {
+      display: block; font-family: 'Alfa Slab One', Georgia, serif; font-weight: 400;
+      font-size: clamp(4.5rem, 26vw, 11rem); color: var(--achiote);
+      letter-spacing: -0.03em;
+      text-shadow: 4px 5px 0 var(--dorado);
+    }
+    .pc-bignum__label {
+      display: block; margin-top: 0.4rem; font-weight: 700;
+      font-size: clamp(1rem, 3.6vw, 1.25rem); color: var(--frijol-2);
+    }
+    .pc-bignum__label strong { color: var(--achiote-deep); }
+
+    .pc-reviews {
+      display: grid; gap: 16px; max-width: 900px; margin: 0 auto; text-align: left;
+    }
+    .pc-review {
+      margin: 0; background: var(--crema); border-radius: 14px;
+      padding: 1.3rem 1.4rem 1.2rem; border-top: 5px solid var(--achiote);
+      box-shadow: 0 8px 20px rgba(28,23,18,0.10);
+    }
+    .pc-review__stars { color: var(--dorado); font-size: 0.95rem; letter-spacing: 0.08em; margin-bottom: 0.5rem; }
+    .pc-review blockquote {
+      margin: 0 0 0.9rem; font-size: 1.05rem; line-height: 1.5; color: var(--frijol);
+    }
+    .pc-review figcaption { display: flex; flex-wrap: wrap; gap: 0.2rem 0.6rem; align-items: baseline; }
+    .pc-review__author { font-weight: 800; color: var(--achiote-deep); }
+    .pc-review__when { font-size: 0.88rem; color: var(--frijol-2); }
+    .pc-social__cta { margin-top: 2rem; }
+
+    /* ---------- WHY ---------- */
+    .pc-why { background: var(--frijol); padding: 56px 0 0; }
+    .pc-why__grid { display: grid; gap: 20px; padding-bottom: 3.4rem; }
+    .pc-why__item {
+      background: rgba(251,245,231,0.05); border: 1px solid rgba(224,152,47,0.35);
+      border-radius: 14px; padding: 1.5rem 1.4rem;
+    }
+    .pc-why__num {
+      font-family: 'Alfa Slab One', Georgia, serif; font-size: 1.8rem;
+      color: var(--dorado); display: block; line-height: 1; margin-bottom: 0.5rem;
+    }
+    .pc-why__item h3 {
+      margin: 0 0 0.4rem; font-weight: 800; font-size: 1.2rem; color: var(--crema);
+    }
+    .pc-why__item p { margin: 0; color: rgba(251,245,231,0.82); font-size: 0.98rem; }
+
+    /* ---------- ATTRS ---------- */
+    .pc-attrs { background: var(--masa-2); padding: 34px 0; }
+    .pc-attrs__list {
+      list-style: none; margin: 0; padding: 0;
+      display: flex; flex-wrap: wrap; gap: 0.7rem; justify-content: center;
+    }
+    .pc-attrs__list li {
+      display: inline-flex; align-items: center; gap: 0.5em;
+      background: var(--crema); border: 2px solid var(--masa);
+      border-radius: 999px; padding: 0.55em 1.05em;
+      font-weight: 700; font-size: 0.95rem; color: var(--frijol);
+      box-shadow: 0 3px 8px rgba(28,23,18,0.06);
+    }
+    .pc-attrs__ico { font-size: 1.1em; }
+
+    /* ---------- LOCATION ---------- */
+    .pc-loc { padding: 60px 0; }
+    .pc-loc__grid { display: grid; gap: 28px; margin-top: 0.5rem; }
+    .pc-loc__block { margin-bottom: 1.6rem; }
+    .pc-loc__block:last-child { margin-bottom: 0; }
+    .pc-loc__block h3 {
+      margin: 0 0 0.35rem; font-weight: 800; font-size: 0.82rem;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--achiote-deep);
+    }
+    .pc-loc__block p { margin: 0 0 0.4rem; color: var(--frijol); }
+    .pc-hours-big { font-size: 1.15rem; line-height: 1.35; }
+    .pc-hours-big strong { font-size: 1.35rem; color: var(--achiote); }
+    .pc-loc__note { color: var(--frijol-2); font-size: 0.95rem; }
+    .pc-link {
+      color: var(--achiote-deep); font-weight: 800; text-decoration: none;
+      border-bottom: 2px solid var(--dorado); padding-bottom: 1px;
+    }
+    .pc-link:hover { color: var(--achiote); }
+    .pc-map {
+      border-radius: 16px; overflow: hidden; border: 3px solid var(--frijol);
+      box-shadow: 0 12px 30px rgba(28,23,18,0.18); background: var(--masa-2);
+    }
+    .pc-map iframe { display: block; width: 100%; height: 340px; border: 0; }
+
+    /* ---------- FINAL CTA ---------- */
+    .pc-final { background: var(--achiote); position: relative; }
+    .pc-final__inner { text-align: center; padding-top: 52px; padding-bottom: 56px; }
+    .pc-final__title {
+      font-family: 'Alfa Slab One', Georgia, serif; font-weight: 400;
+      font-size: clamp(2rem, 8vw, 3.4rem); line-height: 1.02; letter-spacing: -0.01em;
+      color: var(--crema); margin: 0 0 0.6rem;
+    }
+    .pc-final__lead { color: rgba(251,245,231,0.92); margin: 0 0 1.8rem; font-size: 1.1rem; }
+
+    /* ---------- FOOTER ---------- */
+    .pc-footer {
+      background: var(--frijol); color: var(--masa);
+      text-align: center; padding: 34px 0 96px;
+    }
+    .pc-footer__name {
+      font-family: 'Alfa Slab One', Georgia, serif; font-size: 1.5rem;
+      color: var(--dorado); margin: 0 0 0.5rem;
+    }
+    .pc-footer__meta { margin: 0.25rem 0; color: rgba(244,234,210,0.8); font-size: 0.95rem; }
+    .pc-footer__meta a { color: var(--crema); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
+
+    /* ---------- Scroll reveal (progressive enhancement) ---------- */
+    .js .pc-reveal { opacity: 0; transform: translateY(18px); }
+    .js .pc-reveal.pc-in {
+      opacity: 1; transform: none;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .js .pc-reveal { opacity: 1; transform: none; }
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (min-width: 640px) {
+      .pc-dishes__grid { grid-template-columns: repeat(3, 1fr); }
+      .pc-why__grid { grid-template-columns: repeat(3, 1fr); }
+      .pc-gallery { grid-template-columns: repeat(4, 1fr); }
+      .pc-gal--wide { grid-column: 1 / 3; }
+      .pc-gal--wide img { aspect-ratio: 1 / 1; }
+    }
+    @media (min-width: 820px) {
+      .pc-hero__inner { grid-template-columns: 1.05fr 0.95fr; gap: 44px; align-items: center; }
+      .pc-story__grid { grid-template-columns: 1.1fr 0.9fr; align-items: center; }
+      .pc-loc__grid { grid-template-columns: 0.9fr 1.1fr; align-items: start; }
+      .pc-map iframe { height: 100%; min-height: 420px; }
+      .pc-gallery { grid-template-columns: repeat(4, 1fr); }
+      .pc-gal--wide { grid-column: 1 / 3; grid-row: span 2; }
+      .pc-gal--wide img { aspect-ratio: auto; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+      var targets = [
+        '.pc-story__grid', '.pc-dish', '.pc-gal', '.pc-review',
+        '.pc-why__item', '.pc-bignum', '.pc-loc__grid',
+      ];
+      var els = [];
+      targets.forEach(function (sel) {
+        Array.prototype.forEach.call(document.querySelectorAll(sel), function (el) {
+          el.classList.add('pc-reveal');
+          els.push(el);
+        });
+      });
+      if (!('IntersectionObserver' in window)) {
+        els.forEach(function (el) { el.classList.add('pc-in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('pc-in'); io.unobserve(e.target); }
+        });
+      }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>

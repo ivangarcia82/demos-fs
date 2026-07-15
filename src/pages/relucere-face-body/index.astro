@@ -1,0 +1,594 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const slug = 'relucere-face-body';
+const nombre = 'Relucere · face & body';
+const whatsapp = 'https://wa.me/529995071873';
+const telefono = '999 507 1873';
+const mapsUrl = 'https://maps.google.com/?cid=13244048297280455671&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA';
+const direccion = 'C. 27A 209, entre 18a y 18b, Monterreal, 97133 Mérida, Yuc., México';
+const mapSrc =
+  'https://www.google.com/maps?q=' +
+  encodeURIComponent('Relucere face & body, C. 27A 209, Monterreal, 97133 Mérida, Yucatán') +
+  '&output=embed';
+
+// Reseñas reales del dossier (citadas tal cual; fragmentos contiguos).
+const resenas = [
+  {
+    autor: 'Carla Peraza',
+    cuando: 'Hace un año',
+    texto:
+      '¡La doctora Mariela es la mejor! Solo a ella le confío mi piel, nunca me ha decepcionado siempre resultados excelentes y todo su equipo de trabajo súper amable…',
+  },
+  {
+    autor: 'Andrea Punab Traconis',
+    cuando: 'Hace un año',
+    texto:
+      'Lo que me encanta de Relucere es desde el momento que llegas te hacen sentir cómoda además de la atención que te brindan. Voy para mi cuarta sesión de Dermapen y estoy feliz porque he notado mejoría en la textura de mi piel…',
+  },
+  {
+    autor: 'Anai Mestiza',
+    cuando: 'Hace un año',
+    texto:
+      'Desde que llegas al lugar todo muy limpio y agradable el personal es muy amable, eh venido varias veces, te explican de todas las dudas que tengas, son muy atentas a los tratamientos que hacen se dan su tiempo para hacer el tratamiento adecuadamente.',
+  },
+  {
+    autor: 'Nora Lopez',
+    cuando: 'Hace un año',
+    texto:
+      'Mi lugar favorito en Mid! Mi mamá y yo viajamos hasta la ciudad de Mérida para tratarnos la piel con la doctora Mariela y su team. Todas son muy profesionales y siempre nos tratan de lujo…',
+  },
+];
+
+const servicios = [
+  {
+    titulo: 'Valoración de tu piel',
+    desc: 'Empezamos por escucharte y revisar tu piel con la Dra. Mariela para armar el plan que de verdad necesitas.',
+  },
+  {
+    titulo: 'Tratamientos faciales',
+    desc: 'Faciales pensados para tu tipo de piel, hechos con calma y a tu ritmo — sin prisas.',
+  },
+  {
+    titulo: 'Dermapen',
+    desc: 'Microneedling para mejorar la textura de tu piel, sesión a sesión, con seguimiento cercano.',
+  },
+  {
+    titulo: 'Dermocosmética profesional',
+    desc: 'Trabajamos con líneas dermatológicas y fotoprotección de calidad para que cuides tu piel también en casa.',
+  },
+];
+
+const horarios = [
+  { dia: 'Lunes a viernes', horas: '10:00 – 19:00' },
+  { dia: 'Sábado', horas: '9:00 – 14:30' },
+  { dia: 'Domingo', horas: 'Cerrado' },
+];
+---
+<BaseLayout
+  title="Relucere · face & body — Dermatología en Mérida"
+  description="Clínica dermatológica en Mérida con la Dra. Mariela. ⭐ 5.0 · 98 reseñas en Google. Faciales, Dermapen y cuidado de tu piel con confianza."
+  slug={slug}
+  ogImage="/relucere-face-body/img/foto_1.jpg"
+  fonts="https://fonts.googleapis.com/css2?family=Italiana&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+  favicon="✨"
+  themeColor="#b4914f"
+  whatsapp={whatsapp}
+  telefono={telefono}
+  mapsUrl={mapsUrl}
+>
+  <!-- Símbolo del destello (elemento firma) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="spark" viewBox="0 0 24 24">
+      <path d="M12 0c1 8 3 11 12 12-9 1-11 4-12 12-1-8-3-11-12-12 9-1 11-4 12-12Z" />
+    </symbol>
+  </svg>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <img
+      class="hero__img"
+      src="/relucere-face-body/img/foto_1.jpg"
+      alt="Fachada de la clínica Relucere en Mérida, con su letrero dorado"
+      width="900" height="1200" fetchpriority="high" decoding="async"
+    />
+    <div class="hero__scrim"></div>
+    <div class="hero__inner">
+      <p class="eyebrow eyebrow--onDark">
+        <svg class="spark spark--xs" aria-hidden="true"><use href="#spark" /></svg>
+        Clínica dermatológica · Mérida, Yuc.
+      </p>
+      <h1 class="hero__title">
+        Tu piel, en manos<br />de la Dra. Mariela
+      </h1>
+      <p class="hero__lede">
+        Dermatología y cuidado facial en un espacio tranquilo de Monterreal,
+        con la confianza que 98 pacientes ya calificaron con 5 estrellas.
+      </p>
+      <div class="rating-pill">
+        <span class="rating-pill__num">5.0</span>
+        <span class="stars" aria-hidden="true">★★★★★</span>
+        <span class="rating-pill__lbl">98 reseñas en Google</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn btn--gold" href={whatsapp} target="_blank" rel="noopener">
+          <svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+          Agenda por WhatsApp
+        </a>
+        <a class="btn btn--ghostDark" href={mapsUrl} target="_blank" rel="noopener">Cómo llegar</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== FRANJA DE MARCA ===================== -->
+  <section class="brandline">
+    <div class="wrap">
+      <div class="rule"><span class="rule__line"></span><svg class="spark spark--sm" aria-hidden="true"><use href="#spark" /></svg><span class="rule__line"></span></div>
+      <p class="brandline__text">
+        <strong>Relucere</strong> — del latín <em>relucir</em>, brillar.
+        Es lo que buscamos para tu piel: que se vea sana, luminosa y cuidada.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===================== QUIÉNES SOMOS ===================== -->
+  <section class="about sec reveal">
+    <div class="wrap about__grid">
+      <div class="about__copy">
+        <p class="eyebrow">Quiénes somos</p>
+        <h2 class="h2">Cuidamos tu piel como nos gustaría que cuidaran la nuestra</h2>
+        <p>
+          En Relucere te recibimos en un espacio limpio y agradable en Monterreal,
+          donde cada tratamiento se hace sin prisas y explicándote cada paso.
+          La Dra. Mariela y su equipo te escuchan, valoran tu piel y te acompañan
+          con calma y con toda tu confianza.
+        </p>
+        <p>
+          No creemos en milagros, creemos en la constancia. Por eso te seguimos de
+          cerca sesión a sesión —desde un facial hasta tu tratamiento con Dermapen—
+          con tecnología actual y productos de calidad.
+        </p>
+        <div class="minifacts">
+          <span class="chip"><svg class="spark spark--xs" aria-hidden="true"><use href="#spark" /></svg> Atención de la Dra. Mariela y su equipo</span>
+          <span class="chip"><svg class="spark spark--xs" aria-hidden="true"><use href="#spark" /></svg> Aceptamos tarjetas</span>
+        </div>
+      </div>
+      <figure class="about__figure">
+        <img
+          class="arch"
+          src="/relucere-face-body/img/foto_3.jpg"
+          alt="Sala de tratamiento de Relucere con espejo LED ovalado"
+          width="900" height="1200" loading="lazy" decoding="async"
+        />
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===================== FRASE DE LA CASA ===================== -->
+  <section class="quotebar reveal">
+    <div class="wrap quotebar__inner">
+      <svg class="spark spark--lg" aria-hidden="true"><use href="#spark" /></svg>
+      <blockquote class="quotebar__en">Beautiful skin requires commitment, not a miracle.</blockquote>
+      <p class="quotebar__es">La piel bonita es constancia, no un milagro — y aquí te acompañamos en cada sesión.</p>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICIOS ===================== -->
+  <section class="services sec reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">En qué te acompañamos</p>
+        <h2 class="h2">Parte de lo que hacemos por tu piel</h2>
+      </div>
+      <ul class="svc-grid">
+        {servicios.map((s) => (
+          <li class="svc">
+            <svg class="spark spark--sm svc__mark" aria-hidden="true"><use href="#spark" /></svg>
+            <h3 class="svc__title">{s.titulo}</h3>
+            <p class="svc__desc">{s.desc}</p>
+          </li>
+        ))}
+      </ul>
+      <p class="services__note">Cada plan se define en tu valoración. Sin recetas genéricas.</p>
+    </div>
+  </section>
+
+  <!-- ===================== GALERÍA ===================== -->
+  <section class="gallery sec reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">El lugar</p>
+        <h2 class="h2">Un espacio hecho para sentirte bien</h2>
+      </div>
+      <div class="gal-grid">
+        <figure class="gal-item gal-item--wide">
+          <img src="/relucere-face-body/img/foto_2.jpg" alt="Recepción de Relucere con estantería dorada y sillones" width="1600" height="1200" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gal-item">
+          <img src="/relucere-face-body/img/foto_4.jpg" alt="Cabina de tratamiento con muros de madera y camilla" width="900" height="1200" loading="lazy" decoding="async" />
+        </figure>
+        <figure class="gal-item">
+          <img src="/relucere-face-body/img/foto_1.jpg" alt="Fachada de Relucere con su letrero dorado" width="900" height="1200" loading="lazy" decoding="async" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== PRUEBA SOCIAL ===================== -->
+  <section class="social sec reveal">
+    <div class="wrap">
+      <div class="social__head">
+        <div class="bigrate">
+          <span class="bigrate__num">5.0</span>
+          <div class="bigrate__meta">
+            <span class="stars stars--gold" aria-hidden="true">★★★★★</span>
+            <span class="bigrate__lbl">98 reseñas en Google · calificación perfecta</span>
+          </div>
+        </div>
+      </div>
+      <div class="reviews">
+        {resenas.map((r) => (
+          <figure class="review">
+            <svg class="spark spark--sm review__mark" aria-hidden="true"><use href="#spark" /></svg>
+            <blockquote class="review__text">{r.texto}</blockquote>
+            <figcaption class="review__by">
+              <span class="review__author">{r.autor}</span>
+              <span class="review__when">{r.cuando}</span>
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+      <div class="social__cta">
+        <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Leer más reseñas en Google</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== UBICACIÓN Y HORARIOS ===================== -->
+  <section class="location sec reveal">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Dónde estamos</p>
+        <h2 class="h2">Visítanos en Monterreal</h2>
+      </div>
+      <div class="loc-grid">
+        <div class="loc-info">
+          <p class="loc-address">{direccion}</p>
+          <table class="hours">
+            <tbody>
+              {horarios.map((h) => (
+                <tr>
+                  <th scope="row">{h.dia}</th>
+                  <td>{h.horas}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div class="loc-actions">
+            <a class="btn btn--gold" href={whatsapp} target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
+            <a class="btn btn--ghost" href={mapsUrl} target="_blank" rel="noopener">Abrir en Google Maps</a>
+          </div>
+          <p class="loc-tel">O llámanos: <a href={`tel:+52${telefono.replace(/\s/g, '')}`}>{telefono}</a></p>
+        </div>
+        <div class="loc-map">
+          <iframe
+            title="Mapa de Relucere en Mérida"
+            src={mapSrc}
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA FINAL + FOOTER ===================== -->
+  <footer class="closer">
+    <div class="wrap closer__inner">
+      <svg class="spark spark--lg closer__spark" aria-hidden="true"><use href="#spark" /></svg>
+      <h2 class="closer__title">¿Lista para consentir tu piel?</h2>
+      <p class="closer__lede">
+        Cuéntanos qué te gustaría mejorar y agendamos tu valoración con la Dra. Mariela.
+      </p>
+      <a class="btn btn--gold btn--lg" href={whatsapp} target="_blank" rel="noopener">
+        <svg class="wa-ico" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.6.8 5 2.3 7L4 29l7.3-2.3c1.9 1 3.9 1.5 4.7 1.5 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.4 0-3.2-.5-4.7-1.4l-.3-.2-4.3 1.4 1.4-4.2-.2-.3c-1.2-1.7-1.9-3.7-1.9-5.7C6 9.4 10.5 5 16 5s10 4.4 10 9.9-4.5 9.9-10 9.9zm5.5-7.4c-.3-.2-1.8-.9-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.2-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.6-.1-.2-.7-1.7-1-2.3-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.1 1.1-1.1 2.7s1.2 3.1 1.3 3.3c.2.2 2.3 3.5 5.6 4.9.8.3 1.4.5 1.9.7.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2.1-1.5.3-.7.3-1.3.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+        Agenda por WhatsApp
+      </a>
+      <div class="closer__meta">
+        <p class="closer__name">Relucere · face &amp; body</p>
+        <p>{direccion}</p>
+        <p><a href={`tel:+52${telefono.replace(/\s/g, '')}`}>{telefono}</a> · Lun a Vie 10–19 h · Sáb 9–14:30 h</p>
+      </div>
+    </div>
+  </footer>
+
+  <style is:global>
+    :root {
+      --stucco: #ede8df;
+      --stucco-2: #f5f1ea;
+      --platino: #cfc7b8;
+      --oro: #b4914f;
+      --oro-deep: #7a5f28;
+      --oro-hi: #d8bc82;
+      --miel: #b98b54;
+      --carbon: #2c2925;
+      --tinta: #514b41;
+      --line: rgba(143, 113, 51, 0.35);
+      --shadow: 0 18px 50px -28px rgba(44, 41, 37, 0.55);
+      --maxw: 1080px;
+    }
+
+    body {
+      background: var(--stucco);
+      color: var(--tinta);
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-size: 17px;
+      line-height: 1.68;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { width: 100%; max-width: var(--maxw); margin: 0 auto; padding-inline: 22px; }
+    .sec { padding-block: clamp(56px, 11vw, 104px); }
+
+    h1, h2, h3 { margin: 0; color: var(--carbon); font-weight: 400; }
+    p { margin: 0 0 1em; }
+    p:last-child { margin-bottom: 0; }
+    a { color: inherit; }
+
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 0.55em;
+      margin: 0 0 18px;
+      font-size: 0.74rem; font-weight: 600; letter-spacing: 0.28em;
+      text-transform: uppercase; color: var(--oro-deep);
+    }
+    .eyebrow--onDark { color: var(--oro-hi); }
+
+    .h2 {
+      font-family: 'Italiana', serif;
+      font-size: clamp(1.9rem, 6vw, 3rem);
+      line-height: 1.12; letter-spacing: 0.005em;
+      max-width: 20ch;
+    }
+    .sec-head { margin-bottom: clamp(30px, 5vw, 48px); }
+
+    /* ---- Destello firma ---- */
+    .spark { fill: var(--oro); display: inline-block; }
+    .spark--xs { width: 13px; height: 13px; }
+    .spark--sm { width: 20px; height: 20px; }
+    .spark--lg { width: 34px; height: 34px; }
+    .spark--twinkle { animation: twinkle 3.6s ease-in-out infinite; transform-origin: center; }
+    @keyframes twinkle {
+      0%, 100% { opacity: 0.55; transform: scale(0.86) rotate(0deg); }
+      50% { opacity: 1; transform: scale(1.08) rotate(45deg); }
+    }
+
+    /* ---- Reglas / divisores ---- */
+    .rule { display: flex; align-items: center; gap: 16px; margin: 0 auto 22px; max-width: 460px; }
+    .rule__line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--line), transparent); }
+
+    /* ---- Botones ---- */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: 0.6em;
+      padding: 14px 26px; border-radius: 999px;
+      font-family: 'Manrope', sans-serif; font-size: 0.98rem; font-weight: 600;
+      letter-spacing: 0.01em; text-decoration: none;
+      border: 1px solid transparent; cursor: pointer;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease;
+    }
+    .btn--gold {
+      background: linear-gradient(135deg, #d8bc82, #b4914f);
+      color: #2c2925; box-shadow: 0 10px 26px -12px rgba(143, 113, 51, 0.75);
+    }
+    .btn--gold:hover { transform: translateY(-2px); box-shadow: 0 16px 32px -12px rgba(143, 113, 51, 0.85); }
+    .btn--ghost { background: transparent; border-color: var(--line); color: var(--carbon); }
+    .btn--ghost:hover { background: rgba(180, 145, 79, 0.1); border-color: var(--oro); }
+    .btn--ghostDark { background: rgba(245, 241, 234, 0.08); border-color: rgba(243, 238, 228, 0.55); color: #f3eee4; -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+    .btn--ghostDark:hover { background: rgba(245, 241, 234, 0.18); }
+    .btn--lg { padding: 17px 34px; font-size: 1.05rem; }
+    .wa-ico { width: 1.25em; height: 1.25em; flex-shrink: 0; }
+    .btn:focus-visible { outline: 3px solid var(--oro); outline-offset: 3px; }
+    .btn--ghostDark:focus-visible { outline-color: #f3eee4; }
+
+    /* ============ HERO ============ */
+    .hero {
+      position: relative; overflow: hidden;
+      min-height: calc(100svh - var(--demo-banner-h, 38px));
+      display: flex;
+    }
+    .hero__img {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      object-fit: cover; object-position: 50% 26%;
+    }
+    .hero__scrim {
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(180deg, rgba(28, 25, 21, 0.12) 0%, rgba(28, 25, 21, 0) 30%, rgba(28, 25, 21, 0.35) 62%, rgba(24, 21, 17, 0.9) 100%);
+    }
+    .hero__inner {
+      position: relative; z-index: 2;
+      align-self: flex-end; width: 100%;
+      max-width: var(--maxw); margin: 0 auto;
+      padding: 0 22px clamp(38px, 8vw, 68px);
+      color: #f3eee4;
+    }
+    .hero__title {
+      font-family: 'Italiana', serif;
+      font-size: clamp(2.5rem, 9.5vw, 4.6rem);
+      line-height: 1.04; letter-spacing: 0.01em;
+      color: #fbf8f2; text-shadow: 0 2px 30px rgba(20, 17, 13, 0.4);
+      margin-bottom: 18px;
+    }
+    .hero__lede {
+      max-width: 40ch; font-size: 1.05rem; line-height: 1.6;
+      color: rgba(243, 238, 228, 0.92); margin-bottom: 24px;
+    }
+    .rating-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 9px 16px; margin-bottom: 26px;
+      border: 1px solid rgba(216, 188, 130, 0.55); border-radius: 999px;
+      background: rgba(24, 21, 17, 0.32); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+    }
+    .rating-pill__num { font-family: 'Italiana', serif; font-size: 1.5rem; color: #fbf8f2; line-height: 1; }
+    .rating-pill__lbl { font-size: 0.85rem; color: rgba(243, 238, 228, 0.9); }
+    .stars { color: var(--oro-hi); letter-spacing: 2px; font-size: 0.95rem; }
+    .stars--gold { color: var(--oro); font-size: 1.15rem; letter-spacing: 3px; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* ============ FRANJA DE MARCA ============ */
+    .brandline { background: var(--stucco-2); padding-block: clamp(40px, 8vw, 64px); border-bottom: 1px solid rgba(143, 113, 51, 0.14); }
+    .brandline__text {
+      max-width: 40ch; margin: 0 auto; text-align: center;
+      font-family: 'Italiana', serif; font-size: clamp(1.25rem, 3.6vw, 1.7rem);
+      line-height: 1.5; color: var(--carbon);
+    }
+    .brandline__text strong { font-weight: 400; color: var(--oro-deep); }
+    .brandline__text em { font-style: italic; }
+
+    /* ============ ABOUT ============ */
+    .about__grid { display: grid; gap: clamp(34px, 6vw, 64px); align-items: center; }
+    .about__copy p { color: var(--tinta); max-width: 52ch; }
+    .minifacts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 26px; }
+    .chip {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 15px; border-radius: 999px;
+      border: 1px solid var(--line); background: var(--stucco-2);
+      font-size: 0.85rem; font-weight: 500; color: var(--carbon);
+    }
+    .about__figure { margin: 0; }
+    .arch {
+      width: 100%; border-radius: 200px 200px 20px 20px;
+      box-shadow: var(--shadow); border: 1px solid rgba(143, 113, 51, 0.2);
+      aspect-ratio: 3 / 4; object-fit: cover;
+    }
+
+    /* ============ FRASE DE LA CASA ============ */
+    .quotebar { background: var(--carbon); padding-block: clamp(58px, 10vw, 92px); }
+    .quotebar__inner { text-align: center; max-width: 700px; }
+    .quotebar__inner .spark--lg { fill: var(--oro-hi); margin-bottom: 22px; }
+    .quotebar__en {
+      margin: 0 0 14px; font-family: 'Italiana', serif;
+      font-size: clamp(1.7rem, 5.4vw, 2.9rem); line-height: 1.22;
+      color: #f5f1ea; letter-spacing: 0.01em;
+    }
+    .quotebar__es { margin: 0; color: rgba(216, 188, 130, 0.9); font-size: 1rem; max-width: 44ch; margin-inline: auto; }
+
+    /* ============ SERVICIOS ============ */
+    .svc-grid { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+    .svc {
+      position: relative; padding: 26px 22px 24px;
+      background: var(--stucco-2); border: 1px solid rgba(143, 113, 51, 0.16);
+      border-radius: 16px; transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .svc:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+    .svc__mark { margin-bottom: 14px; }
+    .svc__title { font-family: 'Italiana', serif; font-size: 1.3rem; margin-bottom: 8px; color: var(--carbon); }
+    .svc__desc { margin: 0; font-size: 0.95rem; color: var(--tinta); }
+    .services__note { margin-top: 26px; text-align: center; font-size: 0.9rem; color: var(--oro-deep); font-style: italic; }
+
+    /* ============ GALERÍA ============ */
+    .gal-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .gal-item { margin: 0; overflow: hidden; border-radius: 16px; box-shadow: var(--shadow); border: 1px solid rgba(143, 113, 51, 0.16); }
+    .gal-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+    .gal-item:hover img { transform: scale(1.04); }
+    .gal-item--wide { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+    .gal-item:not(.gal-item--wide) { aspect-ratio: 3 / 4; }
+
+    /* ============ PRUEBA SOCIAL ============ */
+    .social { background: var(--stucco-2); }
+    .bigrate { display: flex; align-items: center; gap: 20px; justify-content: center; margin-bottom: clamp(34px, 6vw, 52px); }
+    .bigrate__num { font-family: 'Italiana', serif; font-size: clamp(3.8rem, 15vw, 6rem); line-height: 0.85; color: var(--oro-deep); }
+    .bigrate__meta { display: flex; flex-direction: column; gap: 6px; }
+    .bigrate__lbl { font-size: 0.9rem; color: var(--tinta); max-width: 22ch; }
+    .reviews { display: grid; gap: 16px; grid-template-columns: 1fr 1fr; }
+    .review {
+      position: relative; margin: 0; padding: 28px 24px;
+      background: var(--stucco); border: 1px solid rgba(143, 113, 51, 0.16);
+      border-radius: 16px;
+    }
+    .review__mark { position: absolute; top: 22px; right: 22px; opacity: 0.8; }
+    .review__text { margin: 0 0 18px; font-size: 1rem; line-height: 1.6; color: var(--carbon); max-width: 42ch; }
+    .review__by { display: flex; flex-direction: column; }
+    .review__author { font-weight: 700; color: var(--carbon); font-size: 0.95rem; }
+    .review__when { font-size: 0.82rem; color: var(--oro-deep); }
+    .social__cta { text-align: center; margin-top: clamp(30px, 5vw, 44px); }
+
+    /* ============ UBICACIÓN ============ */
+    .loc-grid { display: grid; gap: clamp(28px, 5vw, 44px); align-items: start; }
+    .loc-address { font-family: 'Italiana', serif; font-size: 1.4rem; line-height: 1.4; color: var(--carbon); max-width: 24ch; }
+    .hours { width: 100%; border-collapse: collapse; margin: 22px 0 26px; max-width: 420px; }
+    .hours th, .hours td { text-align: left; padding: 12px 4px; border-bottom: 1px solid rgba(143, 113, 51, 0.18); font-size: 0.98rem; }
+    .hours th { font-weight: 500; color: var(--carbon); }
+    .hours td { text-align: right; color: var(--tinta); font-variant-numeric: tabular-nums; }
+    .loc-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .loc-tel { margin-top: 18px; font-size: 0.95rem; color: var(--tinta); }
+    .loc-tel a { color: var(--oro-deep); font-weight: 600; text-decoration: none; }
+    .loc-tel a:hover { text-decoration: underline; }
+    .loc-map { border-radius: 18px; overflow: hidden; box-shadow: var(--shadow); border: 1px solid rgba(143, 113, 51, 0.2); }
+    .loc-map iframe { width: 100%; height: 340px; border: 0; display: block; filter: saturate(0.92) contrast(1.02); }
+
+    /* ============ CIERRE / FOOTER ============ */
+    .closer { background: var(--carbon); color: #e6dfd2; padding: clamp(64px, 11vw, 108px) 0 96px; text-align: center; }
+    .closer__inner { max-width: 620px; }
+    .closer__spark { fill: var(--oro-hi); margin-bottom: 20px; }
+    .closer__title { font-family: 'Italiana', serif; font-size: clamp(2rem, 6.5vw, 3.1rem); color: #faf6ee; line-height: 1.14; margin-bottom: 14px; }
+    .closer__lede { max-width: 40ch; margin: 0 auto 30px; color: rgba(230, 223, 210, 0.82); }
+    .closer__meta { margin-top: 42px; padding-top: 26px; border-top: 1px solid rgba(216, 188, 130, 0.2); font-size: 0.88rem; line-height: 1.7; color: rgba(230, 223, 210, 0.68); }
+    .closer__meta p { margin: 0; }
+    .closer__name { font-family: 'Italiana', serif; font-size: 1.15rem; color: var(--oro-hi); letter-spacing: 0.02em; margin-bottom: 6px; }
+    .closer__meta a { color: var(--oro-hi); text-decoration: none; }
+    .closer__meta a:hover { text-decoration: underline; }
+
+    /* ============ SCROLL REVEAL (progresivo) ============ */
+    .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
+    .js .reveal.is-in { opacity: 1; transform: none; }
+
+    /* ============ RESPONSIVE ============ */
+    @media (min-width: 720px) {
+      .about__grid { grid-template-columns: 1.05fr 0.95fr; }
+      .about__figure { order: 2; }
+      .svc-grid { grid-template-columns: repeat(4, 1fr); }
+      .gal-grid { grid-template-columns: repeat(3, 1fr); }
+      .gal-item--wide { grid-column: 1 / -1; aspect-ratio: 21 / 8; }
+      .reviews { grid-template-columns: repeat(2, 1fr); }
+      .loc-grid { grid-template-columns: 0.9fr 1.1fr; }
+      .hero__title { font-size: clamp(3.2rem, 6.5vw, 4.6rem); }
+    }
+    @media (max-width: 480px) {
+      .svc-grid { grid-template-columns: 1fr; }
+      .reviews { grid-template-columns: 1fr; }
+      .gal-grid { grid-template-columns: 1fr; }
+      .gal-item:not(.gal-item--wide) { aspect-ratio: 4 / 3; }
+      .bigrate { flex-direction: column; gap: 8px; text-align: center; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .spark--twinkle { animation: none; }
+      .js .reveal { opacity: 1; transform: none; transition: none; }
+    }
+  </style>
+
+  <script is:inline>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add('js');
+
+      // Destello del hero: twinkle sutil (mejora progresiva).
+      var heroSpark = document.querySelector('.eyebrow--onDark .spark');
+      if (heroSpark) heroSpark.classList.add('spark--twinkle');
+
+      var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      var items = document.querySelectorAll('.reveal');
+      if (reduce || !('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-in'); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('is-in'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+      items.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
+</BaseLayout>
