@@ -4,6 +4,7 @@
 // banner de demo y botón flotante de contacto.
 import DemoBanner from '../components/DemoBanner.astro';
 import FloatingCTA from '../components/FloatingCTA.astro';
+import batch1 from '../../batches/batch-1.json';
 
 const {
   title,
@@ -18,6 +19,9 @@ const {
   mapsUrl = null,      // ficha de Google Maps
 } = Astro.props;
 
+// Las demos del batch 1 se entregan sin la franja "Demo creada por ivang.mx".
+const hideDemoBanner = new Set(batch1.slugs || []).has(slug);
+
 const SITE = 'https://demos.ivang.mx';
 const url = `${SITE}/${slug}`;
 const ogImageAbs = ogImage ? `${SITE}${ogImage}` : null;
@@ -28,7 +32,7 @@ const faviconSvg =
 const faviconHref = 'data:image/svg+xml,' + encodeURIComponent(faviconSvg);
 ---
 <!doctype html>
-<html lang="es">
+<html lang="es" style={hideDemoBanner ? '--demo-banner-h: 0px' : undefined}>
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -58,7 +62,7 @@ const faviconHref = 'data:image/svg+xml,' + encodeURIComponent(faviconSvg);
     )}
   </head>
   <body>
-    <DemoBanner />
+    {!hideDemoBanner && <DemoBanner />}
     <slot />
     <FloatingCTA whatsapp={whatsapp} telefono={telefono} mapsUrl={mapsUrl} />
   </body>
